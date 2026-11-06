@@ -1,0 +1,265 @@
+<body class="bg-bg-canvas text-text-primary min-h-screen flex flex-col font-body-default antialiased selection:bg-primary-container selection:text-bg-canvas">
+<!-- Top Navigation Bar -->
+<header class="w-full border-b border-border-subtle dark:border-border-subtle sticky top-0 z-50 site-header">
+<div class="flex justify-between items-center w-full px-4 sm:px-gutter-lg max-w-[1360px] mx-auto h-14">
+<div class="flex items-center gap-2 sm:gap-space-lg min-w-0">
+<a class="font-title-card text-text-primary dark:text-text-primary tracking-tight font-semibold flex items-center gap-2 sm:gap-space-sm whitespace-nowrap text-[15px] sm:text-title-card shrink-0" href="directory.html">
+<img src="assets/img/devspirehub-gears-128.png" alt="DevSpireHub AI logo" class="brand-mark w-7 h-7 rounded-lg object-cover shrink-0" width="28" height="28"/>
+<span class="hidden sm:inline">AI Resource Intelligence</span>
+</a>
+<nav class="hidden lg:flex items-center gap-4 xl:gap-space-md ml-2 xl:ml-space-md" aria-label="Primary">
+<a class="text-text-muted dark:text-text-muted font-body-compact text-body-compact hover:text-text-primary dark:hover:text-text-primary transition-colors whitespace-nowrap" href="directory.html">Discover</a>
+<a class="text-text-muted dark:text-text-muted font-body-compact text-body-compact hover:text-text-primary dark:hover:text-text-primary transition-colors whitespace-nowrap" href="ai-tools.html">AI Tools</a>
+<a class="text-text-muted dark:text-text-muted font-body-compact text-body-compact hover:text-text-primary dark:hover:text-text-primary transition-colors whitespace-nowrap" href="models.html">AI Models</a>
+<a class="text-primary dark:text-primary font-body-compact text-body-compact border-b-2 border-primary dark:border-primary pb-1 whitespace-nowrap" href="developer-resources.html" aria-current="page">Developer Resources</a>
+</nav>
+</div>
+<div class="flex items-center gap-1.5 sm:gap-space-sm shrink-0">
+<div class="relative hidden xl:flex items-center">
+<input class="bg-surface-card border border-border-subtle rounded text-body-compact font-body-compact text-text-primary placeholder:text-text-muted px-3 py-1.5 w-44 md:w-56 focus:outline-none focus:border-primary-container focus:ring-1 focus:ring-primary-container" placeholder="Quick find [ ⌘K ]..." type="text" id="quick-find" aria-label="Quick find developer resources"/>
+<span class="material-symbols-outlined absolute right-2 text-text-muted text-lg pointer-events-none" data-icon="search">search</span>
+</div>
+<a class="bg-primary-container text-bg-canvas font-body-compact font-semibold px-2.5 sm:px-3 py-1.5 rounded text-[13px] sm:text-body-compact hover:brightness-110 transition-all" href="submit.html">Submit Resource</a>
+<button class="lg:hidden inline-flex items-center justify-center w-8 h-8 rounded bg-surface-card border border-border-subtle text-text-muted hover:text-text-primary transition-colors" id="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+<span class="material-symbols-outlined text-[18px]" data-icon="menu">menu</span>
+</button>
+</div>
+</div>
+<!-- Mobile menu panel -->
+<div class="lg:hidden hidden border-t border-border-subtle bg-surface-secondary/95 backdrop-blur" id="mobile-menu">
+<nav class="flex flex-col px-4 sm:px-gutter-lg py-3 gap-1" aria-label="Mobile">
+<a class="text-text-muted hover:text-text-primary font-body-compact text-body-compact py-2 border-b border-border-subtle/50 transition-colors" href="directory.html">Discover</a>
+<a class="text-text-muted hover:text-text-primary font-body-compact text-body-compact py-2 border-b border-border-subtle/50 transition-colors" href="ai-tools.html">AI Tools</a>
+<a class="text-text-muted hover:text-text-primary font-body-compact text-body-compact py-2 border-b border-border-subtle/50 transition-colors" href="models.html">AI Models</a>
+<a class="text-primary font-body-compact text-body-compact py-2" href="developer-resources.html" aria-current="page">Developer Resources</a>
+</nav>
+</div>
+</header>
+<!-- Main Container -->
+<main class="w-full max-w-[1360px] mx-auto px-4 sm:px-gutter-lg py-space-lg flex-1 flex flex-col">
+<!-- Breadcrumb -->
+<nav class="flex items-center gap-space-xs text-metadata-label font-metadata-label text-text-muted mb-space-sm" aria-label="Breadcrumb">
+<a class="hover:text-text-primary transition-colors" href="directory.html">Home</a>
+<span class="text-border-subtle">/</span>
+<span class="text-primary-container">Developer Resources</span>
+</nav>
+<!-- Header Section -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md mb-space-lg pb-space-md border-b border-border-subtle">
+<div>
+<p class="font-metadata-label text-metadata-label text-primary-container uppercase tracking-[0.18em] mb-1">Build with AI</p>
+<h1 class="font-display-hero-mobile text-display-hero-mobile sm:font-display-hero sm:text-display-hero text-text-primary tracking-tight">Developer Resources</h1>
+<p class="font-body-compact text-body-compact text-text-muted mt-1 max-w-3xl">
+          Explore APIs, SDKs, agent frameworks, MCP tooling, vector databases, model-serving runtimes, and local inference infrastructure. Every record is extracted from the verified DevSpireHub AI knowledge base.
+        </p>
+</div>
+<div class="flex items-center gap-2 self-start md:self-auto max-w-full min-w-0 bg-surface-secondary border border-border-subtle px-3 py-1.5 rounded">
+<span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span>
+<span class="font-code-badge text-code-badge text-text-primary" id="catalog-chip">— Developer Resources Cataloged</span>
+</div>
+</div>
+<!-- Search & Category Bar -->
+<div class="flex flex-col gap-space-md mb-space-lg">
+<div class="relative w-full flex items-center search-shell bg-surface-secondary border border-border-subtle rounded transition-all">
+<span class="material-symbols-outlined absolute left-3.5 text-text-muted text-xl pointer-events-none" data-icon="search">search</span>
+<input class="w-full bg-transparent border-none rounded pl-11 pr-24 py-2.5 text-body-compact font-body-compact text-text-primary placeholder:text-text-muted focus:outline-none focus:ring-0" placeholder="Search by library, SDK, protocol (MCP), model serving, language (Python, Rust, TS)..." type="text" id="dev-search" value="" autocomplete="off" spellcheck="false" aria-label="Search developer resources"/>
+<div class="absolute right-3 flex items-center gap-2">
+<button class="text-text-muted hover:text-text-primary p-1 transition-colors" id="search-clear" title="Clear search" type="button" style="visibility:hidden">
+<span class="material-symbols-outlined text-base" data-icon="close">close</span>
+</button>
+<kbd class="key-hint font-code-badge text-code-badge text-text-muted bg-surface-card border border-border-subtle px-2 py-0.5 rounded">⌘K</kbd>
+</div>
+</div>
+<!-- Horizontal Category Pills -->
+<div class="flex items-center gap-2 overflow-x-auto pb-1 scrollbar-none border-b border-border-subtle/50" id="category-pills" role="group" aria-label="Filter by category"></div>
+</div>
+<!-- Quick-start discovery cards (each applies a real dataset filter) -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-space-md mb-space-lg" aria-label="Quick-start filters">
+<button class="ui-card rounded-xl p-space-md text-left flex flex-col justify-between group" type="button" data-quick="local" aria-label="Filter by local runtimes">
+<span class="flex items-start justify-between mb-2 gap-2">
+<span class="flex items-center gap-2 min-w-0">
+<span class="p-2 rounded bg-surface-secondary border border-border-subtle text-secondary shrink-0"><span class="material-symbols-outlined text-[20px]" data-icon="laptop_mac">laptop_mac</span></span>
+<span class="min-w-0">
+<span class="font-metadata-label text-metadata-label text-text-muted uppercase tracking-wider block">Local Stack</span>
+<span class="font-title-card text-title-card text-text-primary group-hover:text-secondary transition-colors block">Run Models Locally</span>
+</span>
+</span>
+<span class="font-code-badge text-code-badge text-secondary bg-surface-secondary px-2 py-0.5 rounded border border-border-subtle shrink-0" data-quick-count="local">0</span>
+</span>
+<span class="font-body-compact text-body-compact text-text-muted mb-3">Ollama, llama.cpp, LM Studio, LocalAI, and Jan for offline inference on your own hardware.</span>
+<span class="flex items-center justify-between font-code-badge text-code-badge text-text-muted pt-2 border-t border-border-subtle/50">
+<span>Ollama · llama.cpp · LM Studio</span>
+<span class="material-symbols-outlined text-[16px] text-text-primary group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</span>
+</button>
+<button class="ui-card rounded-xl p-space-md text-left flex flex-col justify-between group" type="button" data-quick="mcp" aria-label="Search for MCP resources">
+<span class="flex items-start justify-between mb-2 gap-2">
+<span class="flex items-center gap-2 min-w-0">
+<span class="p-2 rounded bg-surface-secondary border border-border-subtle text-primary-container shrink-0"><span class="material-symbols-outlined text-[20px]" data-icon="hub">hub</span></span>
+<span class="min-w-0">
+<span class="font-metadata-label text-metadata-label text-text-muted uppercase tracking-wider block">Context Protocol</span>
+<span class="font-title-card text-title-card text-text-primary group-hover:text-primary-container transition-colors block">Connect MCP Servers</span>
+</span>
+</span>
+<span class="font-code-badge text-code-badge text-primary-container bg-surface-secondary px-2 py-0.5 rounded border border-border-subtle shrink-0" data-quick-count="mcp">0</span>
+</span>
+<span class="font-body-compact text-body-compact text-text-muted mb-3">The Model Context Protocol SDK and MCP-ready agent tooling for editors and agent hosts.</span>
+<span class="flex items-center justify-between font-code-badge text-code-badge text-text-muted pt-2 border-t border-border-subtle/50">
+<span>MCP SDK · MCP-ready tooling</span>
+<span class="material-symbols-outlined text-[16px] text-text-primary group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</span>
+</button>
+<button class="ui-card rounded-xl p-space-md text-left flex flex-col justify-between group" type="button" data-quick="serving" aria-label="Filter by model serving and inference">
+<span class="flex items-start justify-between mb-2 gap-2">
+<span class="flex items-center gap-2 min-w-0">
+<span class="p-2 rounded bg-surface-secondary border border-border-subtle text-tertiary shrink-0"><span class="material-symbols-outlined text-[20px]" data-icon="speed">speed</span></span>
+<span class="min-w-0">
+<span class="font-metadata-label text-metadata-label text-text-muted uppercase tracking-wider block">Inference Engines</span>
+<span class="font-title-card text-title-card text-text-primary group-hover:text-tertiary transition-colors block">Deploy High-Throughput</span>
+</span>
+</span>
+<span class="font-code-badge text-code-badge text-tertiary bg-surface-secondary px-2 py-0.5 rounded border border-border-subtle shrink-0" data-quick-count="serving">0</span>
+</span>
+<span class="font-body-compact text-body-compact text-text-muted mb-3">Serving engines and hosted inference platforms for low-latency token streaming at scale.</span>
+<span class="flex items-center justify-between font-code-badge text-code-badge text-text-muted pt-2 border-t border-border-subtle/50">
+<span>vLLM · SGLang · TensorRT-LLM</span>
+<span class="material-symbols-outlined text-[16px] text-text-primary group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</span>
+</button>
+</section>
+<!-- No data state -->
+<div class="ui-card rounded-xl p-space-xl text-center" id="no-data-state" hidden>
+<span class="material-symbols-outlined text-4xl text-text-muted mb-3" data-icon="inventory_2">inventory_2</span>
+<p class="font-title-card text-title-card text-text-primary mb-1">No developer resources are available</p>
+<p class="font-body-compact text-body-compact text-text-muted">The registry dataset could not be loaded. Check that <code class="font-code-badge text-text-primary">data/developer-resources.js</code> is present.</p>
+</div>
+<!-- Mobile facets toggle -->
+<button class="lg:hidden flex items-center justify-center gap-2 bg-surface-secondary border border-border-subtle rounded px-3 py-2 font-body-compact text-body-compact text-text-primary mb-space-md transition-colors hover:border-secondary" id="facets-toggle" type="button" aria-expanded="false" aria-controls="facets-panel">
+<span class="material-symbols-outlined text-[18px] text-primary-container" data-icon="tune">tune</span>
+<span>Resource Facets</span>
+<span class="font-code-badge text-code-badge bg-surface-card border border-border-subtle px-1.5 py-0.5 rounded text-text-muted" id="facets-count">0</span>
+</button>
+<!-- Two-Column Directory Workspace -->
+<div class="flex flex-col lg:flex-row gap-space-lg items-start">
+<!-- Left Filter Sidebar -->
+<aside class="w-full lg:w-[260px] shrink-0 ui-card rounded p-space-md flex-col gap-space-md hidden lg:flex" id="facets-panel" aria-label="Resource facets">
+<div class="flex items-center justify-between pb-space-sm border-b border-border-subtle">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-container text-base" data-icon="tune">tune</span>
+<span class="font-title-card text-body-compact font-semibold text-text-primary">Resource Facets</span>
+</div>
+<button class="font-metadata-label text-metadata-label text-text-muted hover:text-primary-container transition-colors" id="reset-facets" type="button">Reset all</button>
+</div>
+<div class="flex flex-col gap-2" data-facet-group="type">
+<span class="font-metadata-label text-metadata-label text-text-muted uppercase tracking-wider">Resource Type</span>
+</div>
+<div class="h-px bg-border-subtle"></div>
+<div class="flex flex-col gap-2" data-facet-group="language">
+<span class="font-metadata-label text-metadata-label text-text-muted uppercase tracking-wider">Programming Language</span>
+</div>
+<div class="h-px bg-border-subtle"></div>
+<div class="flex flex-col gap-2" data-facet-group="deployment">
+<span class="font-metadata-label text-metadata-label text-text-muted uppercase tracking-wider">Deployment &amp; Access</span>
+</div>
+<div class="h-px bg-border-subtle"></div>
+<div class="flex flex-col gap-2" data-facet-group="licensing">
+<span class="font-metadata-label text-metadata-label text-text-muted uppercase tracking-wider">Licensing</span>
+</div>
+<div class="h-px bg-border-subtle"></div>
+<div class="flex flex-col gap-2" data-facet-group="pricing">
+<span class="font-metadata-label text-metadata-label text-text-muted uppercase tracking-wider">Pricing</span>
+</div>
+</aside>
+<!-- Right Main Content -->
+<section class="flex-1 w-full flex flex-col gap-space-md min-w-0" aria-label="Developer resource results">
+<!-- Results Toolbar & Active Filter Chips -->
+<div class="flex flex-col gap-space-sm bg-surface-secondary border border-border-subtle p-3 rounded">
+<div class="flex flex-wrap items-center justify-between gap-3">
+<div class="text-body-compact font-body-compact text-text-muted" id="results-count" role="status" aria-live="polite">
+              Showing <span class="text-text-primary font-medium">0</span> of <span class="text-text-primary font-medium">0</span> resources matching filters
+            </div>
+<div class="flex items-center gap-1.5 text-metadata-label font-metadata-label text-text-muted">
+<span>Sort by:</span>
+<select class="bg-surface-card border border-border-subtle text-text-primary rounded text-metadata-label font-metadata-label px-2 py-1 focus:ring-0 focus:border-primary-container" id="sort-select" aria-label="Sort developer resources">
+<option value="verified">Recently Verified</option>
+<option value="new">Newly Added</option>
+<option value="name">Name A-Z</option>
+<option value="name-desc">Name Z-A</option>
+<option value="category">Category</option>
+</select>
+</div>
+</div>
+<!-- Active Filter Chips Row -->
+<div class="flex flex-wrap items-center gap-2 pt-2 border-t border-border-subtle/50" id="active-chips">
+<span class="font-metadata-label text-metadata-label text-text-muted">Active:</span>
+<span class="font-metadata-label text-metadata-label text-text-muted" id="no-filters-note">No filters applied</span>
+<button class="text-metadata-label font-metadata-label text-primary-container hover:underline ml-auto" id="reset-all-filters" type="button" hidden>Reset all filters</button>
+</div>
+</div>
+<!-- Invalid identifier state -->
+<div class="rounded-xl border border-status-warning/40 bg-status-warning/10 p-4 flex flex-col sm:flex-row sm:items-center gap-3" id="invalid-state" role="status" hidden>
+<span class="material-symbols-outlined text-status-warning text-xl shrink-0" data-icon="error">error</span>
+<div class="flex-1 min-w-0">
+<p class="font-body-compact text-body-compact text-text-primary font-medium" id="invalid-message">Resource not found.</p>
+<p class="font-metadata-label text-metadata-label text-text-muted">The identifier in this link does not match any cataloged resource. It may have been renamed or removed.</p>
+</div>
+<button class="shrink-0 inline-flex items-center gap-1.5 bg-surface-card border border-border-subtle text-text-primary font-body-compact text-body-compact px-3 py-1.5 rounded transition-colors hover:border-secondary" id="invalid-dismiss" type="button">Browse all resources</button>
+</div>
+<!-- Resource Cards Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-space-md" id="resource-grid"></div>
+<!-- Empty state -->
+<div class="ui-card rounded-xl p-space-xl text-center" id="empty-state" hidden>
+<span class="material-symbols-outlined text-4xl text-text-muted mb-3" data-icon="search_off">search_off</span>
+<p class="font-title-card text-title-card text-text-primary mb-1">No resources match the current filters</p>
+<p class="font-body-compact text-body-compact text-text-muted mb-4">Try broadening the search query or clearing some facet filters.</p>
+<button class="inline-flex items-center gap-2 bg-primary-container text-bg-canvas font-body-compact text-body-compact font-semibold px-4 py-2 rounded btn-amber" id="empty-reset" type="button">Reset all filters</button>
+</div>
+<!-- Pagination Bar -->
+<div class="flex flex-col sm:flex-row items-center justify-between gap-space-md pt-space-lg mt-space-md border-t border-border-subtle" id="pagination-bar">
+<div class="font-metadata-label text-metadata-label text-text-muted" id="page-indicator">
+            Page <span class="text-text-primary font-medium">1</span> of <span class="text-text-primary font-medium">1</span>
+</div>
+<div class="flex items-center gap-1.5" id="pagination-controls" role="navigation" aria-label="Pagination"></div>
+</div>
+</section>
+</div>
+<!-- Related resources (data-driven, cross-registry) -->
+<div id="related-page"></div>
+</main>
+<!-- Detail Modal -->
+<div class="modal-overlay" id="detail-modal" role="dialog" aria-modal="true" aria-labelledby="detail-title" hidden>
+<div class="modal-panel ui-card rounded-xl w-full max-w-2xl my-8 p-space-lg relative">
+<button class="absolute top-3 right-3 text-text-muted hover:text-text-primary transition-colors p-1" id="detail-close" type="button" aria-label="Close resource details">
+<span class="material-symbols-outlined text-xl" data-icon="close">close</span>
+</button>
+<div id="detail-content"></div>
+</div>
+</div>
+<!-- Footer -->
+<footer class="w-full bg-bg-canvas dark:bg-bg-canvas border-t border-border-subtle dark:border-border-subtle mt-space-xl">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center w-full px-4 sm:px-gutter-lg py-space-lg max-w-[1360px] mx-auto gap-space-md">
+<div class="flex flex-col gap-1">
+<span class="font-title-card text-title-card text-text-primary dark:text-text-primary font-semibold">AI Resource Intelligence</span>
+<p class="font-metadata-label text-metadata-label text-text-muted dark:text-text-muted">DevSpireHub AI Intelligence Directory is a product of DevSpireHub.com.</p>
+<p class="font-metadata-label text-metadata-label text-text-muted dark:text-text-muted">Source: DevSpireHub AI knowledge base · ai-tools-models-developer-resources.md</p>
+</div>
+<div class="flex flex-wrap items-center gap-x-6 gap-y-2">
+<a class="text-text-muted dark:text-text-muted font-metadata-label text-metadata-label hover:text-text-primary dark:hover:text-text-primary transition-colors" href="directory.html">Directory</a>
+<a class="text-text-muted dark:text-text-muted font-metadata-label text-metadata-label hover:text-text-primary dark:hover:text-text-primary transition-colors" href="ai-tools.html">AI Tools</a>
+<a class="text-text-muted dark:text-text-muted font-metadata-label text-metadata-label hover:text-text-primary dark:hover:text-text-primary transition-colors" href="models.html">AI Models</a>
+<a class="text-text-muted dark:text-text-muted font-metadata-label text-metadata-label hover:text-text-primary dark:hover:text-text-primary transition-colors" href="developer-resources.html" aria-current="page">Developer Resources</a>
+<a class="text-text-muted dark:text-text-muted font-metadata-label text-metadata-label hover:text-text-primary dark:hover:text-text-primary transition-colors" href="api.html">API</a>
+<a class="text-text-muted dark:text-text-muted font-metadata-label text-metadata-label hover:text-text-primary dark:hover:text-text-primary transition-colors" href="terminal.html">Terminal</a>
+<a class="text-text-muted dark:text-text-muted font-metadata-label text-metadata-label hover:text-text-primary dark:hover:text-text-primary transition-colors" href="docs.html">Docs</a>
+<a class="text-text-muted dark:text-text-muted font-metadata-label text-metadata-label hover:text-text-primary dark:hover:text-text-primary transition-colors" href="data/developer-resources.js">Dataset</a>
+</div>
+</div>
+</footer>
+<script src="data/developer-resources.js"></script>
+<script src="data/related-index.js"></script>
+<script src="assets/resource-icons.js"></script>
+<script src="assets/collections.js"></script>
+<script src="assets/related.js"></script>
+<script src="assets/status-badges.js"></script>
+<script src="assets/recently-viewed.js"></script>
+<script src="assets/share.js"></script>
+<script>

@@ -1,0 +1,4 @@
+{
+  "origin": "",
+  "note": "Set origin to the absolute URL where this directory is deployed (for example https://example.com/ai/) and run `node .qa/seo-build.js` to regenerate absolute canonical links, robots.txt and sitemap.xml. Leave empty while the deployment location is undecided; canonicals then stay relative and no sitemap is emitted."
+}

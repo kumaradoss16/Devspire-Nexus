@@ -1,0 +1,13 @@
+{
+  "generated_at": "2026-11-06T07:02:30.235Z",
+  "original_records": 1000,
+  "updated_records": 1000,
+  "unique_ids": 1000,
+  "only_icon_changed": true,
+  "all_icon_keys_present": true,
+  "valid_icon_values": true,
+  "local_files_exist": true,
+  "issues": [],
+  "original_sha256": "c173274213951da5cfb6355c6c9047c4e23792a511efed6ef270db4aac2aa9e3",
+  "updated_sha256": "1c8f246f4b69f26e4f4eb0495f75e6c34461a97ffce9788a4a584c8e09ddf302"
+}

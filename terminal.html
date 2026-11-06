@@ -1,0 +1,1055 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Catalog Terminal | DevSpire Nexus</title>
+<link rel="icon" type="image/png" href="assets/img/devspirehub-gears-48.png"/>
+<meta name="description" content="A read-only catalog console with a fixed command allowlist over the AI tools, models, and developer resources datasets. No shell, eval, file access, or network calls."/>
+<!-- Material Symbols Outlined font -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Fonts: Geist & JetBrains Mono -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "surface": "#051424",
+            "on-surface": "#d4e4fa",
+            "bg-canvas": "#090D12",
+            "surface-bright": "#2c3a4c",
+            "surface-container-highest": "#273647",
+            "on-error-container": "#ffdad6",
+            "on-tertiary-fixed-variant": "#005137",
+            "secondary-container": "#00a6e0",
+            "primary-container": "#f59e0b",
+            "status-warning": "#FBBF24",
+            "surface-container-low": "#0d1c2d",
+            "tertiary-fixed": "#68fcbf",
+            "on-tertiary": "#003825",
+            "secondary-fixed-dim": "#7bd0ff",
+            "tertiary-fixed-dim": "#45dfa4",
+            "surface-container": "#122131",
+            "surface-secondary": "#111820",
+            "primary-fixed": "#ffddb8",
+            "surface-dim": "#051424",
+            "on-tertiary-fixed": "#002114",
+            "status-error": "#F87171",
+            "on-primary-fixed": "#2a1700",
+            "inverse-surface": "#d4e4fa",
+            "on-error": "#690005",
+            "surface-tint": "#ffb95f",
+            "on-secondary-fixed-variant": "#004c69",
+            "on-surface-variant": "#d8c3ad",
+            "surface-container-lowest": "#010f1f",
+            "outline": "#a08e7a",
+            "on-secondary-container": "#00374d",
+            "background": "#051424",
+            "on-primary-container": "#613b00",
+            "inverse-primary": "#855300",
+            "primary": "#ffc174",
+            "tertiary": "#4de6aa",
+            "primary-fixed-dim": "#ffb95f",
+            "error-container": "#93000a",
+            "text-muted": "#94A3B8",
+            "on-primary": "#472a00",
+            "on-tertiary-container": "#004e35",
+            "tertiary-container": "#22c990",
+            "on-primary-fixed-variant": "#653e00",
+            "outline-variant": "#534434",
+            "surface-card": "#17212B",
+            "surface-container-high": "#1c2b3c",
+            "on-secondary-fixed": "#001e2c",
+            "on-background": "#d4e4fa",
+            "inverse-on-surface": "#233143",
+            "surface-variant": "#273647",
+            "error": "#ffb4ab",
+            "border-subtle": "#273341",
+            "on-secondary": "#00354a",
+            "text-primary": "#F1F5F9",
+            "secondary-fixed": "#c4e7ff",
+            "secondary": "#7bd0ff"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "margin-lg": "3rem",
+            "space-sm": "0.5rem",
+            "space-lg": "1.5rem",
+            "space-xl": "2rem",
+            "margin": "1rem",
+            "margin-md": "2rem",
+            "gutter-lg": "1.5rem",
+            "gutter": "1.25rem",
+            "space-md": "1rem",
+            "space-xs": "0.25rem"
+          },
+          "fontFamily": {
+            "headline-section": ["Geist", "sans-serif"],
+            "code-badge": ["JetBrains Mono", "monospace"],
+            "display-hero-mobile": ["Geist", "sans-serif"],
+            "body-default": ["Geist", "sans-serif"],
+            "body-compact": ["Geist", "sans-serif"],
+            "title-card": ["Geist", "sans-serif"],
+            "code-param": ["JetBrains Mono", "monospace"],
+            "metadata-label": ["Geist", "sans-serif"],
+            "display-hero": ["Geist", "sans-serif"]
+          },
+          "fontSize": {
+            "headline-section": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+            "code-badge": ["12px", { "lineHeight": "16px", "letterSpacing": "0em", "fontWeight": "500" }],
+            "display-hero-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+            "body-default": ["15px", { "lineHeight": "22px", "letterSpacing": "0em", "fontWeight": "400" }],
+            "body-compact": ["14px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" }],
+            "title-card": ["17px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "code-param": ["13px", { "lineHeight": "18px", "letterSpacing": "-0.01em", "fontWeight": "500" }],
+            "metadata-label": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500" }],
+            "display-hero": ["44px", { "lineHeight": "52px", "letterSpacing": "-0.03em", "fontWeight": "600" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+/* ============ Premium polish layer (works alongside Tailwind utilities) ============ */
+:root {
+  --bg-canvas: #090D12;
+  --surface-card: #17212B;
+  --surface-secondary: #111820;
+  --border-subtle: #273341;
+  --amber: #f59e0b;
+  --amber-bright: #ffb95f;
+  --blue: #7bd0ff;
+  --green: #34D399;
+  color-scheme: dark;
+}
+
+html { scroll-behavior: smooth; }
+
+/* Ensure the hidden attribute always wins over Tailwind display utilities */
+[hidden] { display: none !important; }
+
+/* Icon ligatures keep a square footprint even if the icon font is still loading */
+.material-symbols-outlined {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  overflow: hidden;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+
+body {
+  background-color: var(--bg-canvas);
+  background-image:
+    radial-gradient(1000px 420px at 50% -180px, rgba(245, 158, 11, 0.05), transparent 65%),
+    radial-gradient(800px 380px at 90% -60px, rgba(0, 166, 224, 0.04), transparent 60%);
+  background-attachment: fixed;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Sticky header: glassy, blurred */
+header.site-header {
+  background: rgba(9, 13, 18, 0.85);
+  backdrop-filter: blur(14px) saturate(140%);
+  -webkit-backdrop-filter: blur(14px) saturate(140%);
+  box-shadow: 0 1px 0 rgba(123, 208, 255, 0.05), 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+
+/* Premium card treatment */
+.ui-card {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.018), rgba(255, 255, 255, 0) 42%),
+    var(--surface-card);
+  border: 1px solid var(--border-subtle);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.03),
+    0 1px 2px rgba(0, 0, 0, 0.45),
+    0 4px 16px rgba(0, 0, 0, 0.2);
+  transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+}
+.ui-card:hover {
+  border-color: rgba(56, 189, 248, 0.38);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.045),
+    0 0 0 1px rgba(56, 189, 248, 0.06),
+    0 10px 28px rgba(0, 0, 0, 0.5),
+    0 0 36px rgba(56, 189, 248, 0.05);
+  transform: translateY(-2px);
+}
+
+/* Brand mark: soft amber glow on the gears logo */
+.brand-mark { filter: drop-shadow(0 0 8px rgba(245, 158, 11, 0.35)); }
+
+/* Model tile icons (inline SVG) */
+.tool-icon { display: inline-flex; width: 20px; height: 20px; }
+.tool-icon svg { width: 100%; height: 100%; }
+
+/* Publisher favicons: light chip so dark-on-transparent logos read on the dark card */
+.tool-favicon {
+  width: 22px; height: 22px; padding: 2px;
+  background: #f1f5f9; border-radius: 5px;
+  object-fit: contain; flex-shrink: 0;
+}
+
+/* Card hover: tile icon brightens with the border glow */
+.ui-card:hover .tool-icon { filter: drop-shadow(0 0 6px currentColor); }
+.ui-card:hover .tool-favicon { box-shadow: 0 0 10px rgba(241, 245, 249, 0.22); }
+
+/* Amber CTA glow */
+.btn-amber {
+  box-shadow: 0 0 0 1px rgba(245, 158, 11, 0.25), 0 2px 10px rgba(245, 158, 11, 0.18);
+  transition: filter 150ms ease, box-shadow 150ms ease, transform 150ms ease;
+}
+.btn-amber:hover {
+  box-shadow: 0 0 0 1px rgba(245, 158, 11, 0.35), 0 4px 18px rgba(245, 158, 11, 0.28);
+}
+.btn-amber:active { transform: scale(0.97); }
+
+/* Search: amber focus halo */
+.search-shell:focus-within {
+  border-color: rgba(245, 158, 11, 0.55);
+  box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.12), 0 0 28px rgba(245, 158, 11, 0.07);
+}
+
+/* Category pills */
+.pill {
+  transition: border-color 150ms ease, background-color 150ms ease, color 150ms ease, transform 150ms ease;
+}
+.pill:hover { transform: translateY(-1px); }
+.pill[aria-pressed="true"] {
+  background: var(--amber);
+  border-color: var(--amber);
+  color: var(--bg-canvas);
+  font-weight: 600;
+  box-shadow: 0 0 0 1px rgba(245, 158, 11, 0.25), 0 2px 10px rgba(245, 158, 11, 0.18);
+}
+
+/* Facet checkboxes: amber accent squares (input. prefix outranks the forms-plugin base styles) */
+input.facet-input {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  border: 1px solid var(--border-subtle);
+  background: var(--surface-secondary);
+  display: inline-grid;
+  place-content: center;
+  cursor: pointer;
+  transition: background-color 120ms ease, border-color 120ms ease;
+  flex-shrink: 0;
+}
+input.facet-input::before {
+  content: "";
+  width: 9px;
+  height: 9px;
+  transform: scale(0);
+  transition: transform 120ms ease;
+  background: var(--bg-canvas);
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+}
+input.facet-input:checked {
+  background: var(--amber);
+  border-color: var(--amber);
+}
+input.facet-input:checked::before { transform: scale(1); }
+input.facet-input:focus-visible {
+  outline: 2px solid rgba(245, 158, 11, 0.6);
+  outline-offset: 2px;
+}
+
+/* Compare checkbox: same amber treatment as facets */
+input.compare-input {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  border: 1px solid var(--border-subtle);
+  background: var(--surface-secondary);
+  display: inline-grid;
+  place-content: center;
+  cursor: pointer;
+  transition: background-color 120ms ease, border-color 120ms ease;
+  flex-shrink: 0;
+}
+input.compare-input::before {
+  content: "";
+  width: 9px;
+  height: 9px;
+  transform: scale(0);
+  transition: transform 120ms ease;
+  background: var(--bg-canvas);
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+}
+input.compare-input:checked { background: var(--blue); border-color: var(--blue); }
+input.compare-input:checked::before { transform: scale(1); }
+input.compare-input:focus-visible {
+  outline: 2px solid rgba(123, 208, 255, 0.6);
+  outline-offset: 2px;
+}
+
+/* Hide horizontal scrollbar on the pill rail */
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-none::-webkit-scrollbar { display: none; }
+
+/* Pagination buttons */
+.page-btn {
+  transition: background-color 150ms ease, color 150ms ease, border-color 150ms ease;
+}
+.page-btn:not(:disabled):not(.is-active):hover {
+  border-color: rgba(123, 208, 255, 0.4);
+  color: #F1F5F9;
+}
+.page-btn.is-active {
+  background: var(--amber);
+  border-color: var(--amber);
+  color: var(--bg-canvas);
+  font-weight: 600;
+  box-shadow: 0 0 0 1px rgba(245, 158, 11, 0.25), 0 2px 10px rgba(245, 158, 11, 0.18);
+}
+
+/* kbd refinement */
+kbd.key-hint {
+  font-family: "JetBrains Mono", monospace;
+  box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.06);
+  letter-spacing: 0.02em;
+}
+
+/* Mobile menu */
+#mobile-menu:not([hidden]) { animation: menu-in 160ms ease; }
+@keyframes menu-in {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Modal overlay */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: rgba(4, 8, 12, 0.72);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 1rem;
+  overflow-y: auto;
+}
+.modal-overlay:not([hidden]) { animation: fade-in 160ms ease; }
+@keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
+.modal-panel { animation: rise 220ms cubic-bezier(0.22, 1, 0.36, 1) both; }
+
+/* Compare table */
+.compare-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.compare-table th {
+  font-family: "Geist", sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #94A3B8;
+  font-weight: 500;
+  text-align: left;
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--border-subtle);
+  white-space: nowrap;
+  vertical-align: bottom;
+}
+.compare-table td {
+  padding: 8px 12px;
+  border-bottom: 1px solid rgba(39, 51, 65, 0.55);
+  vertical-align: top;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: var(--bg-canvas); }
+::-webkit-scrollbar-thumb {
+  background: #26313d;
+  border-radius: 8px;
+  border: 2px solid var(--bg-canvas);
+}
+::-webkit-scrollbar-thumb:hover { background: #33414f; }
+* { scrollbar-width: thin; scrollbar-color: #26313d var(--bg-canvas); }
+
+h1, h2, h3 { text-wrap: balance; }
+.font-code-badge, .font-code-param { font-feature-settings: "zero" 1; }
+
+/* Card entrance */
+.rise { animation: rise 450ms cubic-bezier(0.22, 1, 0.36, 1) both; }
+@keyframes rise {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .rise, #mobile-menu:not([hidden]), .modal-overlay:not([hidden]), .modal-panel { animation: none; }
+  .ui-card, .pill, .btn-amber, .page-btn { transition: none; }
+}
+
+/* Screen-reader-only helper (used by table action headers) */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+</style>
+<link rel="stylesheet" href="assets/site.css"/>
+<link rel="canonical" href="models.html"/>
+<style>
+/* Phase 5 utility pages */
+main > * { min-width: 0; }
+
+.terminal-output {
+  height: 380px;
+  min-height: 240px;
+  overflow-y: auto;
+  padding: 14px 16px;
+  line-height: 1.65;
+  font-size: 13px;
+  background: #0b1117;
+}
+.terminal-line { white-space: pre-wrap; word-break: break-word; color: #cbd5e1; }
+.terminal-line--cmd { color: #ffb95f; }
+.terminal-line--err { color: #F87171; }
+.terminal-line--ok { color: #4de6aa; }
+.terminal-line--muted { color: #94A3B8; }
+.terminal-line--head { color: #7bd0ff; font-weight: 600; }
+
+.api-code {
+  font-size: 12.5px;
+  line-height: 1.6;
+  white-space: pre;
+  color: #cbd5e1;
+}
+
+/* Fixed layout keeps hashes and paths from inflating the document width on narrow screens. */
+.p5-table { width: 100%; table-layout: fixed; }
+.p5-table th,
+.p5-table td { overflow-wrap: anywhere; }
+.p5-table code { overflow-wrap: anywhere; }
+.p5-table td:first-child { white-space: normal; }
+
+input.p5-input, select.p5-input, textarea.p5-input {
+  width: 100%;
+  background: #111820;
+  border: 1px solid #273341;
+  border-radius: 0.375rem;
+  color: #F1F5F9;
+  font-family: Geist, sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  padding: 0.5rem 0.7rem;
+}
+input.p5-input::placeholder, textarea.p5-input::placeholder { color: #94A3B8; }
+input.p5-input:focus, select.p5-input:focus, textarea.p5-input:focus {
+  outline: none;
+  border-color: #f59e0b;
+  box-shadow: 0 0 0 2px rgba(245, 158, 11, 0.18);
+}
+input.p5-input[aria-invalid="true"], select.p5-input[aria-invalid="true"], textarea.p5-input[aria-invalid="true"] {
+  border-color: #F87171;
+  box-shadow: 0 0 0 2px rgba(248, 113, 113, 0.15);
+}
+.p5-error {
+  font-family: Geist, sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  color: #F87171;
+}
+
+.docs-jump {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid #273341;
+  background: #111820;
+  border-radius: 9999px;
+  padding: 0.25rem 0.7rem;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 12px;
+  color: #7bd0ff;
+  transition: border-color 120ms ease, color 120ms ease;
+}
+.docs-jump:hover { border-color: #7bd0ff; color: #F1F5F9; }
+
+@media (prefers-reduced-motion: reduce) {
+  .docs-jump { transition: none; }
+}
+
+</style>
+<meta name="theme-color" content="#090D12"/>
+<meta name="robots" content="index, follow"/>
+<meta property="og:type" content="website"/>
+<meta property="og:site_name" content="DevSpire Nexus"/>
+<meta property="og:title" content="Catalog Terminal | DevSpire Nexus"/>
+<meta property="og:description" content="A read-only catalog console with a fixed command allowlist over the AI tools, models, and developer resources datasets. No shell, eval, file access, or network calls."/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Catalog Terminal | DevSpire Nexus"/>
+<meta name="twitter:description" content="A read-only catalog console with a fixed command allowlist over the AI tools, models, and developer resources datasets. No shell, eval, file access, or network calls."/>
+</head>
+<body class="bg-bg-canvas text-text-primary min-h-screen flex flex-col font-body-default antialiased selection:bg-primary-container selection:text-bg-canvas">
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<header class="w-full border-b border-border-subtle dark:border-border-subtle sticky top-0 z-50 site-header">
+<div class="flex justify-between items-center w-full px-4 sm:px-gutter-lg max-w-[1360px] mx-auto h-14">
+<div class="flex items-center gap-2 sm:gap-space-lg min-w-0">
+<a class="font-title-card text-text-primary dark:text-text-primary tracking-tight font-semibold flex items-center gap-2 sm:gap-space-sm whitespace-nowrap text-[15px] sm:text-title-card shrink-0" href="directory.html">
+<img src="assets/img/devspirehub-gears-128.png" alt="DevSpire Nexus logo" class="brand-mark w-7 h-7 rounded-lg object-cover shrink-0" width="28" height="28"/>
+<span class="flex flex-col leading-tight min-w-0"><span class="hidden sm:inline">DevSpire Nexus</span><span class="hidden xl:inline font-metadata-label text-[10px] font-normal tracking-[0.14em] text-text-muted uppercase">AI Intelligence Directory</span></span>
+</a>
+<nav class="hidden lg:flex items-center gap-3 xl:gap-space-md ml-2 xl:ml-space-md" aria-label="Primary">
+<a class="text-text-muted dark:text-text-muted font-body-compact text-body-compact hover:text-text-primary dark:hover:text-text-primary transition-colors whitespace-nowrap" href="directory.html">Discover</a>
+<a class="text-text-muted dark:text-text-muted font-body-compact text-body-compact hover:text-text-primary dark:hover:text-text-primary transition-colors whitespace-nowrap" href="ai-tools.html">AI Tools</a>
+<a class="text-text-muted dark:text-text-muted font-body-compact text-body-compact hover:text-text-primary dark:hover:text-text-primary transition-colors whitespace-nowrap" href="models.html">AI Models</a>
+<a class="text-text-muted dark:text-text-muted font-body-compact text-body-compact hover:text-text-primary dark:hover:text-text-primary transition-colors whitespace-nowrap" href="developer-resources.html">Developer Resources</a>
+<a class="text-text-muted dark:text-text-muted font-body-compact text-body-compact hover:text-text-primary dark:hover:text-text-primary transition-colors whitespace-nowrap" href="collections.html">My Collections</a>
+<a class="text-text-muted dark:text-text-muted font-body-compact text-body-compact hover:text-text-primary dark:hover:text-text-primary transition-colors whitespace-nowrap" href="about.html">About</a>
+<a class="text-text-muted dark:text-text-muted font-body-compact text-body-compact hover:text-text-primary dark:hover:text-text-primary transition-colors whitespace-nowrap inline-flex items-center gap-1" href="https://devspirehub.com/" target="_blank" rel="noopener">DevSpireHub<span class="material-symbols-outlined text-[14px]" data-icon="arrow_outward" aria-hidden="true">arrow_outward</span></a>
+</nav>
+</div>
+<div class="flex items-center gap-1.5 sm:gap-space-sm shrink-0">
+<a class="hidden sm:inline-flex items-center gap-1.5 bg-surface-card border border-border-subtle rounded px-2.5 py-1.5 font-body-compact text-body-compact text-text-muted hover:border-secondary hover:text-secondary dark:hover:border-secondary dark:hover:text-secondary transition-colors duration-150" href="terminal.html" id="terminal-nav-btn" aria-label="Open Terminal" title="Open Terminal">
+<span class="material-symbols-outlined text-[16px]" data-icon="terminal" aria-hidden="true">terminal</span>
+<span class="text-xs">Terminal</span>
+<kbd class="font-code-badge text-code-badge bg-surface-secondary px-1.5 py-0.5 rounded text-[11px] border border-border-subtle text-text-muted key-hint">&#96;</kbd>
+</a>
+<a class="inline-flex items-center justify-center gap-1.5 bg-primary-container text-bg-canvas font-body-compact font-semibold px-2.5 sm:px-3 py-1.5 rounded text-[13px] sm:text-body-compact hover:brightness-110 transition-all" href="submit.html">
+<span class="material-symbols-outlined text-[16px]" data-icon="add" aria-hidden="true">add</span>Submit Resource</a>
+<button class="lg:hidden inline-flex items-center justify-center w-8 h-8 rounded bg-surface-card border border-border-subtle text-text-muted hover:text-text-primary transition-colors" id="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+<span class="material-symbols-outlined text-[18px]" data-icon="menu" aria-hidden="true">menu</span>
+</button>
+</div>
+</div>
+<div class="lg:hidden hidden border-t border-border-subtle bg-surface-secondary/95 backdrop-blur" id="mobile-menu">
+<nav class="flex flex-col px-4 sm:px-gutter-lg py-3 gap-1" aria-label="Mobile">
+<a class="text-text-muted hover:text-text-primary font-body-compact text-body-compact py-2 border-b border-border-subtle/50 transition-colors" href="directory.html">Discover</a>
+<a class="text-text-muted hover:text-text-primary font-body-compact text-body-compact py-2 border-b border-border-subtle/50 transition-colors" href="ai-tools.html">AI Tools</a>
+<a class="text-text-muted hover:text-text-primary font-body-compact text-body-compact py-2 border-b border-border-subtle/50 transition-colors" href="models.html">AI Models</a>
+<a class="text-text-muted hover:text-text-primary font-body-compact text-body-compact py-2 border-b border-border-subtle/50 transition-colors" href="developer-resources.html">Developer Resources</a>
+<a class="text-text-muted hover:text-text-primary font-body-compact text-body-compact py-2 border-b border-border-subtle/50 transition-colors" href="collections.html">My Collections</a>
+<a class="text-text-muted hover:text-text-primary font-body-compact text-body-compact py-2 border-b border-border-subtle/50 transition-colors" href="about.html">About</a>
+<a class="text-text-muted hover:text-text-primary font-body-compact text-body-compact py-2 border-b border-border-subtle/50 transition-colors inline-flex items-center gap-2" href="terminal.html"><span class="material-symbols-outlined text-[16px]" aria-hidden="true">terminal</span>Terminal</a>
+<a class="text-text-muted hover:text-text-primary font-body-compact text-body-compact py-2 border-b border-border-subtle/50 transition-colors" href="submit.html">Submit Resource</a>
+<a class="text-text-muted hover:text-text-primary font-body-compact text-body-compact py-2 border-b border-border-subtle/50 transition-colors inline-flex items-center gap-1" href="https://devspirehub.com/" target="_blank" rel="noopener">DevSpireHub<span class="material-symbols-outlined text-[14px]" aria-hidden="true">arrow_outward</span></a>
+<a class="text-text-muted hover:text-text-primary font-body-compact text-body-compact py-2 transition-colors inline-flex items-center gap-1" href="https://devspirehub.com/Website/about/about.html" target="_blank" rel="noopener">About DevSpireHub<span class="material-symbols-outlined text-[14px]" aria-hidden="true">arrow_outward</span></a>
+</nav>
+</div>
+</header>
+<main id="main-content" class="w-full max-w-[1360px] mx-auto px-4 sm:px-gutter-lg py-space-lg flex-1 flex flex-col">
+<nav class="flex items-center gap-space-xs text-metadata-label font-metadata-label text-text-muted mb-space-sm" aria-label="Breadcrumb">
+<a class="hover:text-text-primary transition-colors" href="directory.html">Home</a>
+<span class="text-border-subtle">/</span>
+<span class="text-primary-container">Terminal</span>
+</nav>
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md mb-space-lg pb-space-md border-b border-border-subtle">
+<div>
+<p class="font-metadata-label text-metadata-label text-primary-container uppercase tracking-[0.18em] mb-1">Catalog Console</p>
+<h1 class="font-display-hero-mobile text-display-hero-mobile sm:font-display-hero sm:text-display-hero text-text-primary tracking-tight">Terminal</h1>
+<p class="font-body-compact text-body-compact text-text-muted mt-1 max-w-3xl">
+          A read-only console over the local registry datasets. It parses a fixed command allowlist and prints catalog records.
+        </p>
+</div>
+<div class="flex items-center gap-2 self-start md:self-auto bg-surface-secondary border border-border-subtle px-3 py-1.5 rounded">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span class="font-code-badge text-code-badge text-text-primary">READ-ONLY · ALLOWLIST</span>
+</div>
+</div>
+<div class="rounded-xl border border-status-warning/40 bg-status-warning/10 p-4 flex items-start gap-3 mb-space-lg" role="note">
+<span class="material-symbols-outlined text-status-warning text-xl shrink-0" aria-hidden="true" data-icon="shield">shield</span>
+<div class="min-w-0">
+<p class="font-body-compact text-body-compact text-text-primary font-medium">This is not a system shell.</p>
+<p class="font-metadata-label text-metadata-label text-text-muted mt-0.5">It cannot execute shell commands, evaluate JavaScript, read local files, or call external services. Commands only query the three catalog datasets already loaded on this page.</p>
+</div>
+</div>
+<section class="ui-card rounded-xl overflow-hidden" aria-label="Catalog terminal">
+<div class="flex flex-wrap items-center justify-between gap-2 border-b border-border-subtle bg-surface-secondary px-4 py-2">
+<span class="font-code-badge text-code-badge text-text-muted">catalog://terminal</span>
+<span class="font-code-badge text-code-badge text-tertiary">LOCAL DATA · NO NETWORK</span>
+</div>
+<div class="terminal-output font-code-param" id="terminal-output" role="log" aria-live="polite" aria-label="Terminal output"></div>
+<form class="flex items-center gap-2 border-t border-border-subtle bg-surface-secondary px-3 py-2" id="terminal-form" autocomplete="off">
+<span class="font-code-badge text-code-badge text-tertiary select-none" aria-hidden="true">$</span>
+<label class="visually-hidden" for="terminal-input">Terminal command</label>
+<input class="flex-1 min-w-0 bg-transparent border-none text-text-primary font-code-param text-code-param placeholder:text-text-muted focus:ring-0 focus:outline-none" id="terminal-input" type="text" placeholder="Type help and press Enter" maxlength="200" spellcheck="false" autocomplete="off"/>
+<button class="inline-flex items-center gap-1.5 bg-surface-card border border-border-subtle rounded px-3 py-1.5 font-code-badge text-code-badge text-text-primary hover:border-secondary transition-colors" type="submit">
+<span class="material-symbols-outlined text-[14px]" aria-hidden="true" data-icon="keyboard_return">keyboard_return</span>
+          Run
+        </button>
+</form>
+</section>
+<section class="mt-space-lg">
+<h2 class="font-title-card text-title-card text-text-primary mb-1">Allowed commands</h2>
+<p class="font-body-compact text-body-compact text-text-muted mb-4">Every command below is implemented in the page. Unknown commands are rejected without evaluation.</p>
+<div class="ui-card rounded-xl overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="border-b border-border-subtle">
+<th scope="col" class="px-4 py-2.5 font-metadata-label text-metadata-label text-text-muted uppercase tracking-wider">Command</th>
+<th scope="col" class="px-4 py-2.5 font-metadata-label text-metadata-label text-text-muted uppercase tracking-wider">Action</th>
+</tr>
+</thead>
+<tbody class="font-body-compact text-body-compact">
+<tr class="border-b border-border-subtle/50"><td class="px-4 py-2.5 font-code-param text-code-param text-secondary whitespace-nowrap">help</td><td class="px-4 py-2.5 text-text-muted">List the allowlisted commands.</td></tr>
+<tr class="border-b border-border-subtle/50"><td class="px-4 py-2.5 font-code-param text-code-param text-secondary whitespace-nowrap">stats</td><td class="px-4 py-2.5 text-text-muted">Record and category counts for each registry.</td></tr>
+<tr class="border-b border-border-subtle/50"><td class="px-4 py-2.5 font-code-param text-code-param text-secondary whitespace-nowrap">list &lt;registry&gt;</td><td class="px-4 py-2.5 text-text-muted">Show record IDs and names. Registries: tools, models, resources.</td></tr>
+<tr class="border-b border-border-subtle/50"><td class="px-4 py-2.5 font-code-param text-code-param text-secondary whitespace-nowrap">search &lt;term&gt;</td><td class="px-4 py-2.5 text-text-muted">Search names, descriptions, categories, tags, and publishers across all registries.</td></tr>
+<tr class="border-b border-border-subtle/50"><td class="px-4 py-2.5 font-code-param text-code-param text-secondary whitespace-nowrap">show &lt;id&gt;</td><td class="px-4 py-2.5 text-text-muted">Print the stated fields for one record.</td></tr>
+<tr class="border-b border-border-subtle/50"><td class="px-4 py-2.5 font-code-param text-code-param text-secondary whitespace-nowrap">categories &lt;registry&gt;</td><td class="px-4 py-2.5 text-text-muted">Category counts, for one registry or all three.</td></tr>
+<tr class="border-b border-border-subtle/50"><td class="px-4 py-2.5 font-code-param text-code-param text-secondary whitespace-nowrap">open &lt;id&gt;</td><td class="px-4 py-2.5 text-text-muted">Open the record's page and deep-link view.</td></tr>
+<tr><td class="px-4 py-2.5 font-code-param text-code-param text-secondary whitespace-nowrap">clear</td><td class="px-4 py-2.5 text-text-muted">Clear the output area.</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+<p class="font-metadata-label text-metadata-label text-text-muted mt-space-md">Command history is available with the up and down arrow keys. The console does not store input outside this page.</p>
+</main>
+<footer class="w-full bg-bg-canvas dark:bg-bg-canvas border-t border-border-subtle dark:border-border-subtle mt-space-xl">
+<div class="w-full max-w-[1360px] mx-auto px-4 sm:px-gutter-lg py-space-lg">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[minmax(0,1.5fr)_repeat(4,minmax(0,1fr))] gap-x-space-lg gap-y-space-md">
+<div class="flex flex-col gap-2 sm:col-span-2 lg:col-span-1">
+<span class="font-title-card text-title-card text-text-primary font-semibold">DevSpire Nexus</span>
+<p class="font-metadata-label text-metadata-label text-primary">Discover. Connect. Build.</p>
+<p class="font-metadata-label text-metadata-label text-text-muted max-w-xs">AI Intelligence Directory</p>
+<p class="font-metadata-label text-metadata-label text-text-muted max-w-xs">DevSpire Nexus is a product of DevSpireHub.com.</p>
+<p class="font-metadata-label text-metadata-label text-text-muted max-w-xs">Source: DevSpireHub AI knowledge base · ai-tools-models-developer-resources.md</p>
+</div>
+<nav aria-labelledby="footer-explore">
+<h2 class="font-metadata-label text-metadata-label uppercase tracking-[0.16em] text-text-primary mb-2" id="footer-explore">Explore</h2>
+<ul class="flex flex-col gap-1.5">
+<li><a class="text-text-muted dark:text-text-muted font-metadata-label text-metadata-label hover:text-text-primary dark:hover:text-text-primary transition-colors" href="directory.html">Directory</a></li>
+<li><a class="text-text-muted dark:text-text-muted font-metadata-label text-metadata-label hover:text-text-primary dark:hover:text-text-primary transition-colors" href="ai-tools.html">AI Tools</a></li>
+<li><a class="text-text-muted dark:text-text-muted font-metadata-label text-metadata-label hover:text-text-primary dark:hover:text-text-primary transition-colors" href="models.html">AI Models</a></li>
+<li><a class="text-text-muted dark:text-text-muted font-metadata-label text-metadata-label hover:text-text-primary dark:hover:text-text-primary transition-colors" href="developer-resources.html">Developer Resources</a></li>
+</ul>
+</nav>
+<nav aria-labelledby="footer-product">
+<h2 class="font-metadata-label text-metadata-label uppercase tracking-[0.16em] text-text-primary mb-2" id="footer-product">Product</h2>
+<ul class="flex flex-col gap-1.5">
+<li><a class="text-text-muted dark:text-text-muted font-metadata-label text-metadata-label hover:text-text-primary dark:hover:text-text-primary transition-colors" href="collections.html">My Collections</a></li>
+<li><a class="text-text-muted dark:text-text-muted font-metadata-label text-metadata-label hover:text-text-primary dark:hover:text-text-primary transition-colors" href="about.html">About</a></li>
+<li><a class="text-text-muted dark:text-text-muted font-metadata-label text-metadata-label hover:text-text-primary dark:hover:text-text-primary transition-colors" href="contact.html">Contact</a></li>
+<li><a class="text-text-muted dark:text-text-muted font-metadata-label text-metadata-label hover:text-text-primary dark:hover:text-text-primary transition-colors" href="docs.html">Documentation</a></li>
+<li><a class="text-text-muted dark:text-text-muted font-metadata-label text-metadata-label hover:text-text-primary dark:hover:text-text-primary transition-colors" href="api.html">API and Data Access</a></li>
+<li><a class="text-text-muted dark:text-text-muted font-metadata-label text-metadata-label hover:text-text-primary dark:hover:text-text-primary transition-colors" href="submit.html">Submit Resource</a></li>
+</ul>
+</nav>
+<nav aria-labelledby="footer-legal">
+<h2 class="font-metadata-label text-metadata-label uppercase tracking-[0.16em] text-text-primary mb-2" id="footer-legal">Legal &amp; Information</h2>
+<ul class="flex flex-col gap-1.5">
+<li><a class="text-text-muted dark:text-text-muted font-metadata-label text-metadata-label hover:text-text-primary dark:hover:text-text-primary transition-colors" href="privacy.html">Privacy Policy</a></li>
+<li><a class="text-text-muted dark:text-text-muted font-metadata-label text-metadata-label hover:text-text-primary dark:hover:text-text-primary transition-colors" href="terms.html">Terms of Service</a></li>
+</ul>
+</nav>
+<nav aria-labelledby="footer-devspirehub">
+<h2 class="font-metadata-label text-metadata-label uppercase tracking-[0.16em] text-text-primary mb-2" id="footer-devspirehub">DevSpireHub</h2>
+<ul class="flex flex-col gap-1.5">
+<li><a class="text-text-muted dark:text-text-muted font-metadata-label text-metadata-label hover:text-text-primary dark:hover:text-text-primary transition-colors" href="https://devspirehub.com/" target="_blank" rel="noopener">Main Website<span class="material-symbols-outlined text-[13px] align-middle ml-0.5" aria-hidden="true">arrow_outward</span></a></li>
+<li><a class="text-text-muted dark:text-text-muted font-metadata-label text-metadata-label hover:text-text-primary dark:hover:text-text-primary transition-colors" href="https://devspirehub.com/Website/about/about.html" target="_blank" rel="noopener">About DevSpireHub<span class="material-symbols-outlined text-[13px] align-middle ml-0.5" aria-hidden="true">arrow_outward</span></a></li>
+<li><a class="text-text-muted dark:text-text-muted font-metadata-label text-metadata-label hover:text-text-primary dark:hover:text-text-primary transition-colors" href="https://devspirehub.com/Resources/digital-resources/digital-resources-hub.html" target="_blank" rel="noopener">Learning Resources<span class="material-symbols-outlined text-[13px] align-middle ml-0.5" aria-hidden="true">arrow_outward</span></a></li>
+</ul>
+</nav>
+</div>
+<div class="mt-space-lg pt-space-md border-t border-border-subtle/70 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+<p class="font-metadata-label text-metadata-label text-text-muted">© 2026 DevSpireHub.com · DevSpire Nexus</p>
+<p class="font-metadata-label text-metadata-label text-text-muted">Static catalog · collections stay in your browser · no tracking</p>
+</div>
+</div>
+</footer>
+<script src="data/ai-tools.js"></script>
+<script src="data/ai-models.js"></script>
+<script src="data/developer-resources.js"></script>
+<script src="assets/resource-icons.js"></script>
+<script src="assets/collections.js"></script>
+<script src="assets/status-badges.js"></script>
+<script src="assets/recently-viewed.js"></script>
+<script src="assets/share.js"></script>
+<script>
+(() => {
+  'use strict';
+
+  /* Catalog console: fixed command table, no eval, no shell, no network. */
+  const REGISTRIES = [
+    { key: 'tools', aliases: ['tools', 'tool', 'ai-tools'], label: 'AI Tools', page: 'ai-tools.html', prefix: 'tool', items: window.AI_TOOLS || [], meta: window.AI_TOOLS_META || {} },
+    { key: 'models', aliases: ['models', 'model', 'ai-models'], label: 'AI Models', page: 'models.html', prefix: 'model', items: window.AI_MODELS || [], meta: window.AI_MODELS_META || {} },
+    { key: 'resources', aliases: ['resources', 'resource', 'dev', 'developer-resources', 'developer'], label: 'Developer Resources', page: 'developer-resources.html', prefix: 'resource', items: window.DEVELOPER_RESOURCES || [], meta: window.DEVELOPER_RESOURCES_META || {} }
+  ];
+
+  const output = document.getElementById('terminal-output');
+  const form = document.getElementById('terminal-form');
+  const input = document.getElementById('terminal-input');
+  if (!output || !form || !input) return;
+
+  const MAX_INPUT = 200;
+  const LIST_LIMIT = 25;
+  const SEARCH_LIMIT = 15;
+
+  const line = (text, tone) => {
+    const el = document.createElement('div');
+    el.className = 'terminal-line' + (tone ? ' terminal-line--' + tone : '');
+    el.textContent = text;
+    output.appendChild(el);
+  };
+  const blank = () => line('');
+  const scrollDown = () => { output.scrollTop = output.scrollHeight; };
+  const commit = () => scrollDown();
+
+  const registryOf = (value) => REGISTRIES.find((r) => r.aliases.includes(String(value || '').toLowerCase())) || null;
+  const orgOf = (r) => r.org || r.publisher || '';
+  const haystack = (r) => [r.name, orgOf(r), r.description, r.category, r.source_category, r.resource_subtype, r.resource_type, (r.tags || []).join(' ')].join(' ').toLowerCase();
+  const findById = (id) => {
+    const needle = String(id || '').toLowerCase();
+    for (const reg of REGISTRIES) {
+      const hit = reg.items.find((r) => String(r.id).toLowerCase() === needle);
+      if (hit) return { reg, record: hit };
+    }
+    return null;
+  };
+  const stated = (value) => value !== null && value !== undefined && String(value).trim() !== '' && !(Array.isArray(value) && !value.length);
+
+  const COMMANDS = {
+    help() {
+      line('DevSpire Nexus Catalog Terminal — Allowed Commands', 'head');
+      line('  help                    Show this list.');
+      line('  stats [registry]        Catalog totals and category counts (tools | models | resources).');
+      line('  list <registry>         List resource IDs and names in a registry.');
+      line('  search [reg] <term>     Search names, descriptions, categories, and tags.');
+      line('  show <id> / info <id>   Print detailed attributes for one resource.');
+      line('  categories [registry]   Category counts, for one registry or all three.');
+      line('  recent                  Display recently viewed resources from browser session.');
+      line('  collection              Display bookmarks and custom collections in this browser.');
+      line('  new                     List newly added resources (2026-11-04 expansion).');
+      line('  verified                List recently verified resources.');
+      line('  open <id>               Open the resource details page in DevSpire Nexus.');
+      line('  version                 Display system build and engine version.');
+      line('  about                   Show DevSpire Nexus information.');
+      line('  theme                   Show active palette tokens.');
+      line('  clear                   Clear this terminal screen.');
+      blank();
+      line('No shell, eval, file access, or network calls are available.', 'muted');
+    },
+
+    version() {
+      line('DevSpire Nexus Terminal v1.0.0 (Build 2026-11-06)', 'ok');
+      line('Static catalog engine with 1,003 verified offline intelligence records.', 'muted');
+    },
+
+    about() {
+      line('DevSpire Nexus — AI Intelligence Directory', 'head');
+      line('Parent: DevSpireHub.com');
+      line('Tagline: Discover. Connect. Build.');
+      line('Registries: AI Tools (403), AI Models (300), Developer Resources (300).');
+    },
+
+    stats(args) {
+      const target = args[0] ? registryOf(args[0]) : null;
+      if (args[0] && !target) {
+        line(`Unknown registry "${args[0]}". Use: tools, models, resources.`, 'err');
+        return;
+      }
+      const regs = target ? [target] : REGISTRIES;
+      const total = regs.reduce((n, r) => n + r.items.length, 0);
+      line(`Catalog total: ${total} records across ${regs.length} registr${regs.length === 1 ? 'y' : 'ies'}`, 'ok');
+      regs.forEach((r) => {
+        const cats = new Set(r.items.map((x) => x.category).filter(Boolean)).size;
+        const verified = r.meta.last_verified ? ` · last verified ${r.meta.last_verified}` : '';
+        line(`  ${r.label}: ${r.items.length} records · ${cats} categories${verified}`);
+      });
+      blank();
+      line('Counts are computed directly from the local datasets.', 'muted');
+    },
+
+    list(args) {
+      const query = args[0];
+      if (!query) {
+        line('Usage: list <registry>', 'err');
+        line('Registries: ' + REGISTRIES.map((r) => r.key).join(', '), 'muted');
+        return;
+      }
+      const reg = registryOf(query);
+      if (!reg) {
+        line(`Unknown registry "${query}". Use: tools, models, resources.`, 'err');
+        return;
+      }
+      line(`${reg.label} · ${reg.items.length} records`, 'head');
+      reg.items.slice(0, LIST_LIMIT).forEach((r, i) => {
+        line(`  ${String(i + 1).padStart(3, '0')}  ${r.name}  (${r.id})`);
+      });
+      if (reg.items.length > LIST_LIMIT) line(`  … ${reg.items.length - LIST_LIMIT} more. Use search to narrow.`, 'muted');
+    },
+
+    search(args) {
+      if (!args.length) {
+        line('Usage: search [registry] <term> (at least 2 characters)', 'err');
+        return;
+      }
+      let targetReg = null;
+      let queryArgs = args;
+      const maybeReg = registryOf(args[0]);
+      if (maybeReg && args.length > 1) {
+        targetReg = maybeReg;
+        queryArgs = args.slice(1);
+      }
+      const term = queryArgs.join(' ').trim().toLowerCase();
+      if (term.length < 2) {
+        line('Search term must be at least 2 characters.', 'err');
+        return;
+      }
+      const searchPool = targetReg ? [targetReg] : REGISTRIES;
+      const hits = [];
+      searchPool.forEach((reg) => {
+        reg.items.forEach((r) => {
+          if (haystack(r).includes(term)) hits.push({ reg, record: r });
+        });
+      });
+      if (!hits.length) {
+        line(`No records match "${term}"${targetReg ? ` in ${targetReg.label}` : ''}.`, 'err');
+        return;
+      }
+      line(`${hits.length} match${hits.length === 1 ? '' : 'es'} for "${term}"`, 'head');
+      hits.slice(0, SEARCH_LIMIT).forEach(({ reg, record }) => {
+        line(`  ${record.name}  ·  ${reg.label}  ·  ${record.category || '—'}  ·  ${record.id}`);
+      });
+      if (hits.length > SEARCH_LIMIT) line(`  … ${hits.length - SEARCH_LIMIT} more. Narrow the term.`, 'muted');
+    },
+
+    show(args) {
+      return COMMANDS.info(args);
+    },
+
+    info(args) {
+      const id = args[0];
+      if (!id) { line('Usage: info <id>', 'err'); return; }
+      const hit = findById(id);
+      if (!hit) {
+        line(`No record with id "${id}".`, 'err');
+        line('Use list <registry> or search <term> to find an id.', 'muted');
+        return;
+      }
+      const { reg, record: r } = hit;
+      line(`${r.name}  ·  ${reg.label}`, 'head');
+      const meta = [r.resource_type, r.resource_subtype || r.source_category].filter(Boolean).join(' · ');
+      if (meta) line(`  Type: ${meta}`);
+      if (r.category) line(`  Category: ${r.category}`);
+      if (orgOf(r)) line(`  Publisher: ${orgOf(r)}`);
+      if (stated(r.pricing)) line(`  Pricing: ${r.pricing}`);
+      if (stated(r.license)) line(`  License: ${r.license}`);
+      if (stated(r.platform)) line(`  Platform: ${r.platform}`);
+      if (stated(r.hosting)) line(`  Hosting: ${[].concat(r.hosting).join(', ')}`);
+      if (stated(r.modalities)) line(`  Modalities: ${[].concat(r.modalities).join(', ')}`);
+      if (stated(r.params)) line(`  Parameters: ${r.params}`);
+      if (stated(r.context_k)) line(`  Context: ${r.context_k}K`);
+      if (stated(r.programming_languages)) line(`  Languages: ${[].concat(r.programming_languages).join(', ')}`);
+      if (stated(r.official_url)) line(`  URL: ${r.official_url}`);
+      if (Array.isArray(r.evidence) && r.evidence.length) {
+        line(`  Evidence: ${r.evidence.length} link${r.evidence.length === 1 ? '' : 's'}`);
+        r.evidence.slice(0, 3).forEach(([label, url]) => line(`    - ${label}: ${url}`, 'muted'));
+      }
+      line(`  Verified: ${r.verified || r.status || 'not stated'}`);
+      line(`  Id: ${r.id}`, 'muted');
+    },
+
+    categories(args) {
+      const query = args[0];
+      const regs = query ? [registryOf(query)].filter(Boolean) : REGISTRIES;
+      if (!regs.length) {
+        line(`Unknown registry "${query}". Use: tools, models, resources.`, 'err');
+        return;
+      }
+      regs.forEach((reg, i) => {
+        if (i) blank();
+        const counts = {};
+        reg.items.forEach((r) => { if (r.category) counts[r.category] = (counts[r.category] || 0) + 1; });
+        const names = Object.keys(counts).sort((a, b) => (counts[b] - counts[a]) || a.localeCompare(b));
+        line(`${reg.label} · ${names.length} categories`, 'head');
+        names.forEach((name) => line(`  ${name}  (${counts[name]})`));
+      });
+    },
+
+    recent() {
+      if (!window.RecentlyViewed) {
+        line('Recently Viewed service is unavailable.', 'err');
+        return;
+      }
+      const items = window.RecentlyViewed.getItems();
+      if (!items.length) {
+        line('No recently viewed resources in this browser session.', 'muted');
+        return;
+      }
+      line(`Recently Viewed (${items.length} item${items.length === 1 ? '' : 's'}):`, 'head');
+      items.slice(0, 15).forEach((item, i) => {
+        const name = item.record ? item.record.name : item.id;
+        const time = item.timestamp ? new Date(item.timestamp).toLocaleTimeString() : '';
+        line(`  ${String(i + 1).padStart(2, '0')}. [${item.type}] ${name} (${item.id}) ${time}`);
+      });
+    },
+
+    collection() {
+      if (!window.DevSpireCollections) {
+        line('Collections service is unavailable.', 'err');
+        return;
+      }
+      const data = window.DevSpireCollections.load();
+      line(`Personal Collections in this browser:`, 'head');
+      line(`  Bookmarks: ${data.bookmarks.length} saved`);
+      data.bookmarks.slice(0, 10).forEach((b) => {
+        const rec = window.DevSpireCollections.resolve(b);
+        line(`    • [${b.resourceType}] ${rec ? rec.name : b.resourceId}`);
+      });
+      if (data.bookmarks.length > 10) line(`    … and ${data.bookmarks.length - 10} more.`);
+      line(`  Custom Collections: ${data.collections.length}`);
+      data.collections.forEach((c) => {
+        line(`    📁 ${c.name} (${c.resourceRefs ? c.resourceRefs.length : 0} items)`);
+      });
+    },
+
+    new() {
+      const list = [];
+      REGISTRIES.forEach((reg) => {
+        reg.items.forEach((r) => {
+          if (r.verified === '2026-11-04' || r.is_new) list.push({ reg, record: r });
+        });
+      });
+      line(`Newly Added Resources (${list.length} total):`, 'head');
+      list.slice(0, 20).forEach(({ reg, record }, i) => {
+        line(`  ${String(i + 1).padStart(2, '0')}. [${reg.label}] ${record.name} (${record.id}) · ${record.category}`);
+      });
+      if (list.length > 20) line(`  … and ${list.length - 20} more. Use search to filter.`, 'muted');
+    },
+
+    verified() {
+      const list = [];
+      REGISTRIES.forEach((reg) => {
+        reg.items.forEach((r) => {
+          if (r.status === 'verified') list.push({ reg, record: r });
+        });
+      });
+      line(`Verified Resources (${list.length} records verified):`, 'head');
+      line(`  All 1,003 records have been verified with primary source evidence and timestamps.`);
+      line(`  Type "info <id>" to view the verification timestamp and evidence for any resource.`);
+    },
+
+    open(args) {
+      const id = args[0];
+      if (!id) { line('Usage: open <id>', 'err'); return; }
+      const hit = findById(id);
+      if (!hit) {
+        line(`No record with id "${id}".`, 'err');
+        return;
+      }
+      const url = `${hit.reg.page}#${hit.reg.prefix}/${encodeURIComponent(hit.record.id)}`;
+      line(`Opening ${hit.record.name} → ${url}`, 'ok');
+      scrollDown();
+      setTimeout(() => { window.location.href = url; }, 250);
+    },
+
+    theme() {
+      line('DevSpire Nexus Theme Palette:', 'head');
+      line('  Background Canvas: #090D12');
+      line('  Surface Card:      #17212B');
+      line('  Surface Secondary: #111820');
+      line('  Primary Cyan:      #7bd0ff');
+      line('  Primary Container: #f59e0b (Amber Accent)');
+      line('  Tertiary Mint:     #34D399 (Verified Status)');
+      line('  Text Primary:      #F1F5F9');
+      line('  Text Muted:        #94A3B8');
+    },
+
+    clear() {
+      output.textContent = '';
+    }
+  };
+
+  const run = (raw) => {
+    const text = String(raw || '').trim();
+    if (!text) return;
+    line('$ ' + text, 'cmd');
+    const tokens = text.split(/\s+/);
+    const name = tokens[0].toLowerCase();
+    const args = tokens.slice(1);
+    if (!Object.prototype.hasOwnProperty.call(COMMANDS, name)) {
+      line(`Unknown command "${name}". Type help to see the allowlist.`, 'err');
+      commit();
+      return;
+    }
+    try {
+      COMMANDS[name](args);
+    } catch (err) {
+      line('Command failed: ' + (err.message || 'unknown error'), 'err');
+    }
+    commit();
+  };
+
+  const history = [];
+  let cursor = -1;
+
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    if (input.value.length > MAX_INPUT) {
+      line(`Input rejected: ${MAX_INPUT} characters maximum.`, 'err');
+      commit();
+      return;
+    }
+    const value = input.value;
+    run(value);
+    if (value.trim()) history.push(value.trim());
+    cursor = history.length;
+    input.value = '';
+  });
+
+  input.addEventListener('keydown', (event) => {
+    if (event.key === 'ArrowUp') {
+      event.preventDefault();
+      if (!history.length) return;
+      cursor = Math.max(0, cursor - 1);
+      input.value = history[cursor] || '';
+      input.setSelectionRange(input.value.length, input.value.length);
+    } else if (event.key === 'ArrowDown') {
+      event.preventDefault();
+      if (!history.length) return;
+      cursor = Math.min(history.length, cursor + 1);
+      input.value = history[cursor] || '';
+    } else if (event.key === 'Tab') {
+      event.preventDefault();
+      const val = input.value.trim().toLowerCase();
+      if (!val) return;
+      const match = Object.keys(COMMANDS).find((c) => c.startsWith(val));
+      if (match) input.value = match + ' ';
+    } else if (event.key === 'l' && event.ctrlKey) {
+      event.preventDefault();
+      COMMANDS.clear();
+    }
+  });
+
+  line('AI Resource Intelligence · Catalog Terminal v1.0', 'head');
+  line('Read-only allowlist console. Type help for commands.', 'muted');
+  line(`Loaded ${REGISTRIES[0].items.length} AI tools, ${REGISTRIES[1].items.length} AI models, ${REGISTRIES[2].items.length} developer resources.`, 'ok');
+  commit();
+  input.focus();
+})();
+
+</script>
+</body>
+</html>

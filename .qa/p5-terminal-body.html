@@ -1,0 +1,68 @@
+<main class="w-full max-w-[1360px] mx-auto px-4 sm:px-gutter-lg py-space-lg flex-1 flex flex-col">
+<nav class="flex items-center gap-space-xs text-metadata-label font-metadata-label text-text-muted mb-space-sm" aria-label="Breadcrumb">
+<a class="hover:text-text-primary transition-colors" href="directory.html">Home</a>
+<span class="text-border-subtle">/</span>
+<span class="text-primary-container">Terminal</span>
+</nav>
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md mb-space-lg pb-space-md border-b border-border-subtle">
+<div>
+<p class="font-metadata-label text-metadata-label text-primary-container uppercase tracking-[0.18em] mb-1">Catalog Console</p>
+<h1 class="font-display-hero-mobile text-display-hero-mobile sm:font-display-hero sm:text-display-hero text-text-primary tracking-tight">Terminal</h1>
+<p class="font-body-compact text-body-compact text-text-muted mt-1 max-w-3xl">
+          A read-only console over the local registry datasets. It parses a fixed command allowlist and prints catalog records.
+        </p>
+</div>
+<div class="flex items-center gap-2 self-start md:self-auto bg-surface-secondary border border-border-subtle px-3 py-1.5 rounded">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span class="font-code-badge text-code-badge text-text-primary">READ-ONLY · ALLOWLIST</span>
+</div>
+</div>
+<div class="rounded-xl border border-status-warning/40 bg-status-warning/10 p-4 flex items-start gap-3 mb-space-lg" role="note">
+<span class="material-symbols-outlined text-status-warning text-xl shrink-0" data-icon="shield">shield</span>
+<div class="min-w-0">
+<p class="font-body-compact text-body-compact text-text-primary font-medium">This is not a system shell.</p>
+<p class="font-metadata-label text-metadata-label text-text-muted mt-0.5">It cannot execute shell commands, evaluate JavaScript, read local files, or call external services. Commands only query the three catalog datasets already loaded on this page.</p>
+</div>
+</div>
+<section class="ui-card rounded-xl overflow-hidden" aria-label="Catalog terminal">
+<div class="flex flex-wrap items-center justify-between gap-2 border-b border-border-subtle bg-surface-secondary px-4 py-2">
+<span class="font-code-badge text-code-badge text-text-muted">catalog://terminal</span>
+<span class="font-code-badge text-code-badge text-tertiary">LOCAL DATA · NO NETWORK</span>
+</div>
+<div class="terminal-output font-code-param" id="terminal-output" role="log" aria-live="polite" aria-label="Terminal output"></div>
+<form class="flex items-center gap-2 border-t border-border-subtle bg-surface-secondary px-3 py-2" id="terminal-form" autocomplete="off">
+<span class="font-code-badge text-code-badge text-tertiary select-none" aria-hidden="true">$</span>
+<label class="visually-hidden" for="terminal-input">Terminal command</label>
+<input class="flex-1 min-w-0 bg-transparent border-none text-text-primary font-code-param text-code-param placeholder:text-text-muted focus:ring-0 focus:outline-none" id="terminal-input" type="text" placeholder="Type help and press Enter" maxlength="200" spellcheck="false" autocomplete="off"/>
+<button class="inline-flex items-center gap-1.5 bg-surface-card border border-border-subtle rounded px-3 py-1.5 font-code-badge text-code-badge text-text-primary hover:border-secondary transition-colors" type="submit">
+<span class="material-symbols-outlined text-[14px]" data-icon="keyboard_return">keyboard_return</span>
+          Run
+        </button>
+</form>
+</section>
+<section class="mt-space-lg">
+<h2 class="font-title-card text-title-card text-text-primary mb-1">Allowed commands</h2>
+<p class="font-body-compact text-body-compact text-text-muted mb-4">Every command below is implemented in the page. Unknown commands are rejected without evaluation.</p>
+<div class="ui-card rounded-xl overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="border-b border-border-subtle">
+<th scope="col" class="px-4 py-2.5 font-metadata-label text-metadata-label text-text-muted uppercase tracking-wider">Command</th>
+<th scope="col" class="px-4 py-2.5 font-metadata-label text-metadata-label text-text-muted uppercase tracking-wider">Action</th>
+</tr>
+</thead>
+<tbody class="font-body-compact text-body-compact">
+<tr class="border-b border-border-subtle/50"><td class="px-4 py-2.5 font-code-param text-code-param text-secondary whitespace-nowrap">help</td><td class="px-4 py-2.5 text-text-muted">List the allowlisted commands.</td></tr>
+<tr class="border-b border-border-subtle/50"><td class="px-4 py-2.5 font-code-param text-code-param text-secondary whitespace-nowrap">stats</td><td class="px-4 py-2.5 text-text-muted">Record and category counts for each registry.</td></tr>
+<tr class="border-b border-border-subtle/50"><td class="px-4 py-2.5 font-code-param text-code-param text-secondary whitespace-nowrap">list &lt;registry&gt;</td><td class="px-4 py-2.5 text-text-muted">Show record IDs and names. Registries: tools, models, resources.</td></tr>
+<tr class="border-b border-border-subtle/50"><td class="px-4 py-2.5 font-code-param text-code-param text-secondary whitespace-nowrap">search &lt;term&gt;</td><td class="px-4 py-2.5 text-text-muted">Search names, descriptions, categories, tags, and publishers across all registries.</td></tr>
+<tr class="border-b border-border-subtle/50"><td class="px-4 py-2.5 font-code-param text-code-param text-secondary whitespace-nowrap">show &lt;id&gt;</td><td class="px-4 py-2.5 text-text-muted">Print the stated fields for one record.</td></tr>
+<tr class="border-b border-border-subtle/50"><td class="px-4 py-2.5 font-code-param text-code-param text-secondary whitespace-nowrap">categories &lt;registry&gt;</td><td class="px-4 py-2.5 text-text-muted">Category counts, for one registry or all three.</td></tr>
+<tr class="border-b border-border-subtle/50"><td class="px-4 py-2.5 font-code-param text-code-param text-secondary whitespace-nowrap">open &lt;id&gt;</td><td class="px-4 py-2.5 text-text-muted">Open the record's page and deep-link view.</td></tr>
+<tr><td class="px-4 py-2.5 font-code-param text-code-param text-secondary whitespace-nowrap">clear</td><td class="px-4 py-2.5 text-text-muted">Clear the output area.</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+<p class="font-metadata-label text-metadata-label text-text-muted mt-space-md">Command history is available with the up and down arrow keys. The console does not store input outside this page.</p>
+</main>

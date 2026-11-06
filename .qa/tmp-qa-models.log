@@ -1,0 +1,42 @@
+FAIL: all model records complete missing=84
+FACET COUNTS {
+ "availability": [
+  "Open Weights 269",
+  "API Only 27",
+  "Availability Unspecified 4",
+  "Local Inference Ready 269",
+  "Sign-up Required 37"
+ ],
+ "licensing": [
+  "MIT / Apache 2.0 18",
+  "Permissive Community 13",
+  "Proprietary / Commercial 12",
+  "Non-Commercial / Research 5"
+ ],
+ "modalities": [
+  "Text & Reasoning 84",
+  "Code 44",
+  "Vision 48",
+  "Audio 28",
+  "Video 20",
+  "Image Generation 12",
+  "Embeddings 25",
+  "Reranking 6"
+ ],
+ "context": [
+  "Under 32K 4",
+  "32K - 128K 13",
+  "200K - 1M 4"
+ ],
+ "params": [
+  "Mixture of Experts 3",
+  "Under 8B 4",
+  "8B - 70B 10",
+  "70B+ 10"
+ ]
+}
+FAIL: detail links are all absolute https 
+
+=== 91/93 checks passed ===
+FAILED: all model records complete missing=84
+FAILED: detail links are all absolute https 

@@ -1,0 +1,16 @@
+FAIL: terminal banner counts AI Resource Intelligence · Catalog Terminal v1.0Read-only allowlist console. Type help for commands.Loaded 403 AI tools, 300 AI models, 300 developer resources.
+FAIL: stats total = 154 across 3 registries AI Resource Intelligence · Catalog Terminal v1.0Read-only allowlist console. Type help for commands.Loaded 403 AI tools, 300 AI models, 300 developer resources.$ helpAllowed commands  help                    This list.  stats                   Counts for the three registries.  list <registry>         IDs and names (tools | models | resources).  search <term>           Search names, descriptions, categories, tags.  show <id>               Print one record using stated fields only.  categories <registry>   Category counts (omit registry for all).  open <id>               Open the record page and deep-link view.  clear                   Clear this output.No shell, eval, file access, or network calls are available.$ statsCatalog total: 1003 records across 3 registries  AI Tools: 403 records · 14 categories · last verified 2026-11-04  AI Models: 300 records · 12 categories · last verified 2026-11-04  Developer Resources: 300 records · 12 categories · last verified 2026-11-04Counts are computed from the datasets loaded in this page.
+FAIL: stats lists each registry count 
+FAIL: list models caps at 25 and reports the rest 
+FAIL: categories models sums to 48 sum=300
+FAIL: api table counts match datasets ["1003 total","403","300","300"]
+FAIL: docs counts computed 
+
+=== 162/169 checks passed ===
+FAILED: terminal banner counts AI Resource Intelligence · Catalog Terminal v1.0Read-only allowlist console. Type help for commands.Loaded 403 AI tools, 300 AI models, 300 developer resources.
+FAILED: stats total = 154 across 3 registries AI Resource Intelligence · Catalog Terminal v1.0Read-only allowlist console. Type help for commands.Loaded 403 AI tools, 300 AI models, 300 developer resources.$ helpAllowed commands  help                    This list.  stats                   Counts for the three registries.  list <registry>         IDs and names (tools | models | resources).  search <term>           Search names, descriptions, categories, tags.  show <id>               Print one record using stated fields only.  categories <registry>   Category counts (omit registry for all).  open <id>               Open the record page and deep-link view.  clear                   Clear this output.No shell, eval, file access, or network calls are available.$ statsCatalog total: 1003 records across 3 registries  AI Tools: 403 records · 14 categories · last verified 2026-11-04  AI Models: 300 records · 12 categories · last verified 2026-11-04  Developer Resources: 300 records · 12 categories · last verified 2026-11-04Counts are computed from the datasets loaded in this page.
+FAILED: stats lists each registry count 
+FAILED: list models caps at 25 and reports the rest 
+FAILED: categories models sums to 48 sum=300
+FAILED: api table counts match datasets ["1003 total","403","300","300"]
+FAILED: docs counts computed 

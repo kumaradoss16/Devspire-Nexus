@@ -1,0 +1,2008 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AI Tools Directory - AI Resource Intelligence</title>
+<link rel="icon" type="image/png" href="assets/img/devspirehub-gears-48.png"/>
+<meta name="description" content="Discover AI-powered applications for coding, writing, research, design, productivity, and automation."/>
+<!-- Material Symbols Outlined font -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Fonts: Geist & JetBrains Mono -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "surface": "#051424",
+            "on-surface": "#d4e4fa",
+            "bg-canvas": "#090D12",
+            "surface-bright": "#2c3a4c",
+            "surface-container-highest": "#273647",
+            "on-error-container": "#ffdad6",
+            "on-tertiary-fixed-variant": "#005137",
+            "secondary-container": "#00a6e0",
+            "primary-container": "#f59e0b",
+            "status-warning": "#FBBF24",
+            "surface-container-low": "#0d1c2d",
+            "tertiary-fixed": "#68fcbf",
+            "on-tertiary": "#003825",
+            "secondary-fixed-dim": "#7bd0ff",
+            "tertiary-fixed-dim": "#45dfa4",
+            "surface-container": "#122131",
+            "surface-secondary": "#111820",
+            "primary-fixed": "#ffddb8",
+            "surface-dim": "#051424",
+            "on-tertiary-fixed": "#002114",
+            "status-error": "#F87171",
+            "on-primary-fixed": "#2a1700",
+            "inverse-surface": "#d4e4fa",
+            "on-error": "#690005",
+            "surface-tint": "#ffb95f",
+            "on-secondary-fixed-variant": "#004c69",
+            "on-surface-variant": "#d8c3ad",
+            "surface-container-lowest": "#010f1f",
+            "outline": "#a08e7a",
+            "on-secondary-container": "#00374d",
+            "background": "#051424",
+            "on-primary-container": "#613b00",
+            "inverse-primary": "#855300",
+            "primary": "#ffc174",
+            "tertiary": "#4de6aa",
+            "primary-fixed-dim": "#ffb95f",
+            "error-container": "#93000a",
+            "text-muted": "#94A3B8",
+            "on-primary": "#472a00",
+            "on-tertiary-container": "#004e35",
+            "tertiary-container": "#22c990",
+            "on-primary-fixed-variant": "#653e00",
+            "outline-variant": "#534434",
+            "surface-card": "#17212B",
+            "surface-container-high": "#1c2b3c",
+            "on-secondary-fixed": "#001e2c",
+            "on-background": "#d4e4fa",
+            "inverse-on-surface": "#233143",
+            "surface-variant": "#273647",
+            "error": "#ffb4ab",
+            "border-subtle": "#273341",
+            "on-secondary": "#00354a",
+            "text-primary": "#F1F5F9",
+            "secondary-fixed": "#c4e7ff",
+            "secondary": "#7bd0ff"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "margin-lg": "3rem",
+            "space-sm": "0.5rem",
+            "space-lg": "1.5rem",
+            "space-xl": "2rem",
+            "margin": "1rem",
+            "margin-md": "2rem",
+            "gutter-lg": "1.5rem",
+            "gutter": "1.25rem",
+            "space-md": "1rem",
+            "space-xs": "0.25rem"
+          },
+          "fontFamily": {
+            "headline-section": ["Geist", "sans-serif"],
+            "code-badge": ["JetBrains Mono", "monospace"],
+            "display-hero-mobile": ["Geist", "sans-serif"],
+            "body-default": ["Geist", "sans-serif"],
+            "body-compact": ["Geist", "sans-serif"],
+            "title-card": ["Geist", "sans-serif"],
+            "code-param": ["JetBrains Mono", "monospace"],
+            "metadata-label": ["Geist", "sans-serif"],
+            "display-hero": ["Geist", "sans-serif"]
+          },
+          "fontSize": {
+            "headline-section": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+            "code-badge": ["12px", { "lineHeight": "16px", "letterSpacing": "0em", "fontWeight": "500" }],
+            "display-hero-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+            "body-default": ["15px", { "lineHeight": "22px", "letterSpacing": "0em", "fontWeight": "400" }],
+            "body-compact": ["14px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" }],
+            "title-card": ["17px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "code-param": ["13px", { "lineHeight": "18px", "letterSpacing": "-0.01em", "fontWeight": "500" }],
+            "metadata-label": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500" }],
+            "display-hero": ["44px", { "lineHeight": "52px", "letterSpacing": "-0.03em", "fontWeight": "600" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+/* ============ Premium polish layer (works alongside Tailwind utilities) ============ */
+:root {
+  --bg-canvas: #090D12;
+  --surface-card: #17212B;
+  --surface-secondary: #111820;
+  --border-subtle: #273341;
+  --amber: #f59e0b;
+  --amber-bright: #ffb95f;
+  --blue: #7bd0ff;
+  --green: #34D399;
+  color-scheme: dark;
+}
+
+html { scroll-behavior: smooth; }
+
+/* Ensure the hidden attribute always wins over Tailwind display utilities */
+[hidden] { display: none !important; }
+
+/* Icon ligatures keep a square footprint even if the icon font is still loading */
+.material-symbols-outlined {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  overflow: hidden;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+
+body {
+  background-color: var(--bg-canvas);
+  background-image:
+    radial-gradient(1000px 420px at 50% -180px, rgba(245, 158, 11, 0.05), transparent 65%),
+    radial-gradient(800px 380px at 90% -60px, rgba(0, 166, 224, 0.04), transparent 60%);
+  background-attachment: fixed;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Sticky header: glassy, blurred */
+header.site-header {
+  background: rgba(9, 13, 18, 0.85);
+  backdrop-filter: blur(14px) saturate(140%);
+  -webkit-backdrop-filter: blur(14px) saturate(140%);
+  box-shadow: 0 1px 0 rgba(123, 208, 255, 0.05), 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+
+/* Premium card treatment */
+.ui-card {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.018), rgba(255, 255, 255, 0) 42%),
+    var(--surface-card);
+  border: 1px solid var(--border-subtle);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.03),
+    0 1px 2px rgba(0, 0, 0, 0.45),
+    0 4px 16px rgba(0, 0, 0, 0.2);
+  transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+}
+.ui-card:hover {
+  border-color: rgba(56, 189, 248, 0.38);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.045),
+    0 0 0 1px rgba(56, 189, 248, 0.06),
+    0 10px 28px rgba(0, 0, 0, 0.5),
+    0 0 36px rgba(56, 189, 248, 0.05);
+  transform: translateY(-2px);
+}
+
+/* Brand mark: soft amber glow on the hexagon logo */
+.brand-mark { filter: drop-shadow(0 0 8px rgba(245, 158, 11, 0.35)); }
+
+/* Tool tile icons (inline SVG) */
+.tool-icon { display: inline-flex; width: 20px; height: 20px; }
+.tool-icon svg { width: 100%; height: 100%; }
+
+/* Brand favicons: light chip so dark-on-transparent logos read on the dark card */
+.tool-favicon {
+  width: 22px; height: 22px; padding: 2px;
+  background: #f1f5f9; border-radius: 5px;
+  object-fit: contain; flex-shrink: 0;
+}
+#tool-table-body .tool-favicon {
+  width: 14px; height: 14px; padding: 1px;
+  border-radius: 3px; vertical-align: -3px; margin-right: 6px;
+}
+
+/* Card hover: tile icon brightens with the border glow */
+.ui-card:hover .tool-icon { filter: drop-shadow(0 0 6px currentColor); }
+.ui-card:hover .tool-favicon { box-shadow: 0 0 10px rgba(241, 245, 249, 0.22); }
+
+/* Amber CTA glow */
+.btn-amber {
+  box-shadow: 0 0 0 1px rgba(245, 158, 11, 0.25), 0 2px 10px rgba(245, 158, 11, 0.18);
+  transition: filter 150ms ease, box-shadow 150ms ease, transform 150ms ease;
+}
+.btn-amber:hover {
+  box-shadow: 0 0 0 1px rgba(245, 158, 11, 0.35), 0 4px 18px rgba(245, 158, 11, 0.28);
+}
+.btn-amber:active { transform: scale(0.97); }
+
+/* Search: amber focus halo */
+.search-shell:focus-within {
+  border-color: rgba(245, 158, 11, 0.55);
+  box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.12), 0 0 28px rgba(245, 158, 11, 0.07);
+}
+
+/* Category pills */
+.pill {
+  transition: border-color 150ms ease, background-color 150ms ease, color 150ms ease, transform 150ms ease;
+}
+.pill:hover { transform: translateY(-1px); }
+.pill[aria-pressed="true"] {
+  background: var(--amber);
+  border-color: var(--amber);
+  color: var(--bg-canvas);
+  font-weight: 600;
+  box-shadow: 0 0 0 1px rgba(245, 158, 11, 0.25), 0 2px 10px rgba(245, 158, 11, 0.18);
+}
+
+/* Facet checkboxes: amber accent squares */
+.facet-input {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  border: 1px solid var(--border-subtle);
+  background: var(--surface-secondary);
+  display: inline-grid;
+  place-content: center;
+  cursor: pointer;
+  transition: background-color 120ms ease, border-color 120ms ease;
+  flex-shrink: 0;
+}
+.facet-input::before {
+  content: "";
+  width: 9px;
+  height: 9px;
+  transform: scale(0);
+  transition: transform 120ms ease;
+  background: var(--bg-canvas);
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+}
+.facet-input:checked {
+  background: var(--amber);
+  border-color: var(--amber);
+}
+.facet-input:checked::before { transform: scale(1); }
+.facet-input:focus-visible {
+  outline: 2px solid rgba(245, 158, 11, 0.6);
+  outline-offset: 2px;
+}
+
+/* Hide horizontal scrollbar on the pill rail */
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-none::-webkit-scrollbar { display: none; }
+
+/* Segmented view toggle */
+.segmented button {
+  transition: background-color 150ms ease, color 150ms ease;
+}
+.segmented button[aria-pressed="true"] {
+  background: var(--surface-secondary);
+  color: #F1F5F9;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+/* Compact table view */
+.resource-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.resource-table th {
+  font-family: "Geist", sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #94A3B8;
+  font-weight: 500;
+  text-align: left;
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--border-subtle);
+  white-space: nowrap;
+}
+.resource-table td {
+  padding: 12px 14px;
+  border-bottom: 1px solid rgba(39, 51, 65, 0.55);
+  vertical-align: middle;
+}
+.resource-table tbody tr { transition: background-color 120ms ease; }
+.resource-table tbody tr:hover { background: #1b2632; }
+.resource-table tbody tr:last-child td { border-bottom: none; }
+.resource-table-wrap {
+  border: 1px solid var(--border-subtle);
+  border-radius: 0.75rem;
+  overflow-x: auto;
+  background: var(--surface-card);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03);
+}
+
+/* Pagination buttons */
+.page-btn {
+  transition: background-color 150ms ease, color 150ms ease, border-color 150ms ease;
+}
+.page-btn:not(:disabled):not(.is-active):hover {
+  border-color: rgba(123, 208, 255, 0.4);
+  color: #F1F5F9;
+}
+.page-btn.is-active {
+  background: var(--amber);
+  border-color: var(--amber);
+  color: var(--bg-canvas);
+  font-weight: 600;
+  box-shadow: 0 0 0 1px rgba(245, 158, 11, 0.25), 0 2px 10px rgba(245, 158, 11, 0.18);
+}
+
+/* kbd refinement */
+kbd.key-hint {
+  font-family: "JetBrains Mono", monospace;
+  box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.06);
+  letter-spacing: 0.02em;
+}
+
+/* Mobile menu */
+#mobile-menu:not([hidden]) { animation: menu-in 160ms ease; }
+@keyframes menu-in {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: var(--bg-canvas); }
+::-webkit-scrollbar-thumb {
+  background: #26313d;
+  border-radius: 8px;
+  border: 2px solid var(--bg-canvas);
+}
+::-webkit-scrollbar-thumb:hover { background: #33414f; }
+* { scrollbar-width: thin; scrollbar-color: #26313d var(--bg-canvas); }
+
+h1, h2, h3 { text-wrap: balance; }
+.font-code-badge, .font-code-param { font-feature-settings: "zero" 1; }
+
+/* Card entrance */
+.rise { animation: rise 450ms cubic-bezier(0.22, 1, 0.36, 1) both; }
+@keyframes rise {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .rise, #mobile-menu:not([hidden]) { animation: none; }
+  .ui-card, .pill, .btn-amber, .page-btn { transition: none; }
+}
+
+/* Screen-reader-only helper (used by table action headers) */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+</style>
+<link rel="stylesheet" href="assets/site.css"/>
+<meta name="theme-color" content="#090D12"/>
+<meta name="robots" content="index, follow"/>
+<meta property="og:type" content="website"/>
+<meta property="og:site_name" content="DevSpire Nexus"/>
+<meta property="og:title" content="AI Tools Directory - AI Resource Intelligence"/>
+<meta property="og:description" content="Discover AI-powered applications for coding, writing, research, design, productivity, and automation."/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="AI Tools Directory - AI Resource Intelligence"/>
+<meta name="twitter:description" content="Discover AI-powered applications for coding, writing, research, design, productivity, and automation."/>
+</head>
+<body class="bg-bg-canvas text-text-primary min-h-screen flex flex-col font-body-default antialiased selection:bg-primary-container selection:text-bg-canvas">
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<!-- Top Navigation Bar -->
+<header class="w-full border-b border-border-subtle dark:border-border-subtle sticky top-0 z-50 site-header">
+<div class="flex justify-between items-center w-full px-4 sm:px-gutter-lg max-w-[1360px] mx-auto h-14">
+<div class="flex items-center gap-2 sm:gap-space-lg min-w-0">
+<a class="font-title-card text-text-primary dark:text-text-primary tracking-tight font-semibold flex items-center gap-2 sm:gap-space-sm whitespace-nowrap text-[15px] sm:text-title-card shrink-0" href="directory.html">
+<img src="assets/img/devspirehub-gears-128.png" alt="DevSpire Nexus logo" class="brand-mark w-7 h-7 rounded-lg object-cover shrink-0" width="28" height="28"/>
+<span class="flex flex-col leading-tight min-w-0"><span class="hidden sm:inline">DevSpire Nexus</span><span class="hidden xl:inline font-metadata-label text-[10px] font-normal tracking-[0.14em] text-text-muted uppercase">AI Intelligence Directory</span></span>
+</a>
+<nav class="hidden lg:flex items-center gap-3 xl:gap-space-md ml-2 xl:ml-space-md" aria-label="Primary">
+<a class="text-text-muted dark:text-text-muted font-body-compact text-body-compact hover:text-text-primary dark:hover:text-text-primary transition-colors whitespace-nowrap" href="directory.html">Discover</a>
+<a class="text-text-muted dark:text-text-muted font-body-compact text-body-compact hover:text-text-primary dark:hover:text-text-primary transition-colors whitespace-nowrap" href="ai-tools.html">AI Tools</a>
+<a class="text-text-muted dark:text-text-muted font-body-compact text-body-compact hover:text-text-primary dark:hover:text-text-primary transition-colors whitespace-nowrap" href="models.html">AI Models</a>
+<a class="text-text-muted dark:text-text-muted font-body-compact text-body-compact hover:text-text-primary dark:hover:text-text-primary transition-colors whitespace-nowrap" href="developer-resources.html">Developer Resources</a>
+<a class="text-text-muted dark:text-text-muted font-body-compact text-body-compact hover:text-text-primary dark:hover:text-text-primary transition-colors whitespace-nowrap" href="collections.html">My Collections</a>
+<a class="text-text-muted dark:text-text-muted font-body-compact text-body-compact hover:text-text-primary dark:hover:text-text-primary transition-colors whitespace-nowrap" href="about.html">About</a>
+<a class="text-text-muted dark:text-text-muted font-body-compact text-body-compact hover:text-text-primary dark:hover:text-text-primary transition-colors whitespace-nowrap inline-flex items-center gap-1" href="https://devspirehub.com/" target="_blank" rel="noopener">DevSpireHub<span class="material-symbols-outlined text-[14px]" data-icon="arrow_outward" aria-hidden="true">arrow_outward</span></a>
+</nav>
+</div>
+<div class="flex items-center gap-1.5 sm:gap-space-sm shrink-0">
+<a class="hidden sm:inline-flex items-center gap-1.5 bg-surface-card border border-border-subtle rounded px-2.5 py-1.5 font-body-compact text-body-compact text-text-muted hover:border-secondary hover:text-secondary dark:hover:border-secondary dark:hover:text-secondary transition-colors duration-150" href="terminal.html" id="terminal-nav-btn" aria-label="Open Terminal" title="Open Terminal">
+<span class="material-symbols-outlined text-[16px]" data-icon="terminal" aria-hidden="true">terminal</span>
+<span class="text-xs">Terminal</span>
+<kbd class="font-code-badge text-code-badge bg-surface-secondary px-1.5 py-0.5 rounded text-[11px] border border-border-subtle text-text-muted key-hint">&#96;</kbd>
+</a>
+<a class="inline-flex items-center justify-center gap-1.5 bg-primary-container text-bg-canvas font-body-compact font-semibold px-2.5 sm:px-3 py-1.5 rounded text-[13px] sm:text-body-compact hover:brightness-110 transition-all" href="submit.html">
+<span class="material-symbols-outlined text-[16px]" data-icon="add" aria-hidden="true">add</span>Submit Resource</a>
+<button class="lg:hidden inline-flex items-center justify-center w-8 h-8 rounded bg-surface-card border border-border-subtle text-text-muted hover:text-text-primary transition-colors" id="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+<span class="material-symbols-outlined text-[18px]" data-icon="menu" aria-hidden="true">menu</span>
+</button>
+</div>
+</div>
+<div class="lg:hidden hidden border-t border-border-subtle bg-surface-secondary/95 backdrop-blur" id="mobile-menu">
+<nav class="flex flex-col px-4 sm:px-gutter-lg py-3 gap-1" aria-label="Mobile">
+<a class="text-text-muted hover:text-text-primary font-body-compact text-body-compact py-2 border-b border-border-subtle/50 transition-colors" href="directory.html">Discover</a>
+<a class="text-text-muted hover:text-text-primary font-body-compact text-body-compact py-2 border-b border-border-subtle/50 transition-colors" href="ai-tools.html">AI Tools</a>
+<a class="text-text-muted hover:text-text-primary font-body-compact text-body-compact py-2 border-b border-border-subtle/50 transition-colors" href="models.html">AI Models</a>
+<a class="text-text-muted hover:text-text-primary font-body-compact text-body-compact py-2 border-b border-border-subtle/50 transition-colors" href="developer-resources.html">Developer Resources</a>
+<a class="text-text-muted hover:text-text-primary font-body-compact text-body-compact py-2 border-b border-border-subtle/50 transition-colors" href="collections.html">My Collections</a>
+<a class="text-text-muted hover:text-text-primary font-body-compact text-body-compact py-2 border-b border-border-subtle/50 transition-colors" href="about.html">About</a>
+<a class="text-text-muted hover:text-text-primary font-body-compact text-body-compact py-2 border-b border-border-subtle/50 transition-colors inline-flex items-center gap-2" href="terminal.html"><span class="material-symbols-outlined text-[16px]" aria-hidden="true">terminal</span>Terminal</a>
+<a class="text-text-muted hover:text-text-primary font-body-compact text-body-compact py-2 border-b border-border-subtle/50 transition-colors" href="submit.html">Submit Resource</a>
+<a class="text-text-muted hover:text-text-primary font-body-compact text-body-compact py-2 border-b border-border-subtle/50 transition-colors inline-flex items-center gap-1" href="https://devspirehub.com/" target="_blank" rel="noopener">DevSpireHub<span class="material-symbols-outlined text-[14px]" aria-hidden="true">arrow_outward</span></a>
+<a class="text-text-muted hover:text-text-primary font-body-compact text-body-compact py-2 transition-colors inline-flex items-center gap-1" href="https://devspirehub.com/Website/about/about.html" target="_blank" rel="noopener">About DevSpireHub<span class="material-symbols-outlined text-[14px]" aria-hidden="true">arrow_outward</span></a>
+</nav>
+</div>
+</header>
+<!-- Main Container -->
+<main id="main-content" class="w-full max-w-[1360px] mx-auto px-4 sm:px-gutter-lg py-space-lg flex-1 flex flex-col">
+<!-- Breadcrumb -->
+<nav class="flex items-center gap-space-xs text-metadata-label font-metadata-label text-text-muted mb-space-sm" aria-label="Breadcrumb">
+<a class="hover:text-text-primary transition-colors" href="directory.html">Home</a>
+<span class="text-border-subtle">/</span>
+<span class="text-primary-container">AI Tools</span>
+</nav>
+<!-- Header Section -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md mb-space-lg pb-space-md border-b border-border-subtle">
+<div>
+<h1 class="font-headline-section text-headline-section text-text-primary tracking-tight">Explore AI Tools</h1>
+<p class="font-body-compact text-body-compact text-text-muted mt-1 max-w-3xl">
+          Discover AI-powered applications for coding, writing, research, design, productivity, and automation.
+        </p>
+</div>
+<div class="flex items-center gap-2 self-start md:self-auto shrink-0 bg-surface-secondary border border-border-subtle px-3 py-1.5 rounded">
+<span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span>
+<span class="font-code-badge text-code-badge text-text-primary" id="catalog-chip">— Tools Cataloged · — Verified</span>
+</div>
+</div>
+<!-- Search & Category Bar -->
+<div class="flex flex-col gap-space-md mb-space-lg">
+<div class="relative w-full flex items-center search-shell bg-surface-secondary border border-border-subtle rounded transition-all">
+<span class="material-symbols-outlined absolute left-3.5 text-text-muted text-xl pointer-events-none" aria-hidden="true" data-icon="search">search</span>
+<input class="w-full bg-transparent border-none rounded pl-11 pr-24 py-2.5 text-body-compact font-body-compact text-text-primary placeholder:text-text-muted focus:outline-none focus:ring-0" placeholder="Search AI tools by capability, deployment model, or architecture..." type="text" id="tool-search" value="" autocomplete="off" spellcheck="false" aria-label="Search AI tools"/>
+<div class="absolute right-3 flex items-center gap-2">
+<button class="text-text-muted hover:text-text-primary p-1 transition-colors" id="search-clear" title="Clear search" type="button" style="visibility:hidden">
+<span class="material-symbols-outlined text-base" aria-hidden="true" data-icon="close">close</span>
+</button>
+<kbd class="key-hint font-code-badge text-code-badge text-text-muted bg-surface-card border border-border-subtle px-2 py-0.5 rounded">⌘K</kbd>
+</div>
+</div>
+<!-- Horizontal Scrollable Category Pills -->
+<div class="flex items-center gap-2 overflow-x-auto pb-1 scrollbar-none border-b border-border-subtle/50" id="category-pills" role="group" aria-label="Filter by category"></div>
+</div>
+<!-- Mobile facets toggle -->
+<button class="lg:hidden flex items-center justify-center gap-2 bg-surface-secondary border border-border-subtle rounded px-3 py-2 font-body-compact text-body-compact text-text-primary mb-space-md transition-colors hover:border-secondary" id="facets-toggle" type="button" aria-expanded="false" aria-controls="facets-panel">
+<span class="material-symbols-outlined text-[18px] text-primary-container" aria-hidden="true" data-icon="tune">tune</span>
+<span>Resource Facets</span>
+<span class="font-code-badge text-code-badge bg-surface-card border border-border-subtle px-1.5 py-0.5 rounded text-text-muted" id="facets-count">0</span>
+</button>
+<!-- Two-Column Directory Workspace -->
+<div class="flex flex-col lg:flex-row gap-space-lg items-start">
+<!-- Left Filter Sidebar (260px) -->
+<aside class="w-full lg:w-[260px] shrink-0 ui-card rounded p-space-md flex-col gap-space-md hidden lg:flex" id="facets-panel" aria-label="Resource facets">
+<div class="flex items-center justify-between pb-space-sm border-b border-border-subtle">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-container text-base" aria-hidden="true" data-icon="tune">tune</span>
+<span class="font-title-card text-body-compact font-semibold text-text-primary">Resource Facets</span>
+</div>
+<button class="font-metadata-label text-metadata-label text-text-muted hover:text-primary-container transition-colors" id="reset-facets" type="button">
+            Reset all
+          </button>
+</div>
+<!-- Facet: Pricing -->
+<div class="flex flex-col gap-2" data-facet-group="pricing">
+<span class="font-metadata-label text-metadata-label text-text-muted uppercase tracking-wider">Pricing Model</span>
+</div>
+<div class="h-px bg-border-subtle"></div>
+<!-- Facet: Access & Auth -->
+<div class="flex flex-col gap-2" data-facet-group="access">
+<span class="font-metadata-label text-metadata-label text-text-muted uppercase tracking-wider">Access &amp; Auth</span>
+</div>
+<div class="h-px bg-border-subtle"></div>
+<!-- Facet: Deployment -->
+<div class="flex flex-col gap-2" data-facet-group="deployment">
+<span class="font-metadata-label text-metadata-label text-text-muted uppercase tracking-wider">Deployment</span>
+</div>
+<div class="h-px bg-border-subtle"></div>
+<!-- Facet: Software License -->
+<div class="flex flex-col gap-2" data-facet-group="license">
+<span class="font-metadata-label text-metadata-label text-text-muted uppercase tracking-wider">Software License</span>
+</div>
+<div class="h-px bg-border-subtle"></div>
+<!-- Facet: Verification Status -->
+<div class="flex flex-col gap-2" data-facet-group="verified">
+<span class="font-metadata-label text-metadata-label text-text-muted uppercase tracking-wider">Verification Tier</span>
+</div>
+</aside>
+<!-- Right Main Content -->
+<section class="flex-1 w-full flex flex-col gap-space-md min-w-0" aria-label="Tool results">
+<!-- Results Toolbar & Active Filter Chips -->
+<div class="flex flex-col gap-space-sm bg-surface-secondary border border-border-subtle p-3 rounded">
+<div class="flex flex-wrap items-center justify-between gap-3">
+<div class="text-body-compact font-body-compact text-text-muted" id="results-count" role="status" aria-live="polite">
+              Showing <span class="text-text-primary font-medium">0</span> of <span class="text-text-primary font-medium">0</span> tools matching filters
+            </div>
+<div class="flex items-center gap-space-md">
+<!-- Sorting dropdown -->
+<div class="flex items-center gap-1.5 text-metadata-label font-metadata-label text-text-muted">
+<span>Sort by:</span>
+<select class="bg-surface-card border border-border-subtle text-text-primary rounded text-metadata-label font-metadata-label px-2 py-1 focus:ring-0 focus:border-primary-container" id="sort-select" aria-label="Sort tools">
+<option value="verified">Recently Verified</option>
+<option value="name">Name A-Z</option>
+<option value="relevance">Relevance</option>
+</select>
+</div>
+<!-- Segmented View Toggle -->
+<div class="flex items-center bg-surface-card border border-border-subtle rounded p-0.5 segmented" role="group" aria-label="View mode">
+<button class="p-1 rounded text-text-primary" id="view-grid-btn" type="button" data-view="grid" aria-pressed="true" title="Grid View">
+<span class="material-symbols-outlined text-base" aria-hidden="true" data-icon="grid_view">grid_view</span>
+</button>
+<button class="p-1 rounded text-text-muted hover:text-text-primary" id="view-table-btn" type="button" data-view="table" aria-pressed="false" title="Compact Table">
+<span class="material-symbols-outlined text-base" aria-hidden="true" data-icon="table_rows">table_rows</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Active Filter Chips Row -->
+<div class="flex flex-wrap items-center gap-2 pt-2 border-t border-border-subtle/50" id="active-chips">
+<span class="font-metadata-label text-metadata-label text-text-muted">Active:</span>
+<span class="font-metadata-label text-metadata-label text-text-muted" id="no-filters-note">No filters applied</span>
+<button class="text-metadata-label font-metadata-label text-primary-container hover:underline ml-auto" id="reset-all-filters" type="button" hidden>
+              Reset all filters
+            </button>
+</div>
+</div>
+<!-- Tool Cards Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-space-md" id="tool-grid"></div>
+<!-- Compact Table View -->
+<div class="resource-table-wrap" id="tool-table-wrap" hidden>
+<table class="resource-table">
+<thead>
+<tr>
+<th scope="col">Resource</th>
+<th scope="col">Vendor</th>
+<th scope="col">Pricing</th>
+<th scope="col">Tags</th>
+<th scope="col"><span>External</span></th>
+</tr>
+</thead>
+<tbody id="tool-table-body"></tbody>
+</table>
+</div>
+<!-- Empty state -->
+<div class="ui-card rounded-xl p-space-xl text-center" id="empty-state" hidden>
+<span class="material-symbols-outlined text-4xl text-text-muted mb-3" aria-hidden="true" data-icon="search_off">search_off</span>
+<p class="font-title-card text-title-card text-text-primary mb-1">No tools match the current filters</p>
+<p class="font-body-compact text-body-compact text-text-muted mb-4">Try broadening the search query or clearing some facet filters.</p>
+<button class="inline-flex items-center gap-2 bg-primary-container text-bg-canvas font-body-compact text-body-compact font-semibold px-4 py-2 rounded btn-amber" id="empty-reset" type="button">Reset all filters</button>
+</div>
+<!-- Pagination Bar -->
+<div class="flex flex-col sm:flex-row items-center justify-between gap-space-md pt-space-lg mt-space-md border-t border-border-subtle" id="pagination-bar">
+<div class="font-metadata-label text-metadata-label text-text-muted" id="page-indicator">
+            Page <span class="text-text-primary font-medium">1</span> of <span class="text-text-primary font-medium">1</span>
+</div>
+<div class="flex items-center gap-1.5" id="pagination-controls" role="navigation" aria-label="Pagination"></div>
+</div>
+</section>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full bg-bg-canvas dark:bg-bg-canvas border-t border-border-subtle dark:border-border-subtle mt-space-xl">
+<div class="w-full max-w-[1360px] mx-auto px-4 sm:px-gutter-lg py-space-lg">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[minmax(0,1.5fr)_repeat(4,minmax(0,1fr))] gap-x-space-lg gap-y-space-md">
+<div class="flex flex-col gap-2 sm:col-span-2 lg:col-span-1">
+<span class="font-title-card text-title-card text-text-primary font-semibold">DevSpire Nexus</span>
+<p class="font-metadata-label text-metadata-label text-primary">Discover. Connect. Build.</p>
+<p class="font-metadata-label text-metadata-label text-text-muted max-w-xs">AI Intelligence Directory</p>
+<p class="font-metadata-label text-metadata-label text-text-muted max-w-xs">DevSpire Nexus is a product of DevSpireHub.com.</p>
+<p class="font-metadata-label text-metadata-label text-text-muted max-w-xs">Source: DevSpireHub AI knowledge base · ai-tools-models-developer-resources.md</p>
+</div>
+<nav aria-labelledby="footer-explore">
+<h2 class="font-metadata-label text-metadata-label uppercase tracking-[0.16em] text-text-primary mb-2" id="footer-explore">Explore</h2>
+<ul class="flex flex-col gap-1.5">
+<li><a class="text-text-muted dark:text-text-muted font-metadata-label text-metadata-label hover:text-text-primary dark:hover:text-text-primary transition-colors" href="directory.html">Directory</a></li>
+<li><a class="text-text-muted dark:text-text-muted font-metadata-label text-metadata-label hover:text-text-primary dark:hover:text-text-primary transition-colors" href="ai-tools.html">AI Tools</a></li>
+<li><a class="text-text-muted dark:text-text-muted font-metadata-label text-metadata-label hover:text-text-primary dark:hover:text-text-primary transition-colors" href="models.html">AI Models</a></li>
+<li><a class="text-text-muted dark:text-text-muted font-metadata-label text-metadata-label hover:text-text-primary dark:hover:text-text-primary transition-colors" href="developer-resources.html">Developer Resources</a></li>
+</ul>
+</nav>
+<nav aria-labelledby="footer-product">
+<h2 class="font-metadata-label text-metadata-label uppercase tracking-[0.16em] text-text-primary mb-2" id="footer-product">Product</h2>
+<ul class="flex flex-col gap-1.5">
+<li><a class="text-text-muted dark:text-text-muted font-metadata-label text-metadata-label hover:text-text-primary dark:hover:text-text-primary transition-colors" href="collections.html">My Collections</a></li>
+<li><a class="text-text-muted dark:text-text-muted font-metadata-label text-metadata-label hover:text-text-primary dark:hover:text-text-primary transition-colors" href="about.html">About</a></li>
+<li><a class="text-text-muted dark:text-text-muted font-metadata-label text-metadata-label hover:text-text-primary dark:hover:text-text-primary transition-colors" href="contact.html">Contact</a></li>
+<li><a class="text-text-muted dark:text-text-muted font-metadata-label text-metadata-label hover:text-text-primary dark:hover:text-text-primary transition-colors" href="docs.html">Documentation</a></li>
+<li><a class="text-text-muted dark:text-text-muted font-metadata-label text-metadata-label hover:text-text-primary dark:hover:text-text-primary transition-colors" href="api.html">API and Data Access</a></li>
+<li><a class="text-text-muted dark:text-text-muted font-metadata-label text-metadata-label hover:text-text-primary dark:hover:text-text-primary transition-colors" href="submit.html">Submit Resource</a></li>
+</ul>
+</nav>
+<nav aria-labelledby="footer-legal">
+<h2 class="font-metadata-label text-metadata-label uppercase tracking-[0.16em] text-text-primary mb-2" id="footer-legal">Legal &amp; Information</h2>
+<ul class="flex flex-col gap-1.5">
+<li><a class="text-text-muted dark:text-text-muted font-metadata-label text-metadata-label hover:text-text-primary dark:hover:text-text-primary transition-colors" href="privacy.html">Privacy Policy</a></li>
+<li><a class="text-text-muted dark:text-text-muted font-metadata-label text-metadata-label hover:text-text-primary dark:hover:text-text-primary transition-colors" href="terms.html">Terms of Service</a></li>
+</ul>
+</nav>
+<nav aria-labelledby="footer-devspirehub">
+<h2 class="font-metadata-label text-metadata-label uppercase tracking-[0.16em] text-text-primary mb-2" id="footer-devspirehub">DevSpireHub</h2>
+<ul class="flex flex-col gap-1.5">
+<li><a class="text-text-muted dark:text-text-muted font-metadata-label text-metadata-label hover:text-text-primary dark:hover:text-text-primary transition-colors" href="https://devspirehub.com/" target="_blank" rel="noopener">Main Website<span class="material-symbols-outlined text-[13px] align-middle ml-0.5" aria-hidden="true">arrow_outward</span></a></li>
+<li><a class="text-text-muted dark:text-text-muted font-metadata-label text-metadata-label hover:text-text-primary dark:hover:text-text-primary transition-colors" href="https://devspirehub.com/Website/about/about.html" target="_blank" rel="noopener">About DevSpireHub<span class="material-symbols-outlined text-[13px] align-middle ml-0.5" aria-hidden="true">arrow_outward</span></a></li>
+<li><a class="text-text-muted dark:text-text-muted font-metadata-label text-metadata-label hover:text-text-primary dark:hover:text-text-primary transition-colors" href="https://devspirehub.com/Resources/digital-resources/digital-resources-hub.html" target="_blank" rel="noopener">Learning Resources<span class="material-symbols-outlined text-[13px] align-middle ml-0.5" aria-hidden="true">arrow_outward</span></a></li>
+</ul>
+</nav>
+</div>
+<div class="mt-space-lg pt-space-md border-t border-border-subtle/70 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+<p class="font-metadata-label text-metadata-label text-text-muted">© 2026 DevSpireHub.com · DevSpire Nexus</p>
+<p class="font-metadata-label text-metadata-label text-text-muted">Static catalog · collections stay in your browser · no tracking</p>
+</div>
+</div>
+</footer>
+<script>
+/* ==========================================================================
+   TOOLS DATA
+   --------------------------------------------------------------------------
+   ➜ Dataset: 49 real entries from kumaradoss16/CyberSecurity · prompts/ai-tools-list.md
+     (fetched 2026-11-03). Add more objects following the same shape — cards, facet
+     counts, catalog chip, results counter, and pagination all derive from this
+     array automatically.
+
+   Shape per tool:
+   {
+     name:       "Tool Name",
+     org:        "Vendor / Author",
+     initials:   "TN",              // 1-2 letters shown in the tile
+     icon:       "terminal",        // optional: id from the ICONS map below
+                                      // (cursor | terminal | sparkle | chip | compass | sailboat)
+                                      // falls back to `initials` when omitted
+     // Brand icon: add `name → assets/img/icons/<slug>.png` to
+     // TOOL_ICON_URLS (icons sourced from the dataset's Icon URLs); it takes
+     // precedence over `icon`/`initials`, with automatic fallback on error.
+     tone:       "secondary",       // tile text color: secondary | tertiary | primary | status-warning
+     pricing:    "Freemium",        // Free | Freemium | Paid | Usage-based
+     license:    "Proprietary",     // Open Source | Proprietary
+     category:   "AI Apps",         // must match a pill label: AI Apps | AI Models |
+                                      // AI APIs | Local Stacks | Agents & Automation
+     deployment: ["Cloud-hosted"],  // subset of: Cloud-hosted | Local execution | Self-hostable
+     access:     ["API available"], // subset of: No signup required | API available
+     verified:   true,
+     url:        "https://…",        // official site (open_in_new link)
+     desc:       "One-two sentence description.",
+     tags:       ["Tag One", "Tag Two"]
+   }
+   ========================================================================== */
+const TOOLS_DATA = [
+  /* ==== AI TOOLS (extracted 2026-11-04 from kumaradoss16/ai-knowledge-base ·
+     ai-tools/ai-tools-models-developer-resources.md — Resource Type `tool` only;
+     `sub` = source category, `platform` = only where the source states it) ==== */
+
+  /* ---- Assistants & Chatbots ---- */
+  {
+    name: "ChatGPT", org: "OpenAI", initials: "CG", tone: "secondary", platform: "Multiple",
+    pricing: "Freemium", license: "Proprietary", category: "Assistants & Chatbots",
+    sub: "General-purpose AI Assistants",
+    deployment: ["Cloud-hosted"], access: [],
+    verified: true, url: "https://chatgpt.com/",
+    desc: "Conversational AI assistant developed by OpenAI for writing, analysis, coding, image understanding, file processing, and task automation. Available on web, iOS, Android, and desktop, with free and paid subscription tiers.",
+    tags: ["LLM", "Chatbot", "Multimodal", "Productivity", "Voice", "Image-Understanding"]
+  },
+  {
+    name: "Claude", org: "Anthropic", initials: "CL", tone: "primary", platform: "Multiple",
+    pricing: "Freemium", license: "Proprietary", category: "Assistants & Chatbots",
+    sub: "General-purpose AI Assistants",
+    deployment: ["Cloud-hosted"], access: [],
+    verified: true, url: "https://claude.ai/",
+    desc: "Conversational AI assistant by Anthropic designed for writing, analysis, coding, document review, and research. Accessible via web and mobile; API access is provided separately through the Anthropic Console.",
+    tags: ["LLM", "Chatbot", "Long-Context", "Document-Analysis", "Coding"]
+  },
+  {
+    name: "Gemini", org: "Google", initials: "GE", tone: "tertiary",
+    pricing: "Freemium", license: "Proprietary", category: "Assistants & Chatbots",
+    sub: "AI Assistant",
+    deployment: ["Cloud-hosted"], access: [],
+    verified: true, url: "https://gemini.google.com",
+    desc: "Google's hosted multimodal assistant that processes text, images, audio, and video, with integration into Google Workspace and Search.",
+    tags: ["Multimodal", "LLM", "Workspace Integration", "Long Context"]
+  },
+  {
+    name: "Grok", org: "xAI", initials: "GK", tone: "status-warning",
+    pricing: "Freemium", license: "Proprietary", category: "Assistants & Chatbots",
+    sub: "AI Assistant",
+    deployment: ["Cloud-hosted"], access: [],
+    verified: true, url: "https://grok.com",
+    desc: "xAI's hosted assistant offering chat, reasoning, image understanding, and real-time web and X search from xAI-hosted models.",
+    tags: ["LLM", "Reasoning", "Real-time Search", "Multimodal"]
+  },
+  {
+    name: "Poe", org: "Quora", initials: "PO", tone: "secondary",
+    pricing: "Freemium", license: "Proprietary", category: "Assistants & Chatbots",
+    sub: "AI Chatbots",
+    deployment: ["Cloud-hosted"], access: [],
+    verified: true, url: "https://poe.com/",
+    desc: "Consumer AI platform created by Quora providing unified access to multiple frontier and open-weight models including Claude, GPT-4o, Gemini, and FLUX, enabling users to create, share, and monetize custom prompt bots.",
+    tags: ["Multi-Model", "Chatbot", "Custom-Bots", "Aggregator", "Prompt-Engineering"]
+  },
+  {
+    name: "Character.ai", org: "Character.ai", initials: "CH", tone: "tertiary",
+    pricing: "Freemium", license: "Proprietary", category: "Assistants & Chatbots",
+    sub: "AI Chatbots",
+    deployment: ["Cloud-hosted"], access: [],
+    verified: true, url: "https://character.ai/",
+    desc: "Consumer conversational AI platform hosting millions of user-created personas, fictional characters, historical figures, and interactive roleplay bots powered by custom large language models optimized for engaging multi-turn dialogue.",
+    tags: ["Chatbot", "Conversational-AI", "Persona-Engine", "Roleplay", "Consumer-AI"]
+  },
+
+  /* ---- Search & Research ---- */
+  {
+    name: "Perplexity", org: "Perplexity", initials: "PE", tone: "secondary",
+    pricing: "Freemium", license: "Proprietary", category: "Search & Research",
+    sub: "AI Search and Research Assistants",
+    deployment: ["Cloud-hosted"], access: ["No signup required"],
+    verified: true, url: "https://www.perplexity.ai/",
+    desc: "AI-powered answer engine that performs real-time web search and synthesizes cited, conversational responses. Supports deep research workflows, file analysis, and model switching for paid users.",
+    tags: ["AI-Search", "Answer-Engine", "Web-Retrieval", "Research", "RAG"]
+  },
+  {
+    name: "NotebookLM", org: "Google", initials: "NB", tone: "tertiary",
+    pricing: "Freemium", license: "Proprietary", category: "Search & Research",
+    sub: "Research Assistant",
+    deployment: ["Cloud-hosted"], access: [],
+    verified: true, url: "https://notebooklm.google",
+    desc: "Source-grounded research assistant that ingests uploaded documents, links, and videos and produces cited answers, summaries, and audio overviews.",
+    tags: ["RAG", "Document QA", "Audio Overviews", "Research"]
+  },
+  {
+    name: "Phind", org: "Phind", initials: "PH", icon: "compass", tone: "primary",
+    pricing: "Freemium", license: "Proprietary", category: "Search & Research",
+    sub: "AI Search and Research Assistants",
+    deployment: ["Cloud-hosted"], access: ["No signup required"],
+    verified: true, url: "https://www.phind.com/",
+    desc: "AI search engine and coding answer platform tailored for software developers. Crawls technical documentation, Stack Overflow threads, and GitHub repositories to synthesize verified, executable code solutions with source links.",
+    tags: ["Developer-Search", "Code-Synthesis", "Technical-RAG", "Documentation-Search", "VS-Code"]
+  },
+  {
+    name: "Consensus", org: "Consensus", initials: "CN", tone: "status-warning",
+    pricing: "Freemium", license: "Proprietary", category: "Search & Research",
+    sub: "AI Research and Scientific Applications",
+    deployment: ["Cloud-hosted"], access: [],
+    verified: true, url: "https://consensus.app/",
+    desc: "AI-powered search engine for scientific research that queries over 200 million peer-reviewed journal papers. Synthesizes scientific consensus meters, extracts study findings, and provides citations without hallucinating academic evidence.",
+    tags: ["Academic-Research", "Scientific-Search", "Peer-Reviewed", "Consensus-Meter", "Paper-Extraction"]
+  },
+  {
+    name: "Elicit", org: "Elicit", initials: "EI", tone: "secondary",
+    pricing: "Freemium", license: "Proprietary", category: "Search & Research",
+    sub: "AI Research and Scientific Applications",
+    deployment: ["Cloud-hosted"], access: [],
+    verified: true, url: "https://elicit.com/",
+    desc: "AI research assistant that automates scientific literature reviews. Searches academic papers, extracts structured data columns (sample size, methodologies, outcomes), and summarizes research questions with direct source attribution.",
+    tags: ["Literature-Review", "Scientific-Research", "Data-Extraction", "Academic-Synthesis", "Evidence-Based"]
+  },
+
+  /* ---- Coding & Development ---- */
+  {
+    name: "Cursor", org: "Anysphere", initials: "CU", tone: "secondary", platform: "Desktop",
+    pricing: "Freemium", license: "Proprietary", category: "Coding & Development",
+    sub: "AI Coding Assistants",
+    deployment: ["Cloud-hosted"], access: [],
+    verified: true, url: "https://cursor.com/",
+    desc: "AI-powered code editor built on VS Code, offering multi-file code editing, codebase-aware chat, AI-powered tab completion, and agent-based coding workflows. Supports multiple frontier LLM backends.",
+    tags: ["AI-IDE", "Code-Generation", "Code-Editing", "Agent", "Autocomplete"]
+  },
+  {
+    name: "GitHub Copilot", org: "GitHub", initials: "GC", tone: "primary",
+    pricing: "Freemium", license: "Proprietary", category: "Coding & Development",
+    sub: "AI Coding Assistants",
+    deployment: ["Cloud-hosted"], access: [],
+    verified: true, url: "https://github.com/features/copilot",
+    desc: "AI-assisted pair programmer by GitHub and OpenAI that provides context-aware autocomplete suggestions, chat-based code explanations, automated unit test generation, and CLI terminal command assistance directly within popular code editors.",
+    tags: ["Code-Completion", "AI-Pair-Programming", "Developer-Tools", "VS-Code", "Chat"]
+  },
+  {
+    name: "Windsurf", org: "Cognition", initials: "WI", tone: "tertiary", platform: "Desktop",
+    pricing: "Freemium", license: "Proprietary", category: "Coding & Development",
+    sub: "AI IDEs and Code Editors",
+    deployment: ["Cloud-hosted"], access: [],
+    verified: true, url: "https://codeium.com/windsurf",
+    desc: "Agentic AI-native IDE created by Codeium featuring Cascade, an autonomous coding agent. Performs multi-file code refactoring, context-aware command execution, real-time codebase indexing, and multi-line tab completions.",
+    tags: ["AI-IDE", "Agentic-Coding", "Autocomplete", "Codebase-Search", "Codeium"]
+  },
+  {
+    name: "Lovable", org: "Lovable Labs", initials: "LO", tone: "status-warning",
+    pricing: "Freemium", license: "Proprietary", category: "Coding & Development",
+    sub: "AI Coding Assistants",
+    deployment: ["Cloud-hosted"], access: [],
+    verified: true, url: "https://lovable.dev/",
+    desc: "Full-stack AI application builder that turns plain English descriptions into complete web applications with front-end UI, backend logic, authentication, and database connections, accompanied by live preview and GitHub synchronization.",
+    tags: ["Web-App-Builder", "Full-Stack", "Generative-UI", "Supabase", "GitHub-Sync"]
+  },
+  {
+    name: "v0 by Vercel", org: "Vercel", initials: "V0", tone: "secondary",
+    pricing: "Freemium", license: "Proprietary", category: "Coding & Development",
+    sub: "AI Coding Assistants",
+    deployment: ["Cloud-hosted"], access: [],
+    verified: true, url: "https://v0.dev/",
+    desc: "AI-powered UI generation tool by Vercel that converts text prompts and design descriptions into React/Next.js component code with Tailwind CSS styling. Produces deployment-ready frontend code.",
+    tags: ["UI-Generation", "React", "Next.js", "Code-Generation", "Frontend", "Tailwind"]
+  },
+  {
+    name: "Bolt.new", org: "StackBlitz", initials: "BO", tone: "tertiary", platform: "Web",
+    pricing: "Freemium", license: "Proprietary", category: "Coding & Development",
+    sub: "AI IDEs and Code Editors",
+    deployment: ["Cloud-hosted"], access: [],
+    verified: true, url: "https://bolt.new/",
+    desc: "In-browser AI development environment powered by WebContainers that prompts, executes, tests, and deploys full-stack Node.js and web applications entirely inside the browser without requiring local machine installations.",
+    tags: ["WebContainers", "Full-Stack", "Browser-IDE", "Code-Execution", "Node.js"]
+  },
+  {
+    name: "Tabnine", org: "Tabnine", initials: "TB", tone: "primary",
+    pricing: "Freemium", license: "Proprietary", category: "Coding & Development",
+    sub: "AI Coding Assistants",
+    deployment: ["Cloud-hosted", "Self-hostable"], access: [],
+    verified: true, url: "https://www.tabnine.com/",
+    desc: "Privacy-first AI code completion and chat assistant for software engineers. Offers contextual autocompletions and codebase querying trained exclusively on open-source code with permissive licenses, deployable on-premises or private clouds.",
+    tags: ["Private-AI", "Code-Completion", "On-Premises", "Zero-Data-Retention", "JetBrains"]
+  },
+  {
+    name: "CodeRabbit", org: "CodeRabbit", initials: "CR", tone: "status-warning",
+    pricing: "Freemium", license: "Proprietary", category: "Coding & Development",
+    sub: "AI Code Review and Debugging",
+    deployment: ["Cloud-hosted"], access: [],
+    verified: true, url: "https://coderabbit.ai/",
+    desc: "AI-powered code review platform that integrates into GitHub and GitLab pull requests. Provides line-by-line code feedback, detects edge cases and security vulnerabilities, generates release summaries, and answers questions in PR comments.",
+    tags: ["Code-Review", "Pull-Requests", "GitHub-Integration", "Bug-Detection", "Developer-Tools"]
+  },
+
+  /* ---- Writing & Content ---- */
+  {
+    name: "Grammarly", org: "Grammarly", initials: "GL", tone: "secondary", platform: "Multiple",
+    pricing: "Freemium", license: "Proprietary", category: "Writing & Content",
+    sub: "AI Writing and Editing",
+    deployment: ["Cloud-hosted"], access: [],
+    verified: true, url: "https://www.grammarly.com/",
+    desc: "AI-powered writing assistant providing grammar checking, style suggestions, tone detection, plagiarism detection, and generative writing features across web browsers, desktop apps, and integrations.",
+    tags: ["Writing", "Grammar-Check", "Style", "Tone-Detection", "Browser-Extension"]
+  },
+  {
+    name: "QuillBot", org: "QuillBot", initials: "QB", tone: "tertiary",
+    pricing: "Freemium", license: "Proprietary", category: "Writing & Content",
+    sub: "AI Writing and Editing",
+    deployment: ["Cloud-hosted"], access: ["No signup required"],
+    verified: true, url: "https://quillbot.com/",
+    desc: "AI writing enhancement tool offering multi-mode sentence paraphrasing, grammar checking, summarization, citation generation, and plagiarism detection to improve vocabulary, readability, and academic writing fluency.",
+    tags: ["Paraphrasing", "Writing-Assistant", "Grammar-Checker", "Summarization", "Academic-Tools"]
+  },
+  {
+    name: "Jasper", org: "Jasper", initials: "JA", tone: "primary",
+    pricing: "Paid", license: "Proprietary", category: "Writing & Content",
+    sub: "AI Content Generation",
+    deployment: ["Cloud-hosted"], access: [],
+    verified: true, url: "https://www.jasper.ai/",
+    desc: "AI content platform for marketing teams and enterprises, enabling long-form article writing, campaign copy, social media content, and brand-consistent content generation with customizable brand voice settings.",
+    tags: ["Content-Generation", "Marketing", "Copywriting", "Brand-Voice", "AI-Writing"]
+  },
+  {
+    name: "Copy.ai", org: "Copy.ai", initials: "CP", tone: "status-warning",
+    pricing: "Freemium", license: "Proprietary", category: "Writing & Content",
+    sub: "AI Content Generation",
+    deployment: ["Cloud-hosted"], access: [],
+    verified: true, url: "https://www.copy.ai/",
+    desc: "AI-powered copywriting and workflow automation platform for marketing teams. Generates sales copy, email sequences, social posts, and marketing content, with GTM (go-to-market) workflow automation features.",
+    tags: ["Copywriting", "Marketing", "GTM-Workflows", "Content-Generation", "Sales-Copy"]
+  },
+
+  /* ---- Productivity ---- */
+  {
+    name: "Notion AI", org: "Notion", initials: "NO", tone: "secondary",
+    pricing: "Freemium", license: "Proprietary", category: "Productivity",
+    sub: "AI Productivity",
+    deployment: ["Cloud-hosted"], access: [],
+    verified: true, url: "https://www.notion.so/product/ai",
+    desc: "AI writing and knowledge management add-on integrated into the Notion workspace. Assists with drafting, summarizing, translating, and querying documents and databases within Notion pages.",
+    tags: ["Productivity", "Writing", "Summarization", "Knowledge-Management", "Workspace"]
+  },
+  {
+    name: "Superhuman AI", org: "Superhuman", initials: "SH", tone: "tertiary",
+    pricing: "Paid", license: "Proprietary", category: "Productivity",
+    sub: "AI Productivity",
+    deployment: ["Cloud-hosted"], access: [],
+    verified: true, url: "https://superhuman.com/ai",
+    desc: "AI-accelerated email client for Gmail and Outlook that writes complete email drafts matching personal tone, summarizes lengthy email threads in one sentence, corrects phrasing, and automates inbox triage with keyboard shortcuts.",
+    tags: ["Email-Productivity", "Tone-Matching", "Thread-Summarization", "Keyboard-First", "Inbox-Zero"]
+  },
+  {
+    name: "Harvey", org: "Harvey", initials: "HA", icon: "chip", tone: "primary",
+    pricing: "Paid", license: "Proprietary", category: "Productivity",
+    sub: "AI Knowledge Management",
+    deployment: ["Cloud-hosted"], access: [],
+    verified: true, url: "https://www.harvey.ai/",
+    desc: "Enterprise AI platform purpose-built for law firms and corporate legal departments. Automates contract analysis, regulatory compliance auditing, legal research synthesis, and due diligence with strict enterprise data segregation.",
+    tags: ["LegalTech", "Contract-Analysis", "Due-Diligence", "Enterprise-AI", "Document-Review"]
+  },
+  {
+    name: "Mem.ai", org: "Mem", initials: "ME", tone: "status-warning",
+    pricing: "Freemium", license: "Proprietary", category: "Productivity",
+    sub: "AI Knowledge Management",
+    deployment: ["Cloud-hosted"], access: [],
+    verified: true, url: "https://mem.ai/",
+    desc: "Self-organizing AI workspace that connects personal notes, web clips, meeting minutes, and document files without requiring manual tagging or hierarchical folders, using semantic search to surface relevant past context.",
+    tags: ["Knowledge-Management", "Semantic-Search", "Note-Taking", "Productivity", "Personal-AI"]
+  },
+  {
+    name: "Glean", org: "Glean", initials: "GN", tone: "secondary",
+    pricing: "Paid", license: "Proprietary", category: "Productivity",
+    sub: "AI Knowledge Management",
+    deployment: ["Cloud-hosted"], access: [],
+    verified: true, url: "https://www.glean.com/",
+    desc: "Enterprise search and work assistant that indexes internal company tools (Slack, Google Drive, Jira, GitHub, Salesforce) to answer employee questions, synthesize company knowledge, and build internal conversational agents with enterprise permissions.",
+    tags: ["Enterprise-Search", "Knowledge-Graph", "Access-Control", "Work-Assistant", "Semantic-Indexing"]
+  },
+
+  /* ---- Automation & Workflows ---- */
+  {
+    name: "Scribe", org: "Scribe", initials: "SC", tone: "tertiary", platform: "Multiple",
+    pricing: "Freemium", license: "Proprietary", category: "Automation & Workflows",
+    sub: "AI Workflow Automation",
+    deployment: ["Cloud-hosted"], access: [],
+    verified: true, url: "https://scribehow.com/",
+    desc: "AI productivity tool that records desktop browser workflows and automatically converts click sequences and keystrokes into visual step-by-step how-to guides, screenshots, and standard operating procedures (SOPs).",
+    tags: ["SOP-Generator", "Workflow-Documentation", "Screen-Capture", "Process-Automation", "Training"]
+  },
+  {
+    name: "Make", org: "Make", initials: "MK", tone: "primary",
+    pricing: "Freemium", license: "Proprietary", category: "Automation & Workflows",
+    sub: "AI Workflow Automation",
+    deployment: ["Cloud-hosted"], access: [],
+    verified: true, url: "https://www.make.com/",
+    desc: "Visual no-code integration platform that connects hundreds of cloud applications and databases. Features native AI modules for OpenAI, Anthropic, and Hugging Face to build automated multi-step data pipelines and business processes.",
+    tags: ["No-Code", "Workflow-Automation", "API-Integration", "Webhooks", "AI-Orchestration"]
+  },
+
+  /* ---- AI Agents ---- */
+  {
+    name: "Devin", org: "Cognition", initials: "DV", tone: "secondary",
+    pricing: "Paid", license: "Proprietary", category: "AI Agents",
+    sub: "AI Agents and Agent Builders",
+    deployment: ["Cloud-hosted"], access: [],
+    verified: true, url: "https://www.cognition.ai/",
+    desc: "Autonomous AI software engineering agent developed by Cognition that navigates complex codebases, resolves GitHub issues, writes tests, runs terminal commands in sandboxed environments, and creates pull requests end-to-end.",
+    tags: ["Autonomous-Agent", "Software-Engineering", "Sandboxed-Execution", "GitHub", "DevOps"]
+  },
+  {
+    name: "Replit Agent", org: "Replit", initials: "RA", tone: "tertiary",
+    pricing: "Paid", license: "Proprietary", category: "AI Agents",
+    sub: "AI Agents and Agent Builders",
+    deployment: ["Cloud-hosted"], access: [],
+    verified: true, url: "https://replit.com/ai",
+    desc: "Autonomous AI coding agent embedded in Replit that plans, writes, debugs, and provisions full-stack software applications from high-level natural language specifications, handling database setup, backend APIs, and cloud hosting.",
+    tags: ["Autonomous-Agent", "Software-Engineering", "Full-Stack", "Cloud-Hosting", "DevOps"]
+  },
+
+  /* ---- Image Generation ---- */
+  {
+    name: "Midjourney", org: "Midjourney", initials: "MJ", tone: "status-warning",
+    pricing: "Paid", license: "Proprietary", category: "Image Generation",
+    sub: "AI Image Generation",
+    deployment: ["Cloud-hosted"], access: [],
+    verified: true, url: "https://www.midjourney.com/",
+    desc: "AI image generation platform producing high-quality artistic and photorealistic images from text prompts. Accessible via web interface and Discord. No free tier; requires a paid subscription.",
+    tags: ["Image-Generation", "Text-to-Image", "Diffusion", "Creative", "Art"]
+  },
+  {
+    name: "Ideogram", org: "Ideogram", initials: "ID", tone: "secondary",
+    pricing: "Freemium", license: "Proprietary", category: "Image Generation",
+    sub: "AI Image Generation",
+    deployment: ["Cloud-hosted"], access: [],
+    verified: true, url: "https://ideogram.ai",
+    desc: "Hosted text-to-image generator known for accurate in-image typography, producing images from prompts with style and aspect-ratio controls.",
+    tags: ["Text-to-Image", "Typography", "Design", "Diffusion"]
+  },
+  {
+    name: "Krea AI", org: "Krea", initials: "KR", tone: "tertiary",
+    pricing: "Freemium", license: "Proprietary", category: "Image Generation",
+    sub: "AI Image Generation",
+    deployment: ["Cloud-hosted"], access: [],
+    verified: true, url: "https://www.krea.ai/",
+    desc: "Real-time visual generation and enhancement tool featuring instant canvas drawing-to-image synthesis, video generation, AI upscaling, and motion video controls for digital artists, designers, and creative directors.",
+    tags: ["Real-Time-Generation", "AI-Upscaling", "Latent-Consistency", "Text-to-Image", "Creative-Suite"]
+  },
+  {
+    name: "Leonardo.Ai", org: "Leonardo.Ai", initials: "LE", tone: "primary",
+    pricing: "Freemium", license: "Proprietary", category: "Image Generation",
+    sub: "AI Image Generation",
+    deployment: ["Cloud-hosted"], access: [],
+    verified: true, url: "https://leonardo.ai/",
+    desc: "Generative AI creative production platform offering fine-tuned image generation models, real-time canvas editing, texture generation for 3D assets, and graphic design tooling for game developers and marketing artists.",
+    tags: ["Image-Generation", "Game-Assets", "3D-Textures", "Inpainting", "Canvas-Editor"]
+  },
+  {
+    name: "Adobe Firefly", org: "Adobe", initials: "AF", tone: "status-warning",
+    pricing: "Freemium", license: "Proprietary", category: "Image Generation",
+    sub: "AI Image Generation",
+    deployment: ["Cloud-hosted"], access: [],
+    verified: true, url: "https://firefly.adobe.com/",
+    desc: "Creative generative AI suite developed by Adobe trained exclusively on licensed content from Adobe Stock and public domain assets, powering text-to-image, generative fill, text effects, and vector recoloring inside Adobe Creative Cloud.",
+    tags: ["Generative-Fill", "Text-to-Image", "Commercial-Safety", "Vector-Recolor", "Creative-Cloud"]
+  },
+
+  /* ---- Video Generation ---- */
+  {
+    name: "Runway", org: "Runway", initials: "RU", tone: "secondary",
+    pricing: "Freemium", license: "Proprietary", category: "Video Generation",
+    sub: "AI Video Generation",
+    deployment: ["Cloud-hosted"], access: [],
+    verified: true, url: "https://runwayml.com/",
+    desc: "AI-powered creative platform for text-to-video and image-to-video generation, video editing, background removal, and inpainting. Used by filmmakers and content creators for generative video workflows.",
+    tags: ["Video-Generation", "Text-to-Video", "Image-to-Video", "Creative", "Generative-AI"]
+  },
+  {
+    name: "Synthesia", org: "Synthesia", initials: "SY", tone: "tertiary",
+    pricing: "Freemium", license: "Proprietary", category: "Video Generation",
+    sub: "AI Video Generation",
+    deployment: ["Cloud-hosted"], access: [],
+    verified: true, url: "https://www.synthesia.io/",
+    desc: "AI video generation platform that creates talking-avatar videos from text scripts using over 230 AI avatars and 140+ languages. Used for corporate training, product demos, and marketing videos without filming.",
+    tags: ["Video-Generation", "AI-Avatars", "Text-to-Video", "Multilingual", "Corporate-Training"]
+  },
+  {
+    name: "Pika", org: "Pika", initials: "PI", tone: "primary",
+    pricing: "Freemium", license: "Proprietary", category: "Video Generation",
+    sub: "AI Video Generation",
+    deployment: ["Cloud-hosted"], access: [],
+    verified: true, url: "https://pika.art/",
+    desc: "AI video generation platform enabling text-to-video and image-to-video creation with motion control, style transfer, and video editing features. Targeted at creators generating short-form social media video content.",
+    tags: ["Video-Generation", "Text-to-Video", "Image-to-Video", "Creative", "Social-Media"]
+  },
+  {
+    name: "HeyGen", org: "HeyGen", initials: "HE", tone: "status-warning",
+    pricing: "Freemium", license: "Proprietary", category: "Video Generation",
+    sub: "AI Video Generation",
+    deployment: ["Cloud-hosted"], access: [],
+    verified: true, url: "https://www.heygen.com/",
+    desc: "AI video generation platform that produces studio-quality talking avatar videos, multilingual video translations with lip-sync matching, and personalized marketing videos from text scripts and audio recordings.",
+    tags: ["AI-Avatars", "Video-Translation", "Lip-Sync", "Text-to-Video", "Multilingual"]
+  },
+  {
+    name: "Luma Dream Machine", org: "Luma AI", initials: "LU", tone: "secondary",
+    pricing: "Freemium", license: "Proprietary", category: "Video Generation",
+    sub: "AI Video Generation",
+    deployment: ["Cloud-hosted"], access: [],
+    verified: true, url: "https://lumalabs.ai/dream-machine",
+    desc: "AI video generation system built by Luma AI that transforms text and image inputs into realistic 5-second video shots with accurate physics, coherent motion, character consistency, and dynamic camera movements.",
+    tags: ["Video-Generation", "Text-to-Video", "Image-to-Video", "Camera-Control", "High-Fidelity"]
+  },
+  {
+    name: "Kling AI", org: "Kuaishou", initials: "KL", tone: "tertiary",
+    pricing: "Freemium", license: "Proprietary", category: "Video Generation",
+    sub: "AI Video Generation",
+    deployment: ["Cloud-hosted"], access: [],
+    verified: true, url: "https://klingai.com/",
+    desc: "High-definition video generation platform developed by Kuaishou capable of rendering cinematic videos up to 2 minutes long at 1080p resolution and 30fps with advanced physical simulation and 3D spatio-temporal attention.",
+    tags: ["Video-Generation", "High-Definition", "Physics-Simulation", "Camera-Movements", "Kuaishou"]
+  },
+
+  /* ---- Audio & Voice ---- */
+  {
+    name: "ElevenLabs", org: "ElevenLabs", initials: "EL", tone: "primary", platform: "Web",
+    pricing: "Freemium", license: "Proprietary", category: "Audio & Voice",
+    sub: "AI Voice Generation",
+    deployment: ["Cloud-hosted"], access: [],
+    verified: true, url: "https://elevenlabs.io/",
+    desc: "AI voice synthesis platform supporting text-to-speech, voice cloning, multilingual speech generation, and audio dubbing. Provides an API for developer integration and a web studio for content creators.",
+    tags: ["Text-to-Speech", "Voice-Cloning", "Multilingual", "TTS", "Audio-Generation"]
+  },
+  {
+    name: "Suno", org: "Suno", initials: "SU", tone: "secondary",
+    pricing: "Freemium", license: "Proprietary", category: "Audio & Voice",
+    sub: "AI Music Generation",
+    deployment: ["Cloud-hosted"], access: [],
+    verified: true, url: "https://suno.com/",
+    desc: "Generative AI music creation platform that produces full-length songs with vocals, instruments, lyrics, and arrangements from natural language prompts. Enables genres from pop and rock to classical and hip-hop.",
+    tags: ["Music-Generation", "Audio-Synthesis", "Text-to-Audio", "Creative-AI", "Songwriting"]
+  },
+  {
+    name: "Udio", org: "Udio", initials: "UD", tone: "tertiary",
+    pricing: "Freemium", license: "Proprietary", category: "Audio & Voice",
+    sub: "AI Music Generation",
+    deployment: ["Cloud-hosted"], access: [],
+    verified: true, url: "https://www.udio.com/",
+    desc: "AI music creation service founded by former Google DeepMind researchers that synthesizes expressive vocal tracks, intricate musical compositions, and stem separations from descriptive text prompts with granular section-by-section editing.",
+    tags: ["Music-Generation", "Audio-Synthesis", "Stem-Separation", "Text-to-Music", "Creative-AI"]
+  },
+  {
+    name: "Speechify", org: "Speechify", initials: "SP", tone: "status-warning", platform: "Multiple",
+    pricing: "Freemium", license: "Proprietary", category: "Audio & Voice",
+    sub: "AI Voice Generation",
+    deployment: ["Cloud-hosted"], access: [],
+    verified: true, url: "https://speechify.com/",
+    desc: "AI text-to-speech reading application that converts books, PDFs, online articles, and documents into natural humanlike speech at speeds up to 4.5x, featuring celebrity voice models, OCR document scanning, and cross-device sync.",
+    tags: ["Text-to-Speech", "Audio-Reader", "OCR-Scanning", "Accessibility", "Voiceover"]
+  },
+  {
+    name: "Descript", org: "Descript", initials: "DE", tone: "secondary",
+    pricing: "Freemium", license: "Proprietary", category: "Audio & Voice",
+    sub: "AI Audio/Video Editing",
+    deployment: ["Cloud-hosted"], access: [],
+    verified: true, url: "https://www.descript.com/",
+    desc: "AI-powered audio and video editing platform that treats media as text-based documents. Supports transcript-based editing, AI voice cloning, filler word removal, screen recording, and podcast/video production.",
+    tags: ["Video-Editing", "Audio-Editing", "Transcription", "Voice-Cloning", "Podcast"]
+  },
+
+  /* ---- Design & Creative ---- */
+  {
+    name: "Canva Magic Studio", org: "Canva", initials: "CV", tone: "tertiary",
+    pricing: "Freemium", license: "Proprietary", category: "Design & Creative",
+    sub: "AI Design Tools",
+    deployment: ["Cloud-hosted"], access: [],
+    verified: true, url: "https://www.canva.com/magic-studio/",
+    desc: "Suite of generative design features embedded across the Canva ecosystem, including Magic Media (text-to-image/video), Magic Expand, Magic Eraser, Magic Switch (multi-format document conversion), and AI copy generation.",
+    tags: ["Graphic-Design", "Magic-Eraser", "Visual-Content", "Social-Media", "Generative-Design"]
+  },
+  {
+    name: "Gamma", org: "Gamma", initials: "GA", tone: "secondary",
+    pricing: "Freemium", license: "Proprietary", category: "Design & Creative",
+    sub: "AI Presentation Builders",
+    deployment: ["Cloud-hosted"], access: [],
+    verified: true, url: "https://gamma.app/",
+    desc: "AI-native presentation and document generator that creates polished decks, webpages, and documents from a one-line prompt, with adaptive layouts, generated imagery, and live collaboration.",
+    tags: ["Presentations", "Documents", "Generative-Decks", "Collaboration", "Pitch-Decks"]
+  },
+  {
+    name: "Beautiful.ai", org: "Beautiful.ai", initials: "BT", tone: "secondary",
+    pricing: "Paid", license: "Proprietary", category: "Design & Creative",
+    sub: "AI Presentation Builders",
+    deployment: ["Cloud-hosted"], access: [],
+    verified: true, url: "https://www.beautiful.ai/",
+    desc: "Cloud-based presentation tool using smart design rules and AI generation to automatically adapt slide layouts as content is added. Converts text outlines into finished slide decks with professional typography and color palettes.",
+    tags: ["Presentations", "Smart-Slides", "Auto-Layout", "Business-Graphics", "Design-Automation"]
+  },
+  {
+    name: "Tome", org: "Tome", initials: "TM", tone: "secondary",
+    pricing: "Freemium", license: "Proprietary", category: "Design & Creative",
+    sub: "AI Presentation Builders", icon: "sparkle",
+    deployment: ["Cloud-hosted"], access: [],
+    verified: true, url: "https://tome.app/",
+    desc: "AI-native storytelling workspace that generates multimedia narratives, presentations, and product teardowns. Combines generated copy, relevant AI imagery, interactive prototypes, and web embeds on flexible dynamic canvases.",
+    tags: ["Storytelling", "Presentations", "Generative-Decks", "Interactive-Canvas", "Pitch-Decks"]
+  },
+
+  /* ---- Data & Docs ---- */
+  {
+    name: "Julius AI", org: "Julius AI", initials: "JU", tone: "primary",
+    pricing: "Freemium", license: "Proprietary", category: "Data & Docs",
+    sub: "AI Data Analysis",
+    deployment: ["Cloud-hosted"], access: [],
+    verified: true, url: "https://julius.ai/",
+    desc: "AI-powered data analysis assistant that interprets spreadsheets, CSVs, and SQL databases. Generates Python scripts in an internal sandbox to render publication-ready charts, perform statistical models, and draft analytical reports.",
+    tags: ["Data-Analysis", "Python-Execution", "Statistical-Modeling", "Charting", "Spreadsheet-AI"]
+  },
+  {
+    name: "Otter.ai", org: "Otter.ai", initials: "OT", tone: "secondary",
+    pricing: "Freemium", license: "Proprietary", category: "Data & Docs",
+    sub: "AI Meeting Assistants",
+    deployment: ["Cloud-hosted"], access: [],
+    verified: true, url: "https://otter.ai/",
+    desc: "AI transcription and meeting assistant that records, transcribes, and summarizes meetings in real-time. Integrates with Zoom, Google Meet, Microsoft Teams, and calendar systems to automate meeting notes.",
+    tags: ["Transcription", "Meeting-Assistant", "Speech-to-Text", "Summarization", "Collaboration"]
+  },
+  {
+    name: "Fireflies.ai", org: "Fireflies.ai", initials: "FI", tone: "tertiary",
+    pricing: "Freemium", license: "Proprietary", category: "Data & Docs",
+    sub: "AI Meeting Assistants",
+    deployment: ["Cloud-hosted"], access: [],
+    verified: true, url: "https://fireflies.ai/",
+    desc: "AI meeting assistant that joins video conference calls (Zoom, Google Meet, Teams, Webex) to record audio, produce searchable timestamped transcripts, extract action items, and generate executive recaps with CRM integrations.",
+    tags: ["Meeting-Assistant", "Voice-Analytics", "Transcription", "CRM-Integration", "Audio-Intelligence"]
+  },
+
+  /* ==== PRESERVED EXISTING CATALOG (from ai-tools-list.md, 2026-11-03) ==== */
+
+  /* ---- Category: AI Models & Foundation Weights (9) ---- */
+  {
+    name: "Llama", org: "Meta", initials: "LL", icon: "chip", tone: "secondary",
+    pricing: "Free", license: "Open Source", category: "AI Models",
+    deployment: ["Local execution"], access: [],
+    verified: true, url: "https://www.llama.com",
+    desc: "Meta's open language model family, whose latest open generation is Llama 4 (Scout and Maverick), natively multimodal mixture-of-experts models.",
+    tags: ["Open Weights", "MoE", "Multimodal", "Community License"]
+  },
+  {
+    name: "Mistral", org: "Mistral AI", initials: "MI", icon: "chip", tone: "tertiary",
+    pricing: "Free", license: "Open Source", category: "AI Models",
+    deployment: ["Local execution"], access: ["No signup required"],
+    verified: true, url: "https://mistral.ai",
+    desc: "Mistral AI's family of LLMs, with several open-weight checkpoints (many Apache 2.0) taking text input and producing text and code, alongside API-only variants.",
+    tags: ["Open Weights", "Apache 2.0", "MoE", "Code"]
+  },
+  {
+    name: "Gemma", org: "Google DeepMind", initials: "GM", icon: "chip", tone: "primary",
+    pricing: "Free", license: "Open Source", category: "AI Models",
+    deployment: ["Local execution"], access: [],
+    verified: true, url: "https://ai.google.dev/gemma",
+    desc: "Google DeepMind's lightweight open-weight LLMs derived from Gemini research, released in multiple sizes for laptop, mobile, and server inference.",
+    tags: ["Open Weights", "On-device", "Small LLM", "Gemma Terms"]
+  },
+  {
+    name: "Qwen", org: "Alibaba", initials: "QW", icon: "chip", tone: "status-warning",
+    pricing: "Free", license: "Open Source", category: "AI Models",
+    deployment: ["Local execution"], access: ["No signup required"],
+    verified: true, url: "https://qwen.ai",
+    desc: "Alibaba's open-weight LLM family; Qwen3.8-27B, a dense multimodal model, was published on Hugging Face on August 14, 2026 under Apache 2.0.",
+    tags: ["Open Weights", "Apache 2.0", "Multimodal", "Multilingual"]
+  },
+  {
+    name: "DeepSeek", org: "DeepSeek", initials: "DS", icon: "chip", tone: "secondary",
+    pricing: "Free", license: "Open Source", category: "AI Models",
+    deployment: ["Local execution"], access: ["No signup required"],
+    verified: true, url: "https://www.deepseek.com",
+    desc: "DeepSeek's open-weight mixture-of-experts LLMs, including reasoning-focused and general chat models, published on Hugging Face under permissive licenses.",
+    tags: ["Open Weights", "MoE", "Reasoning", "MIT License"]
+  },
+  {
+    name: "Phi", org: "Microsoft", initials: "PH", icon: "chip", tone: "tertiary",
+    pricing: "Free", license: "Open Source", category: "AI Models",
+    deployment: ["Local execution"], access: ["No signup required"],
+    verified: true, url: "https://azure.microsoft.com/en-us/products/phi",
+    desc: "Microsoft's small language models built for low-latency and on-device inference, released as open weights on Hugging Face and Azure AI Foundry.",
+    tags: ["SLM", "Open Weights", "On-device", "MIT License"]
+  },
+  {
+    name: "gpt-oss", org: "OpenAI", initials: "GO", icon: "chip", tone: "primary",
+    pricing: "Free", license: "Open Source", category: "AI Models",
+    deployment: ["Local execution"], access: ["No signup required"],
+    verified: true, url: "https://openai.com/index/introducing-gpt-oss/",
+    desc: "OpenAI's open-weight reasoning LLMs (gpt-oss-120b and gpt-oss-20b) under Apache 2.0, with adjustable reasoning effort and tool use.",
+    tags: ["Open Weights", "Reasoning", "Apache 2.0", "Tool Use"]
+  },
+  {
+    name: "Stable Diffusion", org: "Stability AI", initials: "SD", icon: "chip", tone: "status-warning",
+    pricing: "Free", license: "Open Source", category: "AI Models",
+    deployment: ["Local execution"], access: [],
+    verified: true, url: "https://stability.ai",
+    desc: "Stability AI's latent diffusion text-to-image model family, generating images from text or image prompts with downloadable weights that run on consumer GPUs.",
+    tags: ["Diffusion", "Text-to-Image", "Open Weights", "ControlNet"]
+  },
+  {
+    name: "FLUX", org: "Black Forest Labs", initials: "FL", icon: "chip", tone: "secondary",
+    pricing: "Free", license: "Open Source", category: "AI Models",
+    deployment: ["Local execution"], access: [],
+    verified: true, url: "https://bfl.ai",
+    desc: "Black Forest Labs' rectified-flow transformer text-to-image models, with open-weight FLUX.1 checkpoints and hosted higher-tier variants served over API.",
+    tags: ["Text-to-Image", "Flow Matching", "Open Weights", "Image Editing"]
+  },
+
+  /* ---- Category: AI APIs & Hosted Inference (10) ---- */
+  {
+    name: "OpenRouter", org: "OpenRouter", initials: "OR", icon: "terminal", tone: "secondary",
+    pricing: "Freemium", license: "Proprietary", category: "AI APIs",
+    deployment: ["Cloud-hosted"], access: ["API available"],
+    verified: true, url: "https://openrouter.ai",
+    desc: "Unified OpenAI-compatible gateway that routes requests to models from many providers, with automatic fallback and consolidated billing.",
+    tags: ["Model Gateway", "OpenAI-compatible", "Routing", "Multi-provider"]
+  },
+  {
+    name: "Together AI", org: "Together AI", initials: "TA", icon: "terminal", tone: "tertiary",
+    pricing: "Paid", license: "Proprietary", category: "AI APIs",
+    deployment: ["Cloud-hosted"], access: ["API available"],
+    verified: true, url: "https://www.together.ai",
+    desc: "Serverless and dedicated-GPU inference plus fine-tuning for open-weight LLMs, image, and embedding models behind an OpenAI-compatible API.",
+    tags: ["Serverless Inference", "Fine-tuning", "Open Models", "Dedicated GPUs"]
+  },
+  {
+    name: "Groq", org: "Groq", initials: "GQ", icon: "terminal", tone: "primary",
+    pricing: "Freemium", license: "Proprietary", category: "AI APIs",
+    deployment: ["Cloud-hosted"], access: ["API available"],
+    verified: true, url: "https://groq.com",
+    desc: "GroqCloud serves open-weight models behind OpenAI-compatible endpoints on Groq's LPU hardware; it still offers fast inference on open-weight models such as Llama, Qwen, and GPT-OSS after Nvidia's licensing deal.",
+    tags: ["LPU", "Low Latency", "OpenAI-compatible", "Open Models"]
+  },
+  {
+    name: "Replicate", org: "Replicate", initials: "RE", icon: "terminal", tone: "status-warning",
+    pricing: "Paid", license: "Proprietary", category: "AI APIs",
+    deployment: ["Cloud-hosted"], access: ["API available"],
+    verified: true, url: "https://replicate.com",
+    desc: "Pay-per-use API for running open and community models (image, video, audio, LLM), packaged as Cog containers and invoked as predictions over HTTP.",
+    tags: ["Cog", "Model Hosting", "Image/Video", "Predictions API"]
+  },
+  {
+    name: "DeepInfra", org: "DeepInfra", initials: "DI", icon: "terminal", tone: "secondary",
+    pricing: "Paid", license: "Proprietary", category: "AI APIs",
+    deployment: ["Cloud-hosted"], access: ["API available"],
+    verified: true, url: "https://deepinfra.com",
+    desc: "Serverless inference API for open-weight text, embedding, image, and speech models with OpenAI-compatible endpoints and per-token billing.",
+    tags: ["Serverless", "Open Models", "Embeddings", "OpenAI-compatible"]
+  },
+  {
+    name: "Fireworks AI", org: "Fireworks AI", initials: "FW", icon: "terminal", tone: "tertiary",
+    pricing: "Paid", license: "Proprietary", category: "AI APIs",
+    deployment: ["Cloud-hosted"], access: ["API available"],
+    verified: true, url: "https://fireworks.ai",
+    desc: "Inference platform offering serverless and dedicated endpoints for open models, with function calling, structured output, and fine-tuning.",
+    tags: ["Serverless Inference", "Function Calling", "Fine-tuning", "JSON Mode"]
+  },
+  {
+    name: "Cerebras Inference", org: "Cerebras", initials: "CE", icon: "terminal", tone: "primary",
+    pricing: "Freemium", license: "Proprietary", category: "AI APIs",
+    deployment: ["Cloud-hosted"], access: ["API available"],
+    verified: true, url: "https://www.cerebras.ai",
+    desc: "Hosted inference on Cerebras wafer-scale hardware for open-weight LLMs, exposed through an OpenAI-compatible chat-completions API.",
+    tags: ["Wafer-scale", "Low Latency", "Open Models", "OpenAI-compatible"]
+  },
+  {
+    name: "fal", org: "fal.ai", initials: "FA", icon: "terminal", tone: "status-warning",
+    pricing: "Paid", license: "Proprietary", category: "AI APIs",
+    deployment: ["Cloud-hosted"], access: ["API available"],
+    verified: true, url: "https://fal.ai",
+    desc: "Serverless inference for generative media models (image, video, audio, 3D) with queue-based async endpoints and client SDKs.",
+    tags: ["Generative Media", "Serverless GPUs", "Async Queue", "SDK"]
+  },
+  {
+    name: "HF Inference Providers", org: "Hugging Face", initials: "HF", icon: "terminal", tone: "secondary",
+    pricing: "Freemium", license: "Proprietary", category: "AI APIs",
+    deployment: ["Cloud-hosted"], access: ["API available"],
+    verified: true, url: "https://huggingface.co/docs/inference-providers",
+    desc: "Unified API that routes Hugging Face Hub model calls to partner inference providers using a single Hugging Face access token.",
+    tags: ["Model Hub", "Provider Routing", "OpenAI-compatible", "Serverless"]
+  },
+  {
+    name: "Google AI Studio", org: "Google", initials: "GA", icon: "terminal", tone: "tertiary",
+    pricing: "Freemium", license: "Proprietary", category: "AI APIs",
+    deployment: ["Cloud-hosted"], access: ["API available"],
+    verified: true, url: "https://aistudio.google.com",
+    desc: "Web playground and API-key console for the Gemini API, providing hosted multimodal generation, embeddings, and tool calling.",
+    tags: ["Gemini API", "Multimodal", "Playground", "Function Calling"]
+  },
+
+  /* ---- Category: Frameworks, Runtimes & Local Stacks (10) ---- */
+  {
+    name: "Ollama", org: "Ollama", initials: "OL", icon: "terminal", tone: "tertiary",
+    pricing: "Free", license: "Open Source", category: "Local Stacks",
+    deployment: ["Local execution"], access: ["No signup required"],
+    verified: true, url: "https://ollama.com",
+    desc: "Local model runtime that pulls quantized models from a registry and serves them through a REST API and CLI, with Modelfile-based customization.",
+    tags: ["Local LLM", "GGUF", "REST API", "Modelfile"]
+  },
+  {
+    name: "vLLM", org: "vLLM Team", initials: "VL", icon: "terminal", tone: "secondary",
+    pricing: "Free", license: "Open Source", category: "Local Stacks",
+    deployment: ["Local execution"], access: ["No signup required"],
+    verified: true, url: "https://vllm.ai",
+    desc: "High-throughput LLM serving engine using PagedAttention and continuous batching, exposing an OpenAI-compatible server on GPU and accelerator hardware.",
+    tags: ["Inference Server", "PagedAttention", "Continuous Batching", "OpenAI-compatible"]
+  },
+  {
+    name: "LM Studio", org: "LM Studio", initials: "LS", icon: "terminal", tone: "primary",
+    pricing: "Free", license: "Open Source", category: "Local Stacks",
+    deployment: ["Local execution"], access: ["No signup required"],
+    verified: true, url: "https://lmstudio.ai",
+    desc: "Desktop app for downloading and chatting with local LLMs (GGUF and MLX) that also runs a local OpenAI-compatible server.",
+    tags: ["Desktop App", "GGUF", "MLX", "Local Server"]
+  },
+  {
+    name: "llama.cpp", org: "ggml-org", initials: "LC", icon: "terminal", tone: "status-warning",
+    pricing: "Free", license: "Open Source", category: "Local Stacks",
+    deployment: ["Local execution"], access: ["No signup required"],
+    verified: true, url: "https://github.com/ggml-org/llama.cpp",
+    desc: "C/C++ inference engine for GGUF-quantized models across CPU and many GPU backends, including a built-in llama-server HTTP endpoint.",
+    tags: ["GGUF", "Quantization", "CPU Inference", "C++"]
+  },
+  {
+    name: "LangChain", org: "LangChain", initials: "LA", icon: "chip", tone: "secondary",
+    pricing: "Free", license: "Open Source", category: "Local Stacks",
+    deployment: ["Local execution"], access: ["No signup required"],
+    verified: true, url: "https://www.langchain.com",
+    desc: "Python and JavaScript framework for composing LLM applications from model wrappers, tools, retrievers, and agent graphs (via LangGraph).",
+    tags: ["Orchestration", "RAG", "Agents", "LangGraph"]
+  },
+  {
+    name: "LlamaIndex", org: "LlamaIndex", initials: "LI", icon: "chip", tone: "tertiary",
+    pricing: "Free", license: "Open Source", category: "Local Stacks",
+    deployment: ["Local execution"], access: ["No signup required"],
+    verified: true, url: "https://www.llamaindex.ai",
+    desc: "Data framework for retrieval-augmented generation that handles document ingestion, indexing, query engines, and agent workflows over private data.",
+    tags: ["RAG", "Indexing", "Document Parsing", "Agents"]
+  },
+  {
+    name: "HF Transformers", org: "Hugging Face", initials: "TR", icon: "chip", tone: "primary",
+    pricing: "Free", license: "Open Source", category: "Local Stacks",
+    deployment: ["Local execution"], access: ["No signup required"],
+    verified: true, url: "https://huggingface.co/docs/transformers",
+    desc: "Python library defining and running pretrained text, vision, audio, and multimodal models with PyTorch, supporting inference and fine-tuning.",
+    tags: ["PyTorch", "Model Hub", "Fine-tuning", "Pipelines"]
+  },
+  {
+    name: "Open WebUI", org: "Open WebUI", initials: "OW", icon: "terminal", tone: "status-warning",
+    pricing: "Free", license: "Open Source", category: "Local Stacks",
+    deployment: ["Self-hostable"], access: ["No signup required"],
+    verified: true, url: "https://openwebui.com",
+    desc: "Self-hosted web interface for Ollama and OpenAI-compatible backends with built-in RAG, multi-user auth, and tool/function support.",
+    tags: ["Chat UI", "RAG", "Self-hosted", "Multi-user"]
+  },
+  {
+    name: "ComfyUI", org: "Comfy Org", initials: "CO", icon: "terminal", tone: "secondary",
+    pricing: "Free", license: "Open Source", category: "Local Stacks",
+    deployment: ["Local execution"], access: ["No signup required"],
+    verified: true, url: "https://www.comfy.org",
+    desc: "Node-graph engine for building and running diffusion image, video, and audio workflows locally, with an extensible custom-node ecosystem.",
+    tags: ["Node Graph", "Diffusion", "Workflows", "Custom Nodes"]
+  },
+  {
+    name: "Unsloth", org: "Unsloth", initials: "UN", icon: "chip", tone: "tertiary",
+    pricing: "Free", license: "Open Source", category: "Local Stacks",
+    deployment: ["Local execution"], access: ["No signup required"],
+    verified: true, url: "https://unsloth.ai",
+    desc: "Library for faster, lower-VRAM LLM fine-tuning and reinforcement learning (LoRA/QLoRA), plus exporting trained models to GGUF.",
+    tags: ["Fine-tuning", "QLoRA", "Low VRAM", "GGUF Export"]
+  },
+
+  /* ---- Category: Agent Frameworks & Platforms (5) ---- */
+  {
+    name: "n8n", org: "n8n", initials: "N8", icon: "terminal", tone: "secondary",
+    pricing: "Free", license: "Open Source", category: "Agent Frameworks",
+    deployment: ["Self-hostable"], access: ["No signup required"],
+    verified: true, url: "https://n8n.io",
+    desc: "Node-based workflow automation platform with hundreds of integrations and AI agent nodes, running self-hosted or on n8n's cloud.",
+    tags: ["Workflow Automation", "AI Agent Nodes", "Webhooks", "Fair-code"]
+  },
+  {
+    name: "Flowise", org: "FlowiseAI", initials: "FW", icon: "terminal", tone: "tertiary",
+    pricing: "Free", license: "Open Source", category: "Agent Frameworks",
+    deployment: ["Self-hostable"], access: ["No signup required"],
+    verified: true, url: "https://flowiseai.com",
+    desc: "Open-source low-code visual builder for LLM chatflows and multi-agent flows, with a drag-and-drop canvas and REST API for deployment.",
+    tags: ["Low-code", "Visual Builder", "RAG", "Multi-agent"]
+  },
+  {
+    name: "Dify", org: "Dify", initials: "DY", icon: "terminal", tone: "primary",
+    pricing: "Free", license: "Open Source", category: "Agent Frameworks",
+    deployment: ["Self-hostable"], access: ["No signup required"],
+    verified: true, url: "https://dify.ai",
+    desc: "LLM application platform combining a visual workflow builder, RAG pipeline, agent tooling, and observability, deployable via Docker or Dify Cloud.",
+    tags: ["Workflow Builder", "RAG Pipeline", "Agents", "LLMOps"]
+  },
+  {
+    name: "CrewAI", org: "CrewAI", initials: "CR", icon: "chip", tone: "status-warning",
+    pricing: "Free", license: "Open Source", category: "Agent Frameworks",
+    deployment: ["Local execution"], access: ["No signup required"],
+    verified: true, url: "https://www.crewai.com",
+    desc: "Python framework for orchestrating role-based multi-agent crews with defined tasks, tools, and event-driven flows.",
+    tags: ["Multi-agent", "Orchestration", "Python", "Flows"]
+  },
+  {
+    name: "AutoGPT", org: "Significant Gravitas", initials: "AG", icon: "sparkle", tone: "secondary",
+    pricing: "Free", license: "Open Source", category: "Agent Frameworks",
+    deployment: ["Self-hostable"], access: ["No signup required"],
+    verified: true, url: "https://agpt.co",
+    desc: "Platform for building, deploying, and running continuous AI agents with a low-code block builder, supporting both self-hosting and hosted deployment.",
+    tags: ["Autonomous Agents", "Low-code Builder", "Marketplace", "Self-hosted"]
+  }
+];
+
+/* Brand icons per tool (local copies of the Icon URLs from the source
+   datasets: ai-tools-list.md and ai-knowledge-base
+   ai-tools-models-developer-resources.md — both use the same official
+   favicon URLs, stored in assets/img/icons/). Keyed by tool `name`; falls
+   back to the inline SVG (ICONS map) or initials monogram when absent/failing. */
+const TOOL_ICON_URLS = {
+  "ChatGPT": "assets/img/icons/chatgpt.png",
+  "Claude": "assets/img/icons/claude.png",
+  "Gemini": "assets/img/icons/gemini.png",
+  "Perplexity": "assets/img/icons/perplexity.png",
+  "Grok": "assets/img/icons/grok.png",
+  "NotebookLM": "assets/img/icons/notebooklm.png",
+  "Cursor": "assets/img/icons/cursor.png",
+  "GitHub Copilot": "assets/img/icons/github-copilot.png",
+  "Windsurf": "assets/img/icons/windsurf.png",
+  "Lovable": "assets/img/icons/lovable.png",
+  "Midjourney": "assets/img/icons/midjourney.png",
+  "Ideogram": "assets/img/icons/ideogram.png",
+  "Runway": "assets/img/icons/runway.png",
+  "ElevenLabs": "assets/img/icons/elevenlabs.png",
+  "Suno": "assets/img/icons/suno.png",
+  "Llama": "assets/img/icons/llama.png",
+  "Mistral": "assets/img/icons/mistral.png",
+  "Gemma": "assets/img/icons/gemma.png",
+  "Qwen": "assets/img/icons/qwen.png",
+  "DeepSeek": "assets/img/icons/deepseek.png",
+  "Phi": "assets/img/icons/phi.png",
+  "gpt-oss": "assets/img/icons/gpt-oss.png",
+  "Stable Diffusion": "assets/img/icons/stable-diffusion.png",
+  "FLUX": "assets/img/icons/flux.png",
+  "OpenRouter": "assets/img/icons/openrouter.png",
+  "Together AI": "assets/img/icons/together-ai.png",
+  "Groq": "assets/img/icons/groq.png",
+  "Replicate": "assets/img/icons/replicate.png",
+  "DeepInfra": "assets/img/icons/deepinfra.png",
+  "Fireworks AI": "assets/img/icons/fireworks-ai.png",
+  "Cerebras Inference": "assets/img/icons/cerebras.png",
+  "fal": "assets/img/icons/fal.png",
+  "HF Inference Providers": "assets/img/icons/hf-inference-providers.png",
+  "Google AI Studio": "assets/img/icons/google-ai-studio.png",
+  "Ollama": "assets/img/icons/ollama.png",
+  "vLLM": "assets/img/icons/vllm.png",
+  "LM Studio": "assets/img/icons/lm-studio.png",
+  "llama.cpp": "assets/img/icons/llama-cpp.png",
+  "LangChain": "assets/img/icons/langchain.png",
+  "LlamaIndex": "assets/img/icons/llamaindex.png",
+  "HF Transformers": "assets/img/icons/hf-transformers.png",
+  "Open WebUI": "assets/img/icons/open-webui.png",
+  "ComfyUI": "assets/img/icons/comfyui.png",
+  "Unsloth": "assets/img/icons/unsloth.png",
+  "n8n": "assets/img/icons/n8n.png",
+  "Flowise": "assets/img/icons/flowise.png",
+  "Dify": "assets/img/icons/dify.png",
+  "CrewAI": "assets/img/icons/crewai.png",
+  "AutoGPT": "assets/img/icons/autogpt.png",
+  "Poe": "assets/img/icons/poe.png",
+  "Character.ai": "assets/img/icons/character-ai.png",
+  "Consensus": "assets/img/icons/consensus.png",
+  "Elicit": "assets/img/icons/elicit.png",
+  "v0 by Vercel": "assets/img/icons/v0.png",
+  "Bolt.new": "assets/img/icons/bolt-new.png",
+  "Tabnine": "assets/img/icons/tabnine.png",
+  "CodeRabbit": "assets/img/icons/coderabbit.png",
+  "Grammarly": "assets/img/icons/grammarly.png",
+  "QuillBot": "assets/img/icons/quillbot.png",
+  "Jasper": "assets/img/icons/jasper.png",
+  "Copy.ai": "assets/img/icons/copy-ai.png",
+  "Notion AI": "assets/img/icons/notion-ai.png",
+  "Superhuman AI": "assets/img/icons/superhuman-ai.png",
+  "Mem.ai": "assets/img/icons/mem-ai.png",
+  "Glean": "assets/img/icons/glean.png",
+  "Scribe": "assets/img/icons/scribe.png",
+  "Make": "assets/img/icons/make.png",
+  "Devin": "assets/img/icons/devin.png",
+  "Replit Agent": "assets/img/icons/replit-agent.png",
+  "Krea AI": "assets/img/icons/krea-ai.png",
+  "Leonardo.Ai": "assets/img/icons/leonardo-ai.png",
+  "Adobe Firefly": "assets/img/icons/adobe-firefly.png",
+  "Canva Magic Studio": "assets/img/icons/canva-magic-studio.png",
+  "Gamma": "assets/img/icons/gamma.png",
+  "Beautiful.ai": "assets/img/icons/beautiful-ai.png",
+  "Julius AI": "assets/img/icons/julius-ai.png",
+  "Otter.ai": "assets/img/icons/otter-ai.png",
+  "Fireflies.ai": "assets/img/icons/fireflies-ai.png",
+  "Udio": "assets/img/icons/udio.png",
+  "Descript": "assets/img/icons/descript.png",
+  "Synthesia": "assets/img/icons/synthesia.png",
+  "Pika": "assets/img/icons/pika.png",
+  "HeyGen": "assets/img/icons/heygen.png",
+  "Luma Dream Machine": "assets/img/icons/luma-dream-machine.png",
+  "Kling AI": "assets/img/icons/kling-ai.png",
+  "Speechify": "assets/img/icons/speechify.png"
+};
+
+/* Inline SVG icons for tool tiles (24x24, stroke = currentColor).
+   Add new ids here and reference them via `icon` on a tool. */
+const ICONS = {
+  cursor: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3.5 19 12l-6 1.5L9.5 20 5 3.5Z"/></svg>',
+  terminal: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 7 5 5-5 5"/><path d="M12.5 17H19"/></svg>',
+  sparkle: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M5.6 5.6l2.8 2.8M15.6 15.6l2.8 2.8M18.4 5.6l-2.8 2.8M8.4 15.6l-2.8 2.8"/></svg>',
+  chip: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="7" width="10" height="10" rx="2"/><path d="M10 2v3M14 2v3M10 19v3M14 19v3M2 10h3M2 14h3M19 10h3M19 14h3"/></svg>',
+  compass: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m15.5 8.5-2 5-5 2 2-5 5-2Z"/></svg>',
+  sailboat: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13"/><path d="M12 5c3 2 5 5.5 5 9H12V5Z"/><path d="M12 8c-2.2 1.6-3.6 4-3.6 6.4H12V8Z"/><path d="M4 17.5h16l-2 3.5H6l-2-3.5Z"/></svg>'
+};
+
+/* ---------- Directory engine: facets, search, sort, paginate ---------- */
+(function () {
+  'use strict';
+
+  const PAGE_SIZE = 9;
+  const FACETS = {
+    pricing:    { label: 'Pricing Model',  values: ['Free', 'Freemium', 'Paid', 'Usage-based'], field: 'pricing',    type: 'value' },
+    access:     { label: 'Access & Auth',  values: ['No signup required', 'API available'],       field: 'access',     type: 'array' },
+    deployment: { label: 'Deployment',     values: ['Cloud-hosted', 'Local execution', 'Self-hostable'], field: 'deployment', type: 'array' },
+    license:    { label: 'Software License', values: ['Open Source', 'Proprietary'],              field: 'license',    type: 'value' },
+    verified:   { label: 'Verification Tier', values: ['Verified Only'],                          field: 'verified',   type: 'bool' }
+  };
+  const CATEGORIES = ['All Tools', 'Assistants & Chatbots', 'Search & Research', 'Coding & Development', 'Writing & Content', 'Productivity', 'Automation & Workflows', 'AI Agents', 'Image Generation', 'Video Generation', 'Audio & Voice', 'Design & Creative', 'Data & Docs', 'AI Models', 'AI APIs', 'Local Stacks', 'Agent Frameworks'];
+
+  const state = {
+    query: '',
+    category: 'All Tools',
+    facets: {},          // { pricing: Set, access: Set, ... }
+    sort: 'verified',
+    view: 'grid',
+    page: 1
+  };
+  Object.keys(FACETS).forEach((k) => { state.facets[k] = new Set(); });
+
+  /* ----- DOM refs ----- */
+  const grid = document.getElementById('tool-grid');
+  const tableWrap = document.getElementById('tool-table-wrap');
+  const tableBody = document.getElementById('tool-table-body');
+  const emptyState = document.getElementById('empty-state');
+  const searchInput = document.getElementById('tool-search');
+  const clearBtn = document.getElementById('search-clear');
+  const pillsWrap = document.getElementById('category-pills');
+  const chipsWrap = document.getElementById('active-chips');
+  const noFiltersNote = document.getElementById('no-filters-note');
+  const resetAllBtn = document.getElementById('reset-all-filters');
+  const resultsCount = document.getElementById('results-count');
+  const pageIndicator = document.getElementById('page-indicator');
+  const paginationControls = document.getElementById('pagination-controls');
+  const catalogChip = document.getElementById('catalog-chip');
+  const sortSelect = document.getElementById('sort-select');
+  const facetsPanel = document.getElementById('facets-panel');
+  const facetsToggle = document.getElementById('facets-toggle');
+  const facetsCount = document.getElementById('facets-count');
+
+  const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+
+  /* ----- Catalog chip (computed from real data) ----- */
+  function renderCatalogChip() {
+    const total = TOOLS_DATA.length;
+    const verified = TOOLS_DATA.filter((t) => t.verified).length;
+    catalogChip.textContent = `${total.toLocaleString()} Resources Cataloged · ${verified.toLocaleString()} Verified`;
+  }
+
+  /* ----- Category pills ----- */
+  function renderPills() {
+    pillsWrap.innerHTML = CATEGORIES.map((cat) => {
+      const active = state.category === cat;
+      const count = cat === 'All Tools' ? TOOLS_DATA.length : TOOLS_DATA.filter((t) => t.category === cat).length;
+      return `<button type="button" class="pill font-code-badge text-code-badge px-3 py-1.5 rounded shrink-0 border ${
+        active
+          ? 'bg-primary-container border-primary-container text-bg-canvas'
+          : 'bg-surface-secondary text-text-muted hover:text-text-primary border-border-subtle hover:border-secondary'
+      }" data-category="${esc(cat)}" aria-pressed="${active}">${esc(cat)} <span class="opacity-70">${count}</span></button>`;
+    }).join('');
+  }
+
+  pillsWrap.addEventListener('click', (e) => {
+    const btn = e.target.closest('[data-category]');
+    if (!btn) return;
+    state.category = btn.dataset.category;
+    state.page = 1;
+    renderPills();
+    apply();
+  });
+
+  /* ----- Facet sidebar ----- */
+  function facetValueCount(groupKey, value) {
+    const f = FACETS[groupKey];
+    return TOOLS_DATA.filter((t) => {
+      if (f.type === 'array') return (t[f.field] || []).includes(value);
+      if (f.type === 'bool') return !!t.verified;
+      return t[f.field] === value;
+    }).length;
+  }
+
+  function renderFacets() {
+    Object.entries(FACETS).forEach(([key, facet]) => {
+      const group = document.querySelector(`[data-facet-group="${key}"]`);
+      if (!group) return;
+      group.querySelectorAll('.facet-row').forEach((row) => row.remove());
+      facet.values.forEach((value) => {
+        const count = facetValueCount(key, value);
+        const checked = state.facets[key].has(value);
+        const row = document.createElement('label');
+        row.className = 'facet-row flex items-center justify-between gap-2 text-body-compact font-body-compact cursor-pointer select-none ' +
+          (checked ? 'text-text-primary' : 'text-text-muted hover:text-text-primary');
+        row.innerHTML = `
+          <span class="flex items-center gap-2 min-w-0">
+            <input type="checkbox" class="facet-input" data-facet="${key}" data-value="${esc(value)}" ${checked ? 'checked' : ''}/>
+            <span class="truncate">${key === 'verified' ? '<span class="inline-flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>Verified Only</span>' : esc(value)}</span>
+          </span>
+          <span class="font-code-badge text-code-badge text-text-muted shrink-0">${count}</span>`;
+        group.appendChild(row);
+      });
+    });
+    const activeCount = Object.values(state.facets).reduce((n, s) => n + s.size, 0);
+    facetsCount.textContent = activeCount;
+  }
+
+  facetsPanel.addEventListener('change', (e) => {
+    const input = e.target.closest('.facet-input');
+    if (!input) return;
+    const set = state.facets[input.dataset.facet];
+    if (input.checked) set.add(input.dataset.value); else set.delete(input.dataset.value);
+    state.page = 1;
+    renderFacets();
+    apply();
+  });
+
+  document.getElementById('reset-facets').addEventListener('click', resetFacets);
+
+  function resetFacets() {
+    Object.values(state.facets).forEach((s) => s.clear());
+    state.page = 1;
+    renderFacets();
+    apply();
+  }
+
+  /* ----- Filtering ----- */
+  function matchesQuery(t) {
+    if (!state.query) return true;
+    const q = state.query.toLowerCase();
+    const hay = [t.name, t.org, t.desc, t.category, t.sub, t.platform, t.pricing, t.license, ...(t.tags || []), ...(t.deployment || []), ...(t.access || [])]
+      .join(' ').toLowerCase();
+    return q.split(/\s+/).every((word) => hay.includes(word));
+  }
+
+  function matchesCategory(t) {
+    return state.category === 'All Tools' || t.category === state.category;
+  }
+
+  function matchesFacets(t) {
+    for (const [key, set] of Object.entries(state.facets)) {
+      if (set.size === 0) continue;
+      const f = FACETS[key];
+      if (f.type === 'array') {
+        if (![...set].some((v) => (t[f.field] || []).includes(v))) return false;
+      } else if (f.type === 'bool') {
+        if (!t.verified) return false;
+      } else {
+        if (!set.has(t[f.field])) return false;
+      }
+    }
+    return true;
+  }
+
+  function sortTools(list) {
+    const arr = [...list];
+    if (state.sort === 'name') arr.sort((a, b) => a.name.localeCompare(b.name));
+    else if (state.sort === 'verified') arr.sort((a, b) => (b.verified - a.verified) || a.name.localeCompare(b.name));
+    return arr;
+  }
+
+  /* ----- Rendering ----- */
+  const TONE_CLASSES = { secondary: 'text-secondary', tertiary: 'text-tertiary', primary: 'text-primary', 'status-warning': 'text-status-warning' };
+  const tileContent = (t) => {
+    const iconUrl = TOOL_ICON_URLS[t.name];
+    if (iconUrl) return `<img class="tool-favicon" src="${iconUrl}" alt="" width="22" height="22" loading="lazy" onerror="this.outerHTML='${esc(t.initials)}'"/>`;
+    if (t.icon && ICONS[t.icon]) return `<span class="tool-icon">${ICONS[t.icon]}</span>`;
+    return esc(t.initials);
+  };
+  const PRICING_CLASSES = {
+    'Free': 'text-tertiary', 'Open Source': 'text-tertiary', 'Freemium': 'text-secondary',
+    'Paid': 'text-status-warning', 'Usage-based': 'text-primary'
+  };
+  const pricingClass = (p) => PRICING_CLASSES[p] || 'text-text-primary';
+
+  function cardHTML(t) {
+    return `
+    <article class="ui-card rounded-xl p-space-md flex flex-col justify-between group">
+      <div>
+        <div class="flex items-start justify-between gap-2 mb-space-sm">
+          <div class="flex items-center gap-3 min-w-0">
+            <div class="w-10 h-10 rounded-lg bg-surface-secondary border border-border-subtle flex items-center justify-center font-code-param font-bold text-sm ${TONE_CLASSES[t.tone] || 'text-secondary'} shrink-0">${tileContent(t)}</div>
+            <div class="min-w-0">
+              <div class="flex items-center gap-1.5">
+                <h2 class="font-title-card text-title-card text-text-primary truncate">${esc(t.name)}</h2>
+                ${t.verified ? '<span class="material-symbols-outlined text-tertiary text-base shrink-0" aria-hidden="true" title="Verified tool">verified</span>' : ''}
+              </div>
+              <span class="font-metadata-label text-metadata-label text-text-muted">${esc(t.org)} · ${esc(t.sub || t.category)}</span>
+              ${t.platform ? `<span class="block font-code-badge text-code-badge text-text-muted/70 mt-0.5">${esc(t.platform)}</span>` : ''}
+            </div>
+          </div>
+          <span class="font-code-badge text-code-badge bg-surface-secondary border border-border-subtle ${pricingClass(t.pricing)} px-2 py-0.5 rounded shrink-0">${esc(t.pricing)}</span>
+        </div>
+        <p class="font-body-compact text-body-compact text-text-muted mb-space-md line-clamp-3">${esc(t.desc)}</p>
+        <div class="flex flex-wrap gap-1.5 mb-space-md">
+          ${(t.tags || []).map((tag) => `<span class="bg-surface-secondary border border-border-subtle font-code-badge text-code-badge text-text-muted px-2 py-0.5 rounded">${esc(tag)}</span>`).join('')}
+        </div>
+      </div>
+      <div class="pt-space-sm border-t border-border-subtle flex items-center justify-between">
+        <button class="text-body-compact font-body-compact text-primary hover:underline flex items-center gap-1" type="button">
+          View details <span class="material-symbols-outlined text-sm" aria-hidden="true" data-icon="chevron_right">chevron_right</span>
+        </button>
+        <a class="text-text-muted hover:text-text-primary transition-colors p-1" href="${esc(t.url)}" target="_blank" rel="noopener noreferrer" title="External website" aria-label="Open ${esc(t.name)} website">
+          <span class="material-symbols-outlined text-base" aria-hidden="true" data-icon="open_in_new">open_in_new</span>
+        </a>
+      </div>
+    </article>`;
+  }
+
+  function rowHTML(t) {
+    return `
+    <tr>
+      <td><span class="font-code-param text-code-param text-text-primary font-semibold">${tileContent(t)}</span> <span class="font-body-compact text-body-compact text-text-primary">${esc(t.name)}</span>${t.verified ? ' <span class="material-symbols-outlined text-tertiary text-sm align-middle" aria-hidden="true" title="Verified">verified</span>' : ''}</td>
+      <td class="text-text-muted font-body-compact text-body-compact">${esc(t.org)}</td>
+      <td class="font-code-badge text-code-badge ${pricingClass(t.pricing)}">${esc(t.pricing)}</td>
+      <td class="font-code-badge text-code-badge text-secondary">${esc((t.tags || []).slice(0, 3).join(' · '))}</td>
+      <td><a class="text-text-muted hover:text-text-primary transition-colors inline-flex" href="${esc(t.url)}" target="_blank" rel="noopener noreferrer" aria-label="Open ${esc(t.name)} website"><span class="material-symbols-outlined text-base" aria-hidden="true" data-icon="open_in_new">open_in_new</span></a></td>
+    </tr>`;
+  }
+
+  function renderChips() {
+    const chips = [];
+    if (state.category !== 'All Tools') chips.push({ kind: 'category', label: `Category: ${state.category}` });
+    if (state.query) chips.push({ kind: 'query', label: `Search: "${state.query}"` });
+    Object.entries(state.facets).forEach(([key, set]) => {
+      set.forEach((v) => chips.push({ kind: 'facet', facet: key, value: v, label: v === 'Verified Only' ? 'Verified' : v }));
+    });
+
+    chipsWrap.querySelectorAll('.chip').forEach((c) => c.remove());
+    noFiltersNote.hidden = chips.length > 0;
+    resetAllBtn.hidden = chips.length === 0;
+
+    chips.forEach((chip) => {
+      const el = document.createElement('span');
+      el.className = 'chip inline-flex items-center gap-1 bg-surface-card border border-border-subtle px-2 py-0.5 rounded text-code-badge font-code-badge text-text-primary';
+      el.innerHTML = `${esc(chip.label)}<button class="text-text-muted hover:text-text-primary" type="button" aria-label="Remove filter ${esc(chip.label)}"><span class="material-symbols-outlined text-xs" aria-hidden="true" data-icon="close">close</span></button>`;
+      el.querySelector('button').addEventListener('click', () => {
+        if (chip.kind === 'category') state.category = 'All Tools';
+        else if (chip.kind === 'query') { state.query = ''; searchInput.value = ''; syncClearBtn(); }
+        else if (chip.kind === 'facet') state.facets[chip.facet].delete(chip.value);
+        state.page = 1;
+        renderPills(); renderFacets(); apply();
+      });
+      chipsWrap.insertBefore(el, resetAllBtn);
+    });
+  }
+
+  function renderPagination(totalPages) {
+    const mkBtn = (label, page, opts = {}) => {
+      const b = document.createElement('button');
+      b.type = 'button';
+      b.className = `page-btn ${opts.icon ? 'flex items-center justify-center w-8 h-8' : 'w-8 h-8'} rounded font-code-badge text-code-badge border ${
+        opts.active
+          ? 'is-active border-primary-container'
+          : 'bg-surface-secondary border-border-subtle text-text-muted'
+      }`;
+      b.innerHTML = label;
+      if (opts.disabled) b.disabled = true;
+      if (opts.active) b.setAttribute('aria-current', 'page');
+      if (page !== null && !opts.disabled) {
+        b.addEventListener('click', () => { state.page = page; apply(); });
+      }
+      return b;
+    };
+
+    paginationControls.innerHTML = '';
+    paginationControls.appendChild(mkBtn('<span class="material-symbols-outlined text-sm" aria-hidden="true">chevron_left</span>', state.page - 1, { icon: true, disabled: state.page === 1 }));
+
+    const pages = [];
+    for (let i = 1; i <= totalPages; i++) {
+      if (i === 1 || i === totalPages || Math.abs(i - state.page) <= 1) pages.push(i);
+      else if (pages[pages.length - 1] !== '…') pages.push('…');
+    }
+    pages.forEach((p) => {
+      if (p === '…') {
+        const s = document.createElement('span');
+        s.className = 'text-text-muted px-1 font-code-badge';
+        s.textContent = '...';
+        paginationControls.appendChild(s);
+      } else {
+        paginationControls.appendChild(mkBtn(String(p), p, { active: p === state.page }));
+      }
+    });
+
+    paginationControls.appendChild(mkBtn('<span class="material-symbols-outlined text-sm" aria-hidden="true">chevron_right</span>', state.page + 1, { icon: true, disabled: state.page === totalPages }));
+  }
+
+  function apply() {
+    const filtered = sortTools(TOOLS_DATA.filter((t) => matchesQuery(t) && matchesCategory(t) && matchesFacets(t)));
+    const totalPages = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
+    state.page = Math.min(Math.max(1, state.page), totalPages);
+    const start = (state.page - 1) * PAGE_SIZE;
+    const slice = filtered.slice(start, start + PAGE_SIZE);
+
+    const isGrid = state.view === 'grid';
+    grid.hidden = !isGrid;
+    tableWrap.hidden = isGrid;
+    emptyState.hidden = filtered.length > 0;
+
+    if (isGrid) {
+      grid.innerHTML = slice.map(cardHTML).join('');
+    } else {
+      tableBody.innerHTML = slice.map(rowHTML).join('');
+    }
+
+    const from = filtered.length === 0 ? 0 : start + 1;
+    const to = Math.min(start + PAGE_SIZE, filtered.length);
+    resultsCount.innerHTML = `Showing <span class="text-text-primary font-medium">${from}–${to}</span> of <span class="text-text-primary font-medium">${filtered.length}</span> resources matching filters`;
+
+    pageIndicator.innerHTML = `Page <span class="text-text-primary font-medium">${state.page}</span> of <span class="text-text-primary font-medium">${totalPages}</span>`;
+    renderPagination(totalPages);
+    renderChips();
+  }
+
+  /* ----- Search ----- */
+  function syncClearBtn() {
+    clearBtn.style.visibility = searchInput.value ? 'visible' : 'hidden';
+  }
+  let debounce;
+  searchInput.addEventListener('input', () => {
+    syncClearBtn();
+    clearTimeout(debounce);
+    debounce = setTimeout(() => { state.query = searchInput.value.trim(); state.page = 1; apply(); }, 180);
+  });
+  clearBtn.addEventListener('click', () => {
+    searchInput.value = '';
+    state.query = '';
+    syncClearBtn();
+    state.page = 1;
+    apply();
+    searchInput.focus();
+  });
+  document.addEventListener('keydown', (e) => {
+    if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') {
+      e.preventDefault();
+      searchInput.focus();
+      searchInput.select();
+    }
+  });
+  document.getElementById('quick-find').addEventListener('input', (e) => {
+    searchInput.value = e.target.value;
+    state.query = e.target.value.trim();
+    state.page = 1;
+    syncClearBtn();
+    apply();
+  });
+
+  /* ----- Sort / view / reset ----- */
+  sortSelect.addEventListener('change', () => { state.sort = sortSelect.value; state.page = 1; apply(); });
+
+  function setView(view) {
+    state.view = view;
+    document.getElementById('view-grid-btn').setAttribute('aria-pressed', String(view === 'grid'));
+    document.getElementById('view-table-btn').setAttribute('aria-pressed', String(view === 'table'));
+    document.getElementById('view-grid-btn').classList.toggle('text-text-primary', view === 'grid');
+    document.getElementById('view-grid-btn').classList.toggle('text-text-muted', view !== 'grid');
+    document.getElementById('view-table-btn').classList.toggle('text-text-primary', view === 'table');
+    document.getElementById('view-table-btn').classList.toggle('text-text-muted', view !== 'table');
+    apply();
+  }
+  document.getElementById('view-grid-btn').addEventListener('click', () => setView('grid'));
+  document.getElementById('view-table-btn').addEventListener('click', () => setView('table'));
+
+  function resetAll() {
+    state.query = '';
+    searchInput.value = '';
+    syncClearBtn();
+    state.category = 'All Tools';
+    state.page = 1;
+    Object.values(state.facets).forEach((s) => s.clear());
+    renderPills(); renderFacets(); apply();
+  }
+  resetAllBtn.addEventListener('click', resetAll);
+  document.getElementById('empty-reset').addEventListener('click', resetAll);
+
+  /* ----- Mobile UI: menu + facets drawer ----- */
+  const menuToggle = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+  menuToggle.addEventListener('click', () => {
+    const open = mobileMenu.classList.toggle('hidden');
+    menuToggle.setAttribute('aria-expanded', String(!open));
+  });
+  mobileMenu.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.add('hidden');
+      menuToggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  facetsToggle.addEventListener('click', () => {
+    const hidden = facetsPanel.classList.toggle('hidden');
+    facetsPanel.classList.toggle('lg:flex', hidden); /* keep desktop behavior intact */
+    facetsToggle.setAttribute('aria-expanded', String(!hidden));
+  });
+
+  /* ----- Init ----- */
+  renderCatalogChip();
+  renderPills();
+  renderFacets();
+  apply();
+})();
+</script>
+</body></html>

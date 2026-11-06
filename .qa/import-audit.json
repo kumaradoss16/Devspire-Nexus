@@ -1,0 +1,305 @@
+{
+  "generated_at": "2026-11-06T10:40:31.880Z",
+  "source_files": {
+    "tools": {
+      "file": "ai-tools.json",
+      "records": 400,
+      "bytes": 483424,
+      "sha256": "9467d9a86092091fc296f3d6a85360bcd7e6721a8b4fb483e0a0daaf18fcb2f8"
+    },
+    "models": {
+      "file": "ai-models.json",
+      "records": 300,
+      "bytes": 447984,
+      "sha256": "1b70e368714b7dae346a5bbd329c9434cb04e3395bd3e4323a283d3c8dc2ff5c"
+    },
+    "dev": {
+      "file": "developer-resources.json",
+      "records": 300,
+      "bytes": 396288,
+      "sha256": "2645dc404e65d7a48363bcf22bb1283be4a377b989f3231f2ef536d1a2be849f"
+    },
+    "combined": {
+      "file": "ai-resources-1000.json",
+      "records": 1000,
+      "bytes": 1327692,
+      "sha256": "078c7641b125dc0372c4d934d9a0b27be780437f018a9601ffdee2074e885b9a"
+    }
+  },
+  "merge": {
+    "tools": {
+      "source": 400,
+      "idMatches": 50,
+      "legacyOnly": 3,
+      "duplicatesRemoved": 2,
+      "invalid": 0
+    },
+    "models": {
+      "source": 300,
+      "idMatches": 48,
+      "legacyOnly": 0,
+      "duplicatesRemoved": 0,
+      "invalid": 0
+    },
+    "dev": {
+      "source": 300,
+      "idMatches": 51,
+      "legacyOnly": 0,
+      "duplicatesRemoved": 0,
+      "invalid": 0
+    }
+  },
+  "validation": {
+    "tools": {
+      "count": 403,
+      "uniqueIds": 403,
+      "invalid": []
+    },
+    "models": {
+      "count": 300,
+      "uniqueIds": 300,
+      "invalid": []
+    },
+    "dev": {
+      "count": 300,
+      "uniqueIds": 300,
+      "invalid": []
+    }
+  },
+  "meta": {
+    "tools": {
+      "count": 403,
+      "catalog": "ai-tools",
+      "source": "G:/Downloads/ai-tools.json",
+      "source_sha256": "9467d9a86092091fc296f3d6a85360bcd7e6721a8b4fb483e0a0daaf18fcb2f8",
+      "last_verified": "2026-11-04",
+      "category_order": [
+        "Assistants & Chatbots",
+        "Search & Research",
+        "Coding & Development",
+        "Writing & Content",
+        "Productivity",
+        "Meetings & Communication",
+        "Agents & Automation",
+        "Image & Design",
+        "Video",
+        "Audio & Speech",
+        "Business & Enterprise",
+        "Data & Analytics",
+        "Infrastructure & Security",
+        "Industry & Specialized"
+      ],
+      "categories": [
+        {
+          "name": "Assistants & Chatbots",
+          "count": 6
+        },
+        {
+          "name": "Search & Research",
+          "count": 31
+        },
+        {
+          "name": "Coding & Development",
+          "count": 53
+        },
+        {
+          "name": "Writing & Content",
+          "count": 13
+        },
+        {
+          "name": "Productivity",
+          "count": 25
+        },
+        {
+          "name": "Meetings & Communication",
+          "count": 14
+        },
+        {
+          "name": "Agents & Automation",
+          "count": 5
+        },
+        {
+          "name": "Image & Design",
+          "count": 42
+        },
+        {
+          "name": "Video",
+          "count": 31
+        },
+        {
+          "name": "Audio & Speech",
+          "count": 35
+        },
+        {
+          "name": "Business & Enterprise",
+          "count": 99
+        },
+        {
+          "name": "Data & Analytics",
+          "count": 13
+        },
+        {
+          "name": "Infrastructure & Security",
+          "count": 30
+        },
+        {
+          "name": "Industry & Specialized",
+          "count": 6
+        }
+      ],
+      "merged_legacy": 3,
+      "source_records": 400
+    },
+    "models": {
+      "count": 300,
+      "catalog": "ai-models",
+      "source": "G:/Downloads/ai-models.json",
+      "source_sha256": "1b70e368714b7dae346a5bbd329c9434cb04e3395bd3e4323a283d3c8dc2ff5c",
+      "last_verified": "2026-11-04",
+      "category_order": [
+        "Large Language Models",
+        "Reasoning & CoT",
+        "Coding Models",
+        "Vision & Multimodal",
+        "Image Generation",
+        "3D Generation",
+        "Video Generation",
+        "Audio & Speech",
+        "Embeddings & Rerankers",
+        "Small / Edge Models",
+        "Robotics & Embodied",
+        "Specialized Models"
+      ],
+      "categories": [
+        {
+          "name": "Large Language Models",
+          "count": 74
+        },
+        {
+          "name": "Reasoning & CoT",
+          "count": 15
+        },
+        {
+          "name": "Coding Models",
+          "count": 23
+        },
+        {
+          "name": "Vision & Multimodal",
+          "count": 56
+        },
+        {
+          "name": "Image Generation",
+          "count": 17
+        },
+        {
+          "name": "3D Generation",
+          "count": 9
+        },
+        {
+          "name": "Video Generation",
+          "count": 8
+        },
+        {
+          "name": "Audio & Speech",
+          "count": 24
+        },
+        {
+          "name": "Embeddings & Rerankers",
+          "count": 29
+        },
+        {
+          "name": "Small / Edge Models",
+          "count": 26
+        },
+        {
+          "name": "Robotics & Embodied",
+          "count": 9
+        },
+        {
+          "name": "Specialized Models",
+          "count": 10
+        }
+      ],
+      "merged_legacy": 0,
+      "source_records": 300
+    },
+    "dev": {
+      "count": 300,
+      "catalog": "developer-resources",
+      "source": "G:/Downloads/developer-resources.json",
+      "source_sha256": "2645dc404e65d7a48363bcf22bb1283be4a377b989f3231f2ef536d1a2be849f",
+      "last_verified": "2026-11-04",
+      "category_order": [
+        "Agent Frameworks",
+        "Vector Databases & RAG",
+        "Model Serving & Inference",
+        "Local Runtimes",
+        "Fine-Tuning & Optimization",
+        "Evaluation & Observability",
+        "AI Security & Guardrails",
+        "APIs, Gateways & Protocols",
+        "Cloud & GPU Infrastructure",
+        "Developer Tooling & QA",
+        "Data & Annotation",
+        "Robotics & Embodied AI"
+      ],
+      "categories": [
+        {
+          "name": "Agent Frameworks",
+          "count": 40
+        },
+        {
+          "name": "Vector Databases & RAG",
+          "count": 29
+        },
+        {
+          "name": "Model Serving & Inference",
+          "count": 69
+        },
+        {
+          "name": "Local Runtimes",
+          "count": 14
+        },
+        {
+          "name": "Fine-Tuning & Optimization",
+          "count": 19
+        },
+        {
+          "name": "Evaluation & Observability",
+          "count": 28
+        },
+        {
+          "name": "AI Security & Guardrails",
+          "count": 13
+        },
+        {
+          "name": "APIs, Gateways & Protocols",
+          "count": 35
+        },
+        {
+          "name": "Cloud & GPU Infrastructure",
+          "count": 13
+        },
+        {
+          "name": "Developer Tooling & QA",
+          "count": 30
+        },
+        {
+          "name": "Data & Annotation",
+          "count": 7
+        },
+        {
+          "name": "Robotics & Embodied AI",
+          "count": 3
+        }
+      ],
+      "merged_legacy": 0,
+      "source_records": 300
+    }
+  },
+  "related_index": {
+    "tools": 403,
+    "models": 300,
+    "developer_resources": 300
+  }
+}

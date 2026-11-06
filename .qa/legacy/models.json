@@ -1,0 +1,2203 @@
+[
+  {
+    "id": "gpt-4o",
+    "name": "GPT-4o",
+    "publisher": "OpenAI",
+    "description": "OpenAI's flagship multimodal model supporting text, image, audio input and output in a unified architecture. Serves as the primary model powering ChatGPT and is available via API for developers.",
+    "category": "Vision & Multimodal",
+    "source_category": "Multimodal Models",
+    "family": "Multimodal Language Model",
+    "resource_type": "AI Model",
+    "official_url": "https://platform.openai.com/docs/models/gpt-4o",
+    "pricing": "usage_based",
+    "weights": "closed",
+    "open_weights": false,
+    "self_hostable": false,
+    "signup_required": true,
+    "license": "Proprietary",
+    "license_group": "Proprietary / Commercial",
+    "params": null,
+    "context_k": 128,
+    "moe": false,
+    "modalities": [
+      "Text & Reasoning",
+      "Vision",
+      "Audio"
+    ],
+    "tags": [
+      "LLM",
+      "Multimodal",
+      "Vision",
+      "Audio",
+      "API",
+      "Text-Generation"
+    ],
+    "icon": "assets/img/icons/openai.png",
+    "verified": "2026-11-03",
+    "status": "verified",
+    "evidence": [
+      [
+        "OpenAI Models Documentation",
+        "https://platform.openai.com/docs/models/gpt-4o"
+      ],
+      [
+        "OpenAI API Pricing",
+        "https://openai.com/api/pricing/"
+      ]
+    ],
+    "source": "https://github.com/kumaradoss16/ai-knowledge-base/blob/main/ai-tools/ai-tools-models-developer-resources.md"
+  },
+  {
+    "id": "claude-3-5-sonnet",
+    "name": "Claude 3.5 Sonnet",
+    "publisher": "Anthropic",
+    "description": "Anthropic's flagship language model offering strong performance across coding, reasoning, instruction-following, and multimodal understanding. Available via API and as the default model powering claude.ai.",
+    "category": "Large Language Models",
+    "source_category": "Large Language Models",
+    "family": "Large Language Model",
+    "resource_type": "AI Model",
+    "official_url": "https://www.anthropic.com/claude/sonnet",
+    "pricing": "usage_based",
+    "weights": "closed",
+    "open_weights": false,
+    "self_hostable": false,
+    "signup_required": true,
+    "license": "Proprietary",
+    "license_group": "Proprietary / Commercial",
+    "params": null,
+    "context_k": 200,
+    "moe": false,
+    "modalities": [
+      "Text & Reasoning",
+      "Code",
+      "Vision"
+    ],
+    "tags": [
+      "LLM",
+      "Coding",
+      "Reasoning",
+      "Vision",
+      "API",
+      "Long-Context"
+    ],
+    "icon": "assets/img/icons/anthropic.png",
+    "verified": "2026-11-03",
+    "status": "verified",
+    "evidence": [
+      [
+        "Anthropic Model Documentation",
+        "https://www.anthropic.com/claude/sonnet"
+      ],
+      [
+        "Anthropic API Pricing",
+        "https://www.anthropic.com/pricing"
+      ]
+    ],
+    "source": "https://github.com/kumaradoss16/ai-knowledge-base/blob/main/ai-tools/ai-tools-models-developer-resources.md"
+  },
+  {
+    "id": "gemini-1-5-pro",
+    "name": "Gemini 1.5 Pro",
+    "publisher": "Google DeepMind",
+    "description": "Google DeepMind's long-context multimodal model supporting text, images, audio, video, and code with a 1 million-token context window. Accessible through the Gemini API and Google AI Studio.",
+    "category": "Vision & Multimodal",
+    "source_category": "Multimodal Models",
+    "family": "Multimodal Language Model",
+    "resource_type": "AI Model",
+    "official_url": "https://ai.google.dev/gemini-api/docs/models/gemini",
+    "pricing": "usage_based",
+    "weights": "closed",
+    "open_weights": false,
+    "self_hostable": false,
+    "signup_required": true,
+    "license": "Proprietary",
+    "license_group": "Proprietary / Commercial",
+    "params": null,
+    "context_k": 1000,
+    "moe": false,
+    "modalities": [
+      "Text & Reasoning",
+      "Vision",
+      "Audio",
+      "Video"
+    ],
+    "tags": [
+      "LLM",
+      "Multimodal",
+      "Long-Context",
+      "Vision",
+      "Audio",
+      "API"
+    ],
+    "icon": "assets/img/icons/google-deepmind.png",
+    "verified": "2026-11-03",
+    "status": "verified",
+    "evidence": [
+      [
+        "Google AI Gemini Models",
+        "https://ai.google.dev/gemini-api/docs/models/gemini"
+      ],
+      [
+        "Google AI Studio",
+        "https://aistudio.google.com/"
+      ]
+    ],
+    "source": "https://github.com/kumaradoss16/ai-knowledge-base/blob/main/ai-tools/ai-tools-models-developer-resources.md"
+  },
+  {
+    "id": "deepseek-r1",
+    "name": "DeepSeek-R1",
+    "publisher": "DeepSeek",
+    "description": "Open-weight reasoning model from DeepSeek using reinforcement learning to achieve strong performance on mathematics, coding, and logical reasoning tasks. Weights released under the MIT License.",
+    "category": "Reasoning & CoT",
+    "source_category": "Reasoning Models",
+    "family": "Reasoning Model",
+    "resource_type": "AI Model",
+    "official_url": "https://huggingface.co/deepseek-ai/DeepSeek-R1",
+    "pricing": "open_weights",
+    "weights": "open",
+    "open_weights": true,
+    "self_hostable": true,
+    "signup_required": false,
+    "license": "MIT",
+    "license_group": "MIT / Apache 2.0",
+    "params": "671B MoE (37B act)",
+    "context_k": null,
+    "moe": true,
+    "modalities": [
+      "Text & Reasoning",
+      "Code"
+    ],
+    "tags": [
+      "LLM",
+      "Reasoning",
+      "Open-Weights",
+      "Inference",
+      "Mathematics",
+      "Coding"
+    ],
+    "icon": "assets/img/icons/deepseek.png",
+    "verified": "2026-11-03",
+    "status": "verified",
+    "evidence": [
+      [
+        "DeepSeek Official Website",
+        "https://www.deepseek.com/"
+      ],
+      [
+        "HuggingFace Model Card",
+        "https://huggingface.co/deepseek-ai/DeepSeek-R1"
+      ],
+      [
+        "DeepSeek GitHub",
+        "https://github.com/deepseek-ai/DeepSeek-R1"
+      ]
+    ],
+    "source": "https://github.com/kumaradoss16/ai-knowledge-base/blob/main/ai-tools/ai-tools-models-developer-resources.md"
+  },
+  {
+    "id": "llama-3-1",
+    "name": "Llama 3.1",
+    "publisher": "Meta AI",
+    "description": "Meta AI's family of open-weight large language models available in 8B, 70B, and 405B parameter sizes with a 128K token context window. Supports multilingual tasks, reasoning, coding, and tool use.",
+    "category": "Large Language Models",
+    "source_category": "Large Language Models",
+    "family": "Open-Weight Large Language Model",
+    "resource_type": "AI Model",
+    "official_url": "https://ai.meta.com/blog/meta-llama-3-1/",
+    "pricing": "open_weights",
+    "weights": "open",
+    "open_weights": true,
+    "self_hostable": true,
+    "signup_required": true,
+    "license": "Llama 3.1 Community",
+    "license_group": "Permissive Community",
+    "params": "8B / 70B / 405B",
+    "context_k": 128,
+    "moe": false,
+    "modalities": [
+      "Text & Reasoning"
+    ],
+    "tags": [
+      "LLM",
+      "Open-Weights",
+      "Multilingual",
+      "Tool-Use",
+      "Instruction-Following"
+    ],
+    "icon": "assets/img/icons/llama.png",
+    "verified": "2026-11-03",
+    "status": "verified",
+    "evidence": [
+      [
+        "Meta AI Llama Blog",
+        "https://ai.meta.com/blog/meta-llama-3-1/"
+      ],
+      [
+        "Llama on HuggingFace",
+        "https://huggingface.co/meta-llama/Meta-Llama-3.1-8B"
+      ]
+    ],
+    "source": "https://github.com/kumaradoss16/ai-knowledge-base/blob/main/ai-tools/ai-tools-models-developer-resources.md"
+  },
+  {
+    "id": "mistral-large",
+    "name": "Mistral Large",
+    "publisher": "Mistral AI",
+    "description": "Mistral AI's flagship proprietary language model for enterprise use, offering strong multilingual reasoning, coding, and instruction-following performance. Accessible via the Mistral API and La Plateforme.",
+    "category": "Large Language Models",
+    "source_category": "Large Language Models",
+    "family": "Large Language Model",
+    "resource_type": "AI Model",
+    "official_url": "https://docs.mistral.ai/getting-started/models/models_overview/",
+    "pricing": "usage_based",
+    "weights": "closed",
+    "open_weights": false,
+    "self_hostable": false,
+    "signup_required": true,
+    "license": "Proprietary",
+    "license_group": "Proprietary / Commercial",
+    "params": null,
+    "context_k": 128,
+    "moe": false,
+    "modalities": [
+      "Text & Reasoning",
+      "Code"
+    ],
+    "tags": [
+      "LLM",
+      "Multilingual",
+      "Reasoning",
+      "Coding",
+      "API",
+      "Enterprise"
+    ],
+    "icon": "assets/img/icons/mistral.png",
+    "verified": "2026-11-03",
+    "status": "verified",
+    "evidence": [
+      [
+        "Mistral AI Models Overview",
+        "https://docs.mistral.ai/getting-started/models/models_overview/"
+      ],
+      [
+        "Mistral API Pricing",
+        "https://mistral.ai/technology/#pricing"
+      ]
+    ],
+    "source": "https://github.com/kumaradoss16/ai-knowledge-base/blob/main/ai-tools/ai-tools-models-developer-resources.md"
+  },
+  {
+    "id": "qwen2-5",
+    "name": "Qwen2.5",
+    "publisher": "Alibaba Cloud",
+    "description": "Alibaba's Qwen2.5 series of open-weight language models available from 0.5B to 72B parameters, with strong performance in coding (Qwen2.5-Coder), mathematics (Qwen2.5-Math), and multilingual instruction following.",
+    "category": "Large Language Models",
+    "source_category": "Large Language Models",
+    "family": "Open-Weight Large Language Model",
+    "resource_type": "AI Model",
+    "official_url": "https://huggingface.co/collections/Qwen/qwen25-66e81a666513e518adb90d9e",
+    "pricing": "open_weights",
+    "weights": "open",
+    "open_weights": true,
+    "self_hostable": true,
+    "signup_required": false,
+    "license": "Qwen License",
+    "license_group": "Permissive Community",
+    "params": "0.5B–72B",
+    "context_k": null,
+    "moe": false,
+    "modalities": [
+      "Text & Reasoning",
+      "Code"
+    ],
+    "tags": [
+      "LLM",
+      "Open-Weights",
+      "Multilingual",
+      "Coding",
+      "Math",
+      "Instruction-Following"
+    ],
+    "icon": "assets/img/icons/qwen.png",
+    "verified": "2026-11-03",
+    "status": "verified",
+    "evidence": [
+      [
+        "Qwen GitHub",
+        "https://github.com/QwenLM/Qwen2.5"
+      ],
+      [
+        "Qwen2.5 HuggingFace Collection",
+        "https://huggingface.co/collections/Qwen/qwen25-66e81a666513e518adb90d9e"
+      ]
+    ],
+    "source": "https://github.com/kumaradoss16/ai-knowledge-base/blob/main/ai-tools/ai-tools-models-developer-resources.md"
+  },
+  {
+    "id": "flux-1-schnell",
+    "name": "FLUX.1 [schnell]",
+    "publisher": "Black Forest Labs",
+    "description": "Fast text-to-image diffusion model from Black Forest Labs designed for local inference, generating high-quality images in 1–4 steps using Latent Adversarial Diffusion Distillation. Released under Apache 2.0 license.",
+    "category": "Image Generation",
+    "source_category": "Image Generation Models",
+    "family": "Image Generation Model",
+    "resource_type": "AI Model",
+    "official_url": "https://huggingface.co/black-forest-labs/FLUX.1-schnell",
+    "pricing": "open_source",
+    "weights": "open",
+    "open_weights": true,
+    "self_hostable": true,
+    "signup_required": false,
+    "license": "Apache 2.0",
+    "license_group": "MIT / Apache 2.0",
+    "params": "12B",
+    "context_k": null,
+    "moe": false,
+    "modalities": [
+      "Image Generation"
+    ],
+    "tags": [
+      "Text-to-Image",
+      "Diffusion",
+      "Image-Generation",
+      "Open-Source",
+      "Fast-Inference"
+    ],
+    "icon": "assets/img/icons/flux.png",
+    "verified": "2026-11-03",
+    "status": "verified",
+    "evidence": [
+      [
+        "Black Forest Labs Website",
+        "https://blackforestlabs.ai/"
+      ],
+      [
+        "HuggingFace Model Card",
+        "https://huggingface.co/black-forest-labs/FLUX.1-schnell"
+      ]
+    ],
+    "source": "https://github.com/kumaradoss16/ai-knowledge-base/blob/main/ai-tools/ai-tools-models-developer-resources.md"
+  },
+  {
+    "id": "whisper",
+    "name": "Whisper",
+    "publisher": "OpenAI",
+    "description": "Open-source automatic speech recognition model from OpenAI trained on 680,000 hours of multilingual audio data. Supports transcription and translation in 99+ languages. Weights freely available for local use.",
+    "category": "Audio & Speech",
+    "source_category": "Speech-to-Text Models",
+    "family": "Speech-to-Text Model",
+    "resource_type": "AI Model",
+    "official_url": "https://github.com/openai/whisper",
+    "pricing": "open_source",
+    "weights": "open",
+    "open_weights": true,
+    "self_hostable": true,
+    "signup_required": false,
+    "license": "MIT",
+    "license_group": "MIT / Apache 2.0",
+    "params": "tiny–large",
+    "context_k": null,
+    "moe": false,
+    "modalities": [
+      "Audio"
+    ],
+    "tags": [
+      "Speech-to-Text",
+      "ASR",
+      "Transcription",
+      "Multilingual",
+      "Open-Source"
+    ],
+    "icon": "assets/img/icons/openai.png",
+    "verified": "2026-11-03",
+    "status": "verified",
+    "evidence": [
+      [
+        "OpenAI Whisper GitHub",
+        "https://github.com/openai/whisper"
+      ],
+      [
+        "OpenAI Whisper Research Page",
+        "https://openai.com/research/whisper"
+      ]
+    ],
+    "source": "https://github.com/kumaradoss16/ai-knowledge-base/blob/main/ai-tools/ai-tools-models-developer-resources.md"
+  },
+  {
+    "id": "text-embedding-3-large",
+    "name": "text-embedding-3-large",
+    "publisher": "OpenAI",
+    "description": "OpenAI's high-performance text embedding model producing dense vector representations for semantic search, RAG, and classification tasks. Outperforms ada-002 on MTEB benchmarks with configurable output dimensions.",
+    "category": "Embeddings & Rerankers",
+    "source_category": "Embedding Models",
+    "family": "Embedding Model",
+    "resource_type": "AI Model",
+    "official_url": "https://platform.openai.com/docs/guides/embeddings",
+    "pricing": "usage_based",
+    "weights": "closed",
+    "open_weights": false,
+    "self_hostable": false,
+    "signup_required": true,
+    "license": "Proprietary",
+    "license_group": "Proprietary / Commercial",
+    "params": null,
+    "context_k": null,
+    "moe": false,
+    "modalities": [
+      "Embeddings"
+    ],
+    "tags": [
+      "Embeddings",
+      "Semantic-Search",
+      "RAG",
+      "Vector",
+      "API"
+    ],
+    "icon": "assets/img/icons/openai.png",
+    "verified": "2026-11-03",
+    "status": "verified",
+    "evidence": [
+      [
+        "OpenAI Embeddings Documentation",
+        "https://platform.openai.com/docs/guides/embeddings"
+      ],
+      [
+        "OpenAI API Pricing",
+        "https://openai.com/api/pricing/"
+      ]
+    ],
+    "source": "https://github.com/kumaradoss16/ai-knowledge-base/blob/main/ai-tools/ai-tools-models-developer-resources.md"
+  },
+  {
+    "id": "stable-diffusion-3-5",
+    "name": "Stable Diffusion 3.5",
+    "publisher": "Stability AI",
+    "description": "Stability AI's text-to-image diffusion model featuring improved prompt adherence, image quality, and typography generation. Available in Large (8B) and Medium (2.5B) variants with weights downloadable under a community license.",
+    "category": "Image Generation",
+    "source_category": "Image Generation Models",
+    "family": "Diffusion Image Generation Model",
+    "resource_type": "AI Model",
+    "official_url": "https://huggingface.co/stabilityai/stable-diffusion-3.5-large",
+    "pricing": "open_weights",
+    "weights": "open",
+    "open_weights": true,
+    "self_hostable": true,
+    "signup_required": true,
+    "license": "Stability Community",
+    "license_group": "Permissive Community",
+    "params": "2.5B / 8B",
+    "context_k": null,
+    "moe": false,
+    "modalities": [
+      "Image Generation"
+    ],
+    "tags": [
+      "Text-to-Image",
+      "Diffusion",
+      "Image-Generation",
+      "Open-Weights",
+      "Multimodal-Diffusion-Transformer"
+    ],
+    "icon": "assets/img/icons/stable-diffusion.png",
+    "verified": "2026-11-03",
+    "status": "verified",
+    "evidence": [
+      [
+        "Stability AI Website",
+        "https://stability.ai/"
+      ],
+      [
+        "HuggingFace Model Card",
+        "https://huggingface.co/stabilityai/stable-diffusion-3.5-large"
+      ]
+    ],
+    "source": "https://github.com/kumaradoss16/ai-knowledge-base/blob/main/ai-tools/ai-tools-models-developer-resources.md"
+  },
+  {
+    "id": "phi-3",
+    "name": "Phi-3",
+    "publisher": "Microsoft",
+    "description": "Microsoft Research's family of small language models (3.8B–14B parameters) designed for efficient local inference on resource-constrained hardware. Offers strong reasoning performance relative to model size.",
+    "category": "Small / Edge Models",
+    "source_category": "Small Language Models",
+    "family": "Small Language Model",
+    "resource_type": "AI Model",
+    "official_url": "https://huggingface.co/collections/microsoft/phi-3-6626e15e9585a200d2d761e3",
+    "pricing": "open_weights",
+    "weights": "open",
+    "open_weights": true,
+    "self_hostable": true,
+    "signup_required": false,
+    "license": "MIT",
+    "license_group": "MIT / Apache 2.0",
+    "params": "3.8B–14B",
+    "context_k": null,
+    "moe": false,
+    "modalities": [
+      "Text & Reasoning"
+    ],
+    "tags": [
+      "SLM",
+      "Small-Language-Model",
+      "Local-Inference",
+      "Reasoning",
+      "Open-Weights"
+    ],
+    "icon": "assets/img/icons/phi.png",
+    "verified": "2026-11-03",
+    "status": "verified",
+    "evidence": [
+      [
+        "Microsoft Phi-3 Blog",
+        "https://azure.microsoft.com/en-us/blog/introducing-phi-3-redefining-whats-possible-with-slms/"
+      ],
+      [
+        "HuggingFace Phi-3 Collection",
+        "https://huggingface.co/collections/microsoft/phi-3-6626e15e9585a200d2d761e3"
+      ]
+    ],
+    "source": "https://github.com/kumaradoss16/ai-knowledge-base/blob/main/ai-tools/ai-tools-models-developer-resources.md"
+  },
+  {
+    "id": "command-r-plus",
+    "name": "Command R+",
+    "publisher": "Cohere",
+    "description": "Cohere's enterprise-focused language model optimized for RAG pipelines, tool use, and multi-step agent workflows. Supports 10+ languages and excels at instruction following for business applications.",
+    "category": "Large Language Models",
+    "source_category": "Large Language Models",
+    "family": "Retrieval-Augmented Generation Model",
+    "resource_type": "AI Model",
+    "official_url": "https://huggingface.co/CohereForAI/c4ai-command-r-plus",
+    "pricing": "open_weights",
+    "weights": "open",
+    "open_weights": true,
+    "self_hostable": true,
+    "signup_required": false,
+    "license": "CC BY-NC 4.0 (weights)",
+    "license_group": "Non-Commercial / Research",
+    "params": null,
+    "context_k": 128,
+    "moe": false,
+    "modalities": [
+      "Text & Reasoning"
+    ],
+    "tags": [
+      "LLM",
+      "RAG",
+      "Tool-Use",
+      "Enterprise",
+      "Multilingual",
+      "Agent"
+    ],
+    "icon": "assets/img/icons/cohere.png",
+    "verified": "2026-11-03",
+    "status": "verified",
+    "evidence": [
+      [
+        "Cohere Command R+ Blog",
+        "https://cohere.com/blog/command-r-plus-microsoft-azure"
+      ],
+      [
+        "HuggingFace Model Card",
+        "https://huggingface.co/CohereForAI/c4ai-command-r-plus"
+      ]
+    ],
+    "source": "https://github.com/kumaradoss16/ai-knowledge-base/blob/main/ai-tools/ai-tools-models-developer-resources.md"
+  },
+  {
+    "id": "bge-m3",
+    "name": "BGE-M3",
+    "publisher": "BAAI",
+    "description": "Multi-functionality, multi-linguality, and multi-granularity text embedding model from BAAI. Supports dense retrieval, sparse retrieval, and multi-vector retrieval in 100+ languages. Open-source under MIT License.",
+    "category": "Embeddings & Rerankers",
+    "source_category": "Embedding Models",
+    "family": "Embedding Model",
+    "resource_type": "AI Model",
+    "official_url": "https://huggingface.co/BAAI/bge-m3",
+    "pricing": "open_source",
+    "weights": "open",
+    "open_weights": true,
+    "self_hostable": true,
+    "signup_required": false,
+    "license": "MIT",
+    "license_group": "MIT / Apache 2.0",
+    "params": null,
+    "context_k": 8,
+    "moe": false,
+    "modalities": [
+      "Embeddings"
+    ],
+    "tags": [
+      "Embeddings",
+      "Multilingual",
+      "Dense-Retrieval",
+      "Sparse-Retrieval",
+      "Open-Source",
+      "RAG"
+    ],
+    "icon": "assets/img/icons/huggingface.png",
+    "verified": "2026-11-03",
+    "status": "verified",
+    "evidence": [
+      [
+        "BAAI BGE-M3 HuggingFace",
+        "https://huggingface.co/BAAI/bge-m3"
+      ],
+      [
+        "BGE-M3 Paper",
+        "https://arxiv.org/abs/2402.03216"
+      ]
+    ],
+    "source": "https://github.com/kumaradoss16/ai-knowledge-base/blob/main/ai-tools/ai-tools-models-developer-resources.md"
+  },
+  {
+    "id": "falcon-180b",
+    "name": "Falcon 180B",
+    "publisher": "TII",
+    "description": "Open-weight large language model from the Technology Innovation Institute with 180 billion parameters, trained on 3.5 trillion tokens of the RefinedWeb dataset. Supports text generation and completion tasks.",
+    "category": "Large Language Models",
+    "source_category": "Large Language Models",
+    "family": "Open-Weight Large Language Model",
+    "resource_type": "AI Model",
+    "official_url": "https://huggingface.co/tiiuae/falcon-180B",
+    "pricing": "open_weights",
+    "weights": "open",
+    "open_weights": true,
+    "self_hostable": true,
+    "signup_required": false,
+    "license": "Falcon-180B TII",
+    "license_group": "Permissive Community",
+    "params": "180B",
+    "context_k": null,
+    "moe": false,
+    "modalities": [
+      "Text & Reasoning"
+    ],
+    "tags": [
+      "LLM",
+      "Open-Weights",
+      "Large-Scale",
+      "Text-Generation",
+      "Arabic"
+    ],
+    "icon": "assets/img/icons/falcon-tii.png",
+    "verified": "2026-11-03",
+    "status": "verified",
+    "evidence": [
+      [
+        "TII Falcon LLM",
+        "https://falconllm.tii.ae/"
+      ],
+      [
+        "HuggingFace Falcon-180B",
+        "https://huggingface.co/tiiuae/falcon-180B"
+      ]
+    ],
+    "source": "https://github.com/kumaradoss16/ai-knowledge-base/blob/main/ai-tools/ai-tools-models-developer-resources.md"
+  },
+  {
+    "id": "musicgen",
+    "name": "MusicGen",
+    "publisher": "Meta AI",
+    "description": "Open-source text-to-music and melody-conditioned music generation model from Meta AI AudioCraft. Generates high-quality stereo audio from text descriptions and optional melodic conditioning inputs.",
+    "category": "Audio & Speech",
+    "source_category": "Music Generation Models",
+    "family": "Music Generation Model",
+    "resource_type": "AI Model",
+    "official_url": "https://huggingface.co/facebook/musicgen-large",
+    "pricing": "open_source",
+    "weights": "open",
+    "open_weights": true,
+    "self_hostable": true,
+    "signup_required": false,
+    "license": "MIT",
+    "license_group": "MIT / Apache 2.0",
+    "params": null,
+    "context_k": null,
+    "moe": false,
+    "modalities": [
+      "Audio"
+    ],
+    "tags": [
+      "Music-Generation",
+      "Text-to-Music",
+      "Audio-Generation",
+      "Open-Source",
+      "AudioCraft"
+    ],
+    "icon": "assets/img/icons/llama.png",
+    "verified": "2026-11-03",
+    "status": "verified",
+    "evidence": [
+      [
+        "Meta AudioCraft GitHub",
+        "https://github.com/facebookresearch/audiocraft"
+      ],
+      [
+        "HuggingFace MusicGen",
+        "https://huggingface.co/facebook/musicgen-large"
+      ]
+    ],
+    "source": "https://github.com/kumaradoss16/ai-knowledge-base/blob/main/ai-tools/ai-tools-models-developer-resources.md"
+  },
+  {
+    "id": "openai-o1",
+    "name": "OpenAI o1",
+    "publisher": "OpenAI",
+    "description": "OpenAI's frontier reasoning model designed to spend inference time thinking before producing answers. Uses reinforcement learning to execute long chain-of-thought reasoning across competitive math, coding, and scientific research benchmarks.",
+    "category": "Reasoning & CoT",
+    "source_category": "Reasoning Models",
+    "family": "Deliberative Reasoning Foundation Model",
+    "resource_type": "AI Model",
+    "official_url": "https://openai.com/o1/",
+    "pricing": "usage_based",
+    "weights": "closed",
+    "open_weights": false,
+    "self_hostable": false,
+    "signup_required": true,
+    "license": "Proprietary",
+    "license_group": "Proprietary / Commercial",
+    "params": null,
+    "context_k": null,
+    "moe": false,
+    "modalities": [
+      "Text & Reasoning",
+      "Code"
+    ],
+    "tags": [
+      "Reasoning-Model",
+      "Chain-of-Thought",
+      "Inference-Scaling",
+      "Mathematics",
+      "OpenAI"
+    ],
+    "icon": "assets/img/icons/openai.png",
+    "verified": "2026-11-03",
+    "status": "verified",
+    "evidence": [
+      [
+        "OpenAI o1 System Card",
+        "https://openai.com/index/openai-o1-system-card/"
+      ],
+      [
+        "OpenAI API Models Documentation",
+        "https://platform.openai.com/docs/models/o1"
+      ]
+    ],
+    "source": "https://github.com/kumaradoss16/ai-knowledge-base/blob/main/ai-tools/ai-tools-models-developer-resources.md"
+  },
+  {
+    "id": "gemma-2",
+    "name": "Gemma 2",
+    "publisher": "Google DeepMind",
+    "description": "Family of lightweight open-weight models (2.6B, 9B, and 27B parameters) from Google DeepMind built upon Gemini research. Features sliding-window attention and knowledge distillation for exceptional single-GPU efficiency.",
+    "category": "Large Language Models",
+    "source_category": "Open-Weight Models",
+    "family": "Lightweight Open Foundation Model Family",
+    "resource_type": "AI Model",
+    "official_url": "https://huggingface.co/collections/google/gemma-2-release-667d6600fd5220e7b967f313",
+    "pricing": "open_weights",
+    "weights": "open",
+    "open_weights": true,
+    "self_hostable": true,
+    "signup_required": false,
+    "license": "Gemma Terms of Use",
+    "license_group": "Permissive Community",
+    "params": "2.6B–27B",
+    "context_k": 8,
+    "moe": false,
+    "modalities": [
+      "Text & Reasoning"
+    ],
+    "tags": [
+      "Open-Weights",
+      "Google-DeepMind",
+      "Small-Language-Model",
+      "Efficient-Inference",
+      "Distillation"
+    ],
+    "icon": "assets/img/icons/google-deepmind.png",
+    "verified": "2026-11-03",
+    "status": "verified",
+    "evidence": [
+      [
+        "Google Developer Gemma Blog",
+        "https://blog.google/technology/developers/google-gemma-2/"
+      ],
+      [
+        "Gemma Terms of Use",
+        "https://ai.google.dev/gemma/terms"
+      ]
+    ],
+    "source": "https://github.com/kumaradoss16/ai-knowledge-base/blob/main/ai-tools/ai-tools-models-developer-resources.md"
+  },
+  {
+    "id": "claude-3-5-haiku",
+    "name": "Claude 3.5 Haiku",
+    "publisher": "Anthropic",
+    "description": "Anthropic's fastest language model in the Claude 3.5 family. Delivers coding, text analysis, and instruction-following performance matching prior flagship Claude 3 Opus at high inference speeds and low per-token operational cost.",
+    "category": "Large Language Models",
+    "source_category": "Large Language Models",
+    "family": "High-Speed Lightweight Language Model",
+    "resource_type": "AI Model",
+    "official_url": "https://www.anthropic.com/claude/haiku",
+    "pricing": "usage_based",
+    "weights": "closed",
+    "open_weights": false,
+    "self_hostable": false,
+    "signup_required": true,
+    "license": "Proprietary",
+    "license_group": "Proprietary / Commercial",
+    "params": null,
+    "context_k": 200,
+    "moe": false,
+    "modalities": [
+      "Text & Reasoning",
+      "Code"
+    ],
+    "tags": [
+      "Fast-Inference",
+      "LLM",
+      "Cost-Efficient",
+      "Coding",
+      "Anthropic",
+      "200k-Context"
+    ],
+    "icon": "assets/img/icons/anthropic.png",
+    "verified": "2026-11-03",
+    "status": "verified",
+    "evidence": [
+      [
+        "Anthropic Claude 3.5 Haiku Announcement",
+        "https://www.anthropic.com/news/claude-3-5-haiku"
+      ],
+      [
+        "Anthropic Pricing Documentation",
+        "https://www.anthropic.com/pricing"
+      ]
+    ],
+    "source": "https://github.com/kumaradoss16/ai-knowledge-base/blob/main/ai-tools/ai-tools-models-developer-resources.md"
+  },
+  {
+    "id": "deepseek-v3",
+    "name": "DeepSeek-V3",
+    "publisher": "DeepSeek",
+    "description": "Open-weight 671-billion parameter Mixture-of-Experts language model (activating 37B parameters per token) developed by DeepSeek. Features Multi-head Latent Attention and auxiliary-loss-free load balancing for cost-effective inference.",
+    "category": "Large Language Models",
+    "source_category": "Large Language Models",
+    "family": "Open Mixture-of-Experts Foundation Model",
+    "resource_type": "AI Model",
+    "official_url": "https://huggingface.co/deepseek-ai/DeepSeek-V3",
+    "pricing": "open_weights",
+    "weights": "open",
+    "open_weights": true,
+    "self_hostable": true,
+    "signup_required": false,
+    "license": "DeepSeek Model License",
+    "license_group": "Permissive Community",
+    "params": "671B MoE (37B act)",
+    "context_k": 128,
+    "moe": true,
+    "modalities": [
+      "Text & Reasoning"
+    ],
+    "tags": [
+      "MoE",
+      "Open-Weights",
+      "Multi-Head-Latent-Attention",
+      "High-Throughput",
+      "DeepSeek"
+    ],
+    "icon": "assets/img/icons/deepseek.png",
+    "verified": "2026-11-03",
+    "status": "verified",
+    "evidence": [
+      [
+        "DeepSeek-V3 GitHub",
+        "https://github.com/deepseek-ai/DeepSeek-V3"
+      ],
+      [
+        "DeepSeek-V3 Model Card",
+        "https://huggingface.co/deepseek-ai/DeepSeek-V3"
+      ]
+    ],
+    "source": "https://github.com/kumaradoss16/ai-knowledge-base/blob/main/ai-tools/ai-tools-models-developer-resources.md"
+  },
+  {
+    "id": "llama-3-2",
+    "name": "Llama 3.2",
+    "publisher": "Meta AI",
+    "description": "Meta's multimodal open-weight collection offering 11B and 90B vision-language models alongside 1B and 3B lightweight edge text models. Optimized for mobile, on-device computing, and visual document analysis across 128K context windows.",
+    "category": "Vision & Multimodal",
+    "source_category": "Vision-Language Models",
+    "family": "Multimodal Edge & Vision Model Family",
+    "resource_type": "AI Model",
+    "official_url": "https://ai.meta.com/blog/llama-3-2-connect-2024-vision-edge-mobile-devices/",
+    "pricing": "open_weights",
+    "weights": "open",
+    "open_weights": true,
+    "self_hostable": true,
+    "signup_required": true,
+    "license": "Llama 3.2 Community",
+    "license_group": "Permissive Community",
+    "params": "1B / 3B / 11B / 90B",
+    "context_k": 128,
+    "moe": false,
+    "modalities": [
+      "Text & Reasoning",
+      "Vision"
+    ],
+    "tags": [
+      "Vision-Language",
+      "On-Device-AI",
+      "Edge-Inference",
+      "Multimodal",
+      "Meta-AI"
+    ],
+    "icon": "assets/img/icons/llama.png",
+    "verified": "2026-11-03",
+    "status": "verified",
+    "evidence": [
+      [
+        "Meta AI Blog",
+        "https://ai.meta.com/blog/llama-3-2-connect-2024-vision-edge-mobile-devices/"
+      ],
+      [
+        "Hugging Face Llama 3.2 Collection",
+        "https://huggingface.co/collections/meta-llama/llama-32-66f448e441c70daeacbaa161"
+      ]
+    ],
+    "source": "https://github.com/kumaradoss16/ai-knowledge-base/blob/main/ai-tools/ai-tools-models-developer-resources.md"
+  },
+  {
+    "id": "codestral",
+    "name": "Codestral",
+    "publisher": "Mistral AI",
+    "description": "Mistral AI's 22-billion parameter open-weight language model trained on 80+ programming languages. Features a 32K context window with fill-in-the-middle capabilities for IDE autocompletions and codebase refactoring.",
+    "category": "Coding Models",
+    "source_category": "Code Generation Models",
+    "family": "Specialized Code Generation Model",
+    "resource_type": "AI Model",
+    "official_url": "https://mistral.ai/news/codestral/",
+    "pricing": "open_weights",
+    "weights": "open",
+    "open_weights": true,
+    "self_hostable": true,
+    "signup_required": false,
+    "license": "Mistral Non-Production",
+    "license_group": "Non-Commercial / Research",
+    "params": "22B",
+    "context_k": 32,
+    "moe": false,
+    "modalities": [
+      "Code"
+    ],
+    "tags": [
+      "Code-Generation",
+      "Fill-in-the-Middle",
+      "Developer-Tools",
+      "Mistral",
+      "80-Languages"
+    ],
+    "icon": "assets/img/icons/mistral.png",
+    "verified": "2026-11-03",
+    "status": "verified",
+    "evidence": [
+      [
+        "Mistral AI Blog",
+        "https://mistral.ai/news/codestral/"
+      ],
+      [
+        "Codestral Documentation",
+        "https://docs.mistral.ai/getting-started/models/#codestral"
+      ]
+    ],
+    "source": "https://github.com/kumaradoss16/ai-knowledge-base/blob/main/ai-tools/ai-tools-models-developer-resources.md"
+  },
+  {
+    "id": "sam-2",
+    "name": "Segment Anything Model 2 (SAM 2)",
+    "publisher": "Meta FAIR",
+    "description": "Meta FAIR's foundation model for real-time visual promptable object segmentation across both static images and dynamic video frames, tracking target object masks continuously through occlusions and camera perspective shifts.",
+    "category": "Vision & Multimodal",
+    "source_category": "Image Segmentation Models",
+    "family": "Visual Segmentation Foundation Model",
+    "resource_type": "AI Model",
+    "official_url": "https://ai.meta.com/sam2",
+    "pricing": "open_source",
+    "weights": "open",
+    "open_weights": true,
+    "self_hostable": true,
+    "signup_required": false,
+    "license": "Apache 2.0",
+    "license_group": "MIT / Apache 2.0",
+    "params": null,
+    "context_k": null,
+    "moe": false,
+    "modalities": [
+      "Vision"
+    ],
+    "tags": [
+      "Computer-Vision",
+      "Object-Segmentation",
+      "Video-Tracking",
+      "Zero-Shot",
+      "Apache-2-0"
+    ],
+    "icon": "assets/img/icons/llama.png",
+    "verified": "2026-11-03",
+    "status": "verified",
+    "evidence": [
+      [
+        "Meta SAM 2 Announcement",
+        "https://ai.meta.com/blog/segment-anything-2/"
+      ],
+      [
+        "SAM 2 GitHub",
+        "https://github.com/facebookresearch/segment-anything-2"
+      ]
+    ],
+    "source": "https://github.com/kumaradoss16/ai-knowledge-base/blob/main/ai-tools/ai-tools-models-developer-resources.md"
+  },
+  {
+    "id": "dinov2",
+    "name": "DINOv2",
+    "publisher": "Meta FAIR",
+    "description": "Vision foundation model developed by Meta FAIR using self-supervised learning without text supervision. Produces universal visual features for monocular depth estimation, semantic segmentation, and image retrieval.",
+    "category": "Vision & Multimodal",
+    "source_category": "Vision-Language Models",
+    "family": "Self-Supervised Vision Foundation Model",
+    "resource_type": "AI Model",
+    "official_url": "https://github.com/facebookresearch/dinov2",
+    "pricing": "open_source",
+    "weights": "open",
+    "open_weights": true,
+    "self_hostable": true,
+    "signup_required": false,
+    "license": "Apache 2.0",
+    "license_group": "MIT / Apache 2.0",
+    "params": "ViT-S–ViT-g",
+    "context_k": null,
+    "moe": false,
+    "modalities": [
+      "Vision",
+      "Embeddings"
+    ],
+    "tags": [
+      "Self-Supervised",
+      "Computer-Vision",
+      "Feature-Extraction",
+      "Depth-Estimation",
+      "Apache-2-0"
+    ],
+    "icon": "assets/img/icons/llama.png",
+    "verified": "2026-11-03",
+    "status": "verified",
+    "evidence": [
+      [
+        "Meta DINOv2 Blog",
+        "https://ai.meta.com/blog/dino-v2-computer-vision-self-supervised-learning/"
+      ],
+      [
+        "DINOv2 GitHub",
+        "https://github.com/facebookresearch/dinov2"
+      ]
+    ],
+    "source": "https://github.com/kumaradoss16/ai-knowledge-base/blob/main/ai-tools/ai-tools-models-developer-resources.md"
+  },
+  {
+    "id": "clip",
+    "name": "CLIP",
+    "publisher": "OpenAI",
+    "description": "OpenAI's foundational vision-language model trained on 400 million image-text pairs via contrastive learning. Maps images and text into a shared embedding space to enable zero-shot image classification and semantic multimodal search.",
+    "category": "Vision & Multimodal",
+    "source_category": "Multimodal Models",
+    "family": "Contrastive Image-Text Pretraining Model",
+    "resource_type": "AI Model",
+    "official_url": "https://github.com/openai/CLIP",
+    "pricing": "open_source",
+    "weights": "open",
+    "open_weights": true,
+    "self_hostable": true,
+    "signup_required": false,
+    "license": "MIT",
+    "license_group": "MIT / Apache 2.0",
+    "params": null,
+    "context_k": null,
+    "moe": false,
+    "modalities": [
+      "Vision",
+      "Embeddings"
+    ],
+    "tags": [
+      "Multimodal",
+      "Contrastive-Learning",
+      "Zero-Shot-Classification",
+      "Image-Embeddings",
+      "MIT-License"
+    ],
+    "icon": "assets/img/icons/openai.png",
+    "verified": "2026-11-03",
+    "status": "verified",
+    "evidence": [
+      [
+        "OpenAI CLIP Research",
+        "https://openai.com/research/clip"
+      ],
+      [
+        "CLIP GitHub",
+        "https://github.com/openai/CLIP"
+      ]
+    ],
+    "source": "https://github.com/kumaradoss16/ai-knowledge-base/blob/main/ai-tools/ai-tools-models-developer-resources.md"
+  },
+  {
+    "id": "hunyuan-video",
+    "name": "HunyuanVideo",
+    "publisher": "Tencent",
+    "description": "Tencent's 13-billion parameter open-source video generation model utilizing a unified dual-stream and single-stream diffusion transformer. Generates high-definition (720p/1080p) cinema-grade video clips with physical dynamics.",
+    "category": "Video Generation",
+    "source_category": "Video Generation Models",
+    "family": "Open-Source Video Foundation Model",
+    "resource_type": "AI Model",
+    "official_url": "https://github.com/Tencent/HunyuanVideo",
+    "pricing": "open_weights",
+    "weights": "open",
+    "open_weights": true,
+    "self_hostable": true,
+    "signup_required": false,
+    "license": "Apache 2.0 + Tencent Community",
+    "license_group": "Permissive Community",
+    "params": "13B",
+    "context_k": null,
+    "moe": false,
+    "modalities": [
+      "Video"
+    ],
+    "tags": [
+      "Video-Generation",
+      "Diffusion-Transformer",
+      "Text-to-Video",
+      "Open-Weights",
+      "Tencent"
+    ],
+    "icon": "assets/img/icons/github.png",
+    "verified": "2026-11-03",
+    "status": "verified",
+    "evidence": [
+      [
+        "Tencent HunyuanVideo GitHub",
+        "https://github.com/Tencent/HunyuanVideo"
+      ],
+      [
+        "Hugging Face Model Card",
+        "https://huggingface.co/tencent/HunyuanVideo"
+      ]
+    ],
+    "source": "https://github.com/kumaradoss16/ai-knowledge-base/blob/main/ai-tools/ai-tools-models-developer-resources.md"
+  },
+  {
+    "id": "cogvideox",
+    "name": "CogVideoX",
+    "publisher": "THUDM / Zhipu AI",
+    "description": "Open-source text-to-video diffusion transformer model developed by THUDM and Zhipu AI. Employs 3D Variational Autoencoders and expert transformer backends to produce coherent 6-second video clips up to 4K resolution.",
+    "category": "Video Generation",
+    "source_category": "Video Generation Models",
+    "family": "3D Diffusion Transformer Video Model",
+    "resource_type": "AI Model",
+    "official_url": "https://huggingface.co/THUDM/CogVideoX-5b",
+    "pricing": "open_weights",
+    "weights": "open",
+    "open_weights": true,
+    "self_hostable": true,
+    "signup_required": false,
+    "license": "Apache 2.0 + Community",
+    "license_group": "Permissive Community",
+    "params": "2B / 5B",
+    "context_k": null,
+    "moe": false,
+    "modalities": [
+      "Video"
+    ],
+    "tags": [
+      "Video-Generation",
+      "3D-VAE",
+      "Text-to-Video",
+      "Open-Weights",
+      "Zhipu-AI"
+    ],
+    "icon": "assets/img/icons/zhipu.png",
+    "verified": "2026-11-03",
+    "status": "verified",
+    "evidence": [
+      [
+        "THUDM CogVideo GitHub",
+        "https://github.com/THUDM/CogVideo"
+      ],
+      [
+        "Hugging Face Model Card",
+        "https://huggingface.co/THUDM/CogVideoX-5b"
+      ]
+    ],
+    "source": "https://github.com/kumaradoss16/ai-knowledge-base/blob/main/ai-tools/ai-tools-models-developer-resources.md"
+  },
+  {
+    "id": "voyage-3",
+    "name": "Voyage-3",
+    "publisher": "Voyage AI",
+    "description": "High-performance text embedding model engineered by Voyage AI delivering top retrieval accuracy on the Massive Text Embedding Benchmark (MTEB). Optimized for domain-specific RAG pipelines across finance, code, and legal documents.",
+    "category": "Embeddings & Rerankers",
+    "source_category": "Embedding Models",
+    "family": "General-Purpose Embedding Model",
+    "resource_type": "AI Model",
+    "official_url": "https://www.voyageai.com/",
+    "pricing": "usage_based",
+    "weights": "closed",
+    "open_weights": false,
+    "self_hostable": false,
+    "signup_required": true,
+    "license": "Proprietary",
+    "license_group": "Proprietary / Commercial",
+    "params": null,
+    "context_k": 32,
+    "moe": false,
+    "modalities": [
+      "Embeddings"
+    ],
+    "tags": [
+      "Text-Embeddings",
+      "RAG",
+      "Information-Retrieval",
+      "MTEB",
+      "Voyage-AI"
+    ],
+    "icon": "assets/img/icons/voyage.png",
+    "verified": "2026-11-03",
+    "status": "verified",
+    "evidence": [
+      [
+        "Voyage AI Documentation",
+        "https://docs.voyageai.com/docs/embeddings"
+      ],
+      [
+        "Voyage AI Pricing",
+        "https://docs.voyageai.com/docs/pricing"
+      ]
+    ],
+    "source": "https://github.com/kumaradoss16/ai-knowledge-base/blob/main/ai-tools/ai-tools-models-developer-resources.md"
+  },
+  {
+    "id": "cohere-embed-v3",
+    "name": "Cohere Embed v3",
+    "publisher": "Cohere",
+    "description": "Cohere's enterprise embedding model family supporting 100+ languages and multimodal image-text searches. Outperforms previous generations in noisy document retrieval using compression-aware quantization embeddings.",
+    "category": "Embeddings & Rerankers",
+    "source_category": "Embedding Models",
+    "family": "Multimodal & Text Embedding Model",
+    "resource_type": "AI Model",
+    "official_url": "https://cohere.com/embed",
+    "pricing": "usage_based",
+    "weights": "closed",
+    "open_weights": false,
+    "self_hostable": false,
+    "signup_required": true,
+    "license": "Proprietary",
+    "license_group": "Proprietary / Commercial",
+    "params": null,
+    "context_k": null,
+    "moe": false,
+    "modalities": [
+      "Embeddings",
+      "Vision"
+    ],
+    "tags": [
+      "Embeddings",
+      "Multilingual",
+      "Multimodal-Search",
+      "Enterprise-RAG",
+      "Compression"
+    ],
+    "icon": "assets/img/icons/cohere.png",
+    "verified": "2026-11-03",
+    "status": "verified",
+    "evidence": [
+      [
+        "Cohere Embed Product Page",
+        "https://cohere.com/embed"
+      ],
+      [
+        "Cohere API Documentation",
+        "https://docs.cohere.com/docs/embeddings"
+      ]
+    ],
+    "source": "https://github.com/kumaradoss16/ai-knowledge-base/blob/main/ai-tools/ai-tools-models-developer-resources.md"
+  },
+  {
+    "id": "xtts-v2",
+    "name": "XTTS-v2",
+    "publisher": "Coqui",
+    "description": "Deep learning text-to-speech foundation model from Coqui capable of realistic voice cloning across 17 languages from a 3-second audio reference sample without extensive speaker fine-tuning.",
+    "category": "Audio & Speech",
+    "source_category": "Text-to-Speech Models",
+    "family": "Voice Cloning & Multilingual TTS Model",
+    "resource_type": "AI Model",
+    "official_url": "https://huggingface.co/coqui/XTTS-v2",
+    "pricing": "open_weights",
+    "weights": "open",
+    "open_weights": true,
+    "self_hostable": true,
+    "signup_required": false,
+    "license": "Coqui Public Model License",
+    "license_group": "Non-Commercial / Research",
+    "params": null,
+    "context_k": null,
+    "moe": false,
+    "modalities": [
+      "Audio"
+    ],
+    "tags": [
+      "Text-to-Speech",
+      "Voice-Cloning",
+      "Speech-Synthesis",
+      "Multilingual",
+      "Coqui"
+    ],
+    "icon": "assets/img/icons/github.png",
+    "verified": "2026-11-03",
+    "status": "verified",
+    "evidence": [
+      [
+        "Coqui TTS GitHub",
+        "https://github.com/coqui-ai/TTS"
+      ],
+      [
+        "Hugging Face XTTS-v2",
+        "https://huggingface.co/coqui/XTTS-v2"
+      ]
+    ],
+    "source": "https://github.com/kumaradoss16/ai-knowledge-base/blob/main/ai-tools/ai-tools-models-developer-resources.md"
+  },
+  {
+    "id": "mistral-nemo",
+    "name": "Mistral NeMo",
+    "publisher": "Mistral AI / NVIDIA",
+    "description": "12-billion parameter multilingual foundation model co-developed by Mistral AI and NVIDIA. Features a 128K context window and the Tekken tokenizer for efficient multilingual inference and code synthesis.",
+    "category": "Large Language Models",
+    "source_category": "Large Language Models",
+    "family": "12B Multilingual Foundation Model",
+    "resource_type": "AI Model",
+    "official_url": "https://mistral.ai/news/mistral-nemo/",
+    "pricing": "open_source",
+    "weights": "open",
+    "open_weights": true,
+    "self_hostable": true,
+    "signup_required": false,
+    "license": "Apache 2.0",
+    "license_group": "MIT / Apache 2.0",
+    "params": "12B",
+    "context_k": 128,
+    "moe": false,
+    "modalities": [
+      "Text & Reasoning",
+      "Code"
+    ],
+    "tags": [
+      "Open-Source",
+      "Apache-2-0",
+      "12B-LLM",
+      "NVIDIA-NeMo",
+      "Tekken-Tokenizer"
+    ],
+    "icon": "assets/img/icons/mistral.png",
+    "verified": "2026-11-03",
+    "status": "verified",
+    "evidence": [
+      [
+        "Mistral AI Blog",
+        "https://mistral.ai/news/mistral-nemo/"
+      ],
+      [
+        "Hugging Face Model Card",
+        "https://huggingface.co/mistralai/Mistral-Nemo-Instruct-2407"
+      ]
+    ],
+    "source": "https://github.com/kumaradoss16/ai-knowledge-base/blob/main/ai-tools/ai-tools-models-developer-resources.md"
+  },
+  {
+    "id": "jina-embeddings-v3",
+    "name": "Jina Embeddings v3",
+    "publisher": "Jina AI",
+    "description": "Open-source 570M parameter embedding model supporting 8192-token context lengths across 89 languages. Uses task-specific LoRA adapters to optimize vectors for retrieval, classification, clustering, and semantic matching.",
+    "category": "Embeddings & Rerankers",
+    "source_category": "Embedding Models",
+    "family": "Multi-Task Multilingual Embedding Model",
+    "resource_type": "AI Model",
+    "official_url": "https://jina.ai/embeddings/",
+    "pricing": "open_weights",
+    "weights": "open",
+    "open_weights": true,
+    "self_hostable": true,
+    "signup_required": false,
+    "license": "CC BY-NC 4.0",
+    "license_group": "Non-Commercial / Research",
+    "params": "570M",
+    "context_k": 8,
+    "moe": false,
+    "modalities": [
+      "Embeddings"
+    ],
+    "tags": [
+      "Text-Embeddings",
+      "Multi-Task",
+      "LoRA-Adapters",
+      "Long-Context",
+      "CC-BY-NC-4-0"
+    ],
+    "icon": null,
+    "verified": "2026-11-03",
+    "status": "verified",
+    "evidence": [
+      [
+        "Jina AI Official Portal",
+        "https://jina.ai/embeddings/"
+      ],
+      [
+        "Hugging Face Model Card",
+        "https://huggingface.co/jinaai/jina-embeddings-v3"
+      ]
+    ],
+    "source": "https://github.com/kumaradoss16/ai-knowledge-base/blob/main/ai-tools/ai-tools-models-developer-resources.md"
+  },
+  {
+    "id": "gemini-1-5-flash",
+    "name": "Gemini 1.5 Flash",
+    "publisher": "Google DeepMind",
+    "description": "Google DeepMind's lightweight, low-latency multimodal foundation model. Optimized for high-frequency tasks, cost efficiency, and massive 1-million-token context processing across text, audio, images, and video feeds.",
+    "category": "Vision & Multimodal",
+    "source_category": "Multimodal Models",
+    "family": "High-Speed Lightweight Multimodal Model",
+    "resource_type": "AI Model",
+    "official_url": "https://ai.google.dev/gemini-api/docs/models/gemini",
+    "pricing": "usage_based",
+    "weights": "closed",
+    "open_weights": false,
+    "self_hostable": false,
+    "signup_required": true,
+    "license": "Proprietary",
+    "license_group": "Proprietary / Commercial",
+    "params": null,
+    "context_k": 1000,
+    "moe": false,
+    "modalities": [
+      "Text & Reasoning",
+      "Vision",
+      "Audio",
+      "Video"
+    ],
+    "tags": [
+      "Multimodal",
+      "Million-Token-Context",
+      "Low-Latency",
+      "Google-DeepMind",
+      "High-Throughput"
+    ],
+    "icon": "assets/img/icons/google-deepmind.png",
+    "verified": "2026-11-03",
+    "status": "verified",
+    "evidence": [
+      [
+        "Google AI Gemini Documentation",
+        "https://ai.google.dev/gemini-api/docs/models/gemini"
+      ],
+      [
+        "Google DeepMind Blog",
+        "https://blog.google/technology/developers/gemini-15-flash-developers/"
+      ]
+    ],
+    "source": "https://github.com/kumaradoss16/ai-knowledge-base/blob/main/ai-tools/ai-tools-models-developer-resources.md"
+  },
+  {
+    "id": "gpt-4o-mini",
+    "name": "GPT-4o mini",
+    "publisher": "OpenAI",
+    "description": "OpenAI's cost-efficient small multimodal model replacing GPT-3.5 Turbo. Supports text and vision inputs with a 128K context window, scoring strongly on reasoning, coding, and mathematical benchmarks at a fraction of flagship model costs.",
+    "category": "Vision & Multimodal",
+    "source_category": "Multimodal Models",
+    "family": "Cost-Efficient Small Multimodal Model",
+    "resource_type": "AI Model",
+    "official_url": "https://openai.com/index/gpt-4o-mini-advancing-cost-efficient-intelligence/",
+    "pricing": "usage_based",
+    "weights": "closed",
+    "open_weights": false,
+    "self_hostable": false,
+    "signup_required": true,
+    "license": "Proprietary",
+    "license_group": "Proprietary / Commercial",
+    "params": null,
+    "context_k": 128,
+    "moe": false,
+    "modalities": [
+      "Text & Reasoning",
+      "Vision"
+    ],
+    "tags": [
+      "Small-Multimodal-Model",
+      "Cost-Efficient",
+      "Vision-Language",
+      "128k-Context",
+      "OpenAI-API"
+    ],
+    "icon": "assets/img/icons/openai.png",
+    "verified": "2026-11-03",
+    "status": "verified",
+    "evidence": [
+      [
+        "OpenAI Product Overview",
+        "https://openai.com/index/gpt-4o-mini-advancing-cost-efficient-intelligence/"
+      ],
+      [
+        "OpenAI API Pricing",
+        "https://openai.com/api/pricing/"
+      ]
+    ],
+    "source": "https://github.com/kumaradoss16/ai-knowledge-base/blob/main/ai-tools/ai-tools-models-developer-resources.md"
+  },
+  {
+    "id": "qwen2-5-coder",
+    "name": "Qwen2.5-Coder",
+    "publisher": "Alibaba Cloud",
+    "description": "Code-specialized open-weight model series from Alibaba Cloud ranging from 0.5B to 32B parameters. Trained on 5.5 trillion tokens of source code, technical documentation, and synthetic coding datasets with a 128K context window.",
+    "category": "Coding Models",
+    "source_category": "Code Generation Models",
+    "family": "Open-Weight Code-Specialized Model Family",
+    "resource_type": "AI Model",
+    "official_url": "https://huggingface.co/collections/Qwen/qwen25-coder-66eaa22e6f99801bf65b0c2f",
+    "pricing": "open_source",
+    "weights": "open",
+    "open_weights": true,
+    "self_hostable": true,
+    "signup_required": false,
+    "license": "Apache 2.0",
+    "license_group": "MIT / Apache 2.0",
+    "params": "0.5B–32B",
+    "context_k": 128,
+    "moe": false,
+    "modalities": [
+      "Code"
+    ],
+    "tags": [
+      "Code-Generation",
+      "Open-Source",
+      "Apache-2-0",
+      "128k-Context",
+      "Code-Repair"
+    ],
+    "icon": "assets/img/icons/qwen.png",
+    "verified": "2026-11-03",
+    "status": "verified",
+    "evidence": [
+      [
+        "Qwen2.5-Coder Blog",
+        "https://qwenlm.github.io/blog/qwen2.5-coder-family/"
+      ],
+      [
+        "Hugging Face Model Collection",
+        "https://huggingface.co/collections/Qwen/qwen25-coder-66eaa22e6f99801bf65b0c2f"
+      ]
+    ],
+    "source": "https://github.com/kumaradoss16/ai-knowledge-base/blob/main/ai-tools/ai-tools-models-developer-resources.md"
+  },
+  {
+    "id": "qwen2-vl",
+    "name": "Qwen2-VL",
+    "publisher": "Alibaba Cloud",
+    "description": "Vision-language model family from Alibaba (2B, 7B, 72B) featuring NaViT dynamic image resolution architecture. Accurately reads arbitrary aspect-ratio images, interprets fine document text, and parses video events with second-level grounding.",
+    "category": "Vision & Multimodal",
+    "source_category": "Vision-Language Models",
+    "family": "Dynamic Resolution Vision-Language Model",
+    "resource_type": "AI Model",
+    "official_url": "https://qwenlm.github.io/blog/qwen2-vl/",
+    "pricing": "open_weights",
+    "weights": "open",
+    "open_weights": true,
+    "self_hostable": true,
+    "signup_required": false,
+    "license": "Apache 2.0 / Qwen License",
+    "license_group": "Permissive Community",
+    "params": "2B–72B",
+    "context_k": null,
+    "moe": false,
+    "modalities": [
+      "Text & Reasoning",
+      "Vision",
+      "Video"
+    ],
+    "tags": [
+      "Vision-Language",
+      "Dynamic-Resolution",
+      "Document-Parsing",
+      "Video-Understanding",
+      "Open-Weights"
+    ],
+    "icon": "assets/img/icons/qwen.png",
+    "verified": "2026-11-03",
+    "status": "verified",
+    "evidence": [
+      [
+        "Qwen2-VL Blog",
+        "https://qwenlm.github.io/blog/qwen2-vl/"
+      ],
+      [
+        "Hugging Face Qwen2-VL Collection",
+        "https://huggingface.co/collections/Qwen/qwen2-vl-66d03cfd3ad240364d994363"
+      ]
+    ],
+    "source": "https://github.com/kumaradoss16/ai-knowledge-base/blob/main/ai-tools/ai-tools-models-developer-resources.md"
+  },
+  {
+    "id": "deepseek-coder-v2",
+    "name": "DeepSeek-Coder-V2",
+    "publisher": "DeepSeek",
+    "description": "Open-source Mixture-of-Experts language model for code and mathematics supporting 338 programming languages and a 128K context window. Available in 16B (2.4B active) and 236B (21B active) parameter scales.",
+    "category": "Coding Models",
+    "source_category": "Code Generation Models",
+    "family": "Open MoE Code & Math Model",
+    "resource_type": "AI Model",
+    "official_url": "https://github.com/deepseek-ai/DeepSeek-Coder-V2",
+    "pricing": "open_weights",
+    "weights": "open",
+    "open_weights": true,
+    "self_hostable": true,
+    "signup_required": false,
+    "license": "MIT (Lite) / DeepSeek License",
+    "license_group": "Permissive Community",
+    "params": "16B / 236B MoE",
+    "context_k": 128,
+    "moe": true,
+    "modalities": [
+      "Code",
+      "Text & Reasoning"
+    ],
+    "tags": [
+      "Code-Generation",
+      "Mixture-of-Experts",
+      "338-Languages",
+      "128k-Context",
+      "DeepSeek"
+    ],
+    "icon": "assets/img/icons/deepseek.png",
+    "verified": "2026-11-03",
+    "status": "verified",
+    "evidence": [
+      [
+        "DeepSeek-Coder-V2 GitHub",
+        "https://github.com/deepseek-ai/DeepSeek-Coder-V2"
+      ],
+      [
+        "DeepSeek Model Documentation",
+        "https://huggingface.co/deepseek-ai/DeepSeek-Coder-V2-Instruct"
+      ]
+    ],
+    "source": "https://github.com/kumaradoss16/ai-knowledge-base/blob/main/ai-tools/ai-tools-models-developer-resources.md"
+  },
+  {
+    "id": "pixtral-12b",
+    "name": "Pixtral 12B",
+    "publisher": "Mistral AI",
+    "description": "12-billion parameter multimodal language model trained by Mistral AI. Integrates a custom 400M parameter vision encoder to natively reason over arbitrary images, documents, and technical charts alongside natural text across a 128K context window.",
+    "category": "Vision & Multimodal",
+    "source_category": "Vision-Language Models",
+    "family": "12B Multimodal Vision-Language Model",
+    "resource_type": "AI Model",
+    "official_url": "https://mistral.ai/news/pixtral-12b/",
+    "pricing": "open_source",
+    "weights": "open",
+    "open_weights": true,
+    "self_hostable": true,
+    "signup_required": false,
+    "license": "Apache 2.0",
+    "license_group": "MIT / Apache 2.0",
+    "params": "12B",
+    "context_k": 128,
+    "moe": false,
+    "modalities": [
+      "Text & Reasoning",
+      "Vision"
+    ],
+    "tags": [
+      "Vision-Language",
+      "Multimodal",
+      "Apache-2-0",
+      "128k-Context",
+      "Mistral-AI"
+    ],
+    "icon": "assets/img/icons/mistral.png",
+    "verified": "2026-11-03",
+    "status": "verified",
+    "evidence": [
+      [
+        "Mistral AI Blog",
+        "https://mistral.ai/news/pixtral-12b/"
+      ],
+      [
+        "Hugging Face Model Card",
+        "https://huggingface.co/mistralai/Pixtral-12B-2409"
+      ]
+    ],
+    "source": "https://github.com/kumaradoss16/ai-knowledge-base/blob/main/ai-tools/ai-tools-models-developer-resources.md"
+  },
+  {
+    "id": "flux-1-dev",
+    "name": "FLUX.1 [dev]",
+    "publisher": "Black Forest Labs",
+    "description": "12-billion parameter open-weight rectified flow transformer model from Black Forest Labs. Delivers state-of-the-art text-to-image quality, photorealistic skin textures, accurate multi-word typography, and detailed prompt comprehension.",
+    "category": "Image Generation",
+    "source_category": "Image Generation Models",
+    "family": "12B Rectified Flow Image Foundation Model",
+    "resource_type": "AI Model",
+    "official_url": "https://huggingface.co/black-forest-labs/FLUX.1-dev",
+    "pricing": "open_weights",
+    "weights": "open",
+    "open_weights": true,
+    "self_hostable": true,
+    "signup_required": false,
+    "license": "FLUX Dev Non-Commercial",
+    "license_group": "Non-Commercial / Research",
+    "params": "12B",
+    "context_k": null,
+    "moe": false,
+    "modalities": [
+      "Image Generation"
+    ],
+    "tags": [
+      "Text-to-Image",
+      "Rectified-Flow",
+      "Diffusion-Transformer",
+      "High-Fidelity",
+      "Black-Forest-Labs"
+    ],
+    "icon": "assets/img/icons/flux.png",
+    "verified": "2026-11-03",
+    "status": "verified",
+    "evidence": [
+      [
+        "Black Forest Labs Portal",
+        "https://blackforestlabs.ai/"
+      ],
+      [
+        "Hugging Face Model Card",
+        "https://huggingface.co/black-forest-labs/FLUX.1-dev"
+      ]
+    ],
+    "source": "https://github.com/kumaradoss16/ai-knowledge-base/blob/main/ai-tools/ai-tools-models-developer-resources.md"
+  },
+  {
+    "id": "sdxl",
+    "name": "Stable Diffusion XL (SDXL)",
+    "publisher": "Stability AI",
+    "description": "Stability AI's flagship 3.5-billion parameter latent diffusion model engineered for native 1024x1024 resolution image generation. Uses a base model followed by an ensemble refiner model to render intricate backgrounds and realistic lighting.",
+    "category": "Image Generation",
+    "source_category": "Diffusion Models",
+    "family": "High-Resolution Latent Diffusion Model",
+    "resource_type": "AI Model",
+    "official_url": "https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0",
+    "pricing": "open_source",
+    "weights": "open",
+    "open_weights": true,
+    "self_hostable": true,
+    "signup_required": false,
+    "license": "CreativeML OpenRAIL++-M",
+    "license_group": "Permissive Community",
+    "params": "3.5B",
+    "context_k": null,
+    "moe": false,
+    "modalities": [
+      "Image Generation"
+    ],
+    "tags": [
+      "Diffusion-Model",
+      "Text-to-Image",
+      "SDXL",
+      "High-Resolution",
+      "Creative-AI"
+    ],
+    "icon": "assets/img/icons/stable-diffusion.png",
+    "verified": "2026-11-03",
+    "status": "verified",
+    "evidence": [
+      [
+        "Stability AI SDXL Paper",
+        "https://arxiv.org/abs/2307.01952"
+      ],
+      [
+        "Hugging Face Model Card",
+        "https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0"
+      ]
+    ],
+    "source": "https://github.com/kumaradoss16/ai-knowledge-base/blob/main/ai-tools/ai-tools-models-developer-resources.md"
+  },
+  {
+    "id": "kolors",
+    "name": "Kolors",
+    "publisher": "Kuaishou",
+    "description": "Open-source text-to-image diffusion model developed by Kuaishou's Kolors Team. Built with the ChatGLM language model as its text encoder to achieve nuanced bilingual understanding (Chinese and English) and high-quality typography rendering.",
+    "category": "Image Generation",
+    "source_category": "Image Generation Models",
+    "family": "Photorealistic Diffusion Model",
+    "resource_type": "AI Model",
+    "official_url": "https://github.com/Kwai-Kolors/Kolors",
+    "pricing": "open_weights",
+    "weights": "open",
+    "open_weights": true,
+    "self_hostable": true,
+    "signup_required": false,
+    "license": "Apache 2.0 + Kolors Community",
+    "license_group": "Permissive Community",
+    "params": null,
+    "context_k": null,
+    "moe": false,
+    "modalities": [
+      "Image Generation"
+    ],
+    "tags": [
+      "Text-to-Image",
+      "Diffusion",
+      "Bilingual-Prompting",
+      "Open-Weights",
+      "Kuaishou"
+    ],
+    "icon": "assets/img/icons/kuaishou.png",
+    "verified": "2026-11-03",
+    "status": "verified",
+    "evidence": [
+      [
+        "Kolors GitHub",
+        "https://github.com/Kwai-Kolors/Kolors"
+      ],
+      [
+        "Hugging Face Model Card",
+        "https://huggingface.co/Kwai-Kolors/Kolors"
+      ]
+    ],
+    "source": "https://github.com/kumaradoss16/ai-knowledge-base/blob/main/ai-tools/ai-tools-models-developer-resources.md"
+  },
+  {
+    "id": "bark",
+    "name": "Bark",
+    "publisher": "Suno",
+    "description": "Transformer-based text-to-audio foundation model created by Suno. Generates realistic multilingual speech, non-verbal vocalizations (laughter, sighs, clearing throat), background ambient sounds, and basic music from text prompts.",
+    "category": "Audio & Speech",
+    "source_category": "Text-to-Speech Models",
+    "family": "Transformer-Based Text-to-Audio Model",
+    "resource_type": "AI Model",
+    "official_url": "https://github.com/suno-ai/bark",
+    "pricing": "open_source",
+    "weights": "open",
+    "open_weights": true,
+    "self_hostable": true,
+    "signup_required": false,
+    "license": "MIT",
+    "license_group": "MIT / Apache 2.0",
+    "params": null,
+    "context_k": null,
+    "moe": false,
+    "modalities": [
+      "Audio"
+    ],
+    "tags": [
+      "Text-to-Audio",
+      "Speech-Synthesis",
+      "Non-Verbal-Vocalizations",
+      "MIT-License",
+      "Suno"
+    ],
+    "icon": "assets/img/icons/github.png",
+    "verified": "2026-11-03",
+    "status": "verified",
+    "evidence": [
+      [
+        "Suno Bark GitHub",
+        "https://github.com/suno-ai/bark"
+      ],
+      [
+        "Bark Hugging Face Card",
+        "https://huggingface.co/suno/bark"
+      ]
+    ],
+    "source": "https://github.com/kumaradoss16/ai-knowledge-base/blob/main/ai-tools/ai-tools-models-developer-resources.md"
+  },
+  {
+    "id": "whisper-large-v3-turbo",
+    "name": "Whisper large-v3-turbo",
+    "publisher": "OpenAI",
+    "description": "Fine-tuned, pruned variant of OpenAI's Whisper large-v3 model. Reduces the number of decoder layers from 32 to 4 to deliver an 8x speedup in multilingual audio transcription and translation with minimal loss in accuracy.",
+    "category": "Audio & Speech",
+    "source_category": "Speech-to-Text Models",
+    "family": "Accelerated Automatic Speech Recognition Model",
+    "resource_type": "AI Model",
+    "official_url": "https://huggingface.co/openai/whisper-large-v3-turbo",
+    "pricing": "open_source",
+    "weights": "open",
+    "open_weights": true,
+    "self_hostable": true,
+    "signup_required": false,
+    "license": "MIT",
+    "license_group": "MIT / Apache 2.0",
+    "params": null,
+    "context_k": null,
+    "moe": false,
+    "modalities": [
+      "Audio"
+    ],
+    "tags": [
+      "Speech-to-Text",
+      "ASR",
+      "Fast-Inference",
+      "Multilingual",
+      "MIT-License"
+    ],
+    "icon": "assets/img/icons/openai.png",
+    "verified": "2026-11-03",
+    "status": "verified",
+    "evidence": [
+      [
+        "Hugging Face Model Card",
+        "https://huggingface.co/openai/whisper-large-v3-turbo"
+      ],
+      [
+        "OpenAI Whisper GitHub",
+        "https://github.com/openai/whisper"
+      ]
+    ],
+    "source": "https://github.com/kumaradoss16/ai-knowledge-base/blob/main/ai-tools/ai-tools-models-developer-resources.md"
+  },
+  {
+    "id": "bge-reranker-v2",
+    "name": "BGE Reranker-v2",
+    "publisher": "BAAI",
+    "description": "Multilingual cross-encoder reranking model series (m3 and gemma variants) developed by the Beijing Academy of Artificial Intelligence. Computes deep relevance scores between queries and retrieved passages to dramatically boost RAG precision.",
+    "category": "Embeddings & Rerankers",
+    "source_category": "Reranking Models",
+    "family": "Multilingual Cross-Encoder Reranking Model",
+    "resource_type": "AI Model",
+    "official_url": "https://huggingface.co/BAAI/bge-reranker-v2-m3",
+    "pricing": "open_source",
+    "weights": "open",
+    "open_weights": true,
+    "self_hostable": true,
+    "signup_required": false,
+    "license": "MIT",
+    "license_group": "MIT / Apache 2.0",
+    "params": null,
+    "context_k": null,
+    "moe": false,
+    "modalities": [
+      "Reranking"
+    ],
+    "tags": [
+      "Reranker",
+      "Cross-Encoder",
+      "RAG-Optimization",
+      "Multilingual",
+      "MIT-License"
+    ],
+    "icon": "assets/img/icons/huggingface.png",
+    "verified": "2026-11-03",
+    "status": "verified",
+    "evidence": [
+      [
+        "FlagEmbedding GitHub",
+        "https://github.com/FlagOpen/FlagEmbedding"
+      ],
+      [
+        "Hugging Face BAAI Organization",
+        "https://huggingface.co/BAAI"
+      ]
+    ],
+    "source": "https://github.com/kumaradoss16/ai-knowledge-base/blob/main/ai-tools/ai-tools-models-developer-resources.md"
+  },
+  {
+    "id": "cohere-rerank-3",
+    "name": "Cohere Rerank 3",
+    "publisher": "Cohere",
+    "description": "Enterprise cross-encoder foundation model from Cohere engineered for semantic reranking of search results across 100+ languages, semi-structured JSON objects, emails, code snippets, and noisy web documents.",
+    "category": "Embeddings & Rerankers",
+    "source_category": "Reranking Models",
+    "family": "Enterprise Retrieval Reranking Model",
+    "resource_type": "AI Model",
+    "official_url": "https://cohere.com/rerank",
+    "pricing": "usage_based",
+    "weights": "closed",
+    "open_weights": false,
+    "self_hostable": false,
+    "signup_required": true,
+    "license": "Proprietary",
+    "license_group": "Proprietary / Commercial",
+    "params": null,
+    "context_k": 4,
+    "moe": false,
+    "modalities": [
+      "Reranking"
+    ],
+    "tags": [
+      "Reranking",
+      "Cross-Encoder",
+      "Enterprise-Search",
+      "Multilingual",
+      "RAG-Accuracy"
+    ],
+    "icon": "assets/img/icons/cohere.png",
+    "verified": "2026-11-03",
+    "status": "verified",
+    "evidence": [
+      [
+        "Cohere Rerank 3 Announcement",
+        "https://cohere.com/blog/rerank-3"
+      ],
+      [
+        "Cohere API Documentation",
+        "https://docs.cohere.com/docs/reranking"
+      ]
+    ],
+    "source": "https://github.com/kumaradoss16/ai-knowledge-base/blob/main/ai-tools/ai-tools-models-developer-resources.md"
+  },
+  {
+    "id": "internvl-2",
+    "name": "InternVL 2.0",
+    "publisher": "OpenGVLab",
+    "description": "Open-source multimodal foundation model family developed by OpenGVLab ranging from 1B to 108B parameters. Achieves top scores in multimodal benchmarks, chart understanding, OCR, document analysis, and video grounding.",
+    "category": "Vision & Multimodal",
+    "source_category": "Vision-Language Models",
+    "family": "Multimodal Vision-Language Foundation Model Family",
+    "resource_type": "AI Model",
+    "official_url": "https://github.com/OpenGVLab/InternVL",
+    "pricing": "open_source",
+    "weights": "open",
+    "open_weights": true,
+    "self_hostable": true,
+    "signup_required": false,
+    "license": "Apache 2.0",
+    "license_group": "MIT / Apache 2.0",
+    "params": "1B–108B",
+    "context_k": null,
+    "moe": false,
+    "modalities": [
+      "Text & Reasoning",
+      "Vision"
+    ],
+    "tags": [
+      "Vision-Language",
+      "Multimodal",
+      "OCR",
+      "Document-Understanding",
+      "Open-Source"
+    ],
+    "icon": "assets/img/icons/github.png",
+    "verified": "2026-11-03",
+    "status": "verified",
+    "evidence": [
+      [
+        "InternVL GitHub Repository",
+        "https://github.com/OpenGVLab/InternVL"
+      ],
+      [
+        "InternVL 2.0 Technical Report",
+        "https://internvl.github.io/blog/2024-07-02-InternVL-2.0/"
+      ]
+    ],
+    "source": "https://github.com/kumaradoss16/ai-knowledge-base/blob/main/ai-tools/ai-tools-models-developer-resources.md"
+  },
+  {
+    "id": "molmo-72b",
+    "name": "Molmo 72B",
+    "publisher": "Allen Institute for AI",
+    "description": "Open multimodal vision-language model developed by the Allen Institute for AI (Ai2). Outperforms proprietary models on academic benchmarks using open datasets and transparent human-collected visual pointing annotations.",
+    "category": "Vision & Multimodal",
+    "source_category": "Vision-Language Models",
+    "family": "Open Multimodal Vision-Language Model",
+    "resource_type": "AI Model",
+    "official_url": "https://molmo.allenai.org/",
+    "pricing": "open_weights",
+    "weights": "open",
+    "open_weights": true,
+    "self_hostable": true,
+    "signup_required": false,
+    "license": "Apache 2.0",
+    "license_group": "MIT / Apache 2.0",
+    "params": "72B",
+    "context_k": null,
+    "moe": false,
+    "modalities": [
+      "Text & Reasoning",
+      "Vision"
+    ],
+    "tags": [
+      "Vision-Language",
+      "Open-Weights",
+      "Ai2",
+      "Visual-Pointing",
+      "Multimodal-Evaluation"
+    ],
+    "icon": "assets/img/icons/allenai.png",
+    "verified": "2026-11-03",
+    "status": "verified",
+    "evidence": [
+      [
+        "Allen Institute for AI Announcement",
+        "https://allenai.org/blog/molmo"
+      ],
+      [
+        "Molmo Hugging Face Organization",
+        "https://huggingface.co/allenai/Molmo-72B-0924"
+      ]
+    ],
+    "source": "https://github.com/kumaradoss16/ai-knowledge-base/blob/main/ai-tools/ai-tools-models-developer-resources.md"
+  },
+  {
+    "id": "moondream2",
+    "name": "Moondream2",
+    "publisher": "Moondream",
+    "description": "Compact 1.6-billion parameter vision-language model engineered to run locally on edge hardware, mobile phones, and Raspberry Pi devices. Capable of visual question answering, image captioning, and object detection.",
+    "category": "Vision & Multimodal",
+    "source_category": "Vision-Language Models",
+    "family": "Tiny Edge Vision-Language Model",
+    "resource_type": "AI Model",
+    "official_url": "https://github.com/vikhyat/moondream",
+    "pricing": "open_source",
+    "weights": "open",
+    "open_weights": true,
+    "self_hostable": true,
+    "signup_required": false,
+    "license": "Apache 2.0",
+    "license_group": "MIT / Apache 2.0",
+    "params": "1.6B",
+    "context_k": null,
+    "moe": false,
+    "modalities": [
+      "Text & Reasoning",
+      "Vision"
+    ],
+    "tags": [
+      "Small-VLM",
+      "Edge-AI",
+      "On-Device",
+      "Lightweight",
+      "Apache-2-0"
+    ],
+    "icon": "assets/img/icons/moondream.png",
+    "verified": "2026-11-03",
+    "status": "verified",
+    "evidence": [
+      [
+        "Moondream Official Website",
+        "https://moondream.ai/"
+      ],
+      [
+        "Moondream GitHub",
+        "https://github.com/vikhyat/moondream"
+      ]
+    ],
+    "source": "https://github.com/kumaradoss16/ai-knowledge-base/blob/main/ai-tools/ai-tools-models-developer-resources.md"
+  }
+]

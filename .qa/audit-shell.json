@@ -1,0 +1,634 @@
+{
+  "directory.html": {
+    "initialClip": [],
+    "hoverClip": [],
+    "iconIssues": [
+      {
+        "text": "search\nQuick Find\n⌘K",
+        "issue": "icon content overflow"
+      },
+      {
+        "text": "addSubmit Resource",
+        "issue": "icon content overflow"
+      },
+      {
+        "text": "menu",
+        "issue": "zero-size icon"
+      },
+      {
+        "text": "DevSpireHubarrow_outward",
+        "issue": "zero-size icon"
+      },
+      {
+        "text": "About DevSpireHubarrow_outward",
+        "issue": "zero-size icon"
+      },
+      {
+        "text": "close",
+        "issue": "icon content overflow"
+      },
+      {
+        "text": "construction\n\nTYPE::01\n\nAI Too",
+        "issue": "flex button not centered",
+        "align": "normal"
+      },
+      {
+        "text": "construction\n\nTYPE::01\n\nAI Too",
+        "issue": "icon content overflow"
+      },
+      {
+        "text": "psychology\n\nTYPE::02\n\nAI Model",
+        "issue": "flex button not centered",
+        "align": "normal"
+      },
+      {
+        "text": "psychology\n\nTYPE::02\n\nAI Model",
+        "issue": "icon content overflow"
+      },
+      {
+        "text": "terminal\n\nTYPE::03\n\nDeveloper ",
+        "issue": "flex button not centered",
+        "align": "normal"
+      },
+      {
+        "text": "terminal\n\nTYPE::03\n\nDeveloper ",
+        "issue": "icon content overflow"
+      }
+    ],
+    "overflow": null
+  },
+  "ai-tools.html": {
+    "initialClip": [
+      {
+        "text": "AI Agents 2",
+        "tag": "BUTTON",
+        "ancestor": "flex items-center gap-2 overflow-x-auto pb-1 scrollbar-none ",
+        "overflow": "auto/hidden",
+        "delta": {
+          "l": -1280.5,
+          "r": 85.9,
+          "t": -4,
+          "b": -5
+        }
+      },
+      {
+        "text": "Image Generation 5",
+        "tag": "BUTTON",
+        "ancestor": "flex items-center gap-2 overflow-x-auto pb-1 scrollbar-none ",
+        "overflow": "auto/hidden",
+        "delta": {
+          "l": -1405.9,
+          "r": 261.7,
+          "t": -4,
+          "b": -5
+        }
+      },
+      {
+        "text": "Video Generation 6",
+        "tag": "BUTTON",
+        "ancestor": "flex items-center gap-2 overflow-x-auto pb-1 scrollbar-none ",
+        "overflow": "auto/hidden",
+        "delta": {
+          "l": -1581.7,
+          "r": 437.5,
+          "t": -4,
+          "b": -5
+        }
+      },
+      {
+        "text": "Audio & Voice 5",
+        "tag": "BUTTON",
+        "ancestor": "flex items-center gap-2 overflow-x-auto pb-1 scrollbar-none ",
+        "overflow": "auto/hidden",
+        "delta": {
+          "l": -1757.5,
+          "r": 591.8,
+          "t": -4,
+          "b": -5
+        }
+      },
+      {
+        "text": "Design & Creative 4",
+        "tag": "BUTTON",
+        "ancestor": "flex items-center gap-2 overflow-x-auto pb-1 scrollbar-none ",
+        "overflow": "auto/hidden",
+        "delta": {
+          "l": -1911.8,
+          "r": 774.8,
+          "t": -4,
+          "b": -5
+        }
+      },
+      {
+        "text": "Data & Docs 3",
+        "tag": "BUTTON",
+        "ancestor": "flex items-center gap-2 overflow-x-auto pb-1 scrollbar-none ",
+        "overflow": "auto/hidden",
+        "delta": {
+          "l": -2094.8,
+          "r": 914.6,
+          "t": -4,
+          "b": -5
+        }
+      }
+    ],
+    "hoverClip": [],
+    "iconIssues": [
+      {
+        "text": "addSubmit Resource",
+        "issue": "icon content overflow"
+      },
+      {
+        "text": "menu",
+        "issue": "zero-size icon"
+      },
+      {
+        "text": "DevSpireHubarrow_outward",
+        "issue": "zero-size icon"
+      },
+      {
+        "text": "About DevSpireHubarrow_outward",
+        "issue": "zero-size icon"
+      },
+      {
+        "text": "close",
+        "issue": "icon content overflow"
+      },
+      {
+        "text": "terminal\n\nCoding & Development",
+        "issue": "flex button not centered",
+        "align": "normal"
+      },
+      {
+        "text": "terminal\n\nCoding & Development",
+        "issue": "icon content overflow"
+      },
+      {
+        "text": "forum\n\nAssistants & Chatbots\nT",
+        "issue": "flex button not centered",
+        "align": "normal"
+      },
+      {
+        "text": "forum\n\nAssistants & Chatbots\nT",
+        "issue": "icon content overflow"
+      },
+      {
+        "text": "movie\n\nVideo Generation\nGenera",
+        "issue": "flex button not centered",
+        "align": "normal"
+      },
+      {
+        "text": "movie\n\nVideo Generation\nGenera",
+        "issue": "icon content overflow"
+      },
+      {
+        "text": "tune\nTool Facets\n0",
+        "issue": "zero-size icon"
+      }
+    ],
+    "overflow": null
+  },
+  "models.html": {
+    "initialClip": [
+      {
+        "text": "Embeddings & Rerankers 7",
+        "tag": "BUTTON",
+        "ancestor": "flex items-center gap-2 overflow-x-auto pb-1 scrollbar-none ",
+        "overflow": "auto/hidden",
+        "delta": {
+          "l": -1301.7,
+          "r": 188.5,
+          "t": -4,
+          "b": -5
+        }
+      },
+      {
+        "text": "Small / Edge Models 1",
+        "tag": "BUTTON",
+        "ancestor": "flex items-center gap-2 overflow-x-auto pb-1 scrollbar-none ",
+        "overflow": "auto/hidden",
+        "delta": {
+          "l": -1508.5,
+          "r": 373.7,
+          "t": -4,
+          "b": -5
+        }
+      }
+    ],
+    "hoverClip": [],
+    "iconIssues": [
+      {
+        "text": "addSubmit Resource",
+        "issue": "icon content overflow"
+      },
+      {
+        "text": "menu",
+        "issue": "zero-size icon"
+      },
+      {
+        "text": "DevSpireHubarrow_outward",
+        "issue": "zero-size icon"
+      },
+      {
+        "text": "About DevSpireHubarrow_outward",
+        "issue": "zero-size icon"
+      },
+      {
+        "text": "close",
+        "issue": "icon content overflow"
+      },
+      {
+        "text": "tune\nModel Facets\n0",
+        "issue": "zero-size icon"
+      },
+      {
+        "text": "compare_arrows\nCompare Models ",
+        "issue": "icon content overflow"
+      },
+      {
+        "text": "close",
+        "issue": "zero-size icon"
+      },
+      {
+        "text": "close",
+        "issue": "zero-size icon"
+      }
+    ],
+    "overflow": null
+  },
+  "developer-resources.html": {
+    "initialClip": [
+      {
+        "text": "Evaluation & Observability 5",
+        "tag": "BUTTON",
+        "ancestor": "flex items-center gap-2 overflow-x-auto pb-1 scrollbar-none ",
+        "overflow": "auto/hidden",
+        "delta": {
+          "l": -1212.1,
+          "r": 139.9,
+          "t": -4,
+          "b": -5
+        }
+      },
+      {
+        "text": "AI Security & Guardrails 2",
+        "tag": "BUTTON",
+        "ancestor": "flex items-center gap-2 overflow-x-auto pb-1 scrollbar-none ",
+        "overflow": "auto/hidden",
+        "delta": {
+          "l": -1459.9,
+          "r": 373.3,
+          "t": -4,
+          "b": -5
+        }
+      },
+      {
+        "text": "APIs, Gateways & Protocols 5",
+        "tag": "BUTTON",
+        "ancestor": "flex items-center gap-2 overflow-x-auto pb-1 scrollbar-none ",
+        "overflow": "auto/hidden",
+        "delta": {
+          "l": -1693.3,
+          "r": 621.1,
+          "t": -4,
+          "b": -5
+        }
+      },
+      {
+        "text": "Cloud & GPU Infrastructure 2",
+        "tag": "BUTTON",
+        "ancestor": "flex items-center gap-2 overflow-x-auto pb-1 scrollbar-none ",
+        "overflow": "auto/hidden",
+        "delta": {
+          "l": -1941.1,
+          "r": 868.9,
+          "t": -4,
+          "b": -5
+        }
+      }
+    ],
+    "hoverClip": [],
+    "iconIssues": [
+      {
+        "text": "addSubmit Resource",
+        "issue": "icon content overflow"
+      },
+      {
+        "text": "menu",
+        "issue": "zero-size icon"
+      },
+      {
+        "text": "DevSpireHubarrow_outward",
+        "issue": "zero-size icon"
+      },
+      {
+        "text": "About DevSpireHubarrow_outward",
+        "issue": "zero-size icon"
+      },
+      {
+        "text": "close",
+        "issue": "icon content overflow"
+      },
+      {
+        "text": "laptop_mac\n\nLocal Stack\nRun Mo",
+        "issue": "flex button not centered",
+        "align": "normal"
+      },
+      {
+        "text": "laptop_mac\n\nLocal Stack\nRun Mo",
+        "issue": "icon content overflow"
+      },
+      {
+        "text": "hub\n\nContext Protocol\nConnect ",
+        "issue": "flex button not centered",
+        "align": "normal"
+      },
+      {
+        "text": "hub\n\nContext Protocol\nConnect ",
+        "issue": "icon content overflow"
+      },
+      {
+        "text": "speed\n\nInference Engines\nDeplo",
+        "issue": "flex button not centered",
+        "align": "normal"
+      },
+      {
+        "text": "speed\n\nInference Engines\nDeplo",
+        "issue": "icon content overflow"
+      },
+      {
+        "text": "tune\nResource Facets\n0",
+        "issue": "zero-size icon"
+      }
+    ],
+    "overflow": null
+  },
+  "tools.html": {
+    "initialClip": [
+      {
+        "text": "Image Generation 5",
+        "tag": "BUTTON",
+        "ancestor": "flex items-center gap-2 overflow-x-auto pb-1 scrollbar-none ",
+        "overflow": "auto/hidden",
+        "delta": {
+          "l": -1308.9,
+          "r": 152.5,
+          "t": -4,
+          "b": -5
+        }
+      },
+      {
+        "text": "Video Generation 6",
+        "tag": "BUTTON",
+        "ancestor": "flex items-center gap-2 overflow-x-auto pb-1 scrollbar-none ",
+        "overflow": "auto/hidden",
+        "delta": {
+          "l": -1472.5,
+          "r": 316.1,
+          "t": -4,
+          "b": -5
+        }
+      },
+      {
+        "text": "Audio & Voice 5",
+        "tag": "BUTTON",
+        "ancestor": "flex items-center gap-2 overflow-x-auto pb-1 scrollbar-none ",
+        "overflow": "auto/hidden",
+        "delta": {
+          "l": -1636.1,
+          "r": 458.1,
+          "t": -4,
+          "b": -5
+        }
+      },
+      {
+        "text": "Design & Creative 4",
+        "tag": "BUTTON",
+        "ancestor": "flex items-center gap-2 overflow-x-auto pb-1 scrollbar-none ",
+        "overflow": "auto/hidden",
+        "delta": {
+          "l": -1778.1,
+          "r": 628.9,
+          "t": -4,
+          "b": -5
+        }
+      },
+      {
+        "text": "Data & Docs 3",
+        "tag": "BUTTON",
+        "ancestor": "flex items-center gap-2 overflow-x-auto pb-1 scrollbar-none ",
+        "overflow": "auto/hidden",
+        "delta": {
+          "l": -1948.9,
+          "r": 756.5,
+          "t": -4,
+          "b": -5
+        }
+      },
+      {
+        "text": "AI Models 9",
+        "tag": "BUTTON",
+        "ancestor": "flex items-center gap-2 overflow-x-auto pb-1 scrollbar-none ",
+        "overflow": "auto/hidden",
+        "delta": {
+          "l": -2076.5,
+          "r": 869.7,
+          "t": -4,
+          "b": -5
+        }
+      },
+      {
+        "text": "AI APIs 10",
+        "tag": "BUTTON",
+        "ancestor": "flex items-center gap-2 overflow-x-auto pb-1 scrollbar-none ",
+        "overflow": "auto/hidden",
+        "delta": {
+          "l": -2189.7,
+          "r": 975.8,
+          "t": -4,
+          "b": -5
+        }
+      },
+      {
+        "text": "Local Stacks 10",
+        "tag": "BUTTON",
+        "ancestor": "flex items-center gap-2 overflow-x-auto pb-1 scrollbar-none ",
+        "overflow": "auto/hidden",
+        "delta": {
+          "l": -2295.8,
+          "r": 1117.8,
+          "t": -4,
+          "b": -5
+        }
+      },
+      {
+        "text": "Agent Frameworks 5",
+        "tag": "BUTTON",
+        "ancestor": "flex items-center gap-2 overflow-x-auto pb-1 scrollbar-none ",
+        "overflow": "auto/hidden",
+        "delta": {
+          "l": -2437.8,
+          "r": 1281.4,
+          "t": -4,
+          "b": -5
+        }
+      }
+    ],
+    "hoverClip": [],
+    "iconIssues": [
+      {
+        "text": "addSubmit Resource",
+        "issue": "icon content overflow"
+      },
+      {
+        "text": "menu",
+        "issue": "zero-size icon"
+      },
+      {
+        "text": "DevSpireHubarrow_outward",
+        "issue": "zero-size icon"
+      },
+      {
+        "text": "About DevSpireHubarrow_outward",
+        "issue": "zero-size icon"
+      },
+      {
+        "text": "close",
+        "issue": "icon content overflow"
+      },
+      {
+        "text": "tune\nResource Facets\n0",
+        "issue": "zero-size icon"
+      },
+      {
+        "text": "grid_view",
+        "issue": "icon content overflow"
+      },
+      {
+        "text": "table_rows",
+        "issue": "icon content overflow"
+      },
+      {
+        "text": "open_in_new",
+        "issue": "icon content overflow"
+      },
+      {
+        "text": "open_in_new",
+        "issue": "icon content overflow"
+      },
+      {
+        "text": "open_in_new",
+        "issue": "icon content overflow"
+      },
+      {
+        "text": "open_in_new",
+        "issue": "icon content overflow"
+      }
+    ],
+    "overflow": null
+  },
+  "terminal.html": {
+    "initialClip": [],
+    "hoverClip": [],
+    "iconIssues": [
+      {
+        "text": "addSubmit Resource",
+        "issue": "icon content overflow"
+      },
+      {
+        "text": "menu",
+        "issue": "zero-size icon"
+      },
+      {
+        "text": "DevSpireHubarrow_outward",
+        "issue": "zero-size icon"
+      },
+      {
+        "text": "About DevSpireHubarrow_outward",
+        "issue": "zero-size icon"
+      }
+    ],
+    "overflow": null
+  },
+  "api.html": {
+    "initialClip": [],
+    "hoverClip": [],
+    "iconIssues": [
+      {
+        "text": "addSubmit Resource",
+        "issue": "icon content overflow"
+      },
+      {
+        "text": "menu",
+        "issue": "zero-size icon"
+      },
+      {
+        "text": "DevSpireHubarrow_outward",
+        "issue": "zero-size icon"
+      },
+      {
+        "text": "About DevSpireHubarrow_outward",
+        "issue": "zero-size icon"
+      }
+    ],
+    "overflow": null
+  },
+  "submit.html": {
+    "initialClip": [],
+    "hoverClip": [],
+    "iconIssues": [
+      {
+        "text": "addSubmit Resource",
+        "issue": "icon content overflow"
+      },
+      {
+        "text": "menu",
+        "issue": "zero-size icon"
+      },
+      {
+        "text": "DevSpireHubarrow_outward",
+        "issue": "zero-size icon"
+      },
+      {
+        "text": "About DevSpireHubarrow_outward",
+        "issue": "zero-size icon"
+      },
+      {
+        "text": "send\nSubmit for review",
+        "issue": "icon content overflow"
+      },
+      {
+        "text": "content_copyCopy JSON",
+        "issue": "zero-size icon"
+      },
+      {
+        "text": "downloadDownload JSON",
+        "issue": "zero-size icon"
+      }
+    ],
+    "overflow": null
+  },
+  "docs.html": {
+    "initialClip": [],
+    "hoverClip": [],
+    "iconIssues": [
+      {
+        "text": "addSubmit Resource",
+        "issue": "icon content overflow"
+      },
+      {
+        "text": "menu",
+        "issue": "zero-size icon"
+      },
+      {
+        "text": "DevSpireHubarrow_outward",
+        "issue": "zero-size icon"
+      },
+      {
+        "text": "About DevSpireHubarrow_outward",
+        "issue": "zero-size icon"
+      }
+    ],
+    "overflow": null
+  }
+}

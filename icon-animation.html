@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>DevspireHub Logo - Seamless 5s Loop Animation</title>
+<style>
+  :root {
+    --color-blue: #3B6FB6;
+    --color-gold: #E8B33C;
+    --color-white: #FFFFFF;
+  }
+
+  body {
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+
+  .icon-container {
+    width: 1080px;
+    height: 1080px;
+    max-width: 100vw;
+    max-height: 100vh;
+  }
+
+  /* --- Keyframes & Animation Logic for Exact 5s Loop --- */
+
+  @keyframes rotateClockwise {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  @keyframes rotateCounterClockwise {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(-360deg); }
+  }
+
+  /* Circuit pulse traveling and glowing briefly at nodes in a 5s window */
+  @keyframes tracePulse {
+    0%, 70%, 100% { opacity: 0.2; filter: drop-shadow(0 0 0px rgba(59, 111, 182, 0)); }
+    20%, 35% { opacity: 1; filter: drop-shadow(0 0 8px rgba(59, 111, 182, 0.8)); }
+  }
+
+  /* Three small edge nodes soft breathing pulse */
+  @keyframes nodePulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.12); }
+  }
+
+  /* Gear rotations tuned for mechanical precision and 5s periodic loop sync */
+  .gear-outer {
+    animation: rotateClockwise 20s linear infinite;
+    transform-origin: 256px 256px;
+  }
+
+  .gear-middle {
+    animation: rotateCounterClockwise 10s linear infinite;
+    transform-origin: 256px 256px;
+  }
+
+  .gear-inner-c {
+    animation: rotateClockwise 5s linear infinite;
+    transform-origin: 256px 256px;
+  }
+
+  .gear-center {
+    animation: rotateCounterClockwise 2.5s linear infinite;
+    transform-origin: 256px 256px;
+  }
+
+  /* Staggered circuit traces matching the 5s loop requirement */
+  .trace-1 { animation: tracePulse 5s ease-in-out infinite; animation-delay: 0s; }
+  .trace-2 { animation: tracePulse 5s ease-in-out infinite; animation-delay: 0.6s; }
+  .trace-3 { animation: tracePulse 5s ease-in-out infinite; animation-delay: 1.2s; }
+
+  /* Edge nodes breathing synchronization */
+  .node-top-left { transform-origin: 110px 110px; animation: nodePulse 2.5s ease-in-out infinite; }
+  .node-top-right { transform-origin: 402px 110px; animation: nodePulse 2.5s ease-in-out infinite; animation-delay: 0.8s; }
+  .node-bottom-right { transform-origin: 402px 402px; animation: nodePulse 2.5s ease-in-out infinite; animation-delay: 1.6s; }
+
+  /* Accessibility: Reduced Motion */
+  @media (prefers-reduced-motion: reduce) {
+    .gear-outer, .gear-middle, .gear-inner-c, .gear-center, [class*="trace-"], [class*="node-"] {
+      animation: none !important;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="icon-container">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+    <g>
+      
+      <!-- 6. Three small stick-and-dot nodes on the outer edge -->
+      <g id="edge-nodes">
+        <!-- Top-left blue node -->
+        <g class="node-top-left">
+          <line x1="256" y1="256" x2="110" y2="110" stroke="#3B6FB6" stroke-width="8" stroke-linecap="round" />
+          <circle cx="110" cy="110" r="14" fill="#3B6FB6" />
+        </g>
+        <!-- Top-right gold node -->
+        <g class="node-top-right">
+          <line x1="256" y1="256" x2="402" y2="110" stroke="#E8B33C" stroke-width="8" stroke-linecap="round" />
+          <circle cx="402" cy="110" r="14" fill="#E8B33C" />
+        </g>
+        <!-- Bottom-right gold node -->
+        <g class="node-bottom-right">
+          <line x1="256" y1="256" x2="402" y2="402" stroke="#E8B33C" stroke-width="8" stroke-linecap="round" />
+          <circle cx="402" cy="402" r="14" fill="#E8B33C" />
+        </g>
+      </g>
+
+      <!-- 1. Outer Gear (Segmented Blue & Gold Teeth) -->
+      <g class="gear-outer" id="outer-gear">
+        <path d="M256,36 C134,36 36,134 36,256 C36,378 134,476 256,476 C290,476 322,468 351,454 L320,380 C298,391 273,396 248,396 C178,396 122,340 122,270 C122,235 136,203 160,179 L104,124 C68,160 46,210 46,266 C46,388 144,486 266,486 C310,486 352,473 388,450 L350,380 C329,395 304,404 276,404 C205,404 148,347 148,276 C148,205 205,148 276,148 C304,148 329,157 350,172 L388,102 C352,79 310,66 266,66 C186,66 118,118 94,190 L158,212 C172,174 209,148 252,148 Z" fill="#3B6FB6" />
+        <path d="M256,36 C378,36 476,134 476,256 C476,378 378,476 256,476 C222,476 190,468 161,454 L192,380 C214,391 239,396 264,396 C334,396 390,340 390,270 C390,235 376,203 352,179 L408,124 C444,160 466,210 466,266 C466,388 368,486 246,486 C202,486 160,473 124,450 L162,380 C183,395 208,404 236,404 C307,404 364,347 364,276 C364,205 307,148 236,148 C208,148 183,157 162,172 L124,102 C160,79 202,66 246,66 C326,66 394,118 418,190 L354,212 C340,174 303,148 260,148 Z" fill="#E8B33C" opacity="0.9" />
+        <circle cx="256" cy="256" r="215" fill="none" stroke="#3B6FB6" stroke-width="32" stroke-dasharray="32 16" />
+        <circle cx="256" cy="256" r="215" fill="none" stroke="#E8B33C" stroke-width="32" stroke-dasharray="32 16" stroke-dashoffset="48" />
+      </g>
+
+      <!-- 2. Middle Ring Gear (Blue, set inside a white ring gap) -->
+      <g class="gear-middle" id="middle-ring-gear">
+        <circle cx="256" cy="256" r="150" fill="none" stroke="#FFFFFF" stroke-width="26" />
+        <circle cx="256" cy="256" r="150" fill="none" stroke="#3B6FB6" stroke-width="22" stroke-dasharray="20 10" />
+      </g>
+
+      <!-- 3. Inner Gold C-shaped Gear, open on the right side -->
+      <g class="gear-inner-c" id="inner-gold-gear">
+        <path d="M 256 136 A 120 120 0 1 1 136 256 L 166 256 A 90 90 0 1 0 256 166 Z" fill="#E8B33C" />
+      </g>
+
+      <!-- 4. Small Blue Center Gear with a white circular hub -->
+      <g class="gear-center" id="center-gear">
+        <circle cx="256" cy="256" r="62" fill="#3B6FB6" />
+        <path d="M256,184 L264,184 L266,198 L278,200 L288,190 L298,198 L304,210 L316,214 L322,228 L332,238 L332,250 L344,256 L344,264 L332,270 L332,282 L322,292 L316,306 L304,310 L298,322 L288,330 L278,320 L266,322 L264,336 L256,336 L248,336 L246,322 L234,320 L224,330 L214,322 L208,310 L196,306 L190,292 L180,282 L180,270 L168,264 L168,256 L180,250 L180,238 L190,228 L196,214 L208,210 L214,198 L224,190 L234,200 L246,198 L248,184 Z" fill="#3B6FB6" />
+        <circle cx="256" cy="256" r="32" fill="#FFFFFF" />
+      </g>
+
+      <!-- 5. Circuit traces with light pulses traveling to nodes on the right -->
+      <g id="circuit-traces" stroke-linecap="round" stroke-linejoin="round">
+        <!-- Trace 1 (Top) -->
+        <g class="trace-1">
+          <polyline points="256,236 290,202 360,202" fill="none" stroke="#3B6FB6" stroke-width="4" />
+          <circle cx="360" cy="202" r="7" fill="#3B6FB6" />
+        </g>
+        <!-- Trace 2 (Middle) -->
+        <g class="trace-2">
+          <polyline points="256,256 380,256" fill="none" stroke="#3B6FB6" stroke-width="4" />
+          <circle cx="380" cy="256" r="7" fill="#3B6FB6" />
+        </g>
+        <!-- Trace 3 (Bottom) -->
+        <g class="trace-3">
+          <polyline points="256,276 300,320 360,320" fill="none" stroke="#3B6FB6" stroke-width="4" />
+          <circle cx="360" cy="320" r="7" fill="#3B6FB6" />
+        </g>
+      </g>
+
+    </g>
+  </svg>
+</div>
+
+</body>
+</html>

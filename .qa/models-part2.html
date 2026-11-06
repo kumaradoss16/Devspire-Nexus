@@ -1,0 +1,686 @@
+/* Inline SVG fallback icon (24x24, stroke = currentColor). */
+const ICONS = {
+  chip: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="7" width="10" height="10" rx="2"/><path d="M10 2v3M14 2v3M10 19v3M14 19v3M2 10h3M2 14h3M19 10h3M19 14h3"/></svg>'
+};
+
+/* ---------- Directory engine: facets, search, sort, compare, paginate ---------- */
+(function () {
+  'use strict';
+
+  const PAGE_SIZE = 9;
+
+  /* Derive a numeric max-parameter figure (in billions) from each model's
+     stated `params` string (e.g. "8B / 70B / 405B", "570M"). Used only for
+     bucketed facet classification; stays null when the string carries no
+     parseable figure (e.g. "tiny–large", "ViT-S–ViT-g") — never guessed. */
+  function maxParamsB(m) {
+    if (!m.params) return null;
+    let max = null;
+    const reB = /(\d+(?:\.\d+)?)\s*B\b/gi;
+    const reM = /(\d+(?:\.\d+)?)\s*M\b/gi;
+    let mm;
+    while ((mm = reB.exec(m.params)) !== null) { const v = parseFloat(mm[1]); if (max === null || v > max) max = v; }
+    while ((mm = reM.exec(m.params)) !== null) { const v = parseFloat(mm[1]) / 1000; if (max === null || v > max) max = v; }
+    return max;
+  }
+
+  /* Facet predicates. Each value maps to an explicit test against fields the
+     dataset actually carries — no invented attributes. */
+  const FACET_MATCHERS = {
+    availability: {
+      'Open Weights': (m) => m.weights === 'open',
+      'API Only': (m) => m.weights === 'closed',
+      'Availability Unspecified': (m) => m.weights === null || m.weights === undefined,
+      'Local Inference Ready': (m) => !!m.local,
+      'Sign-up Required': (m) => !!m.signup
+    },
+    licensing: {
+      'MIT / Apache 2.0': (m) => m.licenseGroup === 'MIT / Apache 2.0',
+      'Permissive Community': (m) => m.licenseGroup === 'Permissive Community',
+      'Proprietary / Commercial': (m) => m.licenseGroup === 'Proprietary / Commercial',
+      'Non-Commercial / Research': (m) => m.licenseGroup === 'Non-Commercial / Research'
+    },
+    modalities: null, /* array field, handled generically */
+    context: {
+      'Under 32K': (m) => m.contextK !== null && m.contextK < 32,
+      '32K - 128K': (m) => m.contextK !== null && m.contextK >= 32 && m.contextK <= 128,
+      '200K - 1M': (m) => m.contextK !== null && m.contextK > 128
+    },
+    params: {
+      'Mixture of Experts': (m) => !!m.moe,
+      'Under 8B': (m) => { const v = maxParamsB(m); return v !== null && v < 8; },
+      '8B - 70B': (m) => { const v = maxParamsB(m); return v !== null && v >= 8 && v <= 70; },
+      '70B+': (m) => { const v = maxParamsB(m); return v !== null && v > 70; }
+    }
+  };
+  const MODALITY_VALUES = ['Text & Reasoning', 'Code', 'Vision', 'Audio', 'Video', 'Image Generation', 'Embeddings', 'Reranking'];
+  const FACETS = {
+    availability: { label: 'Availability & Weights', values: Object.keys(FACET_MATCHERS.availability) },
+    licensing: { label: 'Licensing', values: Object.keys(FACET_MATCHERS.licensing) },
+    modalities: { label: 'Modalities', values: MODALITY_VALUES.filter((v) => MODELS_DATA.some((m) => (m.modalities || []).includes(v))) },
+    context: { label: 'Context Window', values: Object.keys(FACET_MATCHERS.context) },
+    params: { label: 'Parameter Class', values: Object.keys(FACET_MATCHERS.params) }
+  };
+  const CATEGORY_ORDER = Array.isArray(window.AI_MODELS_META && window.AI_MODELS_META.category_order)
+    ? window.AI_MODELS_META.category_order
+    : [...new Set(MODELS_DATA.map((m) => m.cat))];
+  const CATEGORIES = ['All Models', ...CATEGORY_ORDER.filter((c) => MODELS_DATA.some((m) => m.cat === c))];
+
+  const state = {
+    query: '',
+    category: 'All Models',
+    facets: {},          // { availability: Set, licensing: Set, ... }
+    sort: 'verified',
+    page: 1
+  };
+  Object.keys(FACETS).forEach((k) => { state.facets[k] = new Set(); });
+
+  const compareSet = new Set();  // model ids, max 3
+
+  /* ----- DOM refs ----- */
+  const grid = document.getElementById('model-grid');
+  const emptyState = document.getElementById('empty-state');
+  const searchInput = document.getElementById('model-search');
+  const clearBtn = document.getElementById('search-clear');
+  const pillsWrap = document.getElementById('category-pills');
+  const chipsWrap = document.getElementById('active-chips');
+  const noFiltersNote = document.getElementById('no-filters-note');
+  const resetAllBtn = document.getElementById('reset-all-filters');
+  const resultsCount = document.getElementById('results-count');
+  const pageIndicator = document.getElementById('page-indicator');
+  const paginationControls = document.getElementById('pagination-controls');
+  const catalogChip = document.getElementById('catalog-chip');
+  const sortSelect = document.getElementById('sort-select');
+  const facetsPanel = document.getElementById('facets-panel');
+  const facetsToggle = document.getElementById('facets-toggle');
+  const facetsCount = document.getElementById('facets-count');
+  const compareBtn = document.getElementById('compare-btn');
+  const compareCount = document.getElementById('compare-count');
+  const detailModal = document.getElementById('detail-modal');
+  const detailContent = document.getElementById('detail-content');
+  const compareModal = document.getElementById('compare-modal');
+  const compareContent = document.getElementById('compare-content');
+  const invalidState = document.getElementById('invalid-state');
+  const invalidMessage = document.getElementById('invalid-message');
+
+  const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+
+  /* ----- Catalog chip (computed from real data) ----- */
+  function renderCatalogChip() {
+    const total = MODELS_DATA.length;
+    const open = MODELS_DATA.filter((m) => m.weights === 'open').length;
+    const hosted = MODELS_DATA.filter((m) => m.weights === 'closed').length;
+    const unstated = MODELS_DATA.filter((m) => m.weights !== 'open' && m.weights !== 'closed').length;
+    catalogChip.textContent = `${total.toLocaleString()} Models Cataloged · ${open.toLocaleString()} Open Weights · ${hosted.toLocaleString()} Hosted APIs${unstated ? ` · ${unstated} Unspecified` : ''}`;
+  }
+
+  /* ----- Category pills ----- */
+  function renderPills() {
+    pillsWrap.innerHTML = CATEGORIES.map((cat) => {
+      const active = state.category === cat;
+      const count = cat === 'All Models' ? MODELS_DATA.length : MODELS_DATA.filter((m) => m.cat === cat).length;
+      return `<button type="button" class="pill font-code-badge text-code-badge px-3 py-1.5 rounded shrink-0 border ${
+        active
+          ? 'bg-primary-container border-primary-container text-bg-canvas'
+          : 'bg-surface-secondary text-text-muted hover:text-text-primary border-border-subtle hover:border-secondary'
+      }" data-category="${esc(cat)}" aria-pressed="${active}">${esc(cat)} <span class="opacity-70">${count}</span></button>`;
+    }).join('');
+  }
+
+  pillsWrap.addEventListener('click', (e) => {
+    const btn = e.target.closest('[data-category]');
+    if (!btn) return;
+    state.category = btn.dataset.category;
+    state.page = 1;
+    renderPills();
+    apply();
+  });
+
+  /* ----- Quick query presets: each applies a real, dataset-backed filter ----- */
+  const PRESETS = {
+    'open-weights': () => { state.facets.availability = new Set(['Open Weights']); },
+    'reasoning': () => { state.category = 'Reasoning & CoT'; },
+    'coding': () => { state.category = 'Coding Models'; },
+    'vision': () => { state.category = 'Vision & Multimodal'; },
+    'local': () => { state.facets.availability = new Set(['Local Inference Ready']); },
+    'long-context': () => { state.facets.context = new Set(['200K - 1M']); }
+  };
+  document.querySelectorAll('.preset-btn').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const run = PRESETS[btn.dataset.preset];
+      if (!run) return;
+      /* Each preset is a fresh query, so it must replace any filters already applied. */
+      state.query = '';
+      searchInput.value = '';
+      syncClearBtn();
+      state.category = 'All Models';
+      Object.values(state.facets).forEach((s) => s.clear());
+      run();
+      state.page = 1;
+      renderPills();
+      renderFacets();
+      apply();
+    });
+  });
+
+  /* ----- Facet sidebar ----- */
+  function facetValueMatch(m, groupKey, value) {
+    if (groupKey === 'modalities') return (m.modalities || []).includes(value);
+    const matcher = FACET_MATCHERS[groupKey] && FACET_MATCHERS[groupKey][value];
+    return matcher ? matcher(m) : false;
+  }
+
+  function facetValueCount(groupKey, value) {
+    return MODELS_DATA.filter((m) => facetValueMatch(m, groupKey, value)).length;
+  }
+
+  function renderFacets() {
+    Object.entries(FACETS).forEach(([key, facet]) => {
+      const group = document.querySelector(`[data-facet-group="${key}"]`);
+      if (!group) return;
+      group.querySelectorAll('.facet-row').forEach((row) => row.remove());
+      facet.values.forEach((value) => {
+        const count = facetValueCount(key, value);
+        const checked = state.facets[key].has(value);
+        const row = document.createElement('label');
+        row.className = 'facet-row flex items-center justify-between gap-2 text-body-compact font-body-compact cursor-pointer select-none ' +
+          (checked ? 'text-text-primary' : 'text-text-muted hover:text-text-primary');
+        row.innerHTML = `
+          <span class="flex items-center gap-2 min-w-0">
+            <input type="checkbox" class="facet-input" data-facet="${key}" data-value="${esc(value)}" ${checked ? 'checked' : ''}/>
+            <span class="truncate">${esc(value)}</span>
+          </span>
+          <span class="font-code-badge text-code-badge text-text-muted shrink-0">${count}</span>`;
+        group.appendChild(row);
+      });
+    });
+    const activeCount = Object.values(state.facets).reduce((n, s) => n + s.size, 0);
+    facetsCount.textContent = activeCount;
+  }
+
+  facetsPanel.addEventListener('change', (e) => {
+    const input = e.target.closest('.facet-input');
+    if (!input) return;
+    const set = state.facets[input.dataset.facet];
+    if (input.checked) set.add(input.dataset.value); else set.delete(input.dataset.value);
+    state.page = 1;
+    renderFacets();
+    apply();
+  });
+
+  document.getElementById('reset-facets').addEventListener('click', resetFacets);
+
+  function resetFacets() {
+    Object.values(state.facets).forEach((s) => s.clear());
+    state.page = 1;
+    renderFacets();
+    apply();
+  }
+
+  /* ----- Filtering ----- */
+  function matchesQuery(m) {
+    if (!state.query) return true;
+    const q = state.query.toLowerCase();
+    const hay = [m.name, m.publisher, m.family, m.sub, m.cat, m.license, m.licenseGroup, m.desc, m.contextK !== null ? m.contextK + 'k' : '', ...(m.modalities || []), ...(m.tags || [])]
+      .join(' ').toLowerCase();
+    return q.split(/\s+/).every((word) => hay.includes(word));
+  }
+
+  function matchesCategory(m) {
+    return state.category === 'All Models' || m.cat === state.category;
+  }
+
+  function matchesFacets(m) {
+    for (const [key, set] of Object.entries(state.facets)) {
+      if (set.size === 0) continue;
+      if (![...set].some((v) => facetValueMatch(m, key, v))) return false;
+    }
+    return true;
+  }
+
+  function sortModels(list) {
+    const arr = [...list];
+    if (state.sort === 'name') arr.sort((a, b) => a.name.localeCompare(b.name));
+    else if (state.sort === 'name-desc') arr.sort((a, b) => b.name.localeCompare(a.name));
+    else if (state.sort === 'context') arr.sort((a, b) => ((b.contextK || -1) - (a.contextK || -1)) || a.name.localeCompare(b.name));
+    else arr.sort((a, b) => String(b.verified).localeCompare(String(a.verified)) || a.name.localeCompare(b.name));
+    return arr;
+  }
+
+  /* ----- Rendering ----- */
+  const tileContent = (m) => {
+    if (m.icon) {
+      const publisher = m.publisher || m.name || 'AI';
+      const mono = esc(publisher.split(/\s+/).map((w) => w[0]).join('').slice(0, 2).toUpperCase());
+      return `<img class="tool-favicon" src="${esc(m.icon)}" alt="" width="22" height="22" loading="lazy" onerror="this.outerHTML='${mono}'"/>`;
+    }
+    if (window.ResourceIcons) return window.ResourceIcons.html(m.category, 'model', m.name);
+    return `<span class="tool-icon text-secondary">${ICONS.chip}</span>`;
+  };
+
+  const PRICING_LABELS = {
+    usage_based: 'Usage-based API', open_weights: 'Open Weights', open_source: 'Open Source',
+    free: 'Free', freemium: 'Freemium', paid: 'Paid'
+  };
+  const pricingLabel = (p) => PRICING_LABELS[p] || p || '—';
+  const weightsLabel = (m) => m.weights === 'open' ? 'Open Weights' : m.weights === 'closed' ? 'API Only' : 'Not stated in source';
+  const inferenceLabel = (m) => m.moe ? 'MoE' : (m.local ? 'Local' : 'API');
+  const contextLabel = (m) => m.contextK !== null ? `${m.contextK}K` : '—';
+
+  function railCell(label, value, tone) {
+    return `<div class="bg-surface-secondary border border-border-subtle rounded px-2 py-1 min-w-0">
+      <span class="block font-metadata-label text-metadata-label text-text-muted">${label}</span>
+      <span class="block font-code-param text-code-param truncate ${tone || 'text-text-primary'}" title="${esc(value)}">${esc(value)}</span>
+    </div>`;
+  }
+
+  function cardHTML(m) {
+    const inCompare = compareSet.has(m.id);
+    const weightsChip = m.weights === 'open'
+      ? `<span class="inline-flex items-center gap-1 font-code-badge text-code-badge text-tertiary"><span class="material-symbols-outlined text-sm" aria-hidden="true" data-icon="download">download</span>Model weights</span>`
+      : m.weights === 'closed'
+        ? `<span class="inline-flex items-center gap-1 font-code-badge text-code-badge text-secondary"><span class="material-symbols-outlined text-sm" aria-hidden="true" data-icon="terminal">terminal</span>API Endpoint</span>`
+        : `<span class="inline-flex items-center gap-1 font-code-badge text-code-badge text-text-muted"><span class="material-symbols-outlined text-sm" aria-hidden="true" data-icon="help">help</span>Availability unspecified</span>`;
+    return `
+    <article class="ui-card rounded-xl p-space-md flex flex-col justify-between group" data-model-id="${esc(m.id)}">
+      <div>
+        <div class="flex items-start justify-between gap-2 mb-space-sm">
+          <div class="flex items-center gap-3 min-w-0">
+            <div class="w-10 h-10 rounded-lg bg-surface-secondary border border-border-subtle flex items-center justify-center shrink-0">${tileContent(m)}</div>
+            <div class="min-w-0">
+              <span class="flex items-center gap-1.5 font-metadata-label text-metadata-label text-text-muted">
+                <span class="w-1.5 h-1.5 rounded-full bg-tertiary shrink-0"></span>
+                <span class="truncate">${esc(m.publisher)}</span>
+              </span>
+              <div class="flex items-center gap-1.5">
+                <h2 class="font-title-card text-title-card text-text-primary truncate">${esc(m.name)}</h2>
+                <span class="material-symbols-outlined text-tertiary text-base shrink-0" aria-hidden="true" title="Verified ${esc(m.verified)}">verified</span>
+              </div>
+            </div>
+          </div>
+          <label class="flex items-center gap-1.5 shrink-0 cursor-pointer select-none" title="Add to compare">
+            <input type="checkbox" class="compare-input" data-compare="${esc(m.id)}" ${inCompare ? 'checked' : ''} aria-label="Add ${esc(m.name)} to compare"/>
+          </label>
+        </div>
+        <p class="font-body-compact text-body-compact text-text-muted mb-space-sm line-clamp-2">${esc(m.desc)}</p>
+        <div class="grid grid-cols-2 gap-1.5 mb-space-md">
+          ${railCell('Params', m.params || '—')}
+          ${railCell('Context', contextLabel(m))}
+          ${railCell('License', m.license || '—')}
+          ${railCell('Inference', inferenceLabel(m), m.moe ? 'text-secondary' : 'text-text-primary')}
+        </div>
+      </div>
+      <div class="pt-space-sm border-t border-border-subtle flex items-center justify-between gap-2">
+        <a class="${m.weights === 'open' ? 'text-tertiary' : 'text-secondary'} hover:underline" href="${esc(m.url)}" target="_blank" rel="noopener noreferrer">${weightsChip}</a>
+        <button class="text-body-compact font-body-compact text-primary hover:underline flex items-center gap-1 shrink-0" type="button" data-details="${esc(m.id)}">
+          View model details <span class="material-symbols-outlined text-sm" aria-hidden="true" data-icon="chevron_right">chevron_right</span>
+        </button>
+      </div>
+    </article>`;
+  }
+
+  function renderChips() {
+    const chips = [];
+    if (state.category !== 'All Models') chips.push({ kind: 'category', label: `Category: ${state.category}` });
+    if (state.query) chips.push({ kind: 'query', label: `Search: "${state.query}"` });
+    Object.entries(state.facets).forEach(([key, set]) => {
+      set.forEach((v) => chips.push({ kind: 'facet', facet: key, value: v, label: v }));
+    });
+
+    chipsWrap.querySelectorAll('.chip').forEach((c) => c.remove());
+    noFiltersNote.hidden = chips.length > 0;
+    resetAllBtn.hidden = chips.length === 0;
+
+    chips.forEach((chip) => {
+      const el = document.createElement('span');
+      el.className = 'chip inline-flex items-center gap-1 bg-surface-card border border-border-subtle px-2 py-0.5 rounded text-code-badge font-code-badge text-text-primary';
+      el.innerHTML = `${esc(chip.label)}<button class="text-text-muted hover:text-text-primary" type="button" aria-label="Remove filter ${esc(chip.label)}"><span class="material-symbols-outlined text-xs" aria-hidden="true" data-icon="close">close</span></button>`;
+      el.querySelector('button').addEventListener('click', () => {
+        if (chip.kind === 'category') state.category = 'All Models';
+        else if (chip.kind === 'query') { state.query = ''; searchInput.value = ''; syncClearBtn(); }
+        else if (chip.kind === 'facet') state.facets[chip.facet].delete(chip.value);
+        state.page = 1;
+        renderPills(); renderFacets(); apply();
+      });
+      chipsWrap.insertBefore(el, resetAllBtn);
+    });
+  }
+
+  function renderPagination(totalPages) {
+    const mkBtn = (label, page, opts = {}) => {
+      const b = document.createElement('button');
+      b.type = 'button';
+      b.className = `page-btn ${opts.icon ? 'flex items-center justify-center w-8 h-8' : 'w-8 h-8'} rounded font-code-badge text-code-badge border ${
+        opts.active
+          ? 'is-active border-primary-container'
+          : 'bg-surface-secondary border-border-subtle text-text-muted'
+      }`;
+      b.innerHTML = label;
+      if (opts.disabled) b.disabled = true;
+      if (opts.active) b.setAttribute('aria-current', 'page');
+      if (page !== null && !opts.disabled) {
+        b.addEventListener('click', () => { state.page = page; apply(); });
+      }
+      return b;
+    };
+
+    paginationControls.innerHTML = '';
+    paginationControls.appendChild(mkBtn('<span class="material-symbols-outlined text-sm" aria-hidden="true">chevron_left</span>', state.page - 1, { icon: true, disabled: state.page === 1 }));
+
+    const pages = [];
+    for (let i = 1; i <= totalPages; i++) {
+      if (i === 1 || i === totalPages || Math.abs(i - state.page) <= 1) pages.push(i);
+      else if (pages[pages.length - 1] !== '…') pages.push('…');
+    }
+    pages.forEach((p) => {
+      if (p === '…') {
+        const s = document.createElement('span');
+        s.className = 'text-text-muted px-1 font-code-badge';
+        s.textContent = '...';
+        paginationControls.appendChild(s);
+      } else {
+        paginationControls.appendChild(mkBtn(String(p), p, { active: p === state.page }));
+      }
+    });
+
+    paginationControls.appendChild(mkBtn('<span class="material-symbols-outlined text-sm" aria-hidden="true">chevron_right</span>', state.page + 1, { icon: true, disabled: state.page === totalPages }));
+  }
+
+  function apply() {
+    const filtered = sortModels(MODELS_DATA.filter((m) => matchesQuery(m) && matchesCategory(m) && matchesFacets(m)));
+    const totalPages = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
+    state.page = Math.min(Math.max(1, state.page), totalPages);
+    const start = (state.page - 1) * PAGE_SIZE;
+    const slice = filtered.slice(start, start + PAGE_SIZE);
+
+    grid.hidden = filtered.length === 0;
+    emptyState.hidden = filtered.length > 0;
+    grid.innerHTML = slice.map(cardHTML).join('');
+
+    const from = filtered.length === 0 ? 0 : start + 1;
+    const to = Math.min(start + PAGE_SIZE, filtered.length);
+    resultsCount.innerHTML = `Showing <span class="text-text-primary font-medium">${from}–${to}</span> of <span class="text-text-primary font-medium">${filtered.length}</span> models matching filters`;
+
+    pageIndicator.innerHTML = `Page <span class="text-text-primary font-medium">${state.page}</span> of <span class="text-text-primary font-medium">${totalPages}</span>`;
+    renderPagination(totalPages);
+    renderChips();
+    if (window.RelatedResources) {
+      window.RelatedResources.mountPage(document.getElementById('related-page'), 'model', filtered.length ? filtered[0].id : null);
+    }
+  }
+
+  /* ----- Compare ----- */
+  function syncCompareUI() {
+    compareCount.textContent = compareSet.size;
+    compareBtn.disabled = compareSet.size < 2;
+    compareBtn.title = compareSet.size < 2 ? 'Select at least 2 models to compare' : `Compare ${compareSet.size} models`;
+  }
+
+  grid.addEventListener('change', (e) => {
+    const input = e.target.closest('[data-compare]');
+    if (!input) return;
+    const id = input.dataset.compare;
+    if (input.checked) {
+      if (compareSet.size >= 3) {
+        input.checked = false;
+        compareBtn.title = 'Comparison is limited to 3 models';
+        compareBtn.classList.add('text-status-warning');
+        setTimeout(() => { compareBtn.classList.remove('text-status-warning'); syncCompareUI(); }, 1200);
+        return;
+      }
+      compareSet.add(id);
+    } else {
+      compareSet.delete(id);
+    }
+    syncCompareUI();
+  });
+
+  function compareRow(label, fn) {
+    return `<tr><th scope="row">${esc(label)}</th>${[...compareSet].map((id) => {
+      const m = MODELS_DATA.find((x) => x.id === id);
+      return `<td class="font-body-compact text-body-compact text-text-primary">${m ? fn(m) : '—'}</td>`;
+    }).join('')}</tr>`;
+  }
+
+  function openCompare() {
+    if (compareSet.size < 2) return;
+    const ids = [...compareSet];
+    const models = ids.map((id) => MODELS_DATA.find((x) => x.id === id)).filter(Boolean);
+    compareContent.innerHTML = `
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th scope="col"></th>
+            ${models.map((m) => `<th scope="col"><span class="flex items-center gap-2 normal-case tracking-normal text-text-primary text-sm">${tileContent(m)}<span class="truncate max-w-[160px]">${esc(m.name)}</span></span></th>`).join('')}
+          </tr>
+        </thead>
+        <tbody>
+          ${compareRow('Publisher', (m) => esc(m.publisher))}
+          ${compareRow('Family', (m) => esc(m.family || '—'))}
+          ${compareRow('Category', (m) => esc(m.cat))}
+          ${compareRow('Modalities', (m) => (m.modalities || []).map(esc).join(', ') || '—')}
+          ${compareRow('Parameters', (m) => esc(m.params || '—'))}
+          ${compareRow('Context Window', (m) => esc(contextLabel(m)))}
+          ${compareRow('Inference', (m) => esc(inferenceLabel(m)))}
+          ${compareRow('License', (m) => esc(m.license || '—'))}
+          ${compareRow('License Group', (m) => esc(m.licenseGroup || '—'))}
+          ${compareRow('Availability', (m) => weightsLabel(m))}
+          ${compareRow('Local Inference', (m) => m.local ? 'Yes' : 'No')}
+          ${compareRow('Sign-up Required', (m) => m.signup ? 'Yes' : 'No')}
+          ${compareRow('Pricing', (m) => esc(pricingLabel(m.pricing)))}
+          ${compareRow('Last Verified', (m) => esc(m.verified || '—'))}
+          ${compareRow('Official Link', (m) => `<a class="text-secondary hover:underline" href="${esc(m.url)}" target="_blank" rel="noopener noreferrer">Open official page</a>`)}
+        </tbody>
+      </table>`;
+    compareModal.hidden = false;
+    document.body.style.overflow = 'hidden';
+  }
+  compareBtn.addEventListener('click', openCompare);
+
+  /* ----- Detail modal ----- */
+  function openDetail(id, options = {}) {
+    const m = MODELS_DATA.find((x) => x.id === id);
+    if (!m) {
+      showInvalid(id);
+      return;
+    }
+    invalidState.hidden = true;
+    detailContent.innerHTML = `
+      <div class="flex items-center gap-3 mb-space-sm">
+        <div class="w-12 h-12 rounded-lg bg-surface-secondary border border-border-subtle flex items-center justify-center shrink-0">${tileContent(m)}</div>
+        <div class="min-w-0">
+          <span class="flex items-center gap-1.5 font-metadata-label text-metadata-label text-text-muted">
+            <span class="w-1.5 h-1.5 rounded-full bg-tertiary shrink-0"></span>${esc(m.publisher)}
+          </span>
+          <h2 class="font-headline-section text-headline-section text-text-primary tracking-tight flex items-center gap-1.5" id="detail-title">
+            <span class="truncate">${esc(m.name)}</span>
+            <span class="material-symbols-outlined text-tertiary text-lg shrink-0" aria-hidden="true" title="Verified ${esc(m.verified)}">verified</span>
+          </h2>
+        </div>
+      </div>
+      <p class="font-body-compact text-body-compact text-text-muted mb-space-md">${esc(m.desc)}</p>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-1.5 mb-space-md">
+        ${railCell('Params', m.params || '—')}
+        ${railCell('Context', contextLabel(m))}
+        ${railCell('License', m.license || '—')}
+        ${railCell('Inference', inferenceLabel(m))}
+      </div>
+      <dl class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 mb-space-md">
+        <div><dt class="font-metadata-label text-metadata-label text-text-muted uppercase tracking-wider">Family</dt><dd class="font-body-compact text-body-compact text-text-primary">${esc(m.family || '—')}</dd></div>
+        <div><dt class="font-metadata-label text-metadata-label text-text-muted uppercase tracking-wider">Source Category</dt><dd class="font-body-compact text-body-compact text-text-primary">${esc(m.sub || '—')}</dd></div>
+        <div><dt class="font-metadata-label text-metadata-label text-text-muted uppercase tracking-wider">Directory Category</dt><dd class="font-body-compact text-body-compact text-text-primary">${esc(m.cat)}</dd></div>
+        <div><dt class="font-metadata-label text-metadata-label text-text-muted uppercase tracking-wider">License Group</dt><dd class="font-body-compact text-body-compact text-text-primary">${esc(m.licenseGroup || '—')}</dd></div>
+        <div><dt class="font-metadata-label text-metadata-label text-text-muted uppercase tracking-wider">Availability</dt><dd class="font-body-compact text-body-compact text-text-primary">${weightsLabel(m)}</dd></div>
+        <div><dt class="font-metadata-label text-metadata-label text-text-muted uppercase tracking-wider">Pricing</dt><dd class="font-body-compact text-body-compact text-text-primary">${esc(pricingLabel(m.pricing))}</dd></div>
+        <div><dt class="font-metadata-label text-metadata-label text-text-muted uppercase tracking-wider">Local Inference</dt><dd class="font-body-compact text-body-compact text-text-primary">${m.local ? 'Yes' : 'No'}</dd></div>
+        <div><dt class="font-metadata-label text-metadata-label text-text-muted uppercase tracking-wider">Sign-up Required</dt><dd class="font-body-compact text-body-compact text-text-primary">${m.signup ? 'Yes' : 'No'}</dd></div>
+        <div><dt class="font-metadata-label text-metadata-label text-text-muted uppercase tracking-wider">Last Verified</dt><dd class="font-code-param text-code-param text-text-primary">${esc(m.verified || '—')}</dd></div>
+      </dl>
+      <div class="mb-space-md">
+        <span class="font-metadata-label text-metadata-label text-text-muted uppercase tracking-wider block mb-1.5">Modalities</span>
+        <div class="flex flex-wrap gap-1.5">
+          ${(m.modalities || []).map((x) => `<span class="bg-surface-secondary border border-border-subtle font-code-badge text-code-badge text-text-muted px-2 py-0.5 rounded">${esc(x)}</span>`).join('')}
+        </div>
+      </div>
+      ${(m.tags && m.tags.length) ? `
+      <div class="mb-space-md">
+        <span class="font-metadata-label text-metadata-label text-text-muted uppercase tracking-wider block mb-1.5">Tags</span>
+        <div class="flex flex-wrap gap-1.5">
+          ${m.tags.map((x) => `<span class="bg-surface-secondary border border-border-subtle font-code-badge text-code-badge text-text-muted px-2 py-0.5 rounded">${esc(x)}</span>`).join('')}
+        </div>
+      </div>` : ''}
+      ${m.notes ? `<div class="mb-space-md"><span class="font-metadata-label text-metadata-label text-text-muted uppercase tracking-wider block mb-1.5">Notes</span><p class="font-body-compact text-body-compact text-text-muted">${esc(m.notes)}</p></div>` : ''}
+      <div class="mb-space-md">
+        <span class="font-metadata-label text-metadata-label text-text-muted uppercase tracking-wider block mb-1.5">Evidence</span>
+        <ul class="flex flex-col gap-1">
+          ${(m.evidence || []).map(([label, url]) => `<li><a class="font-body-compact text-body-compact text-secondary hover:underline inline-flex items-center gap-1" href="${esc(url)}" target="_blank" rel="noopener noreferrer">${esc(label)}<span class="material-symbols-outlined text-sm" aria-hidden="true" data-icon="open_in_new">open_in_new</span></a></li>`).join('')}
+        </ul>
+      </div>
+      <div data-related-detail></div>
+      <a class="inline-flex items-center gap-2 bg-primary-container text-bg-canvas font-body-compact text-body-compact font-semibold px-4 py-2 rounded btn-amber" href="${esc(m.url)}" target="_blank" rel="noopener noreferrer">
+        Open official page <span class="material-symbols-outlined text-base" aria-hidden="true" data-icon="open_in_new">open_in_new</span>
+      </a>`;
+    detailModal.hidden = false;
+    detailContent.dataset.recordType = 'model';
+    detailContent.dataset.recordId = m.id;
+    document.body.style.overflow = 'hidden';
+    document.getElementById('detail-close').focus();
+    if (window.RelatedResources) {
+      window.RelatedResources.renderInto(detailContent.querySelector('[data-related-detail]'), 'model', m.id, { limit: 6 });
+    }
+    if (window.DevSpireCollections) window.DevSpireCollections.decorate();
+    if (!options.fromHash) {
+      history.replaceState(null, '', '#model/' + encodeURIComponent(m.id));
+    }
+  }
+
+  function showInvalid(id) {
+    invalidMessage.textContent = `Model "${id}" was not found.`;
+    invalidState.hidden = false;
+    invalidState.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+
+  grid.addEventListener('click', (e) => {
+    const btn = e.target.closest('[data-details]');
+    if (!btn) return;
+    openDetail(btn.dataset.details);
+  });
+
+  function closeModals() {
+    detailModal.hidden = true;
+    compareModal.hidden = true;
+    document.body.style.overflow = '';
+    if (location.hash.indexOf('#model/') === 0) {
+      history.replaceState(null, '', location.pathname + location.search);
+    }
+  }
+  document.getElementById('detail-close').addEventListener('click', closeModals);
+  document.getElementById('compare-close').addEventListener('click', closeModals);
+  [detailModal, compareModal].forEach((modal) => {
+    modal.addEventListener('click', (e) => { if (e.target === modal) closeModals(); });
+  });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModals(); });
+
+  document.getElementById('invalid-dismiss').addEventListener('click', () => {
+    invalidState.hidden = true;
+    history.replaceState(null, '', location.pathname + location.search);
+  });
+
+  function handleHash() {
+    const m = location.hash.match(/^#model\/(.+)$/);
+    if (!m) return;
+    const id = decodeURIComponent(m[1]);
+    if (MODELS_DATA.some((x) => x.id === id)) openDetail(id, { fromHash: true });
+    else showInvalid(id);
+  }
+  window.addEventListener('hashchange', handleHash);
+
+  /* ----- Search ----- */
+  function syncClearBtn() {
+    clearBtn.style.visibility = searchInput.value ? 'visible' : 'hidden';
+  }
+  let debounce;
+  searchInput.addEventListener('input', () => {
+    syncClearBtn();
+    clearTimeout(debounce);
+    debounce = setTimeout(() => { state.query = searchInput.value.trim(); state.page = 1; apply(); }, 180);
+  });
+  clearBtn.addEventListener('click', () => {
+    searchInput.value = '';
+    state.query = '';
+    syncClearBtn();
+    state.page = 1;
+    apply();
+    searchInput.focus();
+  });
+  document.addEventListener('keydown', (e) => {
+    if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') {
+      e.preventDefault();
+      searchInput.focus();
+      searchInput.select();
+    }
+  });
+  document.getElementById('quick-find').addEventListener('input', (e) => {
+    searchInput.value = e.target.value;
+    state.query = e.target.value.trim();
+    state.page = 1;
+    syncClearBtn();
+    apply();
+  });
+
+  /* ----- Sort / reset ----- */
+  sortSelect.addEventListener('change', () => { state.sort = sortSelect.value; state.page = 1; apply(); });
+
+  function resetAll() {
+    state.query = '';
+    searchInput.value = '';
+    syncClearBtn();
+    state.category = 'All Models';
+    state.page = 1;
+    Object.values(state.facets).forEach((s) => s.clear());
+    renderPills(); renderFacets(); apply();
+  }
+  resetAllBtn.addEventListener('click', resetAll);
+  document.getElementById('empty-reset').addEventListener('click', resetAll);
+
+  /* ----- Mobile UI: menu + facets drawer ----- */
+  const menuToggle = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+  menuToggle.addEventListener('click', () => {
+    const open = mobileMenu.classList.toggle('hidden');
+    menuToggle.setAttribute('aria-expanded', String(!open));
+  });
+  mobileMenu.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.add('hidden');
+      menuToggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  facetsToggle.addEventListener('click', () => {
+    const hidden = facetsPanel.classList.toggle('hidden');
+    facetsPanel.classList.toggle('lg:flex', hidden); /* keep desktop behavior intact */
+    facetsToggle.setAttribute('aria-expanded', String(!hidden));
+  });
+
+  /* ----- Deep links from the landing page (?category= / ?q=) ----- */
+  const landingParams = new URLSearchParams(location.search);
+  const landingCategory = landingParams.get('category');
+  if (landingCategory && CATEGORIES.includes(landingCategory)) state.category = landingCategory;
+  const landingQuery = landingParams.get('q');
+  if (landingQuery) {
+    state.query = landingQuery;
+    searchInput.value = landingQuery;
+    syncClearBtn();
+  }
+
+  /* ----- Init ----- */
+  renderCatalogChip();
+  renderPills();
+  renderFacets();
+  syncCompareUI();
+  apply();
+  handleHash();
+})();
+</script>
+</body></html>

@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Static Catalog API | DevSpire Nexus</title>
+<link rel="icon" type="image/png" href="assets/img/devspirehub-gears-48.png"/>
+<meta name="description" content="Static JSON files generated from the DevSpire Nexus catalog datasets, with counts and checksums. No hosted endpoint."/>
+<!-- Material Symbols Outlined font -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Fonts: Geist & JetBrains Mono -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "surface": "#051424",
+            "on-surface": "#d4e4fa",
+            "bg-canvas": "#090D12",
+            "surface-bright": "#2c3a4c",
+            "surface-container-highest": "#273647",
+            "on-error-container": "#ffdad6",
+            "on-tertiary-fixed-variant": "#005137",
+            "secondary-container": "#00a6e0",
+            "primary-container": "#f59e0b",
+            "status-warning": "#FBBF24",
+            "surface-container-low": "#0d1c2d",
+            "tertiary-fixed": "#68fcbf",
+            "on-tertiary": "#003825",
+            "secondary-fixed-dim": "#7bd0ff",
+            "tertiary-fixed-dim": "#45dfa4",
+            "surface-container": "#122131",
+            "surface-secondary": "#111820",
+            "primary-fixed": "#ffddb8",
+            "surface-dim": "#051424",
+            "on-tertiary-fixed": "#002114",
+            "status-error": "#F87171",
+            "on-primary-fixed": "#2a1700",
+            "inverse-surface": "#d4e4fa",
+            "on-error": "#690005",
+            "surface-tint": "#ffb95f",
+            "on-secondary-fixed-variant": "#004c69",
+            "on-surface-variant": "#d8c3ad",
+            "surface-container-lowest": "#010f1f",
+            "outline": "#a08e7a",
+            "on-secondary-container": "#00374d",
+            "background": "#051424",
+            "on-primary-container": "#613b00",
+            "inverse-primary": "#855300",
+            "primary": "#ffc174",
+            "tertiary": "#4de6aa",
+            "primary-fixed-dim": "#ffb95f",
+            "error-container": "#93000a",
+            "text-muted": "#94A3B8",
+            "on-primary": "#472a00",
+            "on-tertiary-container": "#004e35",
+            "tertiary-container": "#22c990",
+            "on-primary-fixed-variant": "#653e00",
+            "outline-variant": "#534434",
+            "surface-card": "#17212B",
+            "surface-container-high": "#1c2b3c",
+            "on-secondary-fixed": "#001e2c",
+            "on-background": "#d4e4fa",
+            "inverse-on-surface": "#233143",
+            "surface-variant": "#273647",
+            "error": "#ffb4ab",
+            "border-subtle": "#273341",
+            "on-secondary": "#00354a",
+            "text-primary": "#F1F5F9",
+            "secondary-fixed": "#c4e7ff",
+            "secondary": "#7bd0ff"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "margin-lg": "3rem",
+            "space-sm": "0.5rem",
+            "space-lg": "1.5rem",
+            "space-xl": "2rem",
+            "margin": "1rem",
+            "margin-md": "2rem",
+            "gutter-lg": "1.5rem",
+            "gutter": "1.25rem",
+            "space-md": "1rem",
+            "space-xs": "0.25rem"
+          },
+          "fontFamily": {
+            "headline-section": ["Geist", "sans-serif"],
+            "code-badge": ["JetBrains Mono", "monospace"],
+            "display-hero-mobile": ["Geist", "sans-serif"],
+            "body-default": ["Geist", "sans-serif"],
+            "body-compact": ["Geist", "sans-serif"],
+            "title-card": ["Geist", "sans-serif"],
+            "code-param": ["JetBrains Mono", "monospace"],
+            "metadata-label": ["Geist", "sans-serif"],
+            "display-hero": ["Geist", "sans-serif"]
+          },
+          "fontSize": {
+            "headline-section": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+            "code-badge": ["12px", { "lineHeight": "16px", "letterSpacing": "0em", "fontWeight": "500" }],
+            "display-hero-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+            "body-default": ["15px", { "lineHeight": "22px", "letterSpacing": "0em", "fontWeight": "400" }],
+            "body-compact": ["14px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" }],
+            "title-card": ["17px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "code-param": ["13px", { "lineHeight": "18px", "letterSpacing": "-0.01em", "fontWeight": "500" }],
+            "metadata-label": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500" }],
+            "display-hero": ["44px", { "lineHeight": "52px", "letterSpacing": "-0.03em", "fontWeight": "600" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+/* ============ Premium polish layer (works alongside Tailwind utilities) ============ */
+:root {
+  --bg-canvas: #090D12;
+  --surface-card: #17212B;
+  --surface-secondary: #111820;
+  --border-subtle: #273341;
+  --amber: #f59e0b;
+  --amber-bright: #ffb95f;
+  --blue: #7bd0ff;
+  --green: #34D399;
+  color-scheme: dark;
+}
+
+html { scroll-behavior: smooth; }
+
+/* Ensure the hidden attribute always wins over Tailwind display utilities */
+[hidden] { display: none !important; }
+
+/* Icon ligatures keep a square footprint even if the icon font is still loading */
+.material-symbols-outlined {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  overflow: hidden;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+
+body {
+  background-color: var(--bg-canvas);
+  background-image:
+    radial-gradient(1000px 420px at 50% -180px, rgba(245, 158, 11, 0.05), transparent 65%),
+    radial-gradient(800px 380px at 90% -60px, rgba(0, 166, 224, 0.04), transparent 60%);
+  background-attachment: fixed;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Sticky header: glassy, blurred */
+header.site-header {
+  background: rgba(9, 13, 18, 0.85);
+  backdrop-filter: blur(14px) saturate(140%);
+  -webkit-backdrop-filter: blur(14px) saturate(140%);
+  box-shadow: 0 1px 0 rgba(123, 208, 255, 0.05), 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+
+/* Premium card treatment */
+.ui-card {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.018), rgba(255, 255, 255, 0) 42%),
+    var(--surface-card);
+  border: 1px solid var(--border-subtle);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.03),
+    0 1px 2px rgba(0, 0, 0, 0.45),
+    0 4px 16px rgba(0, 0, 0, 0.2);
+  transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+}
+.ui-card:hover {
+  border-color: rgba(56, 189, 248, 0.38);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.045),
+    0 0 0 1px rgba(56, 189, 248, 0.06),
+    0 10px 28px rgba(0, 0, 0, 0.5),
+    0 0 36px rgba(56, 189, 248, 0.05);
+  transform: translateY(-2px);
+}
+
+/* Brand mark: soft amber glow on the gears logo */
+.brand-mark { filter: drop-shadow(0 0 8px rgba(245, 158, 11, 0.35)); }
+
+/* Model tile icons (inline SVG) */
+.tool-icon { display: inline-flex; width: 20px; height: 20px; }
+.tool-icon svg { width: 100%; height: 100%; }
+
+/* Publisher favicons: light chip so dark-on-transparent logos read on the dark card */
+.tool-favicon {
+  width: 22px; height: 22px; padding: 2px;
+  background: #f1f5f9; border-radius: 5px;
+  object-fit: contain; flex-shrink: 0;
+}
+
+/* Card hover: tile icon brightens with the border glow */
+.ui-card:hover .tool-icon { filter: drop-shadow(0 0 6px currentColor); }
+.ui-card:hover .tool-favicon { box-shadow: 0 0 10px rgba(241, 245, 249, 0.22); }
+
+/* Amber CTA glow */
+.btn-amber {
+  box-shadow: 0 0 0 1px rgba(245, 158, 11, 0.25), 0 2px 10px rgba(245, 158, 11, 0.18);
+  transition: filter 150ms ease, box-shadow 150ms ease, transform 150ms ease;
+}
+.btn-amber:hover {
+  box-shadow: 0 0 0 1px rgba(245, 158, 11, 0.35), 0 4px 18px rgba(245, 158, 11, 0.28);
+}
+.btn-amber:active { transform: scale(0.97); }
+
+/* Search: amber focus halo */
+.search-shell:focus-within {
+  border-color: rgba(245, 158, 11, 0.55);
+  box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.12), 0 0 28px rgba(245, 158, 11, 0.07);
+}
+
+/* Category pills */
+.pill {
+  transition: border-color 150ms ease, background-color 150ms ease, color 150ms ease, transform 150ms ease;
+}
+.pill:hover { transform: translateY(-1px); }
+.pill[aria-pressed="true"] {
+  background: var(--amber);
+  border-color: var(--amber);
+  color: var(--bg-canvas);
+  font-weight: 600;
+  box-shadow: 0 0 0 1px rgba(245, 158, 11, 0.25), 0 2px 10px rgba(245, 158, 11, 0.18);
+}
+
+/* Facet checkboxes: amber accent squares (input. prefix outranks the forms-plugin base styles) */
+input.facet-input {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  border: 1px solid var(--border-subtle);
+  background: var(--surface-secondary);
+  display: inline-grid;
+  place-content: center;
+  cursor: pointer;
+  transition: background-color 120ms ease, border-color 120ms ease;
+  flex-shrink: 0;
+}
+input.facet-input::before {
+  content: "";
+  width: 9px;
+  height: 9px;
+  transform: scale(0);
+  transition: transform 120ms ease;
+  background: var(--bg-canvas);
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+}
+input.facet-input:checked {
+  background: var(--amber);
+  border-color: var(--amber);
+}
+input.facet-input:checked::before { transform: scale(1); }
+input.facet-input:focus-visible {
+  outline: 2px solid rgba(245, 158, 11, 0.6);
+  outline-offset: 2px;
+}
+
+/* Compare checkbox: same amber treatment as facets */
+input.compare-input {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  border: 1px solid var(--border-subtle);
+  background: var(--surface-secondary);
+  display: inline-grid;
+  place-content: center;
+  cursor: pointer;
+  transition: background-color 120ms ease, border-color 120ms ease;
+  flex-shrink: 0;
+}
+input.compare-input::before {
+  content: "";
+  width: 9px;
+  height: 9px;
+  transform: scale(0);
+  transition: transform 120ms ease;
+  background: var(--bg-canvas);
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+}
+input.compare-input:checked { background: var(--blue); border-color: var(--blue); }
+input.compare-input:checked::before { transform: scale(1); }
+input.compare-input:focus-visible {
+  outline: 2px solid rgba(123, 208, 255, 0.6);
+  outline-offset: 2px;
+}
+
+/* Hide horizontal scrollbar on the pill rail */
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-none::-webkit-scrollbar { display: none; }
+
+/* Pagination buttons */
+.page-btn {
+  transition: background-color 150ms ease, color 150ms ease, border-color 150ms ease;
+}
+.page-btn:not(:disabled):not(.is-active):hover {
+  border-color: rgba(123, 208, 255, 0.4);
+  color: #F1F5F9;
+}
+.page-btn.is-active {
+  background: var(--amber);
+  border-color: var(--amber);
+  color: var(--bg-canvas);
+  font-weight: 600;
+  box-shadow: 0 0 0 1px rgba(245, 158, 11, 0.25), 0 2px 10px rgba(245, 158, 11, 0.18);
+}
+
+/* kbd refinement */
+kbd.key-hint {
+  font-family: "JetBrains Mono", monospace;
+  box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.06);
+  letter-spacing: 0.02em;
+}
+
+/* Mobile menu */
+#mobile-menu:not([hidden]) { animation: menu-in 160ms ease; }
+@keyframes menu-in {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Modal overlay */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: rgba(4, 8, 12, 0.72);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 1rem;
+  overflow-y: auto;
+}
+.modal-overlay:not([hidden]) { animation: fade-in 160ms ease; }
+@keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
+.modal-panel { animation: rise 220ms cubic-bezier(0.22, 1, 0.36, 1) both; }
+
+/* Compare table */
+.compare-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.compare-table th {
+  font-family: "Geist", sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #94A3B8;
+  font-weight: 500;
+  text-align: left;
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--border-subtle);
+  white-space: nowrap;
+  vertical-align: bottom;
+}
+.compare-table td {
+  padding: 8px 12px;
+  border-bottom: 1px solid rgba(39, 51, 65, 0.55);
+  vertical-align: top;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: var(--bg-canvas); }
+::-webkit-scrollbar-thumb {
+  background: #26313d;
+  border-radius: 8px;
+  border: 2px solid var(--bg-canvas);
+}
+::-webkit-scrollbar-thumb:hover { background: #33414f; }
+* { scrollbar-width: thin; scrollbar-color: #26313d var(--bg-canvas); }
+
+h1, h2, h3 { text-wrap: balance; }
+.font-code-badge, .font-code-param { font-feature-settings: "zero" 1; }
+
+/* Card entrance */
+.rise { animation: rise 450ms cubic-bezier(0.22, 1, 0.36, 1) both; }
+@keyframes rise {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .rise, #mobile-menu:not([hidden]), .modal-overlay:not([hidden]), .modal-panel { animation: none; }
+  .ui-card, .pill, .btn-amber, .page-btn { transition: none; }
+}
+
+/* Screen-reader-only helper (used by table action headers) */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+</style>
+<link rel="stylesheet" href="assets/site.css"/>
+<link rel="canonical" href="models.html"/>
+<style>
+/* Phase 5 utility pages */
+main > * { min-width: 0; }
+
+.terminal-output {
+  height: 380px;
+  min-height: 240px;
+  overflow-y: auto;
+  padding: 14px 16px;
+  line-height: 1.65;
+  font-size: 13px;
+  background: #0b1117;
+}
+.terminal-line { white-space: pre-wrap; word-break: break-word; color: #cbd5e1; }
+.terminal-line--cmd { color: #ffb95f; }
+.terminal-line--err { color: #F87171; }
+.terminal-line--ok { color: #4de6aa; }
+.terminal-line--muted { color: #94A3B8; }
+.terminal-line--head { color: #7bd0ff; font-weight: 600; }
+
+.api-code {
+  font-size: 12.5px;
+  line-height: 1.6;
+  white-space: pre;
+  color: #cbd5e1;
+}
+
+/* Fixed layout keeps hashes and paths from inflating the document width on narrow screens. */
+.p5-table { width: 100%; table-layout: fixed; }
+.p5-table th,
+.p5-table td { overflow-wrap: anywhere; }
+.p5-table code { overflow-wrap: anywhere; }
+.p5-table td:first-child { white-space: normal; }
+
+input.p5-input, select.p5-input, textarea.p5-input {
+  width: 100%;
+  background: #111820;
+  border: 1px solid #273341;
+  border-radius: 0.375rem;
+  color: #F1F5F9;
+  font-family: Geist, sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  padding: 0.5rem 0.7rem;
+}
+input.p5-input::placeholder, textarea.p5-input::placeholder { color: #94A3B8; }
+input.p5-input:focus, select.p5-input:focus, textarea.p5-input:focus {
+  outline: none;
+  border-color: #f59e0b;
+  box-shadow: 0 0 0 2px rgba(245, 158, 11, 0.18);
+}
+input.p5-input[aria-invalid="true"], select.p5-input[aria-invalid="true"], textarea.p5-input[aria-invalid="true"] {
+  border-color: #F87171;
+  box-shadow: 0 0 0 2px rgba(248, 113, 113, 0.15);
+}
+.p5-error {
+  font-family: Geist, sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  color: #F87171;
+}
+
+.docs-jump {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid #273341;
+  background: #111820;
+  border-radius: 9999px;
+  padding: 0.25rem 0.7rem;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 12px;
+  color: #7bd0ff;
+  transition: border-color 120ms ease, color 120ms ease;
+}
+.docs-jump:hover { border-color: #7bd0ff; color: #F1F5F9; }
+
+@media (prefers-reduced-motion: reduce) {
+  .docs-jump { transition: none; }
+}
+
+</style>
+<meta name="theme-color" content="#090D12"/>
+<meta name="robots" content="index, follow"/>
+<meta property="og:type" content="website"/>
+<meta property="og:site_name" content="DevSpire Nexus"/>
+<meta property="og:title" content="Static Catalog API | DevSpire Nexus"/>
+<meta property="og:description" content="Static JSON files generated from the DevSpire Nexus catalog datasets, with counts and checksums. No hosted endpoint."/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Static Catalog API | DevSpire Nexus"/>
+<meta name="twitter:description" content="Static JSON files generated from the DevSpire Nexus catalog datasets, with counts and checksums. No hosted endpoint."/>
+</head>
+<body class="bg-bg-canvas text-text-primary min-h-screen flex flex-col font-body-default antialiased selection:bg-primary-container selection:text-bg-canvas">
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<header class="w-full border-b border-border-subtle dark:border-border-subtle sticky top-0 z-50 site-header">
+<div class="flex justify-between items-center w-full px-4 sm:px-gutter-lg max-w-[1360px] mx-auto h-14">
+<div class="flex items-center gap-2 sm:gap-space-lg min-w-0">
+<a class="font-title-card text-text-primary dark:text-text-primary tracking-tight font-semibold flex items-center gap-2 sm:gap-space-sm whitespace-nowrap text-[15px] sm:text-title-card shrink-0" href="directory.html">
+<img src="assets/img/devspirehub-gears-128.png" alt="DevSpire Nexus logo" class="brand-mark w-7 h-7 rounded-lg object-cover shrink-0" width="28" height="28"/>
+<span class="flex flex-col leading-tight min-w-0"><span class="hidden sm:inline">DevSpire Nexus</span><span class="hidden xl:inline font-metadata-label text-[10px] font-normal tracking-[0.14em] text-text-muted uppercase">AI Intelligence Directory</span></span>
+</a>
+<nav class="hidden lg:flex items-center gap-3 xl:gap-space-md ml-2 xl:ml-space-md" aria-label="Primary">
+<a class="text-text-muted dark:text-text-muted font-body-compact text-body-compact hover:text-text-primary dark:hover:text-text-primary transition-colors whitespace-nowrap" href="directory.html">Discover</a>
+<a class="text-text-muted dark:text-text-muted font-body-compact text-body-compact hover:text-text-primary dark:hover:text-text-primary transition-colors whitespace-nowrap" href="ai-tools.html">AI Tools</a>
+<a class="text-text-muted dark:text-text-muted font-body-compact text-body-compact hover:text-text-primary dark:hover:text-text-primary transition-colors whitespace-nowrap" href="models.html">AI Models</a>
+<a class="text-text-muted dark:text-text-muted font-body-compact text-body-compact hover:text-text-primary dark:hover:text-text-primary transition-colors whitespace-nowrap" href="developer-resources.html">Developer Resources</a>
+<a class="text-text-muted dark:text-text-muted font-body-compact text-body-compact hover:text-text-primary dark:hover:text-text-primary transition-colors whitespace-nowrap" href="collections.html">My Collections</a>
+<a class="text-text-muted dark:text-text-muted font-body-compact text-body-compact hover:text-text-primary dark:hover:text-text-primary transition-colors whitespace-nowrap" href="about.html">About</a>
+<a class="text-text-muted dark:text-text-muted font-body-compact text-body-compact hover:text-text-primary dark:hover:text-text-primary transition-colors whitespace-nowrap inline-flex items-center gap-1" href="https://devspirehub.com/" target="_blank" rel="noopener">DevSpireHub<span class="material-symbols-outlined text-[14px]" data-icon="arrow_outward" aria-hidden="true">arrow_outward</span></a>
+</nav>
+</div>
+<div class="flex items-center gap-1.5 sm:gap-space-sm shrink-0">
+<a class="hidden sm:inline-flex items-center gap-1.5 bg-surface-card border border-border-subtle rounded px-2.5 py-1.5 font-body-compact text-body-compact text-text-muted hover:border-secondary hover:text-secondary dark:hover:border-secondary dark:hover:text-secondary transition-colors duration-150" href="terminal.html" id="terminal-nav-btn" aria-label="Open Terminal" title="Open Terminal">
+<span class="material-symbols-outlined text-[16px]" data-icon="terminal" aria-hidden="true">terminal</span>
+<span class="text-xs">Terminal</span>
+<kbd class="font-code-badge text-code-badge bg-surface-secondary px-1.5 py-0.5 rounded text-[11px] border border-border-subtle text-text-muted key-hint">&#96;</kbd>
+</a>
+<a class="inline-flex items-center justify-center gap-1.5 bg-primary-container text-bg-canvas font-body-compact font-semibold px-2.5 sm:px-3 py-1.5 rounded text-[13px] sm:text-body-compact hover:brightness-110 transition-all" href="submit.html">
+<span class="material-symbols-outlined text-[16px]" data-icon="add" aria-hidden="true">add</span>Submit Resource</a>
+<button class="lg:hidden inline-flex items-center justify-center w-8 h-8 rounded bg-surface-card border border-border-subtle text-text-muted hover:text-text-primary transition-colors" id="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+<span class="material-symbols-outlined text-[18px]" data-icon="menu" aria-hidden="true">menu</span>
+</button>
+</div>
+</div>
+<div class="lg:hidden hidden border-t border-border-subtle bg-surface-secondary/95 backdrop-blur" id="mobile-menu">
+<nav class="flex flex-col px-4 sm:px-gutter-lg py-3 gap-1" aria-label="Mobile">
+<a class="text-text-muted hover:text-text-primary font-body-compact text-body-compact py-2 border-b border-border-subtle/50 transition-colors" href="directory.html">Discover</a>
+<a class="text-text-muted hover:text-text-primary font-body-compact text-body-compact py-2 border-b border-border-subtle/50 transition-colors" href="ai-tools.html">AI Tools</a>
+<a class="text-text-muted hover:text-text-primary font-body-compact text-body-compact py-2 border-b border-border-subtle/50 transition-colors" href="models.html">AI Models</a>
+<a class="text-text-muted hover:text-text-primary font-body-compact text-body-compact py-2 border-b border-border-subtle/50 transition-colors" href="developer-resources.html">Developer Resources</a>
+<a class="text-text-muted hover:text-text-primary font-body-compact text-body-compact py-2 border-b border-border-subtle/50 transition-colors" href="collections.html">My Collections</a>
+<a class="text-text-muted hover:text-text-primary font-body-compact text-body-compact py-2 border-b border-border-subtle/50 transition-colors" href="about.html">About</a>
+<a class="text-text-muted hover:text-text-primary font-body-compact text-body-compact py-2 border-b border-border-subtle/50 transition-colors inline-flex items-center gap-2" href="terminal.html"><span class="material-symbols-outlined text-[16px]" aria-hidden="true">terminal</span>Terminal</a>
+<a class="text-text-muted hover:text-text-primary font-body-compact text-body-compact py-2 border-b border-border-subtle/50 transition-colors" href="submit.html">Submit Resource</a>
+<a class="text-text-muted hover:text-text-primary font-body-compact text-body-compact py-2 border-b border-border-subtle/50 transition-colors inline-flex items-center gap-1" href="https://devspirehub.com/" target="_blank" rel="noopener">DevSpireHub<span class="material-symbols-outlined text-[14px]" aria-hidden="true">arrow_outward</span></a>
+<a class="text-text-muted hover:text-text-primary font-body-compact text-body-compact py-2 transition-colors inline-flex items-center gap-1" href="https://devspirehub.com/Website/about/about.html" target="_blank" rel="noopener">About DevSpireHub<span class="material-symbols-outlined text-[14px]" aria-hidden="true">arrow_outward</span></a>
+</nav>
+</div>
+</header>
+<main id="main-content" class="w-full max-w-[1360px] mx-auto px-4 sm:px-gutter-lg py-space-lg flex-1 flex flex-col">
+<nav class="flex items-center gap-space-xs text-metadata-label font-metadata-label text-text-muted mb-space-sm" aria-label="Breadcrumb">
+<a class="hover:text-text-primary transition-colors" href="directory.html">Home</a>
+<span class="text-border-subtle">/</span>
+<span class="text-primary-container">Static API</span>
+</nav>
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md mb-space-lg pb-space-md border-b border-border-subtle">
+<div>
+<p class="font-metadata-label text-metadata-label text-primary-container uppercase tracking-[0.18em] mb-1">Machine-readable catalog</p>
+<h1 class="font-display-hero-mobile text-display-hero-mobile sm:font-display-hero sm:text-display-hero text-text-primary tracking-tight">Static Catalog API</h1>
+<p class="font-body-compact text-body-compact text-text-muted mt-1 max-w-3xl">
+          Plain JSON files generated from the same datasets the pages use. 1003 records across 3 registries, generated 2026-11-06.
+        </p>
+</div>
+<div class="flex items-center gap-2 self-start md:self-auto bg-surface-secondary border border-border-subtle px-3 py-1.5 rounded">
+<span class="w-2 h-2 rounded-full bg-status-warning"></span>
+<span class="font-code-badge text-code-badge text-text-primary">STATIC FILES · NO HOSTED ENDPOINT</span>
+</div>
+</div>
+<div class="rounded-xl border border-status-warning/40 bg-status-warning/10 p-4 flex items-start gap-3 mb-space-lg" role="note">
+<span class="material-symbols-outlined text-status-warning text-xl shrink-0" aria-hidden="true" data-icon="info">info</span>
+<div class="min-w-0">
+<p class="font-body-compact text-body-compact text-text-primary font-medium">There is no API server in this build.</p>
+<p class="font-metadata-label text-metadata-label text-text-muted mt-0.5">The files below are shipped with the site. They are read-only, require no authentication, and make no availability or freshness guarantees beyond the recorded generation date. When the site is served over HTTP, they can be fetched like any static asset. Opening the page from <code class="font-code-badge">file://</code> blocks <code class="font-code-badge">fetch()</code> in most browsers — use the Open links instead.</p>
+</div>
+</div>
+<section class="mb-space-lg">
+<h2 class="font-title-card text-title-card text-text-primary mb-1">Files</h2>
+<p class="font-body-compact text-body-compact text-text-muted mb-4">Counts and checksums are read from the generated manifest at build time.</p>
+<div class="ui-card rounded-xl">
+<div class="hidden sm:block overflow-x-auto">
+<table class="p5-table text-left border-collapse">
+<colgroup>
+<col style="width:30%"/><col style="width:36%"/><col style="width:12%"/><col style="width:12%"/><col style="width:10%"/>
+</colgroup>
+<thead>
+<tr class="border-b border-border-subtle">
+<th scope="col" class="px-4 py-2.5 font-metadata-label text-metadata-label text-text-muted uppercase tracking-wider">Path</th>
+<th scope="col" class="px-4 py-2.5 font-metadata-label text-metadata-label text-text-muted uppercase tracking-wider">Contents</th>
+<th scope="col" class="px-4 py-2.5 font-metadata-label text-metadata-label text-text-muted uppercase tracking-wider">Records</th>
+<th scope="col" class="px-4 py-2.5 font-metadata-label text-metadata-label text-text-muted uppercase tracking-wider">SHA-256</th>
+<th scope="col" class="px-4 py-2.5 font-metadata-label text-metadata-label text-text-muted uppercase tracking-wider"><span class="visually-hidden">Actions</span></th>
+</tr>
+</thead>
+<tbody class="font-body-compact text-body-compact">
+<tr class="border-b border-border-subtle/50"><td class="px-4 py-2.5 font-code-param text-code-param text-secondary">api/catalog.json</td><td class="px-4 py-2.5 text-text-muted">Manifest: file paths, counts, generation date, SHA-256 checksums</td><td class="px-4 py-2.5 font-code-param text-code-param text-text-primary">1003 total</td><td class="px-4 py-2.5 font-code-param text-code-param text-text-muted">—</td><td class="px-4 py-2.5"><div class="flex flex-col xl:flex-row xl:items-center gap-1 xl:gap-2"><a class="text-secondary hover:underline font-metadata-label text-metadata-label" href="api/catalog.json" target="_blank" rel="noopener">Open</a><button class="text-left text-text-muted hover:text-text-primary font-metadata-label text-metadata-label" type="button" data-copy="api/catalog.json">Copy path</button></div></td></tr>
+<tr class="border-b border-border-subtle/50"><td class="px-4 py-2.5 font-code-param text-code-param text-secondary">api/tools.json</td><td class="px-4 py-2.5 text-text-muted">AI Tools records with a <code class="font-code-badge">_meta</code> envelope · last verified 2026-11-04</td><td class="px-4 py-2.5 font-code-param text-code-param text-text-primary">403</td><td class="px-4 py-2.5 font-code-param text-code-param text-text-muted" title="24168ba365ddb6985b8dbb1f57944e7fd1bc22d108921f1053bb89d7751ed09a">24168ba365dd…</td><td class="px-4 py-2.5"><div class="flex flex-col xl:flex-row xl:items-center gap-1 xl:gap-2"><a class="text-secondary hover:underline font-metadata-label text-metadata-label" href="api/tools.json" target="_blank" rel="noopener">Open</a><button class="text-left text-text-muted hover:text-text-primary font-metadata-label text-metadata-label" type="button" data-copy="api/tools.json">Copy path</button></div></td></tr>
+<tr class="border-b border-border-subtle/50"><td class="px-4 py-2.5 font-code-param text-code-param text-secondary">api/models.json</td><td class="px-4 py-2.5 text-text-muted">AI Models records with a <code class="font-code-badge">_meta</code> envelope · last verified 2026-11-04</td><td class="px-4 py-2.5 font-code-param text-code-param text-text-primary">300</td><td class="px-4 py-2.5 font-code-param text-code-param text-text-muted" title="d4382f7eba4488d1dc6ca875641af13b37833b6b3774ed59d10baedc53826645">d4382f7eba44…</td><td class="px-4 py-2.5"><div class="flex flex-col xl:flex-row xl:items-center gap-1 xl:gap-2"><a class="text-secondary hover:underline font-metadata-label text-metadata-label" href="api/models.json" target="_blank" rel="noopener">Open</a><button class="text-left text-text-muted hover:text-text-primary font-metadata-label text-metadata-label" type="button" data-copy="api/models.json">Copy path</button></div></td></tr>
+<tr class="border-b border-border-subtle/50"><td class="px-4 py-2.5 font-code-param text-code-param text-secondary">api/developer-resources.json</td><td class="px-4 py-2.5 text-text-muted">Developer Resources records with a <code class="font-code-badge">_meta</code> envelope · last verified 2026-11-04</td><td class="px-4 py-2.5 font-code-param text-code-param text-text-primary">300</td><td class="px-4 py-2.5 font-code-param text-code-param text-text-muted" title="fa19cc4afe3a7ff4074638a2196983e859879ea589cc6fb260665f26f37e5401">fa19cc4afe3a…</td><td class="px-4 py-2.5"><div class="flex flex-col xl:flex-row xl:items-center gap-1 xl:gap-2"><a class="text-secondary hover:underline font-metadata-label text-metadata-label" href="api/developer-resources.json" target="_blank" rel="noopener">Open</a><button class="text-left text-text-muted hover:text-text-primary font-metadata-label text-metadata-label" type="button" data-copy="api/developer-resources.json">Copy path</button></div></td></tr>
+</tbody>
+</table>
+</div>
+<ul class="sm:hidden divide-y divide-border-subtle/60" id="file-list"><li class="p-4">
+<div class="flex items-start justify-between gap-3">
+<code class="font-code-param text-code-param text-secondary break-all">api/catalog.json</code>
+<span class="font-code-param text-code-param text-text-primary shrink-0">1003 total</span>
+</div>
+<p class="font-metadata-label text-metadata-label text-text-muted mt-1">Manifest · catalog sizes and checksums</p>
+
+<div class="flex flex-wrap items-center gap-3 mt-2">
+<a class="text-secondary hover:underline font-metadata-label text-metadata-label" href="api/catalog.json" target="_blank" rel="noopener">Open</a>
+<button class="text-left text-text-muted hover:text-text-primary font-metadata-label text-metadata-label" type="button" data-copy="api/catalog.json">Copy path</button>
+</div>
+</li>
+<li class="p-4">
+<div class="flex items-start justify-between gap-3">
+<code class="font-code-param text-code-param text-secondary break-all">api/tools.json</code>
+<span class="font-code-param text-code-param text-text-primary shrink-0">403</span>
+</div>
+<p class="font-metadata-label text-metadata-label text-text-muted mt-1">AI Tools · last verified 2026-11-04</p>
+<p class="font-code-badge text-code-badge text-text-muted mt-1"><span class="text-text-muted">SHA-256</span> 24168ba365ddb698…</p>
+<div class="flex flex-wrap items-center gap-3 mt-2">
+<a class="text-secondary hover:underline font-metadata-label text-metadata-label" href="api/tools.json" target="_blank" rel="noopener">Open</a>
+<button class="text-left text-text-muted hover:text-text-primary font-metadata-label text-metadata-label" type="button" data-copy="api/tools.json">Copy path</button>
+</div>
+</li>
+<li class="p-4">
+<div class="flex items-start justify-between gap-3">
+<code class="font-code-param text-code-param text-secondary break-all">api/models.json</code>
+<span class="font-code-param text-code-param text-text-primary shrink-0">300</span>
+</div>
+<p class="font-metadata-label text-metadata-label text-text-muted mt-1">AI Models · last verified 2026-11-04</p>
+<p class="font-code-badge text-code-badge text-text-muted mt-1"><span class="text-text-muted">SHA-256</span> d4382f7eba4488d1…</p>
+<div class="flex flex-wrap items-center gap-3 mt-2">
+<a class="text-secondary hover:underline font-metadata-label text-metadata-label" href="api/models.json" target="_blank" rel="noopener">Open</a>
+<button class="text-left text-text-muted hover:text-text-primary font-metadata-label text-metadata-label" type="button" data-copy="api/models.json">Copy path</button>
+</div>
+</li>
+<li class="p-4">
+<div class="flex items-start justify-between gap-3">
+<code class="font-code-param text-code-param text-secondary break-all">api/developer-resources.json</code>
+<span class="font-code-param text-code-param text-text-primary shrink-0">300</span>
+</div>
+<p class="font-metadata-label text-metadata-label text-text-muted mt-1">Developer Resources · last verified 2026-11-04</p>
+<p class="font-code-badge text-code-badge text-text-muted mt-1"><span class="text-text-muted">SHA-256</span> fa19cc4afe3a7ff4…</p>
+<div class="flex flex-wrap items-center gap-3 mt-2">
+<a class="text-secondary hover:underline font-metadata-label text-metadata-label" href="api/developer-resources.json" target="_blank" rel="noopener">Open</a>
+<button class="text-left text-text-muted hover:text-text-primary font-metadata-label text-metadata-label" type="button" data-copy="api/developer-resources.json">Copy path</button>
+</div>
+</li></ul>
+</div>
+</section>
+<section class="mb-space-lg">
+<div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+<h2 class="font-title-card text-title-card text-text-primary">Manifest sample</h2>
+<button class="inline-flex items-center gap-1.5 bg-surface-card border border-border-subtle rounded px-3 py-1.5 font-code-badge text-code-badge text-text-primary hover:border-secondary transition-colors" type="button" data-copy-target="manifest-sample">
+<span class="material-symbols-outlined text-[14px]" aria-hidden="true" data-icon="content_copy">content_copy</span>Copy JSON
+</button>
+</div>
+<p class="font-body-compact text-body-compact text-text-muted mb-3">The exact <code class="font-code-badge">api/catalog.json</code> generated with this page.</p>
+<pre class="api-code rounded-xl border border-border-subtle bg-surface-secondary p-4 overflow-x-auto font-code-param" id="manifest-sample">{
+  &quot;name&quot;: &quot;AI Resource Intelligence static catalog&quot;,
+  &quot;api_version&quot;: &quot;1.0&quot;,
+  &quot;generated&quot;: &quot;2026-11-06&quot;,
+  &quot;kind&quot;: &quot;static-files&quot;,
+  &quot;note&quot;: &quot;Static JSON files shipped with the site. No hosted API, no authentication, no live endpoint.&quot;,
+  &quot;total_records&quot;: 1003,
+  &quot;registries&quot;: {
+    &quot;tools&quot;: {
+      &quot;label&quot;: &quot;AI Tools&quot;,
+      &quot;file&quot;: &quot;api/tools.json&quot;,
+      &quot;count&quot;: 403,
+      &quot;category_count&quot;: 14,
+      &quot;last_verified&quot;: &quot;2026-11-04&quot;,
+      &quot;bytes&quot;: 603996,
+      &quot;sha256&quot;: &quot;24168ba365ddb6985b8dbb1f57944e7fd1bc22d108921f1053bb89d7751ed09a&quot;
+    },
+    &quot;models&quot;: {
+      &quot;label&quot;: &quot;AI Models&quot;,
+      &quot;file&quot;: &quot;api/models.json&quot;,
+      &quot;count&quot;: 300,
+      &quot;category_count&quot;: 12,
+      &quot;last_verified&quot;: &quot;2026-11-04&quot;,
+      &quot;bytes&quot;: 486148,
+      &quot;sha256&quot;: &quot;d4382f7eba4488d1dc6ca875641af13b37833b6b3774ed59d10baedc53826645&quot;
+    },
+    &quot;developer-resources&quot;: {
+      &quot;label&quot;: &quot;Developer Resources&quot;,
+      &quot;file&quot;: &quot;api/developer-resources.json&quot;,
+      &quot;count&quot;: 300,
+      &quot;category_count&quot;: 12,
+      &quot;last_verified&quot;: &quot;2026-11-04&quot;,
+      &quot;bytes&quot;: 552206,
+      &quot;sha256&quot;: &quot;fa19cc4afe3a7ff4074638a2196983e859879ea589cc6fb260665f26f37e5401&quot;
+    }
+  }
+}</pre>
+<p class="font-metadata-label text-metadata-label text-text-muted mt-2" id="copy-status" role="status" aria-live="polite"></p>
+</section>
+<section class="mb-space-lg">
+<h2 class="font-title-card text-title-card text-text-primary mb-1">Response shape</h2>
+<p class="font-body-compact text-body-compact text-text-muted mb-4">Every registry file uses the same envelope. Record fields vary by registry; fields the source did not state are <code class="font-code-badge">null</code>, empty, or absent.</p>
+<div class="ui-card rounded-xl overflow-x-auto">
+<table class="p5-table text-left border-collapse">
+<colgroup>
+<col style="width:24%"/><col style="width:14%"/><col style="width:62%"/>
+</colgroup>
+<thead>
+<tr class="border-b border-border-subtle">
+<th scope="col" class="px-4 py-2.5 font-metadata-label text-metadata-label text-text-muted uppercase tracking-wider">Field</th>
+<th scope="col" class="px-4 py-2.5 font-metadata-label text-metadata-label text-text-muted uppercase tracking-wider">Type</th>
+<th scope="col" class="px-4 py-2.5 font-metadata-label text-metadata-label text-text-muted uppercase tracking-wider">Notes</th>
+</tr>
+</thead>
+<tbody class="font-body-compact text-body-compact">
+<tr class="border-b border-border-subtle/50"><td class="px-4 py-2.5 font-code-param text-code-param text-secondary whitespace-nowrap">_meta</td><td class="px-4 py-2.5 text-text-muted">object</td><td class="px-4 py-2.5 text-text-muted">Registry name, label, API version, generation date, record and category counts, source, and last-verified date.</td></tr>
+<tr class="border-b border-border-subtle/50"><td class="px-4 py-2.5 font-code-param text-code-param text-secondary whitespace-nowrap">records</td><td class="px-4 py-2.5 text-text-muted">array</td><td class="px-4 py-2.5 text-text-muted">Catalog records. Arrays are stable for a given generated file.</td></tr>
+<tr class="border-b border-border-subtle/50"><td class="px-4 py-2.5 font-code-param text-code-param text-secondary whitespace-nowrap">id</td><td class="px-4 py-2.5 text-text-muted">string</td><td class="px-4 py-2.5 text-text-muted">Stable identifier used by the page deep links (<code class="font-code-badge">#tool/&lt;id&gt;</code>, <code class="font-code-badge">#model/&lt;id&gt;</code>, <code class="font-code-badge">#resource/&lt;id&gt;</code>).</td></tr>
+<tr class="border-b border-border-subtle/50"><td class="px-4 py-2.5 font-code-param text-code-param text-secondary whitespace-nowrap">name, description</td><td class="px-4 py-2.5 text-text-muted">string</td><td class="px-4 py-2.5 text-text-muted">Display name and the description carried over from the source.</td></tr>
+<tr class="border-b border-border-subtle/50"><td class="px-4 py-2.5 font-code-param text-code-param text-secondary whitespace-nowrap">category</td><td class="px-4 py-2.5 text-text-muted">string</td><td class="px-4 py-2.5 text-text-muted">Normalized catalog category. <code class="font-code-badge">source_category</code> keeps the source label.</td></tr>
+<tr class="border-b border-border-subtle/50"><td class="px-4 py-2.5 font-code-param text-code-param text-secondary whitespace-nowrap">official_url</td><td class="px-4 py-2.5 text-text-muted">string</td><td class="px-4 py-2.5 text-text-muted">Publisher URL recorded in the catalog. Always inspect before relying on it.</td></tr>
+<tr class="border-b border-border-subtle/50"><td class="px-4 py-2.5 font-code-param text-code-param text-secondary whitespace-nowrap">license, pricing</td><td class="px-4 py-2.5 text-text-muted">string | null</td><td class="px-4 py-2.5 text-text-muted">Only the stated value; null when the source is silent.</td></tr>
+<tr class="border-b border-border-subtle/50"><td class="px-4 py-2.5 font-code-param text-code-param text-secondary whitespace-nowrap">tags</td><td class="px-4 py-2.5 text-text-muted">string[]</td><td class="px-4 py-2.5 text-text-muted">Search and display tags from the catalog.</td></tr>
+<tr class="border-b border-border-subtle/50"><td class="px-4 py-2.5 font-code-param text-code-param text-secondary whitespace-nowrap">evidence</td><td class="px-4 py-2.5 text-text-muted">[label, url][]</td><td class="px-4 py-2.5 text-text-muted">Source links used to verify the record.</td></tr>
+<tr class="border-b border-border-subtle/50"><td class="px-4 py-2.5 font-code-param text-code-param text-secondary whitespace-nowrap">verified, status</td><td class="px-4 py-2.5 text-text-muted">string</td><td class="px-4 py-2.5 text-text-muted">Verification date and lifecycle status recorded in the catalog.</td></tr>
+<tr><td class="px-4 py-2.5 font-code-param text-code-param text-secondary whitespace-nowrap">Registry-specific</td><td class="px-4 py-2.5 text-text-muted">varies</td><td class="px-4 py-2.5 text-text-muted">Tools: <code class="font-code-badge">org</code>, <code class="font-code-badge">platform</code>, <code class="font-code-badge">hosting</code>. Models: <code class="font-code-badge">publisher</code>, <code class="font-code-badge">params</code>, <code class="font-code-badge">context_k</code>, <code class="font-code-badge">modalities</code>. Resources: <code class="font-code-badge">resource_subtype</code>, <code class="font-code-badge">programming_languages</code>, <code class="font-code-badge">api_url</code>, <code class="font-code-badge">documentation_url</code>.</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+<section class="mb-space-lg">
+<h2 class="font-title-card text-title-card text-text-primary mb-1">Reading a file</h2>
+<p class="font-body-compact text-body-compact text-text-muted mb-3">When these files are served over HTTP from the site root, a static fetch returns the JSON envelope. Nothing is mutated and there are no write endpoints.</p>
+<pre class="api-code rounded-xl border border-border-subtle bg-surface-secondary p-4 overflow-x-auto font-code-param">const res = await fetch('api/tools.json');
+const { _meta, records } = await res.json();
+console.log(_meta.count, records.map((r) =&gt; r.id));</pre>
+</section>
+<p class="font-metadata-label text-metadata-label text-text-muted">Generated by <code class="font-code-badge">node .qa/api-build.js</code> from <code class="font-code-badge">data/ai-tools.js</code>, <code class="font-code-badge">data/ai-models.js</code>, and <code class="font-code-badge">data/developer-resources.js</code>. See <a class="text-secondary hover:underline" href="docs.html">Documentation</a> for the schema and pipeline.</p>
+</main>
+<footer class="w-full bg-bg-canvas dark:bg-bg-canvas border-t border-border-subtle dark:border-border-subtle mt-space-xl">
+<div class="w-full max-w-[1360px] mx-auto px-4 sm:px-gutter-lg py-space-lg">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[minmax(0,1.5fr)_repeat(4,minmax(0,1fr))] gap-x-space-lg gap-y-space-md">
+<div class="flex flex-col gap-2 sm:col-span-2 lg:col-span-1">
+<span class="font-title-card text-title-card text-text-primary font-semibold">DevSpire Nexus</span>
+<p class="font-metadata-label text-metadata-label text-primary">Discover. Connect. Build.</p>
+<p class="font-metadata-label text-metadata-label text-text-muted max-w-xs">AI Intelligence Directory</p>
+<p class="font-metadata-label text-metadata-label text-text-muted max-w-xs">DevSpire Nexus is a product of DevSpireHub.com.</p>
+<p class="font-metadata-label text-metadata-label text-text-muted max-w-xs">Source: DevSpireHub AI knowledge base · ai-tools-models-developer-resources.md</p>
+</div>
+<nav aria-labelledby="footer-explore">
+<h2 class="font-metadata-label text-metadata-label uppercase tracking-[0.16em] text-text-primary mb-2" id="footer-explore">Explore</h2>
+<ul class="flex flex-col gap-1.5">
+<li><a class="text-text-muted dark:text-text-muted font-metadata-label text-metadata-label hover:text-text-primary dark:hover:text-text-primary transition-colors" href="directory.html">Directory</a></li>
+<li><a class="text-text-muted dark:text-text-muted font-metadata-label text-metadata-label hover:text-text-primary dark:hover:text-text-primary transition-colors" href="ai-tools.html">AI Tools</a></li>
+<li><a class="text-text-muted dark:text-text-muted font-metadata-label text-metadata-label hover:text-text-primary dark:hover:text-text-primary transition-colors" href="models.html">AI Models</a></li>
+<li><a class="text-text-muted dark:text-text-muted font-metadata-label text-metadata-label hover:text-text-primary dark:hover:text-text-primary transition-colors" href="developer-resources.html">Developer Resources</a></li>
+</ul>
+</nav>
+<nav aria-labelledby="footer-product">
+<h2 class="font-metadata-label text-metadata-label uppercase tracking-[0.16em] text-text-primary mb-2" id="footer-product">Product</h2>
+<ul class="flex flex-col gap-1.5">
+<li><a class="text-text-muted dark:text-text-muted font-metadata-label text-metadata-label hover:text-text-primary dark:hover:text-text-primary transition-colors" href="collections.html">My Collections</a></li>
+<li><a class="text-text-muted dark:text-text-muted font-metadata-label text-metadata-label hover:text-text-primary dark:hover:text-text-primary transition-colors" href="about.html">About</a></li>
+<li><a class="text-text-muted dark:text-text-muted font-metadata-label text-metadata-label hover:text-text-primary dark:hover:text-text-primary transition-colors" href="contact.html">Contact</a></li>
+<li><a class="text-text-muted dark:text-text-muted font-metadata-label text-metadata-label hover:text-text-primary dark:hover:text-text-primary transition-colors" href="docs.html">Documentation</a></li>
+<li><a class="text-text-muted dark:text-text-muted font-metadata-label text-metadata-label hover:text-text-primary dark:hover:text-text-primary transition-colors" href="api.html">API and Data Access</a></li>
+<li><a class="text-text-muted dark:text-text-muted font-metadata-label text-metadata-label hover:text-text-primary dark:hover:text-text-primary transition-colors" href="submit.html">Submit Resource</a></li>
+</ul>
+</nav>
+<nav aria-labelledby="footer-legal">
+<h2 class="font-metadata-label text-metadata-label uppercase tracking-[0.16em] text-text-primary mb-2" id="footer-legal">Legal &amp; Information</h2>
+<ul class="flex flex-col gap-1.5">
+<li><a class="text-text-muted dark:text-text-muted font-metadata-label text-metadata-label hover:text-text-primary dark:hover:text-text-primary transition-colors" href="privacy.html">Privacy Policy</a></li>
+<li><a class="text-text-muted dark:text-text-muted font-metadata-label text-metadata-label hover:text-text-primary dark:hover:text-text-primary transition-colors" href="terms.html">Terms of Service</a></li>
+</ul>
+</nav>
+<nav aria-labelledby="footer-devspirehub">
+<h2 class="font-metadata-label text-metadata-label uppercase tracking-[0.16em] text-text-primary mb-2" id="footer-devspirehub">DevSpireHub</h2>
+<ul class="flex flex-col gap-1.5">
+<li><a class="text-text-muted dark:text-text-muted font-metadata-label text-metadata-label hover:text-text-primary dark:hover:text-text-primary transition-colors" href="https://devspirehub.com/" target="_blank" rel="noopener">Main Website<span class="material-symbols-outlined text-[13px] align-middle ml-0.5" aria-hidden="true">arrow_outward</span></a></li>
+<li><a class="text-text-muted dark:text-text-muted font-metadata-label text-metadata-label hover:text-text-primary dark:hover:text-text-primary transition-colors" href="https://devspirehub.com/Website/about/about.html" target="_blank" rel="noopener">About DevSpireHub<span class="material-symbols-outlined text-[13px] align-middle ml-0.5" aria-hidden="true">arrow_outward</span></a></li>
+<li><a class="text-text-muted dark:text-text-muted font-metadata-label text-metadata-label hover:text-text-primary dark:hover:text-text-primary transition-colors" href="https://devspirehub.com/Resources/digital-resources/digital-resources-hub.html" target="_blank" rel="noopener">Learning Resources<span class="material-symbols-outlined text-[13px] align-middle ml-0.5" aria-hidden="true">arrow_outward</span></a></li>
+</ul>
+</nav>
+</div>
+<div class="mt-space-lg pt-space-md border-t border-border-subtle/70 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+<p class="font-metadata-label text-metadata-label text-text-muted">© 2026 DevSpireHub.com · DevSpire Nexus</p>
+<p class="font-metadata-label text-metadata-label text-text-muted">Static catalog · collections stay in your browser · no tracking</p>
+</div>
+</div>
+</footer>
+<script src="data/ai-tools.js"></script>
+<script src="data/ai-models.js"></script>
+<script src="data/developer-resources.js"></script>
+<script src="assets/resource-icons.js"></script>
+<script src="assets/collections.js"></script>
+<script src="assets/status-badges.js"></script>
+<script src="assets/recently-viewed.js"></script>
+<script src="assets/share.js"></script>
+<script>
+(() => {
+  'use strict';
+
+  const status = document.getElementById('copy-status');
+  const say = (text) => { if (status) status.textContent = text; };
+
+  const copyText = async (text) => {
+    try {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        await navigator.clipboard.writeText(text);
+        return true;
+      }
+    } catch {
+      /* fall through */
+    }
+    try {
+      const area = document.createElement('textarea');
+      area.value = text;
+      area.setAttribute('readonly', '');
+      area.style.position = 'fixed';
+      area.style.opacity = '0';
+      document.body.appendChild(area);
+      area.select();
+      const ok = document.execCommand('copy');
+      area.remove();
+      return ok;
+    } catch {
+      return false;
+    }
+  };
+
+  document.querySelectorAll('[data-copy]').forEach((btn) => {
+    btn.addEventListener('click', async () => {
+      const path = btn.getAttribute('data-copy');
+      const ok = await copyText(path);
+      const label = btn.textContent;
+      btn.textContent = ok ? 'Copied' : 'Copy failed';
+      setTimeout(() => { btn.textContent = label; }, 1600);
+      say(ok ? `Copied path: ${path}` : `Copy failed — select ${path} manually.`);
+    });
+  });
+
+  document.querySelectorAll('[data-copy-target]').forEach((btn) => {
+    btn.addEventListener('click', async () => {
+      const target = document.getElementById(btn.getAttribute('data-copy-target'));
+      if (!target) return;
+      const ok = await copyText(target.textContent);
+      say(ok ? 'Manifest JSON copied.' : 'Copy failed — select the JSON manually.');
+    });
+  });
+})();
+
+</script>
+</body>
+</html>

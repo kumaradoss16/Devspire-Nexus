@@ -1,0 +1,34 @@
+const { chromium } = require('playwright-core');
+const EXE = process.env.LOCALAPPDATA + '/ms-playwright/chromium-1248/chrome-win64/chrome.exe';
+const URL = 'file:///H:/Devspirehub AI/developer-resources.html';
+(async () => {
+  const browser = await chromium.launch({ executablePath: EXE });
+  const page = await browser.newPage({ viewport: { width: 1440, height: 1000 } });
+  const errors = [];
+  page.on('console', (m) => { if (m.type() === 'error') errors.push(m.text()); });
+  page.on('pageerror', (e) => errors.push('PAGEERROR ' + e.message));
+  await page.goto(URL, { waitUntil: 'networkidle' });
+  await page.waitForTimeout(700);
+  console.log('cards:', await page.locator('#resource-grid article').count());
+  console.log('pills:', await page.locator('#category-pills button').count());
+  console.log('chip:', await page.textContent('#catalog-chip'));
+  console.log('errors:', errors);
+  await page.screenshot({ path: 'shots/dev-1440.png' });
+  await page.evaluate(() => document.getElementById('resource-grid').scrollIntoView());
+  await page.waitForTimeout(300);
+  await page.screenshot({ path: 'shots/dev-1440-grid.png' });
+  await page.click('#resource-grid article [data-details]');
+  await page.waitForTimeout(400);
+  await page.screenshot({ path: 'shots/dev-detail.png' });
+  console.log('hash after open:', await page.evaluate(() => location.hash));
+  await page.keyboard.press('Escape');
+  await browser.close();
+
+  const b2 = await chromium.launch({ executablePath: EXE });
+  const mp = await b2.newPage({ viewport: { width: 375, height: 800 } });
+  await mp.goto(URL, { waitUntil: 'networkidle' });
+  await mp.waitForTimeout(600);
+  await mp.screenshot({ path: 'shots/dev-375.png' });
+  await b2.close();
+  console.log('shots done');
+})().catch(e => { console.error(e); process.exit(1); });

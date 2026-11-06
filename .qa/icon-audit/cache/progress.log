@@ -1,0 +1,173 @@
+[2026-11-06T06:41:42.799Z] records=1000 targets=753 cached=752 pending=1 concurrency=6
+[2026-11-06T06:41:43.238Z] fetch complete ok=1 failed=0 cached=1 pending=752 targetFailures=0
+[2026-11-06T06:41:43.238Z] dry run: dataset not modified. Re-run with --apply after reviewing cache/state.json
+[2026-11-06T06:42:09.879Z] records=1000 targets=753 cached=1 pending=752 concurrency=8
+[2026-11-06T06:42:11.272Z] progress 10/752 ok=10 failed=0
+[2026-11-06T06:42:12.814Z] progress 20/752 ok=18 failed=2
+[2026-11-06T06:42:14.397Z] progress 30/752 ok=28 failed=2
+[2026-11-06T06:42:15.925Z] progress 40/752 ok=37 failed=3
+[2026-11-06T06:42:17.150Z] progress 50/752 ok=47 failed=3
+[2026-11-06T06:42:18.916Z] progress 60/752 ok=57 failed=3
+[2026-11-06T06:42:20.622Z] progress 70/752 ok=66 failed=4
+[2026-11-06T06:42:22.527Z] progress 80/752 ok=76 failed=4
+[2026-11-06T06:42:23.718Z] progress 90/752 ok=86 failed=4
+[2026-11-06T06:42:24.417Z] progress 100/752 ok=95 failed=5
+[2026-11-06T06:42:25.479Z] progress 110/752 ok=105 failed=5
+[2026-11-06T06:42:27.803Z] progress 120/752 ok=115 failed=5
+[2026-11-06T06:42:29.279Z] progress 130/752 ok=125 failed=5
+[2026-11-06T06:42:30.715Z] progress 140/752 ok=135 failed=5
+[2026-11-06T06:42:32.505Z] progress 150/752 ok=145 failed=5
+[2026-11-06T06:42:35.633Z] progress 160/752 ok=154 failed=6
+[2026-11-06T06:42:37.974Z] progress 170/752 ok=164 failed=6
+[2026-11-06T06:42:39.858Z] progress 180/752 ok=174 failed=6
+[2026-11-06T06:42:41.702Z] progress 190/752 ok=184 failed=6
+[2026-11-06T06:42:42.971Z] progress 200/752 ok=193 failed=7
+[2026-11-06T06:42:44.618Z] progress 210/752 ok=203 failed=7
+[2026-11-06T06:42:46.209Z] progress 220/752 ok=213 failed=7
+[2026-11-06T06:42:48.117Z] progress 230/752 ok=223 failed=7
+[2026-11-06T06:42:49.630Z] progress 240/752 ok=232 failed=8
+[2026-11-06T06:42:50.745Z] progress 250/752 ok=241 failed=9
+[2026-11-06T06:42:52.865Z] progress 260/752 ok=250 failed=10
+[2026-11-06T06:42:54.393Z] progress 270/752 ok=260 failed=10
+[2026-11-06T06:42:55.832Z] progress 280/752 ok=270 failed=10
+[2026-11-06T06:42:58.671Z] progress 290/752 ok=280 failed=10
+[2026-11-06T06:43:00.144Z] progress 300/752 ok=287 failed=13
+[2026-11-06T06:43:01.877Z] progress 310/752 ok=297 failed=13
+[2026-11-06T06:43:04.023Z] progress 320/752 ok=307 failed=13
+[2026-11-06T06:43:05.673Z] progress 330/752 ok=317 failed=13
+[2026-11-06T06:43:07.922Z] progress 340/752 ok=326 failed=14
+[2026-11-06T06:43:11.750Z] progress 350/752 ok=336 failed=14
+[2026-11-06T06:43:13.802Z] progress 360/752 ok=345 failed=15
+[2026-11-06T06:43:17.305Z] progress 370/752 ok=354 failed=16
+[2026-11-06T06:43:21.034Z] progress 380/752 ok=363 failed=17
+[2026-11-06T06:43:23.396Z] progress 390/752 ok=372 failed=18
+[2026-11-06T06:43:25.881Z] progress 400/752 ok=381 failed=19
+[2026-11-06T06:43:28.461Z] progress 410/752 ok=390 failed=20
+[2026-11-06T06:43:29.556Z] progress 420/752 ok=400 failed=20
+[2026-11-06T06:43:31.638Z] progress 430/752 ok=410 failed=20
+[2026-11-06T06:43:33.575Z] progress 440/752 ok=419 failed=21
+[2026-11-06T06:43:35.468Z] progress 450/752 ok=429 failed=21
+[2026-11-06T06:44:04.620Z] records=1000 targets=732 cached=429 pending=303 concurrency=8
+[2026-11-06T06:44:07.586Z] progress 10/303 ok=10 failed=0
+[2026-11-06T06:44:10.408Z] progress 20/303 ok=20 failed=0
+[2026-11-06T06:44:13.794Z] progress 30/303 ok=30 failed=0
+[2026-11-06T06:44:16.065Z] progress 40/303 ok=40 failed=0
+[2026-11-06T06:44:18.437Z] progress 50/303 ok=50 failed=0
+[2026-11-06T06:44:21.028Z] progress 60/303 ok=59 failed=1
+[2026-11-06T06:44:22.716Z] progress 70/303 ok=68 failed=2
+[2026-11-06T06:44:25.928Z] progress 80/303 ok=78 failed=2
+[2026-11-06T06:44:27.982Z] progress 90/303 ok=87 failed=3
+[2026-11-06T06:44:31.413Z] progress 100/303 ok=95 failed=5
+[2026-11-06T06:44:33.223Z] progress 110/303 ok=104 failed=6
+[2026-11-06T06:44:34.661Z] progress 120/303 ok=114 failed=6
+[2026-11-06T06:44:36.721Z] progress 130/303 ok=123 failed=7
+[2026-11-06T06:44:39.517Z] progress 140/303 ok=133 failed=7
+[2026-11-06T06:44:42.514Z] progress 150/303 ok=143 failed=7
+[2026-11-06T06:44:44.801Z] progress 160/303 ok=152 failed=8
+[2026-11-06T06:44:46.462Z] progress 170/303 ok=162 failed=8
+[2026-11-06T06:44:47.725Z] progress 180/303 ok=171 failed=9
+[2026-11-06T06:44:49.001Z] progress 190/303 ok=181 failed=9
+[2026-11-06T06:44:49.846Z] progress 200/303 ok=189 failed=11
+[2026-11-06T06:44:51.083Z] progress 210/303 ok=199 failed=11
+[2026-11-06T06:44:52.278Z] progress 220/303 ok=209 failed=11
+[2026-11-06T06:44:53.561Z] progress 230/303 ok=219 failed=11
+[2026-11-06T06:44:54.764Z] progress 240/303 ok=229 failed=11
+[2026-11-06T06:44:55.907Z] progress 250/303 ok=239 failed=11
+[2026-11-06T06:44:56.964Z] progress 260/303 ok=249 failed=11
+[2026-11-06T06:44:58.150Z] progress 270/303 ok=259 failed=11
+[2026-11-06T06:44:59.405Z] progress 280/303 ok=269 failed=11
+[2026-11-06T06:45:00.612Z] progress 290/303 ok=279 failed=11
+[2026-11-06T06:45:01.710Z] progress 300/303 ok=289 failed=11
+[2026-11-06T06:45:06.803Z] fetch complete ok=290 failed=13 cached=732 pending=0 targetFailures=34
+[2026-11-06T06:45:06.804Z] dry run: dataset not modified. Re-run with --apply after reviewing cache/state.json
+[2026-11-06T06:46:07.947Z] records=1000 targets=740 cached=698 pending=42 concurrency=6
+[2026-11-06T06:46:17.649Z] progress 10/42 ok=0 failed=10
+[2026-11-06T06:46:58.486Z] progress 20/42 ok=0 failed=20
+[2026-11-06T06:47:27.794Z] progress 30/42 ok=3 failed=27
+[2026-11-06T06:51:42.064Z] records=1000 targets=740 cached=728 pending=12 concurrency=4
+[2026-11-06T06:52:06.096Z]   reject https://codefuse.cn/favicon.ico (timeout)
+[2026-11-06T06:52:06.142Z]   reject https://lacework.com/favicon.ico (timeout)
+[2026-11-06T06:52:06.146Z]   reject https://openbmb.org/favicon.ico (timeout)
+[2026-11-06T06:52:06.149Z]   reject https://pymetrics.ai/favicon.ico (timeout)
+[2026-11-06T06:52:14.112Z]   reject https://codefuse.cn/favicon.png (timeout)
+[2026-11-06T06:52:14.143Z]   reject https://lacework.com/favicon.png (timeout)
+[2026-11-06T06:52:14.159Z]   reject https://openbmb.org/favicon.png (timeout)
+[2026-11-06T06:52:14.161Z]   reject https://pymetrics.ai/favicon.png (timeout)
+[2026-11-06T06:52:22.118Z]   reject https://codefuse.cn/favicon.svg (timeout)
+[2026-11-06T06:52:22.154Z]   reject https://lacework.com/favicon.svg (timeout)
+[2026-11-06T06:52:22.163Z]   reject https://openbmb.org/favicon.svg (timeout)
+[2026-11-06T06:52:22.168Z]   reject https://pymetrics.ai/favicon.svg (timeout)
+[2026-11-06T06:52:30.131Z]   reject https://codefuse.cn/apple-touch-icon.png (timeout)
+[2026-11-06T06:52:30.163Z]   reject https://lacework.com/apple-touch-icon.png (timeout)
+[2026-11-06T06:52:30.165Z]   reject https://openbmb.org/apple-touch-icon.png (timeout)
+[2026-11-06T06:52:30.179Z]   reject https://pymetrics.ai/apple-touch-icon.png (timeout)
+[2026-11-06T06:52:38.135Z]   reject https://codefuse.cn/apple-touch-icon-precomposed.png (timeout)
+[2026-11-06T06:52:38.167Z]   reject https://lacework.com/apple-touch-icon-precomposed.png (timeout)
+[2026-11-06T06:52:38.171Z]   reject https://openbmb.org/apple-touch-icon-precomposed.png (timeout)
+[2026-11-06T06:52:38.188Z]   reject https://pymetrics.ai/apple-touch-icon-precomposed.png (timeout)
+[2026-11-06T06:52:46.142Z]   reject https://codefuse.cn/assets/favicon.ico (timeout)
+[2026-11-06T06:52:46.173Z]   reject https://lacework.com/assets/favicon.ico (timeout)
+[2026-11-06T06:52:46.176Z]   reject https://openbmb.org/assets/favicon.ico (timeout)
+[2026-11-06T06:52:46.192Z]   reject https://pymetrics.ai/assets/favicon.ico (timeout)
+[2026-11-06T06:52:54.148Z]   reject https://codefuse.cn/static/favicon.ico (timeout)
+[2026-11-06T06:52:54.180Z]   reject https://lacework.com/static/favicon.ico (timeout)
+[2026-11-06T06:52:54.181Z]   reject https://openbmb.org/static/favicon.ico (timeout)
+[2026-11-06T06:52:54.196Z]   reject https://pymetrics.ai/static/favicon.ico (timeout)
+[2026-11-06T06:53:02.151Z]   reject https://codefuse.cn/img/favicon.ico (timeout)
+[2026-11-06T06:53:02.181Z]   reject https://lacework.com/img/favicon.ico (timeout)
+[2026-11-06T06:53:02.186Z]   reject https://openbmb.org/img/favicon.ico (timeout)
+[2026-11-06T06:53:02.199Z]   reject https://pymetrics.ai/img/favicon.ico (timeout)
+[2026-11-06T06:53:02.405Z]   reject https://www.google.com/s2/favicons?domain=lacework.com&sz=128 (HTTP 404)
+[2026-11-06T06:53:02.407Z]   reject https://www.google.com/s2/favicons?domain=codefuse.cn&sz=128 (HTTP 404)
+[2026-11-06T06:53:02.440Z]   reject https://www.google.com/s2/favicons?domain=openbmb.org&sz=128 (HTTP 404)
+[2026-11-06T06:53:02.479Z]   reject https://www.google.com/s2/favicons?domain=pymetrics.ai&sz=128 (HTTP 404)
+[2026-11-06T06:53:03.851Z] progress 10/12 ok=5 failed=5
+[2026-11-06T06:53:04.309Z]   reject https://zero123.cs.columbia.edu/images/logo.png (HTTP 404)
+[2026-11-06T06:53:05.064Z]   reject https://zero123.cs.columbia.edu/favicon.ico (HTTP 404)
+[2026-11-06T06:53:05.314Z]   reject https://zero123.cs.columbia.edu/favicon.png (HTTP 404)
+[2026-11-06T06:53:05.564Z]   reject https://zero123.cs.columbia.edu/favicon.svg (HTTP 404)
+[2026-11-06T06:53:05.813Z]   reject https://zero123.cs.columbia.edu/apple-touch-icon.png (HTTP 404)
+[2026-11-06T06:53:06.060Z]   reject https://zero123.cs.columbia.edu/apple-touch-icon-precomposed.png (HTTP 404)
+[2026-11-06T06:53:06.309Z]   reject https://zero123.cs.columbia.edu/assets/favicon.ico (HTTP 404)
+[2026-11-06T06:53:06.558Z]   reject https://zero123.cs.columbia.edu/static/favicon.ico (HTTP 404)
+[2026-11-06T06:53:06.805Z]   reject https://zero123.cs.columbia.edu/img/favicon.ico (HTTP 404)
+[2026-11-06T06:53:07.017Z]   reject https://www.google.com/s2/favicons?domain=zero123.cs.columbia.edu&sz=128 (HTTP 404)
+[2026-11-06T06:53:07.029Z] fetch complete ok=6 failed=6 cached=740 pending=0 targetFailures=33
+[2026-11-06T06:53:07.030Z] dry run: dataset not modified. Re-run with --apply after reviewing cache/state.json
+[2026-11-06T06:53:27.132Z] records=1000 targets=740 cached=740 pending=0 concurrency=6
+[2026-11-06T06:53:27.138Z] fetch complete ok=0 failed=0 cached=740 pending=0 targetFailures=33
+[2026-11-06T06:53:27.138Z] warning: 33 targets are unavailable; affected records will use null + frontend fallback
+[2026-11-06T06:53:27.406Z] reports written. integrity issues=0
+[2026-11-06T06:56:26.081Z] records=1000 targets=823 cached=739 pending=84 concurrency=6
+[2026-11-06T06:56:27.447Z] progress 10/84 ok=10 failed=0
+[2026-11-06T06:56:28.355Z] progress 20/84 ok=20 failed=0
+[2026-11-06T06:56:29.264Z] progress 30/84 ok=30 failed=0
+[2026-11-06T06:56:30.426Z] progress 40/84 ok=40 failed=0
+[2026-11-06T06:56:31.095Z] progress 50/84 ok=50 failed=0
+[2026-11-06T06:56:32.083Z] progress 60/84 ok=60 failed=0
+[2026-11-06T06:56:34.125Z] progress 70/84 ok=70 failed=0
+[2026-11-06T06:56:35.163Z] progress 80/84 ok=80 failed=0
+[2026-11-06T06:56:35.581Z] fetch complete ok=84 failed=0 cached=824 pending=0 targetFailures=33
+[2026-11-06T06:56:35.582Z] dry run: dataset not modified. Re-run with --apply after reviewing cache/state.json
+[2026-11-06T06:56:42.629Z] records=1000 targets=823 cached=823 pending=0 concurrency=6
+[2026-11-06T06:56:42.634Z] fetch complete ok=0 failed=0 cached=824 pending=0 targetFailures=33
+[2026-11-06T06:56:42.635Z] warning: 33 targets are unavailable; affected records will use null + frontend fallback
+[2026-11-06T06:56:42.729Z] reports written. integrity issues=0
+[2026-11-06T06:57:57.889Z] records=1000 targets=823 cached=790 pending=33 concurrency=6
+[2026-11-06T06:58:00.804Z] progress 10/33 ok=0 failed=10
+[2026-11-06T06:58:05.804Z] progress 20/33 ok=1 failed=19
+[2026-11-06T06:59:25.557Z] progress 30/33 ok=3 failed=27
+[2026-11-06T06:59:29.945Z] fetch complete ok=3 failed=30 cached=824 pending=0 targetFailures=30
+[2026-11-06T06:59:29.947Z] dry run: dataset not modified. Re-run with --apply after reviewing cache/state.json
+[2026-11-06T07:00:13.716Z] records=1000 targets=823 cached=823 pending=0 concurrency=6
+[2026-11-06T07:00:13.722Z] fetch complete ok=0 failed=0 cached=824 pending=0 targetFailures=30
+[2026-11-06T07:00:13.722Z] warning: 30 targets are unavailable; affected records will use null + frontend fallback
+[2026-11-06T07:00:13.816Z] reports written. integrity issues=0
+[2026-11-06T07:00:44.424Z] records=1000 targets=823 cached=823 pending=0 concurrency=6
+[2026-11-06T07:00:44.430Z] fetch complete ok=0 failed=0 cached=824 pending=0 targetFailures=30
+[2026-11-06T07:00:44.431Z] warning: 30 targets are unavailable; affected records will use null + frontend fallback
+[2026-11-06T07:00:44.534Z] reports written. integrity issues=0
+[2026-11-06T07:02:30.147Z] records=1000 targets=823 cached=823 pending=0 concurrency=6
+[2026-11-06T07:02:30.152Z] fetch complete ok=0 failed=0 cached=824 pending=0 targetFailures=30
+[2026-11-06T07:02:30.153Z] warning: 30 targets are unavailable; affected records will use null + frontend fallback
+[2026-11-06T07:02:30.243Z] reports written. integrity issues=0

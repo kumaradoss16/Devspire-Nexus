@@ -1,0 +1,177 @@
+{
+  "layoutReport": [
+    {
+      "viewport": 320,
+      "clientWidth": 320,
+      "scrollWidth": 320,
+      "bodyScrollWidth": 320,
+      "pageHeight": 5275,
+      "horizontalOverflow": false,
+      "offenders": []
+    },
+    {
+      "viewport": 375,
+      "clientWidth": 375,
+      "scrollWidth": 375,
+      "bodyScrollWidth": 375,
+      "pageHeight": 4807,
+      "horizontalOverflow": false,
+      "offenders": []
+    },
+    {
+      "viewport": 480,
+      "clientWidth": 480,
+      "scrollWidth": 480,
+      "bodyScrollWidth": 480,
+      "pageHeight": 4409,
+      "horizontalOverflow": false,
+      "offenders": []
+    },
+    {
+      "viewport": 768,
+      "clientWidth": 768,
+      "scrollWidth": 768,
+      "bodyScrollWidth": 768,
+      "pageHeight": 3141,
+      "horizontalOverflow": false,
+      "offenders": []
+    },
+    {
+      "viewport": 1024,
+      "clientWidth": 1024,
+      "scrollWidth": 1024,
+      "bodyScrollWidth": 1024,
+      "pageHeight": 2313,
+      "horizontalOverflow": false,
+      "offenders": []
+    },
+    {
+      "viewport": 1280,
+      "clientWidth": 1280,
+      "scrollWidth": 1280,
+      "bodyScrollWidth": 1280,
+      "pageHeight": 2302,
+      "horizontalOverflow": false,
+      "offenders": []
+    },
+    {
+      "viewport": 1360,
+      "clientWidth": 1360,
+      "scrollWidth": 1360,
+      "bodyScrollWidth": 1360,
+      "pageHeight": 2286,
+      "horizontalOverflow": false,
+      "offenders": []
+    },
+    {
+      "viewport": 1440,
+      "clientWidth": 1440,
+      "scrollWidth": 1440,
+      "bodyScrollWidth": 1440,
+      "pageHeight": 2286,
+      "horizontalOverflow": false,
+      "offenders": []
+    },
+    {
+      "viewport": 1920,
+      "clientWidth": 1920,
+      "scrollWidth": 1920,
+      "bodyScrollWidth": 1920,
+      "pageHeight": 2286,
+      "horizontalOverflow": false,
+      "offenders": []
+    }
+  ],
+  "interactionReport": {
+    "initial": {
+      "cards": 4,
+      "taxonomy": 8,
+      "feed": 4,
+      "status": "Showing 4 of 4 sample records",
+      "fonts": {
+        "geist": true,
+        "mono": true
+      }
+    },
+    "search": {
+      "cards": 1,
+      "name": "DeepSeek-R1",
+      "status": "Showing 1 of 4 sample records",
+      "filterBarVisible": true,
+      "clearVisible": true
+    },
+    "clearSearch": {
+      "cards": 4,
+      "query": "",
+      "clearHidden": true
+    },
+    "tableView": {
+      "rows": 4,
+      "tableVisible": true,
+      "gridHidden": true,
+      "pressed": "true"
+    },
+    "gridView": {
+      "gridVisible": true,
+      "tableHidden": true,
+      "pressed": "true"
+    },
+    "details": {
+      "open": true,
+      "title": "vLLM",
+      "externalHref": "https://docs.vllm.ai",
+      "externalRel": "noopener noreferrer"
+    },
+    "detailsClosed": true,
+    "preset": {
+      "query": "mcp servers & tools",
+      "cards": 0,
+      "empty": true,
+      "status": "Showing 0 of 4 sample records"
+    },
+    "clearFilters": {
+      "cards": 4,
+      "query": ""
+    },
+    "typeFilter": {
+      "cards": 2,
+      "names": [
+        "vLLM",
+        "Qdrant"
+      ],
+      "filterBarVisible": true,
+      "activeNav": "developer"
+    },
+    "facetFilter": {
+      "cards": 0,
+      "empty": true,
+      "typeFilterCleared": true
+    },
+    "shortcut": {
+      "activeId": "resource-search"
+    },
+    "submit": {
+      "open": true,
+      "statusVisible": true,
+      "status": "Preview only — this form is not connected to a submission backend, so nothing was submitted."
+    },
+    "mobile": {
+      "expanded": "true",
+      "menuVisible": true,
+      "menuLinks": 6
+    },
+    "mobileClosed": {
+      "expanded": "false",
+      "menuHidden": true
+    },
+    "mobileMenuFilter": {
+      "menuHidden": true,
+      "cards": 1,
+      "names": [
+        "DeepSeek-R1"
+      ]
+    },
+    "consoleErrors": [],
+    "exceptions": []
+  }
+}

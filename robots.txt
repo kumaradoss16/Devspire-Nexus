@@ -1,0 +1,8 @@
+# DevSpire Nexus robots policy
+User-agent: *
+Allow: /
+# Personal collections are rendered from localStorage and are never public.
+Disallow: /collections.html
+
+# Sitemap is generated once the deployment origin is configured:
+#   node .qa/seo-build.js --origin https://your-host/path/

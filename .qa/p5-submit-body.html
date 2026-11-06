@@ -1,0 +1,182 @@
+<main class="w-full max-w-[1360px] mx-auto px-4 sm:px-gutter-lg py-space-lg flex-1 flex flex-col">
+<nav class="flex items-center gap-space-xs text-metadata-label font-metadata-label text-text-muted mb-space-sm" aria-label="Breadcrumb">
+<a class="hover:text-text-primary transition-colors" href="directory.html">Home</a>
+<span class="text-border-subtle">/</span>
+<span class="text-primary-container">Submit Resource</span>
+</nav>
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md mb-space-lg pb-space-md border-b border-border-subtle">
+<div>
+<p class="font-metadata-label text-metadata-label text-primary-container uppercase tracking-[0.18em] mb-1">Contribution review</p>
+<h1 class="font-display-hero-mobile text-display-hero-mobile sm:font-display-hero sm:text-display-hero text-text-primary tracking-tight">Submit a resource</h1>
+<p class="font-body-compact text-body-compact text-text-muted mt-1 max-w-3xl">
+          Propose a tool, model, or developer resource for the catalog. Submissions are delivered to the DevSpireHub maintainers and enter manual moderation; nothing is published automatically.
+        </p>
+</div>
+<div class="flex items-center gap-2 self-start md:self-auto bg-surface-secondary border border-border-subtle px-3 py-1.5 rounded">
+<span class="w-2 h-2 rounded-full bg-status-warning"></span>
+<span class="font-code-badge text-code-badge text-text-primary">PENDING MODERATION</span>
+</div>
+</div>
+<div class="rounded-xl border border-secondary/40 bg-secondary/5 p-4 flex items-start gap-3 mb-space-lg" role="note">
+<span class="material-symbols-outlined text-secondary text-xl shrink-0" data-icon="verified_user">verified_user</span>
+<div class="min-w-0">
+<p class="font-body-compact text-body-compact text-text-primary font-medium">Every submission is reviewed before it can appear in the catalog.</p>
+<p class="font-metadata-label text-metadata-label text-text-muted mt-0.5">Send only information you can verify. Do not include passwords, private data, or anything you would not publish. New records are never added to the datasets automatically.</p>
+</div>
+</div>
+<div class="rounded-xl border border-status-warning/40 bg-status-warning/10 p-4 flex items-start gap-3 mb-space-lg" id="config-status" role="note" hidden>
+<span class="material-symbols-outlined text-status-warning text-xl shrink-0" data-icon="settings">settings</span>
+<div class="min-w-0">
+<p class="font-body-compact text-body-compact text-text-primary font-medium" id="config-status-title">Submission endpoint not configured</p>
+<p class="font-metadata-label text-metadata-label text-text-muted mt-0.5" id="config-status-text">This copy of the directory has no Web3Forms access key. The form validates entries locally, but it cannot send until a key is added to <code class="font-code-badge">data/site-config.js</code>.</p>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_340px] gap-space-lg items-start">
+<section class="ui-card rounded-xl p-space-lg" aria-label="Resource submission form">
+<h2 class="font-title-card text-title-card text-text-primary mb-1">Record details</h2>
+<p class="font-body-compact text-body-compact text-text-muted mb-4">Required fields are marked. Optional fields stay blank when the information is not stated.</p>
+<div class="rounded border border-status-error/40 bg-status-error/10 px-3 py-2 mb-4 font-metadata-label text-metadata-label text-status-error" id="form-summary" role="alert" hidden></div>
+<div class="rounded border border-tertiary/40 bg-tertiary/10 px-3 py-2 mb-4 font-metadata-label text-metadata-label text-tertiary" id="form-success" role="status" aria-live="polite" hidden></div>
+<form id="submission-form" action="https://api.web3forms.com/submit" method="POST" novalidate>
+<input type="hidden" name="access_key" value="99ea5478-6d12-4190-bd08-d596eb363775"/>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div class="flex flex-col gap-1.5">
+<label class="font-metadata-label text-metadata-label text-text-muted" for="sub-name">Resource name <span class="text-primary-container">*</span></label>
+<input class="p5-input" id="sub-name" name="name" type="text" maxlength="120" autocomplete="organization" required aria-describedby="err-name"/>
+<p class="p5-error" id="err-name" hidden></p>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-metadata-label text-metadata-label text-text-muted" for="sub-type">Resource type <span class="text-primary-container">*</span></label>
+<select class="p5-input" id="sub-type" name="resource_type" required aria-describedby="err-type">
+<option value="">Select a type…</option>
+<option value="AI Tool">AI Tool</option>
+<option value="AI Model">AI Model</option>
+<option value="Developer Resource">Developer Resource</option>
+</select>
+<p class="p5-error" id="err-type" hidden></p>
+</div>
+<div class="flex flex-col gap-1.5 sm:col-span-2">
+<label class="font-metadata-label text-metadata-label text-text-muted" for="sub-url">Official website <span class="text-primary-container">*</span></label>
+<input class="p5-input" id="sub-url" name="official_url" type="url" inputmode="url" maxlength="300" placeholder="https://" autocomplete="url" required aria-describedby="err-url"/>
+<p class="p5-error" id="err-url" hidden></p>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-metadata-label text-metadata-label text-text-muted" for="sub-docs">Documentation URL</label>
+<input class="p5-input" id="sub-docs" name="documentation_url" type="url" inputmode="url" maxlength="300" placeholder="https://" autocomplete="url" aria-describedby="err-docs"/>
+<p class="p5-error" id="err-docs" hidden></p>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-metadata-label text-metadata-label text-text-muted" for="sub-repo">GitHub repository</label>
+<input class="p5-input" id="sub-repo" name="repository_url" type="url" inputmode="url" maxlength="300" placeholder="https://github.com/…" autocomplete="url" aria-describedby="err-repo"/>
+<p class="p5-error" id="err-repo" hidden></p>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-metadata-label text-metadata-label text-text-muted" for="sub-category">Category <span class="text-primary-container">*</span></label>
+<input class="p5-input" id="sub-category" name="category" type="text" maxlength="60" list="category-options" autocomplete="off" required aria-describedby="err-category"/>
+<datalist id="category-options"></datalist>
+<p class="p5-error" id="err-category" hidden></p>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-metadata-label text-metadata-label text-text-muted" for="sub-org">Publisher / organization</label>
+<input class="p5-input" id="sub-org" name="org" type="text" maxlength="80" autocomplete="organization"/>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-metadata-label text-metadata-label text-text-muted" for="sub-pricing">Pricing model</label>
+<select class="p5-input" id="sub-pricing" name="pricing">
+<option value="">Not stated</option>
+<option value="Free">Free</option>
+<option value="Freemium">Freemium</option>
+<option value="Paid">Paid</option>
+<option value="Enterprise">Enterprise</option>
+<option value="Open source">Open source</option>
+</select>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-metadata-label text-metadata-label text-text-muted" for="sub-license">License</label>
+<input class="p5-input" id="sub-license" name="license" type="text" maxlength="60" placeholder="e.g. Apache 2.0" autocomplete="off"/>
+</div>
+<div class="flex flex-col gap-1.5 sm:col-span-2">
+<label class="font-metadata-label text-metadata-label text-text-muted" for="sub-description">Description <span class="text-primary-container">*</span></label>
+<textarea class="p5-input min-h-[110px]" id="sub-description" name="description" maxlength="600" required aria-describedby="err-description help-description"></textarea>
+<p class="font-metadata-label text-metadata-label text-text-muted" id="help-description">40–600 characters. Summarize what it does without marketing claims.</p>
+<p class="p5-error" id="err-description" hidden></p>
+</div>
+<div class="flex flex-col gap-1.5 sm:col-span-2">
+<label class="font-metadata-label text-metadata-label text-text-muted" for="sub-evidence">Evidence URL</label>
+<input class="p5-input" id="sub-evidence" name="evidence_url" type="url" inputmode="url" maxlength="300" placeholder="https://" autocomplete="url" aria-describedby="err-evidence help-evidence"/>
+<p class="font-metadata-label text-metadata-label text-text-muted" id="help-evidence">Optional. A public page that documents the record, such as official documentation or a repository.</p>
+<p class="p5-error" id="err-evidence" hidden></p>
+</div>
+<div class="flex flex-col gap-1.5 sm:col-span-2">
+<label class="font-metadata-label text-metadata-label text-text-muted" for="sub-tags">Tags</label>
+<input class="p5-input" id="sub-tags" name="tags" type="text" maxlength="200" placeholder="Comma separated, e.g. open-weights, self-hosted" autocomplete="off" aria-describedby="err-tags"/>
+<p class="p5-error" id="err-tags" hidden></p>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-metadata-label text-metadata-label text-text-muted" for="sub-submitter">Your name</label>
+<input class="p5-input" id="sub-submitter" name="submitter_name" type="text" maxlength="80" autocomplete="name" aria-describedby="err-submitter"/>
+<p class="p5-error" id="err-submitter" hidden></p>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-metadata-label text-metadata-label text-text-muted" for="sub-email">Your email</label>
+<input class="p5-input" id="sub-email" name="email" type="email" inputmode="email" maxlength="120" placeholder="you@example.com" autocomplete="email" aria-describedby="err-email help-submitter"/>
+<p class="font-metadata-label text-metadata-label text-text-muted" id="help-submitter">Optional. Only used if maintainers need to clarify the submission.</p>
+<p class="p5-error" id="err-email" hidden></p>
+</div>
+<div class="flex flex-col gap-1.5 sm:col-span-2">
+<label class="font-metadata-label text-metadata-label text-text-muted" for="sub-notes">Additional information</label>
+<textarea class="p5-input min-h-[80px]" id="sub-notes" name="additional_information" maxlength="400"></textarea>
+</div>
+</div>
+<div class="hidden" aria-hidden="true">
+<label for="sub-botcheck">Leave this field unchecked</label>
+<input id="sub-botcheck" name="botcheck" type="checkbox" tabindex="-1" autocomplete="off"/>
+</div>
+<div class="flex flex-wrap items-center gap-2 mt-5">
+<button class="inline-flex items-center gap-2 bg-primary-container text-bg-canvas font-body-compact text-body-compact font-semibold px-4 py-2 rounded transition-all duration-150 hover:brightness-110 disabled:opacity-60 disabled:cursor-not-allowed" id="submit-button" type="submit">
+<span class="material-symbols-outlined text-[18px]" data-icon="send" aria-hidden="true">send</span>
+<span id="submit-label">Submit for review</span>
+</button>
+<button class="inline-flex items-center gap-2 bg-surface-secondary border border-border-subtle text-text-primary font-body-compact text-body-compact px-4 py-2 rounded hover:border-secondary transition-colors disabled:opacity-50 disabled:cursor-not-allowed" id="clear-form" type="button">Clear form</button>
+</div>
+<p class="font-metadata-label text-metadata-label text-text-muted mt-3">Submissions are transmitted by <a class="text-secondary hover:underline" href="https://web3forms.com/" target="_blank" rel="noopener">Web3Forms</a> to the directory maintainers. Web3Forms processes the data to deliver the notification.</p>
+</form>
+</section>
+<aside class="flex flex-col gap-space-md">
+<section class="ui-card rounded-xl p-space-md">
+<h2 class="font-title-card text-title-card text-text-primary mb-2">Review policy</h2>
+<ul class="flex flex-col gap-2 font-body-compact text-body-compact text-text-muted">
+<li class="flex gap-2"><span class="material-symbols-outlined text-[16px] text-tertiary shrink-0" data-icon="check">check</span>A public evidence link strengthens a record but is optional.</li>
+<li class="flex gap-2"><span class="material-symbols-outlined text-[16px] text-tertiary shrink-0" data-icon="check">check</span>Only stated facts belong in the record; blanks stay blank.</li>
+<li class="flex gap-2"><span class="material-symbols-outlined text-[16px] text-status-warning shrink-0" data-icon="block">block</span>Nothing is published automatically.</li>
+<li class="flex gap-2"><span class="material-symbols-outlined text-[16px] text-status-warning shrink-0" data-icon="block">block</span>A submitted record is not a catalog entry until a maintainer approves it.</li>
+</ul>
+</section>
+<section class="ui-card rounded-xl p-space-md">
+<h2 class="font-title-card text-title-card text-text-primary mb-2">What happens next</h2>
+<p class="font-body-compact text-body-compact text-text-muted">Web3Forms delivers the record to the maintainers. A reviewer verifies the links and stated facts, may edit or reject the record, and only then updates a dataset. The receipt below is a copy of what was sent, not a publication confirmation.</p>
+</section>
+</aside>
+</div>
+<section class="mt-space-lg" id="draft-section" hidden>
+<div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+<div>
+<h2 class="font-title-card text-title-card text-text-primary">Submission receipt</h2>
+<p class="font-metadata-label text-metadata-label text-status-warning" id="draft-status" role="status" aria-live="polite">Submission accepted by Web3Forms. Pending moderation.</p>
+</div>
+<div class="flex flex-wrap items-center gap-2">
+<button class="inline-flex items-center gap-1.5 bg-surface-card border border-border-subtle rounded px-3 py-1.5 font-code-badge text-code-badge text-text-primary hover:border-secondary transition-colors" id="copy-draft" type="button" disabled>
+<span class="material-symbols-outlined text-[14px]" data-icon="content_copy">content_copy</span>Copy JSON
+</button>
+<button class="inline-flex items-center gap-1.5 bg-surface-card border border-border-subtle rounded px-3 py-1.5 font-code-badge text-code-badge text-text-primary hover:border-secondary transition-colors" id="download-draft" type="button" disabled>
+<span class="material-symbols-outlined text-[14px]" data-icon="download">download</span>Download JSON
+</button>
+</div>
+</div>
+<pre class="api-code rounded-xl border border-border-subtle bg-surface-secondary p-4 overflow-x-auto font-code-param" id="draft-json"></pre>
+<p class="font-metadata-label text-metadata-label text-text-muted mt-2" id="draft-copy-status" role="status" aria-live="polite"></p>
+</section>
+<noscript>
+<div class="rounded-xl border border-status-warning/40 bg-status-warning/10 p-4 mt-space-lg font-body-compact text-body-compact text-text-primary">This form needs JavaScript to validate fields and send the submission. Without JavaScript, nothing is transmitted.</div>
+</noscript>
+</main>

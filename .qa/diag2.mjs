@@ -1,0 +1,22 @@
+const targetRes = await fetch('http://127.0.0.1:9223/json/new?about:blank', { method: 'PUT' });
+const target = await targetRes.json();
+const ws = new WebSocket(target.webSocketDebuggerUrl);
+await new Promise((res, rej) => { ws.onopen = res; ws.onerror = rej; });
+let id = 0; const pending = new Map();
+ws.onmessage = (e) => { const m = JSON.parse(e.data); if (m.id && pending.has(m.id)) { const j = pending.get(m.id); pending.delete(m.id); m.error ? j.reject(new Error(JSON.stringify(m.error))) : j.resolve(m.result); } };
+const send = (method, params = {}) => new Promise((resolve, reject) => { const n = ++id; pending.set(n, { resolve, reject }); ws.send(JSON.stringify({ id: n, method, params })); });
+const evaluate = async (expression) => { const r = await send('Runtime.evaluate', { expression, awaitPromise: true, returnByValue: true }); if (r.exceptionDetails) throw new Error(r.exceptionDetails.text); return r.result.value; };
+await send('Page.enable'); await send('Runtime.enable');
+await send('Emulation.setDeviceMetricsOverride', { width: 320, height: 900, deviceScaleFactor: 1, mobile: false });
+await send('Page.navigate', { url: 'http://127.0.0.1:8123/' });
+await new Promise((r) => setTimeout(r, 800));
+console.log(JSON.stringify(await evaluate(`(() => {
+  const style = document.createElement('style');
+  style.textContent = '.hero { width: 100%; }';
+  document.head.appendChild(style);
+  const de = document.documentElement;
+  const hero = document.querySelector('.hero').getBoundingClientRect();
+  const badge = document.querySelector('.badge-pill').getBoundingClientRect();
+  return { scrollWidth: de.scrollWidth, heroWidth: hero.width, heroHeight: hero.height, badgeWidth: badge.width, badgeHeight: badge.height };
+})()`), null, 2));
+ws.close();

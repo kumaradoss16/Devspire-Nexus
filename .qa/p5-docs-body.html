@@ -1,0 +1,168 @@
+<main class="w-full max-w-[1360px] mx-auto px-4 sm:px-gutter-lg py-space-lg flex-1 flex flex-col">
+<nav class="flex items-center gap-space-xs text-metadata-label font-metadata-label text-text-muted mb-space-sm" aria-label="Breadcrumb">
+<a class="hover:text-text-primary transition-colors" href="directory.html">Home</a>
+<span class="text-border-subtle">/</span>
+<span class="text-primary-container">Documentation</span>
+</nav>
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md mb-space-lg pb-space-md border-b border-border-subtle">
+<div>
+<p class="font-metadata-label text-metadata-label text-primary-container uppercase tracking-[0.18em] mb-1">Project reference</p>
+<h1 class="font-display-hero-mobile text-display-hero-mobile sm:font-display-hero sm:text-display-hero text-text-primary tracking-tight">Documentation</h1>
+<p class="font-body-compact text-body-compact text-text-muted mt-1 max-w-3xl">
+          How the directory is built, where its records come from, and what this static build does and does not do.
+        </p>
+</div>
+<div class="flex items-center gap-2 self-start md:self-auto bg-surface-secondary border border-border-subtle px-3 py-1.5 rounded">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span class="font-code-badge text-code-badge text-text-primary">STATIC SITE · NO BACKEND</span>
+</div>
+</div>
+<nav class="flex flex-wrap items-center gap-2 mb-space-lg" aria-label="Documentation sections">
+<a class="docs-jump" href="#overview">Overview</a>
+<a class="docs-jump" href="#datasets">Datasets</a>
+<a class="docs-jump" href="#pipeline">Pipeline</a>
+<a class="docs-jump" href="#terminal">Terminal</a>
+<a class="docs-jump" href="#api">Static API</a>
+<a class="docs-jump" href="#submissions">Submissions</a>
+<a class="docs-jump" href="#qa">Quality checks</a>
+<a class="docs-jump" href="#limits">Limitations</a>
+</nav>
+
+<section class="mb-space-lg" id="overview">
+<h2 class="font-headline-section text-headline-section text-text-primary mb-2">Overview</h2>
+<div class="ui-card rounded-xl p-space-lg flex flex-col gap-3 font-body-compact text-body-compact text-text-muted">
+<p>The AI Resource Intelligence Directory is a static HTML site. Every page is a standalone file that loads one or more JavaScript datasets from <code class="font-code-badge">data/</code>. Filtering, sorting, pagination, search, deep links, and the catalog terminal run entirely in the browser.</p>
+<p>There is no application server, database, authentication layer, or analytics pipeline. Datasets, icons, and the static JSON files are bundled with the site. The only automatic external requests are the Tailwind CDN and Google Fonts; the Web3Forms endpoint is contacted only when someone submits the resource form.</p>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-3 mt-1">
+<div class="bg-surface-secondary border border-border-subtle rounded p-3">
+<span class="block font-code-badge text-code-badge text-text-muted">AI TOOLS</span>
+<span class="font-headline-section text-headline-section text-text-primary" id="doc-tools-count">—</span>
+<span class="block font-metadata-label text-metadata-label text-text-muted" id="doc-tools-verified">—</span>
+</div>
+<div class="bg-surface-secondary border border-border-subtle rounded p-3">
+<span class="block font-code-badge text-code-badge text-text-muted">AI MODELS</span>
+<span class="font-headline-section text-headline-section text-text-primary" id="doc-models-count">—</span>
+<span class="block font-metadata-label text-metadata-label text-text-muted" id="doc-models-verified">—</span>
+</div>
+<div class="bg-surface-secondary border border-border-subtle rounded p-3">
+<span class="block font-code-badge text-code-badge text-text-muted">DEVELOPER RESOURCES</span>
+<span class="font-headline-section text-headline-section text-text-primary" id="doc-resources-count">—</span>
+<span class="block font-metadata-label text-metadata-label text-text-muted" id="doc-resources-verified">—</span>
+</div>
+</div>
+</div>
+</section>
+
+<section class="mb-space-lg" id="datasets">
+<h2 class="font-headline-section text-headline-section text-text-primary mb-2">Datasets and schemas</h2>
+<p class="font-body-compact text-body-compact text-text-muted mb-3">Records were extracted from the DevSpireHub AI knowledge base file <code class="font-code-badge">ai-tools-models-developer-resources.md</code>. The upstream repository is no longer publicly reachable; the extraction persisted in this project is the retained copy. Presentation code never writes to these files.</p>
+<div class="ui-card rounded-xl overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="border-b border-border-subtle">
+<th scope="col" class="px-4 py-2.5 font-metadata-label text-metadata-label text-text-muted uppercase tracking-wider">Dataset</th>
+<th scope="col" class="px-4 py-2.5 font-metadata-label text-metadata-label text-text-muted uppercase tracking-wider">Global</th>
+<th scope="col" class="px-4 py-2.5 font-metadata-label text-metadata-label text-text-muted uppercase tracking-wider">Registry</th>
+<th scope="col" class="px-4 py-2.5 font-metadata-label text-metadata-label text-text-muted uppercase tracking-wider">Page</th>
+</tr>
+</thead>
+<tbody class="font-body-compact text-body-compact">
+<tr class="border-b border-border-subtle/50"><td class="px-4 py-2.5 font-code-param text-code-param text-secondary">data/ai-tools.js</td><td class="px-4 py-2.5 font-code-param text-code-param">AI_TOOLS</td><td class="px-4 py-2.5 text-text-muted"><span data-doc-count="tools">—</span> tool records</td><td class="px-4 py-2.5"><a class="text-secondary hover:underline" href="ai-tools.html">ai-tools.html</a></td></tr>
+<tr class="border-b border-border-subtle/50"><td class="px-4 py-2.5 font-code-param text-code-param text-secondary">data/ai-models.js</td><td class="px-4 py-2.5 font-code-param text-code-param">AI_MODELS</td><td class="px-4 py-2.5 text-text-muted"><span data-doc-count="models">—</span> model records</td><td class="px-4 py-2.5"><a class="text-secondary hover:underline" href="models.html">models.html</a></td></tr>
+<tr><td class="px-4 py-2.5 font-code-param text-code-param text-secondary">data/developer-resources.js</td><td class="px-4 py-2.5 font-code-param text-code-param">DEVELOPER_RESOURCES</td><td class="px-4 py-2.5 text-text-muted"><span data-doc-count="resources">—</span> developer-resource records</td><td class="px-4 py-2.5"><a class="text-secondary hover:underline" href="developer-resources.html">developer-resources.html</a></td></tr>
+</tbody>
+</table>
+</div>
+<div class="ui-card rounded-xl p-space-lg mt-3 font-body-compact text-body-compact text-text-muted flex flex-col gap-2">
+<p><strong class="text-text-primary font-medium">Shared fields:</strong> <code class="font-code-badge">id</code>, <code class="font-code-badge">name</code>, <code class="font-code-badge">description</code>, <code class="font-code-badge">category</code>, <code class="font-code-badge">source_category</code>, <code class="font-code-badge">official_url</code>, <code class="font-code-badge">pricing</code>, <code class="font-code-badge">license</code>, <code class="font-code-badge">tags</code>, <code class="font-code-badge">evidence</code>, <code class="font-code-badge">verified</code>, <code class="font-code-badge">status</code>, <code class="font-code-badge">icon</code>.</p>
+<p><strong class="text-text-primary font-medium">Policy:</strong> a field the source does not state stays <code class="font-code-badge">null</code>, empty, or absent. Model parameter counts and context windows are never estimated; cards show <code class="font-code-badge">—</code> where no figure exists.</p>
+<p><strong class="text-text-primary font-medium">Totals:</strong> every count on every page is computed from the loaded arrays. No page hardcodes a record total.</p>
+</div>
+</section>
+
+<section class="mb-space-lg" id="pipeline">
+<h2 class="font-headline-section text-headline-section text-text-primary mb-2">Build pipeline</h2>
+<p class="font-body-compact text-body-compact text-text-muted mb-3">Pages are assembled from parts. Edit the part files, then regenerate; do not edit generated pages except where noted.</p>
+<div class="ui-card rounded-xl overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="border-b border-border-subtle">
+<th scope="col" class="px-4 py-2.5 font-metadata-label text-metadata-label text-text-muted uppercase tracking-wider">Command</th>
+<th scope="col" class="px-4 py-2.5 font-metadata-label text-metadata-label text-text-muted uppercase tracking-wider">Effect</th>
+</tr>
+</thead>
+<tbody class="font-body-compact text-body-compact">
+<tr class="border-b border-border-subtle/50"><td class="px-4 py-2.5 font-code-param text-code-param text-secondary whitespace-nowrap">node .qa/models-split.js</td><td class="px-4 py-2.5 text-text-muted">Splits models.html into mirrored parts and asserts byte-identical reassembly.</td></tr>
+<tr class="border-b border-border-subtle/50"><td class="px-4 py-2.5 font-code-param text-code-param text-secondary whitespace-nowrap">node .qa/tools-assemble.js</td><td class="px-4 py-2.5 text-text-muted">Rebuilds ai-tools.html from the models head, tools body, and tools engine.</td></tr>
+<tr class="border-b border-border-subtle/50"><td class="px-4 py-2.5 font-code-param text-code-param text-secondary whitespace-nowrap">node .qa/dev-assemble.js</td><td class="px-4 py-2.5 text-text-muted">Rebuilds developer-resources.html from the models head, dev body, and dev engine.</td></tr>
+<tr class="border-b border-border-subtle/50"><td class="px-4 py-2.5 font-code-param text-code-param text-secondary whitespace-nowrap">node .qa/api-build.js</td><td class="px-4 py-2.5 text-text-muted">Regenerates the static JSON files under api/ and their manifest hashes.</td></tr>
+<tr><td class="px-4 py-2.5 font-code-param text-code-param text-secondary whitespace-nowrap">node .qa/p5-build.js</td><td class="px-4 py-2.5 text-text-muted">Rebuilds terminal.html, api.html, submit.html, and docs.html from their parts.</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<section class="mb-space-lg" id="terminal">
+<h2 class="font-headline-section text-headline-section text-text-primary mb-2">Catalog terminal</h2>
+<div class="ui-card rounded-xl p-space-lg font-body-compact text-body-compact text-text-muted">
+<p class="mb-2"><a class="text-secondary hover:underline" href="terminal.html">terminal.html</a> is a read-only console with a fixed command table: <code class="font-code-badge">help</code>, <code class="font-code-badge">stats</code>, <code class="font-code-badge">list</code>, <code class="font-code-badge">search</code>, <code class="font-code-badge">show</code>, <code class="font-code-badge">categories</code>, <code class="font-code-badge">open</code>, and <code class="font-code-badge">clear</code>.</p>
+<p>The page contains no <code class="font-code-badge">eval</code>, no dynamic function construction, no shell bridge, no filesystem access, and no network calls. Unknown commands are rejected by name lookup. Output is written with <code class="font-code-badge">textContent</code>, so typed markup is displayed as text.</p>
+</div>
+</section>
+
+<section class="mb-space-lg" id="api">
+<h2 class="font-headline-section text-headline-section text-text-primary mb-2">Static API</h2>
+<div class="ui-card rounded-xl p-space-lg font-body-compact text-body-compact text-text-muted">
+<p class="mb-2"><a class="text-secondary hover:underline" href="api.html">api.html</a> documents four generated files: <code class="font-code-badge">api/catalog.json</code> (manifest with counts and SHA-256 checksums), <code class="font-code-badge">api/tools.json</code>, <code class="font-code-badge">api/models.json</code>, and <code class="font-code-badge">api/developer-resources.json</code>.</p>
+<p>These are static assets, not a hosted service. There is no base URL, authentication, versioning service, write endpoint, or uptime guarantee. Browsers block <code class="font-code-badge">fetch()</code> from <code class="font-code-badge">file://</code>; serve the folder over HTTP to read them programmatically, or use the Open links on the API page.</p>
+</div>
+</section>
+
+<section class="mb-space-lg" id="submissions">
+<h2 class="font-headline-section text-headline-section text-text-primary mb-2">Submissions</h2>
+<div class="ui-card rounded-xl p-space-lg font-body-compact text-body-compact text-text-muted">
+<p class="mb-2"><a class="text-secondary hover:underline" href="submit.html">submit.html</a> validates a proposed record and sends it to the official Web3Forms endpoint, <code class="font-code-badge">https://api.web3forms.com/submit</code>. The page reports success only when Web3Forms returns <code class="font-code-badge">success: true</code>; failed or timed-out requests keep every entry on screen and show the reason.</p>
+<p class="mb-2">The access key lives in <code class="font-code-badge">data/site-config.js</code>. A Web3Forms access key is a public routing identifier that is visible in the page source by design, not a secret. The repository ships with an empty key, so sending stays disabled until the deployer adds their own key. Recipient addresses are held in the Web3Forms account and are not embedded in this site.</p>
+<p>Every submission is pending manual moderation. Nothing is added to a dataset or published automatically, and a successful Web3Forms response confirms delivery only. A JSON receipt is offered locally for the submitter's records. Spam controls include a hidden honeypot field, client-side duplicate suppression, and any filtering enabled in the Web3Forms account.</p>
+</div>
+</section>
+
+<section class="mb-space-lg" id="qa">
+<h2 class="font-headline-section text-headline-section text-text-primary mb-2">Quality checks</h2>
+<p class="font-body-compact text-body-compact text-text-muted mb-3">The repository is validated with Playwright-driven suites. They run against the real pages and datasets; no check claims a pass without executing.</p>
+<div class="ui-card rounded-xl overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="border-b border-border-subtle">
+<th scope="col" class="px-4 py-2.5 font-metadata-label text-metadata-label text-text-muted uppercase tracking-wider">Suite</th>
+<th scope="col" class="px-4 py-2.5 font-metadata-label text-metadata-label text-text-muted uppercase tracking-wider">Covers</th>
+</tr>
+</thead>
+<tbody class="font-body-compact text-body-compact">
+<tr class="border-b border-border-subtle/50"><td class="px-4 py-2.5 font-code-param text-code-param text-secondary whitespace-nowrap">.qa/qa-phase5.js</td><td class="px-4 py-2.5 text-text-muted">Terminal allowlist, static API files and checksums, submission validation, documentation links, shared navigation, widths.</td></tr>
+<tr class="border-b border-border-subtle/50"><td class="px-4 py-2.5 font-code-param text-code-param text-secondary whitespace-nowrap">.qa/qa-forms.js</td><td class="px-4 py-2.5 text-text-muted">Web3Forms success, rejection, network failure, timeout, duplicate suppression, honeypot, URL and email validation, mobile layout. Requests are mocked at the network layer; a real delivery requires a configured key.</td></tr>
+<tr class="border-b border-border-subtle/50"><td class="px-4 py-2.5 font-code-param text-code-param text-secondary whitespace-nowrap">.qa/qa-shell.js</td><td class="px-4 py-2.5 text-text-muted">Canonical navigation, grouped footer links, verified parent-site routes, skip link, landmark ids, metadata, icon alignment and hover clipping.</td></tr>
+<tr class="border-b border-border-subtle/50"><td class="px-4 py-2.5 font-code-param text-code-param text-secondary whitespace-nowrap">.qa/qa-phase4.js</td><td class="px-4 py-2.5 text-text-muted">Landing datasets, search, deep links, canonical nav/footer, responsive sweep.</td></tr>
+<tr class="border-b border-border-subtle/50"><td class="px-4 py-2.5 font-code-param text-code-param text-secondary whitespace-nowrap">.qa/qa-models.js</td><td class="px-4 py-2.5 text-text-muted">Model dataset integrity, facets, compare, detail views, deep links.</td></tr>
+<tr class="border-b border-border-subtle/50"><td class="px-4 py-2.5 font-code-param text-code-param text-secondary whitespace-nowrap">.qa/qa-dev.js</td><td class="px-4 py-2.5 text-text-muted">Developer-resource dataset integrity, filters, details, deep links.</td></tr>
+<tr class="border-b border-border-subtle/50"><td class="px-4 py-2.5 font-code-param text-code-param text-secondary whitespace-nowrap">.qa/qa-ai-tools.js</td><td class="px-4 py-2.5 text-text-muted">Tool dataset integrity, facets, pagination, details, deep links.</td></tr>
+<tr><td class="px-4 py-2.5 font-code-param text-code-param text-secondary whitespace-nowrap">.qa/qa-tools.js, .qa/qa-icons.js</td><td class="px-4 py-2.5 text-text-muted">Legacy tools page interactions and icon/image integrity.</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<section id="limits">
+<h2 class="font-headline-section text-headline-section text-text-primary mb-2">Limitations</h2>
+<div class="ui-card rounded-xl p-space-lg font-body-compact text-body-compact text-text-muted">
+<ul class="flex flex-col gap-2 list-disc pl-5">
+<li>The catalog is a static snapshot. Pages display the recorded <code class="font-code-badge">last_verified</code> dates; nothing polls upstream services.</li>
+<li>Upstream source links can change or disappear. Evidence links are recorded as-is.</li>
+<li>Search is client-side substring matching, not a ranked search service.</li>
+<li>A submission receipt confirms that Web3Forms accepted the request; it does not confirm approval, publication, or inclusion in a dataset.</li>
+<li>There is no hosted API, SLA, or machine-authenticated access.</li>
+</ul>
+</div>
+</section>
+<p class="font-metadata-label text-metadata-label text-text-muted mt-space-md">Last updated 2026-11-05 · audit and submission build. This page describes the repository as it exists; it is not a product roadmap.</p>
+</main>

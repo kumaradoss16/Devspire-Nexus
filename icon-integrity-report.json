@@ -1,0 +1,25 @@
+{
+  "generated_at": "2026-11-06T08:29:54Z",
+  "original_file": "ai-resources-1000.backup.json",
+  "updated_file": "ai-resources-1000.json",
+  "original_sha256": "30842a1698ca12e517ec0f600981261c19dee0abc89dbfeef167bb19d094b704",
+  "updated_sha256": "9cf9d963f09358b56115b58b56afc4b652c7535ce4abdb415746f43ed3482c34",
+  "original_records": 1000,
+  "updated_records": 1000,
+  "unique_ids": 1000,
+  "only_icon_changed": true,
+  "all_icon_keys_present": true,
+  "valid_icon_urls_or_null": true,
+  "metrics": {
+    "total_resources": 1000,
+    "existing_valid_icons": 943,
+    "newly_fetched_official_icons": 649,
+    "repository_avatars": 216,
+    "domain_favicons": 93,
+    "favicon_service_fallback": 31,
+    "unavailable_icons": 11,
+    "broken_icons": 57,
+    "manual_review_required": 39
+  },
+  "validation_passed": true
+}

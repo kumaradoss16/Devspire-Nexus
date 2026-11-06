@@ -1,0 +1,37 @@
+{
+  "name": "AI Resource Intelligence static catalog",
+  "api_version": "1.0",
+  "generated": "2026-11-06",
+  "kind": "static-files",
+  "note": "Static JSON files shipped with the site. No hosted API, no authentication, no live endpoint.",
+  "total_records": 1003,
+  "registries": {
+    "tools": {
+      "label": "AI Tools",
+      "file": "api/tools.json",
+      "count": 403,
+      "category_count": 14,
+      "last_verified": "2026-11-04",
+      "bytes": 603996,
+      "sha256": "24168ba365ddb6985b8dbb1f57944e7fd1bc22d108921f1053bb89d7751ed09a"
+    },
+    "models": {
+      "label": "AI Models",
+      "file": "api/models.json",
+      "count": 300,
+      "category_count": 12,
+      "last_verified": "2026-11-04",
+      "bytes": 486148,
+      "sha256": "d4382f7eba4488d1dc6ca875641af13b37833b6b3774ed59d10baedc53826645"
+    },
+    "developer-resources": {
+      "label": "Developer Resources",
+      "file": "api/developer-resources.json",
+      "count": 300,
+      "category_count": 12,
+      "last_verified": "2026-11-04",
+      "bytes": 552206,
+      "sha256": "fa19cc4afe3a7ff4074638a2196983e859879ea589cc6fb260665f26f37e5401"
+    }
+  }
+}

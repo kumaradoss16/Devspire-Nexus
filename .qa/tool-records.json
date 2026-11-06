@@ -1,0 +1,2271 @@
+{
+  "tools": [
+    {
+      "name": "ChatGPT",
+      "org": "OpenAI",
+      "initials": "CG",
+      "tone": "secondary",
+      "platform": "Multiple",
+      "pricing": "Freemium",
+      "license": "Proprietary",
+      "category": "Assistants & Chatbots",
+      "sub": "General-purpose AI Assistants",
+      "deployment": [
+        "Cloud-hosted"
+      ],
+      "access": [],
+      "verified": true,
+      "url": "https://chatgpt.com/",
+      "desc": "Conversational AI assistant developed by OpenAI for writing, analysis, coding, image understanding, file processing, and task automation. Available on web, iOS, Android, and desktop, with free and paid subscription tiers.",
+      "tags": [
+        "LLM",
+        "Chatbot",
+        "Multimodal",
+        "Productivity",
+        "Voice",
+        "Image-Understanding"
+      ]
+    },
+    {
+      "name": "Claude",
+      "org": "Anthropic",
+      "initials": "CL",
+      "tone": "primary",
+      "platform": "Multiple",
+      "pricing": "Freemium",
+      "license": "Proprietary",
+      "category": "Assistants & Chatbots",
+      "sub": "General-purpose AI Assistants",
+      "deployment": [
+        "Cloud-hosted"
+      ],
+      "access": [],
+      "verified": true,
+      "url": "https://claude.ai/",
+      "desc": "Conversational AI assistant by Anthropic designed for writing, analysis, coding, document review, and research. Accessible via web and mobile; API access is provided separately through the Anthropic Console.",
+      "tags": [
+        "LLM",
+        "Chatbot",
+        "Long-Context",
+        "Document-Analysis",
+        "Coding"
+      ]
+    },
+    {
+      "name": "Gemini",
+      "org": "Google",
+      "initials": "GE",
+      "tone": "tertiary",
+      "pricing": "Freemium",
+      "license": "Proprietary",
+      "category": "Assistants & Chatbots",
+      "sub": "AI Assistant",
+      "deployment": [
+        "Cloud-hosted"
+      ],
+      "access": [],
+      "verified": true,
+      "url": "https://gemini.google.com",
+      "desc": "Google's hosted multimodal assistant that processes text, images, audio, and video, with integration into Google Workspace and Search.",
+      "tags": [
+        "Multimodal",
+        "LLM",
+        "Workspace Integration",
+        "Long Context"
+      ]
+    },
+    {
+      "name": "Grok",
+      "org": "xAI",
+      "initials": "GK",
+      "tone": "status-warning",
+      "pricing": "Freemium",
+      "license": "Proprietary",
+      "category": "Assistants & Chatbots",
+      "sub": "AI Assistant",
+      "deployment": [
+        "Cloud-hosted"
+      ],
+      "access": [],
+      "verified": true,
+      "url": "https://grok.com",
+      "desc": "xAI's hosted assistant offering chat, reasoning, image understanding, and real-time web and X search from xAI-hosted models.",
+      "tags": [
+        "LLM",
+        "Reasoning",
+        "Real-time Search",
+        "Multimodal"
+      ]
+    },
+    {
+      "name": "Poe",
+      "org": "Quora",
+      "initials": "PO",
+      "tone": "secondary",
+      "pricing": "Freemium",
+      "license": "Proprietary",
+      "category": "Assistants & Chatbots",
+      "sub": "AI Chatbots",
+      "deployment": [
+        "Cloud-hosted"
+      ],
+      "access": [],
+      "verified": true,
+      "url": "https://poe.com/",
+      "desc": "Consumer AI platform created by Quora providing unified access to multiple frontier and open-weight models including Claude, GPT-4o, Gemini, and FLUX, enabling users to create, share, and monetize custom prompt bots.",
+      "tags": [
+        "Multi-Model",
+        "Chatbot",
+        "Custom-Bots",
+        "Aggregator",
+        "Prompt-Engineering"
+      ]
+    },
+    {
+      "name": "Character.ai",
+      "org": "Character.ai",
+      "initials": "CH",
+      "tone": "tertiary",
+      "pricing": "Freemium",
+      "license": "Proprietary",
+      "category": "Assistants & Chatbots",
+      "sub": "AI Chatbots",
+      "deployment": [
+        "Cloud-hosted"
+      ],
+      "access": [],
+      "verified": true,
+      "url": "https://character.ai/",
+      "desc": "Consumer conversational AI platform hosting millions of user-created personas, fictional characters, historical figures, and interactive roleplay bots powered by custom large language models optimized for engaging multi-turn dialogue.",
+      "tags": [
+        "Chatbot",
+        "Conversational-AI",
+        "Persona-Engine",
+        "Roleplay",
+        "Consumer-AI"
+      ]
+    },
+    {
+      "name": "Perplexity",
+      "org": "Perplexity",
+      "initials": "PE",
+      "tone": "secondary",
+      "pricing": "Freemium",
+      "license": "Proprietary",
+      "category": "Search & Research",
+      "sub": "AI Search and Research Assistants",
+      "deployment": [
+        "Cloud-hosted"
+      ],
+      "access": [
+        "No signup required"
+      ],
+      "verified": true,
+      "url": "https://www.perplexity.ai/",
+      "desc": "AI-powered answer engine that performs real-time web search and synthesizes cited, conversational responses. Supports deep research workflows, file analysis, and model switching for paid users.",
+      "tags": [
+        "AI-Search",
+        "Answer-Engine",
+        "Web-Retrieval",
+        "Research",
+        "RAG"
+      ]
+    },
+    {
+      "name": "NotebookLM",
+      "org": "Google",
+      "initials": "NB",
+      "tone": "tertiary",
+      "pricing": "Freemium",
+      "license": "Proprietary",
+      "category": "Search & Research",
+      "sub": "Research Assistant",
+      "deployment": [
+        "Cloud-hosted"
+      ],
+      "access": [],
+      "verified": true,
+      "url": "https://notebooklm.google",
+      "desc": "Source-grounded research assistant that ingests uploaded documents, links, and videos and produces cited answers, summaries, and audio overviews.",
+      "tags": [
+        "RAG",
+        "Document QA",
+        "Audio Overviews",
+        "Research"
+      ]
+    },
+    {
+      "name": "Phind",
+      "org": "Phind",
+      "initials": "PH",
+      "icon": "compass",
+      "tone": "primary",
+      "pricing": "Freemium",
+      "license": "Proprietary",
+      "category": "Search & Research",
+      "sub": "AI Search and Research Assistants",
+      "deployment": [
+        "Cloud-hosted"
+      ],
+      "access": [
+        "No signup required"
+      ],
+      "verified": true,
+      "url": "https://www.phind.com/",
+      "desc": "AI search engine and coding answer platform tailored for software developers. Crawls technical documentation, Stack Overflow threads, and GitHub repositories to synthesize verified, executable code solutions with source links.",
+      "tags": [
+        "Developer-Search",
+        "Code-Synthesis",
+        "Technical-RAG",
+        "Documentation-Search",
+        "VS-Code"
+      ]
+    },
+    {
+      "name": "Consensus",
+      "org": "Consensus",
+      "initials": "CN",
+      "tone": "status-warning",
+      "pricing": "Freemium",
+      "license": "Proprietary",
+      "category": "Search & Research",
+      "sub": "AI Research and Scientific Applications",
+      "deployment": [
+        "Cloud-hosted"
+      ],
+      "access": [],
+      "verified": true,
+      "url": "https://consensus.app/",
+      "desc": "AI-powered search engine for scientific research that queries over 200 million peer-reviewed journal papers. Synthesizes scientific consensus meters, extracts study findings, and provides citations without hallucinating academic evidence.",
+      "tags": [
+        "Academic-Research",
+        "Scientific-Search",
+        "Peer-Reviewed",
+        "Consensus-Meter",
+        "Paper-Extraction"
+      ]
+    },
+    {
+      "name": "Elicit",
+      "org": "Elicit",
+      "initials": "EI",
+      "tone": "secondary",
+      "pricing": "Freemium",
+      "license": "Proprietary",
+      "category": "Search & Research",
+      "sub": "AI Research and Scientific Applications",
+      "deployment": [
+        "Cloud-hosted"
+      ],
+      "access": [],
+      "verified": true,
+      "url": "https://elicit.com/",
+      "desc": "AI research assistant that automates scientific literature reviews. Searches academic papers, extracts structured data columns (sample size, methodologies, outcomes), and summarizes research questions with direct source attribution.",
+      "tags": [
+        "Literature-Review",
+        "Scientific-Research",
+        "Data-Extraction",
+        "Academic-Synthesis",
+        "Evidence-Based"
+      ]
+    },
+    {
+      "name": "Cursor",
+      "org": "Anysphere",
+      "initials": "CU",
+      "tone": "secondary",
+      "platform": "Desktop",
+      "pricing": "Freemium",
+      "license": "Proprietary",
+      "category": "Coding & Development",
+      "sub": "AI Coding Assistants",
+      "deployment": [
+        "Cloud-hosted"
+      ],
+      "access": [],
+      "verified": true,
+      "url": "https://cursor.com/",
+      "desc": "AI-powered code editor built on VS Code, offering multi-file code editing, codebase-aware chat, AI-powered tab completion, and agent-based coding workflows. Supports multiple frontier LLM backends.",
+      "tags": [
+        "AI-IDE",
+        "Code-Generation",
+        "Code-Editing",
+        "Agent",
+        "Autocomplete"
+      ]
+    },
+    {
+      "name": "GitHub Copilot",
+      "org": "GitHub",
+      "initials": "GC",
+      "tone": "primary",
+      "pricing": "Freemium",
+      "license": "Proprietary",
+      "category": "Coding & Development",
+      "sub": "AI Coding Assistants",
+      "deployment": [
+        "Cloud-hosted"
+      ],
+      "access": [],
+      "verified": true,
+      "url": "https://github.com/features/copilot",
+      "desc": "AI-assisted pair programmer by GitHub and OpenAI that provides context-aware autocomplete suggestions, chat-based code explanations, automated unit test generation, and CLI terminal command assistance directly within popular code editors.",
+      "tags": [
+        "Code-Completion",
+        "AI-Pair-Programming",
+        "Developer-Tools",
+        "VS-Code",
+        "Chat"
+      ]
+    },
+    {
+      "name": "Windsurf",
+      "org": "Cognition",
+      "initials": "WI",
+      "tone": "tertiary",
+      "platform": "Desktop",
+      "pricing": "Freemium",
+      "license": "Proprietary",
+      "category": "Coding & Development",
+      "sub": "AI IDEs and Code Editors",
+      "deployment": [
+        "Cloud-hosted"
+      ],
+      "access": [],
+      "verified": true,
+      "url": "https://codeium.com/windsurf",
+      "desc": "Agentic AI-native IDE created by Codeium featuring Cascade, an autonomous coding agent. Performs multi-file code refactoring, context-aware command execution, real-time codebase indexing, and multi-line tab completions.",
+      "tags": [
+        "AI-IDE",
+        "Agentic-Coding",
+        "Autocomplete",
+        "Codebase-Search",
+        "Codeium"
+      ]
+    },
+    {
+      "name": "Lovable",
+      "org": "Lovable Labs",
+      "initials": "LO",
+      "tone": "status-warning",
+      "pricing": "Freemium",
+      "license": "Proprietary",
+      "category": "Coding & Development",
+      "sub": "AI Coding Assistants",
+      "deployment": [
+        "Cloud-hosted"
+      ],
+      "access": [],
+      "verified": true,
+      "url": "https://lovable.dev/",
+      "desc": "Full-stack AI application builder that turns plain English descriptions into complete web applications with front-end UI, backend logic, authentication, and database connections, accompanied by live preview and GitHub synchronization.",
+      "tags": [
+        "Web-App-Builder",
+        "Full-Stack",
+        "Generative-UI",
+        "Supabase",
+        "GitHub-Sync"
+      ]
+    },
+    {
+      "name": "v0 by Vercel",
+      "org": "Vercel",
+      "initials": "V0",
+      "tone": "secondary",
+      "pricing": "Freemium",
+      "license": "Proprietary",
+      "category": "Coding & Development",
+      "sub": "AI Coding Assistants",
+      "deployment": [
+        "Cloud-hosted"
+      ],
+      "access": [],
+      "verified": true,
+      "url": "https://v0.dev/",
+      "desc": "AI-powered UI generation tool by Vercel that converts text prompts and design descriptions into React/Next.js component code with Tailwind CSS styling. Produces deployment-ready frontend code.",
+      "tags": [
+        "UI-Generation",
+        "React",
+        "Next.js",
+        "Code-Generation",
+        "Frontend",
+        "Tailwind"
+      ]
+    },
+    {
+      "name": "Bolt.new",
+      "org": "StackBlitz",
+      "initials": "BO",
+      "tone": "tertiary",
+      "platform": "Web",
+      "pricing": "Freemium",
+      "license": "Proprietary",
+      "category": "Coding & Development",
+      "sub": "AI IDEs and Code Editors",
+      "deployment": [
+        "Cloud-hosted"
+      ],
+      "access": [],
+      "verified": true,
+      "url": "https://bolt.new/",
+      "desc": "In-browser AI development environment powered by WebContainers that prompts, executes, tests, and deploys full-stack Node.js and web applications entirely inside the browser without requiring local machine installations.",
+      "tags": [
+        "WebContainers",
+        "Full-Stack",
+        "Browser-IDE",
+        "Code-Execution",
+        "Node.js"
+      ]
+    },
+    {
+      "name": "Tabnine",
+      "org": "Tabnine",
+      "initials": "TB",
+      "tone": "primary",
+      "pricing": "Freemium",
+      "license": "Proprietary",
+      "category": "Coding & Development",
+      "sub": "AI Coding Assistants",
+      "deployment": [
+        "Cloud-hosted",
+        "Self-hostable"
+      ],
+      "access": [],
+      "verified": true,
+      "url": "https://www.tabnine.com/",
+      "desc": "Privacy-first AI code completion and chat assistant for software engineers. Offers contextual autocompletions and codebase querying trained exclusively on open-source code with permissive licenses, deployable on-premises or private clouds.",
+      "tags": [
+        "Private-AI",
+        "Code-Completion",
+        "On-Premises",
+        "Zero-Data-Retention",
+        "JetBrains"
+      ]
+    },
+    {
+      "name": "CodeRabbit",
+      "org": "CodeRabbit",
+      "initials": "CR",
+      "tone": "status-warning",
+      "pricing": "Freemium",
+      "license": "Proprietary",
+      "category": "Coding & Development",
+      "sub": "AI Code Review and Debugging",
+      "deployment": [
+        "Cloud-hosted"
+      ],
+      "access": [],
+      "verified": true,
+      "url": "https://coderabbit.ai/",
+      "desc": "AI-powered code review platform that integrates into GitHub and GitLab pull requests. Provides line-by-line code feedback, detects edge cases and security vulnerabilities, generates release summaries, and answers questions in PR comments.",
+      "tags": [
+        "Code-Review",
+        "Pull-Requests",
+        "GitHub-Integration",
+        "Bug-Detection",
+        "Developer-Tools"
+      ]
+    },
+    {
+      "name": "Grammarly",
+      "org": "Grammarly",
+      "initials": "GL",
+      "tone": "secondary",
+      "platform": "Multiple",
+      "pricing": "Freemium",
+      "license": "Proprietary",
+      "category": "Writing & Content",
+      "sub": "AI Writing and Editing",
+      "deployment": [
+        "Cloud-hosted"
+      ],
+      "access": [],
+      "verified": true,
+      "url": "https://www.grammarly.com/",
+      "desc": "AI-powered writing assistant providing grammar checking, style suggestions, tone detection, plagiarism detection, and generative writing features across web browsers, desktop apps, and integrations.",
+      "tags": [
+        "Writing",
+        "Grammar-Check",
+        "Style",
+        "Tone-Detection",
+        "Browser-Extension"
+      ]
+    },
+    {
+      "name": "QuillBot",
+      "org": "QuillBot",
+      "initials": "QB",
+      "tone": "tertiary",
+      "pricing": "Freemium",
+      "license": "Proprietary",
+      "category": "Writing & Content",
+      "sub": "AI Writing and Editing",
+      "deployment": [
+        "Cloud-hosted"
+      ],
+      "access": [
+        "No signup required"
+      ],
+      "verified": true,
+      "url": "https://quillbot.com/",
+      "desc": "AI writing enhancement tool offering multi-mode sentence paraphrasing, grammar checking, summarization, citation generation, and plagiarism detection to improve vocabulary, readability, and academic writing fluency.",
+      "tags": [
+        "Paraphrasing",
+        "Writing-Assistant",
+        "Grammar-Checker",
+        "Summarization",
+        "Academic-Tools"
+      ]
+    },
+    {
+      "name": "Jasper",
+      "org": "Jasper",
+      "initials": "JA",
+      "tone": "primary",
+      "pricing": "Paid",
+      "license": "Proprietary",
+      "category": "Writing & Content",
+      "sub": "AI Content Generation",
+      "deployment": [
+        "Cloud-hosted"
+      ],
+      "access": [],
+      "verified": true,
+      "url": "https://www.jasper.ai/",
+      "desc": "AI content platform for marketing teams and enterprises, enabling long-form article writing, campaign copy, social media content, and brand-consistent content generation with customizable brand voice settings.",
+      "tags": [
+        "Content-Generation",
+        "Marketing",
+        "Copywriting",
+        "Brand-Voice",
+        "AI-Writing"
+      ]
+    },
+    {
+      "name": "Copy.ai",
+      "org": "Copy.ai",
+      "initials": "CP",
+      "tone": "status-warning",
+      "pricing": "Freemium",
+      "license": "Proprietary",
+      "category": "Writing & Content",
+      "sub": "AI Content Generation",
+      "deployment": [
+        "Cloud-hosted"
+      ],
+      "access": [],
+      "verified": true,
+      "url": "https://www.copy.ai/",
+      "desc": "AI-powered copywriting and workflow automation platform for marketing teams. Generates sales copy, email sequences, social posts, and marketing content, with GTM (go-to-market) workflow automation features.",
+      "tags": [
+        "Copywriting",
+        "Marketing",
+        "GTM-Workflows",
+        "Content-Generation",
+        "Sales-Copy"
+      ]
+    },
+    {
+      "name": "Notion AI",
+      "org": "Notion",
+      "initials": "NO",
+      "tone": "secondary",
+      "pricing": "Freemium",
+      "license": "Proprietary",
+      "category": "Productivity",
+      "sub": "AI Productivity",
+      "deployment": [
+        "Cloud-hosted"
+      ],
+      "access": [],
+      "verified": true,
+      "url": "https://www.notion.so/product/ai",
+      "desc": "AI writing and knowledge management add-on integrated into the Notion workspace. Assists with drafting, summarizing, translating, and querying documents and databases within Notion pages.",
+      "tags": [
+        "Productivity",
+        "Writing",
+        "Summarization",
+        "Knowledge-Management",
+        "Workspace"
+      ]
+    },
+    {
+      "name": "Superhuman AI",
+      "org": "Superhuman",
+      "initials": "SH",
+      "tone": "tertiary",
+      "pricing": "Paid",
+      "license": "Proprietary",
+      "category": "Productivity",
+      "sub": "AI Productivity",
+      "deployment": [
+        "Cloud-hosted"
+      ],
+      "access": [],
+      "verified": true,
+      "url": "https://superhuman.com/ai",
+      "desc": "AI-accelerated email client for Gmail and Outlook that writes complete email drafts matching personal tone, summarizes lengthy email threads in one sentence, corrects phrasing, and automates inbox triage with keyboard shortcuts.",
+      "tags": [
+        "Email-Productivity",
+        "Tone-Matching",
+        "Thread-Summarization",
+        "Keyboard-First",
+        "Inbox-Zero"
+      ]
+    },
+    {
+      "name": "Harvey",
+      "org": "Harvey",
+      "initials": "HA",
+      "icon": "chip",
+      "tone": "primary",
+      "pricing": "Paid",
+      "license": "Proprietary",
+      "category": "Productivity",
+      "sub": "AI Knowledge Management",
+      "deployment": [
+        "Cloud-hosted"
+      ],
+      "access": [],
+      "verified": true,
+      "url": "https://www.harvey.ai/",
+      "desc": "Enterprise AI platform purpose-built for law firms and corporate legal departments. Automates contract analysis, regulatory compliance auditing, legal research synthesis, and due diligence with strict enterprise data segregation.",
+      "tags": [
+        "LegalTech",
+        "Contract-Analysis",
+        "Due-Diligence",
+        "Enterprise-AI",
+        "Document-Review"
+      ]
+    },
+    {
+      "name": "Mem.ai",
+      "org": "Mem",
+      "initials": "ME",
+      "tone": "status-warning",
+      "pricing": "Freemium",
+      "license": "Proprietary",
+      "category": "Productivity",
+      "sub": "AI Knowledge Management",
+      "deployment": [
+        "Cloud-hosted"
+      ],
+      "access": [],
+      "verified": true,
+      "url": "https://mem.ai/",
+      "desc": "Self-organizing AI workspace that connects personal notes, web clips, meeting minutes, and document files without requiring manual tagging or hierarchical folders, using semantic search to surface relevant past context.",
+      "tags": [
+        "Knowledge-Management",
+        "Semantic-Search",
+        "Note-Taking",
+        "Productivity",
+        "Personal-AI"
+      ]
+    },
+    {
+      "name": "Glean",
+      "org": "Glean",
+      "initials": "GN",
+      "tone": "secondary",
+      "pricing": "Paid",
+      "license": "Proprietary",
+      "category": "Productivity",
+      "sub": "AI Knowledge Management",
+      "deployment": [
+        "Cloud-hosted"
+      ],
+      "access": [],
+      "verified": true,
+      "url": "https://www.glean.com/",
+      "desc": "Enterprise search and work assistant that indexes internal company tools (Slack, Google Drive, Jira, GitHub, Salesforce) to answer employee questions, synthesize company knowledge, and build internal conversational agents with enterprise permissions.",
+      "tags": [
+        "Enterprise-Search",
+        "Knowledge-Graph",
+        "Access-Control",
+        "Work-Assistant",
+        "Semantic-Indexing"
+      ]
+    },
+    {
+      "name": "Scribe",
+      "org": "Scribe",
+      "initials": "SC",
+      "tone": "tertiary",
+      "platform": "Multiple",
+      "pricing": "Freemium",
+      "license": "Proprietary",
+      "category": "Automation & Workflows",
+      "sub": "AI Workflow Automation",
+      "deployment": [
+        "Cloud-hosted"
+      ],
+      "access": [],
+      "verified": true,
+      "url": "https://scribehow.com/",
+      "desc": "AI productivity tool that records desktop browser workflows and automatically converts click sequences and keystrokes into visual step-by-step how-to guides, screenshots, and standard operating procedures (SOPs).",
+      "tags": [
+        "SOP-Generator",
+        "Workflow-Documentation",
+        "Screen-Capture",
+        "Process-Automation",
+        "Training"
+      ]
+    },
+    {
+      "name": "Make",
+      "org": "Make",
+      "initials": "MK",
+      "tone": "primary",
+      "pricing": "Freemium",
+      "license": "Proprietary",
+      "category": "Automation & Workflows",
+      "sub": "AI Workflow Automation",
+      "deployment": [
+        "Cloud-hosted"
+      ],
+      "access": [],
+      "verified": true,
+      "url": "https://www.make.com/",
+      "desc": "Visual no-code integration platform that connects hundreds of cloud applications and databases. Features native AI modules for OpenAI, Anthropic, and Hugging Face to build automated multi-step data pipelines and business processes.",
+      "tags": [
+        "No-Code",
+        "Workflow-Automation",
+        "API-Integration",
+        "Webhooks",
+        "AI-Orchestration"
+      ]
+    },
+    {
+      "name": "Devin",
+      "org": "Cognition",
+      "initials": "DV",
+      "tone": "secondary",
+      "pricing": "Paid",
+      "license": "Proprietary",
+      "category": "AI Agents",
+      "sub": "AI Agents and Agent Builders",
+      "deployment": [
+        "Cloud-hosted"
+      ],
+      "access": [],
+      "verified": true,
+      "url": "https://www.cognition.ai/",
+      "desc": "Autonomous AI software engineering agent developed by Cognition that navigates complex codebases, resolves GitHub issues, writes tests, runs terminal commands in sandboxed environments, and creates pull requests end-to-end.",
+      "tags": [
+        "Autonomous-Agent",
+        "Software-Engineering",
+        "Sandboxed-Execution",
+        "GitHub",
+        "DevOps"
+      ]
+    },
+    {
+      "name": "Replit Agent",
+      "org": "Replit",
+      "initials": "RA",
+      "tone": "tertiary",
+      "pricing": "Paid",
+      "license": "Proprietary",
+      "category": "AI Agents",
+      "sub": "AI Agents and Agent Builders",
+      "deployment": [
+        "Cloud-hosted"
+      ],
+      "access": [],
+      "verified": true,
+      "url": "https://replit.com/ai",
+      "desc": "Autonomous AI coding agent embedded in Replit that plans, writes, debugs, and provisions full-stack software applications from high-level natural language specifications, handling database setup, backend APIs, and cloud hosting.",
+      "tags": [
+        "Autonomous-Agent",
+        "Software-Engineering",
+        "Full-Stack",
+        "Cloud-Hosting",
+        "DevOps"
+      ]
+    },
+    {
+      "name": "Midjourney",
+      "org": "Midjourney",
+      "initials": "MJ",
+      "tone": "status-warning",
+      "pricing": "Paid",
+      "license": "Proprietary",
+      "category": "Image Generation",
+      "sub": "AI Image Generation",
+      "deployment": [
+        "Cloud-hosted"
+      ],
+      "access": [],
+      "verified": true,
+      "url": "https://www.midjourney.com/",
+      "desc": "AI image generation platform producing high-quality artistic and photorealistic images from text prompts. Accessible via web interface and Discord. No free tier; requires a paid subscription.",
+      "tags": [
+        "Image-Generation",
+        "Text-to-Image",
+        "Diffusion",
+        "Creative",
+        "Art"
+      ]
+    },
+    {
+      "name": "Ideogram",
+      "org": "Ideogram",
+      "initials": "ID",
+      "tone": "secondary",
+      "pricing": "Freemium",
+      "license": "Proprietary",
+      "category": "Image Generation",
+      "sub": "AI Image Generation",
+      "deployment": [
+        "Cloud-hosted"
+      ],
+      "access": [],
+      "verified": true,
+      "url": "https://ideogram.ai",
+      "desc": "Hosted text-to-image generator known for accurate in-image typography, producing images from prompts with style and aspect-ratio controls.",
+      "tags": [
+        "Text-to-Image",
+        "Typography",
+        "Design",
+        "Diffusion"
+      ]
+    },
+    {
+      "name": "Krea AI",
+      "org": "Krea",
+      "initials": "KR",
+      "tone": "tertiary",
+      "pricing": "Freemium",
+      "license": "Proprietary",
+      "category": "Image Generation",
+      "sub": "AI Image Generation",
+      "deployment": [
+        "Cloud-hosted"
+      ],
+      "access": [],
+      "verified": true,
+      "url": "https://www.krea.ai/",
+      "desc": "Real-time visual generation and enhancement tool featuring instant canvas drawing-to-image synthesis, video generation, AI upscaling, and motion video controls for digital artists, designers, and creative directors.",
+      "tags": [
+        "Real-Time-Generation",
+        "AI-Upscaling",
+        "Latent-Consistency",
+        "Text-to-Image",
+        "Creative-Suite"
+      ]
+    },
+    {
+      "name": "Leonardo.Ai",
+      "org": "Leonardo.Ai",
+      "initials": "LE",
+      "tone": "primary",
+      "pricing": "Freemium",
+      "license": "Proprietary",
+      "category": "Image Generation",
+      "sub": "AI Image Generation",
+      "deployment": [
+        "Cloud-hosted"
+      ],
+      "access": [],
+      "verified": true,
+      "url": "https://leonardo.ai/",
+      "desc": "Generative AI creative production platform offering fine-tuned image generation models, real-time canvas editing, texture generation for 3D assets, and graphic design tooling for game developers and marketing artists.",
+      "tags": [
+        "Image-Generation",
+        "Game-Assets",
+        "3D-Textures",
+        "Inpainting",
+        "Canvas-Editor"
+      ]
+    },
+    {
+      "name": "Adobe Firefly",
+      "org": "Adobe",
+      "initials": "AF",
+      "tone": "status-warning",
+      "pricing": "Freemium",
+      "license": "Proprietary",
+      "category": "Image Generation",
+      "sub": "AI Image Generation",
+      "deployment": [
+        "Cloud-hosted"
+      ],
+      "access": [],
+      "verified": true,
+      "url": "https://firefly.adobe.com/",
+      "desc": "Creative generative AI suite developed by Adobe trained exclusively on licensed content from Adobe Stock and public domain assets, powering text-to-image, generative fill, text effects, and vector recoloring inside Adobe Creative Cloud.",
+      "tags": [
+        "Generative-Fill",
+        "Text-to-Image",
+        "Commercial-Safety",
+        "Vector-Recolor",
+        "Creative-Cloud"
+      ]
+    },
+    {
+      "name": "Runway",
+      "org": "Runway",
+      "initials": "RU",
+      "tone": "secondary",
+      "pricing": "Freemium",
+      "license": "Proprietary",
+      "category": "Video Generation",
+      "sub": "AI Video Generation",
+      "deployment": [
+        "Cloud-hosted"
+      ],
+      "access": [],
+      "verified": true,
+      "url": "https://runwayml.com/",
+      "desc": "AI-powered creative platform for text-to-video and image-to-video generation, video editing, background removal, and inpainting. Used by filmmakers and content creators for generative video workflows.",
+      "tags": [
+        "Video-Generation",
+        "Text-to-Video",
+        "Image-to-Video",
+        "Creative",
+        "Generative-AI"
+      ]
+    },
+    {
+      "name": "Synthesia",
+      "org": "Synthesia",
+      "initials": "SY",
+      "tone": "tertiary",
+      "pricing": "Freemium",
+      "license": "Proprietary",
+      "category": "Video Generation",
+      "sub": "AI Video Generation",
+      "deployment": [
+        "Cloud-hosted"
+      ],
+      "access": [],
+      "verified": true,
+      "url": "https://www.synthesia.io/",
+      "desc": "AI video generation platform that creates talking-avatar videos from text scripts using over 230 AI avatars and 140+ languages. Used for corporate training, product demos, and marketing videos without filming.",
+      "tags": [
+        "Video-Generation",
+        "AI-Avatars",
+        "Text-to-Video",
+        "Multilingual",
+        "Corporate-Training"
+      ]
+    },
+    {
+      "name": "Pika",
+      "org": "Pika",
+      "initials": "PI",
+      "tone": "primary",
+      "pricing": "Freemium",
+      "license": "Proprietary",
+      "category": "Video Generation",
+      "sub": "AI Video Generation",
+      "deployment": [
+        "Cloud-hosted"
+      ],
+      "access": [],
+      "verified": true,
+      "url": "https://pika.art/",
+      "desc": "AI video generation platform enabling text-to-video and image-to-video creation with motion control, style transfer, and video editing features. Targeted at creators generating short-form social media video content.",
+      "tags": [
+        "Video-Generation",
+        "Text-to-Video",
+        "Image-to-Video",
+        "Creative",
+        "Social-Media"
+      ]
+    },
+    {
+      "name": "HeyGen",
+      "org": "HeyGen",
+      "initials": "HE",
+      "tone": "status-warning",
+      "pricing": "Freemium",
+      "license": "Proprietary",
+      "category": "Video Generation",
+      "sub": "AI Video Generation",
+      "deployment": [
+        "Cloud-hosted"
+      ],
+      "access": [],
+      "verified": true,
+      "url": "https://www.heygen.com/",
+      "desc": "AI video generation platform that produces studio-quality talking avatar videos, multilingual video translations with lip-sync matching, and personalized marketing videos from text scripts and audio recordings.",
+      "tags": [
+        "AI-Avatars",
+        "Video-Translation",
+        "Lip-Sync",
+        "Text-to-Video",
+        "Multilingual"
+      ]
+    },
+    {
+      "name": "Luma Dream Machine",
+      "org": "Luma AI",
+      "initials": "LU",
+      "tone": "secondary",
+      "pricing": "Freemium",
+      "license": "Proprietary",
+      "category": "Video Generation",
+      "sub": "AI Video Generation",
+      "deployment": [
+        "Cloud-hosted"
+      ],
+      "access": [],
+      "verified": true,
+      "url": "https://lumalabs.ai/dream-machine",
+      "desc": "AI video generation system built by Luma AI that transforms text and image inputs into realistic 5-second video shots with accurate physics, coherent motion, character consistency, and dynamic camera movements.",
+      "tags": [
+        "Video-Generation",
+        "Text-to-Video",
+        "Image-to-Video",
+        "Camera-Control",
+        "High-Fidelity"
+      ]
+    },
+    {
+      "name": "Kling AI",
+      "org": "Kuaishou",
+      "initials": "KL",
+      "tone": "tertiary",
+      "pricing": "Freemium",
+      "license": "Proprietary",
+      "category": "Video Generation",
+      "sub": "AI Video Generation",
+      "deployment": [
+        "Cloud-hosted"
+      ],
+      "access": [],
+      "verified": true,
+      "url": "https://klingai.com/",
+      "desc": "High-definition video generation platform developed by Kuaishou capable of rendering cinematic videos up to 2 minutes long at 1080p resolution and 30fps with advanced physical simulation and 3D spatio-temporal attention.",
+      "tags": [
+        "Video-Generation",
+        "High-Definition",
+        "Physics-Simulation",
+        "Camera-Movements",
+        "Kuaishou"
+      ]
+    },
+    {
+      "name": "ElevenLabs",
+      "org": "ElevenLabs",
+      "initials": "EL",
+      "tone": "primary",
+      "platform": "Web",
+      "pricing": "Freemium",
+      "license": "Proprietary",
+      "category": "Audio & Voice",
+      "sub": "AI Voice Generation",
+      "deployment": [
+        "Cloud-hosted"
+      ],
+      "access": [],
+      "verified": true,
+      "url": "https://elevenlabs.io/",
+      "desc": "AI voice synthesis platform supporting text-to-speech, voice cloning, multilingual speech generation, and audio dubbing. Provides an API for developer integration and a web studio for content creators.",
+      "tags": [
+        "Text-to-Speech",
+        "Voice-Cloning",
+        "Multilingual",
+        "TTS",
+        "Audio-Generation"
+      ]
+    },
+    {
+      "name": "Suno",
+      "org": "Suno",
+      "initials": "SU",
+      "tone": "secondary",
+      "pricing": "Freemium",
+      "license": "Proprietary",
+      "category": "Audio & Voice",
+      "sub": "AI Music Generation",
+      "deployment": [
+        "Cloud-hosted"
+      ],
+      "access": [],
+      "verified": true,
+      "url": "https://suno.com/",
+      "desc": "Generative AI music creation platform that produces full-length songs with vocals, instruments, lyrics, and arrangements from natural language prompts. Enables genres from pop and rock to classical and hip-hop.",
+      "tags": [
+        "Music-Generation",
+        "Audio-Synthesis",
+        "Text-to-Audio",
+        "Creative-AI",
+        "Songwriting"
+      ]
+    },
+    {
+      "name": "Udio",
+      "org": "Udio",
+      "initials": "UD",
+      "tone": "tertiary",
+      "pricing": "Freemium",
+      "license": "Proprietary",
+      "category": "Audio & Voice",
+      "sub": "AI Music Generation",
+      "deployment": [
+        "Cloud-hosted"
+      ],
+      "access": [],
+      "verified": true,
+      "url": "https://www.udio.com/",
+      "desc": "AI music creation service founded by former Google DeepMind researchers that synthesizes expressive vocal tracks, intricate musical compositions, and stem separations from descriptive text prompts with granular section-by-section editing.",
+      "tags": [
+        "Music-Generation",
+        "Audio-Synthesis",
+        "Stem-Separation",
+        "Text-to-Music",
+        "Creative-AI"
+      ]
+    },
+    {
+      "name": "Speechify",
+      "org": "Speechify",
+      "initials": "SP",
+      "tone": "status-warning",
+      "platform": "Multiple",
+      "pricing": "Freemium",
+      "license": "Proprietary",
+      "category": "Audio & Voice",
+      "sub": "AI Voice Generation",
+      "deployment": [
+        "Cloud-hosted"
+      ],
+      "access": [],
+      "verified": true,
+      "url": "https://speechify.com/",
+      "desc": "AI text-to-speech reading application that converts books, PDFs, online articles, and documents into natural humanlike speech at speeds up to 4.5x, featuring celebrity voice models, OCR document scanning, and cross-device sync.",
+      "tags": [
+        "Text-to-Speech",
+        "Audio-Reader",
+        "OCR-Scanning",
+        "Accessibility",
+        "Voiceover"
+      ]
+    },
+    {
+      "name": "Descript",
+      "org": "Descript",
+      "initials": "DE",
+      "tone": "secondary",
+      "pricing": "Freemium",
+      "license": "Proprietary",
+      "category": "Audio & Voice",
+      "sub": "AI Audio/Video Editing",
+      "deployment": [
+        "Cloud-hosted"
+      ],
+      "access": [],
+      "verified": true,
+      "url": "https://www.descript.com/",
+      "desc": "AI-powered audio and video editing platform that treats media as text-based documents. Supports transcript-based editing, AI voice cloning, filler word removal, screen recording, and podcast/video production.",
+      "tags": [
+        "Video-Editing",
+        "Audio-Editing",
+        "Transcription",
+        "Voice-Cloning",
+        "Podcast"
+      ]
+    },
+    {
+      "name": "Canva Magic Studio",
+      "org": "Canva",
+      "initials": "CV",
+      "tone": "tertiary",
+      "pricing": "Freemium",
+      "license": "Proprietary",
+      "category": "Design & Creative",
+      "sub": "AI Design Tools",
+      "deployment": [
+        "Cloud-hosted"
+      ],
+      "access": [],
+      "verified": true,
+      "url": "https://www.canva.com/magic-studio/",
+      "desc": "Suite of generative design features embedded across the Canva ecosystem, including Magic Media (text-to-image/video), Magic Expand, Magic Eraser, Magic Switch (multi-format document conversion), and AI copy generation.",
+      "tags": [
+        "Graphic-Design",
+        "Magic-Eraser",
+        "Visual-Content",
+        "Social-Media",
+        "Generative-Design"
+      ]
+    },
+    {
+      "name": "Gamma",
+      "org": "Gamma",
+      "initials": "GA",
+      "tone": "secondary",
+      "pricing": "Freemium",
+      "license": "Proprietary",
+      "category": "Design & Creative",
+      "sub": "AI Presentation Builders",
+      "deployment": [
+        "Cloud-hosted"
+      ],
+      "access": [],
+      "verified": true,
+      "url": "https://gamma.app/",
+      "desc": "AI-native presentation and document generator that creates polished decks, webpages, and documents from a one-line prompt, with adaptive layouts, generated imagery, and live collaboration.",
+      "tags": [
+        "Presentations",
+        "Documents",
+        "Generative-Decks",
+        "Collaboration",
+        "Pitch-Decks"
+      ]
+    },
+    {
+      "name": "Beautiful.ai",
+      "org": "Beautiful.ai",
+      "initials": "BT",
+      "tone": "secondary",
+      "pricing": "Paid",
+      "license": "Proprietary",
+      "category": "Design & Creative",
+      "sub": "AI Presentation Builders",
+      "deployment": [
+        "Cloud-hosted"
+      ],
+      "access": [],
+      "verified": true,
+      "url": "https://www.beautiful.ai/",
+      "desc": "Cloud-based presentation tool using smart design rules and AI generation to automatically adapt slide layouts as content is added. Converts text outlines into finished slide decks with professional typography and color palettes.",
+      "tags": [
+        "Presentations",
+        "Smart-Slides",
+        "Auto-Layout",
+        "Business-Graphics",
+        "Design-Automation"
+      ]
+    },
+    {
+      "name": "Tome",
+      "org": "Tome",
+      "initials": "TM",
+      "tone": "secondary",
+      "pricing": "Freemium",
+      "license": "Proprietary",
+      "category": "Design & Creative",
+      "sub": "AI Presentation Builders",
+      "icon": "sparkle",
+      "deployment": [
+        "Cloud-hosted"
+      ],
+      "access": [],
+      "verified": true,
+      "url": "https://tome.app/",
+      "desc": "AI-native storytelling workspace that generates multimedia narratives, presentations, and product teardowns. Combines generated copy, relevant AI imagery, interactive prototypes, and web embeds on flexible dynamic canvases.",
+      "tags": [
+        "Storytelling",
+        "Presentations",
+        "Generative-Decks",
+        "Interactive-Canvas",
+        "Pitch-Decks"
+      ]
+    },
+    {
+      "name": "Julius AI",
+      "org": "Julius AI",
+      "initials": "JU",
+      "tone": "primary",
+      "pricing": "Freemium",
+      "license": "Proprietary",
+      "category": "Data & Docs",
+      "sub": "AI Data Analysis",
+      "deployment": [
+        "Cloud-hosted"
+      ],
+      "access": [],
+      "verified": true,
+      "url": "https://julius.ai/",
+      "desc": "AI-powered data analysis assistant that interprets spreadsheets, CSVs, and SQL databases. Generates Python scripts in an internal sandbox to render publication-ready charts, perform statistical models, and draft analytical reports.",
+      "tags": [
+        "Data-Analysis",
+        "Python-Execution",
+        "Statistical-Modeling",
+        "Charting",
+        "Spreadsheet-AI"
+      ]
+    },
+    {
+      "name": "Otter.ai",
+      "org": "Otter.ai",
+      "initials": "OT",
+      "tone": "secondary",
+      "pricing": "Freemium",
+      "license": "Proprietary",
+      "category": "Data & Docs",
+      "sub": "AI Meeting Assistants",
+      "deployment": [
+        "Cloud-hosted"
+      ],
+      "access": [],
+      "verified": true,
+      "url": "https://otter.ai/",
+      "desc": "AI transcription and meeting assistant that records, transcribes, and summarizes meetings in real-time. Integrates with Zoom, Google Meet, Microsoft Teams, and calendar systems to automate meeting notes.",
+      "tags": [
+        "Transcription",
+        "Meeting-Assistant",
+        "Speech-to-Text",
+        "Summarization",
+        "Collaboration"
+      ]
+    },
+    {
+      "name": "Fireflies.ai",
+      "org": "Fireflies.ai",
+      "initials": "FI",
+      "tone": "tertiary",
+      "pricing": "Freemium",
+      "license": "Proprietary",
+      "category": "Data & Docs",
+      "sub": "AI Meeting Assistants",
+      "deployment": [
+        "Cloud-hosted"
+      ],
+      "access": [],
+      "verified": true,
+      "url": "https://fireflies.ai/",
+      "desc": "AI meeting assistant that joins video conference calls (Zoom, Google Meet, Teams, Webex) to record audio, produce searchable timestamped transcripts, extract action items, and generate executive recaps with CRM integrations.",
+      "tags": [
+        "Meeting-Assistant",
+        "Voice-Analytics",
+        "Transcription",
+        "CRM-Integration",
+        "Audio-Intelligence"
+      ]
+    },
+    {
+      "name": "Llama",
+      "org": "Meta",
+      "initials": "LL",
+      "icon": "chip",
+      "tone": "secondary",
+      "pricing": "Free",
+      "license": "Open Source",
+      "category": "AI Models",
+      "deployment": [
+        "Local execution"
+      ],
+      "access": [],
+      "verified": true,
+      "url": "https://www.llama.com",
+      "desc": "Meta's open language model family, whose latest open generation is Llama 4 (Scout and Maverick), natively multimodal mixture-of-experts models.",
+      "tags": [
+        "Open Weights",
+        "MoE",
+        "Multimodal",
+        "Community License"
+      ]
+    },
+    {
+      "name": "Mistral",
+      "org": "Mistral AI",
+      "initials": "MI",
+      "icon": "chip",
+      "tone": "tertiary",
+      "pricing": "Free",
+      "license": "Open Source",
+      "category": "AI Models",
+      "deployment": [
+        "Local execution"
+      ],
+      "access": [
+        "No signup required"
+      ],
+      "verified": true,
+      "url": "https://mistral.ai",
+      "desc": "Mistral AI's family of LLMs, with several open-weight checkpoints (many Apache 2.0) taking text input and producing text and code, alongside API-only variants.",
+      "tags": [
+        "Open Weights",
+        "Apache 2.0",
+        "MoE",
+        "Code"
+      ]
+    },
+    {
+      "name": "Gemma",
+      "org": "Google DeepMind",
+      "initials": "GM",
+      "icon": "chip",
+      "tone": "primary",
+      "pricing": "Free",
+      "license": "Open Source",
+      "category": "AI Models",
+      "deployment": [
+        "Local execution"
+      ],
+      "access": [],
+      "verified": true,
+      "url": "https://ai.google.dev/gemma",
+      "desc": "Google DeepMind's lightweight open-weight LLMs derived from Gemini research, released in multiple sizes for laptop, mobile, and server inference.",
+      "tags": [
+        "Open Weights",
+        "On-device",
+        "Small LLM",
+        "Gemma Terms"
+      ]
+    },
+    {
+      "name": "Qwen",
+      "org": "Alibaba",
+      "initials": "QW",
+      "icon": "chip",
+      "tone": "status-warning",
+      "pricing": "Free",
+      "license": "Open Source",
+      "category": "AI Models",
+      "deployment": [
+        "Local execution"
+      ],
+      "access": [
+        "No signup required"
+      ],
+      "verified": true,
+      "url": "https://qwen.ai",
+      "desc": "Alibaba's open-weight LLM family; Qwen3.8-27B, a dense multimodal model, was published on Hugging Face on August 14, 2026 under Apache 2.0.",
+      "tags": [
+        "Open Weights",
+        "Apache 2.0",
+        "Multimodal",
+        "Multilingual"
+      ]
+    },
+    {
+      "name": "DeepSeek",
+      "org": "DeepSeek",
+      "initials": "DS",
+      "icon": "chip",
+      "tone": "secondary",
+      "pricing": "Free",
+      "license": "Open Source",
+      "category": "AI Models",
+      "deployment": [
+        "Local execution"
+      ],
+      "access": [
+        "No signup required"
+      ],
+      "verified": true,
+      "url": "https://www.deepseek.com",
+      "desc": "DeepSeek's open-weight mixture-of-experts LLMs, including reasoning-focused and general chat models, published on Hugging Face under permissive licenses.",
+      "tags": [
+        "Open Weights",
+        "MoE",
+        "Reasoning",
+        "MIT License"
+      ]
+    },
+    {
+      "name": "Phi",
+      "org": "Microsoft",
+      "initials": "PH",
+      "icon": "chip",
+      "tone": "tertiary",
+      "pricing": "Free",
+      "license": "Open Source",
+      "category": "AI Models",
+      "deployment": [
+        "Local execution"
+      ],
+      "access": [
+        "No signup required"
+      ],
+      "verified": true,
+      "url": "https://azure.microsoft.com/en-us/products/phi",
+      "desc": "Microsoft's small language models built for low-latency and on-device inference, released as open weights on Hugging Face and Azure AI Foundry.",
+      "tags": [
+        "SLM",
+        "Open Weights",
+        "On-device",
+        "MIT License"
+      ]
+    },
+    {
+      "name": "gpt-oss",
+      "org": "OpenAI",
+      "initials": "GO",
+      "icon": "chip",
+      "tone": "primary",
+      "pricing": "Free",
+      "license": "Open Source",
+      "category": "AI Models",
+      "deployment": [
+        "Local execution"
+      ],
+      "access": [
+        "No signup required"
+      ],
+      "verified": true,
+      "url": "https://openai.com/index/introducing-gpt-oss/",
+      "desc": "OpenAI's open-weight reasoning LLMs (gpt-oss-120b and gpt-oss-20b) under Apache 2.0, with adjustable reasoning effort and tool use.",
+      "tags": [
+        "Open Weights",
+        "Reasoning",
+        "Apache 2.0",
+        "Tool Use"
+      ]
+    },
+    {
+      "name": "Stable Diffusion",
+      "org": "Stability AI",
+      "initials": "SD",
+      "icon": "chip",
+      "tone": "status-warning",
+      "pricing": "Free",
+      "license": "Open Source",
+      "category": "AI Models",
+      "deployment": [
+        "Local execution"
+      ],
+      "access": [],
+      "verified": true,
+      "url": "https://stability.ai",
+      "desc": "Stability AI's latent diffusion text-to-image model family, generating images from text or image prompts with downloadable weights that run on consumer GPUs.",
+      "tags": [
+        "Diffusion",
+        "Text-to-Image",
+        "Open Weights",
+        "ControlNet"
+      ]
+    },
+    {
+      "name": "FLUX",
+      "org": "Black Forest Labs",
+      "initials": "FL",
+      "icon": "chip",
+      "tone": "secondary",
+      "pricing": "Free",
+      "license": "Open Source",
+      "category": "AI Models",
+      "deployment": [
+        "Local execution"
+      ],
+      "access": [],
+      "verified": true,
+      "url": "https://bfl.ai",
+      "desc": "Black Forest Labs' rectified-flow transformer text-to-image models, with open-weight FLUX.1 checkpoints and hosted higher-tier variants served over API.",
+      "tags": [
+        "Text-to-Image",
+        "Flow Matching",
+        "Open Weights",
+        "Image Editing"
+      ]
+    },
+    {
+      "name": "OpenRouter",
+      "org": "OpenRouter",
+      "initials": "OR",
+      "icon": "terminal",
+      "tone": "secondary",
+      "pricing": "Freemium",
+      "license": "Proprietary",
+      "category": "AI APIs",
+      "deployment": [
+        "Cloud-hosted"
+      ],
+      "access": [
+        "API available"
+      ],
+      "verified": true,
+      "url": "https://openrouter.ai",
+      "desc": "Unified OpenAI-compatible gateway that routes requests to models from many providers, with automatic fallback and consolidated billing.",
+      "tags": [
+        "Model Gateway",
+        "OpenAI-compatible",
+        "Routing",
+        "Multi-provider"
+      ]
+    },
+    {
+      "name": "Together AI",
+      "org": "Together AI",
+      "initials": "TA",
+      "icon": "terminal",
+      "tone": "tertiary",
+      "pricing": "Paid",
+      "license": "Proprietary",
+      "category": "AI APIs",
+      "deployment": [
+        "Cloud-hosted"
+      ],
+      "access": [
+        "API available"
+      ],
+      "verified": true,
+      "url": "https://www.together.ai",
+      "desc": "Serverless and dedicated-GPU inference plus fine-tuning for open-weight LLMs, image, and embedding models behind an OpenAI-compatible API.",
+      "tags": [
+        "Serverless Inference",
+        "Fine-tuning",
+        "Open Models",
+        "Dedicated GPUs"
+      ]
+    },
+    {
+      "name": "Groq",
+      "org": "Groq",
+      "initials": "GQ",
+      "icon": "terminal",
+      "tone": "primary",
+      "pricing": "Freemium",
+      "license": "Proprietary",
+      "category": "AI APIs",
+      "deployment": [
+        "Cloud-hosted"
+      ],
+      "access": [
+        "API available"
+      ],
+      "verified": true,
+      "url": "https://groq.com",
+      "desc": "GroqCloud serves open-weight models behind OpenAI-compatible endpoints on Groq's LPU hardware; it still offers fast inference on open-weight models such as Llama, Qwen, and GPT-OSS after Nvidia's licensing deal.",
+      "tags": [
+        "LPU",
+        "Low Latency",
+        "OpenAI-compatible",
+        "Open Models"
+      ]
+    },
+    {
+      "name": "Replicate",
+      "org": "Replicate",
+      "initials": "RE",
+      "icon": "terminal",
+      "tone": "status-warning",
+      "pricing": "Paid",
+      "license": "Proprietary",
+      "category": "AI APIs",
+      "deployment": [
+        "Cloud-hosted"
+      ],
+      "access": [
+        "API available"
+      ],
+      "verified": true,
+      "url": "https://replicate.com",
+      "desc": "Pay-per-use API for running open and community models (image, video, audio, LLM), packaged as Cog containers and invoked as predictions over HTTP.",
+      "tags": [
+        "Cog",
+        "Model Hosting",
+        "Image/Video",
+        "Predictions API"
+      ]
+    },
+    {
+      "name": "DeepInfra",
+      "org": "DeepInfra",
+      "initials": "DI",
+      "icon": "terminal",
+      "tone": "secondary",
+      "pricing": "Paid",
+      "license": "Proprietary",
+      "category": "AI APIs",
+      "deployment": [
+        "Cloud-hosted"
+      ],
+      "access": [
+        "API available"
+      ],
+      "verified": true,
+      "url": "https://deepinfra.com",
+      "desc": "Serverless inference API for open-weight text, embedding, image, and speech models with OpenAI-compatible endpoints and per-token billing.",
+      "tags": [
+        "Serverless",
+        "Open Models",
+        "Embeddings",
+        "OpenAI-compatible"
+      ]
+    },
+    {
+      "name": "Fireworks AI",
+      "org": "Fireworks AI",
+      "initials": "FW",
+      "icon": "terminal",
+      "tone": "tertiary",
+      "pricing": "Paid",
+      "license": "Proprietary",
+      "category": "AI APIs",
+      "deployment": [
+        "Cloud-hosted"
+      ],
+      "access": [
+        "API available"
+      ],
+      "verified": true,
+      "url": "https://fireworks.ai",
+      "desc": "Inference platform offering serverless and dedicated endpoints for open models, with function calling, structured output, and fine-tuning.",
+      "tags": [
+        "Serverless Inference",
+        "Function Calling",
+        "Fine-tuning",
+        "JSON Mode"
+      ]
+    },
+    {
+      "name": "Cerebras Inference",
+      "org": "Cerebras",
+      "initials": "CE",
+      "icon": "terminal",
+      "tone": "primary",
+      "pricing": "Freemium",
+      "license": "Proprietary",
+      "category": "AI APIs",
+      "deployment": [
+        "Cloud-hosted"
+      ],
+      "access": [
+        "API available"
+      ],
+      "verified": true,
+      "url": "https://www.cerebras.ai",
+      "desc": "Hosted inference on Cerebras wafer-scale hardware for open-weight LLMs, exposed through an OpenAI-compatible chat-completions API.",
+      "tags": [
+        "Wafer-scale",
+        "Low Latency",
+        "Open Models",
+        "OpenAI-compatible"
+      ]
+    },
+    {
+      "name": "fal",
+      "org": "fal.ai",
+      "initials": "FA",
+      "icon": "terminal",
+      "tone": "status-warning",
+      "pricing": "Paid",
+      "license": "Proprietary",
+      "category": "AI APIs",
+      "deployment": [
+        "Cloud-hosted"
+      ],
+      "access": [
+        "API available"
+      ],
+      "verified": true,
+      "url": "https://fal.ai",
+      "desc": "Serverless inference for generative media models (image, video, audio, 3D) with queue-based async endpoints and client SDKs.",
+      "tags": [
+        "Generative Media",
+        "Serverless GPUs",
+        "Async Queue",
+        "SDK"
+      ]
+    },
+    {
+      "name": "HF Inference Providers",
+      "org": "Hugging Face",
+      "initials": "HF",
+      "icon": "terminal",
+      "tone": "secondary",
+      "pricing": "Freemium",
+      "license": "Proprietary",
+      "category": "AI APIs",
+      "deployment": [
+        "Cloud-hosted"
+      ],
+      "access": [
+        "API available"
+      ],
+      "verified": true,
+      "url": "https://huggingface.co/docs/inference-providers",
+      "desc": "Unified API that routes Hugging Face Hub model calls to partner inference providers using a single Hugging Face access token.",
+      "tags": [
+        "Model Hub",
+        "Provider Routing",
+        "OpenAI-compatible",
+        "Serverless"
+      ]
+    },
+    {
+      "name": "Google AI Studio",
+      "org": "Google",
+      "initials": "GA",
+      "icon": "terminal",
+      "tone": "tertiary",
+      "pricing": "Freemium",
+      "license": "Proprietary",
+      "category": "AI APIs",
+      "deployment": [
+        "Cloud-hosted"
+      ],
+      "access": [
+        "API available"
+      ],
+      "verified": true,
+      "url": "https://aistudio.google.com",
+      "desc": "Web playground and API-key console for the Gemini API, providing hosted multimodal generation, embeddings, and tool calling.",
+      "tags": [
+        "Gemini API",
+        "Multimodal",
+        "Playground",
+        "Function Calling"
+      ]
+    },
+    {
+      "name": "Ollama",
+      "org": "Ollama",
+      "initials": "OL",
+      "icon": "terminal",
+      "tone": "tertiary",
+      "pricing": "Free",
+      "license": "Open Source",
+      "category": "Local Stacks",
+      "deployment": [
+        "Local execution"
+      ],
+      "access": [
+        "No signup required"
+      ],
+      "verified": true,
+      "url": "https://ollama.com",
+      "desc": "Local model runtime that pulls quantized models from a registry and serves them through a REST API and CLI, with Modelfile-based customization.",
+      "tags": [
+        "Local LLM",
+        "GGUF",
+        "REST API",
+        "Modelfile"
+      ]
+    },
+    {
+      "name": "vLLM",
+      "org": "vLLM Team",
+      "initials": "VL",
+      "icon": "terminal",
+      "tone": "secondary",
+      "pricing": "Free",
+      "license": "Open Source",
+      "category": "Local Stacks",
+      "deployment": [
+        "Local execution"
+      ],
+      "access": [
+        "No signup required"
+      ],
+      "verified": true,
+      "url": "https://vllm.ai",
+      "desc": "High-throughput LLM serving engine using PagedAttention and continuous batching, exposing an OpenAI-compatible server on GPU and accelerator hardware.",
+      "tags": [
+        "Inference Server",
+        "PagedAttention",
+        "Continuous Batching",
+        "OpenAI-compatible"
+      ]
+    },
+    {
+      "name": "LM Studio",
+      "org": "LM Studio",
+      "initials": "LS",
+      "icon": "terminal",
+      "tone": "primary",
+      "pricing": "Free",
+      "license": "Open Source",
+      "category": "Local Stacks",
+      "deployment": [
+        "Local execution"
+      ],
+      "access": [
+        "No signup required"
+      ],
+      "verified": true,
+      "url": "https://lmstudio.ai",
+      "desc": "Desktop app for downloading and chatting with local LLMs (GGUF and MLX) that also runs a local OpenAI-compatible server.",
+      "tags": [
+        "Desktop App",
+        "GGUF",
+        "MLX",
+        "Local Server"
+      ]
+    },
+    {
+      "name": "llama.cpp",
+      "org": "ggml-org",
+      "initials": "LC",
+      "icon": "terminal",
+      "tone": "status-warning",
+      "pricing": "Free",
+      "license": "Open Source",
+      "category": "Local Stacks",
+      "deployment": [
+        "Local execution"
+      ],
+      "access": [
+        "No signup required"
+      ],
+      "verified": true,
+      "url": "https://github.com/ggml-org/llama.cpp",
+      "desc": "C/C++ inference engine for GGUF-quantized models across CPU and many GPU backends, including a built-in llama-server HTTP endpoint.",
+      "tags": [
+        "GGUF",
+        "Quantization",
+        "CPU Inference",
+        "C++"
+      ]
+    },
+    {
+      "name": "LangChain",
+      "org": "LangChain",
+      "initials": "LA",
+      "icon": "chip",
+      "tone": "secondary",
+      "pricing": "Free",
+      "license": "Open Source",
+      "category": "Local Stacks",
+      "deployment": [
+        "Local execution"
+      ],
+      "access": [
+        "No signup required"
+      ],
+      "verified": true,
+      "url": "https://www.langchain.com",
+      "desc": "Python and JavaScript framework for composing LLM applications from model wrappers, tools, retrievers, and agent graphs (via LangGraph).",
+      "tags": [
+        "Orchestration",
+        "RAG",
+        "Agents",
+        "LangGraph"
+      ]
+    },
+    {
+      "name": "LlamaIndex",
+      "org": "LlamaIndex",
+      "initials": "LI",
+      "icon": "chip",
+      "tone": "tertiary",
+      "pricing": "Free",
+      "license": "Open Source",
+      "category": "Local Stacks",
+      "deployment": [
+        "Local execution"
+      ],
+      "access": [
+        "No signup required"
+      ],
+      "verified": true,
+      "url": "https://www.llamaindex.ai",
+      "desc": "Data framework for retrieval-augmented generation that handles document ingestion, indexing, query engines, and agent workflows over private data.",
+      "tags": [
+        "RAG",
+        "Indexing",
+        "Document Parsing",
+        "Agents"
+      ]
+    },
+    {
+      "name": "HF Transformers",
+      "org": "Hugging Face",
+      "initials": "TR",
+      "icon": "chip",
+      "tone": "primary",
+      "pricing": "Free",
+      "license": "Open Source",
+      "category": "Local Stacks",
+      "deployment": [
+        "Local execution"
+      ],
+      "access": [
+        "No signup required"
+      ],
+      "verified": true,
+      "url": "https://huggingface.co/docs/transformers",
+      "desc": "Python library defining and running pretrained text, vision, audio, and multimodal models with PyTorch, supporting inference and fine-tuning.",
+      "tags": [
+        "PyTorch",
+        "Model Hub",
+        "Fine-tuning",
+        "Pipelines"
+      ]
+    },
+    {
+      "name": "Open WebUI",
+      "org": "Open WebUI",
+      "initials": "OW",
+      "icon": "terminal",
+      "tone": "status-warning",
+      "pricing": "Free",
+      "license": "Open Source",
+      "category": "Local Stacks",
+      "deployment": [
+        "Self-hostable"
+      ],
+      "access": [
+        "No signup required"
+      ],
+      "verified": true,
+      "url": "https://openwebui.com",
+      "desc": "Self-hosted web interface for Ollama and OpenAI-compatible backends with built-in RAG, multi-user auth, and tool/function support.",
+      "tags": [
+        "Chat UI",
+        "RAG",
+        "Self-hosted",
+        "Multi-user"
+      ]
+    },
+    {
+      "name": "ComfyUI",
+      "org": "Comfy Org",
+      "initials": "CO",
+      "icon": "terminal",
+      "tone": "secondary",
+      "pricing": "Free",
+      "license": "Open Source",
+      "category": "Local Stacks",
+      "deployment": [
+        "Local execution"
+      ],
+      "access": [
+        "No signup required"
+      ],
+      "verified": true,
+      "url": "https://www.comfy.org",
+      "desc": "Node-graph engine for building and running diffusion image, video, and audio workflows locally, with an extensible custom-node ecosystem.",
+      "tags": [
+        "Node Graph",
+        "Diffusion",
+        "Workflows",
+        "Custom Nodes"
+      ]
+    },
+    {
+      "name": "Unsloth",
+      "org": "Unsloth",
+      "initials": "UN",
+      "icon": "chip",
+      "tone": "tertiary",
+      "pricing": "Free",
+      "license": "Open Source",
+      "category": "Local Stacks",
+      "deployment": [
+        "Local execution"
+      ],
+      "access": [
+        "No signup required"
+      ],
+      "verified": true,
+      "url": "https://unsloth.ai",
+      "desc": "Library for faster, lower-VRAM LLM fine-tuning and reinforcement learning (LoRA/QLoRA), plus exporting trained models to GGUF.",
+      "tags": [
+        "Fine-tuning",
+        "QLoRA",
+        "Low VRAM",
+        "GGUF Export"
+      ]
+    },
+    {
+      "name": "n8n",
+      "org": "n8n",
+      "initials": "N8",
+      "icon": "terminal",
+      "tone": "secondary",
+      "pricing": "Free",
+      "license": "Open Source",
+      "category": "Agent Frameworks",
+      "deployment": [
+        "Self-hostable"
+      ],
+      "access": [
+        "No signup required"
+      ],
+      "verified": true,
+      "url": "https://n8n.io",
+      "desc": "Node-based workflow automation platform with hundreds of integrations and AI agent nodes, running self-hosted or on n8n's cloud.",
+      "tags": [
+        "Workflow Automation",
+        "AI Agent Nodes",
+        "Webhooks",
+        "Fair-code"
+      ]
+    },
+    {
+      "name": "Flowise",
+      "org": "FlowiseAI",
+      "initials": "FW",
+      "icon": "terminal",
+      "tone": "tertiary",
+      "pricing": "Free",
+      "license": "Open Source",
+      "category": "Agent Frameworks",
+      "deployment": [
+        "Self-hostable"
+      ],
+      "access": [
+        "No signup required"
+      ],
+      "verified": true,
+      "url": "https://flowiseai.com",
+      "desc": "Open-source low-code visual builder for LLM chatflows and multi-agent flows, with a drag-and-drop canvas and REST API for deployment.",
+      "tags": [
+        "Low-code",
+        "Visual Builder",
+        "RAG",
+        "Multi-agent"
+      ]
+    },
+    {
+      "name": "Dify",
+      "org": "Dify",
+      "initials": "DY",
+      "icon": "terminal",
+      "tone": "primary",
+      "pricing": "Free",
+      "license": "Open Source",
+      "category": "Agent Frameworks",
+      "deployment": [
+        "Self-hostable"
+      ],
+      "access": [
+        "No signup required"
+      ],
+      "verified": true,
+      "url": "https://dify.ai",
+      "desc": "LLM application platform combining a visual workflow builder, RAG pipeline, agent tooling, and observability, deployable via Docker or Dify Cloud.",
+      "tags": [
+        "Workflow Builder",
+        "RAG Pipeline",
+        "Agents",
+        "LLMOps"
+      ]
+    },
+    {
+      "name": "CrewAI",
+      "org": "CrewAI",
+      "initials": "CR",
+      "icon": "chip",
+      "tone": "status-warning",
+      "pricing": "Free",
+      "license": "Open Source",
+      "category": "Agent Frameworks",
+      "deployment": [
+        "Local execution"
+      ],
+      "access": [
+        "No signup required"
+      ],
+      "verified": true,
+      "url": "https://www.crewai.com",
+      "desc": "Python framework for orchestrating role-based multi-agent crews with defined tasks, tools, and event-driven flows.",
+      "tags": [
+        "Multi-agent",
+        "Orchestration",
+        "Python",
+        "Flows"
+      ]
+    },
+    {
+      "name": "AutoGPT",
+      "org": "Significant Gravitas",
+      "initials": "AG",
+      "icon": "sparkle",
+      "tone": "secondary",
+      "pricing": "Free",
+      "license": "Open Source",
+      "category": "Agent Frameworks",
+      "deployment": [
+        "Self-hostable"
+      ],
+      "access": [
+        "No signup required"
+      ],
+      "verified": true,
+      "url": "https://agpt.co",
+      "desc": "Platform for building, deploying, and running continuous AI agents with a low-code block builder, supporting both self-hosting and hosted deployment.",
+      "tags": [
+        "Autonomous Agents",
+        "Low-code Builder",
+        "Marketplace",
+        "Self-hosted"
+      ]
+    }
+  ],
+  "icons": {
+    "ChatGPT": "assets/img/icons/chatgpt.png",
+    "Claude": "assets/img/icons/claude.png",
+    "Gemini": "assets/img/icons/gemini.png",
+    "Perplexity": "assets/img/icons/perplexity.png",
+    "Grok": "assets/img/icons/grok.png",
+    "NotebookLM": "assets/img/icons/notebooklm.png",
+    "Cursor": "assets/img/icons/cursor.png",
+    "GitHub Copilot": "assets/img/icons/github-copilot.png",
+    "Windsurf": "assets/img/icons/windsurf.png",
+    "Lovable": "assets/img/icons/lovable.png",
+    "Midjourney": "assets/img/icons/midjourney.png",
+    "Ideogram": "assets/img/icons/ideogram.png",
+    "Runway": "assets/img/icons/runway.png",
+    "ElevenLabs": "assets/img/icons/elevenlabs.png",
+    "Suno": "assets/img/icons/suno.png",
+    "Llama": "assets/img/icons/llama.png",
+    "Mistral": "assets/img/icons/mistral.png",
+    "Gemma": "assets/img/icons/gemma.png",
+    "Qwen": "assets/img/icons/qwen.png",
+    "DeepSeek": "assets/img/icons/deepseek.png",
+    "Phi": "assets/img/icons/phi.png",
+    "gpt-oss": "assets/img/icons/gpt-oss.png",
+    "Stable Diffusion": "assets/img/icons/stable-diffusion.png",
+    "FLUX": "assets/img/icons/flux.png",
+    "OpenRouter": "assets/img/icons/openrouter.png",
+    "Together AI": "assets/img/icons/together-ai.png",
+    "Groq": "assets/img/icons/groq.png",
+    "Replicate": "assets/img/icons/replicate.png",
+    "DeepInfra": "assets/img/icons/deepinfra.png",
+    "Fireworks AI": "assets/img/icons/fireworks-ai.png",
+    "Cerebras Inference": "assets/img/icons/cerebras.png",
+    "fal": "assets/img/icons/fal.png",
+    "HF Inference Providers": "assets/img/icons/hf-inference-providers.png",
+    "Google AI Studio": "assets/img/icons/google-ai-studio.png",
+    "Ollama": "assets/img/icons/ollama.png",
+    "vLLM": "assets/img/icons/vllm.png",
+    "LM Studio": "assets/img/icons/lm-studio.png",
+    "llama.cpp": "assets/img/icons/llama-cpp.png",
+    "LangChain": "assets/img/icons/langchain.png",
+    "LlamaIndex": "assets/img/icons/llamaindex.png",
+    "HF Transformers": "assets/img/icons/hf-transformers.png",
+    "Open WebUI": "assets/img/icons/open-webui.png",
+    "ComfyUI": "assets/img/icons/comfyui.png",
+    "Unsloth": "assets/img/icons/unsloth.png",
+    "n8n": "assets/img/icons/n8n.png",
+    "Flowise": "assets/img/icons/flowise.png",
+    "Dify": "assets/img/icons/dify.png",
+    "CrewAI": "assets/img/icons/crewai.png",
+    "AutoGPT": "assets/img/icons/autogpt.png",
+    "Poe": "assets/img/icons/poe.png",
+    "Character.ai": "assets/img/icons/character-ai.png",
+    "Consensus": "assets/img/icons/consensus.png",
+    "Elicit": "assets/img/icons/elicit.png",
+    "v0 by Vercel": "assets/img/icons/v0.png",
+    "Bolt.new": "assets/img/icons/bolt-new.png",
+    "Tabnine": "assets/img/icons/tabnine.png",
+    "CodeRabbit": "assets/img/icons/coderabbit.png",
+    "Grammarly": "assets/img/icons/grammarly.png",
+    "QuillBot": "assets/img/icons/quillbot.png",
+    "Jasper": "assets/img/icons/jasper.png",
+    "Copy.ai": "assets/img/icons/copy-ai.png",
+    "Notion AI": "assets/img/icons/notion-ai.png",
+    "Superhuman AI": "assets/img/icons/superhuman-ai.png",
+    "Mem.ai": "assets/img/icons/mem-ai.png",
+    "Glean": "assets/img/icons/glean.png",
+    "Scribe": "assets/img/icons/scribe.png",
+    "Make": "assets/img/icons/make.png",
+    "Devin": "assets/img/icons/devin.png",
+    "Replit Agent": "assets/img/icons/replit-agent.png",
+    "Krea AI": "assets/img/icons/krea-ai.png",
+    "Leonardo.Ai": "assets/img/icons/leonardo-ai.png",
+    "Adobe Firefly": "assets/img/icons/adobe-firefly.png",
+    "Canva Magic Studio": "assets/img/icons/canva-magic-studio.png",
+    "Gamma": "assets/img/icons/gamma.png",
+    "Beautiful.ai": "assets/img/icons/beautiful-ai.png",
+    "Julius AI": "assets/img/icons/julius-ai.png",
+    "Otter.ai": "assets/img/icons/otter-ai.png",
+    "Fireflies.ai": "assets/img/icons/fireflies-ai.png",
+    "Udio": "assets/img/icons/udio.png",
+    "Descript": "assets/img/icons/descript.png",
+    "Synthesia": "assets/img/icons/synthesia.png",
+    "Pika": "assets/img/icons/pika.png",
+    "HeyGen": "assets/img/icons/heygen.png",
+    "Luma Dream Machine": "assets/img/icons/luma-dream-machine.png",
+    "Kling AI": "assets/img/icons/kling-ai.png",
+    "Speechify": "assets/img/icons/speechify.png"
+  }
+}

@@ -1,0 +1,103 @@
+<main class="w-full max-w-[1360px] mx-auto px-4 sm:px-gutter-lg py-space-lg flex-1 flex flex-col">
+<nav class="flex items-center gap-space-xs text-metadata-label font-metadata-label text-text-muted mb-space-sm" aria-label="Breadcrumb">
+<a class="hover:text-text-primary transition-colors" href="directory.html">Home</a>
+<span class="text-border-subtle">/</span>
+<span class="text-primary-container">Static API</span>
+</nav>
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md mb-space-lg pb-space-md border-b border-border-subtle">
+<div>
+<p class="font-metadata-label text-metadata-label text-primary-container uppercase tracking-[0.18em] mb-1">Machine-readable catalog</p>
+<h1 class="font-display-hero-mobile text-display-hero-mobile sm:font-display-hero sm:text-display-hero text-text-primary tracking-tight">Static Catalog API</h1>
+<p class="font-body-compact text-body-compact text-text-muted mt-1 max-w-3xl">
+          Plain JSON files generated from the same datasets the pages use. {{TOTAL_RECORDS}} records across {{REGISTRY_COUNT}} registries, generated {{GENERATED_DATE}}.
+        </p>
+</div>
+<div class="flex items-center gap-2 self-start md:self-auto bg-surface-secondary border border-border-subtle px-3 py-1.5 rounded">
+<span class="w-2 h-2 rounded-full bg-status-warning"></span>
+<span class="font-code-badge text-code-badge text-text-primary">STATIC FILES · NO HOSTED ENDPOINT</span>
+</div>
+</div>
+<div class="rounded-xl border border-status-warning/40 bg-status-warning/10 p-4 flex items-start gap-3 mb-space-lg" role="note">
+<span class="material-symbols-outlined text-status-warning text-xl shrink-0" data-icon="info">info</span>
+<div class="min-w-0">
+<p class="font-body-compact text-body-compact text-text-primary font-medium">There is no API server in this build.</p>
+<p class="font-metadata-label text-metadata-label text-text-muted mt-0.5">The files below are shipped with the site. They are read-only, require no authentication, and make no availability or freshness guarantees beyond the recorded generation date. When the site is served over HTTP, they can be fetched like any static asset. Opening the page from <code class="font-code-badge">file://</code> blocks <code class="font-code-badge">fetch()</code> in most browsers — use the Open links instead.</p>
+</div>
+</div>
+<section class="mb-space-lg">
+<h2 class="font-title-card text-title-card text-text-primary mb-1">Files</h2>
+<p class="font-body-compact text-body-compact text-text-muted mb-4">Counts and checksums are read from the generated manifest at build time.</p>
+<div class="ui-card rounded-xl">
+<div class="hidden sm:block overflow-x-auto">
+<table class="p5-table text-left border-collapse">
+<colgroup>
+<col style="width:30%"/><col style="width:36%"/><col style="width:12%"/><col style="width:12%"/><col style="width:10%"/>
+</colgroup>
+<thead>
+<tr class="border-b border-border-subtle">
+<th scope="col" class="px-4 py-2.5 font-metadata-label text-metadata-label text-text-muted uppercase tracking-wider">Path</th>
+<th scope="col" class="px-4 py-2.5 font-metadata-label text-metadata-label text-text-muted uppercase tracking-wider">Contents</th>
+<th scope="col" class="px-4 py-2.5 font-metadata-label text-metadata-label text-text-muted uppercase tracking-wider">Records</th>
+<th scope="col" class="px-4 py-2.5 font-metadata-label text-metadata-label text-text-muted uppercase tracking-wider">SHA-256</th>
+<th scope="col" class="px-4 py-2.5 font-metadata-label text-metadata-label text-text-muted uppercase tracking-wider"><span class="visually-hidden">Actions</span></th>
+</tr>
+</thead>
+<tbody class="font-body-compact text-body-compact">
+{{FILE_ROWS}}
+</tbody>
+</table>
+</div>
+<ul class="sm:hidden divide-y divide-border-subtle/60" id="file-list">{{FILE_CARDS}}</ul>
+</div>
+</section>
+<section class="mb-space-lg">
+<div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+<h2 class="font-title-card text-title-card text-text-primary">Manifest sample</h2>
+<button class="inline-flex items-center gap-1.5 bg-surface-card border border-border-subtle rounded px-3 py-1.5 font-code-badge text-code-badge text-text-primary hover:border-secondary transition-colors" type="button" data-copy-target="manifest-sample">
+<span class="material-symbols-outlined text-[14px]" data-icon="content_copy">content_copy</span>Copy JSON
+</button>
+</div>
+<p class="font-body-compact text-body-compact text-text-muted mb-3">The exact <code class="font-code-badge">api/catalog.json</code> generated with this page.</p>
+<pre class="api-code rounded-xl border border-border-subtle bg-surface-secondary p-4 overflow-x-auto font-code-param" id="manifest-sample">{{MANIFEST_SAMPLE}}</pre>
+<p class="font-metadata-label text-metadata-label text-text-muted mt-2" id="copy-status" role="status" aria-live="polite"></p>
+</section>
+<section class="mb-space-lg">
+<h2 class="font-title-card text-title-card text-text-primary mb-1">Response shape</h2>
+<p class="font-body-compact text-body-compact text-text-muted mb-4">Every registry file uses the same envelope. Record fields vary by registry; fields the source did not state are <code class="font-code-badge">null</code>, empty, or absent.</p>
+<div class="ui-card rounded-xl overflow-x-auto">
+<table class="p5-table text-left border-collapse">
+<colgroup>
+<col style="width:24%"/><col style="width:14%"/><col style="width:62%"/>
+</colgroup>
+<thead>
+<tr class="border-b border-border-subtle">
+<th scope="col" class="px-4 py-2.5 font-metadata-label text-metadata-label text-text-muted uppercase tracking-wider">Field</th>
+<th scope="col" class="px-4 py-2.5 font-metadata-label text-metadata-label text-text-muted uppercase tracking-wider">Type</th>
+<th scope="col" class="px-4 py-2.5 font-metadata-label text-metadata-label text-text-muted uppercase tracking-wider">Notes</th>
+</tr>
+</thead>
+<tbody class="font-body-compact text-body-compact">
+<tr class="border-b border-border-subtle/50"><td class="px-4 py-2.5 font-code-param text-code-param text-secondary whitespace-nowrap">_meta</td><td class="px-4 py-2.5 text-text-muted">object</td><td class="px-4 py-2.5 text-text-muted">Registry name, label, API version, generation date, record and category counts, source, and last-verified date.</td></tr>
+<tr class="border-b border-border-subtle/50"><td class="px-4 py-2.5 font-code-param text-code-param text-secondary whitespace-nowrap">records</td><td class="px-4 py-2.5 text-text-muted">array</td><td class="px-4 py-2.5 text-text-muted">Catalog records. Arrays are stable for a given generated file.</td></tr>
+<tr class="border-b border-border-subtle/50"><td class="px-4 py-2.5 font-code-param text-code-param text-secondary whitespace-nowrap">id</td><td class="px-4 py-2.5 text-text-muted">string</td><td class="px-4 py-2.5 text-text-muted">Stable identifier used by the page deep links (<code class="font-code-badge">#tool/&lt;id&gt;</code>, <code class="font-code-badge">#model/&lt;id&gt;</code>, <code class="font-code-badge">#resource/&lt;id&gt;</code>).</td></tr>
+<tr class="border-b border-border-subtle/50"><td class="px-4 py-2.5 font-code-param text-code-param text-secondary whitespace-nowrap">name, description</td><td class="px-4 py-2.5 text-text-muted">string</td><td class="px-4 py-2.5 text-text-muted">Display name and the description carried over from the source.</td></tr>
+<tr class="border-b border-border-subtle/50"><td class="px-4 py-2.5 font-code-param text-code-param text-secondary whitespace-nowrap">category</td><td class="px-4 py-2.5 text-text-muted">string</td><td class="px-4 py-2.5 text-text-muted">Normalized catalog category. <code class="font-code-badge">source_category</code> keeps the source label.</td></tr>
+<tr class="border-b border-border-subtle/50"><td class="px-4 py-2.5 font-code-param text-code-param text-secondary whitespace-nowrap">official_url</td><td class="px-4 py-2.5 text-text-muted">string</td><td class="px-4 py-2.5 text-text-muted">Publisher URL recorded in the catalog. Always inspect before relying on it.</td></tr>
+<tr class="border-b border-border-subtle/50"><td class="px-4 py-2.5 font-code-param text-code-param text-secondary whitespace-nowrap">license, pricing</td><td class="px-4 py-2.5 text-text-muted">string | null</td><td class="px-4 py-2.5 text-text-muted">Only the stated value; null when the source is silent.</td></tr>
+<tr class="border-b border-border-subtle/50"><td class="px-4 py-2.5 font-code-param text-code-param text-secondary whitespace-nowrap">tags</td><td class="px-4 py-2.5 text-text-muted">string[]</td><td class="px-4 py-2.5 text-text-muted">Search and display tags from the catalog.</td></tr>
+<tr class="border-b border-border-subtle/50"><td class="px-4 py-2.5 font-code-param text-code-param text-secondary whitespace-nowrap">evidence</td><td class="px-4 py-2.5 text-text-muted">[label, url][]</td><td class="px-4 py-2.5 text-text-muted">Source links used to verify the record.</td></tr>
+<tr class="border-b border-border-subtle/50"><td class="px-4 py-2.5 font-code-param text-code-param text-secondary whitespace-nowrap">verified, status</td><td class="px-4 py-2.5 text-text-muted">string</td><td class="px-4 py-2.5 text-text-muted">Verification date and lifecycle status recorded in the catalog.</td></tr>
+<tr><td class="px-4 py-2.5 font-code-param text-code-param text-secondary whitespace-nowrap">Registry-specific</td><td class="px-4 py-2.5 text-text-muted">varies</td><td class="px-4 py-2.5 text-text-muted">Tools: <code class="font-code-badge">org</code>, <code class="font-code-badge">platform</code>, <code class="font-code-badge">hosting</code>. Models: <code class="font-code-badge">publisher</code>, <code class="font-code-badge">params</code>, <code class="font-code-badge">context_k</code>, <code class="font-code-badge">modalities</code>. Resources: <code class="font-code-badge">resource_subtype</code>, <code class="font-code-badge">programming_languages</code>, <code class="font-code-badge">api_url</code>, <code class="font-code-badge">documentation_url</code>.</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+<section class="mb-space-lg">
+<h2 class="font-title-card text-title-card text-text-primary mb-1">Reading a file</h2>
+<p class="font-body-compact text-body-compact text-text-muted mb-3">When these files are served over HTTP from the site root, a static fetch returns the JSON envelope. Nothing is mutated and there are no write endpoints.</p>
+<pre class="api-code rounded-xl border border-border-subtle bg-surface-secondary p-4 overflow-x-auto font-code-param">const res = await fetch('api/tools.json');
+const { _meta, records } = await res.json();
+console.log(_meta.count, records.map((r) =&gt; r.id));</pre>
+</section>
+<p class="font-metadata-label text-metadata-label text-text-muted">Generated by <code class="font-code-badge">node .qa/api-build.js</code> from <code class="font-code-badge">data/ai-tools.js</code>, <code class="font-code-badge">data/ai-models.js</code>, and <code class="font-code-badge">data/developer-resources.js</code>. See <a class="text-secondary hover:underline" href="docs.html">Documentation</a> for the schema and pipeline.</p>
+</main>

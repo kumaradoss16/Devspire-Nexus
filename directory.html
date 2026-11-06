@@ -1,0 +1,1135 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>DevSpire Nexus — AI Intelligence Directory</title>
+<link rel="icon" type="image/png" href="assets/img/devspirehub-gears-48.png"/>
+<meta name="description" content="DevSpire Nexus is a curated AI intelligence directory of verified AI tools, models, frameworks, APIs, and developer technologies. Discover. Connect. Build."/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "surface": "#051424",
+            "on-surface": "#d4e4fa",
+            "bg-canvas": "#090D12",
+            "surface-bright": "#2c3a4c",
+            "surface-container-highest": "#273647",
+            "on-error-container": "#ffdad6",
+            "on-tertiary-fixed-variant": "#005137",
+            "secondary-container": "#00a6e0",
+            "primary-container": "#f59e0b",
+            "status-warning": "#FBBF24",
+            "surface-container-low": "#0d1c2d",
+            "tertiary-fixed": "#68fcbf",
+            "on-tertiary": "#003825",
+            "secondary-fixed-dim": "#7bd0ff",
+            "tertiary-fixed-dim": "#45dfa4",
+            "surface-container": "#122131",
+            "surface-secondary": "#111820",
+            "primary-fixed": "#ffddb8",
+            "surface-dim": "#051424",
+            "on-tertiary-fixed": "#002114",
+            "status-error": "#F87171",
+            "on-primary-fixed": "#2a1700",
+            "inverse-surface": "#d4e4fa",
+            "on-error": "#690005",
+            "surface-tint": "#ffb95f",
+            "on-secondary-fixed-variant": "#004c69",
+            "on-surface-variant": "#d8c3ad",
+            "surface-container-lowest": "#010f1f",
+            "outline": "#a08e7a",
+            "on-secondary-container": "#00374d",
+            "background": "#051424",
+            "on-primary-container": "#613b00",
+            "inverse-primary": "#855300",
+            "primary": "#ffc174",
+            "tertiary": "#4de6aa",
+            "primary-fixed-dim": "#ffb95f",
+            "error-container": "#93000a",
+            "text-muted": "#94A3B8",
+            "on-primary": "#472a00",
+            "on-tertiary-container": "#004e35",
+            "tertiary-container": "#22c990",
+            "on-primary-fixed-variant": "#653e00",
+            "outline-variant": "#534434",
+            "surface-card": "#17212B",
+            "surface-container-high": "#1c2b3c",
+            "on-secondary-fixed": "#001e2c",
+            "on-background": "#d4e4fa",
+            "inverse-on-surface": "#233143",
+            "surface-variant": "#273647",
+            "error": "#ffb4ab",
+            "border-subtle": "#273341",
+            "on-secondary": "#00354a",
+            "text-primary": "#F1F5F9",
+            "secondary-fixed": "#c4e7ff",
+            "secondary": "#7bd0ff"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "margin-lg": "3rem",
+            "space-sm": "0.5rem",
+            "space-lg": "1.5rem",
+            "space-xl": "2rem",
+            "margin": "1rem",
+            "margin-md": "2rem",
+            "gutter-lg": "1.5rem",
+            "gutter": "1.25rem",
+            "space-md": "1rem",
+            "space-xs": "0.25rem"
+          },
+          "fontFamily": {
+            "headline-section": ["Geist"],
+            "code-badge": ["JetBrains Mono"],
+            "display-hero-mobile": ["Geist"],
+            "body-default": ["Geist"],
+            "body-compact": ["Geist"],
+            "title-card": ["Geist"],
+            "code-param": ["JetBrains Mono"],
+            "metadata-label": ["Geist"],
+            "display-hero": ["Geist"]
+          },
+          "fontSize": {
+            "headline-section": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+            "code-badge": ["12px", { "lineHeight": "16px", "letterSpacing": "0em", "fontWeight": "500" }],
+            "display-hero-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+            "body-default": ["15px", { "lineHeight": "22px", "letterSpacing": "0em", "fontWeight": "400" }],
+            "body-compact": ["14px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" }],
+            "title-card": ["17px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "code-param": ["13px", { "lineHeight": "18px", "letterSpacing": "-0.01em", "fontWeight": "500" }],
+            "metadata-label": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500" }],
+            "display-hero": ["44px", { "lineHeight": "52px", "letterSpacing": "-0.03em", "fontWeight": "600" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+/* ============ Premium polish layer (works alongside Tailwind utilities) ============ */
+:root {
+  --bg-canvas: #090D12;
+  --surface-card: #17212B;
+  --surface-secondary: #111820;
+  --border-subtle: #273341;
+  --amber: #f59e0b;
+  --amber-bright: #ffb95f;
+  --blue: #7bd0ff;
+  --green: #34D399;
+  color-scheme: dark;
+}
+
+html { scroll-behavior: smooth; }
+
+/* Ensure the hidden attribute always wins over Tailwind display utilities */
+[hidden] { display: none !important; }
+
+/* Icon ligatures keep a square footprint even if the icon font is still loading */
+.material-symbols-outlined {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  overflow: hidden;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+
+body {
+  background-color: var(--bg-canvas);
+  background-image:
+    radial-gradient(1100px 480px at 50% -180px, rgba(245, 158, 11, 0.055), transparent 65%),
+    radial-gradient(900px 420px at 88% -80px, rgba(0, 166, 224, 0.045), transparent 60%),
+    radial-gradient(760px 520px at -5% 22%, rgba(123, 208, 255, 0.03), transparent 60%);
+  background-attachment: fixed;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Brand mark: soft amber glow on the hexagon logo */
+.brand-mark { filter: drop-shadow(0 0 8px rgba(245, 158, 11, 0.35)); }
+
+/* Sticky header: glassy, blurred, with faint bottom glow line */
+header.site-header {
+  background: rgba(9, 13, 18, 0.82);
+  backdrop-filter: blur(14px) saturate(140%);
+  -webkit-backdrop-filter: blur(14px) saturate(140%);
+  box-shadow: 0 1px 0 rgba(123, 208, 255, 0.05), 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+
+/* Premium card treatment: hairline border, top inner highlight, soft ambient shadow */
+.ui-card {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.018), rgba(255, 255, 255, 0) 42%),
+    var(--surface-card);
+  border: 1px solid var(--border-subtle);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.03),
+    0 1px 2px rgba(0, 0, 0, 0.45),
+    0 4px 16px rgba(0, 0, 0, 0.2);
+  transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+}
+.ui-card:hover {
+  border-color: rgba(56, 189, 248, 0.38);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.045),
+    0 0 0 1px rgba(56, 189, 248, 0.06),
+    0 10px 28px rgba(0, 0, 0, 0.5),
+    0 0 36px rgba(56, 189, 248, 0.055);
+  transform: translateY(-2px);
+}
+
+/* Hero search: amber focus halo */
+.search-shell .search-box {
+  transition: border-color 160ms ease, box-shadow 160ms ease;
+}
+.search-shell:focus-within .search-box {
+  border-color: rgba(245, 158, 11, 0.55);
+  box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.12), 0 0 28px rgba(245, 158, 11, 0.07);
+}
+
+/* Query preset + tag chips: gentle hover lift */
+.preset-chip, .tag-chip {
+  transition: border-color 150ms ease, background-color 150ms ease, color 150ms ease, transform 150ms ease;
+}
+.preset-chip:hover, .tag-chip:hover {
+  transform: translateY(-1px);
+  background: rgba(123, 208, 255, 0.06);
+}
+
+/* Primary amber CTA: soft outer glow */
+.btn-amber {
+  box-shadow: 0 0 0 1px rgba(245, 158, 11, 0.25), 0 2px 10px rgba(245, 158, 11, 0.18);
+  transition: filter 150ms ease, box-shadow 150ms ease, transform 150ms ease;
+}
+.btn-amber:hover {
+  box-shadow: 0 0 0 1px rgba(245, 158, 11, 0.35), 0 4px 18px rgba(245, 158, 11, 0.28);
+}
+.btn-amber:active { transform: scale(0.97); }
+
+/* kbd refinement */
+kbd.key-hint {
+  font-family: "JetBrains Mono", monospace;
+  box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.06);
+  letter-spacing: 0.02em;
+}
+
+/* Segmented view toggle */
+.segmented button {
+  transition: background-color 150ms ease, color 150ms ease, border-color 150ms ease;
+}
+.segmented button[aria-pressed="true"] {
+  background: var(--surface-card);
+  border-color: var(--border-subtle);
+  color: #F1F5F9;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+/* Dense table view */
+.resource-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+.resource-table th {
+  font-family: "Geist", sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #94A3B8;
+  font-weight: 500;
+  text-align: left;
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--border-subtle);
+  white-space: nowrap;
+}
+.resource-table td {
+  padding: 12px 14px;
+  border-bottom: 1px solid rgba(39, 51, 65, 0.55);
+  vertical-align: middle;
+}
+.resource-table tbody tr {
+  background: var(--surface-card);
+  transition: background-color 120ms ease;
+}
+.resource-table tbody tr:hover { background: #1b2632; }
+.resource-table tbody tr:last-child td { border-bottom: none; }
+.resource-table-wrap {
+  border: 1px solid var(--border-subtle);
+  border-radius: 0.75rem;
+  overflow-x: auto;
+  background: var(--surface-card);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03);
+}
+
+/* Mobile menu */
+#mobile-menu {
+  transition: opacity 160ms ease;
+}
+#mobile-menu:not([hidden]) { animation: menu-in 160ms ease; }
+@keyframes menu-in {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Section entrance (subtle) */
+.rise {
+  animation: rise 500ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+@keyframes rise {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: var(--bg-canvas); }
+::-webkit-scrollbar-thumb {
+  background: #26313d;
+  border-radius: 8px;
+  border: 2px solid var(--bg-canvas);
+}
+::-webkit-scrollbar-thumb:hover { background: #33414f; }
+* { scrollbar-width: thin; scrollbar-color: #26313d var(--bg-canvas); }
+
+/* Typography niceties */
+h1, h2, h3 { text-wrap: balance; }
+.font-code-badge, .font-code-param { font-feature-settings: "zero" 1; }
+
+/* Responsive hero scale */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: -0.02em;
+  }
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .rise, #mobile-menu:not([hidden]) { animation: none; }
+  .ui-card, .preset-chip, .tag-chip, .btn-amber { transition: none; }
+}
+
+/* Screen-reader-only helper (used by table action headers) */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+</style>
+<link rel="stylesheet" href="assets/site.css"/>
+<link rel="canonical" href="directory.html"/>
+<meta name="theme-color" content="#090D12"/>
+<meta name="robots" content="index, follow"/>
+<meta property="og:type" content="website"/>
+<meta property="og:site_name" content="DevSpire Nexus"/>
+<meta property="og:title" content="DevSpire Nexus — AI Intelligence Directory"/>
+<meta property="og:description" content="DevSpire Nexus is a curated AI intelligence directory of verified AI tools, models, frameworks, APIs, and developer technologies. Discover. Connect. Build."/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="DevSpire Nexus — AI Intelligence Directory"/>
+<meta name="twitter:description" content="DevSpire Nexus is a curated AI intelligence directory of verified AI tools, models, frameworks, APIs, and developer technologies. Discover. Connect. Build."/>
+</head>
+<body class="bg-bg-canvas text-text-primary antialiased selection:bg-primary-container selection:text-bg-canvas font-body-default min-h-screen flex flex-col">
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<!-- ================= TOP NAVIGATION (TopNavBar from JSON) ================= -->
+<header class="w-full border-b border-border-subtle dark:border-border-subtle sticky top-0 z-50 site-header">
+<div class="flex justify-between items-center w-full px-4 sm:px-gutter-lg max-w-[1360px] mx-auto h-14">
+<div class="flex items-center gap-2 sm:gap-space-lg min-w-0">
+<a class="font-title-card text-text-primary dark:text-text-primary tracking-tight font-semibold flex items-center gap-2 sm:gap-space-sm whitespace-nowrap text-[15px] sm:text-title-card shrink-0" href="directory.html">
+<img src="assets/img/devspirehub-gears-128.png" alt="DevSpire Nexus logo" class="brand-mark w-7 h-7 rounded-lg object-cover shrink-0" width="28" height="28"/>
+<span class="flex flex-col leading-tight min-w-0"><span class="hidden sm:inline">DevSpire Nexus</span><span class="hidden xl:inline font-metadata-label text-[10px] font-normal tracking-[0.14em] text-text-muted uppercase">AI Intelligence Directory</span></span>
+</a>
+<nav class="hidden lg:flex items-center gap-3 xl:gap-space-md ml-2 xl:ml-space-md" aria-label="Primary">
+<a class="text-primary dark:text-primary font-body-compact text-body-compact border-b-2 border-primary dark:border-primary pb-1 whitespace-nowrap" href="directory.html" aria-current="page">Discover</a>
+<a class="text-text-muted dark:text-text-muted font-body-compact text-body-compact hover:text-text-primary dark:hover:text-text-primary transition-colors whitespace-nowrap" href="ai-tools.html">AI Tools</a>
+<a class="text-text-muted dark:text-text-muted font-body-compact text-body-compact hover:text-text-primary dark:hover:text-text-primary transition-colors whitespace-nowrap" href="models.html">AI Models</a>
+<a class="text-text-muted dark:text-text-muted font-body-compact text-body-compact hover:text-text-primary dark:hover:text-text-primary transition-colors whitespace-nowrap" href="developer-resources.html">Developer Resources</a>
+<a class="text-text-muted dark:text-text-muted font-body-compact text-body-compact hover:text-text-primary dark:hover:text-text-primary transition-colors whitespace-nowrap" href="collections.html">My Collections</a>
+<a class="text-text-muted dark:text-text-muted font-body-compact text-body-compact hover:text-text-primary dark:hover:text-text-primary transition-colors whitespace-nowrap" href="about.html">About</a>
+<a class="text-text-muted dark:text-text-muted font-body-compact text-body-compact hover:text-text-primary dark:hover:text-text-primary transition-colors whitespace-nowrap inline-flex items-center gap-1" href="https://devspirehub.com/" target="_blank" rel="noopener">DevSpireHub<span class="material-symbols-outlined text-[14px]" data-icon="arrow_outward" aria-hidden="true">arrow_outward</span></a>
+</nav>
+</div>
+<div class="flex items-center gap-1.5 sm:gap-space-sm shrink-0">
+<a class="hidden sm:inline-flex items-center gap-1.5 bg-surface-card border border-border-subtle rounded px-2.5 py-1.5 font-body-compact text-body-compact text-text-muted hover:border-secondary hover:text-secondary dark:hover:border-secondary dark:hover:text-secondary transition-colors duration-150" href="terminal.html" id="terminal-nav-btn" aria-label="Open Terminal" title="Open Terminal">
+<span class="material-symbols-outlined text-[16px]" data-icon="terminal" aria-hidden="true">terminal</span>
+<span class="text-xs">Terminal</span>
+<kbd class="font-code-badge text-code-badge bg-surface-secondary px-1.5 py-0.5 rounded text-[11px] border border-border-subtle text-text-muted key-hint">&#96;</kbd>
+</a>
+<a class="inline-flex items-center justify-center gap-1.5 bg-primary-container text-bg-canvas font-body-compact font-semibold px-2.5 sm:px-3 py-1.5 rounded text-[13px] sm:text-body-compact hover:brightness-110 transition-all" href="submit.html">
+<span class="material-symbols-outlined text-[16px]" data-icon="add" aria-hidden="true">add</span>Submit Resource</a>
+<button class="lg:hidden inline-flex items-center justify-center w-8 h-8 rounded bg-surface-card border border-border-subtle text-text-muted hover:text-text-primary transition-colors" id="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+<span class="material-symbols-outlined text-[18px]" data-icon="menu" aria-hidden="true">menu</span>
+</button>
+</div>
+</div>
+<div class="lg:hidden hidden border-t border-border-subtle bg-surface-secondary/95 backdrop-blur" id="mobile-menu">
+<nav class="flex flex-col px-4 sm:px-gutter-lg py-3 gap-1" aria-label="Mobile">
+<a class="text-primary font-body-compact text-body-compact py-2 border-b border-border-subtle/50" href="directory.html" aria-current="page">Discover</a>
+<a class="text-text-muted hover:text-text-primary font-body-compact text-body-compact py-2 border-b border-border-subtle/50 transition-colors" href="ai-tools.html">AI Tools</a>
+<a class="text-text-muted hover:text-text-primary font-body-compact text-body-compact py-2 border-b border-border-subtle/50 transition-colors" href="models.html">AI Models</a>
+<a class="text-text-muted hover:text-text-primary font-body-compact text-body-compact py-2 border-b border-border-subtle/50 transition-colors" href="developer-resources.html">Developer Resources</a>
+<a class="text-text-muted hover:text-text-primary font-body-compact text-body-compact py-2 border-b border-border-subtle/50 transition-colors" href="collections.html">My Collections</a>
+<a class="text-text-muted hover:text-text-primary font-body-compact text-body-compact py-2 border-b border-border-subtle/50 transition-colors" href="about.html">About</a>
+<a class="text-text-muted hover:text-text-primary font-body-compact text-body-compact py-2 border-b border-border-subtle/50 transition-colors inline-flex items-center gap-2" href="terminal.html"><span class="material-symbols-outlined text-[16px]" aria-hidden="true">terminal</span>Terminal</a>
+<a class="text-text-muted hover:text-text-primary font-body-compact text-body-compact py-2 border-b border-border-subtle/50 transition-colors" href="submit.html">Submit Resource</a>
+<a class="text-text-muted hover:text-text-primary font-body-compact text-body-compact py-2 border-b border-border-subtle/50 transition-colors inline-flex items-center gap-1" href="https://devspirehub.com/" target="_blank" rel="noopener">DevSpireHub<span class="material-symbols-outlined text-[14px]" aria-hidden="true">arrow_outward</span></a>
+<a class="text-text-muted hover:text-text-primary font-body-compact text-body-compact py-2 transition-colors inline-flex items-center gap-1" href="https://devspirehub.com/Website/about/about.html" target="_blank" rel="noopener">About DevSpireHub<span class="material-symbols-outlined text-[14px]" aria-hidden="true">arrow_outward</span></a>
+</nav>
+</div>
+</header>
+<main id="main-content" class="flex-1 w-full max-w-[1360px] mx-auto px-gutter-lg py-space-xl flex flex-col gap-12">
+<!-- ================= SECTION B: COMPACT HERO ================= -->
+<section class="flex flex-col items-center text-center w-full max-w-3xl min-w-0 mx-auto pt-6 pb-2 rise">
+<div class="inline-flex items-center gap-2 px-2.5 py-1 rounded bg-surface-secondary border border-border-subtle font-code-badge text-code-badge text-secondary mb-4">
+<span class="material-symbols-outlined text-[14px]" aria-hidden="true" data-icon="hub">hub</span>
+<span>AI INTELLIGENCE DIRECTORY</span>
+</div>
+<h1 class="font-display-hero text-display-hero text-text-primary tracking-tight mb-2 hero-title">
+        DevSpire Nexus
+      </h1>
+<p class="font-headline-section text-headline-section text-primary mb-3">Discover. Connect. Build.</p>
+<p class="font-body-default text-body-default text-text-muted max-w-2xl mb-2">
+        Explore AI tools, models, frameworks, APIs, and developer technologies in one curated intelligence directory.
+      </p>
+<p class="font-metadata-label text-metadata-label text-text-muted mb-5" id="catalog-summary-text">Verified AI tools, models &amp; developer resources</p>
+<div class="flex flex-wrap items-center justify-center gap-2 mb-8">
+<a class="inline-flex items-center gap-1.5 bg-surface-secondary border border-border-subtle rounded px-3 py-1.5 font-body-compact text-body-compact text-text-primary hover:border-secondary hover:text-secondary transition-colors" href="ai-tools.html">Explore AI Tools<span class="material-symbols-outlined text-[15px]" aria-hidden="true">arrow_forward</span></a>
+<a class="inline-flex items-center gap-1.5 bg-surface-secondary border border-border-subtle rounded px-3 py-1.5 font-body-compact text-body-compact text-text-primary hover:border-secondary hover:text-secondary transition-colors" href="models.html">Explore AI Models<span class="material-symbols-outlined text-[15px]" aria-hidden="true">arrow_forward</span></a>
+<a class="inline-flex items-center gap-1.5 bg-surface-secondary border border-border-subtle rounded px-3 py-1.5 font-body-compact text-body-compact text-text-primary hover:border-secondary hover:text-secondary transition-colors" href="developer-resources.html">Explore Developer Resources<span class="material-symbols-outlined text-[15px]" aria-hidden="true">arrow_forward</span></a>
+</div>
+<!-- Primary Terminal Search Box -->
+<div class="w-full relative max-w-2xl search-shell">
+<div class="relative flex items-center bg-surface-secondary border border-border-subtle rounded-lg focus-within:border-primary-container transition-all search-box">
+<div class="pl-3.5 pr-2 flex items-center text-text-muted pointer-events-none">
+<span class="material-symbols-outlined text-[20px]" aria-hidden="true" data-icon="search">search</span>
+</div>
+<input class="w-full bg-transparent border-none py-3 text-text-primary font-body-compact text-body-compact placeholder:text-text-muted focus:ring-0 focus:outline-none" id="resource-search" placeholder="Search tools, models, and developer resources..." type="text" aria-label="Search the AI resource catalog" aria-controls="search-results" autocomplete="off" spellcheck="false"/>
+<div class="flex items-center pr-3 gap-2">
+<button aria-label="Clear query" class="text-text-muted hover:text-text-primary p-0.5 transition-colors" id="search-clear" type="button">
+<span class="material-symbols-outlined text-[16px]" aria-hidden="true" data-icon="close">close</span>
+</button>
+<span class="hidden sm:inline-block h-4 w-[1px] bg-border-subtle"></span>
+<kbd class="hidden sm:inline font-code-badge text-code-badge bg-surface-card px-2 py-0.5 rounded border border-border-subtle text-text-muted text-[11px] key-hint">Cmd + K</kbd>
+</div>
+</div>
+<!-- Interactive Query Pills -->
+<!-- Interactive Query Pills -->
+<div class="flex flex-wrap items-center justify-center gap-2 mt-3.5">
+<span class="font-metadata-label text-metadata-label text-text-muted">Query presets:</span>
+<button class="preset-chip font-code-badge text-code-badge bg-surface-secondary hover:border-secondary border border-border-subtle text-secondary px-2.5 py-1 rounded transition-colors duration-150" type="button" data-preset="Coding">Coding</button>
+<button class="preset-chip font-code-badge text-code-badge bg-surface-secondary hover:border-secondary border border-border-subtle text-secondary px-2.5 py-1 rounded transition-colors duration-150" type="button" data-preset="Vision">Vision</button>
+<button class="preset-chip font-code-badge text-code-badge bg-surface-secondary hover:border-secondary border border-border-subtle text-secondary px-2.5 py-1 rounded transition-colors duration-150" type="button" data-preset="RAG">RAG</button>
+<button class="preset-chip font-code-badge text-code-badge bg-surface-secondary hover:border-secondary border border-border-subtle text-secondary px-2.5 py-1 rounded transition-colors duration-150" type="button" data-preset="Local runtimes">Local runtimes</button>
+<button class="preset-chip font-code-badge text-code-badge bg-surface-secondary hover:border-secondary border border-border-subtle text-secondary px-2.5 py-1 rounded transition-colors duration-150" type="button" data-preset="Agent frameworks">Agent frameworks</button>
+</div>
+</div>
+<!-- Cross-registry search results -->
+<div class="w-full max-w-2xl mx-auto mt-4 text-left" id="search-results" role="region" aria-live="polite" hidden>
+<div class="ui-card rounded-xl p-space-md">
+<div class="flex items-center justify-between gap-3 mb-2">
+<span class="font-metadata-label text-metadata-label text-text-muted" id="search-results-summary"></span>
+<button class="font-metadata-label text-metadata-label text-text-muted hover:text-text-primary transition-colors" id="search-results-close" type="button">Close</button>
+</div>
+<ul class="flex flex-col divide-y divide-border-subtle/60" id="search-results-list"></ul>
+<div class="pt-3 mt-3 border-t border-border-subtle flex flex-wrap items-center gap-x-4 gap-y-1" id="search-results-links"></div>
+</div>
+</div>
+</section>
+<!-- ================= SECTION C: RESOURCE TYPE NAVIGATION ================= -->
+<section>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Card 1: AI Tools -->
+<a class="ui-card group rounded-xl p-space-lg flex flex-col justify-between" href="ai-tools.html">
+<div>
+<div class="flex items-center justify-between mb-3">
+<div class="w-10 h-10 rounded bg-surface-secondary border border-border-subtle flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[20px]" aria-hidden="true" data-icon="construction">construction</span>
+</div>
+<span class="font-code-badge text-code-badge px-2 py-0.5 rounded bg-surface-secondary border border-border-subtle text-text-muted">TYPE::01</span>
+</div>
+<h2 class="font-title-card text-title-card text-text-primary group-hover:text-secondary transition-colors mb-1">AI Tools</h2>
+<p class="font-body-compact text-body-compact text-text-muted mb-4">
+              Coding environments, assistants, research engines, media generation, productivity, and automation tools.
+            </p>
+</div>
+<div class="pt-3 border-t border-border-subtle/60 flex items-center justify-between">
+<span class="font-code-param text-code-param text-text-primary" id="tools-count">AI Tools registry</span>
+<span class="material-symbols-outlined text-[16px] text-text-muted group-hover:translate-x-0.5 group-hover:text-secondary transition-all" aria-hidden="true" data-icon="arrow_forward">arrow_forward</span>
+</div>
+</a>
+<!-- Card 2: AI Models -->
+<a class="ui-card group rounded-xl p-space-lg flex flex-col justify-between" href="models.html">
+<div>
+<div class="flex items-center justify-between mb-3">
+<div class="w-10 h-10 rounded bg-surface-secondary border border-border-subtle flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[20px]" aria-hidden="true" data-icon="psychology">psychology</span>
+</div>
+<span class="font-code-badge text-code-badge px-2 py-0.5 rounded bg-surface-secondary border border-border-subtle text-text-muted">TYPE::02</span>
+</div>
+<h2 class="font-title-card text-title-card text-text-primary group-hover:text-primary transition-colors mb-1">AI Models</h2>
+<p class="font-body-compact text-body-compact text-text-muted mb-4">
+              Frontier, reasoning, coding, multimodal, audio, video, and embedding models with stated weights and licensing.
+            </p>
+</div>
+<div class="pt-3 border-t border-border-subtle/60 flex items-center justify-between">
+<span class="font-code-param text-code-param text-text-primary" id="models-count">AI Models registry</span>
+<span class="material-symbols-outlined text-[16px] text-text-muted group-hover:translate-x-0.5 group-hover:text-primary transition-all" aria-hidden="true" data-icon="arrow_forward">arrow_forward</span>
+</div>
+</a>
+<!-- Card 3: Developer Resources -->
+<a class="ui-card group rounded-xl p-space-lg flex flex-col justify-between" href="developer-resources.html">
+<div>
+<div class="flex items-center justify-between mb-3">
+<div class="w-10 h-10 rounded bg-surface-secondary border border-border-subtle flex items-center justify-center text-[#34D399]">
+<span class="material-symbols-outlined text-[20px]" aria-hidden="true" data-icon="terminal">terminal</span>
+</div>
+<span class="font-code-badge text-code-badge px-2 py-0.5 rounded bg-surface-secondary border border-border-subtle text-text-muted">TYPE::03</span>
+</div>
+<h2 class="font-title-card text-title-card text-text-primary group-hover:text-[#34D399] transition-colors mb-1">Developer Resources</h2>
+<p class="font-body-compact text-body-compact text-text-muted mb-4">
+              Serving engines, vector databases, agent frameworks, local runtimes, evaluation, and security resources.
+            </p>
+</div>
+<div class="pt-3 border-t border-border-subtle/60 flex items-center justify-between">
+<span class="font-code-param text-code-param text-text-primary" id="dev-count">Developer Resources registry</span>
+<span class="material-symbols-outlined text-[16px] text-text-muted group-hover:translate-x-0.5 group-hover:text-[#34D399] transition-all" aria-hidden="true" data-icon="arrow_forward">arrow_forward</span>
+</div>
+</a>
+</div>
+</section>
+<!-- ================= SECTION D: CATEGORY COVERAGE ================= -->
+<section id="coverage">
+<div class="flex items-center justify-between mb-4">
+<div>
+<h2 class="font-headline-section text-headline-section text-text-primary">Category Coverage</h2>
+<p class="font-body-compact text-body-compact text-text-muted">The largest categories in each registry, computed from the catalog datasets.</p>
+</div>
+<div class="font-code-badge text-code-badge text-text-muted hidden sm:block" id="coverage-total">—</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="ui-card rounded-xl p-space-lg">
+<div class="flex flex-wrap items-center justify-between gap-2 gap-y-1 mb-3">
+<h3 class="font-title-card text-title-card text-text-primary">AI Tools</h3>
+<a class="font-code-badge text-code-badge text-secondary hover:underline shrink-0" href="ai-tools.html" id="coverage-tools-all">All categories →</a>
+</div>
+<ul class="flex flex-col gap-1.5" id="coverage-tools"></ul>
+</div>
+<div class="ui-card rounded-xl p-space-lg">
+<div class="flex flex-wrap items-center justify-between gap-2 gap-y-1 mb-3">
+<h3 class="font-title-card text-title-card text-text-primary">AI Models</h3>
+<a class="font-code-badge text-code-badge text-secondary hover:underline shrink-0" href="models.html" id="coverage-models-all">All categories →</a>
+</div>
+<ul class="flex flex-col gap-1.5" id="coverage-models"></ul>
+</div>
+<div class="ui-card rounded-xl p-space-lg">
+<div class="flex flex-wrap items-center justify-between gap-2 gap-y-1 mb-3">
+<h3 class="font-title-card text-title-card text-text-primary">Developer Resources</h3>
+<a class="font-code-badge text-code-badge text-secondary hover:underline shrink-0" href="developer-resources.html" id="coverage-dev-all">All categories →</a>
+</div>
+<ul class="flex flex-col gap-1.5" id="coverage-dev"></ul>
+</div>
+</div>
+</section>
+<!-- ================= SECTION E: RESOURCES OF THE WEEK ================= -->
+<section class="ui-card rounded-xl p-space-lg" id="resources-of-the-week" aria-labelledby="featured-week-title">
+<div class="flex flex-wrap items-end justify-between gap-3 mb-4">
+<div class="min-w-0">
+<div class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-surface-secondary border border-border-subtle font-code-badge text-code-badge text-primary-container mb-2">
+<span class="material-symbols-outlined text-[14px]" aria-hidden="true" data-icon="calendar_month">calendar_month</span>
+<span>CURATED WEEKLY</span>
+</div>
+<h2 class="font-headline-section text-headline-section text-text-primary" id="featured-week-title">Resources of the Week</h2>
+<p class="font-body-compact text-body-compact text-text-muted"><span data-featured-week>This week</span> · Hand-picked from the three registries · rotates every Monday.</p>
+</div>
+<a class="inline-flex items-center gap-1 font-body-compact text-body-compact text-secondary hover:underline shrink-0" href="#catalog-snapshot">View all resources <span class="material-symbols-outlined text-[15px]" aria-hidden="true" data-icon="arrow_forward">arrow_forward</span></a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-gutter" id="featured-week-grid"></div>
+</section>
+<!-- ================= SECTION: RECENTLY VIEWED ================= -->
+<section class="ui-card rounded-xl p-space-md" id="recently-viewed-section" hidden>
+<div class="flex flex-wrap items-center justify-between pb-3 mb-3 border-b border-border-subtle gap-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-lg" aria-hidden="true" data-icon="history">history</span>
+<h3 class="font-title-card text-title-card text-text-primary">Recently Viewed</h3>
+</div>
+<div class="flex items-center gap-3">
+<span class="font-code-badge text-code-badge text-text-muted" id="recently-viewed-count">0 items</span>
+<button type="button" class="font-metadata-label text-metadata-label text-text-muted hover:text-status-warning transition-colors" id="clear-recent-btn">Clear history</button>
+</div>
+</div>
+<div class="flex flex-col gap-2.5" id="recently-viewed-list"></div>
+</section>
+<!-- ================= SECTION F: FEATURED RESOURCES ================= -->
+<section>
+<div class="flex flex-wrap items-center justify-between mb-4 gap-3">
+<div>
+<h2 class="font-headline-section text-headline-section text-text-primary">Featured Technical Resources</h2>
+<p class="font-body-compact text-body-compact text-text-muted">Selected records from the three registries, showing only fields the source states.</p>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-metadata-label text-metadata-label text-text-muted">VIEW:</span>
+<div class="flex items-center bg-surface-secondary border border-border-subtle rounded p-0.5 segmented">
+<button class="border border-transparent text-text-primary px-2 py-0.5 rounded font-code-badge text-code-badge flex items-center gap-1" type="button" data-view="grid" aria-pressed="true">
+<span class="material-symbols-outlined text-[14px]" aria-hidden="true" data-icon="grid_view">grid_view</span> Grid
+            </button>
+<button class="border border-transparent text-text-muted hover:text-text-primary px-2 py-0.5 font-code-badge text-code-badge flex items-center gap-1" type="button" data-view="table" aria-pressed="false">
+<span class="material-symbols-outlined text-[14px]" aria-hidden="true" data-icon="table_rows">table_rows</span> Dense Table
+            </button>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter" id="resource-grid"></div>
+<div class="resource-table-wrap" id="resource-table-wrap" hidden>
+<table class="resource-table">
+<thead>
+<tr>
+<th scope="col">Resource</th>
+<th scope="col">Category</th>
+<th scope="col">License</th>
+<th scope="col">Technical Parameters</th>
+<th scope="col">Verified</th>
+<th scope="col"><span class="visually-hidden">Actions</span></th>
+</tr>
+</thead>
+<tbody id="resource-table-body"></tbody>
+</table>
+</div>
+</section>
+<!-- ================= SECTION F: CATALOG SNAPSHOT ================= -->
+<section class="ui-card rounded-xl p-space-md" id="catalog-snapshot">
+<div class="flex flex-wrap items-center justify-between pb-3 mb-3 border-b border-border-subtle gap-2">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-[#34D399]"></span>
+<h3 class="font-title-card text-title-card text-text-primary">Catalog Snapshot</h3>
+</div>
+<span class="font-code-badge text-code-badge text-text-muted">SOURCE-REPORTED DATES · NO LIVE POLLING</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3" id="snapshot-grid"></div>
+</section>
+<!-- ================= SECTION G: DEVELOPER INFRASTRUCTURE FOCUS ================= -->
+<section class="ui-card rounded-xl p-space-lg relative overflow-hidden">
+<div class="relative z-10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
+<div class="max-w-2xl">
+<div class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-surface-secondary border border-border-subtle font-code-badge text-code-badge text-primary-container mb-3">
+<span class="material-symbols-outlined text-[14px]" aria-hidden="true" data-icon="database">database</span>
+<span>DEVELOPER INFRASTRUCTURE</span>
+</div>
+<h2 class="font-headline-section text-headline-section text-text-primary mb-2">
+            Build with cataloged AI developer infrastructure
+          </h2>
+<p class="font-body-compact text-body-compact text-text-muted mb-4">
+            Browse serving engines, vector databases, local runtimes, and agent frameworks with licensing and deployment details taken from the source.
+          </p>
+<div class="flex flex-wrap gap-2">
+<span class="tag-chip font-code-badge text-code-badge bg-surface-secondary px-2.5 py-1 rounded border border-border-subtle text-secondary cursor-default">Vector Databases &amp; RAG</span>
+<span class="tag-chip font-code-badge text-code-badge bg-surface-secondary px-2.5 py-1 rounded border border-border-subtle text-text-primary cursor-default">Model Serving &amp; Inference</span>
+<span class="tag-chip font-code-badge text-code-badge bg-surface-secondary px-2.5 py-1 rounded border border-border-subtle text-secondary cursor-default">Local Runtimes</span>
+<span class="tag-chip font-code-badge text-code-badge bg-surface-secondary px-2.5 py-1 rounded border border-border-subtle text-text-primary cursor-default">Agent Frameworks</span>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row lg:flex-col gap-2.5 w-full lg:w-auto shrink-0">
+<a class="btn-amber inline-flex items-center justify-center gap-2 bg-primary-container text-bg-canvas font-body-compact text-body-compact font-semibold px-4 py-2 rounded transition-all duration-150 hover:brightness-110" href="developer-resources.html">
+<span class="material-symbols-outlined text-[18px]" aria-hidden="true" data-icon="terminal">terminal</span>
+<span>Browse Developer Resources</span>
+</a>
+<a class="inline-flex items-center justify-center gap-2 bg-surface-secondary border border-border-subtle text-text-primary font-body-compact text-body-compact px-4 py-2 rounded hover:border-secondary hover:text-secondary transition-colors duration-150" href="models.html">
+<span class="material-symbols-outlined text-[18px]" aria-hidden="true" data-icon="psychology">psychology</span>
+<span>Browse AI Models</span>
+</a>
+</div>
+</div>
+</section>
+<section class="mt-12" aria-labelledby="devspirehub-banner-title">
+<div class="ui-card rounded-xl p-space-lg md:p-space-xl overflow-hidden">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-lg">
+<div class="flex items-start gap-4 min-w-0">
+<img src="assets/img/devspirehub-gears-128.png" alt="" width="48" height="48" class="brand-mark w-12 h-12 rounded-lg object-cover shrink-0" loading="lazy"/>
+<div class="min-w-0">
+<p class="font-metadata-label text-metadata-label text-primary-container uppercase tracking-[0.18em] mb-1">The parent network</p>
+<h2 class="font-headline-section text-headline-section text-text-primary" id="devspirehub-banner-title">Explore More at DevSpireHub</h2>
+<p class="font-body-compact text-body-compact text-text-muted max-w-2xl mt-1">Discover practical programming tutorials, networking guides, cloud technologies, cybersecurity resources, and hands-on development projects at DevSpireHub.</p>
+</div>
+</div>
+<a class="inline-flex items-center justify-center gap-2 bg-primary-container text-bg-canvas font-body-compact text-body-compact font-semibold px-4 py-2.5 rounded shrink-0 self-start md:self-auto hover:brightness-110 transition-all" href="https://devspirehub.com/" target="_blank" rel="noopener">Visit DevSpireHub<span class="material-symbols-outlined text-[18px]" aria-hidden="true">arrow_outward</span></a>
+</div>
+</div>
+</section>
+</main>
+<!-- ================= TECHNICAL FOOTER (Footer from JSON) ================= -->
+<footer class="w-full bg-bg-canvas dark:bg-bg-canvas border-t border-border-subtle dark:border-border-subtle mt-space-xl">
+<div class="w-full max-w-[1360px] mx-auto px-4 sm:px-gutter-lg py-space-lg">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[minmax(0,1.5fr)_repeat(4,minmax(0,1fr))] gap-x-space-lg gap-y-space-md">
+<div class="flex flex-col gap-2 sm:col-span-2 lg:col-span-1">
+<span class="font-title-card text-title-card text-text-primary font-semibold">DevSpire Nexus</span>
+<p class="font-metadata-label text-metadata-label text-primary">Discover. Connect. Build.</p>
+<p class="font-metadata-label text-metadata-label text-text-muted max-w-xs">AI Intelligence Directory</p>
+<p class="font-metadata-label text-metadata-label text-text-muted max-w-xs">DevSpire Nexus is a product of DevSpireHub.com.</p>
+<p class="font-metadata-label text-metadata-label text-text-muted max-w-xs">Source: DevSpireHub AI knowledge base · ai-tools-models-developer-resources.md</p>
+</div>
+<nav aria-labelledby="footer-explore">
+<h2 class="font-metadata-label text-metadata-label uppercase tracking-[0.16em] text-text-primary mb-2" id="footer-explore">Explore</h2>
+<ul class="flex flex-col gap-1.5">
+<li><a class="text-text-muted dark:text-text-muted font-metadata-label text-metadata-label hover:text-text-primary dark:hover:text-text-primary transition-colors" href="directory.html">Directory</a></li>
+<li><a class="text-text-muted dark:text-text-muted font-metadata-label text-metadata-label hover:text-text-primary dark:hover:text-text-primary transition-colors" href="ai-tools.html">AI Tools</a></li>
+<li><a class="text-text-muted dark:text-text-muted font-metadata-label text-metadata-label hover:text-text-primary dark:hover:text-text-primary transition-colors" href="models.html">AI Models</a></li>
+<li><a class="text-text-muted dark:text-text-muted font-metadata-label text-metadata-label hover:text-text-primary dark:hover:text-text-primary transition-colors" href="developer-resources.html">Developer Resources</a></li>
+</ul>
+</nav>
+<nav aria-labelledby="footer-product">
+<h2 class="font-metadata-label text-metadata-label uppercase tracking-[0.16em] text-text-primary mb-2" id="footer-product">Product</h2>
+<ul class="flex flex-col gap-1.5">
+<li><a class="text-text-muted dark:text-text-muted font-metadata-label text-metadata-label hover:text-text-primary dark:hover:text-text-primary transition-colors" href="collections.html">My Collections</a></li>
+<li><a class="text-text-muted dark:text-text-muted font-metadata-label text-metadata-label hover:text-text-primary dark:hover:text-text-primary transition-colors" href="about.html">About</a></li>
+<li><a class="text-text-muted dark:text-text-muted font-metadata-label text-metadata-label hover:text-text-primary dark:hover:text-text-primary transition-colors" href="contact.html">Contact</a></li>
+<li><a class="text-text-muted dark:text-text-muted font-metadata-label text-metadata-label hover:text-text-primary dark:hover:text-text-primary transition-colors" href="docs.html">Documentation</a></li>
+<li><a class="text-text-muted dark:text-text-muted font-metadata-label text-metadata-label hover:text-text-primary dark:hover:text-text-primary transition-colors" href="api.html">API and Data Access</a></li>
+<li><a class="text-text-muted dark:text-text-muted font-metadata-label text-metadata-label hover:text-text-primary dark:hover:text-text-primary transition-colors" href="submit.html">Submit Resource</a></li>
+</ul>
+</nav>
+<nav aria-labelledby="footer-legal">
+<h2 class="font-metadata-label text-metadata-label uppercase tracking-[0.16em] text-text-primary mb-2" id="footer-legal">Legal &amp; Information</h2>
+<ul class="flex flex-col gap-1.5">
+<li><a class="text-text-muted dark:text-text-muted font-metadata-label text-metadata-label hover:text-text-primary dark:hover:text-text-primary transition-colors" href="privacy.html">Privacy Policy</a></li>
+<li><a class="text-text-muted dark:text-text-muted font-metadata-label text-metadata-label hover:text-text-primary dark:hover:text-text-primary transition-colors" href="terms.html">Terms of Service</a></li>
+</ul>
+</nav>
+<nav aria-labelledby="footer-devspirehub">
+<h2 class="font-metadata-label text-metadata-label uppercase tracking-[0.16em] text-text-primary mb-2" id="footer-devspirehub">DevSpireHub</h2>
+<ul class="flex flex-col gap-1.5">
+<li><a class="text-text-muted dark:text-text-muted font-metadata-label text-metadata-label hover:text-text-primary dark:hover:text-text-primary transition-colors" href="https://devspirehub.com/" target="_blank" rel="noopener">Main Website<span class="material-symbols-outlined text-[13px] align-middle ml-0.5" aria-hidden="true">arrow_outward</span></a></li>
+<li><a class="text-text-muted dark:text-text-muted font-metadata-label text-metadata-label hover:text-text-primary dark:hover:text-text-primary transition-colors" href="https://devspirehub.com/Website/about/about.html" target="_blank" rel="noopener">About DevSpireHub<span class="material-symbols-outlined text-[13px] align-middle ml-0.5" aria-hidden="true">arrow_outward</span></a></li>
+<li><a class="text-text-muted dark:text-text-muted font-metadata-label text-metadata-label hover:text-text-primary dark:hover:text-text-primary transition-colors" href="https://devspirehub.com/Resources/digital-resources/digital-resources-hub.html" target="_blank" rel="noopener">Learning Resources<span class="material-symbols-outlined text-[13px] align-middle ml-0.5" aria-hidden="true">arrow_outward</span></a></li>
+</ul>
+</nav>
+</div>
+<div class="mt-space-lg pt-space-md border-t border-border-subtle/70 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+<p class="font-metadata-label text-metadata-label text-text-muted">© 2026 DevSpireHub.com · DevSpire Nexus</p>
+<p class="font-metadata-label text-metadata-label text-text-muted">Static catalog · collections stay in your browser · no tracking</p>
+</div>
+</div>
+</footer>
+<!-- Landing interactions -->
+<script src="data/ai-tools.js"></script>
+<script src="data/ai-models.js"></script>
+<script src="data/developer-resources.js"></script>
+<script src="data/featured-resources.js"></script>
+<script src="assets/resource-icons.js"></script>
+<script src="assets/collections.js"></script>
+<script src="assets/featured.js"></script>
+<script src="assets/status-badges.js"></script>
+<script src="assets/recently-viewed.js"></script>
+<script src="assets/share.js"></script>
+<script>
+(() => {
+  'use strict';
+
+  const T = Array.isArray(window.AI_TOOLS) ? window.AI_TOOLS : [];
+  const M = Array.isArray(window.AI_MODELS) ? window.AI_MODELS : [];
+  const D = Array.isArray(window.DEVELOPER_RESOURCES) ? window.DEVELOPER_RESOURCES : [];
+  const total = T.length + M.length + D.length;
+
+  const esc = (v) => String(v == null ? '' : v).replace(/[&<>"']/g, (ch) => ({
+    '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+  }[ch]));
+
+  const initials = (name) => String(name || '')
+    .split(/\s+/).filter(Boolean).slice(0, 2).map((w) => w[0]).join('').toUpperCase() || '—';
+
+  const icon = (r, size) => (r.icon
+    ? `<img src="${esc(r.icon)}" alt="" width="${size}" height="${size}" loading="lazy" class="object-contain rounded"/>`
+    : `<span class="font-code-badge text-code-badge text-secondary">${esc(initials(r.name))}</span>`);
+
+  const catCount = (arr) => new Set(arr.map((r) => r.category).filter(Boolean)).size;
+  const setText = (id, text) => {
+    const el = document.getElementById(id);
+    if (el) el.textContent = text;
+  };
+
+  /* ----- Catalog totals ----- */
+  setText('catalog-summary-text', `${total} verified records across 3 registries`);
+  setText('tools-count', `${T.length} records · ${catCount(T)} categories`);
+  setText('models-count', `${M.length} records · ${catCount(M)} categories`);
+  setText('dev-count', `${D.length} records · ${catCount(D)} categories`);
+
+  /* ----- Category coverage ----- */
+  const topCats = (arr, n) => {
+    const map = new Map();
+    arr.forEach((r) => { if (r.category) map.set(r.category, (map.get(r.category) || 0) + 1); });
+    return [...map.entries()]
+      .sort((a, b) => (b[1] - a[1]) || a[0].localeCompare(b[0]))
+      .slice(0, n);
+  };
+
+  const renderCoverage = (id, arr, page) => {
+    const ul = document.getElementById(id);
+    if (!ul) return;
+    ul.innerHTML = topCats(arr, 5).map(([name, count]) => `
+      <li>
+        <a class="flex items-center justify-between gap-2 rounded border border-border-subtle bg-surface-secondary px-2.5 py-1.5 hover:border-secondary transition-colors" href="${page}?category=${encodeURIComponent(name)}">
+          <span class="font-body-compact text-body-compact text-text-primary truncate">${esc(name)}</span>
+          <span class="font-code-badge text-code-badge px-1.5 py-0.5 bg-surface-card border border-border-subtle rounded text-text-muted shrink-0">${count}</span>
+        </a>
+      </li>`).join('');
+  };
+  renderCoverage('coverage-tools', T, 'ai-tools.html');
+  renderCoverage('coverage-models', M, 'models.html');
+  renderCoverage('coverage-dev', D, 'developer-resources.html');
+  setText('coverage-tools-all', `All ${catCount(T)} categories →`);
+  setText('coverage-models-all', `All ${catCount(M)} categories →`);
+  setText('coverage-dev-all', `All ${catCount(D)} categories →`);
+  setText('coverage-total', `${total} RECORDS · 3 REGISTRIES`);
+
+  /* ----- Featured records ----- */
+  const pick = (arr, id) => arr.find((r) => r.id === id) || arr[0] || null;
+  const featured = [
+    { r: pick(T, 'cursor'), page: 'ai-tools.html', prefix: 'tool', type: 'AI Tool' },
+    { r: pick(M, 'deepseek-r1'), page: 'models.html', prefix: 'model', type: 'AI Model' },
+    { r: pick(D, 'vllm'), page: 'developer-resources.html', prefix: 'resource', type: 'Developer Resource' },
+    { r: pick(D, 'qdrant'), page: 'developer-resources.html', prefix: 'resource', type: 'Developer Resource' }
+  ].filter((x) => x.r);
+
+  const detailHref = (x) => `${x.page}#${x.prefix}/${encodeURIComponent(x.r.id)}`;
+  const subtitle = (x) => `${x.type} / ${x.r.source_category || x.r.resource_subtype || x.r.category || '—'}`;
+
+  const railFor = (x) => {
+    const r = x.r;
+    if (x.prefix === 'tool') {
+      return [['PRICING', r.pricing || '—'], ['PLATFORM', r.platform || '—'], ['LICENSING', r.license || '—']];
+    }
+    if (x.prefix === 'model') {
+      return [['PARAMS', r.params || '—'], ['CONTEXT', r.context_k ? `${r.context_k}K` : '—'], ['LICENSE', r.license || '—']];
+    }
+    return [['TYPE', r.resource_subtype || r.category || '—'], ['LICENSE', r.license || '—'], ['HOSTING', (r.hosting || []).join(', ') || '—']];
+  };
+
+  const cardHtml = (x) => {
+    const r = x.r;
+    const chips = (r.tags || []).slice(0, 3);
+    return `<article class="ui-card rounded-xl p-space-md flex flex-col justify-between" data-${x.prefix}-id="${esc(r.id)}">
+      <div>
+        <div class="flex items-start justify-between gap-2 mb-2">
+          <div class="flex items-center gap-2.5 min-w-0">
+            <div class="w-8 h-8 rounded bg-surface-secondary border border-border-subtle flex items-center justify-center shrink-0 overflow-hidden">${icon(r, 22)}</div>
+            <div class="min-w-0">
+              <div class="flex items-center gap-2">
+                <a class="font-title-card text-title-card text-text-primary hover:text-secondary transition-colors truncate" href="${detailHref(x)}">${esc(r.name)}</a>
+                <span class="inline-flex items-center gap-1 px-1.5 py-0.2 rounded-full bg-surface-secondary border border-border-subtle font-code-badge text-[11px] text-[#34D399] shrink-0"><span class="w-1.5 h-1.5 rounded-full bg-[#34D399]"></span> Verified</span>
+              </div>
+              <span class="block font-metadata-label text-metadata-label text-text-muted truncate">${esc(subtitle(x))}</span>
+            </div>
+          </div>
+          <div class="flex items-center gap-1.5 shrink-0">
+            <button type="button" class="p-1 rounded text-text-muted hover:text-text-primary hover:bg-surface-secondary transition-colors" data-share="${x.prefix}:${esc(r.id)}" aria-label="Share ${esc(r.name)}" title="Share Resource">
+              <span class="material-symbols-outlined text-[16px]" aria-hidden="true">share</span>
+            </button>
+            ${window.DevSpireCollections ? window.DevSpireCollections.buttonHTML(x.prefix, r.id, r.name, 'p-1 rounded text-text-muted hover:text-text-primary hover:bg-surface-secondary transition-colors') : ''}
+            <span class="font-code-badge text-code-badge px-2 py-0.5 bg-surface-secondary border border-border-subtle rounded text-text-primary">${esc(r.license || r.pricing || '—')}</span>
+          </div>
+        </div>
+        <div class="flex flex-wrap items-center gap-1.5 mb-2">
+          ${window.ResourceStatus ? window.ResourceStatus.statusBadgesHTML(r) : ''}
+        </div>
+        <p class="font-body-compact text-body-compact text-text-muted line-clamp-2 mb-3">${esc(r.description)}</p>
+        <div class="grid grid-cols-3 gap-2 py-2 px-2.5 bg-surface-secondary rounded border border-border-subtle mb-3 text-left">
+          ${railFor(x).map(([label, value]) => `<div class="min-w-0"><span class="block font-metadata-label text-[11px] text-text-muted">${label}</span><span class="font-code-param text-code-param text-text-primary block truncate">${esc(value)}</span></div>`).join('')}
+        </div>
+        <div class="flex flex-wrap gap-1.5 mb-4">
+          ${chips.map((t) => `<span class="font-code-badge text-code-badge bg-surface-secondary border border-border-subtle px-2 py-0.5 rounded text-text-muted">${esc(t)}</span>`).join('')}
+        </div>
+      </div>
+      <div class="pt-3 border-t border-border-subtle flex items-center justify-between gap-2">
+        <span class="font-code-badge text-code-badge text-text-muted">LAST VERIFIED: ${esc(r.verified || '—')}</span>
+        <a class="inline-flex items-center gap-1 px-3 py-1 rounded bg-surface-secondary border border-border-subtle hover:border-secondary hover:text-secondary text-text-primary font-body-compact text-body-compact transition-colors shrink-0" href="${detailHref(x)}"><span>View details</span><span class="material-symbols-outlined text-[14px]" aria-hidden="true" data-icon="chevron_right">chevron_right</span></a>
+      </div>
+    </article>`;
+  };
+
+  const grid = document.getElementById('resource-grid');
+  if (grid) grid.innerHTML = featured.map(cardHtml).join('');
+
+  const paramText = (x) => {
+    const r = x.r;
+    if (x.prefix === 'tool') return `${r.pricing || '—'} · ${r.platform || '—'}`;
+    if (x.prefix === 'model') return `${r.params || '—'} · ${r.context_k ? `${r.context_k}K` : '—'}`;
+    return `${r.resource_subtype || r.category || '—'} · ${(r.hosting || []).join(', ') || '—'}`;
+  };
+
+  const tableBody = document.getElementById('resource-table-body');
+  if (tableBody) {
+    tableBody.innerHTML = featured.map((x) => {
+      const r = x.r;
+      return `<tr>
+        <td><a class="font-code-param text-code-param text-text-primary font-semibold hover:text-secondary transition-colors" href="${detailHref(x)}">${esc(r.name)}</a></td>
+        <td class="text-text-muted font-body-compact text-body-compact">${esc(x.type)} · ${esc(r.category || '—')}</td>
+        <td class="font-code-badge text-code-badge text-text-primary">${esc(r.license || '—')}</td>
+        <td class="font-code-badge text-code-badge text-secondary">${esc(paramText(x))}</td>
+        <td class="font-code-badge text-code-badge text-text-muted">${esc(r.verified || '—')}</td>
+        <td><a class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded bg-surface-secondary border border-border-subtle text-text-primary font-code-badge text-code-badge hover:border-secondary hover:text-secondary transition-colors" href="${detailHref(x)}">Details</a></td>
+      </tr>`;
+    }).join('');
+  }
+
+  /* ----- Catalog snapshot ----- */
+  const snapshot = [
+    { name: 'AI Tools', count: T.length, meta: `${catCount(T)} categories · Last verified ${window.AI_TOOLS_META?.last_verified || '—'}`, href: 'ai-tools.html', action: 'Browse AI Tools' },
+    { name: 'AI Models', count: M.length, meta: `${catCount(M)} categories · Last verified ${window.AI_MODELS_META?.last_verified || '—'}`, href: 'models.html', action: 'Browse AI Models' },
+    { name: 'Developer Resources', count: D.length, meta: `${catCount(D)} categories · Last verified ${window.DEVELOPER_RESOURCES_META?.last_verified || '—'}`, href: 'developer-resources.html', action: 'Browse Developer Resources' },
+    { name: 'Combined catalog', count: total, meta: '3 registries · one source file', href: '#coverage', action: 'View category coverage' }
+  ];
+  const snapshotGrid = document.getElementById('snapshot-grid');
+  if (snapshotGrid) {
+    snapshotGrid.innerHTML = snapshot.map((s) => `<div class="bg-surface-secondary border border-border-subtle rounded p-3 flex flex-col justify-between">
+      <div>
+        <div class="flex items-center justify-between mb-1 gap-2">
+          <span class="font-code-param text-code-param text-text-primary font-semibold truncate">${esc(s.name)}</span>
+          <span class="font-code-badge text-code-badge text-text-muted shrink-0">CATALOGED</span>
+        </div>
+        <p class="font-title-card text-title-card text-text-primary mb-1">${s.count}</p>
+        <p class="font-metadata-label text-metadata-label text-text-muted mb-2">${esc(s.meta)}</p>
+      </div>
+      <a class="font-code-badge text-code-badge text-secondary hover:underline inline-flex items-center gap-1" href="${s.href}">${esc(s.action)} <span class="material-symbols-outlined text-[13px]" aria-hidden="true" data-icon="arrow_forward">arrow_forward</span></a>
+    </div>`).join('');
+  }
+
+  /* ----- Cross-registry search ----- */
+  const index = [
+    ...T.map((r) => ({ r, page: 'ai-tools.html', prefix: 'tool', type: 'AI Tool', label: 'AI Tools' })),
+    ...M.map((r) => ({ r, page: 'models.html', prefix: 'model', type: 'AI Model', label: 'AI Models' })),
+    ...D.map((r) => ({ r, page: 'developer-resources.html', prefix: 'resource', type: 'Developer Resource', label: 'Developer Resources' }))
+  ].map((x) => ({
+    ...x,
+    org: x.r.org || x.r.publisher || '',
+    hay: [x.r.name, x.r.org, x.r.publisher, x.r.category, x.r.source_category, x.r.resource_subtype, x.r.description, (x.r.tags || []).join(' '), x.r.license, x.r.pricing]
+      .filter(Boolean).join(' ').toLowerCase()
+  }));
+
+  const searchInput = document.getElementById('resource-search');
+  const clearBtn = document.getElementById('search-clear');
+  const results = document.getElementById('search-results');
+  const resultsSummary = document.getElementById('search-results-summary');
+  const resultsList = document.getElementById('search-results-list');
+  const resultsLinks = document.getElementById('search-results-links');
+  const resultsClose = document.getElementById('search-results-close');
+  let lastMatches = [];
+
+  const syncClearBtn = () => { if (clearBtn) clearBtn.style.visibility = searchInput.value ? 'visible' : 'hidden'; };
+  const hideResults = () => { if (results) results.hidden = true; };
+
+  const runSearch = (raw) => {
+    const q = (raw == null ? searchInput.value : raw).trim();
+    syncClearBtn();
+    if (!q) { hideResults(); return; }
+    const tokens = q.toLowerCase().split(/\s+/).filter(Boolean);
+    lastMatches = index.filter((it) => tokens.every((t) => it.hay.includes(t)));
+    results.hidden = false;
+    resultsSummary.textContent = lastMatches.length
+      ? `${lastMatches.length} match${lastMatches.length === 1 ? '' : 'es'} for “${q}”`
+      : `No records match “${q}”`;
+    resultsList.innerHTML = lastMatches.slice(0, 8).map((it) => `
+      <li>
+        <a class="flex items-center gap-3 py-2 group" href="${it.page}#${it.prefix}/${encodeURIComponent(it.r.id)}">
+          <span class="w-7 h-7 rounded bg-surface-secondary border border-border-subtle flex items-center justify-center shrink-0 overflow-hidden">${icon(it.r, 18)}</span>
+          <span class="min-w-0 flex-1">
+            <span class="block font-body-compact text-body-compact text-text-primary truncate group-hover:text-secondary">${esc(it.r.name)}</span>
+            <span class="block font-metadata-label text-metadata-label text-text-muted truncate">${esc(it.type)} · ${esc(it.r.category || '')}${it.org ? ` · ${esc(it.org)}` : ''}</span>
+          </span>
+          <span class="font-code-badge text-code-badge text-text-muted shrink-0">${esc(it.r.verified || '')}</span>
+        </a>
+      </li>`).join('');
+    const links = [
+      ['AI Tools', 'ai-tools.html'],
+      ['AI Models', 'models.html'],
+      ['Developer Resources', 'developer-resources.html']
+    ].map(([label, page]) => {
+      const n = lastMatches.filter((m) => m.page === page).length;
+      return n ? `<a class="font-code-badge text-code-badge text-secondary hover:underline" href="${page}?q=${encodeURIComponent(q)}">${label} (${n}) →</a>` : '';
+    }).filter(Boolean);
+    resultsLinks.innerHTML = links.length
+      ? `<span class="font-metadata-label text-metadata-label text-text-muted">Open search in:</span>${links.join('')}`
+      : `<span class="font-metadata-label text-metadata-label text-text-muted">Try a broader term, or browse <a class="text-secondary hover:underline" href="ai-tools.html">AI Tools</a>, <a class="text-secondary hover:underline" href="models.html">AI Models</a>, or <a class="text-secondary hover:underline" href="developer-resources.html">Developer Resources</a>.</span>`;
+  };
+
+  if (searchInput) {
+    let debounce;
+    searchInput.addEventListener('input', () => {
+      syncClearBtn();
+      clearTimeout(debounce);
+      debounce = setTimeout(() => runSearch(), 160);
+    });
+    searchInput.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        if (lastMatches.length) {
+          const first = lastMatches[0];
+          location.href = `${first.page}#${first.prefix}/${encodeURIComponent(first.r.id)}`;
+        } else {
+          runSearch();
+        }
+      } else if (e.key === 'Escape') {
+        hideResults();
+      }
+    });
+    syncClearBtn();
+  }
+
+  if (clearBtn) {
+    clearBtn.addEventListener('click', () => {
+      searchInput.value = '';
+      syncClearBtn();
+      hideResults();
+      searchInput.focus();
+    });
+  }
+
+  if (resultsClose) {
+    resultsClose.addEventListener('click', () => {
+      hideResults();
+      searchInput.focus();
+    });
+  }
+
+  document.querySelectorAll('.preset-chip').forEach((chip) => {
+    chip.addEventListener('click', () => {
+      searchInput.value = chip.dataset.preset || chip.textContent.trim();
+      runSearch();
+      searchInput.focus();
+    });
+  });
+
+  const quickFindJump = document.getElementById('quick-find-jump');
+  if (quickFindJump) {
+    quickFindJump.addEventListener('click', () => {
+      searchInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      searchInput.focus();
+      searchInput.select();
+    });
+  }
+
+  document.addEventListener('keydown', (e) => {
+    if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') {
+      e.preventDefault();
+      searchInput.focus();
+      searchInput.select();
+    }
+  });
+
+  /* ----- Grid / dense table toggle ----- */
+  const gridView = document.getElementById('resource-grid');
+  const tableView = document.getElementById('resource-table-wrap');
+  const viewButtons = document.querySelectorAll('.segmented [data-view]');
+  viewButtons.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const isGrid = btn.dataset.view === 'grid';
+      gridView.hidden = !isGrid;
+      tableView.hidden = isGrid;
+      viewButtons.forEach((b) => {
+        const pressed = b === btn;
+        b.setAttribute('aria-pressed', String(pressed));
+        b.classList.toggle('text-text-primary', pressed);
+        b.classList.toggle('text-text-muted', !pressed);
+        b.classList.toggle('border-border-subtle', pressed);
+        b.classList.toggle('bg-surface-card', pressed);
+      });
+    });
+  });
+
+  /* ----- Recently Viewed Section ----- */
+  function renderRecentlyViewed() {
+    const sec = document.getElementById('recently-viewed-section');
+    const listEl = document.getElementById('recently-viewed-list');
+    const countEl = document.getElementById('recently-viewed-count');
+    if (!sec || !listEl || !window.RecentlyViewed) return;
+    const items = window.RecentlyViewed.getItems();
+    if (!items || items.length === 0) {
+      sec.hidden = true;
+      return;
+    }
+    sec.hidden = false;
+    if (countEl) countEl.textContent = `${items.length} item${items.length === 1 ? '' : 's'}`;
+    listEl.innerHTML = items.slice(0, 5).map((item) => {
+      const r = item.record || {};
+      const page = item.type === 'tool' ? 'ai-tools.html' : item.type === 'model' ? 'models.html' : 'developer-resources.html';
+      const href = `${page}#${item.type}/${encodeURIComponent(item.id)}`;
+      const typeLabel = item.type === 'tool' ? 'AI Tool' : item.type === 'model' ? 'AI Model' : 'Developer Resource';
+      return `<div class="nexus-resource-row py-2.5 px-3" data-${item.type}-id="${esc(item.id)}">
+        <div class="resource-row-main">
+          <div class="w-8 h-8 rounded bg-surface-secondary border border-border-subtle flex items-center justify-center shrink-0 overflow-hidden">
+            ${r.icon ? `<img src="${esc(r.icon)}" alt="" width="20" height="20" loading="lazy" class="object-contain"/>` : `<span class="font-code-badge text-code-badge text-secondary">${esc(initials(r.name || item.id))}</span>`}
+          </div>
+          <div class="resource-row-content">
+            <div class="resource-row-header">
+              <a href="${href}" class="resource-row-title text-sm hover:underline">${esc(r.name || item.id)}</a>
+              <span class="font-code-badge text-[11px] text-text-muted px-1.5 py-0.5 rounded bg-surface-secondary border border-border-subtle">${typeLabel}</span>
+              ${window.ResourceStatus ? window.ResourceStatus.statusBadgesHTML(r) : ''}
+            </div>
+            <p class="resource-row-desc text-xs line-clamp-1">${esc(r.description || '')}</p>
+          </div>
+        </div>
+        <div class="resource-row-actions">
+          <button type="button" class="resource-action-btn" data-share="${item.type}:${esc(item.id)}" aria-label="Share ${esc(r.name || item.id)}" title="Share Resource">
+            <span class="material-symbols-outlined text-[16px]" aria-hidden="true">share</span>
+          </button>
+          ${window.DevSpireCollections ? window.DevSpireCollections.buttonHTML(item.type, item.id, r.name || item.id, 'resource-action-btn') : ''}
+          <a class="resource-action-btn" href="${href}" aria-label="View details" title="View details">
+            <span class="material-symbols-outlined text-[16px]" aria-hidden="true">visibility</span>
+          </a>
+        </div>
+      </div>`;
+    }).join('');
+    if (window.DevSpireCollections) window.DevSpireCollections.decorate();
+  }
+
+  if (window.RecentlyViewed) {
+    window.RecentlyViewed.subscribe(renderRecentlyViewed);
+    renderRecentlyViewed();
+    const clearRecentBtn = document.getElementById('clear-recent-btn');
+    if (clearRecentBtn) {
+      clearRecentBtn.addEventListener('click', () => {
+        window.RecentlyViewed.clear();
+        renderRecentlyViewed();
+      });
+    }
+  }
+
+  /* ----- Mobile menu ----- */
+  const menuToggle = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+  menuToggle.addEventListener('click', () => {
+    const open = mobileMenu.classList.toggle('hidden');
+    menuToggle.setAttribute('aria-expanded', String(!open));
+  });
+  mobileMenu.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.add('hidden');
+      menuToggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+})();
+</script>
+<script>
+window.FeaturedResources.render('#featured-week-grid');
+</script>
+</body></html>

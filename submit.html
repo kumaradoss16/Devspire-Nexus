@@ -1,0 +1,1238 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Submit a Resource | DevSpire Nexus</title>
+<link rel="icon" type="image/png" href="assets/img/devspirehub-gears-48.png"/>
+<meta name="description" content="Submit an AI tool, model, or developer resource for review. Submissions are delivered to DevSpireHub through Web3Forms and enter manual moderation; nothing is published automatically."/>
+<!-- Material Symbols Outlined font -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Fonts: Geist & JetBrains Mono -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "surface": "#051424",
+            "on-surface": "#d4e4fa",
+            "bg-canvas": "#090D12",
+            "surface-bright": "#2c3a4c",
+            "surface-container-highest": "#273647",
+            "on-error-container": "#ffdad6",
+            "on-tertiary-fixed-variant": "#005137",
+            "secondary-container": "#00a6e0",
+            "primary-container": "#f59e0b",
+            "status-warning": "#FBBF24",
+            "surface-container-low": "#0d1c2d",
+            "tertiary-fixed": "#68fcbf",
+            "on-tertiary": "#003825",
+            "secondary-fixed-dim": "#7bd0ff",
+            "tertiary-fixed-dim": "#45dfa4",
+            "surface-container": "#122131",
+            "surface-secondary": "#111820",
+            "primary-fixed": "#ffddb8",
+            "surface-dim": "#051424",
+            "on-tertiary-fixed": "#002114",
+            "status-error": "#F87171",
+            "on-primary-fixed": "#2a1700",
+            "inverse-surface": "#d4e4fa",
+            "on-error": "#690005",
+            "surface-tint": "#ffb95f",
+            "on-secondary-fixed-variant": "#004c69",
+            "on-surface-variant": "#d8c3ad",
+            "surface-container-lowest": "#010f1f",
+            "outline": "#a08e7a",
+            "on-secondary-container": "#00374d",
+            "background": "#051424",
+            "on-primary-container": "#613b00",
+            "inverse-primary": "#855300",
+            "primary": "#ffc174",
+            "tertiary": "#4de6aa",
+            "primary-fixed-dim": "#ffb95f",
+            "error-container": "#93000a",
+            "text-muted": "#94A3B8",
+            "on-primary": "#472a00",
+            "on-tertiary-container": "#004e35",
+            "tertiary-container": "#22c990",
+            "on-primary-fixed-variant": "#653e00",
+            "outline-variant": "#534434",
+            "surface-card": "#17212B",
+            "surface-container-high": "#1c2b3c",
+            "on-secondary-fixed": "#001e2c",
+            "on-background": "#d4e4fa",
+            "inverse-on-surface": "#233143",
+            "surface-variant": "#273647",
+            "error": "#ffb4ab",
+            "border-subtle": "#273341",
+            "on-secondary": "#00354a",
+            "text-primary": "#F1F5F9",
+            "secondary-fixed": "#c4e7ff",
+            "secondary": "#7bd0ff"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "margin-lg": "3rem",
+            "space-sm": "0.5rem",
+            "space-lg": "1.5rem",
+            "space-xl": "2rem",
+            "margin": "1rem",
+            "margin-md": "2rem",
+            "gutter-lg": "1.5rem",
+            "gutter": "1.25rem",
+            "space-md": "1rem",
+            "space-xs": "0.25rem"
+          },
+          "fontFamily": {
+            "headline-section": ["Geist", "sans-serif"],
+            "code-badge": ["JetBrains Mono", "monospace"],
+            "display-hero-mobile": ["Geist", "sans-serif"],
+            "body-default": ["Geist", "sans-serif"],
+            "body-compact": ["Geist", "sans-serif"],
+            "title-card": ["Geist", "sans-serif"],
+            "code-param": ["JetBrains Mono", "monospace"],
+            "metadata-label": ["Geist", "sans-serif"],
+            "display-hero": ["Geist", "sans-serif"]
+          },
+          "fontSize": {
+            "headline-section": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+            "code-badge": ["12px", { "lineHeight": "16px", "letterSpacing": "0em", "fontWeight": "500" }],
+            "display-hero-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+            "body-default": ["15px", { "lineHeight": "22px", "letterSpacing": "0em", "fontWeight": "400" }],
+            "body-compact": ["14px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" }],
+            "title-card": ["17px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "code-param": ["13px", { "lineHeight": "18px", "letterSpacing": "-0.01em", "fontWeight": "500" }],
+            "metadata-label": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500" }],
+            "display-hero": ["44px", { "lineHeight": "52px", "letterSpacing": "-0.03em", "fontWeight": "600" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+/* ============ Premium polish layer (works alongside Tailwind utilities) ============ */
+:root {
+  --bg-canvas: #090D12;
+  --surface-card: #17212B;
+  --surface-secondary: #111820;
+  --border-subtle: #273341;
+  --amber: #f59e0b;
+  --amber-bright: #ffb95f;
+  --blue: #7bd0ff;
+  --green: #34D399;
+  color-scheme: dark;
+}
+
+html { scroll-behavior: smooth; }
+
+/* Ensure the hidden attribute always wins over Tailwind display utilities */
+[hidden] { display: none !important; }
+
+/* Icon ligatures keep a square footprint even if the icon font is still loading */
+.material-symbols-outlined {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  overflow: hidden;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+
+body {
+  background-color: var(--bg-canvas);
+  background-image:
+    radial-gradient(1000px 420px at 50% -180px, rgba(245, 158, 11, 0.05), transparent 65%),
+    radial-gradient(800px 380px at 90% -60px, rgba(0, 166, 224, 0.04), transparent 60%);
+  background-attachment: fixed;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Sticky header: glassy, blurred */
+header.site-header {
+  background: rgba(9, 13, 18, 0.85);
+  backdrop-filter: blur(14px) saturate(140%);
+  -webkit-backdrop-filter: blur(14px) saturate(140%);
+  box-shadow: 0 1px 0 rgba(123, 208, 255, 0.05), 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+
+/* Premium card treatment */
+.ui-card {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.018), rgba(255, 255, 255, 0) 42%),
+    var(--surface-card);
+  border: 1px solid var(--border-subtle);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.03),
+    0 1px 2px rgba(0, 0, 0, 0.45),
+    0 4px 16px rgba(0, 0, 0, 0.2);
+  transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+}
+.ui-card:hover {
+  border-color: rgba(56, 189, 248, 0.38);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.045),
+    0 0 0 1px rgba(56, 189, 248, 0.06),
+    0 10px 28px rgba(0, 0, 0, 0.5),
+    0 0 36px rgba(56, 189, 248, 0.05);
+  transform: translateY(-2px);
+}
+
+/* Brand mark: soft amber glow on the gears logo */
+.brand-mark { filter: drop-shadow(0 0 8px rgba(245, 158, 11, 0.35)); }
+
+/* Model tile icons (inline SVG) */
+.tool-icon { display: inline-flex; width: 20px; height: 20px; }
+.tool-icon svg { width: 100%; height: 100%; }
+
+/* Publisher favicons: light chip so dark-on-transparent logos read on the dark card */
+.tool-favicon {
+  width: 22px; height: 22px; padding: 2px;
+  background: #f1f5f9; border-radius: 5px;
+  object-fit: contain; flex-shrink: 0;
+}
+
+/* Card hover: tile icon brightens with the border glow */
+.ui-card:hover .tool-icon { filter: drop-shadow(0 0 6px currentColor); }
+.ui-card:hover .tool-favicon { box-shadow: 0 0 10px rgba(241, 245, 249, 0.22); }
+
+/* Amber CTA glow */
+.btn-amber {
+  box-shadow: 0 0 0 1px rgba(245, 158, 11, 0.25), 0 2px 10px rgba(245, 158, 11, 0.18);
+  transition: filter 150ms ease, box-shadow 150ms ease, transform 150ms ease;
+}
+.btn-amber:hover {
+  box-shadow: 0 0 0 1px rgba(245, 158, 11, 0.35), 0 4px 18px rgba(245, 158, 11, 0.28);
+}
+.btn-amber:active { transform: scale(0.97); }
+
+/* Search: amber focus halo */
+.search-shell:focus-within {
+  border-color: rgba(245, 158, 11, 0.55);
+  box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.12), 0 0 28px rgba(245, 158, 11, 0.07);
+}
+
+/* Category pills */
+.pill {
+  transition: border-color 150ms ease, background-color 150ms ease, color 150ms ease, transform 150ms ease;
+}
+.pill:hover { transform: translateY(-1px); }
+.pill[aria-pressed="true"] {
+  background: var(--amber);
+  border-color: var(--amber);
+  color: var(--bg-canvas);
+  font-weight: 600;
+  box-shadow: 0 0 0 1px rgba(245, 158, 11, 0.25), 0 2px 10px rgba(245, 158, 11, 0.18);
+}
+
+/* Facet checkboxes: amber accent squares (input. prefix outranks the forms-plugin base styles) */
+input.facet-input {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  border: 1px solid var(--border-subtle);
+  background: var(--surface-secondary);
+  display: inline-grid;
+  place-content: center;
+  cursor: pointer;
+  transition: background-color 120ms ease, border-color 120ms ease;
+  flex-shrink: 0;
+}
+input.facet-input::before {
+  content: "";
+  width: 9px;
+  height: 9px;
+  transform: scale(0);
+  transition: transform 120ms ease;
+  background: var(--bg-canvas);
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+}
+input.facet-input:checked {
+  background: var(--amber);
+  border-color: var(--amber);
+}
+input.facet-input:checked::before { transform: scale(1); }
+input.facet-input:focus-visible {
+  outline: 2px solid rgba(245, 158, 11, 0.6);
+  outline-offset: 2px;
+}
+
+/* Compare checkbox: same amber treatment as facets */
+input.compare-input {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  border: 1px solid var(--border-subtle);
+  background: var(--surface-secondary);
+  display: inline-grid;
+  place-content: center;
+  cursor: pointer;
+  transition: background-color 120ms ease, border-color 120ms ease;
+  flex-shrink: 0;
+}
+input.compare-input::before {
+  content: "";
+  width: 9px;
+  height: 9px;
+  transform: scale(0);
+  transition: transform 120ms ease;
+  background: var(--bg-canvas);
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+}
+input.compare-input:checked { background: var(--blue); border-color: var(--blue); }
+input.compare-input:checked::before { transform: scale(1); }
+input.compare-input:focus-visible {
+  outline: 2px solid rgba(123, 208, 255, 0.6);
+  outline-offset: 2px;
+}
+
+/* Hide horizontal scrollbar on the pill rail */
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-none::-webkit-scrollbar { display: none; }
+
+/* Pagination buttons */
+.page-btn {
+  transition: background-color 150ms ease, color 150ms ease, border-color 150ms ease;
+}
+.page-btn:not(:disabled):not(.is-active):hover {
+  border-color: rgba(123, 208, 255, 0.4);
+  color: #F1F5F9;
+}
+.page-btn.is-active {
+  background: var(--amber);
+  border-color: var(--amber);
+  color: var(--bg-canvas);
+  font-weight: 600;
+  box-shadow: 0 0 0 1px rgba(245, 158, 11, 0.25), 0 2px 10px rgba(245, 158, 11, 0.18);
+}
+
+/* kbd refinement */
+kbd.key-hint {
+  font-family: "JetBrains Mono", monospace;
+  box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.06);
+  letter-spacing: 0.02em;
+}
+
+/* Mobile menu */
+#mobile-menu:not([hidden]) { animation: menu-in 160ms ease; }
+@keyframes menu-in {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Modal overlay */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: rgba(4, 8, 12, 0.72);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 1rem;
+  overflow-y: auto;
+}
+.modal-overlay:not([hidden]) { animation: fade-in 160ms ease; }
+@keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
+.modal-panel { animation: rise 220ms cubic-bezier(0.22, 1, 0.36, 1) both; }
+
+/* Compare table */
+.compare-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.compare-table th {
+  font-family: "Geist", sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #94A3B8;
+  font-weight: 500;
+  text-align: left;
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--border-subtle);
+  white-space: nowrap;
+  vertical-align: bottom;
+}
+.compare-table td {
+  padding: 8px 12px;
+  border-bottom: 1px solid rgba(39, 51, 65, 0.55);
+  vertical-align: top;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: var(--bg-canvas); }
+::-webkit-scrollbar-thumb {
+  background: #26313d;
+  border-radius: 8px;
+  border: 2px solid var(--bg-canvas);
+}
+::-webkit-scrollbar-thumb:hover { background: #33414f; }
+* { scrollbar-width: thin; scrollbar-color: #26313d var(--bg-canvas); }
+
+h1, h2, h3 { text-wrap: balance; }
+.font-code-badge, .font-code-param { font-feature-settings: "zero" 1; }
+
+/* Card entrance */
+.rise { animation: rise 450ms cubic-bezier(0.22, 1, 0.36, 1) both; }
+@keyframes rise {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .rise, #mobile-menu:not([hidden]), .modal-overlay:not([hidden]), .modal-panel { animation: none; }
+  .ui-card, .pill, .btn-amber, .page-btn { transition: none; }
+}
+
+/* Screen-reader-only helper (used by table action headers) */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+</style>
+<link rel="stylesheet" href="assets/site.css"/>
+<link rel="canonical" href="models.html"/>
+<style>
+/* Phase 5 utility pages */
+main > * { min-width: 0; }
+
+.terminal-output {
+  height: 380px;
+  min-height: 240px;
+  overflow-y: auto;
+  padding: 14px 16px;
+  line-height: 1.65;
+  font-size: 13px;
+  background: #0b1117;
+}
+.terminal-line { white-space: pre-wrap; word-break: break-word; color: #cbd5e1; }
+.terminal-line--cmd { color: #ffb95f; }
+.terminal-line--err { color: #F87171; }
+.terminal-line--ok { color: #4de6aa; }
+.terminal-line--muted { color: #94A3B8; }
+.terminal-line--head { color: #7bd0ff; font-weight: 600; }
+
+.api-code {
+  font-size: 12.5px;
+  line-height: 1.6;
+  white-space: pre;
+  color: #cbd5e1;
+}
+
+/* Fixed layout keeps hashes and paths from inflating the document width on narrow screens. */
+.p5-table { width: 100%; table-layout: fixed; }
+.p5-table th,
+.p5-table td { overflow-wrap: anywhere; }
+.p5-table code { overflow-wrap: anywhere; }
+.p5-table td:first-child { white-space: normal; }
+
+input.p5-input, select.p5-input, textarea.p5-input {
+  width: 100%;
+  background: #111820;
+  border: 1px solid #273341;
+  border-radius: 0.375rem;
+  color: #F1F5F9;
+  font-family: Geist, sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  padding: 0.5rem 0.7rem;
+}
+input.p5-input::placeholder, textarea.p5-input::placeholder { color: #94A3B8; }
+input.p5-input:focus, select.p5-input:focus, textarea.p5-input:focus {
+  outline: none;
+  border-color: #f59e0b;
+  box-shadow: 0 0 0 2px rgba(245, 158, 11, 0.18);
+}
+input.p5-input[aria-invalid="true"], select.p5-input[aria-invalid="true"], textarea.p5-input[aria-invalid="true"] {
+  border-color: #F87171;
+  box-shadow: 0 0 0 2px rgba(248, 113, 113, 0.15);
+}
+.p5-error {
+  font-family: Geist, sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  color: #F87171;
+}
+
+.docs-jump {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid #273341;
+  background: #111820;
+  border-radius: 9999px;
+  padding: 0.25rem 0.7rem;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 12px;
+  color: #7bd0ff;
+  transition: border-color 120ms ease, color 120ms ease;
+}
+.docs-jump:hover { border-color: #7bd0ff; color: #F1F5F9; }
+
+@media (prefers-reduced-motion: reduce) {
+  .docs-jump { transition: none; }
+}
+
+</style>
+<meta name="theme-color" content="#090D12"/>
+<meta name="robots" content="index, follow"/>
+<meta property="og:type" content="website"/>
+<meta property="og:site_name" content="DevSpire Nexus"/>
+<meta property="og:title" content="Submit a Resource | DevSpire Nexus"/>
+<meta property="og:description" content="Submit an AI tool, model, or developer resource for review. Submissions are delivered to DevSpireHub through Web3Forms and enter manual moderation; nothing is published automatically."/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Submit a Resource | DevSpire Nexus"/>
+<meta name="twitter:description" content="Submit an AI tool, model, or developer resource for review. Submissions are delivered to DevSpireHub through Web3Forms and enter manual moderation; nothing is published automatically."/>
+</head>
+<body class="bg-bg-canvas text-text-primary min-h-screen flex flex-col font-body-default antialiased selection:bg-primary-container selection:text-bg-canvas">
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<header class="w-full border-b border-border-subtle dark:border-border-subtle sticky top-0 z-50 site-header">
+<div class="flex justify-between items-center w-full px-4 sm:px-gutter-lg max-w-[1360px] mx-auto h-14">
+<div class="flex items-center gap-2 sm:gap-space-lg min-w-0">
+<a class="font-title-card text-text-primary dark:text-text-primary tracking-tight font-semibold flex items-center gap-2 sm:gap-space-sm whitespace-nowrap text-[15px] sm:text-title-card shrink-0" href="directory.html">
+<img src="assets/img/devspirehub-gears-128.png" alt="DevSpire Nexus logo" class="brand-mark w-7 h-7 rounded-lg object-cover shrink-0" width="28" height="28"/>
+<span class="flex flex-col leading-tight min-w-0"><span class="hidden sm:inline">DevSpire Nexus</span><span class="hidden xl:inline font-metadata-label text-[10px] font-normal tracking-[0.14em] text-text-muted uppercase">AI Intelligence Directory</span></span>
+</a>
+<nav class="hidden lg:flex items-center gap-3 xl:gap-space-md ml-2 xl:ml-space-md" aria-label="Primary">
+<a class="text-text-muted dark:text-text-muted font-body-compact text-body-compact hover:text-text-primary dark:hover:text-text-primary transition-colors whitespace-nowrap" href="directory.html">Discover</a>
+<a class="text-text-muted dark:text-text-muted font-body-compact text-body-compact hover:text-text-primary dark:hover:text-text-primary transition-colors whitespace-nowrap" href="ai-tools.html">AI Tools</a>
+<a class="text-text-muted dark:text-text-muted font-body-compact text-body-compact hover:text-text-primary dark:hover:text-text-primary transition-colors whitespace-nowrap" href="models.html">AI Models</a>
+<a class="text-text-muted dark:text-text-muted font-body-compact text-body-compact hover:text-text-primary dark:hover:text-text-primary transition-colors whitespace-nowrap" href="developer-resources.html">Developer Resources</a>
+<a class="text-text-muted dark:text-text-muted font-body-compact text-body-compact hover:text-text-primary dark:hover:text-text-primary transition-colors whitespace-nowrap" href="collections.html">My Collections</a>
+<a class="text-text-muted dark:text-text-muted font-body-compact text-body-compact hover:text-text-primary dark:hover:text-text-primary transition-colors whitespace-nowrap" href="about.html">About</a>
+<a class="text-text-muted dark:text-text-muted font-body-compact text-body-compact hover:text-text-primary dark:hover:text-text-primary transition-colors whitespace-nowrap inline-flex items-center gap-1" href="https://devspirehub.com/" target="_blank" rel="noopener">DevSpireHub<span class="material-symbols-outlined text-[14px]" data-icon="arrow_outward" aria-hidden="true">arrow_outward</span></a>
+</nav>
+</div>
+<div class="flex items-center gap-1.5 sm:gap-space-sm shrink-0">
+<a class="hidden sm:inline-flex items-center gap-1.5 bg-surface-card border border-border-subtle rounded px-2.5 py-1.5 font-body-compact text-body-compact text-text-muted hover:border-secondary hover:text-secondary dark:hover:border-secondary dark:hover:text-secondary transition-colors duration-150" href="terminal.html" id="terminal-nav-btn" aria-label="Open Terminal" title="Open Terminal">
+<span class="material-symbols-outlined text-[16px]" data-icon="terminal" aria-hidden="true">terminal</span>
+<span class="text-xs">Terminal</span>
+<kbd class="font-code-badge text-code-badge bg-surface-secondary px-1.5 py-0.5 rounded text-[11px] border border-border-subtle text-text-muted key-hint">&#96;</kbd>
+</a>
+<a class="inline-flex items-center justify-center gap-1.5 bg-primary-container text-bg-canvas font-body-compact font-semibold px-2.5 sm:px-3 py-1.5 rounded text-[13px] sm:text-body-compact hover:brightness-110 transition-all" href="submit.html" aria-current="page">
+<span class="material-symbols-outlined text-[16px]" data-icon="add" aria-hidden="true">add</span>Submit Resource</a>
+<button class="lg:hidden inline-flex items-center justify-center w-8 h-8 rounded bg-surface-card border border-border-subtle text-text-muted hover:text-text-primary transition-colors" id="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+<span class="material-symbols-outlined text-[18px]" data-icon="menu" aria-hidden="true">menu</span>
+</button>
+</div>
+</div>
+<div class="lg:hidden hidden border-t border-border-subtle bg-surface-secondary/95 backdrop-blur" id="mobile-menu">
+<nav class="flex flex-col px-4 sm:px-gutter-lg py-3 gap-1" aria-label="Mobile">
+<a class="text-text-muted hover:text-text-primary font-body-compact text-body-compact py-2 border-b border-border-subtle/50 transition-colors" href="directory.html">Discover</a>
+<a class="text-text-muted hover:text-text-primary font-body-compact text-body-compact py-2 border-b border-border-subtle/50 transition-colors" href="ai-tools.html">AI Tools</a>
+<a class="text-text-muted hover:text-text-primary font-body-compact text-body-compact py-2 border-b border-border-subtle/50 transition-colors" href="models.html">AI Models</a>
+<a class="text-text-muted hover:text-text-primary font-body-compact text-body-compact py-2 border-b border-border-subtle/50 transition-colors" href="developer-resources.html">Developer Resources</a>
+<a class="text-text-muted hover:text-text-primary font-body-compact text-body-compact py-2 border-b border-border-subtle/50 transition-colors" href="collections.html">My Collections</a>
+<a class="text-text-muted hover:text-text-primary font-body-compact text-body-compact py-2 border-b border-border-subtle/50 transition-colors" href="about.html">About</a>
+<a class="text-text-muted hover:text-text-primary font-body-compact text-body-compact py-2 border-b border-border-subtle/50 transition-colors inline-flex items-center gap-2" href="terminal.html"><span class="material-symbols-outlined text-[16px]" aria-hidden="true">terminal</span>Terminal</a>
+<a class="text-text-muted hover:text-text-primary font-body-compact text-body-compact py-2 border-b border-border-subtle/50 transition-colors" href="submit.html">Submit Resource</a>
+<a class="text-text-muted hover:text-text-primary font-body-compact text-body-compact py-2 border-b border-border-subtle/50 transition-colors inline-flex items-center gap-1" href="https://devspirehub.com/" target="_blank" rel="noopener">DevSpireHub<span class="material-symbols-outlined text-[14px]" aria-hidden="true">arrow_outward</span></a>
+<a class="text-text-muted hover:text-text-primary font-body-compact text-body-compact py-2 transition-colors inline-flex items-center gap-1" href="https://devspirehub.com/Website/about/about.html" target="_blank" rel="noopener">About DevSpireHub<span class="material-symbols-outlined text-[14px]" aria-hidden="true">arrow_outward</span></a>
+</nav>
+</div>
+</header>
+<main id="main-content" class="w-full max-w-[1360px] mx-auto px-4 sm:px-gutter-lg py-space-lg flex-1 flex flex-col">
+<nav class="flex items-center gap-space-xs text-metadata-label font-metadata-label text-text-muted mb-space-sm" aria-label="Breadcrumb">
+<a class="hover:text-text-primary transition-colors" href="directory.html">Home</a>
+<span class="text-border-subtle">/</span>
+<span class="text-primary-container">Submit Resource</span>
+</nav>
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md mb-space-lg pb-space-md border-b border-border-subtle">
+<div>
+<p class="font-metadata-label text-metadata-label text-primary-container uppercase tracking-[0.18em] mb-1">Contribution review</p>
+<h1 class="font-display-hero-mobile text-display-hero-mobile sm:font-display-hero sm:text-display-hero text-text-primary tracking-tight">Submit a resource</h1>
+<p class="font-body-compact text-body-compact text-text-muted mt-1 max-w-3xl">
+          Propose a tool, model, or developer resource for the catalog. Submissions are delivered to the DevSpireHub maintainers and enter manual moderation; nothing is published automatically.
+        </p>
+</div>
+<div class="flex items-center gap-2 self-start md:self-auto bg-surface-secondary border border-border-subtle px-3 py-1.5 rounded">
+<span class="w-2 h-2 rounded-full bg-status-warning"></span>
+<span class="font-code-badge text-code-badge text-text-primary">PENDING MODERATION</span>
+</div>
+</div>
+<div class="rounded-xl border border-secondary/40 bg-secondary/5 p-4 flex items-start gap-3 mb-space-lg" role="note">
+<span class="material-symbols-outlined text-secondary text-xl shrink-0" aria-hidden="true" data-icon="verified_user">verified_user</span>
+<div class="min-w-0">
+<p class="font-body-compact text-body-compact text-text-primary font-medium">Every submission is reviewed before it can appear in the catalog.</p>
+<p class="font-metadata-label text-metadata-label text-text-muted mt-0.5">Send only information you can verify. Do not include passwords, private data, or anything you would not publish. New records are never added to the datasets automatically.</p>
+</div>
+</div>
+<div class="rounded-xl border border-status-warning/40 bg-status-warning/10 p-4 flex items-start gap-3 mb-space-lg" id="config-status" role="note" hidden>
+<span class="material-symbols-outlined text-status-warning text-xl shrink-0" aria-hidden="true" data-icon="settings">settings</span>
+<div class="min-w-0">
+<p class="font-body-compact text-body-compact text-text-primary font-medium" id="config-status-title">Submission endpoint not configured</p>
+<p class="font-metadata-label text-metadata-label text-text-muted mt-0.5" id="config-status-text">This copy of the directory has no Web3Forms access key. The form validates entries locally, but it cannot send until a key is added to <code class="font-code-badge">data/site-config.js</code>.</p>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_340px] gap-space-lg items-start">
+<section class="ui-card rounded-xl p-space-lg" aria-label="Resource submission form">
+<h2 class="font-title-card text-title-card text-text-primary mb-1">Record details</h2>
+<p class="font-body-compact text-body-compact text-text-muted mb-4">Required fields are marked. Optional fields stay blank when the information is not stated.</p>
+<div class="rounded border border-status-error/40 bg-status-error/10 px-3 py-2 mb-4 font-metadata-label text-metadata-label text-status-error" id="form-summary" role="alert" hidden></div>
+<div class="rounded border border-tertiary/40 bg-tertiary/10 px-3 py-2 mb-4 font-metadata-label text-metadata-label text-tertiary" id="form-success" role="status" aria-live="polite" hidden></div>
+<form id="submission-form" action="https://api.web3forms.com/submit" method="POST" novalidate>
+<input type="hidden" name="access_key" value="99ea5478-6d12-4190-bd08-d596eb363775"/>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div class="flex flex-col gap-1.5">
+<label class="font-metadata-label text-metadata-label text-text-muted" for="sub-name">Resource name <span class="text-primary-container">*</span></label>
+<input class="p5-input" id="sub-name" name="name" type="text" maxlength="120" autocomplete="organization" required aria-describedby="err-name"/>
+<p class="p5-error" id="err-name" hidden></p>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-metadata-label text-metadata-label text-text-muted" for="sub-type">Resource type <span class="text-primary-container">*</span></label>
+<select class="p5-input" id="sub-type" name="resource_type" required aria-describedby="err-type">
+<option value="">Select a type…</option>
+<option value="AI Tool">AI Tool</option>
+<option value="AI Model">AI Model</option>
+<option value="Developer Resource">Developer Resource</option>
+</select>
+<p class="p5-error" id="err-type" hidden></p>
+</div>
+<div class="flex flex-col gap-1.5 sm:col-span-2">
+<label class="font-metadata-label text-metadata-label text-text-muted" for="sub-url">Official website <span class="text-primary-container">*</span></label>
+<input class="p5-input" id="sub-url" name="official_url" type="url" inputmode="url" maxlength="300" placeholder="https://" autocomplete="url" required aria-describedby="err-url"/>
+<p class="p5-error" id="err-url" hidden></p>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-metadata-label text-metadata-label text-text-muted" for="sub-docs">Documentation URL</label>
+<input class="p5-input" id="sub-docs" name="documentation_url" type="url" inputmode="url" maxlength="300" placeholder="https://" autocomplete="url" aria-describedby="err-docs"/>
+<p class="p5-error" id="err-docs" hidden></p>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-metadata-label text-metadata-label text-text-muted" for="sub-repo">GitHub repository</label>
+<input class="p5-input" id="sub-repo" name="repository_url" type="url" inputmode="url" maxlength="300" placeholder="https://github.com/…" autocomplete="url" aria-describedby="err-repo"/>
+<p class="p5-error" id="err-repo" hidden></p>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-metadata-label text-metadata-label text-text-muted" for="sub-category">Category <span class="text-primary-container">*</span></label>
+<input class="p5-input" id="sub-category" name="category" type="text" maxlength="60" list="category-options" autocomplete="off" required aria-describedby="err-category"/>
+<datalist id="category-options"></datalist>
+<p class="p5-error" id="err-category" hidden></p>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-metadata-label text-metadata-label text-text-muted" for="sub-org">Publisher / organization</label>
+<input class="p5-input" id="sub-org" name="org" type="text" maxlength="80" autocomplete="organization"/>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-metadata-label text-metadata-label text-text-muted" for="sub-pricing">Pricing model</label>
+<select class="p5-input" id="sub-pricing" name="pricing">
+<option value="">Not stated</option>
+<option value="Free">Free</option>
+<option value="Freemium">Freemium</option>
+<option value="Paid">Paid</option>
+<option value="Enterprise">Enterprise</option>
+<option value="Open source">Open source</option>
+</select>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-metadata-label text-metadata-label text-text-muted" for="sub-license">License</label>
+<input class="p5-input" id="sub-license" name="license" type="text" maxlength="60" placeholder="e.g. Apache 2.0" autocomplete="off"/>
+</div>
+<div class="flex flex-col gap-1.5 sm:col-span-2">
+<label class="font-metadata-label text-metadata-label text-text-muted" for="sub-description">Description <span class="text-primary-container">*</span></label>
+<textarea class="p5-input min-h-[110px]" id="sub-description" name="description" maxlength="600" required aria-describedby="err-description help-description"></textarea>
+<p class="font-metadata-label text-metadata-label text-text-muted" id="help-description">40–600 characters. Summarize what it does without marketing claims.</p>
+<p class="p5-error" id="err-description" hidden></p>
+</div>
+<div class="flex flex-col gap-1.5 sm:col-span-2">
+<label class="font-metadata-label text-metadata-label text-text-muted" for="sub-evidence">Evidence URL</label>
+<input class="p5-input" id="sub-evidence" name="evidence_url" type="url" inputmode="url" maxlength="300" placeholder="https://" autocomplete="url" aria-describedby="err-evidence help-evidence"/>
+<p class="font-metadata-label text-metadata-label text-text-muted" id="help-evidence">Optional. A public page that documents the record, such as official documentation or a repository.</p>
+<p class="p5-error" id="err-evidence" hidden></p>
+</div>
+<div class="flex flex-col gap-1.5 sm:col-span-2">
+<label class="font-metadata-label text-metadata-label text-text-muted" for="sub-tags">Tags</label>
+<input class="p5-input" id="sub-tags" name="tags" type="text" maxlength="200" placeholder="Comma separated, e.g. open-weights, self-hosted" autocomplete="off" aria-describedby="err-tags"/>
+<p class="p5-error" id="err-tags" hidden></p>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-metadata-label text-metadata-label text-text-muted" for="sub-submitter">Your name</label>
+<input class="p5-input" id="sub-submitter" name="submitter_name" type="text" maxlength="80" autocomplete="name" aria-describedby="err-submitter"/>
+<p class="p5-error" id="err-submitter" hidden></p>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-metadata-label text-metadata-label text-text-muted" for="sub-email">Your email</label>
+<input class="p5-input" id="sub-email" name="email" type="email" inputmode="email" maxlength="120" placeholder="you@example.com" autocomplete="email" aria-describedby="err-email help-submitter"/>
+<p class="font-metadata-label text-metadata-label text-text-muted" id="help-submitter">Optional. Only used if maintainers need to clarify the submission.</p>
+<p class="p5-error" id="err-email" hidden></p>
+</div>
+<div class="flex flex-col gap-1.5 sm:col-span-2">
+<label class="font-metadata-label text-metadata-label text-text-muted" for="sub-notes">Additional information</label>
+<textarea class="p5-input min-h-[80px]" id="sub-notes" name="additional_information" maxlength="400"></textarea>
+</div>
+</div>
+<div class="hidden" aria-hidden="true">
+<label for="sub-botcheck">Leave this field unchecked</label>
+<input id="sub-botcheck" name="botcheck" type="checkbox" tabindex="-1" autocomplete="off"/>
+</div>
+<div class="flex flex-wrap items-center gap-2 mt-5">
+<button class="inline-flex items-center gap-2 bg-primary-container text-bg-canvas font-body-compact text-body-compact font-semibold px-4 py-2 rounded transition-all duration-150 hover:brightness-110 disabled:opacity-60 disabled:cursor-not-allowed" id="submit-button" type="submit">
+<span class="material-symbols-outlined text-[18px]" data-icon="send" aria-hidden="true">send</span>
+<span id="submit-label">Submit for review</span>
+</button>
+<button class="inline-flex items-center gap-2 bg-surface-secondary border border-border-subtle text-text-primary font-body-compact text-body-compact px-4 py-2 rounded hover:border-secondary transition-colors disabled:opacity-50 disabled:cursor-not-allowed" id="clear-form" type="button">Clear form</button>
+</div>
+<p class="font-metadata-label text-metadata-label text-text-muted mt-3">Submissions are transmitted by <a class="text-secondary hover:underline" href="https://web3forms.com/" target="_blank" rel="noopener">Web3Forms</a> to the directory maintainers. Web3Forms processes the data to deliver the notification.</p>
+</form>
+</section>
+<aside class="flex flex-col gap-space-md">
+<section class="ui-card rounded-xl p-space-md">
+<h2 class="font-title-card text-title-card text-text-primary mb-2">Review policy</h2>
+<ul class="flex flex-col gap-2 font-body-compact text-body-compact text-text-muted">
+<li class="flex gap-2"><span class="material-symbols-outlined text-[16px] text-tertiary shrink-0" aria-hidden="true" data-icon="check">check</span>A public evidence link strengthens a record but is optional.</li>
+<li class="flex gap-2"><span class="material-symbols-outlined text-[16px] text-tertiary shrink-0" aria-hidden="true" data-icon="check">check</span>Only stated facts belong in the record; blanks stay blank.</li>
+<li class="flex gap-2"><span class="material-symbols-outlined text-[16px] text-status-warning shrink-0" aria-hidden="true" data-icon="block">block</span>Nothing is published automatically.</li>
+<li class="flex gap-2"><span class="material-symbols-outlined text-[16px] text-status-warning shrink-0" aria-hidden="true" data-icon="block">block</span>A submitted record is not a catalog entry until a maintainer approves it.</li>
+</ul>
+</section>
+<section class="ui-card rounded-xl p-space-md">
+<h2 class="font-title-card text-title-card text-text-primary mb-2">What happens next</h2>
+<p class="font-body-compact text-body-compact text-text-muted">Web3Forms delivers the record to the maintainers. A reviewer verifies the links and stated facts, may edit or reject the record, and only then updates a dataset. The receipt below is a copy of what was sent, not a publication confirmation.</p>
+</section>
+</aside>
+</div>
+<section class="mt-space-lg" id="draft-section" hidden>
+<div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+<div>
+<h2 class="font-title-card text-title-card text-text-primary">Submission receipt</h2>
+<p class="font-metadata-label text-metadata-label text-status-warning" id="draft-status" role="status" aria-live="polite">Submission accepted by Web3Forms. Pending moderation.</p>
+</div>
+<div class="flex flex-wrap items-center gap-2">
+<button class="inline-flex items-center gap-1.5 bg-surface-card border border-border-subtle rounded px-3 py-1.5 font-code-badge text-code-badge text-text-primary hover:border-secondary transition-colors" id="copy-draft" type="button" disabled>
+<span class="material-symbols-outlined text-[14px]" aria-hidden="true" data-icon="content_copy">content_copy</span>Copy JSON
+</button>
+<button class="inline-flex items-center gap-1.5 bg-surface-card border border-border-subtle rounded px-3 py-1.5 font-code-badge text-code-badge text-text-primary hover:border-secondary transition-colors" id="download-draft" type="button" disabled>
+<span class="material-symbols-outlined text-[14px]" aria-hidden="true" data-icon="download">download</span>Download JSON
+</button>
+</div>
+</div>
+<pre class="api-code rounded-xl border border-border-subtle bg-surface-secondary p-4 overflow-x-auto font-code-param" id="draft-json"></pre>
+<p class="font-metadata-label text-metadata-label text-text-muted mt-2" id="draft-copy-status" role="status" aria-live="polite"></p>
+</section>
+<noscript>
+<div class="rounded-xl border border-status-warning/40 bg-status-warning/10 p-4 mt-space-lg font-body-compact text-body-compact text-text-primary">This form needs JavaScript to validate fields and send the submission. Without JavaScript, nothing is transmitted.</div>
+</noscript>
+</main>
+<footer class="w-full bg-bg-canvas dark:bg-bg-canvas border-t border-border-subtle dark:border-border-subtle mt-space-xl">
+<div class="w-full max-w-[1360px] mx-auto px-4 sm:px-gutter-lg py-space-lg">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[minmax(0,1.5fr)_repeat(4,minmax(0,1fr))] gap-x-space-lg gap-y-space-md">
+<div class="flex flex-col gap-2 sm:col-span-2 lg:col-span-1">
+<span class="font-title-card text-title-card text-text-primary font-semibold">DevSpire Nexus</span>
+<p class="font-metadata-label text-metadata-label text-primary">Discover. Connect. Build.</p>
+<p class="font-metadata-label text-metadata-label text-text-muted max-w-xs">AI Intelligence Directory</p>
+<p class="font-metadata-label text-metadata-label text-text-muted max-w-xs">DevSpire Nexus is a product of DevSpireHub.com.</p>
+<p class="font-metadata-label text-metadata-label text-text-muted max-w-xs">Source: DevSpireHub AI knowledge base · ai-tools-models-developer-resources.md</p>
+</div>
+<nav aria-labelledby="footer-explore">
+<h2 class="font-metadata-label text-metadata-label uppercase tracking-[0.16em] text-text-primary mb-2" id="footer-explore">Explore</h2>
+<ul class="flex flex-col gap-1.5">
+<li><a class="text-text-muted dark:text-text-muted font-metadata-label text-metadata-label hover:text-text-primary dark:hover:text-text-primary transition-colors" href="directory.html">Directory</a></li>
+<li><a class="text-text-muted dark:text-text-muted font-metadata-label text-metadata-label hover:text-text-primary dark:hover:text-text-primary transition-colors" href="ai-tools.html">AI Tools</a></li>
+<li><a class="text-text-muted dark:text-text-muted font-metadata-label text-metadata-label hover:text-text-primary dark:hover:text-text-primary transition-colors" href="models.html">AI Models</a></li>
+<li><a class="text-text-muted dark:text-text-muted font-metadata-label text-metadata-label hover:text-text-primary dark:hover:text-text-primary transition-colors" href="developer-resources.html">Developer Resources</a></li>
+</ul>
+</nav>
+<nav aria-labelledby="footer-product">
+<h2 class="font-metadata-label text-metadata-label uppercase tracking-[0.16em] text-text-primary mb-2" id="footer-product">Product</h2>
+<ul class="flex flex-col gap-1.5">
+<li><a class="text-text-muted dark:text-text-muted font-metadata-label text-metadata-label hover:text-text-primary dark:hover:text-text-primary transition-colors" href="collections.html">My Collections</a></li>
+<li><a class="text-text-muted dark:text-text-muted font-metadata-label text-metadata-label hover:text-text-primary dark:hover:text-text-primary transition-colors" href="about.html">About</a></li>
+<li><a class="text-text-muted dark:text-text-muted font-metadata-label text-metadata-label hover:text-text-primary dark:hover:text-text-primary transition-colors" href="contact.html">Contact</a></li>
+<li><a class="text-text-muted dark:text-text-muted font-metadata-label text-metadata-label hover:text-text-primary dark:hover:text-text-primary transition-colors" href="docs.html">Documentation</a></li>
+<li><a class="text-text-muted dark:text-text-muted font-metadata-label text-metadata-label hover:text-text-primary dark:hover:text-text-primary transition-colors" href="api.html">API and Data Access</a></li>
+<li><a class="text-text-muted dark:text-text-muted font-metadata-label text-metadata-label hover:text-text-primary dark:hover:text-text-primary transition-colors" href="submit.html">Submit Resource</a></li>
+</ul>
+</nav>
+<nav aria-labelledby="footer-legal">
+<h2 class="font-metadata-label text-metadata-label uppercase tracking-[0.16em] text-text-primary mb-2" id="footer-legal">Legal &amp; Information</h2>
+<ul class="flex flex-col gap-1.5">
+<li><a class="text-text-muted dark:text-text-muted font-metadata-label text-metadata-label hover:text-text-primary dark:hover:text-text-primary transition-colors" href="privacy.html">Privacy Policy</a></li>
+<li><a class="text-text-muted dark:text-text-muted font-metadata-label text-metadata-label hover:text-text-primary dark:hover:text-text-primary transition-colors" href="terms.html">Terms of Service</a></li>
+</ul>
+</nav>
+<nav aria-labelledby="footer-devspirehub">
+<h2 class="font-metadata-label text-metadata-label uppercase tracking-[0.16em] text-text-primary mb-2" id="footer-devspirehub">DevSpireHub</h2>
+<ul class="flex flex-col gap-1.5">
+<li><a class="text-text-muted dark:text-text-muted font-metadata-label text-metadata-label hover:text-text-primary dark:hover:text-text-primary transition-colors" href="https://devspirehub.com/" target="_blank" rel="noopener">Main Website<span class="material-symbols-outlined text-[13px] align-middle ml-0.5" aria-hidden="true">arrow_outward</span></a></li>
+<li><a class="text-text-muted dark:text-text-muted font-metadata-label text-metadata-label hover:text-text-primary dark:hover:text-text-primary transition-colors" href="https://devspirehub.com/Website/about/about.html" target="_blank" rel="noopener">About DevSpireHub<span class="material-symbols-outlined text-[13px] align-middle ml-0.5" aria-hidden="true">arrow_outward</span></a></li>
+<li><a class="text-text-muted dark:text-text-muted font-metadata-label text-metadata-label hover:text-text-primary dark:hover:text-text-primary transition-colors" href="https://devspirehub.com/Resources/digital-resources/digital-resources-hub.html" target="_blank" rel="noopener">Learning Resources<span class="material-symbols-outlined text-[13px] align-middle ml-0.5" aria-hidden="true">arrow_outward</span></a></li>
+</ul>
+</nav>
+</div>
+<div class="mt-space-lg pt-space-md border-t border-border-subtle/70 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+<p class="font-metadata-label text-metadata-label text-text-muted">© 2026 DevSpireHub.com · DevSpire Nexus</p>
+<p class="font-metadata-label text-metadata-label text-text-muted">Static catalog · collections stay in your browser · no tracking</p>
+</div>
+</div>
+</footer>
+<script src="data/ai-tools.js"></script>
+<script src="data/ai-models.js"></script>
+<script src="data/developer-resources.js"></script>
+<script src="data/site-config.js"></script>
+<script src="assets/resource-icons.js"></script>
+<script src="assets/collections.js"></script>
+<script src="assets/status-badges.js"></script>
+<script src="assets/recently-viewed.js"></script>
+<script src="assets/share.js"></script>
+<script>
+(() => {
+  'use strict';
+
+  const form = document.getElementById('submission-form');
+  if (!form) return;
+
+  const summary = document.getElementById('form-summary');
+  const success = document.getElementById('form-success');
+  const configStatus = document.getElementById('config-status');
+  const section = document.getElementById('draft-section');
+  const draftEl = document.getElementById('draft-json');
+  const draftStatus = document.getElementById('draft-status');
+  const copyStatus = document.getElementById('draft-copy-status');
+  const copyBtn = document.getElementById('copy-draft');
+  const downloadBtn = document.getElementById('download-draft');
+  const clearBtn = document.getElementById('clear-form');
+  const submitBtn = document.getElementById('submit-button');
+  const submitLabel = document.getElementById('submit-label');
+  const typeSelect = document.getElementById('sub-type');
+  const options = document.getElementById('category-options');
+  const botcheck = document.getElementById('sub-botcheck');
+
+  const DEFAULTS = {
+    endpoint: 'https://api.web3forms.com/submit',
+    requestTimeoutMs: 15000,
+    subject: 'AI Intelligence Directory resource submission',
+    duplicateWindowMs: 6 * 60 * 60 * 1000
+  };
+
+  const config = () => Object.assign({}, DEFAULTS, window.DSH_SITE_CONFIG || {});
+  const accessKey = () => String((window.DSH_SITE_CONFIG || {}).web3formsAccessKey || '').trim();
+
+  const TYPES = ['AI Tool', 'AI Model', 'Developer Resource'];
+  const FIELDS = ['name', 'type', 'url', 'docs', 'repo', 'category', 'description', 'evidence', 'tags', 'submitter', 'email'];
+  const REQUIRED = ['name', 'type', 'url', 'category', 'description'];
+  const ids = {
+    name: 'sub-name',
+    type: 'sub-type',
+    url: 'sub-url',
+    docs: 'sub-docs',
+    repo: 'sub-repo',
+    category: 'sub-category',
+    description: 'sub-description',
+    evidence: 'sub-evidence',
+    tags: 'sub-tags',
+    submitter: 'sub-submitter',
+    email: 'sub-email'
+  };
+
+  let busy = false;
+  let lastReceipt = null;
+  let lastFingerprint = '';
+
+  const categoriesByType = () => {
+    const pick = (arr) => [...new Set((arr || []).map((r) => r.category).filter(Boolean))].sort();
+    return {
+      'AI Tool': pick(window.AI_TOOLS),
+      'AI Model': pick(window.AI_MODELS),
+      'Developer Resource': pick(window.DEVELOPER_RESOURCES)
+    };
+  };
+  const cats = categoriesByType();
+
+  const fillCategories = () => {
+    const list = cats[typeSelect.value] || [...new Set(Object.values(cats).flat())].sort();
+    options.textContent = '';
+    list.forEach((name) => {
+      const opt = document.createElement('option');
+      opt.value = name;
+      options.appendChild(opt);
+    });
+  };
+  fillCategories();
+  typeSelect.addEventListener('change', fillCategories);
+
+  const isUrl = (value) => {
+    try {
+      const u = new URL(value);
+      return (u.protocol === 'http:' || u.protocol === 'https:') && Boolean(u.hostname);
+    } catch {
+      return false;
+    }
+  };
+  const isEmail = (value) => /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(value);
+
+  const setError = (key, message) => {
+    const input = document.getElementById(ids[key]);
+    const err = document.getElementById('err-' + key);
+    if (err) {
+      err.textContent = message;
+      err.hidden = !message;
+    }
+    if (input) input.setAttribute('aria-invalid', message ? 'true' : 'false');
+    return !message;
+  };
+
+  const tagList = () => {
+    const raw = document.getElementById('sub-tags').value.trim();
+    return raw ? raw.split(',').map((t) => t.trim()).filter(Boolean) : [];
+  };
+
+  const validateField = (key) => {
+    const input = document.getElementById(ids[key]);
+    if (!input) return true;
+    const value = String(input.value || '').trim();
+    let message = '';
+
+    if (key === 'name' && (value.length < 2 || value.length > 120)) message = 'Enter a name between 2 and 120 characters.';
+    if (key === 'type' && !TYPES.includes(value)) message = 'Choose the kind of resource this is.';
+    if (key === 'url' && !isUrl(value)) message = 'Enter a full http:// or https:// official website URL.';
+    if (key === 'category' && (value.length < 2 || value.length > 60)) message = 'Enter a category between 2 and 60 characters.';
+    if (key === 'description' && (value.length < 40 || value.length > 600)) message = 'Use 40 to 600 characters.';
+    if (key === 'docs' && value && !isUrl(value)) message = 'Enter a full http:// or https:// documentation URL, or leave it blank.';
+    if (key === 'repo' && value && !isUrl(value)) message = 'Enter a full http:// or https:// repository URL, or leave it blank.';
+    if (key === 'evidence' && value && !isUrl(value)) message = 'Enter a full http:// or https:// evidence URL, or leave it blank.';
+    if (key === 'submitter' && value.length > 80) message = 'Use 80 characters or fewer.';
+    if (key === 'email' && value && !isEmail(value)) message = 'Enter a valid email address, or leave it blank.';
+    if (key === 'tags') {
+      const list = tagList();
+      if (list.length > 10) message = 'Use at most 10 tags.';
+      else if (list.some((tag) => tag.length > 30)) message = 'Keep each tag to 30 characters or fewer.';
+    }
+    return setError(key, message);
+  };
+
+  const validateAll = () => {
+    const results = FIELDS.map((key) => validateField(key));
+    const bad = results.filter((ok) => !ok).length;
+    return { ok: bad === 0, bad };
+  };
+
+  const hideAlerts = () => {
+    summary.hidden = true;
+    summary.textContent = '';
+    success.hidden = true;
+    success.textContent = '';
+  };
+
+  const showFailure = (message) => {
+    success.hidden = true;
+    summary.textContent = message;
+    summary.hidden = false;
+  };
+
+  const showSuccess = (message) => {
+    summary.hidden = true;
+    success.textContent = message;
+    success.hidden = false;
+  };
+
+  const setBusy = (on) => {
+    busy = on;
+    submitBtn.disabled = on;
+    submitBtn.setAttribute('aria-busy', on ? 'true' : 'false');
+    submitLabel.textContent = on ? 'Sending…' : 'Submit for review';
+    clearBtn.disabled = on;
+  };
+
+  const clearErrors = () => {
+    FIELDS.forEach((key) => setError(key, ''));
+  };
+
+  const resetReceipt = () => {
+    section.hidden = true;
+    draftEl.textContent = '';
+    copyBtn.disabled = true;
+    downloadBtn.disabled = true;
+    copyStatus.textContent = '';
+    lastReceipt = null;
+  };
+
+  const copyText = async (text) => {
+    try {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        await navigator.clipboard.writeText(text);
+        return true;
+      }
+    } catch {
+      /* fall through to the textarea fallback */
+    }
+    try {
+      const area = document.createElement('textarea');
+      area.value = text;
+      area.setAttribute('readonly', '');
+      area.style.position = 'fixed';
+      area.style.opacity = '0';
+      document.body.appendChild(area);
+      area.select();
+      const ok = document.execCommand('copy');
+      area.remove();
+      return ok;
+    } catch {
+      return false;
+    }
+  };
+
+  const slug = (value) => String(value || 'resource').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '').slice(0, 60) || 'resource';
+
+  const normalizeUrl = (value) => String(value || '').toLowerCase()
+    .replace(/^https?:\/\//, '')
+    .replace(/^www\./, '')
+    .replace(/\/+$/, '');
+
+  const fingerprint = (record) => [
+    record.type,
+    record.name.toLowerCase().replace(/\s+/g, ' ').trim(),
+    normalizeUrl(record.url)
+  ].join('|');
+
+  const storageKey = (fp) => 'dsh-submission:' + fp;
+
+  const recentlySubmitted = (fp) => {
+    if (fp && fp === lastFingerprint) return true;
+    try {
+      const at = Number(window.localStorage.getItem(storageKey(fp)));
+      return Boolean(at) && Date.now() - at < config().duplicateWindowMs;
+    } catch {
+      return false;
+    }
+  };
+
+  const rememberSubmission = (fp) => {
+    lastFingerprint = fp;
+    try {
+      window.localStorage.setItem(storageKey(fp), String(Date.now()));
+    } catch {
+      /* storage can be unavailable in private or file contexts; memory still guards this session */
+    }
+  };
+
+  const readRecord = () => {
+    const value = (id) => document.getElementById(id).value.trim();
+    return {
+      name: value('sub-name'),
+      type: value('sub-type'),
+      url: value('sub-url'),
+      category: value('sub-category'),
+      description: value('sub-description'),
+      docs: value('sub-docs'),
+      repo: value('sub-repo'),
+      pricing: value('sub-pricing'),
+      license: value('sub-license'),
+      org: value('sub-org'),
+      evidence: value('sub-evidence'),
+      tags: tagList(),
+      submitter: value('sub-submitter'),
+      email: value('sub-email'),
+      notes: value('sub-notes')
+    };
+  };
+
+  const buildPayload = (record, key) => {
+    const payload = {
+      access_key: key,
+      subject: `${config().subject} — ${record.name}`,
+      from_name: 'AI Intelligence Directory',
+      resource_name: record.name,
+      official_url: record.url,
+      resource_type: record.type,
+      category: record.category,
+      description: record.description,
+      documentation_url: record.docs || 'Not provided',
+      repository_url: record.repo || 'Not provided',
+      pricing: record.pricing || 'Not stated',
+      license: record.license || 'Not provided',
+      organization: record.org || 'Not provided',
+      evidence_url: record.evidence || 'Not provided',
+      tags: record.tags.length ? record.tags.join(', ') : 'None',
+      submitter_name: record.submitter || 'Not provided',
+      additional_information: record.notes || 'Not provided',
+      botcheck: false
+    };
+    if (record.email) payload.email = record.email;
+    return payload;
+  };
+
+  const receiptFor = (payload) => {
+    const copy = Object.assign({}, payload);
+    delete copy.access_key;
+    delete copy.botcheck;
+    return {
+      status: 'pending-review',
+      submitted_at: new Date().toISOString(),
+      delivery: 'Web3Forms accepted the request for delivery to the maintainers.',
+      record: copy,
+      review: {
+        published: false,
+        note: 'Pending manual moderation. Nothing was added to the catalog automatically.'
+      }
+    };
+  };
+
+  form.addEventListener('submit', async (event) => {
+    event.preventDefault();
+    if (busy) return;
+
+    const key = accessKey();
+    if (!key) {
+      configStatus.hidden = false;
+      showFailure('Submission is not configured in this copy of the directory. Add a Web3Forms access key to data/site-config.js, then try again. Your entries have been kept.');
+      configStatus.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      return;
+    }
+    configStatus.hidden = true;
+
+    if (botcheck && botcheck.checked) {
+      showFailure('This submission could not be processed. Your entries have been kept.');
+      return;
+    }
+
+    const { ok, bad } = validateAll();
+    if (!ok) {
+      resetReceipt();
+      showFailure(`Submission not sent — fix ${bad} field${bad === 1 ? '' : 's'} below. Your entries have been kept.`);
+      const firstBad = document.querySelector('[aria-invalid="true"]');
+      if (firstBad) firstBad.focus();
+      return;
+    }
+
+    const record = readRecord();
+    const fp = fingerprint(record);
+    if (recentlySubmitted(fp)) {
+      showFailure('This exact resource was submitted recently. Duplicate submissions are blocked for a short period; edit the record if something has changed.');
+      return;
+    }
+
+    hideAlerts();
+    setBusy(true);
+
+    const cfg = config();
+    const endpoint = /^https:\/\//i.test(cfg.endpoint) ? cfg.endpoint : DEFAULTS.endpoint;
+    const timeoutMs = Number(cfg.requestTimeoutMs) > 0 ? Number(cfg.requestTimeoutMs) : DEFAULTS.requestTimeoutMs;
+    const controller = new AbortController();
+    const timer = window.setTimeout(() => controller.abort(), timeoutMs);
+    const payload = buildPayload(record, key);
+
+    try {
+      const response = await fetch(endpoint, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify(payload),
+        signal: controller.signal
+      });
+      let data = null;
+      try {
+        data = await response.json();
+      } catch {
+        data = null;
+      }
+      if (!response.ok || !data || data.success !== true) {
+        const detail = data && data.message ? String(data.message) : `The service responded with HTTP ${response.status}.`;
+        const failure = new Error(detail);
+        failure.kind = 'rejected';
+        throw failure;
+      }
+
+      rememberSubmission(fp);
+      lastReceipt = receiptFor(payload);
+      draftEl.textContent = JSON.stringify(lastReceipt, null, 2);
+      draftStatus.textContent = 'Submission accepted by Web3Forms. Pending moderation.';
+      copyBtn.disabled = false;
+      downloadBtn.disabled = false;
+      copyStatus.textContent = '';
+      section.hidden = false;
+      showSuccess('Submission received. Your record is pending moderation and has not been published.');
+      form.reset();
+      fillCategories();
+      clearErrors();
+      section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    } catch (error) {
+      const timedOut = controller.signal.aborted;
+      let message;
+      if (timedOut) {
+        message = `The submission timed out after ${Math.round(timeoutMs / 1000)} seconds. Nothing was confirmed. Check your connection and try again. Your entries have been kept.`;
+      } else if (error && error.kind === 'rejected') {
+        message = `The submission was not accepted: ${error.message} Your entries have been kept.`;
+      } else {
+        message = 'The submission could not reach Web3Forms. Check your connection and try again. Your entries have been kept.';
+      }
+      showFailure(message);
+    } finally {
+      window.clearTimeout(timer);
+      setBusy(false);
+    }
+  });
+
+  FIELDS.forEach((key) => {
+    const input = document.getElementById(ids[key]);
+    if (!input) return;
+    const revalidate = () => {
+      if (input.getAttribute('aria-invalid') === 'true' || summary.hidden === false) validateField(key);
+    };
+    input.addEventListener('input', revalidate);
+    input.addEventListener('change', revalidate);
+  });
+
+  copyBtn.addEventListener('click', async () => {
+    if (!lastReceipt) return;
+    const ok = await copyText(draftEl.textContent);
+    copyStatus.textContent = ok
+      ? 'Receipt JSON copied to the clipboard.'
+      : 'Copy failed — select the JSON and copy it manually.';
+  });
+
+  downloadBtn.addEventListener('click', () => {
+    if (!lastReceipt) return;
+    const blob = new Blob([draftEl.textContent + '\n'], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `${slug(lastReceipt.record.resource_name)}-submission-receipt.json`;
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
+    copyStatus.textContent = 'Receipt downloaded. It is not a publication confirmation.';
+  });
+
+  clearBtn.addEventListener('click', () => {
+    form.reset();
+    fillCategories();
+    clearErrors();
+    hideAlerts();
+    resetReceipt();
+  });
+
+  if (!accessKey()) {
+    configStatus.hidden = false;
+  }
+})();
+
+</script>
+</body>
+</html>

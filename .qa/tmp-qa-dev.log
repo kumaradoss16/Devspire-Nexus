@@ -1,0 +1,4 @@
+FAIL: details view works for all 300 resources opened 298
+
+=== 80/81 checks passed ===
+FAILED: details view works for all 300 resources -- opened 298

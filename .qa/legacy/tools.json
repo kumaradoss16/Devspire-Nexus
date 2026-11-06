@@ -1,0 +1,2146 @@
+[
+  {
+    "id": "chatgpt",
+    "name": "ChatGPT",
+    "org": "OpenAI",
+    "description": "Conversational AI assistant developed by OpenAI for writing, analysis, coding, image understanding, file processing, and task automation. Available on web, iOS, Android, and desktop, with free and paid subscription tiers.",
+    "category": "Assistants & Chatbots",
+    "source_category": "General-purpose AI Assistants",
+    "resource_type": "AI Tool",
+    "official_url": "https://chatgpt.com/",
+    "pricing": "Freemium",
+    "pricing_class": "freemium",
+    "license": "Proprietary",
+    "open_source": false,
+    "platform": "Multiple",
+    "hosting": [
+      "Managed Cloud"
+    ],
+    "self_hostable": false,
+    "signup_required": null,
+    "tags": [
+      "LLM",
+      "Chatbot",
+      "Multimodal",
+      "Productivity",
+      "Voice",
+      "Image-Understanding"
+    ],
+    "initials": "CG",
+    "icon": "assets/img/icons/chatgpt.png",
+    "verified": "2026-11-04",
+    "status": "verified",
+    "notes": null,
+    "evidence": [
+      [
+        "Verified link",
+        "https://chatgpt.com/"
+      ]
+    ],
+    "source": "https://github.com/kumaradoss16/ai-knowledge-base/blob/main/ai-tools/ai-tools-models-developer-resources.md"
+  },
+  {
+    "id": "claude",
+    "name": "Claude",
+    "org": "Anthropic",
+    "description": "Conversational AI assistant by Anthropic designed for writing, analysis, coding, document review, and research. Accessible via web and mobile; API access is provided separately through the Anthropic Console.",
+    "category": "Assistants & Chatbots",
+    "source_category": "General-purpose AI Assistants",
+    "resource_type": "AI Tool",
+    "official_url": "https://claude.ai/",
+    "pricing": "Freemium",
+    "pricing_class": "freemium",
+    "license": "Proprietary",
+    "open_source": false,
+    "platform": "Multiple",
+    "hosting": [
+      "Managed Cloud"
+    ],
+    "self_hostable": false,
+    "signup_required": null,
+    "tags": [
+      "LLM",
+      "Chatbot",
+      "Long-Context",
+      "Document-Analysis",
+      "Coding"
+    ],
+    "initials": "CL",
+    "icon": "assets/img/icons/claude.png",
+    "verified": "2026-11-04",
+    "status": "verified",
+    "notes": null,
+    "evidence": [
+      [
+        "Verified link",
+        "https://claude.ai/"
+      ]
+    ],
+    "source": "https://github.com/kumaradoss16/ai-knowledge-base/blob/main/ai-tools/ai-tools-models-developer-resources.md"
+  },
+  {
+    "id": "gemini",
+    "name": "Gemini",
+    "org": "Google",
+    "description": "Google's hosted multimodal assistant that processes text, images, audio, and video, with integration into Google Workspace and Search.",
+    "category": "Assistants & Chatbots",
+    "source_category": "AI Assistant",
+    "resource_type": "AI Tool",
+    "official_url": "https://gemini.google.com",
+    "pricing": "Freemium",
+    "pricing_class": "freemium",
+    "license": "Proprietary",
+    "open_source": false,
+    "platform": null,
+    "hosting": [
+      "Managed Cloud"
+    ],
+    "self_hostable": false,
+    "signup_required": null,
+    "tags": [
+      "Multimodal",
+      "LLM",
+      "Workspace Integration",
+      "Long Context"
+    ],
+    "initials": "GE",
+    "icon": "assets/img/icons/gemini.png",
+    "verified": "2026-11-04",
+    "status": "verified",
+    "notes": null,
+    "evidence": [
+      [
+        "Verified link",
+        "https://gemini.google.com"
+      ]
+    ],
+    "source": "https://github.com/kumaradoss16/ai-knowledge-base/blob/main/ai-tools/ai-tools-models-developer-resources.md"
+  },
+  {
+    "id": "grok",
+    "name": "Grok",
+    "org": "xAI",
+    "description": "xAI's hosted assistant offering chat, reasoning, image understanding, and real-time web and X search from xAI-hosted models.",
+    "category": "Assistants & Chatbots",
+    "source_category": "AI Assistant",
+    "resource_type": "AI Tool",
+    "official_url": "https://grok.com",
+    "pricing": "Freemium",
+    "pricing_class": "freemium",
+    "license": "Proprietary",
+    "open_source": false,
+    "platform": null,
+    "hosting": [
+      "Managed Cloud"
+    ],
+    "self_hostable": false,
+    "signup_required": null,
+    "tags": [
+      "LLM",
+      "Reasoning",
+      "Real-time Search",
+      "Multimodal"
+    ],
+    "initials": "GK",
+    "icon": "assets/img/icons/grok.png",
+    "verified": "2026-11-04",
+    "status": "verified",
+    "notes": null,
+    "evidence": [
+      [
+        "Verified link",
+        "https://grok.com"
+      ]
+    ],
+    "source": "https://github.com/kumaradoss16/ai-knowledge-base/blob/main/ai-tools/ai-tools-models-developer-resources.md"
+  },
+  {
+    "id": "poe",
+    "name": "Poe",
+    "org": "Quora",
+    "description": "Consumer AI platform created by Quora providing unified access to multiple frontier and open-weight models including Claude, GPT-4o, Gemini, and FLUX, enabling users to create, share, and monetize custom prompt bots.",
+    "category": "Assistants & Chatbots",
+    "source_category": "AI Chatbots",
+    "resource_type": "AI Tool",
+    "official_url": "https://poe.com/",
+    "pricing": "Freemium",
+    "pricing_class": "freemium",
+    "license": "Proprietary",
+    "open_source": false,
+    "platform": null,
+    "hosting": [
+      "Managed Cloud"
+    ],
+    "self_hostable": false,
+    "signup_required": null,
+    "tags": [
+      "Multi-Model",
+      "Chatbot",
+      "Custom-Bots",
+      "Aggregator",
+      "Prompt-Engineering"
+    ],
+    "initials": "PO",
+    "icon": "assets/img/icons/poe.png",
+    "verified": "2026-11-04",
+    "status": "verified",
+    "notes": null,
+    "evidence": [
+      [
+        "Verified link",
+        "https://poe.com/"
+      ]
+    ],
+    "source": "https://github.com/kumaradoss16/ai-knowledge-base/blob/main/ai-tools/ai-tools-models-developer-resources.md"
+  },
+  {
+    "id": "character-ai",
+    "name": "Character.ai",
+    "org": "Character.ai",
+    "description": "Consumer conversational AI platform hosting millions of user-created personas, fictional characters, historical figures, and interactive roleplay bots powered by custom large language models optimized for engaging multi-turn dialogue.",
+    "category": "Assistants & Chatbots",
+    "source_category": "AI Chatbots",
+    "resource_type": "AI Tool",
+    "official_url": "https://character.ai/",
+    "pricing": "Freemium",
+    "pricing_class": "freemium",
+    "license": "Proprietary",
+    "open_source": false,
+    "platform": null,
+    "hosting": [
+      "Managed Cloud"
+    ],
+    "self_hostable": false,
+    "signup_required": null,
+    "tags": [
+      "Chatbot",
+      "Conversational-AI",
+      "Persona-Engine",
+      "Roleplay",
+      "Consumer-AI"
+    ],
+    "initials": "CH",
+    "icon": "assets/img/icons/character-ai.png",
+    "verified": "2026-11-04",
+    "status": "verified",
+    "notes": null,
+    "evidence": [
+      [
+        "Verified link",
+        "https://character.ai/"
+      ]
+    ],
+    "source": "https://github.com/kumaradoss16/ai-knowledge-base/blob/main/ai-tools/ai-tools-models-developer-resources.md"
+  },
+  {
+    "id": "perplexity",
+    "name": "Perplexity",
+    "org": "Perplexity",
+    "description": "AI-powered answer engine that performs real-time web search and synthesizes cited, conversational responses. Supports deep research workflows, file analysis, and model switching for paid users.",
+    "category": "Search & Research",
+    "source_category": "AI Search and Research Assistants",
+    "resource_type": "AI Tool",
+    "official_url": "https://www.perplexity.ai/",
+    "pricing": "Freemium",
+    "pricing_class": "freemium",
+    "license": "Proprietary",
+    "open_source": false,
+    "platform": null,
+    "hosting": [
+      "Managed Cloud"
+    ],
+    "self_hostable": false,
+    "signup_required": false,
+    "tags": [
+      "AI-Search",
+      "Answer-Engine",
+      "Web-Retrieval",
+      "Research",
+      "RAG"
+    ],
+    "initials": "PE",
+    "icon": "assets/img/icons/perplexity.png",
+    "verified": "2026-11-04",
+    "status": "verified",
+    "notes": null,
+    "evidence": [
+      [
+        "Verified link",
+        "https://www.perplexity.ai/"
+      ]
+    ],
+    "source": "https://github.com/kumaradoss16/ai-knowledge-base/blob/main/ai-tools/ai-tools-models-developer-resources.md"
+  },
+  {
+    "id": "notebooklm",
+    "name": "NotebookLM",
+    "org": "Google",
+    "description": "Source-grounded research assistant that ingests uploaded documents, links, and videos and produces cited answers, summaries, and audio overviews.",
+    "category": "Search & Research",
+    "source_category": "Research Assistant",
+    "resource_type": "AI Tool",
+    "official_url": "https://notebooklm.google",
+    "pricing": "Freemium",
+    "pricing_class": "freemium",
+    "license": "Proprietary",
+    "open_source": false,
+    "platform": null,
+    "hosting": [
+      "Managed Cloud"
+    ],
+    "self_hostable": false,
+    "signup_required": null,
+    "tags": [
+      "RAG",
+      "Document QA",
+      "Audio Overviews",
+      "Research"
+    ],
+    "initials": "NB",
+    "icon": "assets/img/icons/notebooklm.png",
+    "verified": "2026-11-04",
+    "status": "verified",
+    "notes": null,
+    "evidence": [
+      [
+        "Verified link",
+        "https://notebooklm.google"
+      ]
+    ],
+    "source": "https://github.com/kumaradoss16/ai-knowledge-base/blob/main/ai-tools/ai-tools-models-developer-resources.md"
+  },
+  {
+    "id": "phind",
+    "name": "Phind",
+    "org": "Phind",
+    "description": "AI search engine and coding answer platform tailored for software developers. Crawls technical documentation, Stack Overflow threads, and GitHub repositories to synthesize verified, executable code solutions with source links.",
+    "category": "Search & Research",
+    "source_category": "AI Search and Research Assistants",
+    "resource_type": "AI Tool",
+    "official_url": "https://www.phind.com/",
+    "pricing": "Freemium",
+    "pricing_class": "freemium",
+    "license": "Proprietary",
+    "open_source": false,
+    "platform": null,
+    "hosting": [
+      "Managed Cloud"
+    ],
+    "self_hostable": false,
+    "signup_required": false,
+    "tags": [
+      "Developer-Search",
+      "Code-Synthesis",
+      "Technical-RAG",
+      "Documentation-Search",
+      "VS-Code"
+    ],
+    "initials": "PH",
+    "icon": null,
+    "verified": "2026-11-04",
+    "status": "verified",
+    "notes": null,
+    "evidence": [
+      [
+        "Verified link",
+        "https://www.phind.com/"
+      ]
+    ],
+    "source": "https://github.com/kumaradoss16/ai-knowledge-base/blob/main/ai-tools/ai-tools-models-developer-resources.md"
+  },
+  {
+    "id": "consensus",
+    "name": "Consensus",
+    "org": "Consensus",
+    "description": "AI-powered search engine for scientific research that queries over 200 million peer-reviewed journal papers. Synthesizes scientific consensus meters, extracts study findings, and provides citations without hallucinating academic evidence.",
+    "category": "Search & Research",
+    "source_category": "AI Research and Scientific Applications",
+    "resource_type": "AI Tool",
+    "official_url": "https://consensus.app/",
+    "pricing": "Freemium",
+    "pricing_class": "freemium",
+    "license": "Proprietary",
+    "open_source": false,
+    "platform": null,
+    "hosting": [
+      "Managed Cloud"
+    ],
+    "self_hostable": false,
+    "signup_required": null,
+    "tags": [
+      "Academic-Research",
+      "Scientific-Search",
+      "Peer-Reviewed",
+      "Consensus-Meter",
+      "Paper-Extraction"
+    ],
+    "initials": "CN",
+    "icon": "assets/img/icons/consensus.png",
+    "verified": "2026-11-04",
+    "status": "verified",
+    "notes": null,
+    "evidence": [
+      [
+        "Verified link",
+        "https://consensus.app/"
+      ]
+    ],
+    "source": "https://github.com/kumaradoss16/ai-knowledge-base/blob/main/ai-tools/ai-tools-models-developer-resources.md"
+  },
+  {
+    "id": "elicit",
+    "name": "Elicit",
+    "org": "Elicit",
+    "description": "AI research assistant that automates scientific literature reviews. Searches academic papers, extracts structured data columns (sample size, methodologies, outcomes), and summarizes research questions with direct source attribution.",
+    "category": "Search & Research",
+    "source_category": "AI Research and Scientific Applications",
+    "resource_type": "AI Tool",
+    "official_url": "https://elicit.com/",
+    "pricing": "Freemium",
+    "pricing_class": "freemium",
+    "license": "Proprietary",
+    "open_source": false,
+    "platform": null,
+    "hosting": [
+      "Managed Cloud"
+    ],
+    "self_hostable": false,
+    "signup_required": null,
+    "tags": [
+      "Literature-Review",
+      "Scientific-Research",
+      "Data-Extraction",
+      "Academic-Synthesis",
+      "Evidence-Based"
+    ],
+    "initials": "EI",
+    "icon": "assets/img/icons/elicit.png",
+    "verified": "2026-11-04",
+    "status": "verified",
+    "notes": null,
+    "evidence": [
+      [
+        "Verified link",
+        "https://elicit.com/"
+      ]
+    ],
+    "source": "https://github.com/kumaradoss16/ai-knowledge-base/blob/main/ai-tools/ai-tools-models-developer-resources.md"
+  },
+  {
+    "id": "cursor",
+    "name": "Cursor",
+    "org": "Anysphere",
+    "description": "AI-powered code editor built on VS Code, offering multi-file code editing, codebase-aware chat, AI-powered tab completion, and agent-based coding workflows. Supports multiple frontier LLM backends.",
+    "category": "Coding & Development",
+    "source_category": "AI Coding Assistants",
+    "resource_type": "AI Tool",
+    "official_url": "https://cursor.com/",
+    "pricing": "Freemium",
+    "pricing_class": "freemium",
+    "license": "Proprietary",
+    "open_source": false,
+    "platform": "Desktop",
+    "hosting": [
+      "Managed Cloud"
+    ],
+    "self_hostable": false,
+    "signup_required": null,
+    "tags": [
+      "AI-IDE",
+      "Code-Generation",
+      "Code-Editing",
+      "Agent",
+      "Autocomplete"
+    ],
+    "initials": "CU",
+    "icon": "assets/img/icons/cursor.png",
+    "verified": "2026-11-04",
+    "status": "verified",
+    "notes": null,
+    "evidence": [
+      [
+        "Verified link",
+        "https://cursor.com/"
+      ]
+    ],
+    "source": "https://github.com/kumaradoss16/ai-knowledge-base/blob/main/ai-tools/ai-tools-models-developer-resources.md"
+  },
+  {
+    "id": "github-copilot",
+    "name": "GitHub Copilot",
+    "org": "GitHub",
+    "description": "AI-assisted pair programmer by GitHub and OpenAI that provides context-aware autocomplete suggestions, chat-based code explanations, automated unit test generation, and CLI terminal command assistance directly within popular code editors.",
+    "category": "Coding & Development",
+    "source_category": "AI Coding Assistants",
+    "resource_type": "AI Tool",
+    "official_url": "https://github.com/features/copilot",
+    "pricing": "Freemium",
+    "pricing_class": "freemium",
+    "license": "Proprietary",
+    "open_source": false,
+    "platform": null,
+    "hosting": [
+      "Managed Cloud"
+    ],
+    "self_hostable": false,
+    "signup_required": null,
+    "tags": [
+      "Code-Completion",
+      "AI-Pair-Programming",
+      "Developer-Tools",
+      "VS-Code",
+      "Chat"
+    ],
+    "initials": "GC",
+    "icon": "assets/img/icons/github-copilot.png",
+    "verified": "2026-11-04",
+    "status": "verified",
+    "notes": null,
+    "evidence": [
+      [
+        "Verified link",
+        "https://github.com/features/copilot"
+      ]
+    ],
+    "source": "https://github.com/kumaradoss16/ai-knowledge-base/blob/main/ai-tools/ai-tools-models-developer-resources.md"
+  },
+  {
+    "id": "windsurf",
+    "name": "Windsurf",
+    "org": "Cognition",
+    "description": "Agentic AI-native IDE created by Codeium featuring Cascade, an autonomous coding agent. Performs multi-file code refactoring, context-aware command execution, real-time codebase indexing, and multi-line tab completions.",
+    "category": "Coding & Development",
+    "source_category": "AI IDEs and Code Editors",
+    "resource_type": "AI Tool",
+    "official_url": "https://codeium.com/windsurf",
+    "pricing": "Freemium",
+    "pricing_class": "freemium",
+    "license": "Proprietary",
+    "open_source": false,
+    "platform": "Desktop",
+    "hosting": [
+      "Managed Cloud"
+    ],
+    "self_hostable": false,
+    "signup_required": null,
+    "tags": [
+      "AI-IDE",
+      "Agentic-Coding",
+      "Autocomplete",
+      "Codebase-Search",
+      "Codeium"
+    ],
+    "initials": "WI",
+    "icon": "assets/img/icons/windsurf.png",
+    "verified": "2026-11-04",
+    "status": "verified",
+    "notes": null,
+    "evidence": [
+      [
+        "Verified link",
+        "https://codeium.com/windsurf"
+      ]
+    ],
+    "source": "https://github.com/kumaradoss16/ai-knowledge-base/blob/main/ai-tools/ai-tools-models-developer-resources.md"
+  },
+  {
+    "id": "lovable",
+    "name": "Lovable",
+    "org": "Lovable Labs",
+    "description": "Full-stack AI application builder that turns plain English descriptions into complete web applications with front-end UI, backend logic, authentication, and database connections, accompanied by live preview and GitHub synchronization.",
+    "category": "Coding & Development",
+    "source_category": "AI Coding Assistants",
+    "resource_type": "AI Tool",
+    "official_url": "https://lovable.dev/",
+    "pricing": "Freemium",
+    "pricing_class": "freemium",
+    "license": "Proprietary",
+    "open_source": false,
+    "platform": null,
+    "hosting": [
+      "Managed Cloud"
+    ],
+    "self_hostable": false,
+    "signup_required": null,
+    "tags": [
+      "Web-App-Builder",
+      "Full-Stack",
+      "Generative-UI",
+      "Supabase",
+      "GitHub-Sync"
+    ],
+    "initials": "LO",
+    "icon": "assets/img/icons/lovable.png",
+    "verified": "2026-11-04",
+    "status": "verified",
+    "notes": null,
+    "evidence": [
+      [
+        "Verified link",
+        "https://lovable.dev/"
+      ]
+    ],
+    "source": "https://github.com/kumaradoss16/ai-knowledge-base/blob/main/ai-tools/ai-tools-models-developer-resources.md"
+  },
+  {
+    "id": "v0-by-vercel",
+    "name": "v0 by Vercel",
+    "org": "Vercel",
+    "description": "AI-powered UI generation tool by Vercel that converts text prompts and design descriptions into React/Next.js component code with Tailwind CSS styling. Produces deployment-ready frontend code.",
+    "category": "Coding & Development",
+    "source_category": "AI Coding Assistants",
+    "resource_type": "AI Tool",
+    "official_url": "https://v0.dev/",
+    "pricing": "Freemium",
+    "pricing_class": "freemium",
+    "license": "Proprietary",
+    "open_source": false,
+    "platform": null,
+    "hosting": [
+      "Managed Cloud"
+    ],
+    "self_hostable": false,
+    "signup_required": null,
+    "tags": [
+      "UI-Generation",
+      "React",
+      "Next.js",
+      "Code-Generation",
+      "Frontend",
+      "Tailwind"
+    ],
+    "initials": "V0",
+    "icon": "assets/img/icons/v0.png",
+    "verified": "2026-11-04",
+    "status": "verified",
+    "notes": null,
+    "evidence": [
+      [
+        "Verified link",
+        "https://v0.dev/"
+      ]
+    ],
+    "source": "https://github.com/kumaradoss16/ai-knowledge-base/blob/main/ai-tools/ai-tools-models-developer-resources.md"
+  },
+  {
+    "id": "bolt-new",
+    "name": "Bolt.new",
+    "org": "StackBlitz",
+    "description": "In-browser AI development environment powered by WebContainers that prompts, executes, tests, and deploys full-stack Node.js and web applications entirely inside the browser without requiring local machine installations.",
+    "category": "Coding & Development",
+    "source_category": "AI IDEs and Code Editors",
+    "resource_type": "AI Tool",
+    "official_url": "https://bolt.new/",
+    "pricing": "Freemium",
+    "pricing_class": "freemium",
+    "license": "Proprietary",
+    "open_source": false,
+    "platform": "Web",
+    "hosting": [
+      "Managed Cloud"
+    ],
+    "self_hostable": false,
+    "signup_required": null,
+    "tags": [
+      "WebContainers",
+      "Full-Stack",
+      "Browser-IDE",
+      "Code-Execution",
+      "Node.js"
+    ],
+    "initials": "BO",
+    "icon": "assets/img/icons/bolt-new.png",
+    "verified": "2026-11-04",
+    "status": "verified",
+    "notes": null,
+    "evidence": [
+      [
+        "Verified link",
+        "https://bolt.new/"
+      ]
+    ],
+    "source": "https://github.com/kumaradoss16/ai-knowledge-base/blob/main/ai-tools/ai-tools-models-developer-resources.md"
+  },
+  {
+    "id": "tabnine",
+    "name": "Tabnine",
+    "org": "Tabnine",
+    "description": "Privacy-first AI code completion and chat assistant for software engineers. Offers contextual autocompletions and codebase querying trained exclusively on open-source code with permissive licenses, deployable on-premises or private clouds.",
+    "category": "Coding & Development",
+    "source_category": "AI Coding Assistants",
+    "resource_type": "AI Tool",
+    "official_url": "https://www.tabnine.com/",
+    "pricing": "Freemium",
+    "pricing_class": "freemium",
+    "license": "Proprietary",
+    "open_source": false,
+    "platform": null,
+    "hosting": [
+      "Managed Cloud",
+      "Self-hosted"
+    ],
+    "self_hostable": true,
+    "signup_required": null,
+    "tags": [
+      "Private-AI",
+      "Code-Completion",
+      "On-Premises",
+      "Zero-Data-Retention",
+      "JetBrains"
+    ],
+    "initials": "TB",
+    "icon": "assets/img/icons/tabnine.png",
+    "verified": "2026-11-04",
+    "status": "verified",
+    "notes": null,
+    "evidence": [
+      [
+        "Verified link",
+        "https://www.tabnine.com/"
+      ]
+    ],
+    "source": "https://github.com/kumaradoss16/ai-knowledge-base/blob/main/ai-tools/ai-tools-models-developer-resources.md"
+  },
+  {
+    "id": "coderabbit",
+    "name": "CodeRabbit",
+    "org": "CodeRabbit",
+    "description": "AI-powered code review platform that integrates into GitHub and GitLab pull requests. Provides line-by-line code feedback, detects edge cases and security vulnerabilities, generates release summaries, and answers questions in PR comments.",
+    "category": "Coding & Development",
+    "source_category": "AI Code Review and Debugging",
+    "resource_type": "AI Tool",
+    "official_url": "https://coderabbit.ai/",
+    "pricing": "Freemium",
+    "pricing_class": "freemium",
+    "license": "Proprietary",
+    "open_source": false,
+    "platform": null,
+    "hosting": [
+      "Managed Cloud"
+    ],
+    "self_hostable": false,
+    "signup_required": null,
+    "tags": [
+      "Code-Review",
+      "Pull-Requests",
+      "GitHub-Integration",
+      "Bug-Detection",
+      "Developer-Tools"
+    ],
+    "initials": "CR",
+    "icon": "assets/img/icons/coderabbit.png",
+    "verified": "2026-11-04",
+    "status": "verified",
+    "notes": null,
+    "evidence": [
+      [
+        "Verified link",
+        "https://coderabbit.ai/"
+      ]
+    ],
+    "source": "https://github.com/kumaradoss16/ai-knowledge-base/blob/main/ai-tools/ai-tools-models-developer-resources.md"
+  },
+  {
+    "id": "grammarly",
+    "name": "Grammarly",
+    "org": "Grammarly",
+    "description": "AI-powered writing assistant providing grammar checking, style suggestions, tone detection, plagiarism detection, and generative writing features across web browsers, desktop apps, and integrations.",
+    "category": "Writing & Content",
+    "source_category": "AI Writing and Editing",
+    "resource_type": "AI Tool",
+    "official_url": "https://www.grammarly.com/",
+    "pricing": "Freemium",
+    "pricing_class": "freemium",
+    "license": "Proprietary",
+    "open_source": false,
+    "platform": "Multiple",
+    "hosting": [
+      "Managed Cloud"
+    ],
+    "self_hostable": false,
+    "signup_required": null,
+    "tags": [
+      "Writing",
+      "Grammar-Check",
+      "Style",
+      "Tone-Detection",
+      "Browser-Extension"
+    ],
+    "initials": "GL",
+    "icon": "assets/img/icons/grammarly.png",
+    "verified": "2026-11-04",
+    "status": "verified",
+    "notes": null,
+    "evidence": [
+      [
+        "Verified link",
+        "https://www.grammarly.com/"
+      ]
+    ],
+    "source": "https://github.com/kumaradoss16/ai-knowledge-base/blob/main/ai-tools/ai-tools-models-developer-resources.md"
+  },
+  {
+    "id": "quillbot",
+    "name": "QuillBot",
+    "org": "QuillBot",
+    "description": "AI writing enhancement tool offering multi-mode sentence paraphrasing, grammar checking, summarization, citation generation, and plagiarism detection to improve vocabulary, readability, and academic writing fluency.",
+    "category": "Writing & Content",
+    "source_category": "AI Writing and Editing",
+    "resource_type": "AI Tool",
+    "official_url": "https://quillbot.com/",
+    "pricing": "Freemium",
+    "pricing_class": "freemium",
+    "license": "Proprietary",
+    "open_source": false,
+    "platform": null,
+    "hosting": [
+      "Managed Cloud"
+    ],
+    "self_hostable": false,
+    "signup_required": false,
+    "tags": [
+      "Paraphrasing",
+      "Writing-Assistant",
+      "Grammar-Checker",
+      "Summarization",
+      "Academic-Tools"
+    ],
+    "initials": "QB",
+    "icon": "assets/img/icons/quillbot.png",
+    "verified": "2026-11-04",
+    "status": "verified",
+    "notes": null,
+    "evidence": [
+      [
+        "Verified link",
+        "https://quillbot.com/"
+      ]
+    ],
+    "source": "https://github.com/kumaradoss16/ai-knowledge-base/blob/main/ai-tools/ai-tools-models-developer-resources.md"
+  },
+  {
+    "id": "jasper",
+    "name": "Jasper",
+    "org": "Jasper",
+    "description": "AI content platform for marketing teams and enterprises, enabling long-form article writing, campaign copy, social media content, and brand-consistent content generation with customizable brand voice settings.",
+    "category": "Writing & Content",
+    "source_category": "AI Content Generation",
+    "resource_type": "AI Tool",
+    "official_url": "https://www.jasper.ai/",
+    "pricing": "Paid",
+    "pricing_class": "paid",
+    "license": "Proprietary",
+    "open_source": false,
+    "platform": null,
+    "hosting": [
+      "Managed Cloud"
+    ],
+    "self_hostable": false,
+    "signup_required": null,
+    "tags": [
+      "Content-Generation",
+      "Marketing",
+      "Copywriting",
+      "Brand-Voice",
+      "AI-Writing"
+    ],
+    "initials": "JA",
+    "icon": "assets/img/icons/jasper.png",
+    "verified": "2026-11-04",
+    "status": "verified",
+    "notes": null,
+    "evidence": [
+      [
+        "Verified link",
+        "https://www.jasper.ai/"
+      ]
+    ],
+    "source": "https://github.com/kumaradoss16/ai-knowledge-base/blob/main/ai-tools/ai-tools-models-developer-resources.md"
+  },
+  {
+    "id": "copy-ai",
+    "name": "Copy.ai",
+    "org": "Copy.ai",
+    "description": "AI-powered copywriting and workflow automation platform for marketing teams. Generates sales copy, email sequences, social posts, and marketing content, with GTM (go-to-market) workflow automation features.",
+    "category": "Writing & Content",
+    "source_category": "AI Content Generation",
+    "resource_type": "AI Tool",
+    "official_url": "https://www.copy.ai/",
+    "pricing": "Freemium",
+    "pricing_class": "freemium",
+    "license": "Proprietary",
+    "open_source": false,
+    "platform": null,
+    "hosting": [
+      "Managed Cloud"
+    ],
+    "self_hostable": false,
+    "signup_required": null,
+    "tags": [
+      "Copywriting",
+      "Marketing",
+      "GTM-Workflows",
+      "Content-Generation",
+      "Sales-Copy"
+    ],
+    "initials": "CP",
+    "icon": "assets/img/icons/copy-ai.png",
+    "verified": "2026-11-04",
+    "status": "verified",
+    "notes": null,
+    "evidence": [
+      [
+        "Verified link",
+        "https://www.copy.ai/"
+      ]
+    ],
+    "source": "https://github.com/kumaradoss16/ai-knowledge-base/blob/main/ai-tools/ai-tools-models-developer-resources.md"
+  },
+  {
+    "id": "notion-ai",
+    "name": "Notion AI",
+    "org": "Notion",
+    "description": "AI writing and knowledge management add-on integrated into the Notion workspace. Assists with drafting, summarizing, translating, and querying documents and databases within Notion pages.",
+    "category": "Productivity",
+    "source_category": "AI Productivity",
+    "resource_type": "AI Tool",
+    "official_url": "https://www.notion.so/product/ai",
+    "pricing": "Freemium",
+    "pricing_class": "freemium",
+    "license": "Proprietary",
+    "open_source": false,
+    "platform": null,
+    "hosting": [
+      "Managed Cloud"
+    ],
+    "self_hostable": false,
+    "signup_required": null,
+    "tags": [
+      "Productivity",
+      "Writing",
+      "Summarization",
+      "Knowledge-Management",
+      "Workspace"
+    ],
+    "initials": "NO",
+    "icon": "assets/img/icons/notion-ai.png",
+    "verified": "2026-11-04",
+    "status": "verified",
+    "notes": null,
+    "evidence": [
+      [
+        "Verified link",
+        "https://www.notion.so/product/ai"
+      ]
+    ],
+    "source": "https://github.com/kumaradoss16/ai-knowledge-base/blob/main/ai-tools/ai-tools-models-developer-resources.md"
+  },
+  {
+    "id": "superhuman-ai",
+    "name": "Superhuman AI",
+    "org": "Superhuman",
+    "description": "AI-accelerated email client for Gmail and Outlook that writes complete email drafts matching personal tone, summarizes lengthy email threads in one sentence, corrects phrasing, and automates inbox triage with keyboard shortcuts.",
+    "category": "Productivity",
+    "source_category": "AI Productivity",
+    "resource_type": "AI Tool",
+    "official_url": "https://superhuman.com/ai",
+    "pricing": "Paid",
+    "pricing_class": "paid",
+    "license": "Proprietary",
+    "open_source": false,
+    "platform": null,
+    "hosting": [
+      "Managed Cloud"
+    ],
+    "self_hostable": false,
+    "signup_required": null,
+    "tags": [
+      "Email-Productivity",
+      "Tone-Matching",
+      "Thread-Summarization",
+      "Keyboard-First",
+      "Inbox-Zero"
+    ],
+    "initials": "SH",
+    "icon": "assets/img/icons/superhuman-ai.png",
+    "verified": "2026-11-04",
+    "status": "verified",
+    "notes": null,
+    "evidence": [
+      [
+        "Verified link",
+        "https://superhuman.com/ai"
+      ]
+    ],
+    "source": "https://github.com/kumaradoss16/ai-knowledge-base/blob/main/ai-tools/ai-tools-models-developer-resources.md"
+  },
+  {
+    "id": "harvey",
+    "name": "Harvey",
+    "org": "Harvey",
+    "description": "Enterprise AI platform purpose-built for law firms and corporate legal departments. Automates contract analysis, regulatory compliance auditing, legal research synthesis, and due diligence with strict enterprise data segregation.",
+    "category": "Productivity",
+    "source_category": "AI Knowledge Management",
+    "resource_type": "AI Tool",
+    "official_url": "https://www.harvey.ai/",
+    "pricing": "Paid",
+    "pricing_class": "paid",
+    "license": "Proprietary",
+    "open_source": false,
+    "platform": null,
+    "hosting": [
+      "Managed Cloud"
+    ],
+    "self_hostable": false,
+    "signup_required": null,
+    "tags": [
+      "LegalTech",
+      "Contract-Analysis",
+      "Due-Diligence",
+      "Enterprise-AI",
+      "Document-Review"
+    ],
+    "initials": "HA",
+    "icon": null,
+    "verified": "2026-11-04",
+    "status": "verified",
+    "notes": null,
+    "evidence": [
+      [
+        "Verified link",
+        "https://www.harvey.ai/"
+      ]
+    ],
+    "source": "https://github.com/kumaradoss16/ai-knowledge-base/blob/main/ai-tools/ai-tools-models-developer-resources.md"
+  },
+  {
+    "id": "mem-ai",
+    "name": "Mem.ai",
+    "org": "Mem",
+    "description": "Self-organizing AI workspace that connects personal notes, web clips, meeting minutes, and document files without requiring manual tagging or hierarchical folders, using semantic search to surface relevant past context.",
+    "category": "Productivity",
+    "source_category": "AI Knowledge Management",
+    "resource_type": "AI Tool",
+    "official_url": "https://mem.ai/",
+    "pricing": "Freemium",
+    "pricing_class": "freemium",
+    "license": "Proprietary",
+    "open_source": false,
+    "platform": null,
+    "hosting": [
+      "Managed Cloud"
+    ],
+    "self_hostable": false,
+    "signup_required": null,
+    "tags": [
+      "Knowledge-Management",
+      "Semantic-Search",
+      "Note-Taking",
+      "Productivity",
+      "Personal-AI"
+    ],
+    "initials": "ME",
+    "icon": "assets/img/icons/mem-ai.png",
+    "verified": "2026-11-04",
+    "status": "verified",
+    "notes": null,
+    "evidence": [
+      [
+        "Verified link",
+        "https://mem.ai/"
+      ]
+    ],
+    "source": "https://github.com/kumaradoss16/ai-knowledge-base/blob/main/ai-tools/ai-tools-models-developer-resources.md"
+  },
+  {
+    "id": "glean",
+    "name": "Glean",
+    "org": "Glean",
+    "description": "Enterprise search and work assistant that indexes internal company tools (Slack, Google Drive, Jira, GitHub, Salesforce) to answer employee questions, synthesize company knowledge, and build internal conversational agents with enterprise permissions.",
+    "category": "Productivity",
+    "source_category": "AI Knowledge Management",
+    "resource_type": "AI Tool",
+    "official_url": "https://www.glean.com/",
+    "pricing": "Paid",
+    "pricing_class": "paid",
+    "license": "Proprietary",
+    "open_source": false,
+    "platform": null,
+    "hosting": [
+      "Managed Cloud"
+    ],
+    "self_hostable": false,
+    "signup_required": null,
+    "tags": [
+      "Enterprise-Search",
+      "Knowledge-Graph",
+      "Access-Control",
+      "Work-Assistant",
+      "Semantic-Indexing"
+    ],
+    "initials": "GN",
+    "icon": "assets/img/icons/glean.png",
+    "verified": "2026-11-04",
+    "status": "verified",
+    "notes": null,
+    "evidence": [
+      [
+        "Verified link",
+        "https://www.glean.com/"
+      ]
+    ],
+    "source": "https://github.com/kumaradoss16/ai-knowledge-base/blob/main/ai-tools/ai-tools-models-developer-resources.md"
+  },
+  {
+    "id": "scribe",
+    "name": "Scribe",
+    "org": "Scribe",
+    "description": "AI productivity tool that records desktop browser workflows and automatically converts click sequences and keystrokes into visual step-by-step how-to guides, screenshots, and standard operating procedures (SOPs).",
+    "category": "Automation & Workflows",
+    "source_category": "AI Workflow Automation",
+    "resource_type": "AI Tool",
+    "official_url": "https://scribehow.com/",
+    "pricing": "Freemium",
+    "pricing_class": "freemium",
+    "license": "Proprietary",
+    "open_source": false,
+    "platform": "Multiple",
+    "hosting": [
+      "Managed Cloud"
+    ],
+    "self_hostable": false,
+    "signup_required": null,
+    "tags": [
+      "SOP-Generator",
+      "Workflow-Documentation",
+      "Screen-Capture",
+      "Process-Automation",
+      "Training"
+    ],
+    "initials": "SC",
+    "icon": "assets/img/icons/scribe.png",
+    "verified": "2026-11-04",
+    "status": "verified",
+    "notes": null,
+    "evidence": [
+      [
+        "Verified link",
+        "https://scribehow.com/"
+      ]
+    ],
+    "source": "https://github.com/kumaradoss16/ai-knowledge-base/blob/main/ai-tools/ai-tools-models-developer-resources.md"
+  },
+  {
+    "id": "make",
+    "name": "Make",
+    "org": "Make",
+    "description": "Visual no-code integration platform that connects hundreds of cloud applications and databases. Features native AI modules for OpenAI, Anthropic, and Hugging Face to build automated multi-step data pipelines and business processes.",
+    "category": "Automation & Workflows",
+    "source_category": "AI Workflow Automation",
+    "resource_type": "AI Tool",
+    "official_url": "https://www.make.com/",
+    "pricing": "Freemium",
+    "pricing_class": "freemium",
+    "license": "Proprietary",
+    "open_source": false,
+    "platform": null,
+    "hosting": [
+      "Managed Cloud"
+    ],
+    "self_hostable": false,
+    "signup_required": null,
+    "tags": [
+      "No-Code",
+      "Workflow-Automation",
+      "API-Integration",
+      "Webhooks",
+      "AI-Orchestration"
+    ],
+    "initials": "MK",
+    "icon": "assets/img/icons/make.png",
+    "verified": "2026-11-04",
+    "status": "verified",
+    "notes": null,
+    "evidence": [
+      [
+        "Verified link",
+        "https://www.make.com/"
+      ]
+    ],
+    "source": "https://github.com/kumaradoss16/ai-knowledge-base/blob/main/ai-tools/ai-tools-models-developer-resources.md"
+  },
+  {
+    "id": "devin",
+    "name": "Devin",
+    "org": "Cognition",
+    "description": "Autonomous AI software engineering agent developed by Cognition that navigates complex codebases, resolves GitHub issues, writes tests, runs terminal commands in sandboxed environments, and creates pull requests end-to-end.",
+    "category": "AI Agents",
+    "source_category": "AI Agents and Agent Builders",
+    "resource_type": "AI Tool",
+    "official_url": "https://www.cognition.ai/",
+    "pricing": "Paid",
+    "pricing_class": "paid",
+    "license": "Proprietary",
+    "open_source": false,
+    "platform": null,
+    "hosting": [
+      "Managed Cloud"
+    ],
+    "self_hostable": false,
+    "signup_required": null,
+    "tags": [
+      "Autonomous-Agent",
+      "Software-Engineering",
+      "Sandboxed-Execution",
+      "GitHub",
+      "DevOps"
+    ],
+    "initials": "DV",
+    "icon": "assets/img/icons/devin.png",
+    "verified": "2026-11-04",
+    "status": "verified",
+    "notes": null,
+    "evidence": [
+      [
+        "Verified link",
+        "https://www.cognition.ai/"
+      ]
+    ],
+    "source": "https://github.com/kumaradoss16/ai-knowledge-base/blob/main/ai-tools/ai-tools-models-developer-resources.md"
+  },
+  {
+    "id": "replit-agent",
+    "name": "Replit Agent",
+    "org": "Replit",
+    "description": "Autonomous AI coding agent embedded in Replit that plans, writes, debugs, and provisions full-stack software applications from high-level natural language specifications, handling database setup, backend APIs, and cloud hosting.",
+    "category": "AI Agents",
+    "source_category": "AI Agents and Agent Builders",
+    "resource_type": "AI Tool",
+    "official_url": "https://replit.com/ai",
+    "pricing": "Paid",
+    "pricing_class": "paid",
+    "license": "Proprietary",
+    "open_source": false,
+    "platform": null,
+    "hosting": [
+      "Managed Cloud"
+    ],
+    "self_hostable": false,
+    "signup_required": null,
+    "tags": [
+      "Autonomous-Agent",
+      "Software-Engineering",
+      "Full-Stack",
+      "Cloud-Hosting",
+      "DevOps"
+    ],
+    "initials": "RA",
+    "icon": "assets/img/icons/replit-agent.png",
+    "verified": "2026-11-04",
+    "status": "verified",
+    "notes": null,
+    "evidence": [
+      [
+        "Verified link",
+        "https://replit.com/ai"
+      ]
+    ],
+    "source": "https://github.com/kumaradoss16/ai-knowledge-base/blob/main/ai-tools/ai-tools-models-developer-resources.md"
+  },
+  {
+    "id": "midjourney",
+    "name": "Midjourney",
+    "org": "Midjourney",
+    "description": "AI image generation platform producing high-quality artistic and photorealistic images from text prompts. Accessible via web interface and Discord. No free tier; requires a paid subscription.",
+    "category": "Image Generation",
+    "source_category": "AI Image Generation",
+    "resource_type": "AI Tool",
+    "official_url": "https://www.midjourney.com/",
+    "pricing": "Paid",
+    "pricing_class": "paid",
+    "license": "Proprietary",
+    "open_source": false,
+    "platform": null,
+    "hosting": [
+      "Managed Cloud"
+    ],
+    "self_hostable": false,
+    "signup_required": null,
+    "tags": [
+      "Image-Generation",
+      "Text-to-Image",
+      "Diffusion",
+      "Creative",
+      "Art"
+    ],
+    "initials": "MJ",
+    "icon": "assets/img/icons/midjourney.png",
+    "verified": "2026-11-04",
+    "status": "verified",
+    "notes": null,
+    "evidence": [
+      [
+        "Verified link",
+        "https://www.midjourney.com/"
+      ]
+    ],
+    "source": "https://github.com/kumaradoss16/ai-knowledge-base/blob/main/ai-tools/ai-tools-models-developer-resources.md"
+  },
+  {
+    "id": "ideogram",
+    "name": "Ideogram",
+    "org": "Ideogram",
+    "description": "Hosted text-to-image generator known for accurate in-image typography, producing images from prompts with style and aspect-ratio controls.",
+    "category": "Image Generation",
+    "source_category": "AI Image Generation",
+    "resource_type": "AI Tool",
+    "official_url": "https://ideogram.ai",
+    "pricing": "Freemium",
+    "pricing_class": "freemium",
+    "license": "Proprietary",
+    "open_source": false,
+    "platform": null,
+    "hosting": [
+      "Managed Cloud"
+    ],
+    "self_hostable": false,
+    "signup_required": null,
+    "tags": [
+      "Text-to-Image",
+      "Typography",
+      "Design",
+      "Diffusion"
+    ],
+    "initials": "ID",
+    "icon": "assets/img/icons/ideogram.png",
+    "verified": "2026-11-04",
+    "status": "verified",
+    "notes": null,
+    "evidence": [
+      [
+        "Verified link",
+        "https://ideogram.ai"
+      ]
+    ],
+    "source": "https://github.com/kumaradoss16/ai-knowledge-base/blob/main/ai-tools/ai-tools-models-developer-resources.md"
+  },
+  {
+    "id": "krea-ai",
+    "name": "Krea AI",
+    "org": "Krea",
+    "description": "Real-time visual generation and enhancement tool featuring instant canvas drawing-to-image synthesis, video generation, AI upscaling, and motion video controls for digital artists, designers, and creative directors.",
+    "category": "Image Generation",
+    "source_category": "AI Image Generation",
+    "resource_type": "AI Tool",
+    "official_url": "https://www.krea.ai/",
+    "pricing": "Freemium",
+    "pricing_class": "freemium",
+    "license": "Proprietary",
+    "open_source": false,
+    "platform": null,
+    "hosting": [
+      "Managed Cloud"
+    ],
+    "self_hostable": false,
+    "signup_required": null,
+    "tags": [
+      "Real-Time-Generation",
+      "AI-Upscaling",
+      "Latent-Consistency",
+      "Text-to-Image",
+      "Creative-Suite"
+    ],
+    "initials": "KR",
+    "icon": "assets/img/icons/krea-ai.png",
+    "verified": "2026-11-04",
+    "status": "verified",
+    "notes": null,
+    "evidence": [
+      [
+        "Verified link",
+        "https://www.krea.ai/"
+      ]
+    ],
+    "source": "https://github.com/kumaradoss16/ai-knowledge-base/blob/main/ai-tools/ai-tools-models-developer-resources.md"
+  },
+  {
+    "id": "leonardo-ai",
+    "name": "Leonardo.Ai",
+    "org": "Leonardo.Ai",
+    "description": "Generative AI creative production platform offering fine-tuned image generation models, real-time canvas editing, texture generation for 3D assets, and graphic design tooling for game developers and marketing artists.",
+    "category": "Image Generation",
+    "source_category": "AI Image Generation",
+    "resource_type": "AI Tool",
+    "official_url": "https://leonardo.ai/",
+    "pricing": "Freemium",
+    "pricing_class": "freemium",
+    "license": "Proprietary",
+    "open_source": false,
+    "platform": null,
+    "hosting": [
+      "Managed Cloud"
+    ],
+    "self_hostable": false,
+    "signup_required": null,
+    "tags": [
+      "Image-Generation",
+      "Game-Assets",
+      "3D-Textures",
+      "Inpainting",
+      "Canvas-Editor"
+    ],
+    "initials": "LE",
+    "icon": "assets/img/icons/leonardo-ai.png",
+    "verified": "2026-11-04",
+    "status": "verified",
+    "notes": null,
+    "evidence": [
+      [
+        "Verified link",
+        "https://leonardo.ai/"
+      ]
+    ],
+    "source": "https://github.com/kumaradoss16/ai-knowledge-base/blob/main/ai-tools/ai-tools-models-developer-resources.md"
+  },
+  {
+    "id": "adobe-firefly",
+    "name": "Adobe Firefly",
+    "org": "Adobe",
+    "description": "Creative generative AI suite developed by Adobe trained exclusively on licensed content from Adobe Stock and public domain assets, powering text-to-image, generative fill, text effects, and vector recoloring inside Adobe Creative Cloud.",
+    "category": "Image Generation",
+    "source_category": "AI Image Generation",
+    "resource_type": "AI Tool",
+    "official_url": "https://firefly.adobe.com/",
+    "pricing": "Freemium",
+    "pricing_class": "freemium",
+    "license": "Proprietary",
+    "open_source": false,
+    "platform": null,
+    "hosting": [
+      "Managed Cloud"
+    ],
+    "self_hostable": false,
+    "signup_required": null,
+    "tags": [
+      "Generative-Fill",
+      "Text-to-Image",
+      "Commercial-Safety",
+      "Vector-Recolor",
+      "Creative-Cloud"
+    ],
+    "initials": "AF",
+    "icon": "assets/img/icons/adobe-firefly.png",
+    "verified": "2026-11-04",
+    "status": "verified",
+    "notes": null,
+    "evidence": [
+      [
+        "Verified link",
+        "https://firefly.adobe.com/"
+      ]
+    ],
+    "source": "https://github.com/kumaradoss16/ai-knowledge-base/blob/main/ai-tools/ai-tools-models-developer-resources.md"
+  },
+  {
+    "id": "runway",
+    "name": "Runway",
+    "org": "Runway",
+    "description": "AI-powered creative platform for text-to-video and image-to-video generation, video editing, background removal, and inpainting. Used by filmmakers and content creators for generative video workflows.",
+    "category": "Video Generation",
+    "source_category": "AI Video Generation",
+    "resource_type": "AI Tool",
+    "official_url": "https://runwayml.com/",
+    "pricing": "Freemium",
+    "pricing_class": "freemium",
+    "license": "Proprietary",
+    "open_source": false,
+    "platform": null,
+    "hosting": [
+      "Managed Cloud"
+    ],
+    "self_hostable": false,
+    "signup_required": null,
+    "tags": [
+      "Video-Generation",
+      "Text-to-Video",
+      "Image-to-Video",
+      "Creative",
+      "Generative-AI"
+    ],
+    "initials": "RU",
+    "icon": "assets/img/icons/runway.png",
+    "verified": "2026-11-04",
+    "status": "verified",
+    "notes": null,
+    "evidence": [
+      [
+        "Verified link",
+        "https://runwayml.com/"
+      ]
+    ],
+    "source": "https://github.com/kumaradoss16/ai-knowledge-base/blob/main/ai-tools/ai-tools-models-developer-resources.md"
+  },
+  {
+    "id": "synthesia",
+    "name": "Synthesia",
+    "org": "Synthesia",
+    "description": "AI video generation platform that creates talking-avatar videos from text scripts using over 230 AI avatars and 140+ languages. Used for corporate training, product demos, and marketing videos without filming.",
+    "category": "Video Generation",
+    "source_category": "AI Video Generation",
+    "resource_type": "AI Tool",
+    "official_url": "https://www.synthesia.io/",
+    "pricing": "Freemium",
+    "pricing_class": "freemium",
+    "license": "Proprietary",
+    "open_source": false,
+    "platform": null,
+    "hosting": [
+      "Managed Cloud"
+    ],
+    "self_hostable": false,
+    "signup_required": null,
+    "tags": [
+      "Video-Generation",
+      "AI-Avatars",
+      "Text-to-Video",
+      "Multilingual",
+      "Corporate-Training"
+    ],
+    "initials": "SY",
+    "icon": "assets/img/icons/synthesia.png",
+    "verified": "2026-11-04",
+    "status": "verified",
+    "notes": null,
+    "evidence": [
+      [
+        "Verified link",
+        "https://www.synthesia.io/"
+      ]
+    ],
+    "source": "https://github.com/kumaradoss16/ai-knowledge-base/blob/main/ai-tools/ai-tools-models-developer-resources.md"
+  },
+  {
+    "id": "pika",
+    "name": "Pika",
+    "org": "Pika",
+    "description": "AI video generation platform enabling text-to-video and image-to-video creation with motion control, style transfer, and video editing features. Targeted at creators generating short-form social media video content.",
+    "category": "Video Generation",
+    "source_category": "AI Video Generation",
+    "resource_type": "AI Tool",
+    "official_url": "https://pika.art/",
+    "pricing": "Freemium",
+    "pricing_class": "freemium",
+    "license": "Proprietary",
+    "open_source": false,
+    "platform": null,
+    "hosting": [
+      "Managed Cloud"
+    ],
+    "self_hostable": false,
+    "signup_required": null,
+    "tags": [
+      "Video-Generation",
+      "Text-to-Video",
+      "Image-to-Video",
+      "Creative",
+      "Social-Media"
+    ],
+    "initials": "PI",
+    "icon": "assets/img/icons/pika.png",
+    "verified": "2026-11-04",
+    "status": "verified",
+    "notes": null,
+    "evidence": [
+      [
+        "Verified link",
+        "https://pika.art/"
+      ]
+    ],
+    "source": "https://github.com/kumaradoss16/ai-knowledge-base/blob/main/ai-tools/ai-tools-models-developer-resources.md"
+  },
+  {
+    "id": "heygen",
+    "name": "HeyGen",
+    "org": "HeyGen",
+    "description": "AI video generation platform that produces studio-quality talking avatar videos, multilingual video translations with lip-sync matching, and personalized marketing videos from text scripts and audio recordings.",
+    "category": "Video Generation",
+    "source_category": "AI Video Generation",
+    "resource_type": "AI Tool",
+    "official_url": "https://www.heygen.com/",
+    "pricing": "Freemium",
+    "pricing_class": "freemium",
+    "license": "Proprietary",
+    "open_source": false,
+    "platform": null,
+    "hosting": [
+      "Managed Cloud"
+    ],
+    "self_hostable": false,
+    "signup_required": null,
+    "tags": [
+      "AI-Avatars",
+      "Video-Translation",
+      "Lip-Sync",
+      "Text-to-Video",
+      "Multilingual"
+    ],
+    "initials": "HE",
+    "icon": "assets/img/icons/heygen.png",
+    "verified": "2026-11-04",
+    "status": "verified",
+    "notes": null,
+    "evidence": [
+      [
+        "Verified link",
+        "https://www.heygen.com/"
+      ]
+    ],
+    "source": "https://github.com/kumaradoss16/ai-knowledge-base/blob/main/ai-tools/ai-tools-models-developer-resources.md"
+  },
+  {
+    "id": "luma-dream-machine",
+    "name": "Luma Dream Machine",
+    "org": "Luma AI",
+    "description": "AI video generation system built by Luma AI that transforms text and image inputs into realistic 5-second video shots with accurate physics, coherent motion, character consistency, and dynamic camera movements.",
+    "category": "Video Generation",
+    "source_category": "AI Video Generation",
+    "resource_type": "AI Tool",
+    "official_url": "https://lumalabs.ai/dream-machine",
+    "pricing": "Freemium",
+    "pricing_class": "freemium",
+    "license": "Proprietary",
+    "open_source": false,
+    "platform": null,
+    "hosting": [
+      "Managed Cloud"
+    ],
+    "self_hostable": false,
+    "signup_required": null,
+    "tags": [
+      "Video-Generation",
+      "Text-to-Video",
+      "Image-to-Video",
+      "Camera-Control",
+      "High-Fidelity"
+    ],
+    "initials": "LU",
+    "icon": "assets/img/icons/luma-dream-machine.png",
+    "verified": "2026-11-04",
+    "status": "verified",
+    "notes": null,
+    "evidence": [
+      [
+        "Verified link",
+        "https://lumalabs.ai/dream-machine"
+      ]
+    ],
+    "source": "https://github.com/kumaradoss16/ai-knowledge-base/blob/main/ai-tools/ai-tools-models-developer-resources.md"
+  },
+  {
+    "id": "kling-ai",
+    "name": "Kling AI",
+    "org": "Kuaishou",
+    "description": "High-definition video generation platform developed by Kuaishou capable of rendering cinematic videos up to 2 minutes long at 1080p resolution and 30fps with advanced physical simulation and 3D spatio-temporal attention.",
+    "category": "Video Generation",
+    "source_category": "AI Video Generation",
+    "resource_type": "AI Tool",
+    "official_url": "https://klingai.com/",
+    "pricing": "Freemium",
+    "pricing_class": "freemium",
+    "license": "Proprietary",
+    "open_source": false,
+    "platform": null,
+    "hosting": [
+      "Managed Cloud"
+    ],
+    "self_hostable": false,
+    "signup_required": null,
+    "tags": [
+      "Video-Generation",
+      "High-Definition",
+      "Physics-Simulation",
+      "Camera-Movements",
+      "Kuaishou"
+    ],
+    "initials": "KL",
+    "icon": "assets/img/icons/kling-ai.png",
+    "verified": "2026-11-04",
+    "status": "verified",
+    "notes": null,
+    "evidence": [
+      [
+        "Verified link",
+        "https://klingai.com/"
+      ]
+    ],
+    "source": "https://github.com/kumaradoss16/ai-knowledge-base/blob/main/ai-tools/ai-tools-models-developer-resources.md"
+  },
+  {
+    "id": "elevenlabs",
+    "name": "ElevenLabs",
+    "org": "ElevenLabs",
+    "description": "AI voice synthesis platform supporting text-to-speech, voice cloning, multilingual speech generation, and audio dubbing. Provides an API for developer integration and a web studio for content creators.",
+    "category": "Audio & Voice",
+    "source_category": "AI Voice Generation",
+    "resource_type": "AI Tool",
+    "official_url": "https://elevenlabs.io/",
+    "pricing": "Freemium",
+    "pricing_class": "freemium",
+    "license": "Proprietary",
+    "open_source": false,
+    "platform": "Web",
+    "hosting": [
+      "Managed Cloud"
+    ],
+    "self_hostable": false,
+    "signup_required": null,
+    "tags": [
+      "Text-to-Speech",
+      "Voice-Cloning",
+      "Multilingual",
+      "TTS",
+      "Audio-Generation"
+    ],
+    "initials": "EL",
+    "icon": "assets/img/icons/elevenlabs.png",
+    "verified": "2026-11-04",
+    "status": "verified",
+    "notes": null,
+    "evidence": [
+      [
+        "Verified link",
+        "https://elevenlabs.io/"
+      ]
+    ],
+    "source": "https://github.com/kumaradoss16/ai-knowledge-base/blob/main/ai-tools/ai-tools-models-developer-resources.md"
+  },
+  {
+    "id": "suno",
+    "name": "Suno",
+    "org": "Suno",
+    "description": "Generative AI music creation platform that produces full-length songs with vocals, instruments, lyrics, and arrangements from natural language prompts. Enables genres from pop and rock to classical and hip-hop.",
+    "category": "Audio & Voice",
+    "source_category": "AI Music Generation",
+    "resource_type": "AI Tool",
+    "official_url": "https://suno.com/",
+    "pricing": "Freemium",
+    "pricing_class": "freemium",
+    "license": "Proprietary",
+    "open_source": false,
+    "platform": null,
+    "hosting": [
+      "Managed Cloud"
+    ],
+    "self_hostable": false,
+    "signup_required": null,
+    "tags": [
+      "Music-Generation",
+      "Audio-Synthesis",
+      "Text-to-Audio",
+      "Creative-AI",
+      "Songwriting"
+    ],
+    "initials": "SU",
+    "icon": "assets/img/icons/suno.png",
+    "verified": "2026-11-04",
+    "status": "verified",
+    "notes": null,
+    "evidence": [
+      [
+        "Verified link",
+        "https://suno.com/"
+      ]
+    ],
+    "source": "https://github.com/kumaradoss16/ai-knowledge-base/blob/main/ai-tools/ai-tools-models-developer-resources.md"
+  },
+  {
+    "id": "udio",
+    "name": "Udio",
+    "org": "Udio",
+    "description": "AI music creation service founded by former Google DeepMind researchers that synthesizes expressive vocal tracks, intricate musical compositions, and stem separations from descriptive text prompts with granular section-by-section editing.",
+    "category": "Audio & Voice",
+    "source_category": "AI Music Generation",
+    "resource_type": "AI Tool",
+    "official_url": "https://www.udio.com/",
+    "pricing": "Freemium",
+    "pricing_class": "freemium",
+    "license": "Proprietary",
+    "open_source": false,
+    "platform": null,
+    "hosting": [
+      "Managed Cloud"
+    ],
+    "self_hostable": false,
+    "signup_required": null,
+    "tags": [
+      "Music-Generation",
+      "Audio-Synthesis",
+      "Stem-Separation",
+      "Text-to-Music",
+      "Creative-AI"
+    ],
+    "initials": "UD",
+    "icon": "assets/img/icons/udio.png",
+    "verified": "2026-11-04",
+    "status": "verified",
+    "notes": null,
+    "evidence": [
+      [
+        "Verified link",
+        "https://www.udio.com/"
+      ]
+    ],
+    "source": "https://github.com/kumaradoss16/ai-knowledge-base/blob/main/ai-tools/ai-tools-models-developer-resources.md"
+  },
+  {
+    "id": "speechify",
+    "name": "Speechify",
+    "org": "Speechify",
+    "description": "AI text-to-speech reading application that converts books, PDFs, online articles, and documents into natural humanlike speech at speeds up to 4.5x, featuring celebrity voice models, OCR document scanning, and cross-device sync.",
+    "category": "Audio & Voice",
+    "source_category": "AI Voice Generation",
+    "resource_type": "AI Tool",
+    "official_url": "https://speechify.com/",
+    "pricing": "Freemium",
+    "pricing_class": "freemium",
+    "license": "Proprietary",
+    "open_source": false,
+    "platform": "Multiple",
+    "hosting": [
+      "Managed Cloud"
+    ],
+    "self_hostable": false,
+    "signup_required": null,
+    "tags": [
+      "Text-to-Speech",
+      "Audio-Reader",
+      "OCR-Scanning",
+      "Accessibility",
+      "Voiceover"
+    ],
+    "initials": "SP",
+    "icon": "assets/img/icons/speechify.png",
+    "verified": "2026-11-04",
+    "status": "verified",
+    "notes": null,
+    "evidence": [
+      [
+        "Verified link",
+        "https://speechify.com/"
+      ]
+    ],
+    "source": "https://github.com/kumaradoss16/ai-knowledge-base/blob/main/ai-tools/ai-tools-models-developer-resources.md"
+  },
+  {
+    "id": "descript",
+    "name": "Descript",
+    "org": "Descript",
+    "description": "AI-powered audio and video editing platform that treats media as text-based documents. Supports transcript-based editing, AI voice cloning, filler word removal, screen recording, and podcast/video production.",
+    "category": "Audio & Voice",
+    "source_category": "AI Audio/Video Editing",
+    "resource_type": "AI Tool",
+    "official_url": "https://www.descript.com/",
+    "pricing": "Freemium",
+    "pricing_class": "freemium",
+    "license": "Proprietary",
+    "open_source": false,
+    "platform": null,
+    "hosting": [
+      "Managed Cloud"
+    ],
+    "self_hostable": false,
+    "signup_required": null,
+    "tags": [
+      "Video-Editing",
+      "Audio-Editing",
+      "Transcription",
+      "Voice-Cloning",
+      "Podcast"
+    ],
+    "initials": "DE",
+    "icon": "assets/img/icons/descript.png",
+    "verified": "2026-11-04",
+    "status": "verified",
+    "notes": null,
+    "evidence": [
+      [
+        "Verified link",
+        "https://www.descript.com/"
+      ]
+    ],
+    "source": "https://github.com/kumaradoss16/ai-knowledge-base/blob/main/ai-tools/ai-tools-models-developer-resources.md"
+  },
+  {
+    "id": "canva-magic-studio",
+    "name": "Canva Magic Studio",
+    "org": "Canva",
+    "description": "Suite of generative design features embedded across the Canva ecosystem, including Magic Media (text-to-image/video), Magic Expand, Magic Eraser, Magic Switch (multi-format document conversion), and AI copy generation.",
+    "category": "Design & Creative",
+    "source_category": "AI Design Tools",
+    "resource_type": "AI Tool",
+    "official_url": "https://www.canva.com/magic-studio/",
+    "pricing": "Freemium",
+    "pricing_class": "freemium",
+    "license": "Proprietary",
+    "open_source": false,
+    "platform": null,
+    "hosting": [
+      "Managed Cloud"
+    ],
+    "self_hostable": false,
+    "signup_required": null,
+    "tags": [
+      "Graphic-Design",
+      "Magic-Eraser",
+      "Visual-Content",
+      "Social-Media",
+      "Generative-Design"
+    ],
+    "initials": "CV",
+    "icon": "assets/img/icons/canva-magic-studio.png",
+    "verified": "2026-11-04",
+    "status": "verified",
+    "notes": null,
+    "evidence": [
+      [
+        "Verified link",
+        "https://www.canva.com/magic-studio/"
+      ]
+    ],
+    "source": "https://github.com/kumaradoss16/ai-knowledge-base/blob/main/ai-tools/ai-tools-models-developer-resources.md"
+  },
+  {
+    "id": "gamma",
+    "name": "Gamma",
+    "org": "Gamma",
+    "description": "AI-native presentation and document generator that creates polished decks, webpages, and documents from a one-line prompt, with adaptive layouts, generated imagery, and live collaboration.",
+    "category": "Design & Creative",
+    "source_category": "AI Presentation Builders",
+    "resource_type": "AI Tool",
+    "official_url": "https://gamma.app/",
+    "pricing": "Freemium",
+    "pricing_class": "freemium",
+    "license": "Proprietary",
+    "open_source": false,
+    "platform": null,
+    "hosting": [
+      "Managed Cloud"
+    ],
+    "self_hostable": false,
+    "signup_required": null,
+    "tags": [
+      "Presentations",
+      "Documents",
+      "Generative-Decks",
+      "Collaboration",
+      "Pitch-Decks"
+    ],
+    "initials": "GA",
+    "icon": "assets/img/icons/gamma.png",
+    "verified": "2026-11-04",
+    "status": "verified",
+    "notes": null,
+    "evidence": [
+      [
+        "Verified link",
+        "https://gamma.app/"
+      ]
+    ],
+    "source": "https://github.com/kumaradoss16/ai-knowledge-base/blob/main/ai-tools/ai-tools-models-developer-resources.md"
+  },
+  {
+    "id": "beautiful-ai",
+    "name": "Beautiful.ai",
+    "org": "Beautiful.ai",
+    "description": "Cloud-based presentation tool using smart design rules and AI generation to automatically adapt slide layouts as content is added. Converts text outlines into finished slide decks with professional typography and color palettes.",
+    "category": "Design & Creative",
+    "source_category": "AI Presentation Builders",
+    "resource_type": "AI Tool",
+    "official_url": "https://www.beautiful.ai/",
+    "pricing": "Paid",
+    "pricing_class": "paid",
+    "license": "Proprietary",
+    "open_source": false,
+    "platform": null,
+    "hosting": [
+      "Managed Cloud"
+    ],
+    "self_hostable": false,
+    "signup_required": null,
+    "tags": [
+      "Presentations",
+      "Smart-Slides",
+      "Auto-Layout",
+      "Business-Graphics",
+      "Design-Automation"
+    ],
+    "initials": "BT",
+    "icon": "assets/img/icons/beautiful-ai.png",
+    "verified": "2026-11-04",
+    "status": "verified",
+    "notes": null,
+    "evidence": [
+      [
+        "Verified link",
+        "https://www.beautiful.ai/"
+      ]
+    ],
+    "source": "https://github.com/kumaradoss16/ai-knowledge-base/blob/main/ai-tools/ai-tools-models-developer-resources.md"
+  },
+  {
+    "id": "tome",
+    "name": "Tome",
+    "org": "Tome",
+    "description": "AI-native storytelling workspace that generates multimedia narratives, presentations, and product teardowns. Combines generated copy, relevant AI imagery, interactive prototypes, and web embeds on flexible dynamic canvases.",
+    "category": "Design & Creative",
+    "source_category": "AI Presentation Builders",
+    "resource_type": "AI Tool",
+    "official_url": "https://tome.app/",
+    "pricing": "Freemium",
+    "pricing_class": "freemium",
+    "license": "Proprietary",
+    "open_source": false,
+    "platform": null,
+    "hosting": [
+      "Managed Cloud"
+    ],
+    "self_hostable": false,
+    "signup_required": null,
+    "tags": [
+      "Storytelling",
+      "Presentations",
+      "Generative-Decks",
+      "Interactive-Canvas",
+      "Pitch-Decks"
+    ],
+    "initials": "TM",
+    "icon": null,
+    "verified": "2026-11-04",
+    "status": "verified",
+    "notes": null,
+    "evidence": [
+      [
+        "Verified link",
+        "https://tome.app/"
+      ]
+    ],
+    "source": "https://github.com/kumaradoss16/ai-knowledge-base/blob/main/ai-tools/ai-tools-models-developer-resources.md"
+  },
+  {
+    "id": "julius-ai",
+    "name": "Julius AI",
+    "org": "Julius AI",
+    "description": "AI-powered data analysis assistant that interprets spreadsheets, CSVs, and SQL databases. Generates Python scripts in an internal sandbox to render publication-ready charts, perform statistical models, and draft analytical reports.",
+    "category": "Data & Docs",
+    "source_category": "AI Data Analysis",
+    "resource_type": "AI Tool",
+    "official_url": "https://julius.ai/",
+    "pricing": "Freemium",
+    "pricing_class": "freemium",
+    "license": "Proprietary",
+    "open_source": false,
+    "platform": null,
+    "hosting": [
+      "Managed Cloud"
+    ],
+    "self_hostable": false,
+    "signup_required": null,
+    "tags": [
+      "Data-Analysis",
+      "Python-Execution",
+      "Statistical-Modeling",
+      "Charting",
+      "Spreadsheet-AI"
+    ],
+    "initials": "JU",
+    "icon": "assets/img/icons/julius-ai.png",
+    "verified": "2026-11-04",
+    "status": "verified",
+    "notes": null,
+    "evidence": [
+      [
+        "Verified link",
+        "https://julius.ai/"
+      ]
+    ],
+    "source": "https://github.com/kumaradoss16/ai-knowledge-base/blob/main/ai-tools/ai-tools-models-developer-resources.md"
+  },
+  {
+    "id": "otter-ai",
+    "name": "Otter.ai",
+    "org": "Otter.ai",
+    "description": "AI transcription and meeting assistant that records, transcribes, and summarizes meetings in real-time. Integrates with Zoom, Google Meet, Microsoft Teams, and calendar systems to automate meeting notes.",
+    "category": "Data & Docs",
+    "source_category": "AI Meeting Assistants",
+    "resource_type": "AI Tool",
+    "official_url": "https://otter.ai/",
+    "pricing": "Freemium",
+    "pricing_class": "freemium",
+    "license": "Proprietary",
+    "open_source": false,
+    "platform": null,
+    "hosting": [
+      "Managed Cloud"
+    ],
+    "self_hostable": false,
+    "signup_required": null,
+    "tags": [
+      "Transcription",
+      "Meeting-Assistant",
+      "Speech-to-Text",
+      "Summarization",
+      "Collaboration"
+    ],
+    "initials": "OT",
+    "icon": "assets/img/icons/otter-ai.png",
+    "verified": "2026-11-04",
+    "status": "verified",
+    "notes": null,
+    "evidence": [
+      [
+        "Verified link",
+        "https://otter.ai/"
+      ]
+    ],
+    "source": "https://github.com/kumaradoss16/ai-knowledge-base/blob/main/ai-tools/ai-tools-models-developer-resources.md"
+  },
+  {
+    "id": "fireflies-ai",
+    "name": "Fireflies.ai",
+    "org": "Fireflies.ai",
+    "description": "AI meeting assistant that joins video conference calls (Zoom, Google Meet, Teams, Webex) to record audio, produce searchable timestamped transcripts, extract action items, and generate executive recaps with CRM integrations.",
+    "category": "Data & Docs",
+    "source_category": "AI Meeting Assistants",
+    "resource_type": "AI Tool",
+    "official_url": "https://fireflies.ai/",
+    "pricing": "Freemium",
+    "pricing_class": "freemium",
+    "license": "Proprietary",
+    "open_source": false,
+    "platform": null,
+    "hosting": [
+      "Managed Cloud"
+    ],
+    "self_hostable": false,
+    "signup_required": null,
+    "tags": [
+      "Meeting-Assistant",
+      "Voice-Analytics",
+      "Transcription",
+      "CRM-Integration",
+      "Audio-Intelligence"
+    ],
+    "initials": "FI",
+    "icon": "assets/img/icons/fireflies-ai.png",
+    "verified": "2026-11-04",
+    "status": "verified",
+    "notes": null,
+    "evidence": [
+      [
+        "Verified link",
+        "https://fireflies.ai/"
+      ]
+    ],
+    "source": "https://github.com/kumaradoss16/ai-knowledge-base/blob/main/ai-tools/ai-tools-models-developer-resources.md"
+  }
+]

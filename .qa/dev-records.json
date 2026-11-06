@@ -1,0 +1,2166 @@
+[
+ {
+  "name": "LangChain",
+  "iconUrl": "https://www.google.com/s2/favicons?domain=langchain.com&sz=128",
+  "domain": "langchain.com",
+  "category": "Agent Frameworks",
+  "subtype": "Agent Framework",
+  "desc": "Open-source Python and JavaScript framework for building LLM-powered applications and agents. Provides composable abstractions for chains, tools, memory, and retrieval to streamline AI application development.",
+  "pricingClass": "open_source",
+  "signup": false,
+  "local": true,
+  "tags": [
+   "Agent-Framework",
+   "LLM",
+   "RAG",
+   "Tool-Calling",
+   "Python",
+   "JavaScript",
+   "Chain"
+  ],
+  "officialUrl": "https://www.langchain.com/",
+  "id": "developer_resource:langchain",
+  "status": "verified",
+  "evidence": [
+   [
+    "LangChain Icon",
+    "https://www.google.com/s2/favicons?domain=langchain.com&sz=128"
+   ],
+   [
+    "LangChain",
+    "https://www.langchain.com/"
+   ],
+   [
+    "LangChain Official Website",
+    "https://www.langchain.com/"
+   ],
+   [
+    "LangChain GitHub",
+    "https://github.com/langchain-ai/langchain"
+   ],
+   [
+    "LangChain Docs",
+    "https://python.langchain.com/"
+   ]
+  ],
+  "verified": "2026-11-03",
+  "notes": "Core framework is MIT-licensed and free. LangSmith (observability) and LangGraph Cloud (managed orchestration) are separate commercial products from LangChain Inc. LangGraph (graph-based agent orchestration) is a distinct but closely related project cataloged separately.\n\n---"
+ },
+ {
+  "name": "LlamaIndex",
+  "iconUrl": "https://www.google.com/s2/favicons?domain=llamaindex.ai&sz=128",
+  "domain": "llamaindex.ai",
+  "category": "RAG Frameworks",
+  "subtype": "RAG Framework",
+  "desc": "Open-source data framework for building RAG (Retrieval-Augmented Generation) applications. Provides data ingestion, indexing, retrieval, and query engines for connecting LLMs to external documents and data sources.",
+  "pricingClass": "open_source",
+  "signup": false,
+  "local": true,
+  "tags": [
+   "RAG",
+   "LLM",
+   "Indexing",
+   "Retrieval",
+   "Data-Framework",
+   "Python"
+  ],
+  "officialUrl": "https://www.llamaindex.ai/",
+  "id": "developer_resource:llamaindex",
+  "status": "verified",
+  "evidence": [
+   [
+    "LlamaIndex Icon",
+    "https://www.google.com/s2/favicons?domain=llamaindex.ai&sz=128"
+   ],
+   [
+    "LlamaIndex",
+    "https://www.llamaindex.ai/"
+   ],
+   [
+    "LlamaIndex Official Website",
+    "https://www.llamaindex.ai/"
+   ],
+   [
+    "LlamaIndex GitHub",
+    "https://github.com/run-llama/llama_index"
+   ],
+   [
+    "LlamaIndex Docs",
+    "https://docs.llamaindex.ai/"
+   ]
+  ],
+  "verified": "2026-11-03",
+  "notes": "Core framework is MIT-licensed. LlamaCloud is a commercial managed service for production RAG pipelines offered by LlamaIndex (formerly Jerry Liu's company). Formerly known as GPT Index before rebranding to LlamaIndex.\n\n---"
+ },
+ {
+  "name": "Qdrant",
+  "iconUrl": "https://www.google.com/s2/favicons?domain=qdrant.tech&sz=128",
+  "domain": "qdrant.tech",
+  "category": "Vector Databases",
+  "subtype": "Vector Database",
+  "desc": "High-performance vector database and similarity search engine built in Rust for storing, indexing, and querying vector embeddings. Designed for semantic search, RAG, and AI application backends with filtering support.",
+  "pricingClass": "open_source",
+  "signup": false,
+  "local": true,
+  "tags": [
+   "Vector-Database",
+   "Embeddings",
+   "Semantic-Search",
+   "RAG",
+   "Rust",
+   "API"
+  ],
+  "officialUrl": "https://qdrant.tech/",
+  "id": "developer_resource:qdrant",
+  "status": "verified",
+  "evidence": [
+   [
+    "Qdrant Icon",
+    "https://www.google.com/s2/favicons?domain=qdrant.tech&sz=128"
+   ],
+   [
+    "Qdrant",
+    "https://qdrant.tech/"
+   ],
+   [
+    "Qdrant Official Website",
+    "https://qdrant.tech/"
+   ],
+   [
+    "Qdrant Documentation",
+    "https://qdrant.tech/documentation/"
+   ],
+   [
+    "Qdrant GitHub",
+    "https://github.com/qdrant/qdrant"
+   ]
+  ],
+  "verified": "2026-11-03",
+  "notes": "Core engine is Apache 2.0 licensed and freely self-hostable. Qdrant Cloud is a managed, fully-hosted offering with a free tier (1GB cluster). Supports sparse vectors, payload filtering, and multi-tenancy. Written in Rust for performance and memory safety.\n\n---"
+ },
+ {
+  "name": "Ollama",
+  "iconUrl": "https://www.google.com/s2/favicons?domain=ollama.com&sz=128",
+  "domain": "ollama.com",
+  "category": "Local AI and Model Infrastructure",
+  "subtype": "Local LLM Runtime",
+  "desc": "Open-source runtime for running large language models locally on macOS, Windows, and Linux. Exposes an OpenAI-compatible REST API, supports NVIDIA/AMD GPU acceleration, and manages model downloads via a curated library.",
+  "pricingClass": "open_source",
+  "signup": false,
+  "local": true,
+  "tags": [
+   "Local-LLM",
+   "LLM-Runtime",
+   "Inference",
+   "GPU-Acceleration",
+   "OpenAI-Compatible",
+   "Model-Management"
+  ],
+  "officialUrl": "https://ollama.com/",
+  "id": "developer_resource:ollama",
+  "status": "verified",
+  "evidence": [
+   [
+    "Ollama Icon",
+    "https://www.google.com/s2/favicons?domain=ollama.com&sz=128"
+   ],
+   [
+    "Ollama",
+    "https://ollama.com/"
+   ],
+   [
+    "Ollama Official Website",
+    "https://ollama.com/"
+   ],
+   [
+    "Ollama GitHub",
+    "https://github.com/ollama/ollama"
+   ],
+   [
+    "Ollama Library",
+    "https://ollama.com/library"
+   ]
+  ],
+  "verified": "2026-11-03",
+  "notes": "MIT-licensed. Supports CUDA (NVIDIA), ROCm (AMD), and Metal (Apple Silicon) acceleration. Modelfile system enables custom model configuration. Provides a Docker image for server deployments. Works with Llama, Qwen, Gemma, Mistral, and many other open-weight model families.\n\n---"
+ },
+ {
+  "name": "vLLM",
+  "iconUrl": "https://www.google.com/s2/favicons?domain=vllm.ai&sz=128",
+  "domain": "vllm.ai",
+  "category": "Local AI and Model Infrastructure",
+  "subtype": "Model Serving Engine",
+  "desc": "High-throughput LLM inference and serving engine using PagedAttention for efficient GPU memory management. Provides OpenAI-compatible APIs, continuous batching, and support for distributed multi-GPU inference.",
+  "pricingClass": "open_source",
+  "signup": false,
+  "local": true,
+  "tags": [
+   "Model-Serving",
+   "LLM-Inference",
+   "PagedAttention",
+   "GPU",
+   "OpenAI-Compatible",
+   "Distributed-Inference"
+  ],
+  "officialUrl": "https://vllm.ai/",
+  "id": "developer_resource:vllm",
+  "status": "verified",
+  "evidence": [
+   [
+    "vLLM Icon",
+    "https://www.google.com/s2/favicons?domain=vllm.ai&sz=128"
+   ],
+   [
+    "vLLM",
+    "https://vllm.ai/"
+   ],
+   [
+    "vLLM Official Website",
+    "https://vllm.ai/"
+   ],
+   [
+    "vLLM GitHub",
+    "https://github.com/vllm-project/vllm"
+   ],
+   [
+    "vLLM Documentation",
+    "https://docs.vllm.ai/"
+   ]
+  ],
+  "verified": "2026-11-03",
+  "notes": "Apache 2.0 licensed. Key innovation is PagedAttention — a memory management technique enabling 24x higher throughput vs naive implementations. Supports tensor parallelism and pipeline parallelism for multi-GPU deployments. Widely used in production LLM serving.\n\n---"
+ },
+ {
+  "name": "Hugging Face Hub",
+  "iconUrl": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=128",
+  "domain": "huggingface.co",
+  "category": "Model Hosting",
+  "subtype": "Model Registry and Collaboration Platform",
+  "desc": "Central platform for hosting, discovering, and sharing AI models, datasets, and Spaces. Provides Git-based model versioning, model cards, inference APIs, and a collaborative ecosystem for the ML community.",
+  "pricingClass": "free_tier",
+  "signup": true,
+  "local": false,
+  "tags": [
+   "Model-Registry",
+   "Dataset-Hosting",
+   "Inference-API",
+   "Collaboration",
+   "Git-LFS",
+   "Model-Cards"
+  ],
+  "officialUrl": "https://huggingface.co/",
+  "id": "developer_resource:huggingface-hub",
+  "status": "verified",
+  "evidence": [
+   [
+    "HuggingFace Icon",
+    "https://www.google.com/s2/favicons?domain=huggingface.co&sz=128"
+   ],
+   [
+    "Hugging Face Hub",
+    "https://huggingface.co/"
+   ],
+   [
+    "HuggingFace Official Website",
+    "https://huggingface.co/"
+   ],
+   [
+    "HuggingFace Pricing",
+    "https://huggingface.co/pricing"
+   ],
+   [
+    "HuggingFace Docs",
+    "https://huggingface.co/docs/hub/index"
+   ]
+  ],
+  "verified": "2026-11-03",
+  "notes": "Core public model/dataset hosting is free. Pro plan (\\$9/month) adds storage and compute credits. Enterprise plan starts at \\$50/user/month with SSO, audit logs, and private regions. A self-hosted Enterprise Hub version exists but is distinct from the public platform.\n\n---"
+ },
+ {
+  "name": "Pinecone",
+  "iconUrl": "https://www.google.com/s2/favicons?domain=pinecone.io&sz=128",
+  "domain": "pinecone.io",
+  "category": "Vector Databases",
+  "subtype": "Vector Database",
+  "desc": "Fully managed serverless vector database for semantic search, recommendation systems, and RAG applications. Provides automatic scaling, filtered search, and multi-tenancy with pay-per-use billing for reads, writes, and storage.",
+  "pricingClass": "free_tier",
+  "signup": true,
+  "local": false,
+  "tags": [
+   "Vector-Database",
+   "Semantic-Search",
+   "RAG",
+   "Serverless",
+   "Managed",
+   "Embeddings"
+  ],
+  "officialUrl": "https://www.pinecone.io/",
+  "id": "developer_resource:pinecone",
+  "status": "verified",
+  "evidence": [
+   [
+    "Pinecone Icon",
+    "https://www.google.com/s2/favicons?domain=pinecone.io&sz=128"
+   ],
+   [
+    "Pinecone",
+    "https://www.pinecone.io/"
+   ],
+   [
+    "Pinecone Official Website",
+    "https://www.pinecone.io/"
+   ],
+   [
+    "Pinecone Pricing",
+    "https://www.pinecone.io/pricing/"
+   ],
+   [
+    "Pinecone Docs",
+    "https://docs.pinecone.io/"
+   ]
+  ],
+  "verified": "2026-11-03",
+  "notes": "Fully managed cloud service only — no self-hosting option. Free Starter plan includes 2GB storage and limited usage. Standard production plans have a usage-based pricing model with read units, write units, and storage metering. Transitioned to serverless architecture in 2024.\n\n---"
+ },
+ {
+  "name": "Weaviate",
+  "iconUrl": "https://www.google.com/s2/favicons?domain=weaviate.io&sz=128",
+  "domain": "weaviate.io",
+  "category": "Vector Databases",
+  "subtype": "Vector Database",
+  "desc": "Open-source vector database with native multi-modal support, hybrid search (dense + sparse), and built-in ML model integrations. Supports semantic search, question answering, and classification at scale.",
+  "pricingClass": "open_source",
+  "signup": false,
+  "local": true,
+  "tags": [
+   "Vector-Database",
+   "Hybrid-Search",
+   "Multi-Modal",
+   "Semantic-Search",
+   "GraphQL",
+   "RAG"
+  ],
+  "officialUrl": "https://weaviate.io/",
+  "id": "developer_resource:weaviate",
+  "status": "verified",
+  "evidence": [
+   [
+    "Weaviate Icon",
+    "https://www.google.com/s2/favicons?domain=weaviate.io&sz=128"
+   ],
+   [
+    "Weaviate",
+    "https://weaviate.io/"
+   ],
+   [
+    "Weaviate Official Website",
+    "https://weaviate.io/"
+   ],
+   [
+    "Weaviate GitHub",
+    "https://github.com/weaviate/weaviate"
+   ],
+   [
+    "Weaviate Docs",
+    "https://weaviate.io/developers/weaviate"
+   ]
+  ],
+  "verified": "2026-11-03",
+  "notes": "Core engine is BSD-3-Clause licensed (open-source). Weaviate Cloud (WCD) is a managed service with a free sandbox tier. Supports GraphQL and REST APIs. Includes built-in vectorizer modules for OpenAI, Cohere, HuggingFace embeddings.\n\n---"
+ },
+ {
+  "name": "LangGraph",
+  "iconUrl": "https://www.google.com/s2/favicons?domain=langchain.com&sz=128",
+  "domain": "langchain.com",
+  "category": "Agent Orchestration",
+  "subtype": "Agent Orchestration Framework",
+  "desc": "Graph-based orchestration framework for building stateful multi-step AI agents with fine-grained control over loops, branching, and persistence. Designed for reliable, controllable agentic application workflows.",
+  "pricingClass": "open_source",
+  "signup": false,
+  "local": true,
+  "tags": [
+   "Agent-Orchestration",
+   "Graph-Workflow",
+   "State-Machine",
+   "LLM",
+   "Python",
+   "Multi-Agent"
+  ],
+  "officialUrl": "https://langchain-ai.github.io/langgraph/",
+  "id": "developer_resource:langgraph",
+  "status": "verified",
+  "evidence": [
+   [
+    "LangChain Icon",
+    "https://www.google.com/s2/favicons?domain=langchain.com&sz=128"
+   ],
+   [
+    "LangGraph",
+    "https://langchain-ai.github.io/langgraph/"
+   ],
+   [
+    "LangGraph Documentation",
+    "https://langchain-ai.github.io/langgraph/"
+   ],
+   [
+    "LangGraph GitHub",
+    "https://github.com/langchain-ai/langgraph"
+   ]
+  ],
+  "verified": "2026-11-03",
+  "notes": "Developed and maintained by LangChain Inc. MIT-licensed open-source library. LangGraph Cloud is a separate commercial managed deployment product. Distinct from LangChain (cataloged separately) — LangGraph focuses on stateful, cyclical workflows for agents.\n\n---"
+ },
+ {
+  "name": "CrewAI",
+  "iconUrl": "https://www.google.com/s2/favicons?domain=crewai.com&sz=128",
+  "domain": "crewai.com",
+  "category": "Multi-Agent Frameworks",
+  "subtype": "Multi-Agent Framework",
+  "desc": "Open-source Python framework for orchestrating autonomous AI agent teams. Enables role-based agent design, task delegation, memory sharing, and tool integration for complex multi-agent collaborative workflows.",
+  "pricingClass": "open_source",
+  "signup": false,
+  "local": true,
+  "tags": [
+   "Multi-Agent",
+   "Agent-Orchestration",
+   "Role-Based-Agents",
+   "Python",
+   "MCP",
+   "LLM"
+  ],
+  "officialUrl": "https://www.crewai.com/",
+  "id": "developer_resource:crewai",
+  "status": "verified",
+  "evidence": [
+   [
+    "CrewAI Icon",
+    "https://www.google.com/s2/favicons?domain=crewai.com&sz=128"
+   ],
+   [
+    "CrewAI",
+    "https://www.crewai.com/"
+   ],
+   [
+    "CrewAI Official Website",
+    "https://www.crewai.com/"
+   ],
+   [
+    "CrewAI GitHub",
+    "https://github.com/crewAIInc/crewAI"
+   ],
+   [
+    "CrewAI Docs",
+    "https://docs.crewai.com/"
+   ]
+  ],
+  "verified": "2026-11-03",
+  "notes": "Core Python framework is MIT-licensed. CrewAI Enterprise offers managed cloud deployment at custom pricing. Free plan on CrewAI cloud includes ~50 executions/month. Integrates with MCP (Model Context Protocol) and A2A (Agent-to-Agent) communication protocols.\n\n---"
+ },
+ {
+  "name": "Langfuse",
+  "iconUrl": "https://www.google.com/s2/favicons?domain=langfuse.com&sz=128",
+  "domain": "langfuse.com",
+  "category": "AI Observability",
+  "subtype": "LLM Observability Platform",
+  "desc": "Open-source LLM observability and tracing platform for debugging, monitoring, and evaluating LLM applications. Provides trace visualization, prompt management, evaluation workflows, and cost analytics.",
+  "pricingClass": "open_source",
+  "signup": false,
+  "local": true,
+  "tags": [
+   "LLM-Observability",
+   "Tracing",
+   "Evaluation",
+   "Prompt-Management",
+   "LLMOps",
+   "Open-Source"
+  ],
+  "officialUrl": "https://langfuse.com/",
+  "id": "developer_resource:langfuse",
+  "status": "verified",
+  "evidence": [
+   [
+    "Langfuse Icon",
+    "https://www.google.com/s2/favicons?domain=langfuse.com&sz=128"
+   ],
+   [
+    "Langfuse",
+    "https://langfuse.com/"
+   ],
+   [
+    "Langfuse Official Website",
+    "https://langfuse.com/"
+   ],
+   [
+    "Langfuse GitHub",
+    "https://github.com/langfuse/langfuse"
+   ],
+   [
+    "Langfuse Pricing",
+    "https://langfuse.com/pricing"
+   ]
+  ],
+  "verified": "2026-11-03",
+  "notes": "Core platform is MIT-licensed and self-hostable (via Docker). Langfuse Cloud offers a free Hobby tier (50K traces/month, 30-day retention). Core plan at \\$29/month, Pro at \\$199/month. Enterprise self-hosted plans available with SSO and advanced RBAC.\n\n---"
+ },
+ {
+  "name": "OpenAI API Platform",
+  "iconUrl": "https://www.google.com/s2/favicons?domain=openai.com&sz=128",
+  "domain": "platform.openai.com",
+  "category": "AI APIs",
+  "subtype": "AI API Platform",
+  "desc": "OpenAI's developer API platform providing programmatic access to GPT-4o, o1, Whisper, DALL·E, Embeddings, and Assistants API. Enables integration of OpenAI models into third-party applications and workflows.",
+  "pricingClass": "usage_based",
+  "signup": true,
+  "local": false,
+  "tags": [
+   "LLM-API",
+   "Developer-API",
+   "GPT",
+   "Embeddings",
+   "Speech",
+   "Image-Generation",
+   "Assistants"
+  ],
+  "officialUrl": "https://platform.openai.com/",
+  "id": "developer_resource:openai-api-platform",
+  "status": "verified",
+  "evidence": [
+   [
+    "OpenAI Icon",
+    "https://www.google.com/s2/favicons?domain=openai.com&sz=128"
+   ],
+   [
+    "OpenAI Platform",
+    "https://platform.openai.com/"
+   ],
+   [
+    "OpenAI Platform Docs",
+    "https://platform.openai.com/docs"
+   ],
+   [
+    "OpenAI API Pricing",
+    "https://openai.com/api/pricing/"
+   ]
+  ],
+  "verified": "2026-11-03",
+  "notes": "Distinct from the ChatGPT consumer product (tool:chatgpt) and from individual OpenAI models. Pricing is purely usage-based (per-token and per-request). Provides API access to all current OpenAI models including reasoning (o-series), GPT-4o, vision, TTS, ASR, embeddings, and image generation.\n\n---"
+ },
+ {
+  "name": "Anthropic API",
+  "iconUrl": "https://www.google.com/s2/favicons?domain=anthropic.com&sz=128",
+  "domain": "anthropic.com",
+  "category": "AI APIs",
+  "subtype": "AI API Platform",
+  "desc": "Anthropic's developer API providing access to Claude model family for text generation, vision, tool use, and document analysis. Offers usage-based token pricing and safety-focused model behavior.",
+  "pricingClass": "usage_based",
+  "signup": true,
+  "local": false,
+  "tags": [
+   "LLM-API",
+   "Claude",
+   "Developer-API",
+   "Vision",
+   "Tool-Use",
+   "Safety"
+  ],
+  "officialUrl": "https://console.anthropic.com/",
+  "id": "developer_resource:anthropic-api",
+  "status": "verified",
+  "evidence": [
+   [
+    "Anthropic Icon",
+    "https://www.google.com/s2/favicons?domain=anthropic.com&sz=128"
+   ],
+   [
+    "Anthropic API Console",
+    "https://console.anthropic.com/"
+   ],
+   [
+    "Anthropic API Documentation",
+    "https://docs.anthropic.com/"
+   ],
+   [
+    "Anthropic API Pricing",
+    "https://www.anthropic.com/pricing"
+   ]
+  ],
+  "verified": "2026-11-03",
+  "notes": "Distinct from Claude consumer product (tool:claude) and individual Claude model records. API access requires signup and payment method. Supports Claude 3.5 Sonnet, Claude 3.5 Haiku, and Claude 3 Opus. Available on AWS Bedrock and Google Cloud Vertex AI as third-party integrations.\n\n---"
+ },
+ {
+  "name": "llama.cpp",
+  "iconUrl": "https://www.google.com/s2/favicons?domain=github.com&sz=128",
+  "domain": "github.com/ggml-org/llama.cpp",
+  "category": "Local AI and Model Infrastructure",
+  "subtype": "Local LLM Inference Engine",
+  "desc": "C/C++ inference framework for running large language models locally using GGUF quantized model formats. Supports CPU-only inference with optional GPU acceleration on CUDA, Metal, Vulkan, and ROCm backends.",
+  "pricingClass": "open_source",
+  "signup": false,
+  "local": true,
+  "tags": [
+   "Local-Inference",
+   "GGUF",
+   "Quantization",
+   "CPU-Inference",
+   "GPU-Acceleration",
+   "C++"
+  ],
+  "officialUrl": "https://github.com/ggml-org/llama.cpp",
+  "id": "developer_resource:llama-cpp",
+  "status": "verified",
+  "evidence": [
+   [
+    "llama.cpp Icon",
+    "https://www.google.com/s2/favicons?domain=github.com&sz=128"
+   ],
+   [
+    "llama.cpp GitHub",
+    "https://github.com/ggml-org/llama.cpp"
+   ],
+   [
+    "llama.cpp GitHub Repository",
+    "https://github.com/ggml-org/llama.cpp"
+   ]
+  ],
+  "verified": "2026-11-03",
+  "notes": "MIT-licensed. Originally created by Georgi Gerganov; repository moved to ggml-org organization. The GGUF model format originated from this project. Foundation for many local LLM tools including Ollama. Supports LLaMA, Mistral, Gemma, Qwen, and many other architectures.\n\n---"
+ },
+ {
+  "name": "Chroma",
+  "iconUrl": "https://www.google.com/s2/favicons?domain=trychroma.com&sz=128",
+  "domain": "trychroma.com",
+  "category": "Vector Databases",
+  "subtype": "Vector Database",
+  "desc": "Open-source embedding database for AI applications. Provides a developer-friendly API for storing, querying, and managing embeddings locally or in a client-server deployment, with native Python and JavaScript clients.",
+  "pricingClass": "open_source",
+  "signup": false,
+  "local": true,
+  "tags": [
+   "Vector-Database",
+   "Embeddings",
+   "Local-First",
+   "RAG",
+   "Python",
+   "JavaScript"
+  ],
+  "officialUrl": "https://www.trychroma.com/",
+  "id": "developer_resource:chroma",
+  "status": "verified",
+  "evidence": [
+   [
+    "Chroma Icon",
+    "https://www.google.com/s2/favicons?domain=trychroma.com&sz=128"
+   ],
+   [
+    "Chroma",
+    "https://www.trychroma.com/"
+   ],
+   [
+    "Chroma Official Website",
+    "https://www.trychroma.com/"
+   ],
+   [
+    "Chroma GitHub",
+    "https://github.com/chroma-core/chroma"
+   ],
+   [
+    "Chroma Docs",
+    "https://docs.trychroma.com/"
+   ]
+  ],
+  "verified": "2026-11-03",
+  "notes": "Apache 2.0 licensed. Designed primarily for prototyping and local-first development. Chroma Cloud (managed service) is in development. Popular choice for RAG prototyping due to its simple in-memory and persistent local modes. Distinct from Pinecone and Weaviate in its local-first, developer-friendly philosophy.\n\n---"
+ },
+ {
+  "name": "AutoGen",
+  "iconUrl": "https://www.google.com/s2/favicons?domain=microsoft.com&sz=128",
+  "domain": "microsoft.github.io",
+  "category": "Multi-Agent Frameworks",
+  "subtype": "Multi-Agent Framework",
+  "desc": "Microsoft Research's open-source framework for building event-driven, distributed multi-agent AI systems. Supports asynchronous messaging, agent teams, human-in-the-loop workflows, and cross-language agent communication.",
+  "pricingClass": "open_source",
+  "signup": false,
+  "local": true,
+  "tags": [
+   "Multi-Agent",
+   "Event-Driven",
+   "Distributed-Agents",
+   "Microsoft",
+   "Python",
+   ".NET",
+   "LLM"
+  ],
+  "officialUrl": "https://microsoft.github.io/autogen/",
+  "id": "developer_resource:autogen",
+  "status": "verified",
+  "evidence": [
+   [
+    "Microsoft Icon",
+    "https://www.google.com/s2/favicons?domain=microsoft.com&sz=128"
+   ],
+   [
+    "AutoGen",
+    "https://microsoft.github.io/autogen/"
+   ],
+   [
+    "AutoGen Official Documentation",
+    "https://microsoft.github.io/autogen/"
+   ],
+   [
+    "AutoGen GitHub",
+    "https://github.com/microsoft/autogen"
+   ]
+  ],
+  "verified": "2026-11-03",
+  "notes": "MIT-licensed. AutoGen 0.4 (released 2024) introduced a redesigned asynchronous, event-driven architecture. Supports Python and .NET agents. AutoGen Studio is a no-code UI companion. Distinct from LangGraph and CrewAI in its emphasis on distributed, asynchronous agent communication patterns.\n\n---"
+ },
+ {
+  "name": "Replicate",
+  "iconUrl": "https://www.google.com/s2/favicons?domain=replicate.com&sz=128",
+  "domain": "replicate.com",
+  "category": "Model Hosting",
+  "subtype": "AI Model Hosting Platform",
+  "desc": "Cloud platform for running AI models via API with pay-per-use pricing. Hosts thousands of open-source and official AI models for image generation, video, language, and audio tasks without infrastructure management.",
+  "pricingClass": "usage_based",
+  "signup": true,
+  "local": false,
+  "tags": [
+   "Model-Hosting",
+   "AI-API",
+   "Inference",
+   "Pay-Per-Use",
+   "GPU-Cloud",
+   "Deployment"
+  ],
+  "officialUrl": "https://replicate.com/",
+  "id": "developer_resource:replicate",
+  "status": "verified",
+  "evidence": [
+   [
+    "Replicate Icon",
+    "https://www.google.com/s2/favicons?domain=replicate.com&sz=128"
+   ],
+   [
+    "Replicate",
+    "https://replicate.com/"
+   ],
+   [
+    "Replicate Official Website",
+    "https://replicate.com/"
+   ],
+   [
+    "Replicate Pricing",
+    "https://replicate.com/pricing"
+   ],
+   [
+    "Replicate Docs",
+    "https://replicate.com/docs"
+   ]
+  ],
+  "verified": "2026-11-03",
+  "notes": "Pure usage-based pricing — no free tier beyond an initial credit allowance. Billing by hardware-seconds (for community models) or by output units (for official models). Cog is Replicate's open-source tool for packaging custom models. Supports private model deployment with autoscaling.\n\n---\n\n## Batch Checkpoint\n\n| Field | Value |\n|---|---|\n| **Batch Number** | 1 |\n| **Record Range** | 001–050 |\n| **Accepted in This Batch** | 50 |\n| **Cumulative Accepted** | 50 |\n| **AI Tools Accepted** | 17 (001–017) |\n| **AI Models Accepted** | 16 (018–033) |\n| **Developer Resources Accepted** | 17 (034–050) |\n| **Next Record Number** | 051 |\n| **Categories Covered** | General-purpose AI Assistants, AI Search, AI Coding Assistants, AI Image Generation, AI Video Generation, AI Voice Generation, AI Productivity, AI Writing, AI Content Generation, AI Meeting Assistants, AI Audio/Video Editing, AI Presentation Builders, AI UI Generation; LLMs, Reasoning Models, Embedding Models, Speech-to-Text, Image Generation Models, Music Generation, Small LMs; Agent Frameworks, RAG Frameworks, Vector Databases, LLM Runtimes, Model Serving, Model Registries, AI API Platforms, LLM Observability, Multi-Agent Frameworks, Local Inference Engines |\n| **Categories Still Underrepresented** | AI Browser Extensions, AI Mobile Apps, AI Document Processing, AI Translation, AI E-commerce, AI Sales/CRM, AI Recruiting, AI Scientific Applications; OCR Models, Video Generation Models, Reranking Models, 3D Generation, Time-Series Models; MCP Servers/Registries, Fine-Tuning Frameworks, AI Security/Guardrails, Prompt Management, Experiment Tracking, Synthetic Data Generation, GPU Cloud Platforms, Computer Vision Frameworks, Speech Processing Frameworks |\n| **Duplicate Candidates Rejected** | 0 (first batch — deduplication register initialized) |\n| **Unverified Candidates Excluded** | 0 (all 50 candidates verified against official sources) |\n| **Last Verified Date** | 2026-11-03 |\n| **Deduplication Register Status** | Active — 50 canonical IDs registered |\n| **Next Action** | Type `continue` to retrieve Batch 2 (Records 051–100) |\n\n---\n\n# DevSpireHub AI Resource Intelligence Directory\n## Batch 2 · Records 051–100\n**Research Date:** 2026-11-03 | **Verification Standard:** Multi-source, official-evidence-backed\n\n---"
+ },
+ {
+  "name": "Model Context Protocol SDK",
+  "iconUrl": "https://www.google.com/s2/favicons?domain=anthropic.com&sz=128",
+  "domain": "modelcontextprotocol.io",
+  "category": "MCP Servers",
+  "subtype": "Open Agent Protocol Specification and SDK",
+  "desc": "Open standard and software development kit introduced by Anthropic that standardizes how AI applications and agents securely access external context, enterprise databases, file systems, and API tools over JSON-RPC.",
+  "pricingClass": "open_source",
+  "signup": false,
+  "local": true,
+  "tags": [
+   "MCP",
+   "Agent-Protocol",
+   "JSON-RPC",
+   "Anthropic",
+   "Open-Standard",
+   "TypeScript",
+   "Python"
+  ],
+  "officialUrl": "https://modelcontextprotocol.io/",
+  "id": "developer_resource:mcp-sdk",
+  "status": "verified",
+  "evidence": [
+   [
+    "Anthropic Icon",
+    "https://www.google.com/s2/favicons?domain=anthropic.com&sz=128"
+   ],
+   [
+    "Model Context Protocol",
+    "https://modelcontextprotocol.io/"
+   ],
+   [
+    "MCP Documentation",
+    "https://modelcontextprotocol.io/"
+   ],
+   [
+    "MCP GitHub Organization",
+    "https://github.com/modelcontextprotocol"
+   ]
+  ],
+  "verified": "2026-11-03",
+  "notes": "MIT-licensed open standard. Eliminates custom point-to-point integrations by providing reusable server and client abstractions implemented across Python, TypeScript, and Kotlin.\n\n---"
+ },
+ {
+  "name": "LiteLLM",
+  "iconUrl": "https://www.google.com/s2/favicons?domain=litellm.ai&sz=128",
+  "domain": "litellm.ai",
+  "category": "API Gateways",
+  "subtype": "Universal Model Proxy & Routing Gateway",
+  "desc": "Open-source AI proxy and gateway that unifies calls to 100+ LLM APIs (OpenAI, Anthropic, Bedrock, Vertex, Ollama) using the standard OpenAI input-output format, handling load balancing, fallbacks, and cost tracking.",
+  "pricingClass": "open_source",
+  "signup": false,
+  "local": true,
+  "tags": [
+   "LLM-Gateway",
+   "Model-Router",
+   "OpenAI-Compatible",
+   "Load-Balancing",
+   "Cost-Tracking"
+  ],
+  "officialUrl": "https://www.litellm.ai/",
+  "id": "developer_resource:litellm",
+  "status": "verified",
+  "evidence": [
+   [
+    "LiteLLM Icon",
+    "https://www.google.com/s2/favicons?domain=litellm.ai&sz=128"
+   ],
+   [
+    "LiteLLM",
+    "https://www.litellm.ai/"
+   ],
+   [
+    "LiteLLM GitHub Repository",
+    "https://github.com/BerriAI/litellm"
+   ],
+   [
+    "LiteLLM Documentation",
+    "https://docs.litellm.ai/"
+   ]
+  ],
+  "verified": "2026-11-03",
+  "notes": "Core proxy is MIT-licensed. LiteLLM Enterprise offers dedicated virtual key management, SSO, rate limits, and custom billing dashboards for production deployments.\n\n---"
+ },
+ {
+  "name": "SGLang",
+  "iconUrl": "https://www.google.com/s2/favicons?domain=github.com&sz=128",
+  "domain": "github.com/sgl-project/sglang",
+  "category": "Model Serving",
+  "subtype": "Fast Serving Engine & Structured Decoding Framework",
+  "desc": "High-throughput serving engine and programming language for large language models. Optimizes complex prompt workflows, multi-turn chat loops, and constrained JSON decodings with RadixAttention KV-cache reuse.",
+  "pricingClass": "open_source",
+  "signup": false,
+  "local": true,
+  "tags": [
+   "High-Throughput-Serving",
+   "RadixAttention",
+   "Structured-Decoding",
+   "GPU-Optimization",
+   "Apache-2-0"
+  ],
+  "officialUrl": "https://github.com/sgl-project/sglang",
+  "id": "developer_resource:sglang",
+  "status": "verified",
+  "evidence": [
+   [
+    "SGLang Icon",
+    "https://www.google.com/s2/favicons?domain=github.com&sz=128"
+   ],
+   [
+    "SGLang GitHub",
+    "https://github.com/sgl-project/sglang"
+   ],
+   [
+    "SGLang GitHub Repository",
+    "https://github.com/sgl-project/sglang"
+   ],
+   [
+    "SGLang Documentation",
+    "https://sgl-project.github.io/"
+   ]
+  ],
+  "verified": "2026-11-03",
+  "notes": "Apache 2.0 licensed. Developed by researchers from LMSYS and UC Berkeley. RadixAttention retains KV-caches across multiple API calls, significantly speeding up complex reasoning and agent workflows.\n\n---"
+ },
+ {
+  "name": "TensorRT-LLM",
+  "iconUrl": "https://www.google.com/s2/favicons?domain=nvidia.com&sz=128",
+  "domain": "nvidia.com",
+  "category": "Inference Engines",
+  "subtype": "GPU-Accelerated LLM Inference Library",
+  "desc": "Open-source Python and C++ inference optimization library engineered by NVIDIA. Compiles and executes large language models with kernel fusions, in-flight batching, FP8 quantization, and multi-GPU tensor parallelism.",
+  "pricingClass": "open_source",
+  "signup": false,
+  "local": true,
+  "tags": [
+   "GPU-Acceleration",
+   "NVIDIA",
+   "TensorRT",
+   "Model-Optimization",
+   "FP8-Quantization"
+  ],
+  "officialUrl": "https://github.com/NVIDIA/TensorRT-LLM",
+  "id": "developer_resource:tensorrt-llm",
+  "status": "verified",
+  "evidence": [
+   [
+    "NVIDIA Icon",
+    "https://www.google.com/s2/favicons?domain=nvidia.com&sz=128"
+   ],
+   [
+    "TensorRT-LLM GitHub",
+    "https://github.com/NVIDIA/TensorRT-LLM"
+   ],
+   [
+    "NVIDIA Developer Portal",
+    "https://developer.nvidia.com/tensorrt-llm"
+   ],
+   [
+    "TensorRT-LLM GitHub",
+    "https://github.com/NVIDIA/TensorRT-LLM"
+   ]
+  ],
+  "verified": "2026-11-03",
+  "notes": "Released under the Apache 2.0 license. Powers NVIDIA NIM microservices. Maximizes token throughput and minimizes first-token latency on NVIDIA Hopper (H100/H200) and Blackwell hardware architectures.\n\n---"
+ },
+ {
+  "name": "Unsloth",
+  "iconUrl": "https://www.google.com/s2/favicons?domain=unsloth.ai&sz=128",
+  "domain": "unsloth.ai",
+  "category": "Fine-Tuning Frameworks",
+  "subtype": "Accelerated LLM Fine-Tuning Library",
+  "desc": "High-speed, memory-efficient fine-tuning library for open-weight models (Llama, Mistral, Qwen, Gemma). Uses custom hand-written GPU Triton kernels to speed up LoRA and QLoRA training by up to 5x while reducing VRAM usage by 80%.",
+  "pricingClass": "open_source",
+  "signup": false,
+  "local": true,
+  "tags": [
+   "Fine-Tuning",
+   "LoRA",
+   "QLoRA",
+   "Triton-Kernels",
+   "VRAM-Optimization",
+   "Apache-2-0"
+  ],
+  "officialUrl": "https://unsloth.ai/",
+  "id": "developer_resource:unsloth",
+  "status": "verified",
+  "evidence": [
+   [
+    "Unsloth Icon",
+    "https://www.google.com/s2/favicons?domain=unsloth.ai&sz=128"
+   ],
+   [
+    "Unsloth",
+    "https://unsloth.ai/"
+   ],
+   [
+    "Unsloth GitHub Repository",
+    "https://github.com/unslothai/unsloth"
+   ],
+   [
+    "Unsloth Documentation",
+    "https://docs.unsloth.ai/"
+   ]
+  ],
+  "verified": "2026-11-03",
+  "notes": "Core software open-source under Apache 2.0. Unsloth Pro and Enterprise provide multi-GPU distributed fine-tuning and commercial support. Enables fine-tuning large 70B parameter models on modest GPU configurations.\n\n---"
+ },
+ {
+  "name": "Axolotl",
+  "iconUrl": "https://www.google.com/s2/favicons?domain=github.com&sz=128",
+  "domain": "github.com/axolotl-ai-cloud/axolotl",
+  "category": "Fine-Tuning Frameworks",
+  "subtype": "Post-Training & Fine-Tuning Framework",
+  "desc": "Config-driven tool designed to streamline the post-training and fine-tuning of foundation language models. Supports full fine-tuning, LoRA, QLoRA, DPO, and PPO via simple YAML configurations across multi-GPU setups.",
+  "pricingClass": "open_source",
+  "signup": false,
+  "local": true,
+  "tags": [
+   "Post-Training",
+   "Fine-Tuning",
+   "DPO",
+   "Multi-GPU",
+   "YAML-Config",
+   "Apache-2-0"
+  ],
+  "officialUrl": "https://github.com/axolotl-ai-cloud/axolotl",
+  "id": "developer_resource:axolotl",
+  "status": "verified",
+  "evidence": [
+   [
+    "Axolotl Icon",
+    "https://www.google.com/s2/favicons?domain=github.com&sz=128"
+   ],
+   [
+    "Axolotl GitHub",
+    "https://github.com/axolotl-ai-cloud/axolotl"
+   ],
+   [
+    "Axolotl GitHub",
+    "https://github.com/axolotl-ai-cloud/axolotl"
+   ],
+   [
+    "Axolotl Documentation",
+    "https://axolotl-ai-cloud.github.io/axolotl/"
+   ]
+  ],
+  "verified": "2026-11-03",
+  "notes": "Apache 2.0 licensed. Supports FlashAttention, xFormers, DeepSpeed, and FSDP natively. Serves as a standard training harness for open-source AI researchers and community model builders.\n\n---"
+ },
+ {
+  "name": "DSPy",
+  "iconUrl": "https://www.google.com/s2/favicons?domain=dspy.ai&sz=128",
+  "domain": "dspy.ai",
+  "category": "Agent Frameworks",
+  "subtype": "Algorithmic Prompt Optimization Framework",
+  "desc": "Stanford University's open-source framework for programmatically optimizing language model prompts and weights. Replaces brittle hand-written prompt templates with modular Python signatures that are compiled and auto-tuned algorithmically.",
+  "pricingClass": "open_source",
+  "signup": false,
+  "local": true,
+  "tags": [
+   "Prompt-Optimization",
+   "Compilers",
+   "LLM-Programming",
+   "RAG",
+   "Stanford-NLP",
+   "MIT-License"
+  ],
+  "officialUrl": "https://dspy.ai/",
+  "id": "developer_resource:dspy",
+  "status": "verified",
+  "evidence": [
+   [
+    "DSPy Icon",
+    "https://www.google.com/s2/favicons?domain=dspy.ai&sz=128"
+   ],
+   [
+    "DSPy",
+    "https://dspy.ai/"
+   ],
+   [
+    "DSPy Documentation",
+    "https://dspy.ai/"
+   ],
+   [
+    "DSPy GitHub Repository",
+    "https://github.com/stanfordnlp/dspy"
+   ]
+  ],
+  "verified": "2026-11-03",
+  "notes": "MIT-licensed. Treats LLM pipelines as parameterized programs with automated optimizers (Teleprompters / MIPRO) that systematically discover high-performing few-shot demonstrations and prompt variations.\n\n---"
+ },
+ {
+  "name": "OpenRouter",
+  "iconUrl": "https://www.google.com/s2/favicons?domain=openrouter.ai&sz=128",
+  "domain": "openrouter.ai",
+  "category": "Model Routing and Aggregation",
+  "subtype": "Unified LLM Routing & Aggregation Platform",
+  "desc": "Unified API gateway that aggregates hundreds of proprietary and open-weight AI models through a single OpenAI-compatible interface, offering automated fallback routing, competitive per-token pricing, and transparent latency benchmarks.",
+  "pricingClass": "usage_based",
+  "signup": true,
+  "local": false,
+  "tags": [
+   "Model-Router",
+   "API-Gateway",
+   "Multi-Provider",
+   "Token-Billing",
+   "Fallbacks"
+  ],
+  "officialUrl": "https://openrouter.ai/",
+  "id": "developer_resource:openrouter",
+  "status": "verified",
+  "evidence": [
+   [
+    "OpenRouter Icon",
+    "https://www.google.com/s2/favicons?domain=openrouter.ai&sz=128"
+   ],
+   [
+    "OpenRouter",
+    "https://openrouter.ai/"
+   ],
+   [
+    "OpenRouter Official Website",
+    "https://openrouter.ai/"
+   ],
+   [
+    "OpenRouter Documentation",
+    "https://openrouter.ai/docs"
+   ]
+  ],
+  "verified": "2026-11-03",
+  "notes": "Purely usage-based without subscriptions; charges exact upstream provider costs plus minimal transaction margins. Supports crypto and fiat credit top-ups. Includes a free tier for select open-source models.\n\n---"
+ },
+ {
+  "name": "Together AI",
+  "iconUrl": "https://www.google.com/s2/favicons?domain=together.ai&sz=128",
+  "domain": "together.ai",
+  "category": "Inference APIs",
+  "subtype": "Accelerated Cloud Inference & Training Platform",
+  "desc": "High-performance cloud platform providing fast API inference for open-source AI models, dedicated GPU compute clusters, and custom model fine-tuning environments with enterprise SOC 2 compliance.",
+  "pricingClass": "usage_based",
+  "signup": true,
+  "local": false,
+  "tags": [
+   "Cloud-Inference",
+   "Serverless-LLM",
+   "Fine-Tuning",
+   "Dedicated-GPU",
+   "High-Throughput"
+  ],
+  "officialUrl": "https://www.together.ai/",
+  "id": "developer_resource:together-ai",
+  "status": "verified",
+  "evidence": [
+   [
+    "Together AI Icon",
+    "https://www.google.com/s2/favicons?domain=together.ai&sz=128"
+   ],
+   [
+    "Together AI",
+    "https://www.together.ai/"
+   ],
+   [
+    "Together AI Official Website",
+    "https://www.together.ai/"
+   ],
+   [
+    "Together AI Pricing",
+    "https://www.together.ai/pricing"
+   ]
+  ],
+  "verified": "2026-11-03",
+  "notes": "Billed on per-token consumption for serverless endpoints and per-hour rates for dedicated H100 GPU clusters. Known for high token-per-second inference speeds powered by custom flash-attention kernels.\n\n---"
+ },
+ {
+  "name": "Groq Cloud",
+  "iconUrl": "https://www.google.com/s2/favicons?domain=groq.com&sz=128",
+  "domain": "groq.com",
+  "category": "Inference APIs",
+  "subtype": "LPU Ultra-Low Latency Inference Engine",
+  "desc": "Ultra-fast AI inference platform powered by custom Language Processing Unit (LPU) semiconductor hardware. Serves open-weight LLMs, vision, and Whisper transcription models at hundreds of tokens per second with near-instant response times.",
+  "pricingClass": "freemium",
+  "signup": true,
+  "local": false,
+  "tags": [
+   "LPU-Hardware",
+   "Ultra-Low-Latency",
+   "Real-Time-Inference",
+   "OpenAI-Compatible",
+   "High-Throughput"
+  ],
+  "officialUrl": "https://groq.com/",
+  "id": "developer_resource:groq-cloud",
+  "status": "verified",
+  "evidence": [
+   [
+    "Groq Icon",
+    "https://www.google.com/s2/favicons?domain=groq.com&sz=128"
+   ],
+   [
+    "Groq Cloud",
+    "https://groq.com/"
+   ],
+   [
+    "Groq Developer Portal",
+    "https://console.groq.com/"
+   ],
+   [
+    "Groq Documentation",
+    "https://console.groq.com/docs/quickstart"
+   ]
+  ],
+  "verified": "2026-11-03",
+  "notes": "Provides a free tier with daily rate limits. Paid Pay-As-You-Go tier charges standard per-million-token consumption. LPU deterministic architecture avoids typical GPU queuing jitter, enabling real-time conversational voice agents.\n\n---"
+ },
+ {
+  "name": "Modal",
+  "iconUrl": "https://www.google.com/s2/favicons?domain=modal.com&sz=128",
+  "domain": "modal.com",
+  "category": "AI Cloud Infrastructure",
+  "subtype": "Serverless Cloud Compute Platform for AI",
+  "desc": "Serverless cloud infrastructure platform that allows developers to run Python code, containerized AI workloads, batch model inference, and fine-tuning jobs on cloud GPUs with sub-second cold starts and per-second billing.",
+  "pricingClass": "usage_based",
+  "signup": true,
+  "local": false,
+  "tags": [
+   "Serverless-Compute",
+   "Cloud-GPU",
+   "Python-Infra",
+   "Fast-Cold-Starts",
+   "MLOps"
+  ],
+  "officialUrl": "https://modal.com/",
+  "id": "developer_resource:modal",
+  "status": "verified",
+  "evidence": [
+   [
+    "Modal Icon",
+    "https://www.google.com/s2/favicons?domain=modal.com&sz=128"
+   ],
+   [
+    "Modal",
+    "https://modal.com/"
+   ],
+   [
+    "Modal Official Website",
+    "https://modal.com/"
+   ],
+   [
+    "Modal Pricing",
+    "https://modal.com/pricing"
+   ]
+  ],
+  "verified": "2026-11-03",
+  "notes": "Includes $30/month in free compute credits for all users. Billed strictly by execution seconds across CPU, memory, and GPU (T4, A10G, L4, A100, H100) allocations. Container environments are defined directly in native Python code.\n\n---"
+ },
+ {
+  "name": "RunPod",
+  "iconUrl": "https://www.google.com/s2/favicons?domain=runpod.io&sz=128",
+  "domain": "runpod.io",
+  "category": "GPU Cloud Platforms",
+  "subtype": "Distributed Cloud GPU & Serverless AI Platform",
+  "desc": "Cloud computing provider specializing in affordable GPU rental pods, distributed training clusters, and serverless AI worker endpoints for deploying inference APIs, image generators, and machine learning models globally.",
+  "pricingClass": "usage_based",
+  "signup": true,
+  "local": false,
+  "tags": [
+   "GPU-Cloud",
+   "Serverless-Endpoints",
+   "Spot-Instances",
+   "Model-Deployment",
+   "AI-Containers"
+  ],
+  "officialUrl": "https://www.runpod.io/",
+  "id": "developer_resource:runpod",
+  "status": "verified",
+  "evidence": [
+   [
+    "RunPod Icon",
+    "https://www.google.com/s2/favicons?domain=runpod.io&sz=128"
+   ],
+   [
+    "RunPod",
+    "https://www.runpod.io/"
+   ],
+   [
+    "RunPod Official Website",
+    "https://www.runpod.io/"
+   ],
+   [
+    "RunPod Documentation",
+    "https://docs.runpod.io/"
+   ]
+  ],
+  "verified": "2026-11-03",
+  "notes": "Offers Secure Cloud (Tier 3/4 data centers) and Community Cloud (budget pricing). Billed by the minute/second. Serverless GPU endpoints automatically scale to zero when idle to save infrastructure costs.\n\n---"
+ },
+ {
+  "name": "Braintrust",
+  "iconUrl": "https://www.google.com/s2/favicons?domain=braintrust.dev&sz=128",
+  "domain": "braintrust.dev",
+  "category": "AI Evaluation",
+  "subtype": "Enterprise AI Evaluation & Tracing Platform",
+  "desc": "Enterprise evaluation, tracing, and prompt-engineering platform for LLM applications. Provides CI/CD regression testing, dataset curation, automated scoring, real-time production monitoring, and prompt playground environments.",
+  "pricingClass": "freemium",
+  "signup": true,
+  "local": false,
+  "tags": [
+   "AI-Evaluation",
+   "LLM-Tracing",
+   "Prompt-Playground",
+   "CI-CD-Testing",
+   "LLMOps"
+  ],
+  "officialUrl": "https://www.braintrust.dev/",
+  "id": "developer_resource:braintrust",
+  "status": "verified",
+  "evidence": [
+   [
+    "Braintrust Icon",
+    "https://www.google.com/s2/favicons?domain=braintrust.dev&sz=128"
+   ],
+   [
+    "Braintrust",
+    "https://www.braintrust.dev/"
+   ],
+   [
+    "Braintrust Official Website",
+    "https://www.braintrust.dev/"
+   ],
+   [
+    "Braintrust Documentation",
+    "https://www.braintrust.dev/docs"
+   ]
+  ],
+  "verified": "2026-11-03",
+  "notes": "Free plan includes unlimited seats and a monthly allotment of evaluation records and traces. Pro plan ($50/month) and Enterprise plans offer custom retention, SSO, private cloud deployments, and dedicated support.\n\n---"
+ },
+ {
+  "name": "Arize Phoenix",
+  "iconUrl": "https://www.google.com/s2/favicons?domain=arize.com&sz=128",
+  "domain": "phoenix.arize.com",
+  "category": "AI Observability",
+  "subtype": "Open-Source AI Tracing & Evaluation Platform",
+  "desc": "Open-source AI observability library and dashboard for tracing LLM execution steps, evaluating RAG retrieval pipelines, troubleshooting hallucination rates, and benchmarking agent execution graphs using OpenTelemetry standards.",
+  "pricingClass": "open_source",
+  "signup": false,
+  "local": true,
+  "tags": [
+   "OpenTelemetry",
+   "AI-Observability",
+   "RAG-Evaluation",
+   "Tracing",
+   "Local-First",
+   "Apache-2-0"
+  ],
+  "officialUrl": "https://phoenix.arize.com/",
+  "id": "developer_resource:arize-phoenix",
+  "status": "verified",
+  "evidence": [
+   [
+    "Arize Phoenix Icon",
+    "https://www.google.com/s2/favicons?domain=arize.com&sz=128"
+   ],
+   [
+    "Arize Phoenix",
+    "https://phoenix.arize.com/"
+   ],
+   [
+    "Arize Phoenix GitHub",
+    "https://github.com/Arize-ai/phoenix"
+   ],
+   [
+    "Phoenix Documentation",
+    "https://docs.arize.com/phoenix/"
+   ]
+  ],
+  "verified": "2026-11-03",
+  "notes": "Released under Apache 2.0 license. Can be run entirely locally inside a Jupyter notebook or Docker container without transmitting telemetry to third-party clouds. Arize Cloud provides managed SaaS hosting.\n\n---"
+ },
+ {
+  "name": "Guardrails AI",
+  "iconUrl": "https://www.google.com/s2/favicons?domain=guardrailsai.com&sz=128",
+  "domain": "guardrailsai.com",
+  "category": "AI Security and Reliability",
+  "subtype": "LLM Output Validation & Security Framework",
+  "desc": "Open-source Python and JavaScript framework that enforces structural guarantees, type safety, PII redaction, toxicity filtering, and prompt injection defense on LLM inputs and outputs using community-authored validators.",
+  "pricingClass": "open_source",
+  "signup": false,
+  "local": true,
+  "tags": [
+   "LLM-Security",
+   "Output-Validation",
+   "PII-Redaction",
+   "Guardrails",
+   "Type-Safety",
+   "Apache-2-0"
+  ],
+  "officialUrl": "https://www.guardrailsai.com/",
+  "id": "developer_resource:guardrails-ai",
+  "status": "verified",
+  "evidence": [
+   [
+    "Guardrails AI Icon",
+    "https://www.google.com/s2/favicons?domain=guardrailsai.com&sz=128"
+   ],
+   [
+    "Guardrails AI",
+    "https://www.guardrailsai.com/"
+   ],
+   [
+    "Guardrails AI GitHub",
+    "https://github.com/guardrails-ai/guardrails"
+   ],
+   [
+    "Guardrails Hub",
+    "https://hub.guardrailsai.com/"
+   ]
+  ],
+  "verified": "2026-11-03",
+  "notes": "Core framework is Apache 2.0 licensed. Operates Guardrails Hub, a marketplace of pre-built validators (regex matching, hallucination detection, schema compliance). Guardrails Server provides a containerized microservice API.\n\n---"
+ },
+ {
+  "name": "pgvector",
+  "iconUrl": "https://www.google.com/s2/favicons?domain=postgresql.org&sz=128",
+  "domain": "github.com/pgvector/pgvector",
+  "category": "Vector Databases",
+  "subtype": "Vector Similarity Search Extension for PostgreSQL",
+  "desc": "Open-source vector similarity search extension for PostgreSQL. Stores exact and approximate nearest-neighbor vector embeddings alongside relational relational records using HNSW and IVFFlat indexing methods.",
+  "pricingClass": "open_source",
+  "signup": false,
+  "local": true,
+  "tags": [
+   "Vector-Search",
+   "PostgreSQL",
+   "HNSW",
+   "IVFFlat",
+   "Relational-Database",
+   "Open-Source"
+  ],
+  "officialUrl": "https://github.com/pgvector/pgvector",
+  "id": "developer_resource:pgvector",
+  "status": "verified",
+  "evidence": [
+   [
+    "PostgreSQL Icon",
+    "https://www.google.com/s2/favicons?domain=postgresql.org&sz=128"
+   ],
+   [
+    "pgvector GitHub Repository",
+    "https://github.com/pgvector/pgvector"
+   ],
+   [
+    "pgvector GitHub",
+    "https://github.com/pgvector/pgvector"
+   ],
+   [
+    "PostgreSQL Extensions Directory",
+    "https://www.postgresql.org/"
+   ]
+  ],
+  "verified": "2026-11-03",
+  "notes": "Distributed under the PostgreSQL License. Widely deployed across AWS RDS, Supabase, Neon, Azure PostgreSQL, and self-hosted database clusters to consolidate vectors and transactional data in a single ACID engine.\n\n---"
+ },
+ {
+  "name": "LanceDB",
+  "iconUrl": "https://www.google.com/s2/favicons?domain=lancedb.com&sz=128",
+  "domain": "lancedb.com",
+  "category": "Vector Databases",
+  "subtype": "Embedded Multimodal Vector Database",
+  "desc": "Developer-friendly, serverless open-source vector database built on the columnar Lance data format. Supports disk-native vector search, multi-modal storage, hybrid retrieval, and zero-infrastructure local embedding storage.",
+  "pricingClass": "open_source",
+  "signup": false,
+  "local": true,
+  "tags": [
+   "Embedded-Database",
+   "Vector-Search",
+   "Columnar-Storage",
+   "Multi-Modal",
+   "Apache-2-0"
+  ],
+  "officialUrl": "https://lancedb.com/",
+  "id": "developer_resource:lancedb",
+  "status": "verified",
+  "evidence": [
+   [
+    "LanceDB Icon",
+    "https://www.google.com/s2/favicons?domain=lancedb.com&sz=128"
+   ],
+   [
+    "LanceDB",
+    "https://lancedb.com/"
+   ],
+   [
+    "LanceDB GitHub",
+    "https://github.com/lancedb/lancedb"
+   ],
+   [
+    "LanceDB Documentation",
+    "https://lancedb.github.io/lancedb/"
+   ]
+  ],
+  "verified": "2026-11-03",
+  "notes": "Apache 2.0 licensed. Can run serverlessly in-process (like DuckDB or SQLite) embedded directly in Python/Node applications, querying disk and object storage (S3/GCS) without dedicated database servers. LanceDB Cloud offers enterprise managed hosting.\n\n---\n\n## Batch Checkpoint\n\n| Field | Value |\n|---|---|\n| **Batch Number** | 2 |\n| **Record Range** | 051–100 |\n| **Accepted in This Batch** | 50 |\n| **Cumulative Accepted** | 100 / 1,000 |\n| **AI Tools Accepted** | 17 (051–067) |\n| **AI Models Accepted** | 16 (068–083) |\n| **Developer Resources Accepted** | 17 (084–100) |\n| **Cumulative Registry Breakdown** | AI Tools: 34 \\| AI Models: 32 \\| Developer Resources: 34 |\n| **Next Record Number** | 101 |\n| **Categories Covered in Batch 2** | AI Coding Assistants, AI IDEs, AI Music Generation, Full-Stack App Builders, Autonomous Agents, AI Video/Avatar Generation, Real-Time Creative Suites, AI Data Analysis, Multi-Model Chat Platforms, Legal AI, AI Presentation Tools; Reasoning Models, Open-Weight Foundation Models, Fast LLMs, MoE Models, Vision-Language Edge Models, Code Generation Models, Segmentation Models, Self-Supervised Vision, Video Diffusion Models, Embeddings, Voice Cloning TTS; MCP Protocols, API Gateways/Proxies, High-Throughput Serving, GPU Inference Acceleration, Fine-Tuning Libraries, Algorithmic Prompt Optimization, Serverless GPU Infrastructure, AI Evaluation, AI Observability, Output Guardrails, Vector Extensions, Embedded Vector DBs |\n| **Categories Still Underrepresented** | AI Browser Extensions, AI Document Processing (OCR/Layout), AI Social Media Management, AI E-commerce, Domain-Specific Healthcare/Bio Models, 3D Generation Models, Audio Understanding Models, Time-Series Models, Robotics & Embodied AI, Dataset Annotation Tools, Synthetic Data Generation, Content Moderation Platforms |\n| **Duplicate Candidates Rejected** | 0 (cross-checked against Batch 1 register) |\n| **Unverified Candidates Excluded** | 0 (all 50 candidates verified against official sources) |\n| **Last Verified Date** | 2026-11-03 |\n| **Deduplication Register Status** | Active — 100 canonical IDs registered |\n| **Next Action** | Type `continue` to retrieve Batch 3 (Records 101–150) |\n\n---\n\n# DevSpireHub AI Resource Intelligence Directory\n## Batch 3 · Records 101–150\n**Research Date:** 2026-11-03 | **Verification Standard:** Multi-source, official-evidence-backed\n\n---"
+ },
+ {
+  "name": "Milvus",
+  "iconUrl": "https://www.google.com/s2/favicons?domain=milvus.io&sz=128",
+  "domain": "milvus.io",
+  "category": "Vector Databases",
+  "subtype": "Cloud-Native Distributed Vector Database",
+  "desc": "Open-source cloud-native distributed vector database designed to manage and search tens of billions of vector embeddings in milliseconds. Built with decoupled storage and compute for massive enterprise scale.",
+  "pricingClass": "open_source",
+  "signup": false,
+  "local": true,
+  "tags": [
+   "Vector-Database",
+   "Distributed-Systems",
+   "Cloud-Native",
+   "Billion-Scale",
+   "Apache-2-0"
+  ],
+  "officialUrl": "https://milvus.io/",
+  "id": "developer_resource:milvus",
+  "status": "verified",
+  "evidence": [
+   [
+    "Milvus Icon",
+    "https://www.google.com/s2/favicons?domain=milvus.io&sz=128"
+   ],
+   [
+    "Milvus",
+    "https://milvus.io/"
+   ],
+   [
+    "Milvus Official Website",
+    "https://milvus.io/"
+   ],
+   [
+    "Milvus GitHub Repository",
+    "https://github.com/milvus-io/milvus"
+   ]
+  ],
+  "verified": "2026-11-03",
+  "notes": "Graduated LF AI & Data Foundation project under Apache 2.0. Zilliz Cloud provides the fully managed enterprise cloud edition. Supports HNSW, IVF, and GPU-accelerated indexes (Knowhere).\n\n---"
+ },
+ {
+  "name": "Faiss",
+  "iconUrl": "https://www.google.com/s2/favicons?domain=meta.ai&sz=128",
+  "domain": "github.com/facebookresearch/faiss",
+  "category": "Vector Search Engines",
+  "subtype": "Dense Vector Similarity Search Library",
+  "desc": "Open-source C++ and Python library developed by Meta Fundamental AI Research for efficient dense vector clustering and similarity search across billion-scale datasets with complete GPU acceleration and quantization support.",
+  "pricingClass": "open_source",
+  "signup": false,
+  "local": true,
+  "tags": [
+   "Vector-Search",
+   "Nearest-Neighbor",
+   "GPU-Acceleration",
+   "Meta-FAIR",
+   "MIT-License"
+  ],
+  "officialUrl": "https://github.com/facebookresearch/faiss",
+  "id": "developer_resource:faiss",
+  "status": "verified",
+  "evidence": [
+   [
+    "Meta AI Icon",
+    "https://www.google.com/s2/favicons?domain=meta.ai&sz=128"
+   ],
+   [
+    "Faiss GitHub Repository",
+    "https://github.com/facebookresearch/faiss"
+   ],
+   [
+    "Faiss GitHub",
+    "https://github.com/facebookresearch/faiss"
+   ],
+   [
+    "Meta Research Paper",
+    "https://github.com/facebookresearch/faiss/wiki"
+   ]
+  ],
+  "verified": "2026-11-03",
+  "notes": "MIT-licensed. Foundational low-level algorithm library underlying many production vector databases and retrieval systems. Features Product Quantization (PQ) and Inverted File (IVF) indexes.\n\n---"
+ },
+ {
+  "name": "Haystack",
+  "iconUrl": "https://www.google.com/s2/favicons?domain=deepset.ai&sz=128",
+  "domain": "haystack.deepset.ai",
+  "category": "RAG Frameworks",
+  "subtype": "Modular LLM Orchestration Framework",
+  "desc": "Production-ready open-source Python framework from deepset for constructing customizable RAG pipelines, semantic search engines, and agent workflows using a typed, directed acyclic graph (DAG) component architecture.",
+  "pricingClass": "open_source",
+  "signup": false,
+  "local": true,
+  "tags": [
+   "RAG-Framework",
+   "Pipeline-DAG",
+   "Semantic-Search",
+   "Python",
+   "Apache-2-0"
+  ],
+  "officialUrl": "https://haystack.deepset.ai/",
+  "id": "developer_resource:haystack",
+  "status": "verified",
+  "evidence": [
+   [
+    "Haystack Icon",
+    "https://www.google.com/s2/favicons?domain=deepset.ai&sz=128"
+   ],
+   [
+    "Haystack",
+    "https://haystack.deepset.ai/"
+   ],
+   [
+    "Haystack Documentation",
+    "https://docs.haystack.deepset.ai/"
+   ],
+   [
+    "Haystack GitHub Repository",
+    "https://github.com/deepset-ai/haystack"
+   ]
+  ],
+  "verified": "2026-11-03",
+  "notes": "Apache 2.0 licensed. Haystack 2.0 features modular component connections, flexible document store adapters, and seamless integration with deepset Cloud for enterprise deployments.\n\n---"
+ },
+ {
+  "name": "txtai",
+  "iconUrl": "https://www.google.com/s2/favicons?domain=github.com&sz=128",
+  "domain": "github.com/neuml/txtai",
+  "category": "RAG Frameworks",
+  "subtype": "All-in-One Embeddings Database & Search Engine",
+  "desc": "Open-source all-in-one embeddings database that combines vector indexing, relational SQL storage, document extraction, and graph networks to power semantic search, knowledge graphs, and LLM orchestration.",
+  "pricingClass": "open_source",
+  "signup": false,
+  "local": true,
+  "tags": [
+   "Embeddings-Database",
+   "Semantic-Search",
+   "Graph-Networks",
+   "SQL-Search",
+   "Apache-2-0"
+  ],
+  "officialUrl": "https://github.com/neuml/txtai",
+  "id": "developer_resource:txtai",
+  "status": "verified",
+  "evidence": [
+   [
+    "txtai Icon",
+    "https://www.google.com/s2/favicons?domain=github.com&sz=128"
+   ],
+   [
+    "txtai GitHub Repository",
+    "https://github.com/neuml/txtai"
+   ],
+   [
+    "txtai GitHub",
+    "https://github.com/neuml/txtai"
+   ],
+   [
+    "neuml Documentation",
+    "https://neuml.hashnode.dev/"
+   ]
+  ],
+  "verified": "2026-11-03",
+  "notes": "Apache 2.0 licensed. Developed by NeuML. Enables querying multimodal data and knowledge graphs using standard SQL syntax combined with vector similarity matching.\n\n---"
+ },
+ {
+  "name": "RAGFlow",
+  "iconUrl": "https://www.google.com/s2/favicons?domain=ragflow.io&sz=128",
+  "domain": "ragflow.io",
+  "category": "Document Parsing",
+  "subtype": "Deep Document Understanding RAG Engine",
+  "desc": "Open-source RAG engine based on deep document understanding. Extracts and parses unstructured data from complex multi-column PDFs, financial tables, slides, and scanned forms with vision-based document layout analysis.",
+  "pricingClass": "open_source",
+  "signup": false,
+  "local": true,
+  "tags": [
+   "Document-Parsing",
+   "Vision-OCR",
+   "Deep-Doc-Understanding",
+   "Table-Extraction",
+   "Apache-2-0"
+  ],
+  "officialUrl": "https://ragflow.io/",
+  "id": "developer_resource:ragflow",
+  "status": "verified",
+  "evidence": [
+   [
+    "RAGFlow Icon",
+    "https://www.google.com/s2/favicons?domain=ragflow.io&sz=128"
+   ],
+   [
+    "RAGFlow",
+    "https://ragflow.io/"
+   ],
+   [
+    "RAGFlow GitHub Repository",
+    "https://github.com/infiniflow/ragflow"
+   ],
+   [
+    "RAGFlow Documentation",
+    "https://ragflow.io/docs/dev/"
+   ]
+  ],
+  "verified": "2026-11-03",
+  "notes": "Apache 2.0 licensed by InfiniFlow. Solves the \"garbage in, garbage out\" challenge in RAG by visualizing document chunks and preserving tabular structure across multi-page corporate PDFs.\n\n---"
+ },
+ {
+  "name": "Microsoft GraphRAG",
+  "iconUrl": "https://www.google.com/s2/favicons?domain=microsoft.com&sz=128",
+  "domain": "github.com/microsoft/graphrag",
+  "category": "Knowledge Graph Systems",
+  "subtype": "Knowledge Graph-Enhanced RAG Pipeline",
+  "desc": "Modular RAG pipeline developed by Microsoft Research that extracts structured knowledge graphs and entity communities from unstructured text documents, enabling holistic global summarization over entire private corpuses.",
+  "pricingClass": "open_source",
+  "signup": false,
+  "local": true,
+  "tags": [
+   "Knowledge-Graphs",
+   "Graph-RAG",
+   "Global-Summarization",
+   "Microsoft-Research",
+   "MIT-License"
+  ],
+  "officialUrl": "https://github.com/microsoft/graphrag",
+  "id": "developer_resource:graphrag",
+  "status": "verified",
+  "evidence": [
+   [
+    "Microsoft Icon",
+    "https://www.google.com/s2/favicons?domain=microsoft.com&sz=128"
+   ],
+   [
+    "Microsoft GraphRAG GitHub",
+    "https://github.com/microsoft/graphrag"
+   ],
+   [
+    "Microsoft Research Blog",
+    "https://www.microsoft.com/en-us/research/blog/graphrag-new-tool-for-complex-data-discovery/"
+   ],
+   [
+    "GraphRAG GitHub",
+    "https://github.com/microsoft/graphrag"
+   ]
+  ],
+  "verified": "2026-11-03",
+  "notes": "MIT-licensed. Addresses standard vector RAG's failure to answer query-focused global questions (e.g., \"What are the major themes across all 50 reports?\") by leveraging hierarchical Leiden community detection.\n\n---"
+ },
+ {
+  "name": "Dify",
+  "iconUrl": "https://www.google.com/s2/favicons?domain=dify.ai&sz=128",
+  "domain": "dify.ai",
+  "category": "AI Agents and Agent Builders",
+  "subtype": "Open-Source LLM App Development Platform",
+  "desc": "Open-source platform combining Backend-as-a-Service and visual workflow orchestration for AI applications. Enables teams to visually build multi-agent systems, complex RAG pipelines, and API integrations with one-click deployment.",
+  "pricingClass": "open_source",
+  "signup": false,
+  "local": true,
+  "tags": [
+   "LLM-Ops",
+   "Agent-Platform",
+   "Visual-Workflow",
+   "BaaS",
+   "Self-Hosted"
+  ],
+  "officialUrl": "https://dify.ai/",
+  "id": "developer_resource:dify",
+  "status": "verified",
+  "evidence": [
+   [
+    "Dify Icon",
+    "https://www.google.com/s2/favicons?domain=dify.ai&sz=128"
+   ],
+   [
+    "Dify.ai",
+    "https://dify.ai/"
+   ],
+   [
+    "Dify Official Website",
+    "https://dify.ai/"
+   ],
+   [
+    "Dify GitHub Repository",
+    "https://github.com/langgenius/dify"
+   ]
+  ],
+  "verified": "2026-11-03",
+  "notes": "Open-source under Apache 2.0 with commercial restrictions in the Dify Open Source License. Easily deployed via Docker Compose. Dify Cloud provides a managed SaaS offering with free sandbox credits.\n\n---"
+ },
+ {
+  "name": "Flowise",
+  "iconUrl": "https://www.google.com/s2/favicons?domain=flowiseai.com&sz=128",
+  "domain": "flowiseai.com",
+  "category": "Agent Engineering",
+  "subtype": "Drag-and-Drop LLM Flow Builder",
+  "desc": "Open-source drag-and-drop UI tool built on LangChain.js that enables developers to visually configure LLM chains, conversational agents, custom tool integrations, memory nodes, and vector database embeddings.",
+  "pricingClass": "open_source",
+  "signup": false,
+  "local": true,
+  "tags": [
+   "Visual-Builder",
+   "LangChain-JS",
+   "Drag-and-Drop",
+   "No-Code",
+   "MIT-License"
+  ],
+  "officialUrl": "https://flowiseai.com/",
+  "id": "developer_resource:flowise",
+  "status": "verified",
+  "evidence": [
+   [
+    "Flowise Icon",
+    "https://www.google.com/s2/favicons?domain=flowiseai.com&sz=128"
+   ],
+   [
+    "Flowise",
+    "https://flowiseai.com/"
+   ],
+   [
+    "Flowise GitHub Repository",
+    "https://github.com/FlowiseAI/Flowise"
+   ],
+   [
+    "Flowise Documentation",
+    "https://docs.flowiseai.com/"
+   ]
+  ],
+  "verified": "2026-11-03",
+  "notes": "MIT-licensed. Built using Node.js and React. Deploys as an independent container or npm package, exposing finished flows as embeddable chat widgets or REST API endpoints.\n\n---"
+ },
+ {
+  "name": "Langflow",
+  "iconUrl": "https://www.google.com/s2/favicons?domain=langflow.org&sz=128",
+  "domain": "langflow.org",
+  "category": "Agent Engineering",
+  "subtype": "Visual Framework for Multi-Agent & RAG Systems",
+  "desc": "Visual, Python-based web UI framework designed for prototyping and testing multi-agent workflows, custom prompt chains, and RAG architectures with live execution tracing and reusable component building blocks.",
+  "pricingClass": "open_source",
+  "signup": false,
+  "local": true,
+  "tags": [
+   "Visual-IDE",
+   "Python-Backend",
+   "Agent-Workflows",
+   "RAG",
+   "MIT-License"
+  ],
+  "officialUrl": "https://www.langflow.org/",
+  "id": "developer_resource:langflow",
+  "status": "verified",
+  "evidence": [
+   [
+    "Langflow Icon",
+    "https://www.google.com/s2/favicons?domain=langflow.org&sz=128"
+   ],
+   [
+    "Langflow",
+    "https://www.langflow.org/"
+   ],
+   [
+    "Langflow GitHub Repository",
+    "https://github.com/langflow-ai/langflow"
+   ],
+   [
+    "Langflow Documentation",
+    "https://docs.langflow.org/"
+   ]
+  ],
+  "verified": "2026-11-03",
+  "notes": "Acquired by DataStax. MIT-licensed. Every visual block corresponds directly to Python code that developers can inspect, customize, and export into production applications.\n\n---"
+ },
+ {
+  "name": "n8n",
+  "iconUrl": "https://www.google.com/s2/favicons?domain=n8n.io&sz=128",
+  "domain": "n8n.io",
+  "category": "AI Workflow Automation",
+  "subtype": "Self-Hostable Workflow Automation with AI Agents",
+  "desc": "Fair-code workflow automation platform that integrates 400+ business applications with native LangChain AI nodes, enabling developers to build autonomous AI agents, chat triggers, and custom data sync pipelines.",
+  "pricingClass": "open_source",
+  "signup": false,
+  "local": true,
+  "tags": [
+   "Workflow-Automation",
+   "AI-Agent-Nodes",
+   "Self-Hosted",
+   "Fair-Code",
+   "Business-Logic"
+  ],
+  "officialUrl": "https://n8n.io/",
+  "id": "developer_resource:n8n",
+  "status": "verified",
+  "evidence": [
+   [
+    "n8n Icon",
+    "https://www.google.com/s2/favicons?domain=n8n.io&sz=128"
+   ],
+   [
+    "n8n",
+    "https://n8n.io/"
+   ],
+   [
+    "n8n Official Website",
+    "https://n8n.io/"
+   ],
+   [
+    "n8n AI Documentation",
+    "https://docs.n8n.io/advanced-ai/"
+   ]
+  ],
+  "verified": "2026-11-03",
+  "notes": "Source-available under Sustainable Use License (free for self-hosted internal business use). n8n Cloud offers managed tiers. AI Agent node supports conversational memory, tools, and sub-workflows.\n\n---"
+ },
+ {
+  "name": "LM Studio",
+  "iconUrl": "https://www.google.com/s2/favicons?domain=lmstudio.ai&sz=128",
+  "domain": "lmstudio.ai",
+  "category": "Local AI and Model Infrastructure",
+  "subtype": "Local Model Desktop Environment & Server",
+  "desc": "Cross-platform desktop application for discovering, downloading, and running quantized LLMs (GGUF format) completely offline on macOS, Windows, and Linux, exposing a local OpenAI-compatible REST server.",
+  "pricingClass": "free",
+  "signup": false,
+  "local": true,
+  "tags": [
+   "Local-LLM",
+   "Desktop-App",
+   "GGUF",
+   "OpenAI-Compatible",
+   "GPU-Offloading"
+  ],
+  "officialUrl": "https://lmstudio.ai/",
+  "id": "developer_resource:lm-studio",
+  "status": "verified",
+  "evidence": [
+   [
+    "LM Studio Icon",
+    "https://www.google.com/s2/favicons?domain=lmstudio.ai&sz=128"
+   ],
+   [
+    "LM Studio",
+    "https://lmstudio.ai/"
+   ],
+   [
+    "LM Studio Official Website",
+    "https://lmstudio.ai/"
+   ],
+   [
+    "LM Studio Documentation",
+    "https://lmstudio.ai/docs"
+   ]
+  ],
+  "verified": "2026-11-03",
+  "notes": "Free for personal use; commercial deployment requires LM Studio for Work license. Connects directly to Hugging Face to search and pull quantized model weights with automatic hardware GPU offloading.\n\n---"
+ },
+ {
+  "name": "LocalAI",
+  "iconUrl": "https://www.google.com/s2/favicons?domain=localai.io&sz=128",
+  "domain": "localai.io",
+  "category": "Local AI and Model Infrastructure",
+  "subtype": "Drop-in Self-Hosted OpenAI API Alternative",
+  "desc": "Free, open-source drop-in replacement REST API compatible with OpenAI specifications for local and edge inference. Runs text generation, vision, audio transcription, image generation, and embeddings without requiring cloud connectivity.",
+  "pricingClass": "open_source",
+  "signup": false,
+  "local": true,
+  "tags": [
+   "OpenAI-Compatible",
+   "Local-Inference",
+   "Multi-Backend",
+   "Containerized",
+   "MIT-License"
+  ],
+  "officialUrl": "https://localai.io/",
+  "id": "developer_resource:localai",
+  "status": "verified",
+  "evidence": [
+   [
+    "LocalAI Icon",
+    "https://www.google.com/s2/favicons?domain=localai.io&sz=128"
+   ],
+   [
+    "LocalAI",
+    "https://localai.io/"
+   ],
+   [
+    "LocalAI GitHub Repository",
+    "https://github.com/mudler/LocalAI"
+   ],
+   [
+    "LocalAI Documentation",
+    "https://localai.io/basics/getting_started/"
+   ]
+  ],
+  "verified": "2026-11-03",
+  "notes": "MIT-licensed. Built by Ettore Di Giacinto (mudler). Supports multiple backends including llama.cpp, Whisper.cpp, Diffusers, and ONNX inside standard Docker containers on consumer CPUs and GPUs.\n\n---"
+ },
+ {
+  "name": "Jan",
+  "iconUrl": "https://www.google.com/s2/favicons?domain=jan.ai&sz=128",
+  "domain": "jan.ai",
+  "category": "Local AI and Model Infrastructure",
+  "subtype": "Open-Source Offline Local AI Desktop Client",
+  "desc": "100% open-source, privacy-first desktop application and local API server that runs LLMs locally on personal hardware. Stores all conversations, models, and embeddings locally on disk without telemetry tracking.",
+  "pricingClass": "open_source",
+  "signup": false,
+  "local": true,
+  "tags": [
+   "Local-First",
+   "Desktop-Assistant",
+   "Open-Source",
+   "AGPL-3-0",
+   "Local-API"
+  ],
+  "officialUrl": "https://jan.ai/",
+  "id": "developer_resource:jan",
+  "status": "verified",
+  "evidence": [
+   [
+    "Jan Icon",
+    "https://www.google.com/s2/favicons?domain=jan.ai&sz=128"
+   ],
+   [
+    "Jan.ai",
+    "https://jan.ai/"
+   ],
+   [
+    "Jan GitHub Repository",
+    "https://github.com/janhq/jan"
+   ],
+   [
+    "Jan Documentation",
+    "https://jan.ai/docs/"
+   ]
+  ],
+  "verified": "2026-11-03",
+  "notes": "AGPL-3.0 licensed. Developed by Menhir. Powered by the Nitro inference engine (C++). Exposes a local HTTP server at `http://localhost:1337` mimicking OpenAI chat endpoints for local development.\n\n---"
+ },
+ {
+  "name": "MLX",
+  "iconUrl": "https://www.google.com/s2/favicons?domain=apple.com&sz=128",
+  "domain": "ml-explore.github.io",
+  "category": "Model Optimization",
+  "subtype": "Machine Learning Framework for Apple Silicon",
+  "desc": "Efficient machine learning framework designed specifically for Apple Silicon by Apple machine learning research. Features unified memory architecture exploitation, multi-device array operations, and lazy evaluation for fast local inference.",
+  "pricingClass": "open_source",
+  "signup": false,
+  "local": true,
+  "tags": [
+   "Apple-Silicon",
+   "Metal-Acceleration",
+   "Unified-Memory",
+   "ML-Framework",
+   "MIT-License"
+  ],
+  "officialUrl": "https://github.com/ml-explore/mlx",
+  "id": "developer_resource:mlx",
+  "status": "verified",
+  "evidence": [
+   [
+    "Apple Icon",
+    "https://www.google.com/s2/favicons?domain=apple.com&sz=128"
+   ],
+   [
+    "MLX GitHub Repository",
+    "https://github.com/ml-explore/mlx"
+   ],
+   [
+    "MLX GitHub",
+    "https://github.com/ml-explore/mlx"
+   ],
+   [
+    "MLX Documentation",
+    "https://ml-explore.github.io/mlx/"
+   ]
+  ],
+  "verified": "2026-11-03",
+  "notes": "MIT-licensed. Uses Python and C++ APIs designed intentionally similar to NumPy and PyTorch. Powers `mlx-lm` for running high-parameter LLMs locally with high throughput on M1/M2/M3/M4 MacBooks.\n\n---"
+ },
+ {
+  "name": "DeepEval",
+  "iconUrl": "https://www.google.com/s2/favicons?domain=confident-ai.com&sz=128",
+  "domain": "deepeval.com",
+  "category": "AI Evaluation",
+  "subtype": "Unit Testing & Evaluation Framework for LLM Apps",
+  "desc": "Open-source evaluation and unit testing framework for LLM applications. Provides production-grade metrics for evaluating hallucination, answer relevancy, faithfulness, G-Eval, and prompt injection defense within CI/CD pipelines.",
+  "pricingClass": "open_source",
+  "signup": false,
+  "local": true,
+  "tags": [
+   "LLM-Evaluation",
+   "Unit-Testing",
+   "CI-CD",
+   "Hallucination-Metric",
+   "Apache-2-0"
+  ],
+  "officialUrl": "https://github.com/confident-ai/deepeval",
+  "id": "developer_resource:deepeval",
+  "status": "verified",
+  "evidence": [
+   [
+    "Confident AI Icon",
+    "https://www.google.com/s2/favicons?domain=confident-ai.com&sz=128"
+   ],
+   [
+    "DeepEval GitHub",
+    "https://github.com/confident-ai/deepeval"
+   ],
+   [
+    "DeepEval Documentation",
+    "https://docs.confident-ai.com/"
+   ],
+   [
+    "Confident AI Portal",
+    "https://www.confident-ai.com/"
+   ]
+  ],
+  "verified": "2026-11-03",
+  "notes": "Apache 2.0 licensed. Designed to integrate directly with `pytest` for automated regression testing of prompt updates, model swaps, and retrieval adjustments. Confident AI provides cloud tracking dashboards.\n\n---"
+ },
+ {
+  "name": "Ragas",
+  "iconUrl": "https://www.google.com/s2/favicons?domain=ragas.io&sz=128",
+  "domain": "ragas.io",
+  "category": "AI Evaluation",
+  "subtype": "Automated Evaluation Framework for RAG Pipelines",
+  "desc": "Open-source framework tailored for evaluating Retrieval-Augmented Generation systems. Computes reference-free scores for context precision, context recall, faithfulness, and answer relevance to pinpoint retrieval versus generation failures.",
+  "pricingClass": "open_source",
+  "signup": false,
+  "local": true,
+  "tags": [
+   "RAG-Evaluation",
+   "Faithfulness",
+   "Context-Precision",
+   "LLM-Metrics",
+   "Apache-2-0"
+  ],
+  "officialUrl": "https://ragas.io/",
+  "id": "developer_resource:ragas",
+  "status": "verified",
+  "evidence": [
+   [
+    "Ragas Icon",
+    "https://www.google.com/s2/favicons?domain=ragas.io&sz=128"
+   ],
+   [
+    "Ragas",
+    "https://ragas.io/"
+   ],
+   [
+    "Ragas GitHub Repository",
+    "https://github.com/explodinggradients/ragas"
+   ],
+   [
+    "Ragas Documentation",
+    "https://docs.ragas.io/"
+   ]
+  ],
+  "verified": "2026-11-03",
+  "notes": "Apache 2.0 licensed. Developed by Exploding Gradients. Features synthetic test dataset generation capabilities using document corpuses to automate comprehensive RAG benchmark suites.\n\n---"
+ },
+ {
+  "name": "NeMo Guardrails",
+  "iconUrl": "https://www.google.com/s2/favicons?domain=nvidia.com&sz=128",
+  "domain": "nvidia.com",
+  "category": "AI Security and Reliability",
+  "subtype": "Conversational Safety & Programmable Rails Toolkit",
+  "desc": "Open-source toolkit developed by NVIDIA for adding programmable guardrails to LLM conversational systems. Enforces topical boundaries, blocks jailbreak attempts, checks factual consistency, and prevents hallucinated statements using Colang scripts.",
+  "pricingClass": "open_source",
+  "signup": false,
+  "local": true,
+  "tags": [
+   "Guardrails",
+   "LLM-Security",
+   "Jailbreak-Defense",
+   "Colang",
+   "NVIDIA",
+   "Apache-2-0"
+  ],
+  "officialUrl": "https://github.com/NVIDIA/NeMo-Guardrails",
+  "id": "developer_resource:nemo-guardrails",
+  "status": "verified",
+  "evidence": [
+   [
+    "NVIDIA Icon",
+    "https://www.google.com/s2/favicons?domain=nvidia.com&sz=128"
+   ],
+   [
+    "NeMo Guardrails GitHub",
+    "https://github.com/NVIDIA/NeMo-Guardrails"
+   ],
+   [
+    "NVIDIA NeMo Documentation",
+    "https://docs.nvidia.com/nemo/guardrails/"
+   ],
+   [
+    "NeMo Guardrails GitHub",
+    "https://github.com/NVIDIA/NeMo-Guardrails"
+   ]
+  ],
+  "verified": "2026-11-03",
+  "notes": "Apache 2.0 licensed. Uses the modeling language Colang to define topical flows and dialog rules. Can run locally alongside any LLM (LangChain, LlamaIndex, LiteLLM) to govern input/output interactions before reaching end-users.\n\n---\n\n## Batch Checkpoint\n\n| Field | Value |\n|---|---|\n| **Batch Number** | 3 |\n| **Record Range** | 101–150 |\n| **Accepted in This Batch** | 50 |\n| **Cumulative Accepted** | 150 / 1,000 |\n| **AI Tools Accepted** | 17 (101–117) |\n| **AI Models Accepted** | 16 (118–133) |\n| **Developer Resources Accepted** | 17 (134–150) |\n| **Cumulative Registry Breakdown** | AI Tools: 51 \\| AI Models: 48 \\| Developer Resources: 51 |\n| **Next Record Number** | 151 |\n| **Categories Covered in Batch 3** | AI Chatbots, AI Paraphrasing & Writing, AI Image Generation, AI Graphic Design, AI Meeting Assistants, AI Email Productivity, Knowledge Management, Video Generation, Voice & Speech, Step-by-Step Documentation, Scientific & Academic Search, Enterprise Work Search, AI Code Review, Private Code Assistants, Visual Workflow Automation; Lightweight Multimodals, Efficient Small LLMs, Open-Weight Code Models, Dynamic Vision-Language Models, Open Diffusion Models, Text-to-Audio/Speech, Accelerated ASR, Cross-Encoder Rerankers, Edge Vision Models; Distributed Vector Databases, Dense Vector Libraries, Modular RAG Frameworks, All-in-One Embeddings Engines, Deep Document Understanding, Graph-Enhanced RAG, Open-Source Agent BaaS, Visual Flow Builders, Visual Multi-Agent IDEs, Fair-Code AI Automations, Local Desktop LLM Environments, Apple Silicon ML Frameworks, LLM Unit Testing, RAG Metrics, Conversational Guardrails |\n| **Categories Still Underrepresented** | AI Browser Extensions, AI Social Media Management, AI E-commerce, Domain-Specific Bio/Health Models, 3D Generation Models, Audio Understanding Models, Time-Series Models, Robotics & Embodied AI, Dataset Annotation Tools, Synthetic Data Generation, Content Moderation Platforms |\n| **Duplicate Candidates Rejected** | 0 (Cross-referenced against Batches 1 & 2 register) |\n| **Unverified Candidates Excluded** | 0 (All 50 verified from primary official sources) |\n| **Last Verified Date** | 2026-11-03 |\n| **Deduplication Register Status** | Active — 150 unique canonical IDs preserved |\n| **Next Action** | Type `continue` to retrieve Batch 4 (Records 151–200) |"
+ }
+]

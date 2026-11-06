@@ -1,0 +1,289 @@
+{
+  "before": {
+    "viewport": 320,
+    "docScroll": 347,
+    "bodyScroll": 347,
+    "main": [
+      {
+        "sel": ".page-main",
+        "tag": "MAIN",
+        "cls": "container page-main",
+        "left": 0,
+        "width": 320,
+        "right": 320,
+        "scrollWidth": 347,
+        "minWidth": "auto",
+        "whiteSpace": "normal",
+        "flexShrink": "1"
+      }
+    ],
+    "hero": [
+      {
+        "sel": ".hero",
+        "tag": "SECTION",
+        "cls": "hero",
+        "left": 18,
+        "width": 329,
+        "right": 347,
+        "scrollWidth": 329,
+        "minWidth": "auto",
+        "whiteSpace": "normal",
+        "flexShrink": "1"
+      }
+    ],
+    "heroChildren": [
+      {
+        "sel": ".hero > *",
+        "tag": "DIV",
+        "cls": "badge-pill",
+        "left": 18,
+        "width": 329,
+        "right": 347,
+        "scrollWidth": 327,
+        "minWidth": "0px",
+        "whiteSpace": "normal",
+        "flexShrink": "1"
+      },
+      {
+        "sel": ".hero > *",
+        "tag": "H1",
+        "cls": "",
+        "left": 18,
+        "width": 329,
+        "right": 347,
+        "scrollWidth": 329,
+        "minWidth": "0px",
+        "whiteSpace": "normal",
+        "flexShrink": "1"
+      },
+      {
+        "sel": ".hero > *",
+        "tag": "P",
+        "cls": "hero-sub",
+        "left": 18,
+        "width": 329,
+        "right": 347,
+        "scrollWidth": 329,
+        "minWidth": "0px",
+        "whiteSpace": "normal",
+        "flexShrink": "1"
+      },
+      {
+        "sel": ".hero > *",
+        "tag": "DIV",
+        "cls": "search-shell",
+        "left": 18,
+        "width": 329,
+        "right": 347,
+        "scrollWidth": 329,
+        "minWidth": "0px",
+        "whiteSpace": "normal",
+        "flexShrink": "1"
+      }
+    ],
+    "search": [
+      {
+        "sel": ".search-box, #resource-search, .search-box .key-hint, .query-presets, .preset-chip",
+        "tag": "DIV",
+        "cls": "search-box",
+        "left": 18,
+        "width": 329,
+        "right": 347,
+        "scrollWidth": 327,
+        "minWidth": "0px",
+        "whiteSpace": "normal",
+        "flexShrink": "1"
+      },
+      {
+        "sel": ".search-box, #resource-search, .search-box .key-hint, .query-presets, .preset-chip",
+        "tag": "INPUT",
+        "cls": "",
+        "left": 54,
+        "width": 219,
+        "right": 273,
+        "scrollWidth": 219,
+        "minWidth": "0px",
+        "whiteSpace": "normal",
+        "flexShrink": "1"
+      },
+      {
+        "sel": ".search-box, #resource-search, .search-box .key-hint, .query-presets, .preset-chip",
+        "tag": "KBD",
+        "cls": "key-hint",
+        "left": 286,
+        "width": 52,
+        "right": 338,
+        "scrollWidth": 50,
+        "minWidth": "auto",
+        "whiteSpace": "nowrap",
+        "flexShrink": "1"
+      },
+      {
+        "sel": ".search-box, #resource-search, .search-box .key-hint, .query-presets, .preset-chip",
+        "tag": "DIV",
+        "cls": "query-presets",
+        "left": 18,
+        "width": 329,
+        "right": 347,
+        "scrollWidth": 329,
+        "minWidth": "0px",
+        "whiteSpace": "normal",
+        "flexShrink": "1"
+      },
+      {
+        "sel": ".search-box, #resource-search, .search-box .key-hint, .query-presets, .preset-chip",
+        "tag": "BUTTON",
+        "cls": "preset-chip",
+        "left": 20,
+        "width": 138,
+        "right": 158,
+        "scrollWidth": 136,
+        "minWidth": "auto",
+        "whiteSpace": "normal",
+        "flexShrink": "1"
+      },
+      {
+        "sel": ".search-box, #resource-search, .search-box .key-hint, .query-presets, .preset-chip",
+        "tag": "BUTTON",
+        "cls": "preset-chip",
+        "left": 164,
+        "width": 180,
+        "right": 344,
+        "scrollWidth": 178,
+        "minWidth": "auto",
+        "whiteSpace": "normal",
+        "flexShrink": "1"
+      },
+      {
+        "sel": ".search-box, #resource-search, .search-box .key-hint, .query-presets, .preset-chip",
+        "tag": "BUTTON",
+        "cls": "preset-chip",
+        "left": 50,
+        "width": 126,
+        "right": 176,
+        "scrollWidth": 124,
+        "minWidth": "auto",
+        "whiteSpace": "normal",
+        "flexShrink": "1"
+      },
+      {
+        "sel": ".search-box, #resource-search, .search-box .key-hint, .query-presets, .preset-chip",
+        "tag": "BUTTON",
+        "cls": "preset-chip",
+        "left": 182,
+        "width": 132,
+        "right": 314,
+        "scrollWidth": 130,
+        "minWidth": "auto",
+        "whiteSpace": "normal",
+        "flexShrink": "1"
+      },
+      {
+        "sel": ".search-box, #resource-search, .search-box .key-hint, .query-presets, .preset-chip",
+        "tag": "BUTTON",
+        "cls": "preset-chip",
+        "left": 110,
+        "width": 144,
+        "right": 254,
+        "scrollWidth": 142,
+        "minWidth": "auto",
+        "whiteSpace": "normal",
+        "flexShrink": "1"
+      }
+    ],
+    "typeGrid": [
+      {
+        "sel": ".type-grid, .type-card",
+        "tag": "DIV",
+        "cls": "type-grid",
+        "left": 18,
+        "width": 284,
+        "right": 302,
+        "scrollWidth": 284,
+        "minWidth": "0px",
+        "whiteSpace": "normal",
+        "flexShrink": "1"
+      },
+      {
+        "sel": ".type-grid, .type-card",
+        "tag": "A",
+        "cls": "type-card",
+        "left": 18,
+        "width": 284,
+        "right": 302,
+        "scrollWidth": 282,
+        "minWidth": "auto",
+        "whiteSpace": "normal",
+        "flexShrink": "1"
+      },
+      {
+        "sel": ".type-grid, .type-card",
+        "tag": "A",
+        "cls": "type-card",
+        "left": 18,
+        "width": 284,
+        "right": 302,
+        "scrollWidth": 282,
+        "minWidth": "auto",
+        "whiteSpace": "normal",
+        "flexShrink": "1"
+      },
+      {
+        "sel": ".type-grid, .type-card",
+        "tag": "A",
+        "cls": "type-card",
+        "left": 18,
+        "width": 284,
+        "right": 302,
+        "scrollWidth": 282,
+        "minWidth": "auto",
+        "whiteSpace": "normal",
+        "flexShrink": "1"
+      }
+    ],
+    "header": [
+      {
+        "sel": ".header-inner, .brand-name, .header-actions",
+        "tag": "DIV",
+        "cls": "container header-inner",
+        "left": 0,
+        "width": 320,
+        "right": 320,
+        "scrollWidth": 320,
+        "minWidth": "0px",
+        "whiteSpace": "normal",
+        "flexShrink": "1"
+      },
+      {
+        "sel": ".header-inner, .brand-name, .header-actions",
+        "tag": "SPAN",
+        "cls": "brand-name",
+        "left": 51,
+        "width": 157,
+        "right": 208,
+        "scrollWidth": 157,
+        "minWidth": "auto",
+        "whiteSpace": "nowrap",
+        "flexShrink": "1"
+      },
+      {
+        "sel": ".header-inner, .brand-name, .header-actions",
+        "tag": "DIV",
+        "cls": "header-actions",
+        "left": 268,
+        "width": 34,
+        "right": 302,
+        "scrollWidth": 34,
+        "minWidth": "auto",
+        "whiteSpace": "normal",
+        "flexShrink": "1"
+      }
+    ]
+  },
+  "after": {
+    "scrollWidth": 347,
+    "heroWidth": 328.703125,
+    "badgeWidth": 328.703125,
+    "badgeHeight": 38.5
+  }
+}
