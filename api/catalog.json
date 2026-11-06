@@ -21,8 +21,8 @@
       "count": 300,
       "category_count": 12,
       "last_verified": "2026-11-04",
-      "bytes": 486148,
-      "sha256": "d4382f7eba4488d1dc6ca875641af13b37833b6b3774ed59d10baedc53826645"
+      "bytes": 500812,
+      "sha256": "37fa085c4473fb6aee9a2a8499c3c8bfc18fa900e3cbab07ba51b98235095d3d"
     },
     "developer-resources": {
       "label": "Developer Resources",
@@ -30,8 +30,8 @@
       "count": 300,
       "category_count": 12,
       "last_verified": "2026-11-04",
-      "bytes": 552206,
-      "sha256": "fa19cc4afe3a7ff4074638a2196983e859879ea589cc6fb260665f26f37e5401"
+      "bytes": 693396,
+      "sha256": "a5bc049b5b6f2d503ca3dcd97191b1f13d5c64be7698ee695254430ec9268ac0"
     }
   }
 }

@@ -737,6 +737,7 @@ input.p5-input[aria-invalid="true"], select.p5-input[aria-invalid="true"], texta
       line('  list <registry>         List resource IDs and names in a registry.');
       line('  search [reg] <term>     Search names, descriptions, categories, and tags.');
       line('  show <id> / info <id>   Print detailed attributes for one resource.');
+      line('  quickstart <id>         Show installation, docs, and code example.');
       line('  categories [registry]   Category counts, for one registry or all three.');
       line('  recent                  Display recently viewed resources from browser session.');
       line('  collection              Display bookmarks and custom collections in this browser.');
@@ -949,6 +950,80 @@ input.p5-input[aria-invalid="true"], select.p5-input[aria-invalid="true"], texta
       line(`Verified Resources (${list.length} records verified):`, 'head');
       line(`  All 1,003 records have been verified with primary source evidence and timestamps.`);
       line(`  Type "info <id>" to view the verification timestamp and evidence for any resource.`);
+    },
+
+    quickstart(args) {
+      const id = (args[0] || '').trim().toLowerCase();
+      if (!id) {
+        line('Usage: quickstart <resource-id>', 'err');
+        line('Example: quickstart langchain', 'muted');
+        return;
+      }
+      const devReg = REGISTRIES.find((r) => r.key === 'resources');
+      const match = devReg ? devReg.items.find((r) => String(r.id).toLowerCase() === id) : null;
+      if (!match) {
+        const anyMatch = findById(id);
+        if (anyMatch && anyMatch.reg.key !== 'resources') {
+          line(`"${id}" is in ${anyMatch.reg.label}. Quick Start applies to Developer Resources.`, 'err');
+          line(`Type "info ${id}" to inspect attributes or "open ${id}" to view the page.`, 'muted');
+          return;
+        }
+        line(`Resource "${id}" not found in Developer Resources catalog.`, 'err');
+        line('Type "search resources <keyword>" to locate resources.', 'muted');
+        return;
+      }
+      const qs = match.developer_quick_start;
+      line(`Developer Quick Start: ${match.name} [${match.category}]`, 'head');
+      if (qs && qs.available) {
+        line(`Package: ${qs.package_name || match.name} · Status: Verified`, 'ok');
+        blank();
+        line('Installation Commands:', 'head');
+        (qs.installation || []).forEach((inst) => {
+          line(`  $ ${inst.command}   (${inst.label || inst.pm})`);
+        });
+        blank();
+        line('Official Documentation:', 'head');
+        line(`  ${qs.documentation ? qs.documentation.url : (match.documentation_url || match.official_url)}`);
+        if (qs.github && qs.github.url) {
+          line('GitHub Repository:', 'head');
+          line(`  ${qs.github.url} (License: ${qs.github.license || match.license_short || 'Open Source'})`);
+        }
+        blank();
+        line('Supported Languages:', 'head');
+        const langs = (qs.supported_languages || []).map((l) => `${l.language} [${l.support_type.replace('_', ' ')}]`).join(', ');
+        line(`  ${langs || 'See documentation'}`);
+        if ((qs.examples || []).length) {
+          const ex = qs.examples[0];
+          blank();
+          line(`Basic Usage Example [${ex.label || ex.language}]: ${ex.title}`, 'head');
+          if (ex.prerequisites && ex.prerequisites.length) {
+            line(`  # Prerequisites: ${ex.prerequisites.join(' · ')}`, 'muted');
+          }
+          if (ex.env_vars && ex.env_vars.length) {
+            line(`  # Required Env: ${ex.env_vars.join(', ')}`, 'muted');
+          }
+          blank();
+          ex.code.split('\n').forEach((codeLine) => {
+            line(`  ${codeLine}`);
+          });
+          if (ex.expected_output) {
+            blank();
+            line('Expected Output:', 'muted');
+            ex.expected_output.split('\n').forEach((outLine) => {
+              line(`  ${outLine}`, 'ok');
+            });
+          }
+        }
+        blank();
+        line(`Type "open ${match.id}" to view the full interactive reference.`, 'muted');
+      } else {
+        line(`Quick Start reference is awaiting verification for "${match.name}".`, 'muted');
+        if (match.official_url) line(`  Website: ${match.official_url}`);
+        if (match.documentation_url) line(`  Docs:    ${match.documentation_url}`);
+        if (match.repository_url) line(`  Repo:    ${match.repository_url}`);
+        blank();
+        line(`Type "open ${match.id}" to view catalog details.`, 'muted');
+      }
     },
 
     open(args) {

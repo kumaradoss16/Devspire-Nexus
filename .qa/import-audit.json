@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-06T10:40:31.880Z",
+  "generated_at": "2026-11-06T11:18:37.866Z",
   "source_files": {
     "tools": {
       "file": "ai-tools.json",
@@ -16,14 +16,14 @@
     "dev": {
       "file": "developer-resources.json",
       "records": 300,
-      "bytes": 396288,
-      "sha256": "2645dc404e65d7a48363bcf22bb1283be4a377b989f3231f2ef536d1a2be849f"
+      "bytes": 530551,
+      "sha256": "b55dce97eb20556f5ec1bac30075c2e57a6821b90bf1b71a3aae531a1a3b1e38"
     },
     "combined": {
       "file": "ai-resources-1000.json",
       "records": 1000,
-      "bytes": 1327692,
-      "sha256": "078c7641b125dc0372c4d934d9a0b27be780437f018a9601ffdee2074e885b9a"
+      "bytes": 1461954,
+      "sha256": "88ac7fafddf1a35b82defbc8661cb6b1e531d5dc11ba46d190052f664c8d8e3d"
     }
   },
   "merge": {
@@ -227,7 +227,7 @@
       "count": 300,
       "catalog": "developer-resources",
       "source": "G:/Downloads/developer-resources.json",
-      "source_sha256": "2645dc404e65d7a48363bcf22bb1283be4a377b989f3231f2ef536d1a2be849f",
+      "source_sha256": "b55dce97eb20556f5ec1bac30075c2e57a6821b90bf1b71a3aae531a1a3b1e38",
       "last_verified": "2026-11-04",
       "category_order": [
         "Agent Frameworks",

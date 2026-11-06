@@ -177,11 +177,17 @@
 <div class="text-body-compact font-body-compact text-text-muted" id="results-count" role="status" aria-live="polite">
               Showing <span class="text-text-primary font-medium">0</span> of <span class="text-text-primary font-medium">0</span> resources matching filters
             </div>
+<div class="flex items-center gap-2">
+<button class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-surface-card border border-border-subtle text-text-muted hover:text-text-primary hover:border-secondary text-body-compact font-body-compact transition-colors duration-150" id="quickstart-filter-btn" type="button" aria-pressed="false" title="Filter resources with verified Developer Quick Start guides">
+<span class="material-symbols-outlined text-[16px] text-secondary" data-icon="terminal">terminal</span>
+<span>Quick Start Guides</span>
+<span class="font-code-badge text-[11px] px-1.5 py-0.2 rounded bg-surface-secondary border border-border-subtle text-text-primary" id="quickstart-count">0</span>
+</button>
+</div>
 <div class="flex items-center gap-1.5 text-metadata-label font-metadata-label text-text-muted">
 <span>Sort by:</span>
 <select class="bg-surface-card border border-border-subtle text-text-primary rounded text-metadata-label font-metadata-label px-2 py-1 focus:ring-0 focus:border-primary-container" id="sort-select" aria-label="Sort developer resources">
 <option value="verified">Recently Verified</option>
-<option value="new">Newly Added</option>
 <option value="name">Name A-Z</option>
 <option value="name-desc">Name Z-A</option>
 <option value="category">Category</option>

@@ -419,7 +419,7 @@ h1, h2, h3 { text-wrap: balance; }
 }
 </style>
 <link rel="stylesheet" href="assets/site.css"/>
-<link rel="canonical" href="models.html"/>
+<link rel="canonical" href="models.html"/>
 <meta name="theme-color" content="#090D12"/>
 <meta name="robots" content="index, follow"/>
 <meta property="og:type" content="website"/>
@@ -620,11 +620,17 @@ h1, h2, h3 { text-wrap: balance; }
 <div class="text-body-compact font-body-compact text-text-muted" id="results-count" role="status" aria-live="polite">
               Showing <span class="text-text-primary font-medium">0</span> of <span class="text-text-primary font-medium">0</span> resources matching filters
             </div>
+<div class="flex items-center gap-2">
+<button class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-surface-card border border-border-subtle text-text-muted hover:text-text-primary hover:border-secondary text-body-compact font-body-compact transition-colors duration-150" id="quickstart-filter-btn" type="button" aria-pressed="false" title="Filter resources with verified Developer Quick Start guides">
+<span class="material-symbols-outlined text-[16px] text-secondary" aria-hidden="true" data-icon="terminal">terminal</span>
+<span>Quick Start Guides</span>
+<span class="font-code-badge text-[11px] px-1.5 py-0.2 rounded bg-surface-secondary border border-border-subtle text-text-primary" id="quickstart-count">0</span>
+</button>
+</div>
 <div class="flex items-center gap-1.5 text-metadata-label font-metadata-label text-text-muted">
 <span>Sort by:</span>
 <select class="bg-surface-card border border-border-subtle text-text-primary rounded text-metadata-label font-metadata-label px-2 py-1 focus:ring-0 focus:border-primary-container" id="sort-select" aria-label="Sort developer resources">
 <option value="verified">Recently Verified</option>
-<option value="new">Newly Added</option>
 <option value="name">Name A-Z</option>
 <option value="name-desc">Name Z-A</option>
 <option value="category">Category</option>
@@ -780,6 +786,7 @@ h1, h2, h3 { text-wrap: balance; }
       licensing: new Set(),
       pricing: new Set()
     },
+    quickstartOnly: false,
     sort: 'verified',
     page: 1
   };
@@ -810,7 +817,7 @@ h1, h2, h3 { text-wrap: balance; }
   const searchHay = (r) => [
     r.name, r.description, r.category, r.resource_type, r.resource_subtype,
     r.license, r.pricing, r.official_url, domainOf(r.official_url),
-    ...(r.programming_languages || []), ...(r.tags || [])
+    ...(r.programming_languages || []), ...(r.tags || []), (r.developer_quick_start && r.developer_quick_start.available ? 'quickstart quick start guide ' + (r.developer_quick_start.package_name || '') : '')
   ].join(' ').toLowerCase();
 
   const matchesQuery = (r) => {
@@ -859,6 +866,180 @@ h1, h2, h3 { text-wrap: balance; }
     }
     return `<span class="shrink-0 font-code-badge text-code-badge text-secondary bg-surface-secondary border border-border-subtle px-2 py-0.5 rounded">${esc(r.pricing)}</span>`;
   };
+  const renderQuickStart = (r) => {
+    const qs = r.developer_quick_start;
+    if (qs && qs.available) {
+      const pmTabs = (qs.installation || []).length > 1
+        ? '<div class="flex items-center gap-1 bg-surface-secondary p-0.5 rounded-lg border border-border-subtle shrink-0" role="tablist" aria-label="Package Manager">' +
+          qs.installation.map((inst, idx) =>
+            '<button type="button" role="tab" aria-selected="' + (idx === 0) + '" class="qs-pm-tab px-2 py-0.5 text-xs rounded font-mono transition-colors ' +
+            (idx === 0 ? 'bg-surface-card text-text-primary shadow-xs font-semibold' : 'text-text-muted hover:text-text-primary') +
+            '" data-pm-idx="' + idx + '">' + esc(inst.label || inst.pm) + '</button>'
+          ).join('') + '</div>'
+        : '';
+
+      const firstInst = (qs.installation && qs.installation[0]) || { command: '# See documentation' };
+
+      const langBadges = (qs.supported_languages || []).map((l) => {
+        let badgeCls = 'bg-secondary/20 text-secondary';
+        let badgeText = 'Client Library';
+        if (l.support_type === 'official_sdk') {
+          badgeCls = 'bg-tertiary/20 text-tertiary';
+          badgeText = 'Official SDK';
+        } else if (l.support_type === 'rest_api') {
+          badgeCls = 'bg-primary/20 text-primary';
+          badgeText = 'REST API';
+        }
+        return '<span class="inline-flex items-center bg-surface-secondary border border-border-subtle rounded-md px-2.5 py-1 text-xs text-text-primary">' +
+          esc(l.language) + ' <span class="text-[10px] px-1.5 py-0.2 rounded ' + badgeCls + ' font-semibold ml-1.5">' + badgeText + '</span></span>';
+      }).join('');
+
+      const exTabs = (qs.examples || []).length > 1
+        ? '<div class="flex items-center gap-1 bg-surface-secondary p-0.5 rounded-lg border border-border-subtle shrink-0" role="tablist" aria-label="Example Language">' +
+          qs.examples.map((ex, idx) =>
+            '<button type="button" role="tab" aria-selected="' + (idx === 0) + '" class="qs-lang-tab px-2.5 py-0.5 text-xs rounded font-medium transition-colors ' +
+            (idx === 0 ? 'bg-surface-card text-text-primary shadow-xs font-semibold' : 'text-text-muted hover:text-text-primary') +
+            '" data-example-idx="' + idx + '">' + esc(ex.label || ex.language) + '</button>'
+          ).join('') + '</div>'
+        : '';
+
+      const firstEx = (qs.examples && qs.examples[0]) || null;
+
+      let exampleMetaHtml = '';
+      if (firstEx) {
+        if (firstEx.prerequisites && firstEx.prerequisites.length) {
+          exampleMetaHtml += '<span>Prerequisites: ' + esc(firstEx.prerequisites.join(' · ')) + '</span>';
+        }
+        if (firstEx.env_vars && firstEx.env_vars.length) {
+          exampleMetaHtml += '<span class="text-secondary font-mono">Requires ' + esc(firstEx.env_vars.join(', ')) + '</span>';
+        }
+      }
+
+      return '<section id="developer-quickstart-section" class="mb-space-md border border-border-subtle bg-surface-card rounded-xl p-4 sm:p-5 shadow-sm" aria-labelledby="qs-heading">' +
+        '<div class="flex flex-wrap items-center justify-between gap-2 pb-3 mb-3 border-b border-border-subtle">' +
+          '<div class="flex items-center gap-2">' +
+            '<span class="w-7 h-7 rounded-lg bg-secondary/15 text-secondary flex items-center justify-center shrink-0">' +
+              '<span class="material-symbols-outlined text-lg" data-icon="terminal" aria-hidden="true">terminal</span>' +
+            '</span>' +
+            '<h3 id="qs-heading" class="font-title-card text-title-card text-text-primary tracking-tight font-semibold flex items-center gap-2">' +
+              'Developer Quick Start' +
+              '<span class="text-[11px] font-normal font-mono px-2 py-0.5 rounded bg-tertiary/15 text-tertiary border border-tertiary/20">Verified Guide</span>' +
+            '</h3>' +
+          '</div>' +
+          (qs.package_name ? '<span class="font-mono text-xs text-text-muted bg-surface-secondary px-2.5 py-1 rounded border border-border-subtle">Package: <strong class="text-text-primary">' + esc(qs.package_name) + '</strong></span>' : '') +
+        '</div>' +
+
+        '<!-- Installation Command Box -->' +
+        '<div class="mb-4">' +
+          '<div class="flex items-center justify-between mb-1.5">' +
+            '<span class="font-metadata-label text-metadata-label text-text-muted uppercase tracking-wider">Installation</span>' +
+            pmTabs +
+          '</div>' +
+          '<div class="relative bg-bg-canvas border border-border-subtle rounded-lg p-3 font-mono text-xs group">' +
+            '<div class="overflow-x-auto pr-16 text-text-primary scrollbar-thin" id="qs-install-code">' +
+              '<code>' + esc(firstInst.command) + '</code>' +
+            '</div>' +
+            '<button type="button" class="qs-copy-btn absolute right-2 top-2 px-2.5 py-1 bg-surface-secondary hover:bg-surface-card border border-border-subtle rounded text-text-muted hover:text-text-primary text-[11px] font-sans flex items-center gap-1 transition-colors shadow-xs" data-copy-target="#qs-install-code" aria-label="Copy installation command">' +
+              '<span class="material-symbols-outlined text-sm" aria-hidden="true" data-icon="content_copy">content_copy</span>' +
+              '<span class="qs-copy-label" data-orig-text="Copy">Copy</span>' +
+            '</button>' +
+          '</div>' +
+          (firstInst.source_url ? '<div class="mt-1 flex items-center justify-end text-[11px] text-text-muted"><a href="' + esc(firstInst.source_url) + '" target="_blank" rel="noopener noreferrer" class="hover:text-secondary inline-flex items-center gap-1" id="qs-install-doc-link">Installation docs <span class="material-symbols-outlined text-[13px]" aria-hidden="true">open_in_new</span></a></div>' : '') +
+        '</div>' +
+
+        '<!-- Official Docs & GitHub Grid -->' +
+        '<div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 mb-4">' +
+          '<div class="p-3 rounded-lg bg-surface-secondary border border-border-subtle flex items-start gap-2.5">' +
+            '<span class="material-symbols-outlined text-secondary text-xl shrink-0 mt-0.5" aria-hidden="true" data-icon="description">description</span>' +
+            '<div class="min-w-0 flex-1">' +
+              '<span class="block font-metadata-label text-[10px] text-text-muted uppercase tracking-wider">Official Documentation</span>' +
+              '<a href="' + esc(qs.documentation ? qs.documentation.url : (r.documentation_url || r.official_url)) + '" target="_blank" rel="noopener noreferrer" class="font-body-compact text-body-compact font-medium text-text-primary hover:text-secondary inline-flex items-center gap-1 truncate max-w-full">' +
+                '<span class="truncate">' + esc((qs.documentation && qs.documentation.title) || r.name + ' Docs') + '</span>' +
+                '<span class="material-symbols-outlined text-sm shrink-0" aria-hidden="true">open_in_new</span>' +
+              '</a>' +
+              '<span class="block text-[11px] text-text-muted truncate">' + esc((qs.documentation && qs.documentation.domain) || domainOf(r.documentation_url || r.official_url)) + '</span>' +
+            '</div>' +
+          '</div>' +
+
+          '<div class="p-3 rounded-lg bg-surface-secondary border border-border-subtle flex items-start gap-2.5">' +
+            '<span class="material-symbols-outlined text-text-primary text-xl shrink-0 mt-0.5" aria-hidden="true" data-icon="code">code</span>' +
+            '<div class="min-w-0 flex-1">' +
+              '<span class="block font-metadata-label text-[10px] text-text-muted uppercase tracking-wider">GitHub Repository</span>' +
+              (qs.github && qs.github.url
+                ? '<a href="' + esc(qs.github.url) + '" target="_blank" rel="noopener noreferrer" class="font-body-compact text-body-compact font-medium text-text-primary hover:text-secondary inline-flex items-center gap-1 truncate max-w-full">' +
+                    '<span class="truncate">' + esc(qs.github.owner + '/' + qs.github.repo) + '</span>' +
+                    '<span class="material-symbols-outlined text-sm shrink-0" aria-hidden="true">open_in_new</span>' +
+                  '</a>' +
+                  '<div class="flex items-center gap-2 text-[11px] text-text-muted mt-0.5">' +
+                    '<span>License: <strong class="text-text-primary">' + esc(qs.github.license || r.license_short || 'Open Source') + '</strong></span>' +
+                    (qs.github.default_branch ? '<span>· Branch: ' + esc(qs.github.default_branch) + '</span>' : '') +
+                  '</div>'
+                : (r.repository_url
+                  ? '<a href="' + esc(r.repository_url) + '" target="_blank" rel="noopener noreferrer" class="font-body-compact text-body-compact font-medium text-text-primary hover:text-secondary inline-flex items-center gap-1 truncate max-w-full"><span class="truncate">Open Repository</span><span class="material-symbols-outlined text-sm shrink-0" aria-hidden="true">open_in_new</span></a>'
+                  : '<span class="text-text-muted text-xs">No public GitHub repository</span>')
+              ) +
+            '</div>' +
+          '</div>' +
+        '</div>' +
+
+        '<!-- Supported Programming Languages -->' +
+        '<div class="mb-4">' +
+          '<span class="font-metadata-label text-metadata-label text-text-muted uppercase tracking-wider block mb-1.5">Supported Programming Languages</span>' +
+          '<div class="flex flex-wrap gap-1.5">' + langBadges + '</div>' +
+        '</div>' +
+
+        '<!-- Basic Usage Example -->' +
+        (firstEx ?
+          '<div>' +
+            '<div class="flex flex-wrap items-center justify-between gap-2 mb-2">' +
+              '<span class="font-metadata-label text-metadata-label text-text-muted uppercase tracking-wider">Basic Usage Example</span>' +
+              exTabs +
+            '</div>' +
+            '<div id="qs-example-container" class="rounded-lg border border-border-subtle bg-bg-canvas overflow-hidden">' +
+              '<div class="bg-surface-secondary/70 border-b border-border-subtle px-3 py-2 flex flex-wrap items-center justify-between gap-2">' +
+                '<div class="min-w-0">' +
+                  '<h4 id="qs-example-title" class="font-body-compact text-xs font-semibold text-text-primary truncate">' +
+                    esc(firstEx.title || 'Quick Start Example') +
+                  '</h4>' +
+                  '<div id="qs-example-meta" class="text-[11px] text-text-muted flex flex-wrap items-center gap-x-2 gap-y-0.5 mt-0.5">' +
+                    exampleMetaHtml +
+                  '</div>' +
+                '</div>' +
+                '<button type="button" class="qs-copy-btn px-2.5 py-1 bg-surface-card hover:bg-surface-secondary border border-border-subtle rounded text-text-primary text-xs flex items-center gap-1.5 transition-colors shadow-xs" data-copy-target="#qs-example-code" aria-label="Copy code example">' +
+                  '<span class="material-symbols-outlined text-sm" aria-hidden="true" data-icon="content_copy">content_copy</span>' +
+                  '<span class="qs-copy-label" data-orig-text="Copy Code">Copy Code</span>' +
+                '</button>' +
+              '</div>' +
+              '<div class="p-3 font-mono text-[12px] leading-relaxed overflow-x-auto text-text-primary max-h-[360px] scrollbar-thin" id="qs-example-code">' +
+                '<pre><code>' + esc(firstEx.code) + '</code></pre>' +
+              '</div>' +
+              (firstEx.expected_output ?
+                '<div id="qs-expected-output-box" class="border-t border-border-subtle bg-surface-secondary/40 px-3 py-2 text-[11px] font-mono text-text-muted">' +
+                  '<span class="font-semibold text-text-primary uppercase tracking-wider text-[10px] block mb-0.5">Expected Output:</span>' +
+                  '<pre class="whitespace-pre-wrap text-tertiary"><code>' + esc(firstEx.expected_output) + '</code></pre>' +
+                '</div>'
+                : '') +
+            '</div>' +
+          '</div>'
+          : '') +
+      '</section>';
+    }
+
+    return '<section id="developer-quickstart-section" class="mb-space-md border border-dashed border-border-subtle bg-surface-secondary/40 rounded-xl p-4 text-center">' +
+      '<div class="flex items-center justify-center gap-2 text-text-muted mb-1">' +
+        '<span class="material-symbols-outlined text-base" aria-hidden="true">info</span>' +
+        '<span class="text-xs font-semibold uppercase tracking-wider">Developer Quick Start Reference</span>' +
+      '</div>' +
+      '<p class="font-body-compact text-xs text-text-muted max-w-md mx-auto">' +
+        'A verified copy-paste Quick Start guide is awaiting official review for <strong>' + esc(r.name) + '</strong>. You can inspect the official documentation or repository below.' +
+      '</p>' +
+      '<div class="flex items-center justify-center gap-3 mt-2.5">' +
+        (r.documentation_url ? '<a class="inline-flex items-center gap-1 text-xs text-secondary hover:underline" href="' + esc(r.documentation_url) + '" target="_blank" rel="noopener noreferrer">Official Docs <span class="material-symbols-outlined text-xs" aria-hidden="true">open_in_new</span></a>' : '') +
+        (r.repository_url ? '<a class="inline-flex items-center gap-1 text-xs text-secondary hover:underline" href="' + esc(r.repository_url) + '" target="_blank" rel="noopener noreferrer">GitHub Repository <span class="material-symbols-outlined text-xs" aria-hidden="true">open_in_new</span></a>' : '') +
+      '</div>' +
+    '</section>';
+  };
+
 
   const cardHTML = (r) => `
     <article class="ui-card rounded-xl p-space-md flex flex-col justify-between group" data-resource-id="${esc(r.id)}">
@@ -887,19 +1068,34 @@ h1, h2, h3 { text-wrap: balance; }
           ${(r.tags || []).slice(0, 4).map((t) => `<span class="font-code-badge text-code-badge text-text-muted bg-surface-secondary border border-border-subtle px-2 py-0.5 rounded">${esc(t)}</span>`).join('')}
         </div>
       </div>
-      <div class="pt-space-sm border-t border-border-subtle flex items-center justify-between gap-2">
-        <div class="flex items-center gap-1">
-          ${r.repository_url ? `<a class="p-1.5 rounded text-text-muted hover:text-text-primary hover:bg-surface-secondary transition-colors" href="${esc(r.repository_url)}" target="_blank" rel="noopener noreferrer" aria-label="Open ${esc(r.name)} repository" title="Repository"><span class="material-symbols-outlined text-[18px]" aria-hidden="true" data-icon="code">code</span></a>` : ''}
-          ${r.documentation_url ? `<a class="p-1.5 rounded text-text-muted hover:text-text-primary hover:bg-surface-secondary transition-colors" href="${esc(r.documentation_url)}" target="_blank" rel="noopener noreferrer" aria-label="Open ${esc(r.name)} documentation" title="Documentation"><span class="material-symbols-outlined text-[18px]" aria-hidden="true" data-icon="description">description</span></a>` : ''}
-          <a class="p-1.5 rounded text-text-muted hover:text-text-primary hover:bg-surface-secondary transition-colors" href="${esc(r.official_url)}" target="_blank" rel="noopener noreferrer" aria-label="Open ${esc(r.name)} official website" title="Official website"><span class="material-symbols-outlined text-[18px]" aria-hidden="true" data-icon="open_in_new">open_in_new</span></a>
-          <button type="button" class="p-1.5 rounded text-text-muted hover:text-text-primary hover:bg-surface-secondary transition-colors" data-share="resource:${esc(r.id)}" aria-label="Share ${esc(r.name)}" title="Share Resource">
-            <span class="material-symbols-outlined text-[18px]" aria-hidden="true">share</span>
-          </button>
-          ${window.DevSpireCollections ? window.DevSpireCollections.buttonHTML('resource', r.id, r.name, 'p-1.5 rounded text-text-muted hover:text-text-primary hover:bg-surface-secondary transition-colors') : ''}
+      <div class="pt-space-sm border-t border-border-subtle flex flex-col gap-2">
+        <div class="flex items-center justify-between gap-2">
+          <div class="flex items-center gap-1">
+            ${r.repository_url ? `<a class="p-1.5 rounded text-text-muted hover:text-text-primary hover:bg-surface-secondary transition-colors" href="${esc(r.repository_url)}" target="_blank" rel="noopener noreferrer" aria-label="Open ${esc(r.name)} repository" title="Repository"><span class="material-symbols-outlined text-[18px]" aria-hidden="true" data-icon="code">code</span></a>` : ''}
+            ${r.documentation_url ? `<a class="p-1.5 rounded text-text-muted hover:text-text-primary hover:bg-surface-secondary transition-colors" href="${esc(r.documentation_url)}" target="_blank" rel="noopener noreferrer" aria-label="Open ${esc(r.name)} documentation" title="Documentation"><span class="material-symbols-outlined text-[18px]" aria-hidden="true" data-icon="description">description</span></a>` : ''}
+            <a class="p-1.5 rounded text-text-muted hover:text-text-primary hover:bg-surface-secondary transition-colors" href="${esc(r.official_url)}" target="_blank" rel="noopener noreferrer" aria-label="Open ${esc(r.name)} official website" title="Official website"><span class="material-symbols-outlined text-[18px]" aria-hidden="true" data-icon="open_in_new">open_in_new</span></a>
+            <button type="button" class="p-1.5 rounded text-text-muted hover:text-text-primary hover:bg-surface-secondary transition-colors" data-share="resource:${esc(r.id)}" aria-label="Share ${esc(r.name)}" title="Share Resource">
+              <span class="material-symbols-outlined text-[18px]" aria-hidden="true">share</span>
+            </button>
+            ${window.DevSpireCollections ? window.DevSpireCollections.buttonHTML('resource', r.id, r.name, 'p-1.5 rounded text-text-muted hover:text-text-primary hover:bg-surface-secondary transition-colors') : ''}
+          </div>
+          ${!(r.developer_quick_start && r.developer_quick_start.available) ? `
+            <button class="text-body-compact font-body-compact text-primary hover:underline flex items-center gap-1 shrink-0" type="button" data-details="${esc(r.id)}">
+              View details <span class="material-symbols-outlined text-sm" aria-hidden="true" data-icon="chevron_right">chevron_right</span>
+            </button>
+          ` : ''}
         </div>
-        <button class="text-body-compact font-body-compact text-primary hover:underline flex items-center gap-1 shrink-0" type="button" data-details="${esc(r.id)}">
-          View details <span class="material-symbols-outlined text-sm" aria-hidden="true" data-icon="chevron_right">chevron_right</span>
-        </button>
+        
+        ${r.developer_quick_start && r.developer_quick_start.available ? `
+          <div class="flex items-center justify-between gap-2 pt-2 border-t border-border-subtle/50">
+            <button class="inline-flex items-center gap-1.5 font-body-compact text-xs font-semibold text-secondary bg-surface-secondary hover:bg-secondary/15 border border-border-subtle hover:border-secondary/40 px-2.5 py-1 rounded transition-colors" type="button" data-quickstart="${esc(r.id)}" title="Open Developer Quick Start reference">
+              <span class="material-symbols-outlined text-[14px]" data-icon="terminal" aria-hidden="true">terminal</span> Quick Start
+            </button>
+            <button class="text-body-compact font-body-compact text-primary hover:underline flex items-center gap-1 shrink-0" type="button" data-details="${esc(r.id)}">
+              View details <span class="material-symbols-outlined text-sm" aria-hidden="true" data-icon="chevron_right">chevron_right</span>
+            </button>
+          </div>
+        ` : ''}
       </div>
     </article>`;
 
@@ -964,6 +1160,10 @@ h1, h2, h3 { text-wrap: balance; }
       else if (kind === 'mcp') n = DATA.filter((r) => searchHay(r).includes('mcp')).length;
       el.textContent = n;
     });
+    const qsEl = $('quickstart-count');
+    if (qsEl) {
+      qsEl.textContent = DATA.filter((r) => r.developer_quick_start && r.developer_quick_start.available).length;
+    }
   }
 
   document.querySelectorAll('[data-quick]').forEach((btn) => {
@@ -1038,6 +1238,7 @@ h1, h2, h3 { text-wrap: balance; }
     const chips = [];
     if (state.category !== ALL) chips.push({ kind: 'category', label: `Category: ${state.category}` });
     if (state.query) chips.push({ kind: 'query', label: `Search: "${state.query}"` });
+    if (state.quickstartOnly) chips.push({ kind: 'quickstart', label: 'Verified Quick Start' });
     Object.entries(state.facets).forEach(([key, set]) => {
       set.forEach((v) => chips.push({ kind: 'facet', facet: key, value: v, label: v }));
     });
@@ -1050,8 +1251,20 @@ h1, h2, h3 { text-wrap: balance; }
       el.className = 'chip inline-flex items-center gap-1 bg-surface-card border border-border-subtle px-2 py-0.5 rounded text-code-badge font-code-badge text-text-primary';
       el.innerHTML = `${esc(chip.label)}<button class="text-text-muted hover:text-text-primary" type="button" aria-label="Remove filter ${esc(chip.label)}"><span class="material-symbols-outlined text-xs" aria-hidden="true" data-icon="close">close</span></button>`;
       el.querySelector('button').addEventListener('click', () => {
-        if (chip.kind === 'category') state.category = ALL;
-        else if (chip.kind === 'query') { state.query = ''; searchInput.value = ''; syncClearBtn(); }
+        if (chip.kind === 'category') {
+          state.category = ALL;
+        } else if (chip.kind === 'quickstart') {
+          state.quickstartOnly = false;
+          const qb = $('quickstart-filter-btn');
+          if (qb) {
+            qb.setAttribute('aria-pressed', 'false');
+            qb.className = 'inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-surface-card border border-border-subtle text-text-muted hover:text-text-primary hover:border-secondary text-body-compact font-body-compact transition-colors duration-150';
+          }
+        } else if (chip.kind === 'query') {
+          state.query = '';
+          searchInput.value = '';
+          syncClearBtn();
+        }
         else if (chip.kind === 'facet') state.facets[chip.facet].delete(chip.value);
         state.page = 1;
         renderPills(); renderFacets(); apply();
@@ -1102,7 +1315,7 @@ h1, h2, h3 { text-wrap: balance; }
   /* ----- Apply ----- */
   function apply() {
     if (DATA.length === 0) return;
-    const filtered = sortList(DATA.filter((r) => matchesQuery(r) && matchesCategory(r) && matchesFacets(r)));
+    const filtered = sortList(DATA.filter((r) => matchesQuery(r) && matchesCategory(r) && matchesFacets(r) && (!state.quickstartOnly || !!(r.developer_quick_start && r.developer_quick_start.available))));
     const totalPages = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
     state.page = Math.min(Math.max(1, state.page), totalPages);
     const start = (state.page - 1) * PAGE_SIZE;
@@ -1131,6 +1344,12 @@ h1, h2, h3 { text-wrap: balance; }
     syncClearBtn();
     state.category = ALL;
     state.page = 1;
+    state.quickstartOnly = false;
+    const qb = $('quickstart-filter-btn');
+    if (qb) {
+      qb.setAttribute('aria-pressed', 'false');
+      qb.className = 'inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-surface-card border border-border-subtle text-text-muted hover:text-text-primary hover:border-secondary text-body-compact font-body-compact transition-colors duration-150';
+    }
     Object.values(state.facets).forEach((s) => s.clear());
     renderPills();
     renderFacets();
@@ -1217,6 +1436,7 @@ h1, h2, h3 { text-wrap: balance; }
         <div class="bg-surface-secondary border border-border-subtle rounded px-2 py-1 min-w-0"><span class="block font-metadata-label text-metadata-label text-text-muted">Deployment</span><span class="block font-code-param text-code-param truncate text-text-primary">${esc(deployGroup(r))}</span></div>
         <div class="bg-surface-secondary border border-border-subtle rounded px-2 py-1 min-w-0"><span class="block font-metadata-label text-metadata-label text-text-muted">Signup</span><span class="block font-code-param text-code-param truncate text-text-primary">${r.signup_required ? 'Required' : 'Not required'}</span></div>
       </div>
+      ${renderQuickStart(r)}
       <dl class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 mb-space-md">
         ${field('Category', esc(r.category))}
         ${field('Resource Type', esc(r.resource_type))}
@@ -1264,8 +1484,115 @@ h1, h2, h3 { text-wrap: balance; }
       window.RelatedResources.renderInto(detailContent.querySelector('[data-related-detail]'), 'resource', r.id, { limit: 6 });
     }
     if (window.DevSpireCollections) window.DevSpireCollections.decorate();
+
+    // Developer Quick Start interactive handlers
+    if (r.developer_quick_start && r.developer_quick_start.available) {
+      const qs = r.developer_quick_start;
+      // Package manager tabs
+      detailContent.querySelectorAll('.qs-pm-tab').forEach((tab) => {
+        tab.addEventListener('click', () => {
+          const idx = parseInt(tab.dataset.pmIdx, 10);
+          const inst = qs.installation[idx];
+          if (!inst) return;
+          detailContent.querySelectorAll('.qs-pm-tab').forEach((t) => {
+            t.setAttribute('aria-selected', 'false');
+            t.className = 'qs-pm-tab px-2 py-0.5 text-xs rounded font-mono transition-colors text-text-muted hover:text-text-primary';
+          });
+          tab.setAttribute('aria-selected', 'true');
+          tab.className = 'qs-pm-tab px-2 py-0.5 text-xs rounded font-mono transition-colors bg-surface-card text-text-primary shadow-xs font-semibold';
+          const codeEl = detailContent.querySelector('#qs-install-code code');
+          if (codeEl) codeEl.textContent = inst.command;
+          const docLink = detailContent.querySelector('#qs-install-doc-link');
+          if (docLink && inst.source_url) {
+            docLink.href = inst.source_url;
+            docLink.style.display = 'inline-flex';
+          } else if (docLink) {
+            docLink.style.display = 'none';
+          }
+        });
+      });
+
+      // Language example tabs
+      detailContent.querySelectorAll('.qs-lang-tab').forEach((tab) => {
+        tab.addEventListener('click', () => {
+          const idx = parseInt(tab.dataset.exampleIdx, 10);
+          const ex = qs.examples[idx];
+          if (!ex) return;
+          detailContent.querySelectorAll('.qs-lang-tab').forEach((t) => {
+            t.setAttribute('aria-selected', 'false');
+            t.className = 'qs-lang-tab px-2.5 py-0.5 text-xs rounded font-medium transition-colors text-text-muted hover:text-text-primary';
+          });
+          tab.setAttribute('aria-selected', 'true');
+          tab.className = 'qs-lang-tab px-2.5 py-0.5 text-xs rounded font-medium transition-colors bg-surface-card text-text-primary shadow-xs font-semibold';
+          const titleEl = detailContent.querySelector('#qs-example-title');
+          if (titleEl) titleEl.textContent = ex.title || 'Quick Start Example';
+          const metaEl = detailContent.querySelector('#qs-example-meta');
+          if (metaEl) {
+            let metaHtml = '';
+            if (ex.prerequisites && ex.prerequisites.length) {
+              metaHtml += '<span>Prerequisites: ' + esc(ex.prerequisites.join(' · ')) + '</span>';
+            }
+            if (ex.env_vars && ex.env_vars.length) {
+              metaHtml += '<span class="text-secondary font-mono">Requires ' + esc(ex.env_vars.join(', ')) + '</span>';
+            }
+            metaEl.innerHTML = metaHtml;
+          }
+          const codeEl = detailContent.querySelector('#qs-example-code code');
+          if (codeEl) codeEl.textContent = ex.code;
+          const outBox = detailContent.querySelector('#qs-expected-output-box');
+          if (outBox) {
+            if (ex.expected_output) {
+              outBox.style.display = 'block';
+              const outCode = outBox.querySelector('code');
+              if (outCode) outCode.textContent = ex.expected_output;
+            } else {
+              outBox.style.display = 'none';
+            }
+          }
+        });
+      });
+    }
+
+    // Generic copy handler for Quick Start
+    detailContent.querySelectorAll('.qs-copy-btn').forEach((btn) => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const targetSel = btn.dataset.copyTarget;
+        const targetEl = detailContent.querySelector(targetSel);
+        if (!targetEl) return;
+        const text = targetEl.textContent.trim();
+        const copySuccess = () => {
+          const icon = btn.querySelector('.material-symbols-outlined');
+          const label = btn.querySelector('.qs-copy-label');
+          if (icon) icon.textContent = 'check';
+          if (label) label.textContent = 'Copied!';
+          btn.classList.add('text-tertiary', 'border-tertiary/40');
+          setTimeout(() => {
+            if (icon) icon.textContent = 'content_copy';
+            if (label) label.textContent = label.dataset.origText || 'Copy';
+            btn.classList.remove('text-tertiary', 'border-tertiary/40');
+          }, 2000);
+        };
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(text).then(copySuccess).catch(() => {
+            fallbackCopy(text, copySuccess);
+          });
+        } else {
+          fallbackCopy(text, copySuccess);
+        }
+      });
+    });
+
+    if (options.scrollQuickstart) {
+      setTimeout(() => {
+        const qsSec = $('developer-quickstart-section');
+        if (qsSec) qsSec.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 60);
+    }
+
     if (!options.fromHash) {
-      history.replaceState(null, '', '#resource/' + encodeURIComponent(r.id));
+      const qsSuffix = options.scrollQuickstart ? '/quickstart' : '';
+    history.replaceState(null, '', '#resource/' + encodeURIComponent(r.id) + qsSuffix);
     }
   }
 
@@ -1302,12 +1629,51 @@ h1, h2, h3 { text-wrap: balance; }
   function handleHash() {
     const m = location.hash.match(/^#resource\/(.+)$/);
     if (!m) return;
-    const id = decodeURIComponent(m[1]);
+    const raw = decodeURIComponent(m[1]);
+    const isQuickstart = raw.endsWith('/quickstart');
+    const id = isQuickstart ? raw.slice(0, -'/quickstart'.length) : raw;
     const found = DATA.some((r) => r.id === id);
-    if (found) openDetail(id, { fromHash: true });
+    if (found) openDetail(id, { fromHash: true, scrollQuickstart: isQuickstart });
     else showInvalid(id);
   }
   window.addEventListener('hashchange', handleHash);
+
+  document.addEventListener('click', (e) => {
+    const qsBtn = e.target.closest('[data-quickstart]');
+    if (qsBtn) {
+      e.preventDefault();
+      const id = qsBtn.dataset.quickstart;
+      openDetail(id, { scrollQuickstart: true });
+    }
+  });
+
+  const qsFilterBtn = $('quickstart-filter-btn');
+  if (qsFilterBtn) {
+    qsFilterBtn.addEventListener('click', () => {
+      state.quickstartOnly = !state.quickstartOnly;
+      state.page = 1;
+      qsFilterBtn.setAttribute('aria-pressed', state.quickstartOnly ? 'true' : 'false');
+      if (state.quickstartOnly) {
+        qsFilterBtn.classList.remove('bg-surface-card', 'text-text-muted', 'border-border-subtle');
+        qsFilterBtn.classList.add('bg-secondary/15', 'text-secondary', 'border-secondary/50', 'font-semibold');
+      } else {
+        qsFilterBtn.classList.add('bg-surface-card', 'text-text-muted', 'border-border-subtle');
+        qsFilterBtn.classList.remove('bg-secondary/15', 'text-secondary', 'border-secondary/50', 'font-semibold');
+      }
+      apply();
+    });
+  }
+
+  function fallbackCopy(text, cb) {
+    const ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); if (cb) cb(); } catch (err) {}
+    document.body.removeChild(ta);
+  }
 
   /* ----- Mobile UI ----- */
   const menuToggle = $('menu-toggle');

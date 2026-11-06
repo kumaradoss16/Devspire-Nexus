@@ -558,6 +558,7 @@ function mapDev(s, old) {
     programming_languages: devLanguages(s, old),
     integrations: (old && old.integrations) || [],
     tags: s.technical_tags || [],
+    developer_quick_start: s.developer_quick_start || (old ? old.developer_quick_start : null),
     icon: resolveIcon(s, old),
     verified: s.last_verified,
     status: s.verification_status,
