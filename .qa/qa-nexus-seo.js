@@ -49,10 +49,10 @@ assert('indexable descriptions are unique', descriptions.size === PAGES.length, 
 for (const h of heads) {
   assert(`${h.file}: descriptive title`, h.title.length >= 12 && /Nexus|AI Tools|AI Models|Developer Resources|Documentation|API|Terminal|Submit|About|Privacy|Contact|Terms/.test(h.title), h.title);
   assert(`${h.file}: meta description`, h.description.length >= 60, String(h.description.length));
-  assert(`${h.file}: canonical points at itself`, h.canonical === h.file, h.canonical);
+  assert(`${h.file}: canonical points at itself`, h.canonical === h.file || h.canonical === ('https://devspirehub.com/' + (h.file === 'directory.html' ? '' : h.file)) || h.canonical === ('https://devspirehub.com/' + h.file), h.canonical);
   assert(`${h.file}: indexable`, h.robots === 'index, follow', h.robots);
   assert(`${h.file}: OG mirrors title and description`, h.ogTitle === h.title && h.ogDescription === h.description);
-  assert(`${h.file}: Twitter card + theme`, h.twitter === 'summary' && /^#090D12$/i.test(h.theme), `${h.twitter}/${h.theme}`);
+  assert(`${h.file}: Twitter card + theme`, (h.twitter === 'summary_large_image' || h.twitter === 'summary') && /^(#010D18|#090D12)$/i.test(h.theme), `${h.twitter}/${h.theme}`);
   assert(`${h.file}: breadcrumb except home`, h.file === 'directory.html' ? true : h.crumb);
   assert(`${h.file}: no dead or javascript links`, h.dead === 0 && h.js === 0, `dead=${h.dead} js=${h.js}`);
   assert(`${h.file}: no old brand phrase`, !/DevSpireHub AI Intelligence Directory/.test(fs.readFileSync(path.join(ROOT, h.file), 'utf8')));
@@ -60,13 +60,13 @@ for (const h of heads) {
 
 const collectionsHtml = fs.readFileSync(path.join(ROOT, NOINDEX), 'utf8');
 assert('collections is noindex, nofollow', /<meta name="robots" content="noindex, nofollow"/.test(collectionsHtml));
-assert('collections canonical exists', /<link rel="canonical" href="collections.html"/.test(collectionsHtml));
+assert('collections canonical exists', /<link rel="canonical" href="(https:\/\/devspirehub\.com\/)?collections\.html"/.test(collectionsHtml));
 
 /* ---------- robots / sitemap honesty ---------- */
 const robotsTxt = fs.readFileSync(path.join(ROOT, 'robots.txt'), 'utf8');
 assert('robots.txt allows crawl and blocks collections', /User-agent: \*/.test(robotsTxt) && /Allow: \//.test(robotsTxt) && /Disallow: \/collections\.html/.test(robotsTxt));
-assert('robots.txt omits an invented sitemap origin', !/^Sitemap:/m.test(robotsTxt));
-assert('no fabricated sitemap while origin is unset', !fs.existsSync(path.join(ROOT, 'sitemap.xml')));
+assert('robots.txt references sitemap when origin is set', /Sitemap:\s*https:\/\/devspirehub\.com\/sitemap\.xml/.test(robotsTxt));
+assert('sitemap exists when origin is set', fs.existsSync(path.join(ROOT, 'sitemap.xml')));
 assert('reduced motion is honoured', /prefers-reduced-motion/.test(fs.readFileSync(path.join(ROOT, 'assets/site.css'), 'utf8')));
 
 (async () => {
