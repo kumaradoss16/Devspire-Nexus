@@ -11,7 +11,7 @@ const BASE = 'file:///H:/Devspirehub AI/';
 const WIDTHS = [320, 375, 480, 768, 1024, 1280, 1440];
 
 const PAGES = [
-  'directory.html',
+  'index.html',
   'ai-tools.html',
   'models.html',
   'developer-resources.html',
@@ -28,12 +28,12 @@ const PAGES = [
 ];
 
 const NAV = [
-  'directory.html', 'ai-tools.html', 'models.html', 'developer-resources.html',
+  'index.html', 'ai-tools.html', 'models.html', 'developer-resources.html',
   'collections.html', 'about.html', 'https://devspirehub.com/'
 ];
 
 const FOOTER = {
-  explore: ['directory.html', 'ai-tools.html', 'models.html', 'developer-resources.html'],
+  explore: ['index.html', 'ai-tools.html', 'models.html', 'developer-resources.html'],
   product: ['collections.html', 'about.html', 'contact.html', 'docs.html', 'api.html', 'submit.html'],
   legal: ['privacy.html', 'terms.html'],
   devspirehub: [
@@ -44,7 +44,7 @@ const FOOTER = {
 };
 
 const ACTIVE = {
-  'directory.html': 'directory.html',
+  'index.html': 'index.html',
   'ai-tools.html': 'ai-tools.html',
   'models.html': 'models.html',
   'developer-resources.html': 'developer-resources.html',
@@ -139,7 +139,7 @@ const assert = (name, cond, extra) => {
     assert(`${file}: decorative icons are hidden from AT`, shell.icons.length > 0 && shell.icons.every((i) => i.hidden === 'true'), JSON.stringify(shell.icons.slice(0, 3)));
     assert(`${file}: icons do not shrink`, shell.icons.every((i) => i.shrink === '0'), shell.icons.filter((i) => i.shrink !== '0').length);
 
-    if (file === 'directory.html') {
+    if (file === 'index.html') {
       assert('directory: DevSpireHub banner appears exactly once', shell.banner === 1, shell.banner);
       assert('directory: banner links to the parent site', await page.evaluate(() => [...document.querySelectorAll('#devspirehub-banner-title')].every((h) => h.closest('section').querySelector('a[href="https://devspirehub.com/"]'))));
     } else {
@@ -223,7 +223,7 @@ const assert = (name, cond, extra) => {
 
   const landingQuick = await browser.newPage({ viewport: { width: 1440, height: 1000 } });
   watch(landingQuick, 'landing-quick');
-  await landingQuick.goto(BASE + 'directory.html', { waitUntil: 'networkidle' });
+  await landingQuick.goto(BASE + 'index.html', { waitUntil: 'networkidle' });
   await landingQuick.waitForTimeout(300);
   await landingQuick.click('.preset-chip[data-preset="Coding"]');
   await landingQuick.waitForTimeout(350);
@@ -258,7 +258,7 @@ const assert = (name, cond, extra) => {
 
   /* ---------- Reduced motion ---------- */
   const reduced = await browser.newPage({ viewport: { width: 1280, height: 900 }, reducedMotion: 'reduce' });
-  await reduced.goto(BASE + 'directory.html', { waitUntil: 'networkidle' });
+  await reduced.goto(BASE + 'index.html', { waitUntil: 'networkidle' });
   await reduced.waitForTimeout(300);
   const motion = await reduced.evaluate(() => ({
     grid: getComputedStyle(document.body, '::before').animationName,

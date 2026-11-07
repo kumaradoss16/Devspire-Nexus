@@ -10,7 +10,7 @@ const ROOT = path.join(__dirname, '..');
 const BASE = 'file:///H:/Devspirehub AI/';
 
 const PAGES = [
-  'directory.html', 'ai-tools.html', 'models.html', 'developer-resources.html',
+  'index.html', 'ai-tools.html', 'models.html', 'developer-resources.html',
   'docs.html', 'api.html', 'terminal.html', 'submit.html',
   'about.html', 'privacy.html', 'contact.html', 'terms.html'
 ];
@@ -49,11 +49,11 @@ assert('indexable descriptions are unique', descriptions.size === PAGES.length, 
 for (const h of heads) {
   assert(`${h.file}: descriptive title`, h.title.length >= 12 && /Nexus|AI Tools|AI Models|Developer Resources|Documentation|API|Terminal|Submit|About|Privacy|Contact|Terms/.test(h.title), h.title);
   assert(`${h.file}: meta description`, h.description.length >= 60, String(h.description.length));
-  assert(`${h.file}: canonical points at itself`, h.canonical === h.file || h.canonical === ('https://devspirehub.com/' + (h.file === 'directory.html' ? '' : h.file)) || h.canonical === ('https://devspirehub.com/' + h.file), h.canonical);
+  assert(`${h.file}: canonical points at itself`, h.canonical === h.file || h.canonical === ('https://devspirehub.com/' + (h.file === 'index.html' ? '' : h.file)) || h.canonical === ('https://devspirehub.com/' + h.file), h.canonical);
   assert(`${h.file}: indexable`, h.robots === 'index, follow', h.robots);
   assert(`${h.file}: OG mirrors title and description`, h.ogTitle === h.title && h.ogDescription === h.description);
   assert(`${h.file}: Twitter card + theme`, (h.twitter === 'summary_large_image' || h.twitter === 'summary') && /^(#010D18|#090D12)$/i.test(h.theme), `${h.twitter}/${h.theme}`);
-  assert(`${h.file}: breadcrumb except home`, h.file === 'directory.html' ? true : h.crumb);
+  assert(`${h.file}: breadcrumb except home`, h.file === 'index.html' ? true : h.crumb);
   assert(`${h.file}: no dead or javascript links`, h.dead === 0 && h.js === 0, `dead=${h.dead} js=${h.js}`);
   assert(`${h.file}: no old brand phrase`, !/DevSpireHub AI Intelligence Directory/.test(fs.readFileSync(path.join(ROOT, h.file), 'utf8')));
 }
@@ -75,7 +75,7 @@ assert('reduced motion is honoured', /prefers-reduced-motion/.test(fs.readFileSy
   const errors = [];
   page.on('pageerror', (e) => errors.push(e.message));
   page.on('console', (m) => { if (m.type() === 'error') errors.push(m.text()); });
-  await page.goto(BASE + 'directory.html', { waitUntil: 'networkidle' });
+  await page.goto(BASE + 'index.html', { waitUntil: 'networkidle' });
   await page.waitForTimeout(500);
 
   /* ---------- Branding ---------- */
@@ -83,7 +83,7 @@ assert('reduced motion is honoured', /prefers-reduced-motion/.test(fs.readFileSy
     title: document.title,
     hero: document.querySelector('h1')?.textContent.replace(/\s+/g, ' ').trim(),
     kicker: /AI INTELLIGENCE DIRECTORY/i.test(document.body.innerText),
-    header: document.querySelector('header a[href="directory.html"]')?.textContent.replace(/\s+/g, ' ').trim(),
+    header: document.querySelector('header a[href="index.html"]')?.textContent.replace(/\s+/g, ' ').trim(),
     heroSection: (document.querySelector('h1')?.closest('section') || document.body).textContent.replace(/\s+/g, ' '),
     footer: document.querySelector('footer').textContent.replace(/\s+/g, ' '),
     oldBrand: /DevSpireHub AI Intelligence Directory/.test(document.body.innerText)

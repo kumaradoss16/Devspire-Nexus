@@ -9,7 +9,7 @@ const assert = (name, cond, extra) => {
 };
 
 const NAV = [
-  ['Discover', 'directory.html'],
+  ['Discover', 'index.html'],
   ['AI Tools', 'ai-tools.html'],
   ['AI Models', 'models.html'],
   ['Developer Resources', 'developer-resources.html'],
@@ -20,7 +20,7 @@ const NAV = [
 const NAV_HREFS = NAV.map(([, href]) => href);
 
 const PAGES = [
-  { key: 'directory', file: 'directory.html', active: 'Discover' },
+  { key: 'directory', file: 'index.html', active: 'Discover' },
   { key: 'tools', file: 'tools.html', active: null },
   { key: 'ai-tools', file: 'ai-tools.html', active: 'AI Tools' },
   { key: 'models', file: 'models.html', active: 'AI Models' },
@@ -36,7 +36,7 @@ const PAGES = [
     const page = await browser.newPage({ viewport: { width, height: 900 } });
     page.on('pageerror', (e) => consoleErrors.push(`directory@${width}: ${e.message}`));
     page.on('console', (m) => { if (m.type() === 'error') consoleErrors.push(`directory@${width}: ${m.text()}`); });
-    await page.goto(BASE + 'directory.html', { waitUntil: 'networkidle' });
+    await page.goto(BASE + 'index.html', { waitUntil: 'networkidle' });
     await page.waitForTimeout(500);
     const m = await page.evaluate(() => ({ scrollW: document.documentElement.scrollWidth, vw: document.documentElement.clientWidth }));
     assert(`landing no horizontal overflow @${width}`, m.scrollW <= m.vw + 1, `scrollW=${m.scrollW} vw=${m.vw}`);
@@ -60,7 +60,7 @@ const PAGES = [
     const info = await page.evaluate(() => ({
       nav: [...document.querySelectorAll('header nav[aria-label="Primary"] a')].map((a) => [a.textContent.trim(), a.getAttribute('href')]),
       current: [...document.querySelectorAll('header nav[aria-label="Primary"] a[aria-current="page"]')].map((a) => a.textContent.trim()),
-      brand: document.querySelector('header a[href="directory.html"] img') ? 'directory.html' : null,
+      brand: document.querySelector('header a[href="index.html"] img') ? 'index.html' : null,
       dead: document.querySelectorAll('a[href="#"]').length,
       about: [...document.querySelectorAll('header a')].filter((a) => /^About$/.test(a.textContent.trim())).map((a) => a.getAttribute('href')),
       terminal: document.querySelectorAll('button[title="Terminal"], button[title="API code"]').length,
@@ -69,7 +69,7 @@ const PAGES = [
         return a ? { href: a.getAttribute('href'), disabled: a.getAttribute('aria-disabled') } : null;
       })(),
       wordmark: (() => {
-        const w = document.querySelector('header a[href="directory.html"] span span');
+        const w = document.querySelector('header a[href="index.html"] span span');
         return w ? getComputedStyle(w).display : null;
       })(),
       footer: [...document.querySelectorAll('footer a')].map((a) => a.getAttribute('href')),
@@ -80,13 +80,13 @@ const PAGES = [
 
     assert(`${p.key}: desktop nav canonical`, JSON.stringify(info.nav.map(([, href]) => href)) === JSON.stringify(NAV_HREFS), JSON.stringify(info.nav));
     assert(`${p.key}: correct active nav item`, p.active ? info.current.join(',') === p.active : info.current.length === 0, info.current.join(','));
-    assert(`${p.key}: brand links to directory`, info.brand === 'directory.html');
+    assert(`${p.key}: brand links to directory`, info.brand === 'index.html');
     assert(`${p.key}: no dead anchors`, info.dead === 0, 'dead=' + info.dead);
     assert(`${p.key}: About link resolves to about.html`, info.about.length > 0 && info.about.every((h) => h === 'about.html'), JSON.stringify(info.about));
     assert(`${p.key}: no terminal/code no-op buttons`, info.terminal === 0, 'found=' + info.terminal);
     assert(`${p.key}: Submit links to the submission page`, !!info.submit && info.submit.href === 'submit.html' && info.submit.disabled === null, JSON.stringify(info.submit));
     assert(`${p.key}: wordmark visible at desktop`, info.wordmark !== 'none', info.wordmark);
-    assert(`${p.key}: footer starts with canonical nav`, info.footer.slice(0, 4).join(',') === 'directory.html,ai-tools.html,models.html,developer-resources.html', info.footer.join(','));
+    assert(`${p.key}: footer starts with canonical nav`, info.footer.slice(0, 4).join(',') === 'index.html,ai-tools.html,models.html,developer-resources.html', info.footer.join(','));
     assert(`${p.key}: footer attribution`, info.attribution);
     assert(`${p.key}: footer names source file`, info.sourceText);
     assert(`${p.key}: no dead source-data link`, !info.deadSource);
@@ -102,7 +102,7 @@ const PAGES = [
     const mob = await mp.evaluate(() => ({
       nav: [...document.querySelectorAll('#mobile-menu a')].map((a) => [a.textContent.trim(), a.getAttribute('href')]),
       wordmark: (() => {
-        const w = document.querySelector('header a[href="directory.html"] span span');
+        const w = document.querySelector('header a[href="index.html"] span span');
         return w ? getComputedStyle(w).display : null;
       })(),
       overflow: document.documentElement.scrollWidth <= document.documentElement.clientWidth + 1,
@@ -120,7 +120,7 @@ const PAGES = [
   }
 
   /* ---------- Landing data accuracy ---------- */
-  await page.goto(BASE + 'directory.html', { waitUntil: 'networkidle' });
+  await page.goto(BASE + 'index.html', { waitUntil: 'networkidle' });
   await page.waitForTimeout(600);
 
   const data = await page.evaluate(() => ({
@@ -195,7 +195,7 @@ const PAGES = [
   assert('resource deep link shows vLLM', (await page.textContent('#detail-content')).includes('vLLM'));
 
   /* ---------- Landing search ---------- */
-  await page.goto(BASE + 'directory.html', { waitUntil: 'networkidle' });
+  await page.goto(BASE + 'index.html', { waitUntil: 'networkidle' });
   await page.waitForTimeout(500);
 
   await page.fill('#resource-search', 'llama');
@@ -216,7 +216,7 @@ const PAGES = [
   await page.waitForTimeout(600);
   assert('clicking a search result opens its detail view', (await page.url()).includes(firstHref.split('#')[1] || '') && await page.isVisible('#detail-modal'), firstHref + ' -> ' + (await page.url()));
 
-  await page.goto(BASE + 'directory.html', { waitUntil: 'networkidle' });
+  await page.goto(BASE + 'index.html', { waitUntil: 'networkidle' });
   await page.waitForTimeout(400);
   await page.fill('#resource-search', 'zzzznotreal');
   await page.waitForTimeout(450);

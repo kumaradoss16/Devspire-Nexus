@@ -1,7 +1,7 @@
 const { chromium } = require('playwright-core');
 
 const EXE = process.env.LOCALAPPDATA + '/ms-playwright/chromium-1248/chrome-win64/chrome.exe';
-const URL = 'file:///H:/Devspirehub AI/directory.html';
+const URL = 'file:///H:/Devspirehub AI/index.html';
 
 (async () => {
   const browser = await chromium.launch({ executablePath: EXE });

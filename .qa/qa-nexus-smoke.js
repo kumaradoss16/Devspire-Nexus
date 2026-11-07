@@ -11,7 +11,7 @@ const BASE = 'file:///H:/Devspirehub AI/';
   page.on('console', (m) => { if (m.type() === 'error') errors.push('console: ' + m.text()); });
   page.on('pageerror', (e) => errors.push('pageerror: ' + e.message));
 
-  for (const file of ['directory.html', 'about.html', 'privacy.html', 'terms.html', 'contact.html', 'collections.html']) {
+  for (const file of ['index.html', 'about.html', 'privacy.html', 'terms.html', 'contact.html', 'collections.html']) {
     await page.goto(BASE + file, { waitUntil: 'load' });
     await page.waitForTimeout(700);
     const info = await page.evaluate(() => ({
@@ -24,7 +24,7 @@ const BASE = 'file:///H:/Devspirehub AI/';
     console.log(file, JSON.stringify(info));
   }
 
-  await page.goto(BASE + 'directory.html', { waitUntil: 'load' });
+  await page.goto(BASE + 'index.html', { waitUntil: 'load' });
   await page.waitForTimeout(900);
   const featured = await page.evaluate(() => ({
     week: (document.querySelector('[data-featured-week]') || {}).textContent,

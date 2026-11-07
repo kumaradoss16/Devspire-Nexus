@@ -318,7 +318,7 @@ const assert = (name, cond, extra) => { results.push(check(name, cond, extra)); 
     links: [...document.querySelectorAll('footer a')].map((a) => a.getAttribute('href')),
     attribution: /product of DevSpireHub\.com/.test(document.querySelector('footer').textContent)
   }));
-  const FOOTER_LINKS = 'directory.html,ai-tools.html,models.html,developer-resources.html,collections.html,about.html,contact.html,docs.html,api.html,submit.html,privacy.html,terms.html,https://devspirehub.com/,https://devspirehub.com/Website/about/about.html,https://devspirehub.com/Resources/digital-resources/digital-resources-hub.html';
+  const FOOTER_LINKS = 'index.html,ai-tools.html,models.html,developer-resources.html,collections.html,about.html,contact.html,docs.html,api.html,submit.html,privacy.html,terms.html,https://devspirehub.com/,https://devspirehub.com/Website/about/about.html,https://devspirehub.com/Resources/digital-resources/digital-resources-hub.html';
   assert('footer has grouped, working links', footer.links.length === 15 && footer.links.join(',') === FOOTER_LINKS, footer.links.join(','));
   assert('footer attribution present', footer.attribution);
 
@@ -335,7 +335,7 @@ const assert = (name, cond, extra) => { results.push(check(name, cond, extra)); 
   const modelsLink = await mp.evaluate(() => [...document.querySelectorAll('#mobile-menu a')].find(a => a.textContent.trim() === 'AI Models').getAttribute('href'));
   assert('mobile AI Models link -> models.html', modelsLink === 'models.html');
   assert('mobile header hides clipped wordmark, keeps logo', await mp.evaluate(() => {
-    const brand = document.querySelector('header a[href="directory.html"]');
+    const brand = document.querySelector('header a[href="index.html"]');
     const wordmark = brand.querySelector('span span');
     return getComputedStyle(wordmark).display === 'none' && !!brand.querySelector('img') && getComputedStyle(brand.querySelector('img')).display !== 'none';
   }));

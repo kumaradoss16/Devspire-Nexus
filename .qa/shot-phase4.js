@@ -6,7 +6,7 @@ const out = (n) => path.join(__dirname, 'shots', n);
   const browser = await chromium.launch({ executablePath: EXE });
 
   const desktop = await browser.newPage({ viewport: { width: 1440, height: 1100 } });
-  await desktop.goto('file:///H:/Devspirehub AI/directory.html', { waitUntil: 'networkidle' });
+  await desktop.goto('file:///H:/Devspirehub AI/index.html', { waitUntil: 'networkidle' });
   await desktop.waitForTimeout(700);
   await desktop.screenshot({ path: out('phase4-landing-1440-top.png') });
   await desktop.fill('#resource-search', 'llama');
@@ -19,7 +19,7 @@ const out = (n) => path.join(__dirname, 'shots', n);
   await desktop.screenshot({ path: out('phase4-landing-1440-coverage.png') });
 
   const mobile = await browser.newPage({ viewport: { width: 375, height: 812 } });
-  await mobile.goto('file:///H:/Devspirehub AI/directory.html', { waitUntil: 'networkidle' });
+  await mobile.goto('file:///H:/Devspirehub AI/index.html', { waitUntil: 'networkidle' });
   await mobile.waitForTimeout(700);
   await mobile.screenshot({ path: out('phase4-landing-375-top.png') });
   await mobile.fill('#resource-search', 'rag');

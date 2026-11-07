@@ -35,7 +35,7 @@ ${scripts || ''}
 `;
 
 const crumb = (label) => `<nav class="flex items-center gap-space-xs text-metadata-label font-metadata-label text-text-muted" aria-label="Breadcrumb">
-<a class="hover:text-text-primary transition-colors" href="directory.html">Home</a>
+<a class="hover:text-text-primary transition-colors" href="index.html">Home</a>
 <span class="text-border-subtle" aria-hidden="true">/</span>
 <span class="text-primary-container" aria-current="page">${label}</span>
 </nav>`;
@@ -122,7 +122,7 @@ ${pageHeader('About the directory', 'About DevSpire Nexus', 'DevSpire Nexus is t
 <section aria-labelledby="about-next">
 <h2 class="font-headline-section text-headline-section text-text-primary mb-3" id="about-next">Start exploring</h2>
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
-${linkCard('directory.html', 'explore', 'Directory', 'Search across all 1,003 records from one page.')}
+${linkCard('index.html', 'explore', 'Directory', 'Search across all 1,003 records from one page.')}
 ${linkCard('collections.html', 'bookmark', 'My Collections', 'Save records in this browser and organise custom collections.')}
 ${linkCard('docs.html', 'menu_book', 'Documentation', 'Field definitions, provenance, and static data access.')}
 ${linkCard('contact.html', 'mail', 'Contact', 'Corrections, privacy questions, and directory feedback.')}

@@ -14,7 +14,7 @@ const EXT = {
 };
 
 const NAV = [
-  ['directory.html', 'Discover', 'discover'],
+  ['index.html', 'Discover', 'discover'],
   ['ai-tools.html', 'AI Tools', 'tools'],
   ['models.html', 'AI Models', 'models'],
   ['developer-resources.html', 'Developer Resources', 'dev'],
@@ -37,7 +37,7 @@ const header = (active, quickFind) => {
   return `<header class="w-full border-b border-border-subtle dark:border-border-subtle sticky top-0 z-50 site-header">
 <div class="flex justify-between items-center w-full px-4 sm:px-gutter-lg max-w-[1360px] mx-auto h-14">
 <div class="flex items-center gap-2 sm:gap-space-lg min-w-0">
-<a class="font-title-card text-text-primary dark:text-text-primary tracking-tight font-semibold flex items-center gap-2 sm:gap-space-sm whitespace-nowrap text-[15px] sm:text-title-card shrink-0" href="directory.html">
+<a class="font-title-card text-text-primary dark:text-text-primary tracking-tight font-semibold flex items-center gap-2 sm:gap-space-sm whitespace-nowrap text-[15px] sm:text-title-card shrink-0" href="index.html">
 <img src="assets/img/devspirehub-gears-128.png" alt="DevSpire Nexus logo" class="brand-mark w-7 h-7 rounded-lg object-cover shrink-0" width="28" height="28"/>
 <span class="flex flex-col leading-tight min-w-0"><span class="hidden sm:inline">DevSpire Nexus</span><span class="hidden xl:inline font-metadata-label text-[10px] font-normal tracking-[0.14em] text-text-muted uppercase">AI Intelligence Directory</span></span>
 </a>
@@ -91,7 +91,7 @@ const footer = () => `<footer class="w-full bg-bg-canvas dark:bg-bg-canvas borde
 <p class="font-metadata-label text-metadata-label text-text-muted max-w-xs">Source: DevSpireHub AI knowledge base · ai-tools-models-developer-resources.md</p>
 </div>
 ${group('explore', 'Explore', [
-    ['directory.html', 'Directory'],
+    ['index.html', 'Directory'],
     ['ai-tools.html', 'AI Tools'],
     ['models.html', 'AI Models'],
     ['developer-resources.html', 'Developer Resources']
@@ -193,7 +193,7 @@ const apply = (html, options = {}) => {
 };
 
 const pageOptions = {
-  'directory.html': { active: 'discover', quickFind: 'jump', banner: true },
+  'index.html': { active: 'discover', quickFind: 'jump', banner: true },
   'models.html': { active: 'models', quickFind: 'input' },
   'ai-tools.html': { active: 'tools', quickFind: 'input' },
   'developer-resources.html': { active: 'dev', quickFind: 'input' },

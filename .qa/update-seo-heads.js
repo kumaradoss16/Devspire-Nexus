@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 const METADATA = {
-  'directory.html': {
+  'index.html': {
     title: 'DevSpire Nexus | AI Intelligence Directory',
     description: 'Discover and explore verified AI tools, foundation models, and developer resources in the DevSpire Nexus intelligence directory. Discover. Connect. Build.',
     keywords: 'AI tools directory, AI models, developer resources, AI software, machine learning tools, developer frameworks, AI APIs, DevSpire Nexus',
@@ -25,7 +25,7 @@ const METADATA = {
             "@type": "SearchAction",
             "target": {
               "@type": "EntryPoint",
-              "urlTemplate": "https://devspirehub.com/directory.html?q={search_term_string}"
+              "urlTemplate": "https://devspirehub.com/index.html?q={search_term_string}"
             },
             "query-input": "required name=search_term_string"
           }

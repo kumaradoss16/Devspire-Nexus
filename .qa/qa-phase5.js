@@ -346,8 +346,8 @@ assert('api: no API key or auth claim', !/API key|bearer token|authentication re
   await dp.close();
 
   /* ---------- Shared shell on the Phase 5 pages ---------- */
-  const navExpect = ['directory.html', 'ai-tools.html', 'models.html', 'developer-resources.html', 'collections.html', 'about.html', 'https://devspirehub.com/'];
-  const footerExpect = ['directory.html', 'ai-tools.html', 'models.html', 'developer-resources.html', 'collections.html', 'about.html', 'contact.html', 'docs.html', 'api.html', 'submit.html', 'privacy.html', 'terms.html', 'https://devspirehub.com/', 'https://devspirehub.com/Website/about/about.html', 'https://devspirehub.com/Resources/digital-resources/digital-resources-hub.html'];
+  const navExpect = ['index.html', 'ai-tools.html', 'models.html', 'developer-resources.html', 'collections.html', 'about.html', 'https://devspirehub.com/'];
+  const footerExpect = ['index.html', 'ai-tools.html', 'models.html', 'developer-resources.html', 'collections.html', 'about.html', 'contact.html', 'docs.html', 'api.html', 'submit.html', 'privacy.html', 'terms.html', 'https://devspirehub.com/', 'https://devspirehub.com/Website/about/about.html', 'https://devspirehub.com/Resources/digital-resources/digital-resources-hub.html'];
   for (const file of ['terminal.html', 'api.html', 'submit.html', 'docs.html']) {
     const p = await browser.newPage({ viewport: { width: 1440, height: 900 } });
     watch(p, `${file}:shell`);

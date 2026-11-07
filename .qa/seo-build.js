@@ -18,7 +18,7 @@ const ROOT = path.join(__dirname, '..');
 const CONFIG = path.join(ROOT, 'site.config.json');
 
 const INDEXABLE = [
-  'directory.html', 'ai-tools.html', 'models.html', 'developer-resources.html',
+  'index.html', 'ai-tools.html', 'models.html', 'developer-resources.html',
   'docs.html', 'api.html', 'terminal.html', 'submit.html',
   'about.html', 'privacy.html', 'contact.html', 'terms.html'
 ];
@@ -85,7 +85,7 @@ if (origin) {
     `    <loc>${origin}${file}</loc>`,
     `    <lastmod>${fileDate(file)}</lastmod>`,
     '    <changefreq>weekly</changefreq>',
-    `    <priority>${file === 'directory.html' ? '1.0' : '0.8'}</priority>`,
+    `    <priority>${file === 'index.html' ? '1.0' : '0.8'}</priority>`,
     '  </url>'
   ].join('\n')).join('\n');
   const xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls}\n</urlset>\n`;

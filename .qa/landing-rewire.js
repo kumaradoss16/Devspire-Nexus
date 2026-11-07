@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 const root = path.join(__dirname, '..');
-const file = path.join(root, 'directory.html');
+const file = path.join(root, 'index.html');
 let src = fs.readFileSync(file, 'utf8');
 const engine = fs.readFileSync(path.join(__dirname, 'landing-engine.js'), 'utf8').trim();
 
@@ -276,5 +276,5 @@ ${engine}
 </script>` + src.slice(scriptEnd);
 
 fs.writeFileSync(file, src);
-console.log('rewritten directory.html:', src.length, 'bytes');
+console.log('rewritten index.html:', src.length, 'bytes');
 console.log('remaining href="#":', (src.match(/href="#"/g) || []).length);

@@ -3,7 +3,7 @@
 const { chromium } = require('playwright-core');
 const EXE = process.env.LOCALAPPDATA + '/ms-playwright/chromium-1248/chrome-win64/chrome.exe';
 const BASE = 'file:///H:/Devspirehub AI/';
-const PAGES = ['directory.html', 'ai-tools.html', 'models.html', 'developer-resources.html', 'tools.html', 'terminal.html', 'api.html', 'submit.html', 'docs.html'];
+const PAGES = ['index.html', 'ai-tools.html', 'models.html', 'developer-resources.html', 'tools.html', 'terminal.html', 'api.html', 'submit.html', 'docs.html'];
 
 (async () => {
   const browser = await chromium.launch({ executablePath: EXE });

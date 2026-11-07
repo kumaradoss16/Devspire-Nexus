@@ -3,7 +3,7 @@ const fs = require('fs');
 const path = require('path');
 
 const root = path.join(__dirname, '..');
-const files = ['directory.html', 'tools.html', 'models.html', '.qa/tools-body-top.html', '.qa/dev-body-top.html'];
+const files = ['index.html', 'tools.html', 'models.html', '.qa/tools-body-top.html', '.qa/dev-body-top.html'];
 
 const LINK_CLASS = 'text-text-muted dark:text-text-muted font-metadata-label text-metadata-label hover:text-text-primary dark:hover:text-text-primary transition-colors';
 const extraLinks = [

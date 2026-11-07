@@ -7,7 +7,7 @@ const EXE = process.env.LOCALAPPDATA + '/ms-playwright/chromium-1248/chrome-win6
   const errors = [];
   page.on('pageerror', (e) => errors.push(e.message));
   page.on('console', (m) => { if (m.type() === 'error') errors.push(m.text()); });
-  await page.goto('file:///H:/Devspirehub AI/directory.html', { waitUntil: 'networkidle' });
+  await page.goto('file:///H:/Devspirehub AI/index.html', { waitUntil: 'networkidle' });
   await page.waitForTimeout(600);
 
   const info = await page.evaluate(() => ({

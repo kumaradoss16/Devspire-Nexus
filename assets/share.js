@@ -29,7 +29,7 @@
   }
 
   function getCanonicalUrl(type, id) {
-    const page = PAGE_MAP[type] || 'directory.html';
+    const page = PAGE_MAP[type] || 'index.html';
     const hash = `#${type}/${encodeURIComponent(id)}`;
     if (window.location.origin && window.location.origin !== 'null' && !window.location.origin.startsWith('file:')) {
       const path = window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/') + 1);

@@ -119,7 +119,7 @@ const assert = (name, cond, extra) => {
   assert('nav marks AI Tools current', await page.evaluate(() => document.querySelector('header nav a[aria-current="page"]')?.textContent.trim() === 'AI Tools'));
   assert('nav links every canonical destination', await page.evaluate(() => {
     const hrefs = [...document.querySelectorAll('header nav[aria-label="Primary"] a')].map((a) => a.getAttribute('href'));
-    return hrefs.length === 7 && ['directory.html', 'ai-tools.html', 'models.html', 'developer-resources.html', 'collections.html', 'about.html', 'https://devspirehub.com/'].every((h) => hrefs.includes(h));
+    return hrefs.length === 7 && ['index.html', 'ai-tools.html', 'models.html', 'developer-resources.html', 'collections.html', 'about.html', 'https://devspirehub.com/'].every((h) => hrefs.includes(h));
   }));
   assert('single h1', (await page.locator('h1').count()) === 1);
   assert('Submit Resource links to the submission page', await page.evaluate(() => {

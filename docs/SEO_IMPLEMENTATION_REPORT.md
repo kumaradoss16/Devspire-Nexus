@@ -24,7 +24,7 @@ This report documents the end-to-end technical SEO audit, Call-to-Action (CTA) s
    - Configured Open Graph (`og:type`, `og:site_name`, `og:title`, `og:description`, `og:url`, `og:image`, `og:image:width`, `og:image:height`, `og:locale`) and Twitter Card (`summary_large_image`) on all indexable pages.
 3. **Structured Data (JSON-LD) Deployment:**
    - Implemented schema.org structured data across all pages with zero fabricated metrics:
-     - `WebSite` with deep SearchAction query-input integration pointing to `directory.html?q={search_term_string}`.
+     - `WebSite` with deep SearchAction query-input integration pointing to `index.html?q={search_term_string}`.
      - `Organization` declaring DevSpireHub entity metadata, brand logo, and social/GitHub links.
      - `CollectionPage` schema with real-time dynamic JSON-LD injection on registry pages (`ai-tools.html`, `models.html`, `developer-resources.html`).
      - `BreadcrumbList` on informational, legal, and submission utility pages.
@@ -46,7 +46,7 @@ Every public indexable page now features unique, intent-matched metadata, self-r
 
 | File | Page Name | Canonical URL | Title Tag | Robots | Structured Data |
 |---|---|---|---|---|---|
-| `directory.html` | Discovery Directory (Root) | `https://devspirehub.com/` | AI Tools, Models & Developer Resources \| DevSpire Nexus | `index, follow` | `WebSite`, `Organization` |
+| `index.html` | Discovery Directory (Root) | `https://devspirehub.com/` | AI Tools, Models & Developer Resources \| DevSpire Nexus | `index, follow` | `WebSite`, `Organization` |
 | `ai-tools.html` | AI Tools Registry | `https://devspirehub.com/ai-tools.html` | AI Tools & Applications Directory \| DevSpire Nexus | `index, follow` | `CollectionPage`, `Organization` |
 | `models.html` | AI Models Registry | `https://devspirehub.com/models.html` | AI Models & LLMs Directory \| DevSpire Nexus | `index, follow` | `CollectionPage`, `Organization` |
 | `developer-resources.html` | Developer Resources Registry | `https://devspirehub.com/developer-resources.html` | AI Developer Tools, Frameworks & APIs \| DevSpire Nexus | `index, follow` | `CollectionPage`, `Organization` |
@@ -61,7 +61,7 @@ Every public indexable page now features unique, intent-matched metadata, self-r
 | `collections.html` | My Collections (User Data) | `https://devspirehub.com/collections.html` | My Saved Collections \| DevSpire Nexus | `noindex, nofollow` | None (Private) |
 
 ### Meta Description Copy Matrix
-- **Homepage (`directory.html`):**  
+- **Homepage (`index.html`):**  
   `"Discover and explore AI tools, foundation models, developer frameworks, libraries, APIs, and engineering resources through the DevSpire Nexus intelligence directory."`
 - **AI Tools (`ai-tools.html`):**  
   `"Browse and discover leading AI applications, software platforms, autonomous agents, and workflow productivity tools curated for engineers and creators."`
@@ -103,7 +103,7 @@ The official social preview card (`social-preview.png` and `devspire-nexus-og.pn
 The CTA architecture guides visitors seamlessly from broad discovery into deep technical evaluation and community contribution.
 
 ### 1. Primary Hero CTAs
-- **Homepage (`directory.html`):**
+- **Homepage (`index.html`):**
   - Primary: `"Explore Directory"` $\to$ Smooth scroll anchor `#nexus-explore` into the interactive search and filter system.
   - Secondary: `"Featured Tools"` $\to$ Jumps to curated weekly highlight cards.
 - **Registries (`ai-tools.html`, `models.html`, `developer-resources.html`):**
@@ -113,7 +113,7 @@ The CTA architecture guides visitors seamlessly from broad discovery into deep t
 ### 2. Secondary & Value-Add CTAs
 - **About Page (`about.html`):**
   - Redesigned conversion block at the conclusion of the mission statement:
-    - `"Explore Directory"` (`directory.html`)
+    - `"Explore Directory"` (`index.html`)
     - `"Suggest a Resource"` (`submit.html`)
     - `"Visit DevSpireHub"` (`https://devspirehub.com/`)
 - **Resource Details Modal:**
@@ -188,7 +188,7 @@ Every HTML document `<head>` now follows a standardized, performance-optimized e
 
 ## 6. Structured Data (JSON-LD) Implementation
 
-### 1. `WebSite` Schema (`directory.html`)
+### 1. `WebSite` Schema (`index.html`)
 Enables search engine sitelinks and query-based search action:
 ```json
 {
@@ -205,7 +205,7 @@ Enables search engine sitelinks and query-based search action:
   },
   "potentialAction": {
     "@type": "SearchAction",
-    "target": "https://devspirehub.com/directory.html?q={search_term_string}",
+    "target": "https://devspirehub.com/index.html?q={search_term_string}",
     "query-input": "required name=search_term_string"
   }
 }
@@ -277,7 +277,7 @@ Automated regression and smoke test suites were executed to validate technical c
 | Test Script | Scope | Result | Details |
 |---|---|---|---|
 | `node .qa/qa-nexus-seo.js` | Full site SEO metadata, canonicals, OG, Twitter, fonts, JSON-LD, sitemap, robots | **PASS (140/140)** | 100% of checks passed across all 13 HTML files and config files. |
-| `node .qa/qa-nexus-smoke.js` | Headless DOM smoke test, console error inspection, layout overflow detection | **PASS (0 errors, 0 overflow)** | Verified across `directory.html`, `about.html`, `privacy.html`, `terms.html`, `contact.html`, and `collections.html`. |
+| `node .qa/qa-nexus-smoke.js` | Headless DOM smoke test, console error inspection, layout overflow detection | **PASS (0 errors, 0 overflow)** | Verified across `index.html`, `about.html`, `privacy.html`, `terms.html`, `contact.html`, and `collections.html`. |
 | `node .qa/verify-15-cards.js` | Registry initial card pagination audit | **PASS (15 cards/page)** | Verified 15 cards initial rendering on AI Tools (27 pages), AI Models (20 pages), and Developer Resources (20 pages). |
 | `node .qa/verify-sort.js` | Sort dropdown stacking context & clickability | **PASS** | Verified z-index hierarchy (`selZ=35`, `toolZ=20`, `cardZ=1`) across desktop, tablet, and mobile viewport sizes. |
 
