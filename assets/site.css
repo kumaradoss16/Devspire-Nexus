@@ -471,6 +471,20 @@ main, footer { position: relative; z-index: 1; }
 }
 .nexus-input[aria-invalid="true"] { border-color: #F87171; }
 textarea.nexus-input { resize: vertical; }
+
+/* Create / rename collection input fields: white background with dark blue font */
+#new-collection-name,
+#new-collection-form input[type="text"],
+[data-rename-form] input[type="text"] {
+  background-color: #FFFFFF !important;
+  color: #0A2540 !important;
+  caret-color: #0A2540;
+}
+#new-collection-name::placeholder,
+#new-collection-form input[type="text"]::placeholder,
+[data-rename-form] input[type="text"]::placeholder {
+  color: #475569;
+}
 .nexus-error {
   margin: 0;
   color: #F87171;
