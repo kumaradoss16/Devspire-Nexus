@@ -474,16 +474,24 @@ textarea.nexus-input { resize: vertical; }
 
 /* Create / rename collection input fields: white background with dark blue font */
 #new-collection-name,
+#new-collection-name:focus,
+#new-collection-name:active,
 #new-collection-form input[type="text"],
-[data-rename-form] input[type="text"] {
+#new-collection-form input[type="text"]:focus,
+#new-collection-form input[type="text"]:active,
+[data-rename-form] input[type="text"],
+[data-rename-form] input[type="text"]:focus,
+[data-rename-form] input[type="text"]:active {
   background-color: #FFFFFF !important;
-  color: #0A2540 !important;
-  caret-color: #0A2540;
+  color: #1E3A8A !important;
+  -webkit-text-fill-color: #1E3A8A !important;
+  caret-color: #1E3A8A !important;
 }
 #new-collection-name::placeholder,
 #new-collection-form input[type="text"]::placeholder,
 [data-rename-form] input[type="text"]::placeholder {
-  color: #475569;
+  color: #64748B !important;
+  -webkit-text-fill-color: #64748B !important;
 }
 .nexus-error {
   margin: 0;

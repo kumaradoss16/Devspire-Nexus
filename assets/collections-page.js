@@ -196,7 +196,7 @@
         ? `<form class="flex flex-col sm:flex-row sm:items-end gap-2 mt-3 pt-3 border-t border-border-subtle" data-rename-form="${esc(collection.id)}">
             <div class="flex flex-col gap-1 flex-1 min-w-0">
               <label class="font-metadata-label text-metadata-label text-text-muted" for="rename-${esc(collection.id)}">New name</label>
-              <input class="nexus-input text-[#0A2540]" id="rename-${esc(collection.id)}" name="name" type="text" maxlength="60" value="${esc(collection.name)}" required style="color: #0A2540; background-color: #FFFFFF;"/>
+              <input class="nexus-input text-[#1E3A8A]" id="rename-${esc(collection.id)}" name="name" type="text" maxlength="60" value="${esc(collection.name)}" required style="color: #1E3A8A !important; -webkit-text-fill-color: #1E3A8A !important; background-color: #FFFFFF !important; caret-color: #1E3A8A !important;"/>
             </div>
             <div class="flex items-center gap-2">
               <button class="bg-primary-container text-bg-canvas font-metadata-label text-metadata-label font-semibold px-3 py-2 rounded hover:brightness-110 transition-all" type="submit">Save</button>

@@ -73,6 +73,27 @@
   <!-- Master Stylesheet (Overrides) -->
   <link rel="stylesheet" href="assets/site.css"/>
 
+  <style>
+    #new-collection-name,
+    #new-collection-name:focus,
+    #new-collection-name:active,
+    #new-collection-form input,
+    #new-collection-form input:focus,
+    #new-collection-form input:active,
+    [data-rename-form] input,
+    [data-rename-form] input:focus {
+      background-color: #FFFFFF !important;
+      color: #1E3A8A !important;
+      -webkit-text-fill-color: #1E3A8A !important;
+      caret-color: #1E3A8A !important;
+    }
+    #new-collection-name::placeholder,
+    #new-collection-form input::placeholder,
+    [data-rename-form] input::placeholder {
+      color: #64748B !important;
+      -webkit-text-fill-color: #64748B !important;
+    }
+  </style>
 </head>
 <body class="bg-bg-canvas text-text-primary antialiased selection:bg-primary-container selection:text-bg-canvas font-body-default min-h-screen flex flex-col">
 <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -191,7 +212,7 @@
 <form class="ui-card rounded-xl p-space-md flex flex-col sm:flex-row sm:items-end gap-3 mb-3" id="new-collection-form" hidden>
 <div class="flex flex-col gap-1.5 flex-1 min-w-0">
 <label class="font-metadata-label text-metadata-label text-text-muted" for="new-collection-name">Collection name</label>
-<input class="nexus-input text-[#0A2540]" id="new-collection-name" name="name" type="text" maxlength="60" autocomplete="off" required aria-describedby="new-collection-error" style="color: #0A2540; background-color: #FFFFFF;"/>
+<input class="nexus-input text-[#1E3A8A]" id="new-collection-name" name="name" type="text" maxlength="60" autocomplete="off" required aria-describedby="new-collection-error" style="color: #1E3A8A !important; -webkit-text-fill-color: #1E3A8A !important; background-color: #FFFFFF !important; caret-color: #1E3A8A !important;"/>
 <p class="nexus-error" id="new-collection-error" hidden></p>
 </div>
 <div class="flex items-center gap-2">
