@@ -1,4 +1,4 @@
-/* DevSpire Nexus — Terminal Command Engine (Requirement 7)
+/* DevSpire Nexus: Terminal Command Engine (Requirement 7)
    Safe, sandboxed, allowlist-only command console querying real catalog datasets
    and browser-side user state (Collections & Recently Viewed). */
 (() => {
@@ -65,7 +65,7 @@
 
     const COMMANDS = {
       help() {
-        line('DevSpire Nexus Catalog Terminal — Available Commands:', 'head');
+        line('DevSpire Nexus Catalog Terminal: Available Commands:', 'head');
         line('  help                          Show this command usage reference.');
         line('  clear                         Clear terminal output screen.');
         line('  version                       Display application version and catalog status.');
@@ -96,13 +96,13 @@
       },
 
       about() {
-        line('DevSpire Nexus — AI Intelligence Directory', 'head');
+        line('DevSpire Nexus | AI Intelligence Directory', 'head');
         line('Parent Brand: DevSpireHub.com');
         line('Tagline: Discover. Connect. Build.');
         line('Maintains three verified independent registries:');
-        line('  1. AI Tools — End-user software and assistant applications.');
-        line('  2. AI Models — Foundation models, LLMs, vision, and audio models.');
-        line('  3. Developer Resources — Frameworks, vector databases, runtimes, and SDKs.');
+        line('  1. AI Tools: End-user software and assistant applications.');
+        line('  2. AI Models: Foundation models, LLMs, vision, and audio models.');
+        line('  3. Developer Resources: Frameworks, vector databases, runtimes, and SDKs.');
       },
 
       stats(args) {
@@ -176,7 +176,7 @@
           const link = `<a class="text-secondary hover:underline" href="${reg.page}#${reg.type}/${encodeURIComponent(item.id)}">${sanitize(item.name)}</a>`;
           const cat = sanitize(item.category || 'General');
           const meta = `[${reg.label} · ${cat} · ID: ${item.id}]`;
-          line(`  ${link} — ${meta}`, 'normal', true);
+          line(`  ${link} | ${meta}`, 'normal', true);
         });
 
         if (hits.length > 15) {

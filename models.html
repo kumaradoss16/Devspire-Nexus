@@ -5,7 +5,7 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>AI Models | DevSpire Nexus</title>
 <link rel="icon" type="image/png" href="assets/img/devspirehub-gears-48.png"/>
-<meta name="description" content="Explore a verified catalog of AI models — large language models, reasoning, coding, vision &amp; multimodal, image, audio, video, embeddings, and small/edge models — with open weights, licensing, context window, and parameter details."/>
+<meta name="description" content="Explore a verified catalog of AI models, including large language models, reasoning, coding, vision &amp; multimodal, image, audio, video, embeddings, and small/edge models, with open weights, licensing, context window, and parameter details."/>
 <!-- Material Symbols Outlined font -->
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <!-- Fonts: Geist & JetBrains Mono -->
@@ -105,6 +105,8 @@
             "display-hero": ["Geist", "sans-serif"]
           },
           "fontSize": {
+            "base": "1rem",
+            "lg": "1.125rem",
             "headline-section": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
             "code-badge": ["12px", { "lineHeight": "16px", "letterSpacing": "0em", "fontWeight": "500" }],
             "display-hero-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
@@ -425,10 +427,10 @@ h1, h2, h3 { text-wrap: balance; }
 <meta property="og:type" content="website"/>
 <meta property="og:site_name" content="DevSpire Nexus"/>
 <meta property="og:title" content="AI Models | DevSpire Nexus"/>
-<meta property="og:description" content="Explore a verified catalog of AI models — large language models, reasoning, coding, vision &amp; multimodal, image, audio, video, embeddings, and small/edge models — with open weights, licensing, context window, and parameter details."/>
+<meta property="og:description" content="Explore a verified catalog of AI models, including large language models, reasoning, coding, vision &amp; multimodal, image, audio, video, embeddings, and small/edge models, with open weights, licensing, context window, and parameter details."/>
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="AI Models | DevSpire Nexus"/>
-<meta name="twitter:description" content="Explore a verified catalog of AI models — large language models, reasoning, coding, vision &amp; multimodal, image, audio, video, embeddings, and small/edge models — with open weights, licensing, context window, and parameter details."/>
+<meta name="twitter:description" content="Explore a verified catalog of AI models, including large language models, reasoning, coding, vision &amp; multimodal, image, audio, video, embeddings, and small/edge models, with open weights, licensing, context window, and parameter details."/>
 </head>
 <body class="bg-bg-canvas text-text-primary min-h-screen flex flex-col font-body-default antialiased selection:bg-primary-container selection:text-bg-canvas">
 <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -492,7 +494,7 @@ h1, h2, h3 { text-wrap: balance; }
 <p class="font-metadata-label text-metadata-label text-primary-container uppercase tracking-[0.18em] mb-1">Explore the Model Landscape</p>
 <h1 class="font-display-hero-mobile text-display-hero-mobile sm:font-display-hero sm:text-display-hero text-text-primary tracking-tight">AI Models</h1>
 <p class="font-body-compact text-body-compact text-text-muted mt-1 max-w-3xl">
-          Browse a verified catalog of AI models — language, reasoning, coding, multimodal, image, audio, video, and embedding models — with open-weight availability, licensing, context window, and parameter details.
+          Browse a verified catalog of AI models, including language, reasoning, coding, multimodal, image, audio, video, and embedding models, with open-weight availability, licensing, context window, and parameter details.
         </p>
 </div>
 <div class="flex items-center gap-2 self-start md:self-auto max-w-full min-w-0 bg-surface-secondary border border-border-subtle px-3 py-1.5 rounded">
@@ -572,7 +574,7 @@ h1, h2, h3 { text-wrap: balance; }
 <!-- Right Main Content -->
 <section class="flex-1 w-full flex flex-col gap-space-md min-w-0" aria-label="Model results">
 <!-- Results Toolbar & Active Filter Chips -->
-<div class="flex flex-col gap-space-sm bg-surface-secondary border border-border-subtle p-3 rounded">
+<div class="results-toolbar relative z-20 flex flex-col gap-space-sm bg-surface-secondary border border-border-subtle p-3 rounded">
 <div class="flex flex-wrap items-center justify-between gap-3">
 <div class="text-body-compact font-body-compact text-text-muted" id="results-count" role="status" aria-live="polite">
               Showing <span class="text-text-primary font-medium">0</span> of <span class="text-text-primary font-medium">0</span> models matching filters
@@ -584,9 +586,9 @@ h1, h2, h3 { text-wrap: balance; }
 <span>Compare Models (<span id="compare-count">0</span>)</span>
 </button>
 <!-- Sorting dropdown -->
-<div class="flex items-center gap-1.5 text-metadata-label font-metadata-label text-text-muted">
+<div class="sort-container relative z-30 flex items-center gap-1.5 text-metadata-label font-metadata-label text-text-muted">
 <span>Sort by:</span>
-<select class="bg-surface-card border border-border-subtle text-text-primary rounded text-metadata-label font-metadata-label px-2 py-1 focus:ring-0 focus:border-primary-container" id="sort-select" aria-label="Sort models">
+<select class="sort-dropdown bg-surface-card border border-border-subtle text-text-primary rounded text-metadata-label font-metadata-label px-2.5 py-1.5 focus:ring-1 focus:ring-primary-container focus:border-primary-container cursor-pointer transition-colors" id="sort-select" aria-label="Sort models">
 <option value="verified">Recently Verified</option>
 <option value="new">Newly Added</option>
 <option value="name">Name A-Z</option>
@@ -756,12 +758,12 @@ const ICONS = {
 (function () {
   'use strict';
 
-  const PAGE_SIZE = 9;
+  const PAGE_SIZE = window.DSH_SITE_CONFIG?.resourcePageSize || 15;
 
   /* Derive a numeric max-parameter figure (in billions) from each model's
      stated `params` string (e.g. "8B / 70B / 405B", "570M"). Used only for
      bucketed facet classification; stays null when the string carries no
-     parseable figure (e.g. "tiny–large", "ViT-S–ViT-g") — never guessed. */
+     parseable figure (e.g. "tiny-large", "ViT-S-ViT-g"), never guessed. */
   function maxParamsB(m) {
     if (!m.params) return null;
     let max = null;
@@ -774,7 +776,7 @@ const ICONS = {
   }
 
   /* Facet predicates. Each value maps to an explicit test against fields the
-     dataset actually carries — no invented attributes. */
+     dataset actually carries, with no invented attributes. */
   const FACET_MATCHERS = {
     availability: {
       'Open Weights': (m) => m.weights === 'open',

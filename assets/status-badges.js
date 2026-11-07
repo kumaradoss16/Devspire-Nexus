@@ -1,4 +1,4 @@
-/* DevSpire Nexus — Resource Status Indicators (Requirement 6)
+/* DevSpire Nexus: Resource Status Indicators (Requirement 6)
    Separately evaluates and renders "Newly Added" (creation/expansion batch) and
    "Recently Verified" (verified status with genuine verification timestamp) badges. */
 (() => {

@@ -195,7 +195,7 @@
           }
           if (status) {
             status.hidden = false;
-            status.textContent = 'Preview only — this form is not connected to a submission backend, so nothing was submitted.';
+            status.textContent = 'Preview only: this form is not connected to a submission backend, so nothing was submitted.';
           }
         });
       }

@@ -5,6 +5,7 @@
    locally and report that delivery is not configured instead of pretending
    to send. */
 window.DSH_SITE_CONFIG = {
+  resourcePageSize: 15,
   web3formsAccessKey: '99ea5478-6d12-4190-bd08-d596eb363775',
   endpoint: 'https://api.web3forms.com/submit',
   requestTimeoutMs: 15000,

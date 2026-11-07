@@ -1,4 +1,4 @@
-/* DevSpire Nexus — Resource Sharing Module (Requirement 5)
+/* DevSpire Nexus: Resource Sharing Module (Requirement 5)
    Provides accessible, multi-platform sharing (WhatsApp, Email, Telegram, Threads,
    Facebook, Instagram fallback, Native Web Share, and Copy Link) with canonical URLs. */
 (() => {
@@ -45,7 +45,7 @@
     const typeLabel = TYPE_LABELS[type] || 'AI Resource';
     const url = getCanonicalUrl(type, resource ? resource.id : '');
 
-    const title = `${name} — DevSpire Nexus`;
+    const title = `${name} | DevSpire Nexus`;
     const text = `${name} (${typeLabel} · ${category}): ${desc}\n\nDiscover more on DevSpire Nexus:`;
     const fullText = `${text}\n${url}`;
 

@@ -199,11 +199,11 @@ const assert = (name, cond, extra) => { results.push(check(name, cond, extra)); 
 
   /* Pagination */
   const pages = parseInt((await page.textContent('#page-indicator')).match(/of (\d+)/)[1], 10);
-  const expectedPages = Math.max(1, Math.ceil(counts.total / 9));
+  const expectedPages = Math.max(1, Math.ceil(counts.total / 15));
   assert(expectedPages + ' pages for ' + counts.total + ' models', pages === expectedPages, 'got ' + pages);
   for (let i = 1; i < pages; i++) { await page.click('#pagination-controls button:not(:disabled):last-child'); await page.waitForTimeout(120); }
   const lastCards = await page.evaluate(() => document.querySelectorAll('#model-grid article').length);
-  const expectedLast = counts.total % 9 || 9;
+  const expectedLast = counts.total % 15 || 15;
   assert('last page has ' + expectedLast + ' cards', lastCards === expectedLast, 'got ' + lastCards);
   await page.click('#pagination-controls button:not(:disabled):first-child');
   await page.waitForTimeout(200);
@@ -226,7 +226,7 @@ const assert = (name, cond, extra) => { results.push(check(name, cond, extra)); 
 
   /* Compare */
   const boxes = await page.$$('#model-grid [data-compare]');
-  assert('9 compare checkboxes on page', boxes.length === 9, 'got ' + boxes.length);
+  assert('15 compare checkboxes on page', boxes.length === 15, 'got ' + boxes.length);
   assert('compare button disabled at 0', await page.isDisabled('#compare-btn'));
   for (let i = 0; i < 3; i++) { await boxes[i].check(); await page.waitForTimeout(150); }
   assert('compare count = 3', (await page.textContent('#compare-count')) === '3');

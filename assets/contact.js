@@ -127,7 +127,7 @@
 
     const result = validate();
     if (!result.ok) {
-      showStatus(`Message not sent — fix ${result.bad} field${result.bad === 1 ? '' : 's'} below.`, 'error');
+      showStatus(`Message not sent. Please fix the ${result.bad} highlighted field${result.bad === 1 ? '' : 's'} below.`, 'error');
       const firstBad = form.querySelector('[aria-invalid="true"]');
       if (firstBad) firstBad.focus();
       return;

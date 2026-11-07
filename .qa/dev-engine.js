@@ -3,7 +3,7 @@
 
   const DATA = Array.isArray(window.DEVELOPER_RESOURCES) ? window.DEVELOPER_RESOURCES : [];
   const META = window.DEVELOPER_RESOURCES_META || {};
-  const PAGE_SIZE = 9;
+  const PAGE_SIZE = window.DSH_SITE_CONFIG?.resourcePageSize || 15;
   const ALL = 'All Resources';
   const CATEGORY_ORDER = Array.isArray(META.category_order) && META.category_order.length
     ? META.category_order

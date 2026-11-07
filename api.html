@@ -105,6 +105,8 @@
             "display-hero": ["Geist", "sans-serif"]
           },
           "fontSize": {
+            "base": "1rem",
+            "lg": "1.125rem",
             "headline-section": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
             "code-badge": ["12px", { "lineHeight": "16px", "letterSpacing": "0em", "fontWeight": "500" }],
             "display-hero-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
@@ -581,7 +583,7 @@ input.p5-input[aria-invalid="true"], select.p5-input[aria-invalid="true"], texta
 <span class="material-symbols-outlined text-status-warning text-xl shrink-0" aria-hidden="true" data-icon="info">info</span>
 <div class="min-w-0">
 <p class="font-body-compact text-body-compact text-text-primary font-medium">There is no API server in this build.</p>
-<p class="font-metadata-label text-metadata-label text-text-muted mt-0.5">The files below are shipped with the site. They are read-only, require no authentication, and make no availability or freshness guarantees beyond the recorded generation date. When the site is served over HTTP, they can be fetched like any static asset. Opening the page from <code class="font-code-badge">file://</code> blocks <code class="font-code-badge">fetch()</code> in most browsers — use the Open links instead.</p>
+<p class="font-metadata-label text-metadata-label text-text-muted mt-0.5">The files below are shipped with the site. They are read-only, require no authentication, and make no availability or freshness guarantees beyond the recorded generation date. When the site is served over HTTP, they can be fetched like any static asset. Opening the page from <code class="font-code-badge">file://</code> blocks <code class="font-code-badge">fetch()</code> in most browsers; use the Open links instead.</p>
 </div>
 </div>
 <section class="mb-space-lg">
@@ -846,7 +848,7 @@ console.log(_meta.count, records.map((r) =&gt; r.id));</pre>
       const label = btn.textContent;
       btn.textContent = ok ? 'Copied' : 'Copy failed';
       setTimeout(() => { btn.textContent = label; }, 1600);
-      say(ok ? `Copied path: ${path}` : `Copy failed — select ${path} manually.`);
+      say(ok ? `Copied path: ${path}` : `Copy failed. Please select ${path} manually.`);
     });
   });
 
@@ -855,7 +857,7 @@ console.log(_meta.count, records.map((r) =&gt; r.id));</pre>
       const target = document.getElementById(btn.getAttribute('data-copy-target'));
       if (!target) return;
       const ok = await copyText(target.textContent);
-      say(ok ? 'Manifest JSON copied.' : 'Copy failed — select the JSON manually.');
+      say(ok ? 'Manifest JSON copied.' : 'Copy failed. Please select the JSON manually.');
     });
   });
 })();

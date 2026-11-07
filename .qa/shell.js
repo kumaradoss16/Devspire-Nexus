@@ -122,10 +122,10 @@ ${group('devspirehub', 'DevSpireHub', [
 </footer>`;
 
 const BANNER = `<section class="mt-12" aria-labelledby="devspirehub-banner-title">
-<div class="ui-card rounded-xl p-space-lg md:p-space-xl overflow-hidden">
+<div class="devspirehub-banner-card ui-card rounded-xl p-space-lg md:p-space-xl pb-10 md:pb-12 overflow-hidden">
 <div class="flex flex-col md:flex-row md:items-center justify-between gap-space-lg">
 <div class="flex items-start gap-4 min-w-0">
-<img src="assets/img/devspirehub-gears-128.png" alt="" width="48" height="48" class="brand-mark w-12 h-12 rounded-lg object-cover shrink-0" loading="lazy"/>
+<img src="assets/img/devspirehub-icon-128.png" alt="DevSpireHub official logo" width="48" height="48" class="w-12 h-12 rounded-lg object-contain shrink-0" loading="lazy"/>
 <div class="min-w-0">
 <p class="font-metadata-label text-metadata-label text-primary-container uppercase tracking-[0.18em] mb-1">The parent network</p>
 <h2 class="font-headline-section text-headline-section text-text-primary" id="devspirehub-banner-title">Explore More at DevSpireHub</h2>

@@ -5,7 +5,7 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>AI Tools | DevSpire Nexus</title>
 <link rel="icon" type="image/png" href="assets/img/devspirehub-gears-48.png"/>
-<meta name="description" content="Browse a verified catalog of AI tools — assistants, coding platforms, research engines, writing tools, image and video generators, audio tools, automation, and presentation builders — in the DevSpire Nexus AI Intelligence Directory."/>
+<meta name="description" content="Browse a verified catalog of AI tools, including assistants, coding platforms, research engines, writing tools, image and video generators, audio tools, automation, and presentation builders in the DevSpire Nexus AI Intelligence Directory."/>
 <!-- Material Symbols Outlined font -->
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <!-- Fonts: Geist & JetBrains Mono -->
@@ -105,6 +105,8 @@
             "display-hero": ["Geist", "sans-serif"]
           },
           "fontSize": {
+            "base": "1rem",
+            "lg": "1.125rem",
             "headline-section": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
             "code-badge": ["12px", { "lineHeight": "16px", "letterSpacing": "0em", "fontWeight": "500" }],
             "display-hero-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
@@ -425,10 +427,10 @@ h1, h2, h3 { text-wrap: balance; }
 <meta property="og:type" content="website"/>
 <meta property="og:site_name" content="DevSpire Nexus"/>
 <meta property="og:title" content="AI Tools | DevSpire Nexus"/>
-<meta property="og:description" content="Browse a verified catalog of AI tools — assistants, coding platforms, research engines, writing tools, image and video generators, audio tools, automation, and presentation builders — in the DevSpire Nexus AI Intelligence Directory."/>
+<meta property="og:description" content="Browse a verified catalog of AI tools, including assistants, coding platforms, research engines, writing tools, image and video generators, audio tools, automation, and presentation builders in the DevSpire Nexus AI Intelligence Directory."/>
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="AI Tools | DevSpire Nexus"/>
-<meta name="twitter:description" content="Browse a verified catalog of AI tools — assistants, coding platforms, research engines, writing tools, image and video generators, audio tools, automation, and presentation builders — in the DevSpire Nexus AI Intelligence Directory."/>
+<meta name="twitter:description" content="Browse a verified catalog of AI tools, including assistants, coding platforms, research engines, writing tools, image and video generators, audio tools, automation, and presentation builders in the DevSpire Nexus AI Intelligence Directory."/>
 </head>
 <body class="bg-bg-canvas text-text-primary min-h-screen flex flex-col font-body-default antialiased selection:bg-primary-container selection:text-bg-canvas">
 <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -615,14 +617,14 @@ h1, h2, h3 { text-wrap: balance; }
 <!-- Right Main Content -->
 <section class="flex-1 w-full flex flex-col gap-space-md min-w-0" aria-label="AI tool results">
 <!-- Results Toolbar & Active Filter Chips -->
-<div class="flex flex-col gap-space-sm bg-surface-secondary border border-border-subtle p-3 rounded">
+<div class="results-toolbar relative z-20 flex flex-col gap-space-sm bg-surface-secondary border border-border-subtle p-3 rounded">
 <div class="flex flex-wrap items-center justify-between gap-3">
 <div class="text-body-compact font-body-compact text-text-muted" id="results-count" role="status" aria-live="polite">
               Showing <span class="text-text-primary font-medium">0</span> of <span class="text-text-primary font-medium">0</span> tools matching filters
             </div>
-<div class="flex items-center gap-1.5 text-metadata-label font-metadata-label text-text-muted">
+<div class="sort-container relative z-30 flex items-center gap-1.5 text-metadata-label font-metadata-label text-text-muted">
 <span>Sort by:</span>
-<select class="bg-surface-card border border-border-subtle text-text-primary rounded text-metadata-label font-metadata-label px-2 py-1 focus:ring-0 focus:border-primary-container" id="sort-select" aria-label="Sort AI tools">
+<select class="sort-dropdown bg-surface-card border border-border-subtle text-text-primary rounded text-metadata-label font-metadata-label px-2.5 py-1.5 focus:ring-1 focus:ring-primary-container focus:border-primary-container cursor-pointer transition-colors" id="sort-select" aria-label="Sort AI tools">
 <option value="verified">Recently Verified</option>
 <option value="new">Newly Added</option>
 <option value="name">Name A-Z</option>
@@ -744,7 +746,7 @@ h1, h2, h3 { text-wrap: balance; }
 
   const DATA = Array.isArray(window.AI_TOOLS) ? window.AI_TOOLS : [];
   const META = window.AI_TOOLS_META || {};
-  const PAGE_SIZE = 9;
+  const PAGE_SIZE = window.DSH_SITE_CONFIG?.resourcePageSize || 15;
   const ALL = 'All Tools';
   const CATEGORY_ORDER = Array.isArray(META.category_order) && META.category_order.length
     ? META.category_order

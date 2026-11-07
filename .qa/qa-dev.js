@@ -61,8 +61,8 @@ const assert = (name, cond, extra) => {
   assert('All Resources active by default', await page.evaluate(() => document.querySelector('#category-pills button').getAttribute('aria-pressed') === 'true'));
 
   assert('initial results = registry total', (await n()) === counts.total, await $count());
-  assert('initial grid shows 9 cards', (await page.locator('#resource-grid article').count()) === 9);
-  const totalPages = Math.ceil(counts.total / 9);
+  assert('initial grid shows 15 cards', (await page.locator('#resource-grid article').count()) === 15);
+  const totalPages = Math.ceil(counts.total / 15);
 
   const facetGroups = await page.evaluate(() => [...document.querySelectorAll('[data-facet-group]')].map((g) => g.dataset.facetGroup));
   assert('5 facet groups', facetGroups.join(',') === 'type,language,deployment,licensing,pricing', facetGroups.join(','));
@@ -178,7 +178,7 @@ const assert = (name, cond, extra) => {
   await page.waitForTimeout(250);
   assert('prev -> page 1', (await page.textContent('#page-indicator')).includes(`Page 1 of ${totalPages}`));
   for (let i = 1; i < totalPages; i++) { await page.click('#pagination-controls button:not(:disabled):last-child'); await page.waitForTimeout(100); }
-  const lastPageCards = counts.total - (totalPages - 1) * 9;
+  const lastPageCards = counts.total - (totalPages - 1) * 15;
   assert('last page has ' + lastPageCards + ' cards', (await page.locator('#resource-grid article').count()) === lastPageCards, String(await page.locator('#resource-grid article').count()));
   await page.click('#pagination-controls button:first-child');
   await page.waitForTimeout(200);

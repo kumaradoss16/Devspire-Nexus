@@ -105,6 +105,8 @@
             "display-hero": ["Geist", "sans-serif"]
           },
           "fontSize": {
+            "base": "1rem",
+            "lg": "1.125rem",
             "headline-section": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
             "code-badge": ["12px", { "lineHeight": "16px", "letterSpacing": "0em", "fontWeight": "500" }],
             "display-hero-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
@@ -1056,7 +1058,7 @@ input.p5-input[aria-invalid="true"], select.p5-input[aria-invalid="true"], texta
   const buildPayload = (record, key) => {
     const payload = {
       access_key: key,
-      subject: `${config().subject} — ${record.name}`,
+      subject: `${config().subject}: ${record.name}`,
       from_name: 'AI Intelligence Directory',
       resource_name: record.name,
       official_url: record.url,
@@ -1115,7 +1117,7 @@ input.p5-input[aria-invalid="true"], select.p5-input[aria-invalid="true"], texta
     const { ok, bad } = validateAll();
     if (!ok) {
       resetReceipt();
-      showFailure(`Submission not sent — fix ${bad} field${bad === 1 ? '' : 's'} below. Your entries have been kept.`);
+      showFailure(`Submission not sent. Please fix the ${bad} highlighted field${bad === 1 ? '' : 's'} below. Your entries have been kept.`);
       const firstBad = document.querySelector('[aria-invalid="true"]');
       if (firstBad) firstBad.focus();
       return;
@@ -1203,7 +1205,7 @@ input.p5-input[aria-invalid="true"], select.p5-input[aria-invalid="true"], texta
     const ok = await copyText(draftEl.textContent);
     copyStatus.textContent = ok
       ? 'Receipt JSON copied to the clipboard.'
-      : 'Copy failed — select the JSON and copy it manually.';
+      : 'Copy failed. Please select the JSON and copy it manually.';
   });
 
   downloadBtn.addEventListener('click', () => {

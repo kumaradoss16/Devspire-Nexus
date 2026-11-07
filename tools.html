@@ -105,6 +105,8 @@
             "display-hero": ["Geist", "sans-serif"]
           },
           "fontSize": {
+            "base": "1rem",
+            "lg": "1.125rem",
             "headline-section": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
             "code-badge": ["12px", { "lineHeight": "16px", "letterSpacing": "0em", "fontWeight": "500" }],
             "display-hero-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
@@ -534,16 +536,16 @@ h1, h2, h3 { text-wrap: balance; }
 <!-- Right Main Content -->
 <section class="flex-1 w-full flex flex-col gap-space-md min-w-0" aria-label="Tool results">
 <!-- Results Toolbar & Active Filter Chips -->
-<div class="flex flex-col gap-space-sm bg-surface-secondary border border-border-subtle p-3 rounded">
+<div class="results-toolbar relative z-20 flex flex-col gap-space-sm bg-surface-secondary border border-border-subtle p-3 rounded">
 <div class="flex flex-wrap items-center justify-between gap-3">
 <div class="text-body-compact font-body-compact text-text-muted" id="results-count" role="status" aria-live="polite">
               Showing <span class="text-text-primary font-medium">0</span> of <span class="text-text-primary font-medium">0</span> tools matching filters
             </div>
 <div class="flex items-center gap-space-md">
 <!-- Sorting dropdown -->
-<div class="flex items-center gap-1.5 text-metadata-label font-metadata-label text-text-muted">
+<div class="sort-container relative z-30 flex items-center gap-1.5 text-metadata-label font-metadata-label text-text-muted">
 <span>Sort by:</span>
-<select class="bg-surface-card border border-border-subtle text-text-primary rounded text-metadata-label font-metadata-label px-2 py-1 focus:ring-0 focus:border-primary-container" id="sort-select" aria-label="Sort tools">
+<select class="sort-dropdown bg-surface-card border border-border-subtle text-text-primary rounded text-metadata-label font-metadata-label px-2.5 py-1.5 focus:ring-1 focus:ring-primary-container focus:border-primary-container cursor-pointer transition-colors" id="sort-select" aria-label="Sort tools">
 <option value="verified">Recently Verified</option>
 <option value="name">Name A-Z</option>
 <option value="relevance">Relevance</option>
@@ -661,7 +663,7 @@ h1, h2, h3 { text-wrap: balance; }
    TOOLS DATA
    --------------------------------------------------------------------------
    ➜ Dataset: 49 real entries from kumaradoss16/CyberSecurity · prompts/ai-tools-list.md
-     (fetched 2026-11-03). Add more objects following the same shape — cards, facet
+     (fetched 2026-11-03). Add more objects following the same shape (cards, facet
      counts, catalog chip, results counter, and pagination all derive from this
      array automatically.
 
@@ -691,7 +693,7 @@ h1, h2, h3 { text-wrap: balance; }
    ========================================================================== */
 const TOOLS_DATA = [
   /* ==== AI TOOLS (extracted 2026-11-04 from kumaradoss16/ai-knowledge-base ·
-     ai-tools/ai-tools-models-developer-resources.md — Resource Type `tool` only;
+     ai-tools/ai-tools-models-developer-resources.md: Resource Type `tool` only;
      `sub` = source category, `platform` = only where the source states it) ==== */
 
   /* ---- Assistants & Chatbots ---- */
@@ -1498,7 +1500,7 @@ const TOOLS_DATA = [
 
 /* Brand icons per tool (local copies of the Icon URLs from the source
    datasets: ai-tools-list.md and ai-knowledge-base
-   ai-tools-models-developer-resources.md — both use the same official
+   ai-tools-models-developer-resources.md: both use the same official
    favicon URLs, stored in assets/img/icons/). Keyed by tool `name`; falls
    back to the inline SVG (ICONS map) or initials monogram when absent/failing. */
 const TOOL_ICON_URLS = {
@@ -1605,7 +1607,7 @@ const ICONS = {
 (function () {
   'use strict';
 
-  const PAGE_SIZE = 9;
+  const PAGE_SIZE = window.DSH_SITE_CONFIG?.resourcePageSize || 15;
   const FACETS = {
     pricing:    { label: 'Pricing Model',  values: ['Free', 'Freemium', 'Paid', 'Usage-based'], field: 'pricing',    type: 'value' },
     access:     { label: 'Access & Auth',  values: ['No signup required', 'API available'],       field: 'access',     type: 'array' },
