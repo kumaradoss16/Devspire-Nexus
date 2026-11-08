@@ -168,6 +168,10 @@ const apply = (html, options = {}) => {
     out = stripMeta(out).replace('</head>', metaTags(title, description, robots) + '\n</head>');
   }
 
+  if (!out.includes('name="google-adsense-account"')) {
+    out = out.replace('</head>', '  <meta name="google-adsense-account" content="ca-pub-2368356039533778">\n</head>');
+  }
+
   if (!out.includes('href="assets/site.css"')) {
     out = out.replace('</head>', '<link rel="stylesheet" href="assets/site.css"/>\n</head>');
   }
