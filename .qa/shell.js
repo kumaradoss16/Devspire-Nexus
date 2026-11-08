@@ -168,6 +168,10 @@ const apply = (html, options = {}) => {
     out = stripMeta(out).replace('</head>', metaTags(title, description, robots) + '\n</head>');
   }
 
+  if (!out.includes('pagead2.googlesyndication.com/pagead/js/adsbygoogle.js')) {
+    out = out.replace('</head>', '  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2368356039533778" crossorigin="anonymous"></script>\n</head>');
+  }
+
   if (!out.includes('name="google-adsense-account"')) {
     out = out.replace('</head>', '  <meta name="google-adsense-account" content="ca-pub-2368356039533778">\n</head>');
   }
