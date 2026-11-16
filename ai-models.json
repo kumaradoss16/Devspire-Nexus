@@ -11732,5 +11732,628 @@
     ],
     "last_verified": "2026-11-04",
     "notes": "Achieved state-of-the-art results on the Genomic Benchmarks suite with 160x less training compute."
+  },
+  {
+    "id": 997,
+    "name": "Gemini 4 Hydrogen",
+    "icon": null,
+    "domain": "deepmind.google",
+    "category": "Agentic Coding Models",
+    "resource_type": "model",
+    "subtype": "Agentic Coding Models",
+    "description": "Google DeepMind's agentic coding model announced on 12 November 2026, tuned for speed and efficiency in everyday coding and agent workflows. Available through the Gemini app, Gemini API, and Google AI Studio with a combined input-output context window of up to 1M tokens.",
+    "pricing": "Not stated",
+    "signup_required": "Yes",
+    "local_execution": "No",
+    "technical_tags": [
+      "agentic",
+      "coding",
+      "google-deepmind",
+      "gemini"
+    ],
+    "params": null,
+    "context": "1M",
+    "context_k": 1000,
+    "license": "Proprietary",
+    "license_group": "Proprietary / Commercial",
+    "moe": false,
+    "verified_link": {
+      "title": "Official source",
+      "url": "https://deepmind.google/models/model-cards/gemini-4-hydrogen/"
+    },
+    "canonical_id": "model:gemini-4-hydrogen",
+    "verification_status": "verified",
+    "evidence_sources": [
+      "https://deepmind.google/models/model-cards/gemini-4-hydrogen/",
+      "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/"
+    ],
+    "last_verified": "2026-11-14",
+    "notes": "Announced 12 November 2026. Pricing is not stated on the model card."
+  },
+  {
+    "id": 998,
+    "name": "Gemini 4 Carbon",
+    "icon": null,
+    "domain": "deepmind.google",
+    "category": "Frontier Language Models",
+    "resource_type": "model",
+    "subtype": "Frontier Language Models",
+    "description": "Google's frontier model announced on 28 October 2026, positioned for long-horizon agentic workflows with state-of-the-art cybersecurity capability. Available through the Gemini app, Gemini API, and Google AI Studio with up to 1M tokens of context.",
+    "pricing": "Not stated",
+    "signup_required": "Yes",
+    "local_execution": "No",
+    "technical_tags": [
+      "frontier",
+      "long-horizon",
+      "cybersecurity",
+      "agentic",
+      "google-deepmind"
+    ],
+    "params": null,
+    "context": "1M",
+    "context_k": 1000,
+    "license": "Proprietary",
+    "license_group": "Proprietary / Commercial",
+    "moe": false,
+    "verified_link": {
+      "title": "Official source",
+      "url": "https://deepmind.google/models/model-cards/gemini-4-carbon/"
+    },
+    "canonical_id": "model:gemini-4-carbon",
+    "verification_status": "verified",
+    "evidence_sources": [
+      "https://deepmind.google/models/model-cards/gemini-4-carbon/",
+      "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/"
+    ],
+    "last_verified": "2026-11-14",
+    "notes": "Announced 28 October 2026. Pricing is not stated on the model card."
+  },
+  {
+    "id": 999,
+    "name": "Gemini Decision 1",
+    "icon": null,
+    "domain": "aistudio.google.com",
+    "category": "Decision Models",
+    "resource_type": "model",
+    "subtype": "Decision Models",
+    "description": "A specialized multimodal Gemini model documented in November 2026 that evaluates typed questions over text, images, video, audio, and PDFs. The API documentation lists a 262,144-token input limit.",
+    "pricing": "Not stated",
+    "signup_required": "Yes",
+    "local_execution": "No",
+    "technical_tags": [
+      "decision-support",
+      "multimodal",
+      "google-deepmind"
+    ],
+    "params": null,
+    "context": "262K",
+    "context_k": 262,
+    "license": "Proprietary",
+    "license_group": "Proprietary / Commercial",
+    "moe": false,
+    "verified_link": {
+      "title": "Official source",
+      "url": "https://aistudio.google.com/docs/models/gemini-decision-1"
+    },
+    "canonical_id": "model:gemini-decision-1",
+    "verification_status": "verified",
+    "evidence_sources": [
+      "https://aistudio.google.com/docs/models/gemini-decision-1"
+    ],
+    "last_verified": "2026-11-14",
+    "notes": "Documented November 2026. Pricing and general availability are not stated in the API documentation."
+  },
+  {
+    "id": 1000,
+    "name": "Claude Fable 5.2",
+    "icon": null,
+    "domain": "anthropic.com",
+    "category": "Frontier Language Models",
+    "resource_type": "model",
+    "subtype": "Frontier Language Models",
+    "description": "Anthropic's flagship knowledge-work and coding model released on 9 November 2026, with a 1M-token context window and availability to Pro, Max, Ultra, Team, and Enterprise users plus major cloud platforms. API pricing is $8 per million input tokens and $40 per million output tokens.",
+    "pricing": "usage_based",
+    "signup_required": "Yes",
+    "local_execution": "No",
+    "technical_tags": [
+      "frontier",
+      "coding",
+      "long-context",
+      "anthropic"
+    ],
+    "params": null,
+    "context": "1M",
+    "context_k": 1000,
+    "license": "Proprietary",
+    "license_group": "Proprietary / Commercial",
+    "moe": false,
+    "verified_link": {
+      "title": "Official source",
+      "url": "https://www.anthropic.com/claude/fable"
+    },
+    "canonical_id": "model:claude-fable-5-2",
+    "verification_status": "verified",
+    "evidence_sources": [
+      "https://www.anthropic.com/claude/fable",
+      "https://platform.claude.com/docs/en/models/fable-5-2/overview"
+    ],
+    "last_verified": "2026-11-14",
+    "notes": "Released 9 November 2026. Supersedes Claude Fable 5, which the API documentation lists as legacy."
+  },
+  {
+    "id": 1001,
+    "name": "Claude Mythos 5.2",
+    "icon": null,
+    "domain": "anthropic.com",
+    "category": "Cybersecurity & Life Sciences Models",
+    "resource_type": "model",
+    "subtype": "Cybersecurity & Life Sciences Models",
+    "description": "Anthropic's restricted model class released on 9 November 2026 for cybersecurity and biology research, available only to vetted cyberdefenders and life scientists through trusted access programs. API pricing is $8 per million input tokens and $40 per million output tokens.",
+    "pricing": "usage_based",
+    "signup_required": "Yes",
+    "local_execution": "No",
+    "technical_tags": [
+      "cybersecurity",
+      "biology",
+      "restricted-access",
+      "anthropic"
+    ],
+    "params": null,
+    "context": null,
+    "context_k": null,
+    "license": "Proprietary",
+    "license_group": "Proprietary / Commercial",
+    "moe": false,
+    "verified_link": {
+      "title": "Official source",
+      "url": "https://www.anthropic.com/claude/mythos"
+    },
+    "canonical_id": "model:claude-mythos-5-2",
+    "verification_status": "verified",
+    "evidence_sources": [
+      "https://www.anthropic.com/claude/mythos"
+    ],
+    "last_verified": "2026-11-14",
+    "notes": "Restricted availability through Anthropic trusted access programs. Context window is not stated on the product page."
+  },
+  {
+    "id": 1002,
+    "name": "Muse Ember",
+    "icon": null,
+    "domain": "research.meta.ai",
+    "category": "Efficient Agent Models",
+    "resource_type": "model",
+    "subtype": "Efficient Agent Models",
+    "description": "Meta AI Research's small, efficient model released on 9 November 2026 for repeated agent work such as tool calls, coding subtasks, routing, extraction, and long-document parsing. It offers a 1M-token context window with up to 512K output tokens and is available on Muse Code and the Meta Model API as muse-ember-1.0.",
+    "pricing": "usage_based",
+    "signup_required": "Yes",
+    "local_execution": "No",
+    "technical_tags": [
+      "efficient",
+      "agents",
+      "long-context",
+      "meta"
+    ],
+    "params": null,
+    "context": "1M",
+    "context_k": 1000,
+    "license": "Not stated",
+    "license_group": null,
+    "moe": false,
+    "verified_link": {
+      "title": "Official source",
+      "url": "https://research.meta.ai/blog/muse-ember"
+    },
+    "canonical_id": "model:muse-ember",
+    "verification_status": "verified",
+    "evidence_sources": [
+      "https://research.meta.ai/blog/muse-ember"
+    ],
+    "last_verified": "2026-11-14",
+    "notes": "Pricing is $0.10 per million input tokens and $0.50 per million output tokens. License terms are not stated in the announcement."
+  },
+  {
+    "id": 1003,
+    "name": "ERNIE 5.5 Flash Preview",
+    "icon": null,
+    "domain": "ernie.baidu.com",
+    "category": "Preview Language Models",
+    "resource_type": "model",
+    "subtype": "Preview Language Models",
+    "description": "Baidu's preview model released on 11 November 2026 for coding, 3D modeling, knowledge work, and content creation. The API is available on the Qianfan platform with a 1M-token context, and Baidu states that Apache 2.0 weights are coming soon.",
+    "pricing": "usage_based",
+    "signup_required": "Yes",
+    "local_execution": "No",
+    "technical_tags": [
+      "preview",
+      "coding",
+      "3d",
+      "baidu"
+    ],
+    "params": null,
+    "context": "1M",
+    "context_k": 1000,
+    "license": "Apache 2.0 (announced)",
+    "license_group": "MIT / Apache 2.0",
+    "moe": false,
+    "verified_link": {
+      "title": "Official source",
+      "url": "https://ernie.baidu.com/release/ernie-5-5-flash-preview"
+    },
+    "canonical_id": "model:ernie-5-5-flash-preview",
+    "verification_status": "verified",
+    "evidence_sources": [
+      "https://ernie.baidu.com/release/ernie-5-5-flash-preview"
+    ],
+    "last_verified": "2026-11-14",
+    "notes": "Preview release. Weights are not yet published; Baidu states Apache 2.0 weights are coming soon."
+  },
+  {
+    "id": 1004,
+    "name": "PAN 2",
+    "icon": null,
+    "domain": "huggingface.co",
+    "category": "World Models",
+    "resource_type": "model",
+    "subtype": "World Models",
+    "description": "An open 29B-parameter world model that simulates how a scene changes in response to described actions as a video of up to 20 seconds. The weights are available on Hugging Face under Apache 2.0.",
+    "pricing": "open_weights",
+    "signup_required": "No",
+    "local_execution": "Yes",
+    "technical_tags": [
+      "world-model",
+      "video",
+      "open-weights",
+      "mbzuai"
+    ],
+    "params": "29B",
+    "context": null,
+    "context_k": null,
+    "license": "Apache 2.0",
+    "license_group": "MIT / Apache 2.0",
+    "moe": false,
+    "verified_link": {
+      "title": "Official source",
+      "url": "https://huggingface.co/IFM/PAN2"
+    },
+    "canonical_id": "model:pan-2",
+    "verification_status": "verified",
+    "evidence_sources": [
+      "https://huggingface.co/IFM/PAN2",
+      "https://ifm.ai/pan/"
+    ],
+    "last_verified": "2026-11-14",
+    "notes": "Released October 2026. The 29B figure refers to the MMDiT diffusion backbone."
+  },
+  {
+    "id": 1005,
+    "name": "Gemini Robotics 2.5",
+    "icon": null,
+    "domain": "deepmind.google",
+    "category": "Vision-Language-Action Models",
+    "resource_type": "model",
+    "subtype": "Vision-Language-Action Models",
+    "description": "Google DeepMind's vision-language-action model announced on 10 November 2026 as its most capable robotics model to date, rolling out to robotics partners. Pricing and general availability were not stated.",
+    "pricing": "Not stated",
+    "signup_required": "Yes",
+    "local_execution": "No",
+    "technical_tags": [
+      "robotics",
+      "vla",
+      "embodied-ai",
+      "google-deepmind"
+    ],
+    "params": null,
+    "context": null,
+    "context_k": null,
+    "license": "Proprietary",
+    "license_group": "Proprietary / Commercial",
+    "moe": false,
+    "verified_link": {
+      "title": "Official source",
+      "url": "https://deepmind.google/models/gemini-robotics/vla/"
+    },
+    "canonical_id": "model:gemini-robotics-2-5",
+    "verification_status": "verified",
+    "evidence_sources": [
+      "https://deepmind.google/models/gemini-robotics/vla/",
+      "https://deepmind.google/blog/gemini-robotics-2-5-accelerates-real-world-physical-intelligence/"
+    ],
+    "last_verified": "2026-11-14",
+    "notes": "Rolling out to robotics partners. Pricing and general availability are not stated."
+  },
+  {
+    "id": 1006,
+    "name": "AlphaGenome 2",
+    "icon": null,
+    "domain": "deepmind.google",
+    "category": "Genomics Models",
+    "resource_type": "model",
+    "subtype": "Genomics Models",
+    "description": "Google DeepMind's next-generation DNA sequence model announced on 11 November 2026, predicting how genetic variants affect hundreds of human cell types. It is available for non-commercial research and in private preview for commercial research.",
+    "pricing": "Not stated",
+    "signup_required": "Yes",
+    "local_execution": "No",
+    "technical_tags": [
+      "genomics",
+      "dna",
+      "research",
+      "google-deepmind"
+    ],
+    "params": null,
+    "context": null,
+    "context_k": null,
+    "license": "Proprietary",
+    "license_group": "Proprietary / Commercial",
+    "moe": false,
+    "verified_link": {
+      "title": "Official source",
+      "url": "https://deepmind.google/blog/alphagenome-2-deciphering-how-cells-read-dna-to-better-understand-disease/"
+    },
+    "canonical_id": "model:alphagenome-2",
+    "verification_status": "verified",
+    "evidence_sources": [
+      "https://deepmind.google/blog/alphagenome-2-deciphering-how-cells-read-dna-to-better-understand-disease/",
+      "https://www.alphagenomedocs.com/"
+    ],
+    "last_verified": "2026-11-14",
+    "notes": "Available for non-commercial research and in private preview for commercial research."
+  },
+  {
+    "id": 1007,
+    "name": "Scribe v3",
+    "icon": null,
+    "domain": "elevenlabs.io",
+    "category": "Speech-to-Text Models",
+    "resource_type": "model",
+    "subtype": "Speech-to-Text Models",
+    "description": "ElevenLabs' recorded-audio speech recognition model announced on 10 November 2026, reporting 27% fewer word errors than Scribe v2 on FLEURS. It supports more than 90 languages and is available in ElevenAgents and the ElevenAPI.",
+    "pricing": "Not stated",
+    "signup_required": "Yes",
+    "local_execution": "No",
+    "technical_tags": [
+      "speech-to-text",
+      "transcription",
+      "multilingual",
+      "elevenlabs"
+    ],
+    "params": null,
+    "context": null,
+    "context_k": null,
+    "license": "Proprietary",
+    "license_group": "Proprietary / Commercial",
+    "moe": false,
+    "verified_link": {
+      "title": "Official source",
+      "url": "https://elevenlabs.io/blog/scribe-v3"
+    },
+    "canonical_id": "model:scribe-v3",
+    "verification_status": "verified",
+    "evidence_sources": [
+      "https://elevenlabs.io/blog/scribe-v3",
+      "https://elevenlabs.io/docs/overview/models"
+    ],
+    "last_verified": "2026-11-14",
+    "notes": "This is ElevenLabs' speech-to-text model, not the Scribe workflow-documentation tool in the AI Tools registry."
+  },
+  {
+    "id": 1008,
+    "name": "Scribe v3 Live",
+    "icon": null,
+    "domain": "elevenlabs.io",
+    "category": "Real-Time Speech-to-Text Models",
+    "resource_type": "model",
+    "subtype": "Real-Time Speech-to-Text Models",
+    "description": "ElevenLabs' real-time speech recognition model announced with Scribe v3 on 10 November 2026, reporting 44% lower semantic word error rate than Scribe v2 Realtime on FLEURS. It supports more than 90 languages and is available in ElevenAgents and the ElevenAPI.",
+    "pricing": "Not stated",
+    "signup_required": "Yes",
+    "local_execution": "No",
+    "technical_tags": [
+      "speech-to-text",
+      "real-time",
+      "multilingual",
+      "elevenlabs"
+    ],
+    "params": null,
+    "context": null,
+    "context_k": null,
+    "license": "Proprietary",
+    "license_group": "Proprietary / Commercial",
+    "moe": false,
+    "verified_link": {
+      "title": "Official source",
+      "url": "https://elevenlabs.io/blog/scribe-v3"
+    },
+    "canonical_id": "model:scribe-v3-live",
+    "verification_status": "verified",
+    "evidence_sources": [
+      "https://elevenlabs.io/blog/scribe-v3",
+      "https://elevenlabs.io/docs/overview/models"
+    ],
+    "last_verified": "2026-11-14",
+    "notes": "Real-time variant of Scribe v3. Pricing is not stated in the announcement."
+  },
+  {
+    "id": 1009,
+    "name": "GPT-6 Cyber",
+    "icon": null,
+    "domain": "openai.com",
+    "category": "Cybersecurity Models",
+    "resource_type": "model",
+    "subtype": "Cybersecurity Models",
+    "description": "OpenAI's cybersecurity model released on 5 November 2026 for authorized vulnerability investigation, reproduction, and fix verification. API access requires Daybreak Red approval, with a 1,050,000-token context window and pricing of $20 per million input tokens and $100 per million output tokens.",
+    "pricing": "usage_based",
+    "signup_required": "Yes",
+    "local_execution": "No",
+    "technical_tags": [
+      "cybersecurity",
+      "security-research",
+      "restricted-access",
+      "openai"
+    ],
+    "params": null,
+    "context": "1,050K",
+    "context_k": 1050,
+    "license": "Proprietary",
+    "license_group": "Proprietary / Commercial",
+    "moe": false,
+    "verified_link": {
+      "title": "Official source",
+      "url": "https://openai.com/index/introducing-gpt-6-cyber/"
+    },
+    "canonical_id": "model:gpt-6-cyber",
+    "verification_status": "verified",
+    "evidence_sources": [
+      "https://openai.com/index/introducing-gpt-6-cyber/",
+      "https://developers.openai.com/api/docs/models/gpt-6-cyber"
+    ],
+    "last_verified": "2026-11-14",
+    "notes": "Access requires Daybreak Red approval."
+  },
+  {
+    "id": 1010,
+    "name": "Gemini Omni 1.2 Flash",
+    "icon": null,
+    "domain": "blog.google",
+    "category": "Video Generation Models",
+    "resource_type": "model",
+    "subtype": "Video Generation Models",
+    "description": "Google's video generation and editing model released on 5 November 2026, adding native 15-second video generation, stronger consistency, and 30% lower pricing than the prior release.",
+    "pricing": "usage_based",
+    "signup_required": "Yes",
+    "local_execution": "No",
+    "technical_tags": [
+      "video-generation",
+      "video-editing",
+      "google"
+    ],
+    "params": null,
+    "context": null,
+    "context_k": null,
+    "license": "Proprietary",
+    "license_group": "Proprietary / Commercial",
+    "moe": false,
+    "verified_link": {
+      "title": "Official source",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/"
+    },
+    "canonical_id": "model:gemini-omni-1-2-flash",
+    "verification_status": "verified",
+    "evidence_sources": [
+      "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/",
+      "https://cloud.google.com/blog/products/ai-machine-learning/gemini-omni-1-2-flash-generally-available"
+    ],
+    "last_verified": "2026-11-14",
+    "notes": "The announcement cites 30% lower pricing than the previous release without listing per-token rates."
+  },
+  {
+    "id": 1011,
+    "name": "MiniMax H3-Image",
+    "icon": null,
+    "domain": "minimax.io",
+    "category": "Image Generation Models",
+    "resource_type": "model",
+    "subtype": "Image Generation Models",
+    "description": "MiniMax's open-weight image model released on 11 November 2026 for text-to-image generation, reference-based generation, and image editing, including 4K output. It is available on the MiniMax API Platform, MiniMax Code, and Hailuo AI.",
+    "pricing": "open_weights",
+    "signup_required": "No",
+    "local_execution": "Yes",
+    "technical_tags": [
+      "image-generation",
+      "image-editing",
+      "open-weights",
+      "minimax"
+    ],
+    "params": null,
+    "context": null,
+    "context_k": null,
+    "license": "Not stated",
+    "license_group": null,
+    "moe": false,
+    "verified_link": {
+      "title": "Official source",
+      "url": "https://www.minimax.io/blog/minimax-h3-image"
+    },
+    "canonical_id": "model:minimax-h3-image",
+    "verification_status": "verified",
+    "evidence_sources": [
+      "https://www.minimax.io/blog/minimax-h3-image",
+      "https://huggingface.co/MiniMaxAI/MiniMax-H3-Image"
+    ],
+    "last_verified": "2026-11-14",
+    "notes": "Weights are released. The announcement does not state a license name."
+  },
+  {
+    "id": 1012,
+    "name": "Images 2.6",
+    "icon": null,
+    "domain": "openai.com",
+    "category": "Image Generation Models",
+    "resource_type": "model",
+    "subtype": "Image Generation Models",
+    "description": "OpenAI's image generation and editing model announced on 4 November 2026. API documentation lists the model as gpt-image-2.6-sunburst, with text input at $5 per million tokens and image output at $30 per million tokens.",
+    "pricing": "usage_based",
+    "signup_required": "Yes",
+    "local_execution": "No",
+    "technical_tags": [
+      "image-generation",
+      "image-editing",
+      "openai"
+    ],
+    "params": null,
+    "context": null,
+    "context_k": null,
+    "license": "Proprietary",
+    "license_group": "Proprietary / Commercial",
+    "moe": false,
+    "verified_link": {
+      "title": "Official source",
+      "url": "https://openai.com/index/introducing-images-2-6/"
+    },
+    "canonical_id": "model:images-2-6",
+    "verification_status": "verified",
+    "evidence_sources": [
+      "https://openai.com/index/introducing-images-2-6/",
+      "https://developers.openai.com/api/docs/models/gpt-image-2.6-sunburst"
+    ],
+    "last_verified": "2026-11-14",
+    "notes": "Marketing name is Images 2.6; the API model ID is gpt-image-2.6-sunburst."
+  },
+  {
+    "id": 1013,
+    "name": "GR00T 2",
+    "icon": null,
+    "domain": "research.nvidia.com",
+    "category": "Robot Foundation Models",
+    "resource_type": "model",
+    "subtype": "Robot Foundation Models",
+    "description": "NVIDIA Research's open robot foundation model announced in November 2026 for generalization, dexterity, and adaptation, built on world-action modeling. NVIDIA states that code will be available in December and that the Human-1M-100K dataset is openly available.",
+    "pricing": "Not stated",
+    "signup_required": "No",
+    "local_execution": "Yes",
+    "technical_tags": [
+      "robotics",
+      "world-action-model",
+      "open-model",
+      "nvidia"
+    ],
+    "params": null,
+    "context": null,
+    "context_k": null,
+    "license": "Not stated",
+    "license_group": null,
+    "moe": false,
+    "verified_link": {
+      "title": "Official source",
+      "url": "https://research.nvidia.com/labs/gear/gr00t-2"
+    },
+    "canonical_id": "model:groot-2",
+    "verification_status": "verified",
+    "evidence_sources": [
+      "https://research.nvidia.com/labs/gear/gr00t-2",
+      "https://research.nvidia.com/labs/gear/gr00t-2/assets/gr00t2_whitepaper.pdf"
+    ],
+    "last_verified": "2026-11-14",
+    "notes": "NVIDIA states that code is available in December 2026 and that the Human-1M-100K dataset is openly available. A model license is not stated."
   }
 ]

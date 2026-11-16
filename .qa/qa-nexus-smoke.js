@@ -26,20 +26,20 @@ const BASE = 'file:///H:/Devspirehub AI/';
 
   await page.goto(BASE + 'index.html', { waitUntil: 'load' });
   await page.waitForTimeout(900);
-  const featured = await page.evaluate(() => ({
-    week: (document.querySelector('[data-featured-week]') || {}).textContent,
-    cards: [...document.querySelectorAll('[data-featured-ref]')].map((el) => ({
-      name: (el.querySelector('.featured-name') || {}).textContent,
-      ref: el.dataset.featuredRef,
-      img: Boolean(el.querySelector('img')),
-      fallback: Boolean(el.querySelector('.resource-icon-fallback')),
+  const spotlight = await page.evaluate(() => ({
+    heading: (document.querySelector('#nexus-spotlight .spotlight-title') || {}).textContent,
+    status: (document.getElementById('spotlight-status') || {}).textContent,
+    cards: [...document.querySelectorAll('#spotlight-grid .spotlight-card')].map((el) => ({
+      name: (el.querySelector('.spotlight-name') || {}).textContent,
+      ref: `${el.dataset.spotlightType}:${el.dataset.spotlightId}`,
+      badge: (el.querySelector('.spotlight-badge') || {}).textContent,
       official: Boolean(el.querySelector('a[target="_blank"]')),
-      detail: (el.querySelector('a[href*="#"]') || {}).getAttribute ? el.querySelector('a[href*="#"]').getAttribute('href') : null,
-      bookmark: Boolean(el.querySelector('[data-bookmark]')),
+      detail: (el.querySelector('.spotlight-link--record') || {}).getAttribute ? el.querySelector('.spotlight-link--record').getAttribute('href') : null,
       text: el.textContent.replace(/\s+/g, ' ').trim().slice(0, 120)
-    }))
+    })),
+    weekly: /CURATED WEEKLY|Resources of the Week/i.test(document.body.innerText)
   }));
-  console.log('FEATURED', JSON.stringify(featured, null, 1));
+  console.log('SPOTLIGHT', JSON.stringify(spotlight, null, 1));
   console.log('ERRORS', errors);
   await browser.close();
 })();

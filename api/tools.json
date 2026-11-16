@@ -3,10 +3,10 @@
     "registry": "tools",
     "label": "AI Tools",
     "api_version": "1.0",
-    "generated": "2026-11-06",
-    "count": 403,
+    "generated": "2026-11-14",
+    "count": 408,
     "catalog": "ai-tools",
-    "last_verified": "2026-11-04",
+    "last_verified": "2026-11-14",
     "source": "G:/Downloads/ai-tools.json",
     "categories": [
       {
@@ -27,11 +27,11 @@
       },
       {
         "name": "Productivity",
-        "count": 25
+        "count": 27
       },
       {
         "name": "Meetings & Communication",
-        "count": 14
+        "count": 16
       },
       {
         "name": "Agents & Automation",
@@ -63,7 +63,7 @@
       },
       {
         "name": "Industry & Specialized",
-        "count": 6
+        "count": 7
       }
     ]
   },
@@ -17968,6 +17968,216 @@
       "provider": "notebooklm",
       "canonical_id": "tool:notebooklm",
       "local_execution": "No"
+    },
+    {
+      "id": "elevenai",
+      "name": "ElevenAI",
+      "org": "ElevenLabs",
+      "description": "ElevenLabs' early-access AI notetaking application that captures, transcribes, and analyzes call audio to produce notes in real time, alongside dictation. Google Meet is the primary supported meeting app.",
+      "category": "Meetings & Communication",
+      "source_category": "AI Meeting Notes & Dictation",
+      "resource_type": "AI Tool",
+      "official_url": "https://elevenlabs.io/elevenai-guide",
+      "pricing": "Not stated",
+      "pricing_class": null,
+      "license": "Proprietary",
+      "open_source": false,
+      "platform": "Web",
+      "hosting": [
+        "Managed Cloud"
+      ],
+      "self_hostable": false,
+      "signup_required": true,
+      "tags": [
+        "meeting-notes",
+        "transcription",
+        "dictation",
+        "elevenlabs"
+      ],
+      "initials": "EA",
+      "icon": null,
+      "verified": "2026-11-14",
+      "status": "verified",
+      "notes": "Beta/early access. Pricing is not stated in the official guide.",
+      "evidence": [
+        [
+          "Official product guide",
+          "https://elevenlabs.io/elevenai-guide"
+        ]
+      ],
+      "source": "Nexus Spotlight Week 46 ingestion (2026-11-14)",
+      "domain": "elevenlabs.io",
+      "provider": "elevenlabs",
+      "local_execution": "No",
+      "canonical_id": "tool:elevenai"
+    },
+    {
+      "id": "claude-meetings",
+      "name": "Claude Meetings",
+      "org": "Anthropic",
+      "description": "Anthropic's beta meeting product announced on 12 November 2026, adding notes, documents, and whiteboards to video calls. It supports Google Meet at launch, is free on Team and Enterprise during beta, and its artifacts are free until 10 February 2027.",
+      "category": "Meetings & Communication",
+      "source_category": "AI Meeting Assistants",
+      "resource_type": "AI Tool",
+      "official_url": "https://claude.com/resources/articles/claude-meetings",
+      "pricing": "Paid",
+      "pricing_class": "paid",
+      "license": "Proprietary",
+      "open_source": false,
+      "platform": "Web",
+      "hosting": [
+        "Managed Cloud"
+      ],
+      "self_hostable": false,
+      "signup_required": true,
+      "tags": [
+        "meetings",
+        "notes",
+        "google-meet",
+        "beta"
+      ],
+      "initials": "CM",
+      "icon": null,
+      "verified": "2026-11-14",
+      "status": "verified",
+      "notes": "Beta. Free on Team and Enterprise during beta; artifacts free until 10 February 2027. Google Meet is the only supported platform at launch.",
+      "evidence": [
+        [
+          "Official announcement",
+          "https://claude.com/resources/articles/claude-meetings"
+        ]
+      ],
+      "source": "Nexus Spotlight Week 46 ingestion (2026-11-14)",
+      "domain": "claude.com",
+      "provider": "anthropic",
+      "local_execution": "No",
+      "canonical_id": "tool:claude-meetings"
+    },
+    {
+      "id": "claude-sheets",
+      "name": "Claude Sheets",
+      "org": "Anthropic",
+      "description": "Anthropic's spreadsheet product announced on 10 November 2026, in which Claude builds and edits a sheet with tabs, formulas, and formatting. It is available on all paid Claude plans.",
+      "category": "Productivity",
+      "source_category": "AI Spreadsheets",
+      "resource_type": "AI Tool",
+      "official_url": "https://claude.com/resources/articles/sheets-whiteboards-data",
+      "pricing": "Paid",
+      "pricing_class": "paid",
+      "license": "Proprietary",
+      "open_source": false,
+      "platform": "Web",
+      "hosting": [
+        "Managed Cloud"
+      ],
+      "self_hostable": false,
+      "signup_required": true,
+      "tags": [
+        "spreadsheets",
+        "productivity",
+        "collaboration",
+        "anthropic"
+      ],
+      "initials": "CS",
+      "icon": null,
+      "verified": "2026-11-14",
+      "status": "verified",
+      "notes": "Available on all paid Claude plans. The official article covers Claude Sheets, Whiteboards, and Data together.",
+      "evidence": [
+        [
+          "Official announcement",
+          "https://claude.com/resources/articles/sheets-whiteboards-data"
+        ]
+      ],
+      "source": "Nexus Spotlight Week 46 ingestion (2026-11-14)",
+      "domain": "claude.com",
+      "provider": "anthropic",
+      "local_execution": "No",
+      "canonical_id": "tool:claude-sheets"
+    },
+    {
+      "id": "claude-whiteboards",
+      "name": "Claude Whiteboards",
+      "org": "Anthropic",
+      "description": "Anthropic's shared whiteboard announced on 10 November 2026 where teams brainstorm with Claude to create timelines and action items. It is available on all paid Claude plans.",
+      "category": "Productivity",
+      "source_category": "AI Whiteboards",
+      "resource_type": "AI Tool",
+      "official_url": "https://claude.com/resources/articles/sheets-whiteboards-data",
+      "pricing": "Paid",
+      "pricing_class": "paid",
+      "license": "Proprietary",
+      "open_source": false,
+      "platform": "Web",
+      "hosting": [
+        "Managed Cloud"
+      ],
+      "self_hostable": false,
+      "signup_required": true,
+      "tags": [
+        "whiteboard",
+        "brainstorming",
+        "collaboration",
+        "anthropic"
+      ],
+      "initials": "CW",
+      "icon": null,
+      "verified": "2026-11-14",
+      "status": "verified",
+      "notes": "Available on all paid Claude plans. The official article covers Claude Sheets, Whiteboards, and Data together.",
+      "evidence": [
+        [
+          "Official announcement",
+          "https://claude.com/resources/articles/sheets-whiteboards-data"
+        ]
+      ],
+      "source": "Nexus Spotlight Week 46 ingestion (2026-11-14)",
+      "domain": "claude.com",
+      "provider": "anthropic",
+      "local_execution": "No",
+      "canonical_id": "tool:claude-whiteboards"
+    },
+    {
+      "id": "claude-personal-finance",
+      "name": "Claude Personal Finance",
+      "org": "Anthropic",
+      "description": "A beta Claude feature announced on 5 November 2026 that connects bank and card accounts read-only to answer questions about personal finances without moving or investing funds. It is available to Pro, Max, and Ultra plans in the US.",
+      "category": "Industry & Specialized",
+      "source_category": "Personal Finance Assistants",
+      "resource_type": "AI Tool",
+      "official_url": "https://claude.com/resources/articles/introducing-personal-finance-in-claude",
+      "pricing": "Paid",
+      "pricing_class": "paid",
+      "license": "Proprietary",
+      "open_source": false,
+      "platform": "Web",
+      "hosting": [
+        "Managed Cloud"
+      ],
+      "self_hostable": false,
+      "signup_required": true,
+      "tags": [
+        "personal-finance",
+        "banking",
+        "read-only",
+        "beta"
+      ],
+      "initials": "CP",
+      "icon": null,
+      "verified": "2026-11-14",
+      "status": "verified",
+      "notes": "Beta for Pro, Max, and Ultra plans in the US. Bank and card connections are read-only.",
+      "evidence": [
+        [
+          "Official announcement",
+          "https://claude.com/resources/articles/introducing-personal-finance-in-claude"
+        ]
+      ],
+      "source": "Nexus Spotlight Week 46 ingestion (2026-11-14)",
+      "domain": "claude.com",
+      "provider": "anthropic",
+      "local_execution": "No",
+      "canonical_id": "tool:claude-personal-finance"
     }
   ]
 }

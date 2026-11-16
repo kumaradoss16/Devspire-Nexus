@@ -50,7 +50,7 @@ const METADATA = {
   },
   'ai-tools.html': {
     title: 'AI Tools | DevSpire Nexus',
-    description: 'Browse 403 verified AI tools, assistants, coding platforms, research engines, media generators, and productivity software with pricing, platforms, and license details.',
+    description: 'Browse 408 verified AI tools, assistants, coding platforms, research engines, media generators, and productivity software with pricing, platforms, and license details.',
     keywords: 'AI tools directory, AI software directory, AI productivity tools, AI coding tools, AI assistants, AI writing tools, AI video generators, DevSpire Nexus',
     canonical: 'https://devspirehub.com/ai-tools.html',
     ogUrl: 'https://devspirehub.com/ai-tools.html',
@@ -63,7 +63,7 @@ const METADATA = {
           "@id": "https://devspirehub.com/ai-tools.html#webpage",
           "url": "https://devspirehub.com/ai-tools.html",
           "name": "AI Tools | DevSpire Nexus",
-          "description": "Browse 403 verified AI tools, assistants, coding platforms, research engines, media generators, and productivity software with pricing, platforms, and license details.",
+          "description": "Browse 408 verified AI tools, assistants, coding platforms, research engines, media generators, and productivity software with pricing, platforms, and license details.",
           "isPartOf": { "@id": "https://devspirehub.com/#website" }
         },
         {
@@ -79,7 +79,7 @@ const METADATA = {
   },
   'models.html': {
     title: 'AI Models | DevSpire Nexus',
-    description: 'Explore 300 verified AI models across LLMs, reasoning, coding, vision, audio, video, and embeddings with open weights, license details, parameters, and context window metrics.',
+    description: 'Explore 317 verified AI models across LLMs, reasoning, coding, vision, audio, video, and embeddings with open weights, license details, parameters, and context window metrics.',
     keywords: 'AI models directory, open-source AI models, LLMs, large language models, vision models, embedding models, local AI models, DevSpire Nexus',
     canonical: 'https://devspirehub.com/models.html',
     ogUrl: 'https://devspirehub.com/models.html',
@@ -92,7 +92,7 @@ const METADATA = {
           "@id": "https://devspirehub.com/models.html#webpage",
           "url": "https://devspirehub.com/models.html",
           "name": "AI Models | DevSpire Nexus",
-          "description": "Explore 300 verified AI models across LLMs, reasoning, coding, vision, audio, video, and embeddings with open weights, license details, parameters, and context window metrics.",
+          "description": "Explore 317 verified AI models across LLMs, reasoning, coding, vision, audio, video, and embeddings with open weights, license details, parameters, and context window metrics.",
           "isPartOf": { "@id": "https://devspirehub.com/#website" }
         },
         {

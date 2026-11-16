@@ -1,28 +1,28 @@
 {
   "name": "AI Resource Intelligence static catalog",
   "api_version": "1.0",
-  "generated": "2026-11-06",
+  "generated": "2026-11-14",
   "kind": "static-files",
   "note": "Static JSON files shipped with the site. No hosted API, no authentication, no live endpoint.",
-  "total_records": 1003,
+  "total_records": 1025,
   "registries": {
     "tools": {
       "label": "AI Tools",
       "file": "api/tools.json",
-      "count": 403,
+      "count": 408,
       "category_count": 14,
-      "last_verified": "2026-11-04",
-      "bytes": 603996,
-      "sha256": "24168ba365ddb6985b8dbb1f57944e7fd1bc22d108921f1053bb89d7751ed09a"
+      "last_verified": "2026-11-14",
+      "bytes": 611475,
+      "sha256": "82d6f61ae70324fbd5ee5a1330344b233223c26cc13dabef137951a0a2ac6f02"
     },
     "models": {
       "label": "AI Models",
       "file": "api/models.json",
-      "count": 300,
+      "count": 317,
       "category_count": 12,
-      "last_verified": "2026-11-04",
-      "bytes": 500812,
-      "sha256": "37fa085c4473fb6aee9a2a8499c3c8bfc18fa900e3cbab07ba51b98235095d3d"
+      "last_verified": "2026-11-14",
+      "bytes": 530735,
+      "sha256": "5c61c47f28be698edbc652b7d4798009c50958213a34ce1b1775396d9179ed42"
     },
     "developer-resources": {
       "label": "Developer Resources",
@@ -31,7 +31,7 @@
       "category_count": 12,
       "last_verified": "2026-11-04",
       "bytes": 693396,
-      "sha256": "a5bc049b5b6f2d503ca3dcd97191b1f13d5c64be7698ee695254430ec9268ac0"
+      "sha256": "864536a533c24df96c81a61322fdb831321f0a79da2035c85f3d6965ad397b94"
     }
   }
 }

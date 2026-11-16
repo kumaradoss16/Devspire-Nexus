@@ -96,58 +96,47 @@ assert('reduced motion is honoured', /prefers-reduced-motion/.test(fs.readFileSy
   assert('footer attribution', brand.footer.includes('DevSpire Nexus is a product of DevSpireHub.com.'));
   assert('old brand phrase is gone from the homepage', !brand.oldBrand);
 
-  /* ---------- Featured system ---------- */
-  const featured = await page.evaluate(() => {
-    const FR = window.FeaturedResources;
-    const sameWeek = (a, b) => FR.select(new Date(a)).map((r) => r.type + ':' + r.id).join(',') === FR.select(new Date(b)).map((r) => r.type + ':' + r.id).join(',');
-    const thisWeek = FR.select(new Date('2026-11-04T12:00:00Z')).map((r) => r.type + ':' + r.id);
-    const nextWeek = FR.select(new Date('2026-11-11T12:00:00Z')).map((r) => r.type + ':' + r.id);
-    const cards = [...document.querySelectorAll('#featured-week-grid article[data-featured-ref]')];
+  /* ---------- Nexus Spotlight ---------- */
+  const spotlight = await page.evaluate(() => {
+    const data = window.DSH_NEXUS_SPOTLIGHT;
     const registries = { tool: window.AI_TOOLS, model: window.AI_MODELS, resource: window.DEVELOPER_RESOURCES };
+    const cards = [...document.querySelectorAll('#spotlight-grid .spotlight-card')];
+    const resolve = (type, id) => (registries[type] || []).some((record) => record.id === id);
     return {
-      validate: FR.validate(),
-      info: FR.weekInfo(),
-      sameWeek: sameWeek('2026-11-02T00:00:00Z', '2026-11-08T23:00:00Z'),
-      acrossWeeksDiffer: thisWeek.join(',') !== nextWeek.join(','),
-      thisWeek,
-      rendered: cards.map((card) => {
-        const [type, id] = card.dataset.featuredRef.split(':');
-        const record = (registries[type] || []).find((r) => r.id === id);
-        const nameLink = card.querySelector('h3 a.featured-name');
-        return {
-          ref: card.dataset.featuredRef,
-          resolves: !!record,
-          icon: !!card.querySelector('.featured-icon img, .featured-icon .resource-icon-fallback'),
-          nameHref: nameLink?.getAttribute('href') || '',
-          description: (card.querySelector('p')?.textContent || '').trim().length,
-          category: /AI (Tool|Model)|Developer Resource/.test(card.textContent),
-          registryChip: /AI Tools|AI Models|Developer Resources/.test(card.textContent),
-          details: card.querySelectorAll('.featured-foot a').length >= 1,
-          official: !!card.querySelector('.featured-foot a[href^="https://"]'),
-          bookmark: !!card.querySelector('[data-bookmark]')
-        };
+      exists: Boolean(data && Array.isArray(data.items)),
+      items: data ? data.items.length : 0,
+      models: data ? data.items.filter((item) => item.type === 'model').length : 0,
+      tools: data ? data.items.filter((item) => item.type === 'tool').length : 0,
+      unique: data ? new Set(data.items.map((item) => item.type + ':' + item.id)).size : 0,
+      resolved: data ? data.items.every((item) => resolve(item.type, item.id)) : false,
+      unresolved: data ? data.items.filter((item) => !resolve(item.type, item.id)).map((item) => item.type + ':' + item.id) : [],
+      heading: document.querySelector('#nexus-spotlight .spotlight-title')?.textContent.trim() || '',
+      eyebrow: document.querySelector('#nexus-spotlight .spotlight-eyebrow')?.textContent.trim() || '',
+      rendered: cards.length,
+      renderedResolve: cards.every((card) => resolve(card.dataset.spotlightType, card.dataset.spotlightId)),
+      detailLinks: cards.every((card) => /^(ai-tools|models|developer-resources)\.html#(tool|model|resource)\//.test(card.querySelector('.spotlight-link--record')?.getAttribute('href') || '')),
+      officialLinks: cards.every((card) => {
+        const link = card.querySelector('a[target="_blank"]');
+        return link && /^https:\/\//.test(link.getAttribute('href') || '') && link.getAttribute('rel') === 'noopener noreferrer';
       }),
-      weekLabel: document.querySelector('[data-featured-week]')?.textContent || '',
-      maxPerWeek: FR.validate().ok
+      descriptions: cards.every((card) => (card.querySelector('.spotlight-desc')?.textContent || '').trim().length > 30),
+      weeklyBranding: /CURATED WEEKLY|Resources of the Week/i.test(document.body.innerText)
     };
   });
 
-  assert('featured config validates', featured.validate.ok, (featured.validate.errors || []).join(' | '));
-  assert('curated pool covers all three registries', new Set(featured.validate.pool.map((r) => r.type)).size === 3, featured.validate.pool.map((r) => r.type).join(','));
-  assert('pool has no duplicate references', new Set(featured.validate.pool.map((r) => r.type + ':' + r.id)).size === featured.validate.pool.length);
-  assert('featured week is Monday-based', new Date(featured.info.key + 'T00:00:00Z').getUTCDay() === 1, featured.info.key);
-  assert('same week yields the same selection', featured.sameWeek);
-  assert('consecutive weeks rotate', featured.acrossWeeksDiffer);
-  assert('featured shows 3–5 cards', featured.rendered.length >= 3 && featured.rendered.length <= 5, featured.rendered.length);
-  assert('featured cards reference unique records', new Set(featured.rendered.map((c) => c.ref)).size === featured.rendered.length);
-  assert('every featured ref resolves to a record', featured.rendered.every((c) => c.resolves), featured.rendered.filter((c) => !c.resolves).map((c) => c.ref).join(','));
-  assert('every featured card has an icon', featured.rendered.every((c) => c.icon));
-  assert('featured names link to registry detail views', featured.rendered.every((c) => /^(ai-tools|models|developer-resources)\.html#(tool|model|resource)\//.test(c.nameHref)), featured.rendered.map((c) => c.nameHref).join(','));
-  assert('featured cards show description, type, registry and details', featured.rendered.every((c) => c.description > 20 && c.category && c.registryChip && c.details), JSON.stringify(featured.rendered[0]));
-  assert('featured cards expose official sources', featured.rendered.every((c) => c.official));
-  assert('featured cards are bookmarkable', featured.rendered.every((c) => c.bookmark));
-  assert('week label names the date range', /^Week of \w{3} \d{1,2}.*\d{4}$/.test(featured.weekLabel), featured.weekLabel);
-  assert('week label is rendered from the same calculation', featured.weekLabel === featured.info.label, `${featured.weekLabel} vs ${featured.info.label}`);
+  assert('Nexus Spotlight data exists', spotlight.exists);
+  assert('Nexus Spotlight has 22 discoveries', spotlight.items === 22, String(spotlight.items));
+  assert('Nexus Spotlight splits 17 models / 5 tools', spotlight.models === 17 && spotlight.tools === 5, `${spotlight.models}/${spotlight.tools}`);
+  assert('Nexus Spotlight references are unique', spotlight.unique === spotlight.items);
+  assert('every Spotlight item resolves to a registry record', spotlight.resolved, spotlight.unresolved.join(','));
+  assert('Spotlight heading copy', spotlight.heading === "Discover What's Worth Exploring", spotlight.heading);
+  assert('Spotlight eyebrow copy', spotlight.eyebrow === 'NEXUS SPOTLIGHT', spotlight.eyebrow);
+  assert('Spotlight renders 22 static cards', spotlight.rendered === 22, String(spotlight.rendered));
+  assert('every rendered Spotlight card maps to a record', spotlight.renderedResolve);
+  assert('Spotlight record links target registry detail views', spotlight.detailLinks);
+  assert('Spotlight official links are safe external links', spotlight.officialLinks);
+  assert('Spotlight cards carry descriptions', spotlight.descriptions);
+  assert('weekly branding is gone from the homepage', !spotlight.weeklyBranding);
 
   assert('no console or page errors', errors.length === 0, errors.slice(0, 5).join(' | '));
 
